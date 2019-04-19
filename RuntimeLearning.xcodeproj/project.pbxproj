@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		084A478E4E7307FD606D9653 /* libPods-RuntimeLearningTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A7FAD87682FD1B94903588E /* libPods-RuntimeLearningTests.a */; };
+		1001DA0B222E521700E5EBEF /* TestCategoryOveride.m in Sources */ = {isa = PBXBuildFile; fileRef = 1001DA0A222E521700E5EBEF /* TestCategoryOveride.m */; };
 		10128706221D3B0700ED6CDE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10128705221D3B0700ED6CDE /* AppDelegate.m */; };
 		10128709221D3B0700ED6CDE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10128708221D3B0700ED6CDE /* ViewController.m */; };
 		1012870C221D3B0700ED6CDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1012870A221D3B0700ED6CDE /* Main.storyboard */; };
@@ -14,6 +16,16 @@
 		10128711221D3B0900ED6CDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1012870F221D3B0900ED6CDE /* LaunchScreen.storyboard */; };
 		10128714221D3B0900ED6CDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10128713221D3B0900ED6CDE /* main.m */; };
 		1012871E221D3B0A00ED6CDE /* RuntimeLearningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1012871D221D3B0A00ED6CDE /* RuntimeLearningTests.m */; };
+		10128733221D3B7300ED6CDE /* NSObject+RLSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 10128729221D3B7200ED6CDE /* NSObject+RLSafe.m */; };
+		10128734221D3B7300ED6CDE /* MethodSwizzleUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1012872C221D3B7200ED6CDE /* MethodSwizzleUtil.m */; };
+		1018FAF9225E12C60095BD95 /* AttributeUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1018FAF8225E12C60095BD95 /* AttributeUsage.m */; };
+		1025D0EB225DA683008E4CC3 /* UIFont+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 1025D0EA225DA683008E4CC3 /* UIFont+Test.m */; };
+		1025D0EE225DAED1008E4CC3 /* UIViewController+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 1025D0ED225DAED1008E4CC3 /* UIViewController+Test.m */; };
+		10D530FF2227B5B7007AE594 /* TestCategorySwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D530F92227B5B7007AE594 /* TestCategorySwizzle.m */; };
+		10D531002227B5B7007AE594 /* TestSubClassSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D530FA2227B5B7007AE594 /* TestSubClassSwizzle.m */; };
+		10D531012227B5B7007AE594 /* TestUnsafeSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D530FB2227B5B7007AE594 /* TestUnsafeSwizzle.m */; };
+		10D531082227CC86007AE594 /* NSObject+HCWillDealloc.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D531072227CC86007AE594 /* NSObject+HCWillDealloc.m */; };
+		D7335419B0BF156CDF1C5B8E /* libPods-RuntimeLearning.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE1FAC32D91B262A68A7687 /* libPods-RuntimeLearning.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1001DA09222E521700E5EBEF /* TestCategoryOveride.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCategoryOveride.h; sourceTree = "<group>"; };
+		1001DA0A222E521700E5EBEF /* TestCategoryOveride.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCategoryOveride.m; sourceTree = "<group>"; };
 		10128701221D3B0700ED6CDE /* RuntimeLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuntimeLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10128704221D3B0700ED6CDE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		10128705221D3B0700ED6CDE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -40,6 +54,30 @@
 		10128719221D3B0A00ED6CDE /* RuntimeLearningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RuntimeLearningTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1012871D221D3B0A00ED6CDE /* RuntimeLearningTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RuntimeLearningTests.m; sourceTree = "<group>"; };
 		1012871F221D3B0A00ED6CDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10128729221D3B7200ED6CDE /* NSObject+RLSafe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RLSafe.m"; sourceTree = "<group>"; };
+		1012872A221D3B7200ED6CDE /* MethodSwizzleUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MethodSwizzleUtil.h; sourceTree = "<group>"; };
+		1012872B221D3B7200ED6CDE /* NSObject+RLSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RLSafe.h"; sourceTree = "<group>"; };
+		1012872C221D3B7200ED6CDE /* MethodSwizzleUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MethodSwizzleUtil.m; sourceTree = "<group>"; };
+		1018FAF7225E12C60095BD95 /* AttributeUsage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AttributeUsage.h; sourceTree = "<group>"; };
+		1018FAF8225E12C60095BD95 /* AttributeUsage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AttributeUsage.m; sourceTree = "<group>"; };
+		1025D0E9225DA683008E4CC3 /* UIFont+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+Test.h"; sourceTree = "<group>"; };
+		1025D0EA225DA683008E4CC3 /* UIFont+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Test.m"; sourceTree = "<group>"; };
+		1025D0EC225DAED1008E4CC3 /* UIViewController+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Test.h"; sourceTree = "<group>"; };
+		1025D0ED225DAED1008E4CC3 /* UIViewController+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Test.m"; sourceTree = "<group>"; };
+		10D530F92227B5B7007AE594 /* TestCategorySwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCategorySwizzle.m; sourceTree = "<group>"; };
+		10D530FA2227B5B7007AE594 /* TestSubClassSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSubClassSwizzle.m; sourceTree = "<group>"; };
+		10D530FB2227B5B7007AE594 /* TestUnsafeSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUnsafeSwizzle.m; sourceTree = "<group>"; };
+		10D530FC2227B5B7007AE594 /* TestCategorySwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestCategorySwizzle.h; sourceTree = "<group>"; };
+		10D530FD2227B5B7007AE594 /* TestSubClassSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestSubClassSwizzle.h; sourceTree = "<group>"; };
+		10D530FE2227B5B7007AE594 /* TestUnsafeSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUnsafeSwizzle.h; sourceTree = "<group>"; };
+		10D531062227CC86007AE594 /* NSObject+HCWillDealloc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+HCWillDealloc.h"; sourceTree = "<group>"; };
+		10D531072227CC86007AE594 /* NSObject+HCWillDealloc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HCWillDealloc.m"; sourceTree = "<group>"; };
+		3FE1FAC32D91B262A68A7687 /* libPods-RuntimeLearning.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RuntimeLearning.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A7FAD87682FD1B94903588E /* libPods-RuntimeLearningTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RuntimeLearningTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		572909D309E5F0D3549F5040 /* Pods-RuntimeLearning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuntimeLearning.debug.xcconfig"; path = "Target Support Files/Pods-RuntimeLearning/Pods-RuntimeLearning.debug.xcconfig"; sourceTree = "<group>"; };
+		80706F469BC347C48B83AD30 /* Pods-RuntimeLearningTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuntimeLearningTests.debug.xcconfig"; path = "Target Support Files/Pods-RuntimeLearningTests/Pods-RuntimeLearningTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A08115034046DAE31C80CBB7 /* Pods-RuntimeLearning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuntimeLearning.release.xcconfig"; path = "Target Support Files/Pods-RuntimeLearning/Pods-RuntimeLearning.release.xcconfig"; sourceTree = "<group>"; };
+		D2C81A8D13612D343D3F21F0 /* Pods-RuntimeLearningTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuntimeLearningTests.release.xcconfig"; path = "Target Support Files/Pods-RuntimeLearningTests/Pods-RuntimeLearningTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D7335419B0BF156CDF1C5B8E /* libPods-RuntimeLearning.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,18 +93,31 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				084A478E4E7307FD606D9653 /* libPods-RuntimeLearningTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1001DA08222E51E700E5EBEF /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				1001DA09222E521700E5EBEF /* TestCategoryOveride.h */,
+				1001DA0A222E521700E5EBEF /* TestCategoryOveride.m */,
+			);
+			name = Category;
+			path = RuntimeLearning/Category;
+			sourceTree = SOURCE_ROOT;
+		};
 		101286F8221D3B0700ED6CDE = {
 			isa = PBXGroup;
 			children = (
 				10128703221D3B0700ED6CDE /* RuntimeLearning */,
 				1012871C221D3B0A00ED6CDE /* RuntimeLearningTests */,
 				10128702221D3B0700ED6CDE /* Products */,
+				CFF0684E9602261EE5E7CF98 /* Frameworks */,
+				2DD0631C85D238BD92DA8F9A /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +133,11 @@
 		10128703221D3B0700ED6CDE /* RuntimeLearning */ = {
 			isa = PBXGroup;
 			children = (
+				10128728221D3B7200ED6CDE /* Utility */,
+				1001DA08222E51E700E5EBEF /* Category */,
+				10D530F82227B5B7007AE594 /* Swizzle */,
+				10D531022227B5F9007AE594 /* Association */,
+				1018FAF6225E12A50095BD95 /* __attribute__ */,
 				10128704221D3B0700ED6CDE /* AppDelegate.h */,
 				10128705221D3B0700ED6CDE /* AppDelegate.m */,
 				10128707221D3B0700ED6CDE /* ViewController.h */,
@@ -103,6 +160,72 @@
 			path = RuntimeLearningTests;
 			sourceTree = "<group>";
 		};
+		10128728221D3B7200ED6CDE /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				1012872A221D3B7200ED6CDE /* MethodSwizzleUtil.h */,
+				1012872C221D3B7200ED6CDE /* MethodSwizzleUtil.m */,
+				1012872B221D3B7200ED6CDE /* NSObject+RLSafe.h */,
+				10128729221D3B7200ED6CDE /* NSObject+RLSafe.m */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		1018FAF6225E12A50095BD95 /* __attribute__ */ = {
+			isa = PBXGroup;
+			children = (
+				1018FAF7225E12C60095BD95 /* AttributeUsage.h */,
+				1018FAF8225E12C60095BD95 /* AttributeUsage.m */,
+			);
+			path = __attribute__;
+			sourceTree = "<group>";
+		};
+		10D530F82227B5B7007AE594 /* Swizzle */ = {
+			isa = PBXGroup;
+			children = (
+				10D530FC2227B5B7007AE594 /* TestCategorySwizzle.h */,
+				10D530F92227B5B7007AE594 /* TestCategorySwizzle.m */,
+				10D530FD2227B5B7007AE594 /* TestSubClassSwizzle.h */,
+				10D530FA2227B5B7007AE594 /* TestSubClassSwizzle.m */,
+				10D530FE2227B5B7007AE594 /* TestUnsafeSwizzle.h */,
+				10D530FB2227B5B7007AE594 /* TestUnsafeSwizzle.m */,
+				1025D0E9225DA683008E4CC3 /* UIFont+Test.h */,
+				1025D0EA225DA683008E4CC3 /* UIFont+Test.m */,
+				1025D0EC225DAED1008E4CC3 /* UIViewController+Test.h */,
+				1025D0ED225DAED1008E4CC3 /* UIViewController+Test.m */,
+			);
+			path = Swizzle;
+			sourceTree = "<group>";
+		};
+		10D531022227B5F9007AE594 /* Association */ = {
+			isa = PBXGroup;
+			children = (
+				10D531062227CC86007AE594 /* NSObject+HCWillDealloc.h */,
+				10D531072227CC86007AE594 /* NSObject+HCWillDealloc.m */,
+			);
+			path = Association;
+			sourceTree = "<group>";
+		};
+		2DD0631C85D238BD92DA8F9A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				572909D309E5F0D3549F5040 /* Pods-RuntimeLearning.debug.xcconfig */,
+				A08115034046DAE31C80CBB7 /* Pods-RuntimeLearning.release.xcconfig */,
+				80706F469BC347C48B83AD30 /* Pods-RuntimeLearningTests.debug.xcconfig */,
+				D2C81A8D13612D343D3F21F0 /* Pods-RuntimeLearningTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		CFF0684E9602261EE5E7CF98 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FE1FAC32D91B262A68A7687 /* libPods-RuntimeLearning.a */,
+				4A7FAD87682FD1B94903588E /* libPods-RuntimeLearningTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -110,6 +233,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10128722221D3B0A00ED6CDE /* Build configuration list for PBXNativeTarget "RuntimeLearning" */;
 			buildPhases = (
+				10B16119223F4C5E00655040 /* Modify Project Conifg Shell */,
+				D7FE33F4AB2485269D37C3C3 /* [CP] Check Pods Manifest.lock */,
 				101286FD221D3B0700ED6CDE /* Sources */,
 				101286FE221D3B0700ED6CDE /* Frameworks */,
 				101286FF221D3B0700ED6CDE /* Resources */,
@@ -127,6 +252,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10128725221D3B0A00ED6CDE /* Build configuration list for PBXNativeTarget "RuntimeLearningTests" */;
 			buildPhases = (
+				A5F04428BFD1FD0DA890439F /* [CP] Check Pods Manifest.lock */,
 				10128715221D3B0A00ED6CDE /* Sources */,
 				10128716221D3B0A00ED6CDE /* Frameworks */,
 				10128717221D3B0A00ED6CDE /* Resources */,
@@ -198,13 +324,88 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		10B16119223F4C5E00655040 /* Modify Project Conifg Shell */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Modify Project Conifg Shell";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=$PATH:/usr/libexec\n\necho ${CONFIGURATION_BUILD_DIR}\necho ${SRCROOT}\necho ${PROJECT_DIR}\ncd ${SRCROOT}/RuntimeLearning.xcodeproj\n\nConfig=${CONFIGURATION}\nUseActiveArch=NO\nif [[ $Config != 'Debug' ]]; then\necho modify project config\n\n#PlistBuddy -c \"Set :objects:10128727221D3B0A00ED6CDE:buildSettings:ONLY_ACTIVE_ARCH $UseActiveArch\" project.pbxproj\nPlistBuddy -c \"Set :objects:10128724221D3B0A00ED6CDE:buildSettings:ONLY_ACTIVE_ARCH $UseActiveArch\" project.pbxproj\nPlistBuddy -c \"Set :objects:10128721221D3B0A00ED6CDE:buildSettings:ONLY_ACTIVE_ARCH $UseActiveArch\" project.pbxproj\n\necho finished modify\nfi\n\n";
+		};
+		A5F04428BFD1FD0DA890439F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RuntimeLearningTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D7FE33F4AB2485269D37C3C3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RuntimeLearning-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		101286FD221D3B0700ED6CDE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1018FAF9225E12C60095BD95 /* AttributeUsage.m in Sources */,
+				10D531012227B5B7007AE594 /* TestUnsafeSwizzle.m in Sources */,
+				10D530FF2227B5B7007AE594 /* TestCategorySwizzle.m in Sources */,
+				10128734221D3B7300ED6CDE /* MethodSwizzleUtil.m in Sources */,
+				10128733221D3B7300ED6CDE /* NSObject+RLSafe.m in Sources */,
 				10128709221D3B0700ED6CDE /* ViewController.m in Sources */,
+				10D531082227CC86007AE594 /* NSObject+HCWillDealloc.m in Sources */,
+				1025D0EE225DAED1008E4CC3 /* UIViewController+Test.m in Sources */,
+				1001DA0B222E521700E5EBEF /* TestCategoryOveride.m in Sources */,
 				10128714221D3B0900ED6CDE /* main.m in Sources */,
+				10D531002227B5B7007AE594 /* TestSubClassSwizzle.m in Sources */,
+				1025D0EB225DA683008E4CC3 /* UIFont+Test.m in Sources */,
 				10128706221D3B0700ED6CDE /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,6 +555,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -361,40 +563,47 @@
 		};
 		10128723221D3B0A00ED6CDE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 572909D309E5F0D3549F5040 /* Pods-RuntimeLearning.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2ZY2L7GYS;
+				"GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS[arch=*]" = "CATCH_CRASH=0";
 				INFOPLIST_FILE = RuntimeLearning/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = hc.RuntimeLearning;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		10128724221D3B0A00ED6CDE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A08115034046DAE31C80CBB7 /* Pods-RuntimeLearning.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2ZY2L7GYS;
+				"GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS[arch=*]" = "CATCH_CRASH=1";
 				INFOPLIST_FILE = RuntimeLearning/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = hc.RuntimeLearning;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		10128726221D3B0A00ED6CDE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80706F469BC347C48B83AD30 /* Pods-RuntimeLearningTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -414,6 +623,7 @@
 		};
 		10128727221D3B0A00ED6CDE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D2C81A8D13612D343D3F21F0 /* Pods-RuntimeLearningTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
