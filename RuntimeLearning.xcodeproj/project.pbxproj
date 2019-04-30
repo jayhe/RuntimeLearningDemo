@@ -21,6 +21,11 @@
 		1018FAF9225E12C60095BD95 /* AttributeUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1018FAF8225E12C60095BD95 /* AttributeUsage.m */; };
 		1025D0EB225DA683008E4CC3 /* UIFont+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 1025D0EA225DA683008E4CC3 /* UIFont+Test.m */; };
 		1025D0EE225DAED1008E4CC3 /* UIViewController+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 1025D0ED225DAED1008E4CC3 /* UIViewController+Test.m */; };
+		104BF8BD22771E9D000C464E /* DynamicCallFunctionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 104BF8BC22771E9D000C464E /* DynamicCallFunctionTest.m */; };
+		104BF8D422772F55000C464E /* add.m in Sources */ = {isa = PBXBuildFile; fileRef = 104BF8D322772F55000C464E /* add.m */; };
+		104BF8D522772F55000C464E /* add.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 104BF8D222772F55000C464E /* add.h */; };
+		104BF8D922772F74000C464E /* calculate.c in Sources */ = {isa = PBXBuildFile; fileRef = 104BF8C622772333000C464E /* calculate.c */; };
+		10C3235922781DCF0091B0ED /* NSObject+Injection.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C3235822781DCF0091B0ED /* NSObject+Injection.m */; };
 		10D530FF2227B5B7007AE594 /* TestCategorySwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D530F92227B5B7007AE594 /* TestCategorySwizzle.m */; };
 		10D531002227B5B7007AE594 /* TestSubClassSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D530FA2227B5B7007AE594 /* TestSubClassSwizzle.m */; };
 		10D531012227B5B7007AE594 /* TestUnsafeSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D530FB2227B5B7007AE594 /* TestUnsafeSwizzle.m */; };
@@ -37,6 +42,19 @@
 			remoteInfo = RuntimeLearning;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		104BF8CE22772F55000C464E /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				104BF8D522772F55000C464E /* add.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1001DA09222E521700E5EBEF /* TestCategoryOveride.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCategoryOveride.h; sourceTree = "<group>"; };
@@ -64,6 +82,15 @@
 		1025D0EA225DA683008E4CC3 /* UIFont+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Test.m"; sourceTree = "<group>"; };
 		1025D0EC225DAED1008E4CC3 /* UIViewController+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Test.h"; sourceTree = "<group>"; };
 		1025D0ED225DAED1008E4CC3 /* UIViewController+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Test.m"; sourceTree = "<group>"; };
+		104BF8BB22771E9D000C464E /* DynamicCallFunctionTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicCallFunctionTest.h; sourceTree = "<group>"; };
+		104BF8BC22771E9D000C464E /* DynamicCallFunctionTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicCallFunctionTest.m; sourceTree = "<group>"; };
+		104BF8C522772333000C464E /* calculate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = calculate.h; sourceTree = "<group>"; };
+		104BF8C622772333000C464E /* calculate.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = calculate.c; sourceTree = "<group>"; };
+		104BF8D022772F55000C464E /* libadd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libadd.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		104BF8D222772F55000C464E /* add.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = add.h; sourceTree = "<group>"; };
+		104BF8D322772F55000C464E /* add.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = add.m; sourceTree = "<group>"; };
+		10C3235722781DCF0091B0ED /* NSObject+Injection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Injection.h"; sourceTree = "<group>"; };
+		10C3235822781DCF0091B0ED /* NSObject+Injection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Injection.m"; sourceTree = "<group>"; };
 		10D530F92227B5B7007AE594 /* TestCategorySwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCategorySwizzle.m; sourceTree = "<group>"; };
 		10D530FA2227B5B7007AE594 /* TestSubClassSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSubClassSwizzle.m; sourceTree = "<group>"; };
 		10D530FB2227B5B7007AE594 /* TestUnsafeSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUnsafeSwizzle.m; sourceTree = "<group>"; };
@@ -97,6 +124,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		104BF8CD22772F55000C464E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -115,6 +149,7 @@
 			children = (
 				10128703221D3B0700ED6CDE /* RuntimeLearning */,
 				1012871C221D3B0A00ED6CDE /* RuntimeLearningTests */,
+				104BF8D122772F55000C464E /* add */,
 				10128702221D3B0700ED6CDE /* Products */,
 				CFF0684E9602261EE5E7CF98 /* Frameworks */,
 				2DD0631C85D238BD92DA8F9A /* Pods */,
@@ -126,6 +161,7 @@
 			children = (
 				10128701221D3B0700ED6CDE /* RuntimeLearning.app */,
 				10128719221D3B0A00ED6CDE /* RuntimeLearningTests.xctest */,
+				104BF8D022772F55000C464E /* libadd.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -138,6 +174,7 @@
 				10D530F82227B5B7007AE594 /* Swizzle */,
 				10D531022227B5F9007AE594 /* Association */,
 				1018FAF6225E12A50095BD95 /* __attribute__ */,
+				104BF8BA22771E7B000C464E /* Dynamic */,
 				10128704221D3B0700ED6CDE /* AppDelegate.h */,
 				10128705221D3B0700ED6CDE /* AppDelegate.m */,
 				10128707221D3B0700ED6CDE /* ViewController.h */,
@@ -167,6 +204,8 @@
 				1012872C221D3B7200ED6CDE /* MethodSwizzleUtil.m */,
 				1012872B221D3B7200ED6CDE /* NSObject+RLSafe.h */,
 				10128729221D3B7200ED6CDE /* NSObject+RLSafe.m */,
+				10C3235722781DCF0091B0ED /* NSObject+Injection.h */,
+				10C3235822781DCF0091B0ED /* NSObject+Injection.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -178,6 +217,26 @@
 				1018FAF8225E12C60095BD95 /* AttributeUsage.m */,
 			);
 			path = __attribute__;
+			sourceTree = "<group>";
+		};
+		104BF8BA22771E7B000C464E /* Dynamic */ = {
+			isa = PBXGroup;
+			children = (
+				104BF8BB22771E9D000C464E /* DynamicCallFunctionTest.h */,
+				104BF8BC22771E9D000C464E /* DynamicCallFunctionTest.m */,
+				104BF8C522772333000C464E /* calculate.h */,
+				104BF8C622772333000C464E /* calculate.c */,
+			);
+			path = Dynamic;
+			sourceTree = "<group>";
+		};
+		104BF8D122772F55000C464E /* add */ = {
+			isa = PBXGroup;
+			children = (
+				104BF8D222772F55000C464E /* add.h */,
+				104BF8D322772F55000C464E /* add.m */,
+			);
+			path = add;
 			sourceTree = "<group>";
 		};
 		10D530F82227B5B7007AE594 /* Swizzle */ = {
@@ -267,6 +326,23 @@
 			productReference = 10128719221D3B0A00ED6CDE /* RuntimeLearningTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		104BF8CF22772F55000C464E /* add */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 104BF8D622772F55000C464E /* Build configuration list for PBXNativeTarget "add" */;
+			buildPhases = (
+				104BF8CC22772F55000C464E /* Sources */,
+				104BF8CD22772F55000C464E /* Frameworks */,
+				104BF8CE22772F55000C464E /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = add;
+			productName = add;
+			productReference = 104BF8D022772F55000C464E /* libadd.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -282,6 +358,9 @@
 					10128718221D3B0A00ED6CDE = {
 						CreatedOnToolsVersion = 10.1;
 						TestTargetID = 10128700221D3B0700ED6CDE;
+					};
+					104BF8CF22772F55000C464E = {
+						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
@@ -300,6 +379,7 @@
 			targets = (
 				10128700221D3B0700ED6CDE /* RuntimeLearning */,
 				10128718221D3B0A00ED6CDE /* RuntimeLearningTests */,
+				104BF8CF22772F55000C464E /* add */,
 			);
 		};
 /* End PBXProject section */
@@ -398,7 +478,9 @@
 				10D531012227B5B7007AE594 /* TestUnsafeSwizzle.m in Sources */,
 				10D530FF2227B5B7007AE594 /* TestCategorySwizzle.m in Sources */,
 				10128734221D3B7300ED6CDE /* MethodSwizzleUtil.m in Sources */,
+				10C3235922781DCF0091B0ED /* NSObject+Injection.m in Sources */,
 				10128733221D3B7300ED6CDE /* NSObject+RLSafe.m in Sources */,
+				104BF8BD22771E9D000C464E /* DynamicCallFunctionTest.m in Sources */,
 				10128709221D3B0700ED6CDE /* ViewController.m in Sources */,
 				10D531082227CC86007AE594 /* NSObject+HCWillDealloc.m in Sources */,
 				1025D0EE225DAED1008E4CC3 /* UIViewController+Test.m in Sources */,
@@ -415,6 +497,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				1012871E221D3B0A00ED6CDE /* RuntimeLearningTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		104BF8CC22772F55000C464E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				104BF8D922772F74000C464E /* calculate.c in Sources */,
+				104BF8D422772F55000C464E /* add.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,6 +665,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RuntimeLearning/Dynamic",
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = hc.RuntimeLearning;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -593,6 +688,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RuntimeLearning/Dynamic",
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = hc.RuntimeLearning;
@@ -641,6 +740,32 @@
 			};
 			name = Release;
 		};
+		104BF8D722772F55000C464E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2ZY2L7GYS;
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		104BF8D822772F55000C464E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2ZY2L7GYS;
+				MACH_O_TYPE = mh_dylib;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -667,6 +792,15 @@
 			buildConfigurations = (
 				10128726221D3B0A00ED6CDE /* Debug */,
 				10128727221D3B0A00ED6CDE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		104BF8D622772F55000C464E /* Build configuration list for PBXNativeTarget "add" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				104BF8D722772F55000C464E /* Debug */,
+				104BF8D822772F55000C464E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -15,17 +15,25 @@
 #import "TestCategoryOveride.h"
 #import "UIFont+Test.h"
 #import "AttributeUsage.h"
+#import "DynamicCallFunctionTest.h"
+#import "NSObject+Injection.h"
 
 @interface ViewController ()
+
+@property (nonatomic, strong) DynamicCallFunctionTest *dynamicFunctionTest;
 
 @end
 
 @implementation ViewController
 
+//- (void)injected {
+//    [self setupUI];
+//}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-
+    _dynamicFunctionTest = [DynamicCallFunctionTest new];
     [self testUnsafeSwizzle];
     [self testCategorySwizzle];
     [self testSubClassSwizzleMethod];
@@ -33,6 +41,22 @@
     [self testCategoryOveride];
     [self testClassSwizzle];
     [self testAttributeUsage];
+#if DEBUG
+    injectBlock {
+        [weakSelf setupUI];
+    };
+#endif
+}
+
+- (void)setupUI {
+    self.view.backgroundColor = [UIColor purpleColor];
+    NSLog(@"Injected %s", __FUNCTION__);
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 #pragma mark - Observer
