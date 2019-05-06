@@ -14,9 +14,11 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        [self testBarrier];
-        [self testGroup];
-        [self testSemaphore];
+        // 实现前面的任务执行完了再执行后面的任务
+        [self testBarrier]; // x
+        [self testGroup]; // ⩗
+        [self testSemaphore]; // ⩗
+        [self testRunloop]; // ⩗
     }
     
     return self;
@@ -119,6 +121,37 @@
             NSLog(@"testSemaphore-task3:async task");
             dispatch_semaphore_signal(sema);
             dispatch_semaphore_signal(sema);// wait 和 signal要配对
+        });
+    });
+}
+
+- (void)testRunloop {
+    dispatch_queue_t queue = dispatch_queue_create("rl.runloop.test.queue", DISPATCH_QUEUE_CONCURRENT);
+    __block BOOL task1Finished = NO, task2Finished = NO;
+    dispatch_async(queue, ^{
+        NSLog(@"testRunloop-task1");
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            [NSThread sleepForTimeInterval:1];
+            NSLog(@"testRunloop-task1:async task");
+            task1Finished = YES;
+        });
+    });
+    dispatch_async(queue, ^{
+        NSLog(@"testRunloop-task2");
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            [NSThread sleepForTimeInterval:2];
+            NSLog(@"testRunloop-task2:async task");
+            task2Finished = YES;
+        });
+    });
+    dispatch_async(queue, ^{
+        while (!(task1Finished && task2Finished)) {
+            [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.1]];
+        }
+        NSLog(@"testRunloop-task3");
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            [NSThread sleepForTimeInterval:2];
+            NSLog(@"testRunloop-task3:async task");
         });
     });
 }
