@@ -33,6 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
     _dynamicFunctionTest = [DynamicCallFunctionTest new];
     [self testUnsafeSwizzle];
     [self testCategorySwizzle];

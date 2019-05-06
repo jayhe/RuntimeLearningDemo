@@ -7,6 +7,7 @@
 //
 
 #import "AttributeUsage.h"
+#import "RuntimeLearningMacro.h"
 
 void unexcept(void) __attribute__ ((noreturn));
 
@@ -38,12 +39,12 @@ void unexcept(void) __attribute__ ((noreturn));
 }
 
 #pragma mark - cleanup
-#define onExit \
-__strong void(^block)(void) __attribute__((cleanup(blockCleanUp), unused)) = ^ \
+//#define onExit \
+//__strong void(^block)(void) __attribute__((cleanup(blockCleanUp), unused)) = ^ \
 
-static void blockCleanUp(__strong void(^*block)(void)) {
-    (*block)();
-}
+//static void blockCleanUp(__strong void(^*block)(void)) {
+//    (*block)();
+//}
 
 - (void)cleanupUsage {
     [self.lock lock];
