@@ -22,8 +22,6 @@
 		1025D0EB225DA683008E4CC3 /* UIFont+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 1025D0EA225DA683008E4CC3 /* UIFont+Test.m */; };
 		1025D0EE225DAED1008E4CC3 /* UIViewController+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 1025D0ED225DAED1008E4CC3 /* UIViewController+Test.m */; };
 		104BF8BD22771E9D000C464E /* DynamicCallFunctionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 104BF8BC22771E9D000C464E /* DynamicCallFunctionTest.m */; };
-		104BF8D422772F55000C464E /* add.m in Sources */ = {isa = PBXBuildFile; fileRef = 104BF8D322772F55000C464E /* add.m */; };
-		104BF8D522772F55000C464E /* add.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 104BF8D222772F55000C464E /* add.h */; };
 		104BF8D922772F74000C464E /* calculate.c in Sources */ = {isa = PBXBuildFile; fileRef = 104BF8C622772333000C464E /* calculate.c */; };
 		10BF41E8227FE671009F291E /* DispatchOnceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BF41E7227FE671009F291E /* DispatchOnceTest.m */; };
 		10BF41EB228012A7009F291E /* DispatchBarrierTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BF41EA228012A7009F291E /* DispatchBarrierTest.m */; };
@@ -52,7 +50,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				104BF8D522772F55000C464E /* add.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,8 +86,6 @@
 		104BF8C522772333000C464E /* calculate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = calculate.h; sourceTree = "<group>"; };
 		104BF8C622772333000C464E /* calculate.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = calculate.c; sourceTree = "<group>"; };
 		104BF8D022772F55000C464E /* libadd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libadd.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		104BF8D222772F55000C464E /* add.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = add.h; sourceTree = "<group>"; };
-		104BF8D322772F55000C464E /* add.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = add.m; sourceTree = "<group>"; };
 		10BF41E6227FE671009F291E /* DispatchOnceTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DispatchOnceTest.h; sourceTree = "<group>"; };
 		10BF41E7227FE671009F291E /* DispatchOnceTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DispatchOnceTest.m; sourceTree = "<group>"; };
 		10BF41E9228012A7009F291E /* DispatchBarrierTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DispatchBarrierTest.h; sourceTree = "<group>"; };
@@ -156,7 +151,6 @@
 			children = (
 				10128703221D3B0700ED6CDE /* RuntimeLearning */,
 				1012871C221D3B0A00ED6CDE /* RuntimeLearningTests */,
-				104BF8D122772F55000C464E /* add */,
 				10128702221D3B0700ED6CDE /* Products */,
 				CFF0684E9602261EE5E7CF98 /* Frameworks */,
 				2DD0631C85D238BD92DA8F9A /* Pods */,
@@ -237,15 +231,6 @@
 				104BF8C622772333000C464E /* calculate.c */,
 			);
 			path = Dynamic;
-			sourceTree = "<group>";
-		};
-		104BF8D122772F55000C464E /* add */ = {
-			isa = PBXGroup;
-			children = (
-				104BF8D222772F55000C464E /* add.h */,
-				104BF8D322772F55000C464E /* add.m */,
-			);
-			path = add;
 			sourceTree = "<group>";
 		};
 		10BF41E5227FE65F009F291E /* Dispatch */ = {
@@ -527,7 +512,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				104BF8D922772F74000C464E /* calculate.c in Sources */,
-				104BF8D422772F55000C464E /* add.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

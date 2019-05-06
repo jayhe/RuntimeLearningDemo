@@ -78,7 +78,6 @@
 
 - (void)testClassSwizzle {
     [TestCategorySwizzle testClassMethod];
-    __unused UIFont *aFont = [UIFont fontWithName:@"PingFangSC-Regular" size:12];
 }
 
 - (void)testUnsafeSwizzle {
