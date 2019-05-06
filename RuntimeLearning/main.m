@@ -9,11 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 #import "DynamicCallFunctionTest.h"
+#import "DispatchOnceTest.h"
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
         dynamicCallPrintfFunction();
         dynamicCallAddFunction();
+        [DispatchOnceTest sharedInstance];
+        [DispatchOnceTest sharedInstance];
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }

@@ -25,6 +25,7 @@
 		104BF8D422772F55000C464E /* add.m in Sources */ = {isa = PBXBuildFile; fileRef = 104BF8D322772F55000C464E /* add.m */; };
 		104BF8D522772F55000C464E /* add.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 104BF8D222772F55000C464E /* add.h */; };
 		104BF8D922772F74000C464E /* calculate.c in Sources */ = {isa = PBXBuildFile; fileRef = 104BF8C622772333000C464E /* calculate.c */; };
+		10BF41E8227FE671009F291E /* DispatchOnceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BF41E7227FE671009F291E /* DispatchOnceTest.m */; };
 		10C3235922781DCF0091B0ED /* NSObject+Injection.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C3235822781DCF0091B0ED /* NSObject+Injection.m */; };
 		10D530FF2227B5B7007AE594 /* TestCategorySwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D530F92227B5B7007AE594 /* TestCategorySwizzle.m */; };
 		10D531002227B5B7007AE594 /* TestSubClassSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D530FA2227B5B7007AE594 /* TestSubClassSwizzle.m */; };
@@ -89,6 +90,8 @@
 		104BF8D022772F55000C464E /* libadd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libadd.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		104BF8D222772F55000C464E /* add.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = add.h; sourceTree = "<group>"; };
 		104BF8D322772F55000C464E /* add.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = add.m; sourceTree = "<group>"; };
+		10BF41E6227FE671009F291E /* DispatchOnceTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DispatchOnceTest.h; sourceTree = "<group>"; };
+		10BF41E7227FE671009F291E /* DispatchOnceTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DispatchOnceTest.m; sourceTree = "<group>"; };
 		10C3235722781DCF0091B0ED /* NSObject+Injection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Injection.h"; sourceTree = "<group>"; };
 		10C3235822781DCF0091B0ED /* NSObject+Injection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Injection.m"; sourceTree = "<group>"; };
 		10D530F92227B5B7007AE594 /* TestCategorySwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCategorySwizzle.m; sourceTree = "<group>"; };
@@ -175,6 +178,7 @@
 				10D531022227B5F9007AE594 /* Association */,
 				1018FAF6225E12A50095BD95 /* __attribute__ */,
 				104BF8BA22771E7B000C464E /* Dynamic */,
+				10BF41E5227FE65F009F291E /* Dispatch */,
 				10128704221D3B0700ED6CDE /* AppDelegate.h */,
 				10128705221D3B0700ED6CDE /* AppDelegate.m */,
 				10128707221D3B0700ED6CDE /* ViewController.h */,
@@ -237,6 +241,15 @@
 				104BF8D322772F55000C464E /* add.m */,
 			);
 			path = add;
+			sourceTree = "<group>";
+		};
+		10BF41E5227FE65F009F291E /* Dispatch */ = {
+			isa = PBXGroup;
+			children = (
+				10BF41E6227FE671009F291E /* DispatchOnceTest.h */,
+				10BF41E7227FE671009F291E /* DispatchOnceTest.m */,
+			);
+			path = Dispatch;
 			sourceTree = "<group>";
 		};
 		10D530F82227B5B7007AE594 /* Swizzle */ = {
@@ -476,6 +489,7 @@
 			files = (
 				1018FAF9225E12C60095BD95 /* AttributeUsage.m in Sources */,
 				10D531012227B5B7007AE594 /* TestUnsafeSwizzle.m in Sources */,
+				10BF41E8227FE671009F291E /* DispatchOnceTest.m in Sources */,
 				10D530FF2227B5B7007AE594 /* TestCategorySwizzle.m in Sources */,
 				10128734221D3B7300ED6CDE /* MethodSwizzleUtil.m in Sources */,
 				10C3235922781DCF0091B0ED /* NSObject+Injection.m in Sources */,
