@@ -25,6 +25,7 @@
 		104BF8D922772F74000C464E /* calculate.c in Sources */ = {isa = PBXBuildFile; fileRef = 104BF8C622772333000C464E /* calculate.c */; };
 		10BF41E8227FE671009F291E /* DispatchOnceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BF41E7227FE671009F291E /* DispatchOnceTest.m */; };
 		10BF41EB228012A7009F291E /* DispatchBarrierTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BF41EA228012A7009F291E /* DispatchBarrierTest.m */; };
+		10BF41F2228120C1009F291E /* DispatchGroupLeaveTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BF41F1228120C1009F291E /* DispatchGroupLeaveTest.m */; };
 		10C3235922781DCF0091B0ED /* NSObject+Injection.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C3235822781DCF0091B0ED /* NSObject+Injection.m */; };
 		10D530FF2227B5B7007AE594 /* TestCategorySwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D530F92227B5B7007AE594 /* TestCategorySwizzle.m */; };
 		10D531002227B5B7007AE594 /* TestSubClassSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D530FA2227B5B7007AE594 /* TestSubClassSwizzle.m */; };
@@ -91,6 +92,8 @@
 		10BF41E9228012A7009F291E /* DispatchBarrierTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DispatchBarrierTest.h; sourceTree = "<group>"; };
 		10BF41EA228012A7009F291E /* DispatchBarrierTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DispatchBarrierTest.m; sourceTree = "<group>"; };
 		10BF41EF22801333009F291E /* RuntimeLearningMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeLearningMacro.h; sourceTree = "<group>"; };
+		10BF41F0228120C1009F291E /* DispatchGroupLeaveTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DispatchGroupLeaveTest.h; sourceTree = "<group>"; };
+		10BF41F1228120C1009F291E /* DispatchGroupLeaveTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DispatchGroupLeaveTest.m; sourceTree = "<group>"; };
 		10C3235722781DCF0091B0ED /* NSObject+Injection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Injection.h"; sourceTree = "<group>"; };
 		10C3235822781DCF0091B0ED /* NSObject+Injection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Injection.m"; sourceTree = "<group>"; };
 		10D530F92227B5B7007AE594 /* TestCategorySwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCategorySwizzle.m; sourceTree = "<group>"; };
@@ -240,6 +243,8 @@
 				10BF41E7227FE671009F291E /* DispatchOnceTest.m */,
 				10BF41E9228012A7009F291E /* DispatchBarrierTest.h */,
 				10BF41EA228012A7009F291E /* DispatchBarrierTest.m */,
+				10BF41F0228120C1009F291E /* DispatchGroupLeaveTest.h */,
+				10BF41F1228120C1009F291E /* DispatchGroupLeaveTest.m */,
 			);
 			path = Dispatch;
 			sourceTree = "<group>";
@@ -488,6 +493,7 @@
 				10128733221D3B7300ED6CDE /* NSObject+RLSafe.m in Sources */,
 				10BF41EB228012A7009F291E /* DispatchBarrierTest.m in Sources */,
 				104BF8BD22771E9D000C464E /* DynamicCallFunctionTest.m in Sources */,
+				10BF41F2228120C1009F291E /* DispatchGroupLeaveTest.m in Sources */,
 				10128709221D3B0700ED6CDE /* ViewController.m in Sources */,
 				10D531082227CC86007AE594 /* NSObject+HCWillDealloc.m in Sources */,
 				1025D0EE225DAED1008E4CC3 /* UIViewController+Test.m in Sources */,

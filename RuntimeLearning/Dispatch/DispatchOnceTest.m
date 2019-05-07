@@ -22,17 +22,34 @@
  }
  DISPATCH_COMPILER_CAN_ASSUME(*predicate == ~0l);
  }
+ 
+ static int
+ _dispatch_unfair_lock_wait(uint32_t *uaddr, uint32_t val, uint32_t timeout,
+ dispatch_lock_options_t flags)
+ {
+ int rc;
+ _dlock_syscall_switch(err,
+ rc = __ulock_wait(UL_UNFAIR_LOCK | flags, uaddr, val, timeout),
+ case 0: return rc > 0 ? ENOTEMPTY : 0;
+ case ETIMEDOUT: case EFAULT: return err;
+ case EOWNERDEAD: DISPATCH_CLIENT_CRASH(*uaddr,
+ "corruption of lock owner");
+ default: DISPATCH_INTERNAL_CRASH(err, "ulock_wait() failed");
+ );
+ }
+ 
  */
 + (instancetype)sharedInstance {
     static NSInteger callCount = 0;
     static dispatch_once_t onceToken;
     static DispatchOnceTest *_instance;
     int exceptValue = ~0l; // -1
-    __unused long value = __builtin_expect(onceToken, exceptValue);
     if (callCount >= 1) {
-//        onceToken = 3; // crash EXC_BAD_INSTRUCTION /*dispatch_compiler_barrier();*/
+//        onceToken = 3; // crash EXC_BAD_INSTRUCTION ； "BUG IN CLIENT OF LIBDISPATCH: trying to lock recursively"
         onceToken = 0; // 会继续执行once中的代码
     }
+    __unused long value = __builtin_expect(onceToken, exceptValue);
+    // 执行完之后会将onceToken置-1；下次执行会判断onceToken的值不为-1就执行，否则就异常
     dispatch_once(&onceToken, ^{
         _instance = [[self alloc] init];
     });

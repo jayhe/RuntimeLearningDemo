@@ -46,8 +46,6 @@
     injectBlock {
         [weakSelf setupUI];
     };
-//    dispatch_group_t group = dispatch_group_create();
-//    dispatch_group_leave(group);
 #endif
 }
 

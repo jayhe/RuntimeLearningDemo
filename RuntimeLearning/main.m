@@ -11,6 +11,7 @@
 #import "DynamicCallFunctionTest.h"
 #import "DispatchOnceTest.h"
 #import "DispatchBarrierTest.h"
+#import "DispatchGroupLeaveTest.h"
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
@@ -19,6 +20,7 @@ int main(int argc, char * argv[]) {
         [DispatchOnceTest sharedInstance];
         [DispatchOnceTest sharedInstance];
         [DispatchBarrierTest new];
+//        [DispatchGroupLeaveTest new];
 //        return 0;
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
