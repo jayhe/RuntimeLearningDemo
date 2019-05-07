@@ -91,7 +91,7 @@
 }
 
 - (void)testSemaphore {
-    dispatch_semaphore_t sema = dispatch_semaphore_create(2);
+    dispatch_semaphore_t sema = dispatch_semaphore_create(2); // value如果为负数 则信号量为空 DISPATCH_BAD_INPUT
     dispatch_queue_t queue = dispatch_queue_create("rl.semaphore.test.queue", DISPATCH_QUEUE_CONCURRENT);
     
     dispatch_async(queue, ^{
@@ -120,9 +120,40 @@
             [NSThread sleepForTimeInterval:2];
             NSLog(@"testSemaphore-task3:async task");
             dispatch_semaphore_signal(sema);
-            dispatch_semaphore_signal(sema);// wait 和 signal要配对
+            dispatch_semaphore_signal(sema);// wait 和 signal要配对，否则_dispatch_semaphore_dispose会报错"BUG IN CLIENT OF LIBDISPATCH: Semaphore object deallocated while in use"
         });
     });
+    /*
+     // 当自增信号时，如果自增后 信号大于0 就不处理；否则就会唤起等待的线程 FIFO
+     long
+     dispatch_semaphore_signal(dispatch_semaphore_t dsema)
+     {
+     long value = os_atomic_inc2o(dsema, dsema_value, release);
+     if (fastpath(value > 0)) {
+     return 0;
+     }
+     if (slowpath(value == LONG_MIN)) {
+     DISPATCH_CLIENT_CRASH(value,
+     "Unbalanced call to dispatch_semaphore_signal()");
+     }
+     return _dispatch_semaphore_signal_slow(dsema);
+     }
+     
+     void
+     _dispatch_semaphore_dispose(dispatch_object_t dou,
+     DISPATCH_UNUSED bool *allow_free)
+     {
+     dispatch_semaphore_t dsema = dou._dsema;
+     
+     if (dsema->dsema_value < dsema->dsema_orig) {
+     DISPATCH_CLIENT_CRASH(dsema->dsema_orig - dsema->dsema_value,
+     "Semaphore object deallocated while in use");
+     }
+     
+     _dispatch_sema4_dispose(&dsema->dsema_sema, _DSEMA4_POLICY_FIFO);
+     }
+
+     */
 }
 
 - (void)testRunloop {
