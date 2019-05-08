@@ -12,7 +12,7 @@
 #define onExit \
 __strong void(^block)(void) __attribute__((cleanup(blockCleanUp), unused)) = ^ \
 
-static void blockCleanUp(__strong void(^*block)(void)) {
+static inline void blockCleanUp(__strong void(^*block)(void)) {
     (*block)();
 }
 // RAC的项目动态调试需要使用通知的方式

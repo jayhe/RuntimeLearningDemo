@@ -36,11 +36,10 @@
         
         free(mList);
         
-        BOOL isMeta = class_isMetaClass(object_getClass([NSObject class]));
+        __unused BOOL isMeta = class_isMetaClass(object_getClass([NSObject class]));
         Class cls = objc_getMetaClass("TestCategoryOveride");
-        BOOL isMeta1 = class_isMetaClass(cls);
-        BOOL responds = class_respondsToSelector(cls, @selector(log1));
-        NSLog(@"xxx");
+        __unused BOOL isMeta1 = class_isMetaClass(cls);
+        __unused BOOL responds = class_respondsToSelector(cls, @selector(log1));
     }
     
     return self;

@@ -17,6 +17,7 @@
         // 实现前面的任务执行完了再执行后面的任务
         [self testBarrier]; // x
         [self testGroup]; // ⩗
+        [self testGroup1]; // x
         [self testSemaphore]; // ⩗
         [self testRunloop]; // ⩗
     }
@@ -82,6 +83,40 @@
     });
     
     dispatch_async(queue, ^{
+        NSLog(@"testGroup-task3");
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            [NSThread sleepForTimeInterval:2];
+            NSLog(@"testGroup-task3:async task");
+        });
+    });
+}
+
+- (void)testGroup1 {
+    dispatch_queue_t queue = dispatch_queue_create("rl.group1.test.queue", DISPATCH_QUEUE_CONCURRENT);
+    dispatch_group_t group = dispatch_group_create();
+    
+    dispatch_group_async(group, queue, ^{
+        NSLog(@"testGroup-task1");
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            [NSThread sleepForTimeInterval:1];
+            NSLog(@"testGroup-task1:async task");
+        });
+    });
+    
+    dispatch_group_async(group, queue, ^{
+        NSLog(@"testGroup-task2");
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            [NSThread sleepForTimeInterval:2];
+            NSLog(@"testGroup-task2:async task");
+        });
+    });
+//    dispatch_group_wait(group, DISPATCH_TIME_FOREVER);
+//    NSLog(@"dispatch_group_notify");
+    dispatch_group_notify(group, queue, ^{
+        NSLog(@"dispatch_group_notify");
+    });
+    
+    dispatch_group_async(group, queue, ^{
         NSLog(@"testGroup-task3");
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             [NSThread sleepForTimeInterval:2];
