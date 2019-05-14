@@ -35,15 +35,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-//    _dynamicFunctionTest = [DynamicCallFunctionTest new];
-//    [self testUnsafeSwizzle];
-//    [self testCategorySwizzle];
-//    [self testSubClassSwizzleMethod];
-//    [self testDoSthWhenDealloc];
-//    [self testCategoryOveride];
-//    [self testClassSwizzle];
+    _dynamicFunctionTest = [DynamicCallFunctionTest new];
+    [self testUnsafeSwizzle];
+    [self testCategorySwizzle];
+    [self testSubClassSwizzleMethod];
+    [self testDoSthWhenDealloc];
+    [self testCategoryOveride];
+    [self testClassSwizzle];
     [self testSwizzleInInitialize];
-//    [self testAttributeUsage];
+    [self testAttributeUsage];
 #if DEBUG
     injectBlock {
         [weakSelf setupUI];

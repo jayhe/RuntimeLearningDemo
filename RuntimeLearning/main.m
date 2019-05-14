@@ -15,12 +15,12 @@
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
-//        dynamicCallPrintfFunction();
-//        dynamicCallAddFunction();
-//        [DispatchOnceTest sharedInstance];
-//        [DispatchOnceTest sharedInstance];
-//        [DispatchBarrierTest new];
-//        [DispatchGroupLeaveTest new];
+        dynamicCallPrintfFunction();
+        dynamicCallAddFunction();
+        [DispatchOnceTest sharedInstance];
+        [DispatchOnceTest sharedInstance];
+        [DispatchBarrierTest new];
+        [DispatchGroupLeaveTest new];
 //        return 0;
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
