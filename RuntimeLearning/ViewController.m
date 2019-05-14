@@ -17,6 +17,7 @@
 #import "AttributeUsage.h"
 #import "DynamicCallFunctionTest.h"
 #import "NSObject+Injection.h"
+#import "TestSwizzleInInitialize.h"
 
 @interface ViewController ()
 
@@ -34,14 +35,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    _dynamicFunctionTest = [DynamicCallFunctionTest new];
-    [self testUnsafeSwizzle];
-    [self testCategorySwizzle];
-    [self testSubClassSwizzleMethod];
-    [self testDoSthWhenDealloc];
-    [self testCategoryOveride];
-    [self testClassSwizzle];
-    [self testAttributeUsage];
+//    _dynamicFunctionTest = [DynamicCallFunctionTest new];
+//    [self testUnsafeSwizzle];
+//    [self testCategorySwizzle];
+//    [self testSubClassSwizzleMethod];
+//    [self testDoSthWhenDealloc];
+//    [self testCategoryOveride];
+//    [self testClassSwizzle];
+    [self testSwizzleInInitialize];
+//    [self testAttributeUsage];
 #if DEBUG
     injectBlock {
         [weakSelf setupUI];
@@ -173,8 +175,20 @@
     [TestCategoryOveride new];
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+- (void)testSwizzleInInitialize {
+    TestSwizzleInInitializeA *tmpA = [TestSwizzleInInitializeA new];
+    [tmpA testSwizzleMethod];
+    /*输出*/
+    /*
+     2019-05-14 10:08:51.161443+0800 RuntimeLearning[42053:1082605] -[TestSwizzleInInitialize testSwizzleMethod]
+     2019-05-14 10:08:51.161661+0800 RuntimeLearning[42053:1082605] -[TestSwizzleInInitializeA a_testSwizzleMethod]
+     */
+//    TestSwizzleInInitializeB *tmpB = [TestSwizzleInInitializeB new];
+//    [tmpB testSwizzleMethod];
     
+//    TestSwizzleInInitialize *tmp = [TestSwizzleInInitialize new];
+//    [tmp testLogMethod];
+    /*类别中的initialize会覆盖类中的，执行compile source的最后加入的类别的方法*/
 }
 
 @end
