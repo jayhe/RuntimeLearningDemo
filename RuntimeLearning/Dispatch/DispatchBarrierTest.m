@@ -155,7 +155,7 @@
             [NSThread sleepForTimeInterval:2];
             NSLog(@"testSemaphore-task3:async task");
             dispatch_semaphore_signal(sema);
-            dispatch_semaphore_signal(sema);// wait 和 signal要配对，否则_dispatch_semaphore_dispose会报错"BUG IN CLIENT OF LIBDISPATCH: Semaphore object deallocated while in use"
+            dispatch_semaphore_signal(sema);// signal次数要不小于wait次数，否则_dispatch_semaphore_dispose会报错"BUG IN CLIENT OF LIBDISPATCH: Semaphore object deallocated while in use"
         });
     });
     /*
