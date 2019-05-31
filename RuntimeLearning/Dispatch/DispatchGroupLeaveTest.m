@@ -23,7 +23,7 @@
     dispatch_group_t group = dispatch_group_create();
     dispatch_group_enter(group);
     dispatch_group_leave(group);
-    dispatch_group_leave(group); // "BUG IN CLIENT OF LIBDISPATCH: Unbalanced call to dispatch_group_leave()
+//    dispatch_group_leave(group); // "BUG IN CLIENT OF LIBDISPATCH: Unbalanced call to dispatch_group_leave()
 }
 
 /*
