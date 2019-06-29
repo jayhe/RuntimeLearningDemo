@@ -29,6 +29,9 @@ int main(int argc, char * argv[]) {
             __unused pid_t tmpPid = getpid();
             pid_t pid = wait(statloc);
             NSLog(@"pid_t = %d", (int)pid);
+            NSObject *obj = [[NSObject alloc] init];
+            uintptr_t disguiseValue = ~(uintptr_t)obj;
+            __unused uintptr_t undisguiseValue = ~disguiseValue;
             
             testWaitUsage();
         });
