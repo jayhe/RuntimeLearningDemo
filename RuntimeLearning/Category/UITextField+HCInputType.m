@@ -9,9 +9,9 @@
 #import "UITextField+HCInputType.h"
 #import "objc/runtime.h"
 
-static char KN_INPUTED_TYPE;
-static char KN_INPUTED_LIMIT_LENGTH;
-static char KN_INPUTED_MAX_VALUE;
+static char HC_INPUTED_TYPE;
+static char HC_INPUTED_LIMIT_LENGTH;
+static char HC_INPUTED_MAX_VALUE;
 
 @implementation UITextField (KNInputType)
 
@@ -359,17 +359,17 @@ static char KN_INPUTED_MAX_VALUE;
 #pragma mark - Associated Object
 
 - (HCTextFieldInputType)hcui_inputType {
-    id type = objc_getAssociatedObject(self, &KN_INPUTED_TYPE);
+    id type = objc_getAssociatedObject(self, &HC_INPUTED_TYPE);
     return [type integerValue];
 }
 
 - (void)setHcui_inputType:(HCTextFieldInputType)hcui_inputType {
-    objc_setAssociatedObject(self, &KN_INPUTED_TYPE, @(hcui_inputType), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, &HC_INPUTED_TYPE, @(hcui_inputType), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
     [self configKeyboardType];
 }
 
 - (NSInteger)hcui_limitLegnth {
-    id limitLegnth = objc_getAssociatedObject(self, &KN_INPUTED_LIMIT_LENGTH);
+    id limitLegnth = objc_getAssociatedObject(self, &HC_INPUTED_LIMIT_LENGTH);
     if (limitLegnth) {
         return [limitLegnth integerValue];
     }
@@ -378,11 +378,11 @@ static char KN_INPUTED_MAX_VALUE;
 }
 
 - (void)setHcui_limitLegnth:(NSInteger)hcui_limitLegnth {
-    objc_setAssociatedObject(self, &KN_INPUTED_LIMIT_LENGTH, @(hcui_limitLegnth), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, &HC_INPUTED_LIMIT_LENGTH, @(hcui_limitLegnth), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (double)hcui_maxValue {
-    id maxValue = objc_getAssociatedObject(self, &KN_INPUTED_MAX_VALUE);
+    id maxValue = objc_getAssociatedObject(self, &HC_INPUTED_MAX_VALUE);
     if (maxValue) {
         return [maxValue doubleValue];
     }
@@ -391,7 +391,7 @@ static char KN_INPUTED_MAX_VALUE;
 }
 
 - (void)setHcui_maxValue:(double)hcui_maxValue {
-    objc_setAssociatedObject(self, &KN_INPUTED_MAX_VALUE, @(hcui_maxValue), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, &HC_INPUTED_MAX_VALUE, @(hcui_maxValue), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 @end
