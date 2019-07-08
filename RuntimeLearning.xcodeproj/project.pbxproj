@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		084A478E4E7307FD606D9653 /* libPods-RuntimeLearningTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A7FAD87682FD1B94903588E /* libPods-RuntimeLearningTests.a */; };
 		1001DA0B222E521700E5EBEF /* TestCategoryOveride.m in Sources */ = {isa = PBXBuildFile; fileRef = 1001DA0A222E521700E5EBEF /* TestCategoryOveride.m */; };
+		10113DE122CC8F7F00132833 /* CopyUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 10113DE022CC8F7F00132833 /* CopyUsage.m */; };
+		10113DE722CF85EA00132833 /* UITextField+HCInputType.m in Sources */ = {isa = PBXBuildFile; fileRef = 10113DE522CF85E900132833 /* UITextField+HCInputType.m */; };
 		10128706221D3B0700ED6CDE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 10128705221D3B0700ED6CDE /* AppDelegate.m */; };
 		10128709221D3B0700ED6CDE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10128708221D3B0700ED6CDE /* ViewController.m */; };
 		1012870C221D3B0700ED6CDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1012870A221D3B0700ED6CDE /* Main.storyboard */; };
@@ -60,6 +62,10 @@
 /* Begin PBXFileReference section */
 		1001DA09222E521700E5EBEF /* TestCategoryOveride.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCategoryOveride.h; sourceTree = "<group>"; };
 		1001DA0A222E521700E5EBEF /* TestCategoryOveride.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCategoryOveride.m; sourceTree = "<group>"; };
+		10113DDF22CC8F7F00132833 /* CopyUsage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CopyUsage.h; sourceTree = "<group>"; };
+		10113DE022CC8F7F00132833 /* CopyUsage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CopyUsage.m; sourceTree = "<group>"; };
+		10113DE522CF85E900132833 /* UITextField+HCInputType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+HCInputType.m"; sourceTree = "<group>"; };
+		10113DE622CF85E900132833 /* UITextField+HCInputType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+HCInputType.h"; sourceTree = "<group>"; };
 		10128701221D3B0700ED6CDE /* RuntimeLearning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RuntimeLearning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10128704221D3B0700ED6CDE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		10128705221D3B0700ED6CDE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -147,10 +153,21 @@
 			children = (
 				1001DA09222E521700E5EBEF /* TestCategoryOveride.h */,
 				1001DA0A222E521700E5EBEF /* TestCategoryOveride.m */,
+				10113DE622CF85E900132833 /* UITextField+HCInputType.h */,
+				10113DE522CF85E900132833 /* UITextField+HCInputType.m */,
 			);
 			name = Category;
 			path = RuntimeLearning/Category;
 			sourceTree = SOURCE_ROOT;
+		};
+		10113DDE22CC8F5600132833 /* Copy */ = {
+			isa = PBXGroup;
+			children = (
+				10113DDF22CC8F7F00132833 /* CopyUsage.h */,
+				10113DE022CC8F7F00132833 /* CopyUsage.m */,
+			);
+			path = Copy;
+			sourceTree = "<group>";
 		};
 		101286F8221D3B0700ED6CDE = {
 			isa = PBXGroup;
@@ -177,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				10128728221D3B7200ED6CDE /* Utility */,
+				10113DDE22CC8F5600132833 /* Copy */,
 				1001DA08222E51E700E5EBEF /* Category */,
 				10D530F82227B5B7007AE594 /* Swizzle */,
 				10D531022227B5F9007AE594 /* Association */,
@@ -495,6 +513,7 @@
 				10D530FF2227B5B7007AE594 /* TestCategorySwizzle.m in Sources */,
 				10128734221D3B7300ED6CDE /* MethodSwizzleUtil.m in Sources */,
 				10C3235922781DCF0091B0ED /* NSObject+Injection.m in Sources */,
+				10113DE122CC8F7F00132833 /* CopyUsage.m in Sources */,
 				10128733221D3B7300ED6CDE /* NSObject+RLSafe.m in Sources */,
 				10BF41EB228012A7009F291E /* DispatchBarrierTest.m in Sources */,
 				104BF8BD22771E9D000C464E /* DynamicCallFunctionTest.m in Sources */,
@@ -508,6 +527,7 @@
 				10D531002227B5B7007AE594 /* TestSubClassSwizzle.m in Sources */,
 				1025D0EB225DA683008E4CC3 /* UIFont+Test.m in Sources */,
 				10128706221D3B0700ED6CDE /* AppDelegate.m in Sources */,
+				10113DE722CF85EA00132833 /* UITextField+HCInputType.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

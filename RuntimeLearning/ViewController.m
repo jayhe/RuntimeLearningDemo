@@ -18,10 +18,13 @@
 #import "DynamicCallFunctionTest.h"
 #import "NSObject+Injection.h"
 #import "TestSwizzleInInitialize.h"
+#import "CopyUsage.h"
+#import "UITextField+HCInputType.h"
 
-@interface ViewController ()
+@interface ViewController () <UITextFieldDelegate>
 
 @property (nonatomic, strong) DynamicCallFunctionTest *dynamicFunctionTest;
+@property (weak, nonatomic) IBOutlet UITextField *cardNoTextField;
 
 @end
 
@@ -35,20 +38,22 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    _dynamicFunctionTest = [DynamicCallFunctionTest new];
-    [self testUnsafeSwizzle];
-    [self testCategorySwizzle];
-    [self testSubClassSwizzleMethod];
-    [self testDoSthWhenDealloc];
-    [self testCategoryOveride];
-    [self testClassSwizzle];
-    [self testSwizzleInInitialize];
-    [self testAttributeUsage];
+//    _dynamicFunctionTest = [DynamicCallFunctionTest new];
+//    [self testUnsafeSwizzle];
+//    [self testCategorySwizzle];
+//    [self testSubClassSwizzleMethod];
+//    [self testDoSthWhenDealloc];
+//    [self testCategoryOveride];
+//    [self testClassSwizzle];
+//    [self testSwizzleInInitialize];
+//    [self testAttributeUsage];
 #if DEBUG
     injectBlock {
         [weakSelf setupUI];
     };
 #endif
+    [self testCopyUsage];
+    [self testTextFieldUsage];
 }
 
 - (void)setupUI {
@@ -189,6 +194,22 @@
 //    TestSwizzleInInitialize *tmp = [TestSwizzleInInitialize new];
 //    [tmp testLogMethod];
     /*类别中的initialize会覆盖类中的，执行compile source的最后加入的类别的方法*/
+}
+
+- (void)testCopyUsage {
+    [[CopyUsage new] testCopyAndMutableCopy];
+}
+
+- (void)testTextFieldUsage {
+    self.cardNoTextField.delegate = self;
+    self.cardNoTextField.hcui_inputType = HCTextFieldInputTypeFormatedPhoneNumber;
+    self.cardNoTextField.hcui_limitLegnth = 11;
+}
+
+#pragma mark - UITextFieldDelegate
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
+    return [textField hcui_shouldChangeCharactersInRange:range replacementString:string];
 }
 
 @end

@@ -17,24 +17,24 @@ void testWaitUsage(void);
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
-        dynamicCallPrintfFunction();
-        dynamicCallAddFunction();
-        [DispatchOnceTest sharedInstance];
-        [DispatchOnceTest sharedInstance];
-        [DispatchBarrierTest new];
-        [DispatchGroupLeaveTest new];
-        __unused pid_t mainPid = getpid();
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            int *statloc = NULL;
-            __unused pid_t tmpPid = getpid();
-            pid_t pid = wait(statloc);
-            NSLog(@"pid_t = %d", (int)pid);
-            NSObject *obj = [[NSObject alloc] init];
-            uintptr_t disguiseValue = ~(uintptr_t)obj;
-            __unused uintptr_t undisguiseValue = ~disguiseValue;
-            
-            testWaitUsage();
-        });
+//        dynamicCallPrintfFunction();
+//        dynamicCallAddFunction();
+//        [DispatchOnceTest sharedInstance];
+//        [DispatchOnceTest sharedInstance];
+//        [DispatchBarrierTest new];
+//        [DispatchGroupLeaveTest new];
+//        __unused pid_t mainPid = getpid();
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//            int *statloc = NULL;
+//            __unused pid_t tmpPid = getpid();
+//            pid_t pid = wait(statloc);
+//            NSLog(@"pid_t = %d", (int)pid);
+//            NSObject *obj = [[NSObject alloc] init];
+//            uintptr_t disguiseValue = ~(uintptr_t)obj;
+//            __unused uintptr_t undisguiseValue = ~disguiseValue;
+//            
+//            testWaitUsage();
+//        });
 //        return 0;
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
