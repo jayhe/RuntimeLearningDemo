@@ -130,13 +130,9 @@ static char HC_INPUTED_MAX_VALUE;
         NSInteger offset = addedCount - blankCountAddedAfterCursor; // 文字长度变化 - 在光标之后生成的空格 = 光标实际的偏移量
         // 设置光标的位置
         UITextPosition *position = [self positionFromPosition:prePosition inDirection:UITextLayoutDirectionRight offset:offset];
-        if (range.location == 0 && range.length == 0) {
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.001 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [self setSelectedTextRange:[self textRangeFromPosition:position toPosition:position]];
-            });
-        } else {
-            [self setSelectedTextRange:[self textRangeFromPosition:position toPosition:position]];// 重新设置光标的位置
-        }
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.001 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self setSelectedTextRange:[self textRangeFromPosition:position toPosition:position]];// 延时是为了修改直接复制粘贴文本的时候，设置光标位置不生效的问题 https://blog.csdn.net/feinifi/article/details/84941280
+        });
         [self sendActionsForControlEvents:UIControlEventEditingChanged]; // 代理返回NO之后，通知和event会失效，手动触发事件
         return NO;// 手动设置了text，所以返回NO
     }
@@ -251,13 +247,9 @@ static char HC_INPUTED_MAX_VALUE;
         NSInteger offset = addedCount - blankCountAddedAfterCursor; // 文字长度变化 - 在光标之后生成的空格 = 光标实际的偏移量
         // 设置光标的位置
         UITextPosition *position = [self positionFromPosition:prePosition inDirection:UITextLayoutDirectionRight offset:offset];
-        if (range.location == 0 && range.length == 0) {
-            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.001 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-                [self setSelectedTextRange:[self textRangeFromPosition:position toPosition:position]];// 延时是为了修改直接复制粘贴文本的时候，设置光标位置不生效的问题 https://blog.csdn.net/feinifi/article/details/84941280
-            });
-        } else {
-            [self setSelectedTextRange:[self textRangeFromPosition:position toPosition:position]];// 重新设置光标的位置
-        }
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.001 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self setSelectedTextRange:[self textRangeFromPosition:position toPosition:position]];// 延时是为了修改直接复制粘贴文本的时候，设置光标位置不生效的问题 https://blog.csdn.net/feinifi/article/details/84941280
+        });
         [self sendActionsForControlEvents:UIControlEventEditingChanged]; // 代理返回NO之后，通知和event会失效，手动触发事件
         return NO;// 手动设置了text，所以返回NO
     }

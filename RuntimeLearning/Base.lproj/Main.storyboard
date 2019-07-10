@@ -54,7 +54,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Hpq-Th-IWm"/>
                     <connections>
-                        <outlet property="cardNoTextField" destination="MBT-TE-iIs" id="uB3-St-a9Z"/>
+                        <outlet property="aTextFiled" destination="MBT-TE-iIs" id="ZOq-sr-Kbq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

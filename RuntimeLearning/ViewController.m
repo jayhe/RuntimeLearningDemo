@@ -24,7 +24,7 @@
 @interface ViewController () <UITextFieldDelegate>
 
 @property (nonatomic, strong) DynamicCallFunctionTest *dynamicFunctionTest;
-@property (weak, nonatomic) IBOutlet UITextField *cardNoTextField;
+@property (weak, nonatomic) IBOutlet UITextField *aTextFiled;
 
 @end
 
@@ -201,9 +201,9 @@
 }
 
 - (void)testTextFieldUsage {
-    self.cardNoTextField.delegate = self;
-    self.cardNoTextField.hcui_inputType = HCTextFieldInputTypeFormatedPhoneNumber;
-    self.cardNoTextField.hcui_limitLegnth = 11;
+    self.aTextFiled.delegate = self;
+    self.aTextFiled.hcui_inputType = HCTextFieldInputTypePrice;
+    self.aTextFiled.hcui_maxValue = 50000;
 }
 
 #pragma mark - UITextFieldDelegate
