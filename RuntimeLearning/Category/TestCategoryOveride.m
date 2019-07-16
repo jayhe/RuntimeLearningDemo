@@ -12,6 +12,10 @@
 
 @implementation TestCategoryOveride
 
++ (void)initialize {
+    
+}
+
 - (instancetype)init {
     self = [super init];
     if (self) {

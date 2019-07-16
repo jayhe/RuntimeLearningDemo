@@ -58,7 +58,7 @@ void unexcept(void) __attribute__ ((noreturn));
 #pragma mark - constructor && destructor
 
 __attribute__((constructor(2))) static void AttributeUsageConstructor1(void) {
-    NSLog(@"Excute before main");
+    NSLog(@"Excute before main"); // 执行顺序 优先于main，在load之后
 }
 
 __attribute__((constructor(1))) static void AttributeUsageConstructor(void) {

@@ -20,6 +20,7 @@
 #if DEBUG
     __unused BOOL isLoaded = [[NSBundle bundleWithPath:@"/Applications/InjectionIII.app/Contents/Resources/iOSInjection10.bundle"] load];
 #endif
+    NSLog(@"%s", __FUNCTION__);
     return YES;
 }
 
@@ -43,6 +44,8 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    // after Root VC did appear
+    NSLog(@"%s", __FUNCTION__);
 }
 
 

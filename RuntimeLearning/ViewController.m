@@ -37,16 +37,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
-//    _dynamicFunctionTest = [DynamicCallFunctionTest new];
-//    [self testUnsafeSwizzle];
-//    [self testCategorySwizzle];
-//    [self testSubClassSwizzleMethod];
-//    [self testDoSthWhenDealloc];
-//    [self testCategoryOveride];
-//    [self testClassSwizzle];
-//    [self testSwizzleInInitialize];
-//    [self testAttributeUsage];
+    NSLog(@"%s", __FUNCTION__);
+    _dynamicFunctionTest = [DynamicCallFunctionTest new];
+    [self testUnsafeSwizzle];
+    [self testCategorySwizzle];
+    [self testSubClassSwizzleMethod];
+    [self testDoSthWhenDealloc];
+    [self testCategoryOveride];
+    [self testClassSwizzle];
+    [self testSwizzleInInitialize];
+    [self testAttributeUsage];
 #if DEBUG
     injectBlock {
         [weakSelf setupUI];
@@ -63,8 +63,15 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
+    NSLog(@"%s", __FUNCTION__);
     
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor lightGrayColor];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    NSLog(@"%s", __FUNCTION__);
 }
 
 #pragma mark - Observer
