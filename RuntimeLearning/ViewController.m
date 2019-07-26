@@ -64,8 +64,8 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     NSLog(@"%s", __FUNCTION__);
-    
     self.view.backgroundColor = [UIColor lightGrayColor];
+    [NSThread sleepForTimeInterval:5];
 }
 
 - (void)viewDidAppear:(BOOL)animated {

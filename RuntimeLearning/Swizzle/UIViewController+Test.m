@@ -15,17 +15,17 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         Method originalMethod = class_getInstanceMethod(self, @selector(viewWillAppear:));
-        Method replacementMethod = class_getInstanceMethod(self, @selector(cass_viewWillAppear:));
+        Method replacementMethod = class_getInstanceMethod(self, @selector(hc_viewWillAppear:));
         if (class_addMethod(self, @selector(viewWillAppear:), method_getImplementation(replacementMethod), method_getTypeEncoding(replacementMethod))) {
-            class_replaceMethod(self, @selector(cass_viewWillAppear:), method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
+            class_replaceMethod(self, @selector(hc_viewWillAppear:), method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
         } else {
             method_exchangeImplementations(originalMethod, replacementMethod);
         }
     });
 }
 
-- (void)cass_viewWillAppear:(BOOL)animated {
-    [self cass_viewWillAppear:animated];
+- (void)hc_viewWillAppear:(BOOL)animated {
+    [self hc_viewWillAppear:animated];
 }
 
 @end

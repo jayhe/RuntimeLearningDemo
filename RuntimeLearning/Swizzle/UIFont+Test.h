@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UIFont (Test)
 
-+ (instancetype)cass_fontWithName:(NSString *)name size:(CGFloat)size;
++ (instancetype)hc_fontWithName:(NSString *)name size:(CGFloat)size;
 
 @end
 
