@@ -54,6 +54,7 @@
 #endif
     [self testCopyUsage];
     [self testTextFieldUsage];
+    [self testArrayReadWhileChange];
 }
 
 - (void)setupUI {
@@ -65,7 +66,7 @@
     [super viewWillAppear:animated];
     NSLog(@"%s", __FUNCTION__);
     self.view.backgroundColor = [UIColor lightGrayColor];
-    [NSThread sleepForTimeInterval:5];
+//    [NSThread sleepForTimeInterval:5];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -211,6 +212,69 @@
     self.aTextFiled.delegate = self;
     self.aTextFiled.hcui_inputType = HCTextFieldInputTypePrice;
     self.aTextFiled.hcui_maxValue = 50000;
+}
+
+- (void)testArrayReadWhileChange {
+    NSMutableArray *array = [NSMutableArray arrayWithCapacity:0];
+    for (NSInteger i = 0; i < 10; i ++) {
+        [array addObject:[TestObj new]];
+    }
+    // 数组的枚举函数，遍历的时候在非尾部插入元素会异常。
+    [array enumerateObjectsUsingBlock:^(TestObj *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            // case1:遍历的时候修改元素【不会有问题】
+            NSLog(@"%@", obj);
+            [array replaceObjectAtIndex:3 withObject:[TestObj new]];
+        
+            // case2:遍历的时候添加元素及在尾部insert
+//            [array addObject:@"added"];
+//            NSLog(@"%@", obj); // 会一直输出，因为执行一次添加一个元素，一直添加；Executes a given block using each object in the array, starting with the first object and continuing through the array to the last object.
+        
+            // case3.1:遍历的时候在数组的某个index插入；eg：index == 0
+//            [array insertObject:@"added" atIndex:0]; // EXC_BAD_ACCESS (code=EXC_I386_GPFLT)
+//            NSLog(@"%@", obj);
+            // case3.2:遍历的时候在数组的某个index插入；eg：index == （0, count) insert的index是数组的尾部 array.count则不会闪退
+//            [array insertObject:@"added" atIndex:1]; //  EXC_BAD_ACCESS (code=1, address=0x1)
+//            NSLog(@"%@", obj);
+        
+            // case4: 遍历的时候移除数组的元素；【不会有问题】
+//            [array removeObjectAtIndex:0];
+//            NSLog(@"%@", obj);
+    }];
+    // 在for in的循环中，如果只是修改数组内部引用的元素的属性则不会有问题，如果是修改了数组内部引用或者是改变数组的大小则会闪退
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+//        for (id obj in array) {
+            // case1:遍历的时候修改元素【 EXC_BAD_ACCESS (code=EXC_I386_GPFLT)】
+//            [array replaceObjectAtIndex:0 withObject:[TestObj new]];
+//            NSLog(@"%@", obj);
+    
+            // case2:遍历的时候添加元素及在尾部insert 【*** Collection <__NSArrayM: 0x6000003c0900> was mutated while being enumerated.'】
+//            [array addObject:@"added"];
+//            NSLog(@"%@", obj);
+    
+            // case3: 遍历的时候移除数组的元素；【同上】
+//            [array removeObjectAtIndex:0];
+//            NSLog(@"%@", obj); // EXC_BAD_ACCESS (code=1, address=0x4ca0af4303c8)
+//        }
+//    });
+    
+    // 在for循环中，增删改没有问题
+//    for (NSInteger i = 0; i < array.count; i ++) {
+            // case1:遍历的时候修改元素【 没有问题 】
+//            [array replaceObjectAtIndex:4 withObject:[TestObj new]];
+//            NSLog(@"%@", array[i]);
+            // case2:遍历的时候添加元素及在尾部insert 【 跟enumerate效果一样】
+//            [array addObject:@"added"];
+//            NSLog(@"%@", array[i]);
+            // case3.1:遍历的时候在数组的某个index插入；eg：index == 0 【 跟enumerate效果一样】
+//            [array insertObject:@"added" atIndex:0];
+//            NSLog(@"%@", array[i]);
+            // case3.2:遍历的时候在数组的某个index插入；eg：index == （0, count) 【 跟enumerate效果一样】
+//            [array insertObject:@"added" atIndex:1];
+//            NSLog(@"%@", array[i]);
+            // case4: 遍历的时候移除数组的元素；【不会有问题】
+//            [array removeObjectAtIndex:0];
+//            NSLog(@"%@", array[i]);
+//    }
 }
 
 #pragma mark - UITextFieldDelegate

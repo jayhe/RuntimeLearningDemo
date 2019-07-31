@@ -15,8 +15,8 @@ typedef NS_ENUM(NSInteger, HCTextFieldInputType) {
     HCTextFieldInputTypeFormatedCardNumber, // 格式化的卡号（4位1空格）
     HCTextFieldInputTypePrice, // 货币金额 限制金额通过设置kn_maxValue
     HCTextFieldInputTypeIdentityNo, // 身份证号码
-    HCTextFieldInputTypeNumberAuthCode, // 验证码 限制位数通过设置kn_limitLegnth
-    HCTextFieldInputTypePaymentPWD, // 支付密码 限制位数通过设置kn_limitLegnth
+    HCTextFieldInputTypeNumberAuthCode, // 验证码 限制位数通过设置hcui_limitLegnth
+    HCTextFieldInputTypePaymentPWD, // 支付密码 限制位数通过设置hcui_limitLegnth
 };
 
 @interface UITextField (HCInputType)

@@ -16,6 +16,8 @@
 void testWaitUsage(void);
 void testLogicNot(NSInteger times);
 void testLogicEqualNil(NSInteger times);
+void testVAList(NSString *format, NSString *format1, ...) NS_REQUIRES_NIL_TERMINATION;
+void testVAList1(NSString *format, NSString *format1, ...) NS_NO_TAIL_CALL;
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
@@ -31,12 +33,14 @@ int main(int argc, char * argv[]) {
             __unused pid_t tmpPid = getpid();
             pid_t pid = wait(statloc);
             NSLog(@"pid_t = %d", (int)pid);
-            NSObject *obj = [[NSObject alloc] init];
-            uintptr_t disguiseValue = ~(uintptr_t)obj;
-            __unused uintptr_t undisguiseValue = ~disguiseValue;
-            
             testWaitUsage();
         });
+        testVAList(@"%@, %@", @"0", @"1", @"11", nil);
+        testVAList1(@"%@, %@", @"0", @"1", @"11");
+//        NSObject *obj = [[NSObject alloc] init];
+//        uintptr_t disguiseValue = ~(uintptr_t)obj;
+//        __unused uintptr_t undisguiseValue = ~disguiseValue;
+        
 //        return 0;
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
@@ -138,4 +142,26 @@ void testLogicEqualNil(NSInteger times) {
      2019-07-13 10:08:30.502022+0800 RuntimeLearning[7925:8688951] time cost: 0.1499
      2019-07-13 10:08:30.502139+0800 RuntimeLearning[7925:8688951] average time cost: 0.1454
      */
+}
+
+void testVAList(NSString *format, NSString *format1, ...) {
+    va_list va_list;
+    va_start(va_list, format1);
+    NSString *param = format1;
+    while (param != nil) {
+        NSLog(@"&param = %p\n and param = %@", param, param);
+        param = va_arg(va_list, id);
+    }
+    va_end(va_list);
+}
+
+void testVAList1(NSString *format, NSString *format1, ...) {
+    va_list va_list;
+    va_start(va_list, format1);
+    NSString *param = format1;
+    while (param != nil) {
+        NSLog(@"&param = %p\n and param = %@", param, param);
+        param = va_arg(va_list, id);
+    }
+    va_end(va_list);
 }
