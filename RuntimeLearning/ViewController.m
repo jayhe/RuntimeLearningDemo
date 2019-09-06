@@ -210,8 +210,8 @@
 
 - (void)testTextFieldUsage {
     self.aTextFiled.delegate = self;
-    self.aTextFiled.hcui_inputType = HCTextFieldInputTypePrice;
-    self.aTextFiled.hcui_maxValue = 50000;
+    self.aTextFiled.hcui_inputType = HCTextFieldInputTypeFormatedCardNumber;
+    self.aTextFiled.hcui_limitLegnth = 19;
 }
 
 - (void)testArrayReadWhileChange {

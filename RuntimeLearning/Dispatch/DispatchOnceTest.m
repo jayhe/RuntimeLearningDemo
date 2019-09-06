@@ -45,11 +45,11 @@
     static DispatchOnceTest *_instance;
     int exceptValue = ~0l; // -1
     if (callCount >= 1) {
-//        onceToken = 3; // crash EXC_BAD_INSTRUCTION ； "BUG IN CLIENT OF LIBDISPATCH: trying to lock recursively"
+//        onceToken = 1; // crash EXC_BAD_INSTRUCTION ； "BUG IN CLIENT OF LIBDISPATCH: corruption of lock owner" "BUG IN LIBDISPATCH: ulock_wait() failed"
         onceToken = 0; // 会继续执行once中的代码
     }
     __unused long value = __builtin_expect(onceToken, exceptValue);
-    // 执行完之后会将onceToken置-1；下次执行会判断onceToken的值不为-1就执行，否则就异常
+    // 执行完之后会将onceToken置-1；下次执行会判断onceToken的值不为-1为0就在此执行block为其他的值就会异常获取原子锁异常；为-1就不做处理
     dispatch_once(&onceToken, ^{
         _instance = [[self alloc] init];
     });

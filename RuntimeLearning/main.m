@@ -12,6 +12,7 @@
 #import "DispatchOnceTest.h"
 #import "DispatchBarrierTest.h"
 #import "DispatchGroupLeaveTest.h"
+#import "TestTaggedPointer.h"
 
 void testWaitUsage(void);
 void testLogicNot(NSInteger times);
@@ -36,12 +37,13 @@ int main(int argc, char * argv[]) {
             testWaitUsage();
         });
         testVAList(@"%@, %@", @"0", @"1", @"11", nil);
-        testVAList1(@"%@, %@", @"0", @"1", @"11");
-//        NSObject *obj = [[NSObject alloc] init];
-//        uintptr_t disguiseValue = ~(uintptr_t)obj;
-//        __unused uintptr_t undisguiseValue = ~disguiseValue;
-        
+        //testVAList1(@"%@, %@", @"0", @"1", @"11");
+        NSObject *obj = [[NSObject alloc] init];
+        uintptr_t disguiseValue = ~(uintptr_t)obj;
+        __unused uintptr_t undisguiseValue = ~disguiseValue;
+//        [TestTaggedPointer new];
 //        return 0;
+        
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }

@@ -90,52 +90,7 @@ static char HC_INPUTED_MAX_VALUE;
 }
 
 - (BOOL)hcui_formatedPhoneNumberCheckWithString:(NSString *)string range:(NSRange)range {
-    NSMutableString *phoneNumbers = [NSMutableString stringWithString:self.text];
-    // 删除或剪切
-    if (!string.length) {
-        if (phoneNumbers.length > 1) {
-            NSInteger offset;
-            NSString *deleteChar = [phoneNumbers substringWithRange:range];
-            if ([deleteChar isEqualToString:@" "]) {
-                [phoneNumbers replaceCharactersInRange:NSMakeRange(range.location - 1, 2) withString:@""];
-                offset = range.location - 1;
-            } else {
-                [phoneNumbers replaceCharactersInRange:range withString:@""];
-                offset = range.location;
-            }
-            self.text = [self hcui_formatedPhoneNo:phoneNumbers];
-            // 设置光标的位置
-            UITextPosition *position = [self positionFromPosition:self.beginningOfDocument inDirection:UITextLayoutDirectionRight offset:offset];
-            [self setSelectedTextRange:[self textRangeFromPosition:position toPosition:position]];
-            [self sendActionsForControlEvents:UIControlEventEditingChanged];
-            return NO;
-        }
-        return YES;
-    } else {
-        // 粘贴或者输入
-        NSString *tempCardString = [phoneNumbers stringByReplacingOccurrencesOfString:@" " withString:@""];
-        NSString *tempString = [string stringByReplacingOccurrencesOfString:@" " withString:@""];
-        if (tempCardString.length + tempString.length > self.hcui_limitLegnth) {
-            return NO;
-        }
-        NSInteger beforeBlankCount = [self hcui_blankCountAfterCursorWithRange:range];
-        UITextPosition *prePosition = self.selectedTextRange.end; // 记录上一次光标的位置
-        NSInteger preLength = phoneNumbers.length;
-        [phoneNumbers insertString:string atIndex:range.location];
-        self.text = [self hcui_formatedPhoneNo:phoneNumbers];
-        NSInteger afterLength = self.text.length;
-        NSInteger addedCount = afterLength - preLength; // 字符插入前后，文字的长度变化
-        NSInteger afterBlankCount = [self hcui_blankCountAfterCursorWithRange:NSMakeRange(range.location + addedCount, 0)];
-        NSInteger blankCountAddedAfterCursor = afterBlankCount - beforeBlankCount; // 计算在插入前后，预设置的光标的后面的空格增加数
-        NSInteger offset = addedCount - blankCountAddedAfterCursor; // 文字长度变化 - 在光标之后生成的空格 = 光标实际的偏移量
-        // 设置光标的位置
-        UITextPosition *position = [self positionFromPosition:prePosition inDirection:UITextLayoutDirectionRight offset:offset];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.001 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self setSelectedTextRange:[self textRangeFromPosition:position toPosition:position]];// 延时是为了修改直接复制粘贴文本的时候，设置光标位置不生效的问题 https://blog.csdn.net/feinifi/article/details/84941280
-        });
-        [self sendActionsForControlEvents:UIControlEventEditingChanged]; // 代理返回NO之后，通知和event会失效，手动触发事件
-        return NO;// 手动设置了text，所以返回NO
-    }
+    return [self _hcui_formatedNumberCheckWithString:string range:range];
 }
 
 - (BOOL)hcui_identityNumberCheckWithString:(NSString *)string {
@@ -207,52 +162,7 @@ static char HC_INPUTED_MAX_VALUE;
 }
 
 - (BOOL)hcui_formatedCardCheckWithString:(NSString *)string range:(NSRange)range {
-    NSMutableString *cardNumbers = [NSMutableString stringWithString:self.text];
-    // 删除或剪切
-    if (!string.length) {
-        if (cardNumbers.length > 1) {
-            NSInteger offset;
-            NSString *deleteChar = [cardNumbers substringWithRange:range];
-            if ([deleteChar isEqualToString:@" "]) {
-                [cardNumbers replaceCharactersInRange:NSMakeRange(range.location - 1, 2) withString:@""];
-                offset = range.location - 1;
-            } else {
-                [cardNumbers replaceCharactersInRange:range withString:@""];
-                offset = range.location;
-            }
-            self.text = [self hcui_formatedCardNo:cardNumbers];
-            // 设置光标的位置
-            UITextPosition *position = [self positionFromPosition:self.beginningOfDocument inDirection:UITextLayoutDirectionRight offset:offset];
-            [self setSelectedTextRange:[self textRangeFromPosition:position toPosition:position]];
-            [self sendActionsForControlEvents:UIControlEventEditingChanged];
-            return NO;
-        }
-        return YES;
-    } else {
-        // 粘贴或者输入
-        NSString *tempCardString = [cardNumbers stringByReplacingOccurrencesOfString:@" " withString:@""];
-        NSString *tempString = [string stringByReplacingOccurrencesOfString:@" " withString:@""];
-        if (tempCardString.length + tempString.length > self.hcui_limitLegnth) {
-            return NO;
-        }
-        NSInteger beforeBlankCount = [self hcui_blankCountAfterCursorWithRange:range];
-        UITextPosition *prePosition = self.selectedTextRange.end; // 记录上一次光标的位置
-        NSInteger preLength = cardNumbers.length;
-        [cardNumbers insertString:string atIndex:range.location];
-        self.text = [self hcui_formatedCardNo:cardNumbers];
-        NSInteger afterLength = self.text.length;
-        NSInteger addedCount = afterLength - preLength; // 字符插入前后，文字的长度变化
-        NSInteger afterBlankCount = [self hcui_blankCountAfterCursorWithRange:NSMakeRange(range.location + addedCount, 0)];
-        NSInteger blankCountAddedAfterCursor = afterBlankCount - beforeBlankCount; // 计算在插入前后，预设置的光标的后面的空格增加数
-        NSInteger offset = addedCount - blankCountAddedAfterCursor; // 文字长度变化 - 在光标之后生成的空格 = 光标实际的偏移量
-        // 设置光标的位置
-        UITextPosition *position = [self positionFromPosition:prePosition inDirection:UITextLayoutDirectionRight offset:offset];
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.001 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            [self setSelectedTextRange:[self textRangeFromPosition:position toPosition:position]];// 延时是为了修改直接复制粘贴文本的时候，设置光标位置不生效的问题 https://blog.csdn.net/feinifi/article/details/84941280
-        });
-        [self sendActionsForControlEvents:UIControlEventEditingChanged]; // 代理返回NO之后，通知和event会失效，手动触发事件
-        return NO;// 手动设置了text，所以返回NO
-    }
+    return [self _hcui_formatedNumberCheckWithString:string range:range];
 }
 
 - (NSInteger)hcui_blankCountAfterCursorWithRange:(NSRange)range {
@@ -309,8 +219,6 @@ static char HC_INPUTED_MAX_VALUE;
     return [predicate evaluateWithObject:string];
 }
 
-#pragma mark - Private Method 
-
 - (NSString *)hcui_formatedCardNo:(NSString *)originalCardNo {
     NSString *noSpaceCardNo = [originalCardNo stringByReplacingOccurrencesOfString:@" " withString:@""];
     if (noSpaceCardNo.length <= 4) {
@@ -346,6 +254,72 @@ static char HC_INPUTED_MAX_VALUE;
     }
     
     return [numbers componentsJoinedByString:@" "];
+}
+
+- (BOOL)_hcui_formatedNumberCheckWithString:(NSString *)string range:(NSRange)range {
+    NSMutableString *numbers = [NSMutableString stringWithString:self.text];
+    // 删除或剪切
+    if (!string.length) {
+        if (numbers.length > 1) {
+            NSInteger offset;
+            NSString *deleteChar = [numbers substringWithRange:range];
+            if ([deleteChar isEqualToString:@" "]) {
+                [numbers replaceCharactersInRange:NSMakeRange(range.location - 1, 2) withString:@""];
+                offset = range.location - 1;
+            } else {
+                [numbers replaceCharactersInRange:range withString:@""];
+                offset = range.location;
+            }
+            self.text = [self _hcui_formatedNumbers:numbers];
+            // 设置光标的位置
+            UITextPosition *position = [self positionFromPosition:self.beginningOfDocument inDirection:UITextLayoutDirectionRight offset:offset];
+            [self setSelectedTextRange:[self textRangeFromPosition:position toPosition:position]];
+            [self sendActionsForControlEvents:UIControlEventEditingChanged];
+            return NO;
+        }
+        return YES;
+    } else {
+        // 粘贴或者输入
+        NSString *tempCardString = [numbers stringByReplacingOccurrencesOfString:@" " withString:@""];
+        NSString *tempString = [string stringByReplacingOccurrencesOfString:@" " withString:@""];
+        if (tempCardString.length + tempString.length > self.hcui_limitLegnth) {
+            return NO;
+        }
+        NSInteger beforeBlankCount = [self hcui_blankCountAfterCursorWithRange:range];
+        UITextPosition *prePosition = self.selectedTextRange.end; // 记录上一次光标的位置
+        NSInteger preLength = numbers.length;
+        [numbers insertString:string atIndex:range.location];
+        self.text = [self _hcui_formatedNumbers:numbers];
+        NSInteger afterLength = self.text.length;
+        NSInteger addedCount = afterLength - preLength; // 字符插入前后，文字的长度变化
+        NSInteger afterBlankCount = [self hcui_blankCountAfterCursorWithRange:NSMakeRange(range.location + addedCount, 0)];
+        NSInteger blankCountAddedAfterCursor = afterBlankCount - beforeBlankCount; // 计算在插入前后，预设置的光标的后面的空格增加数
+        NSInteger offset = addedCount - blankCountAddedAfterCursor; // 文字长度变化 - 在光标之后生成的空格 = 光标实际的偏移量
+        // 设置光标的位置
+        UITextPosition *position = [self positionFromPosition:prePosition inDirection:UITextLayoutDirectionRight offset:offset];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.001 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self setSelectedTextRange:[self textRangeFromPosition:position toPosition:position]];// 延时是为了修改直接复制粘贴文本的时候，设置光标位置不生效的问题 https://blog.csdn.net/feinifi/article/details/84941280
+        });
+        [self sendActionsForControlEvents:UIControlEventEditingChanged]; // 代理返回NO之后，通知和event会失效，手动触发事件
+        return NO;// 手动设置了text，所以返回NO
+    }
+}
+
+- (NSString *)_hcui_formatedNumbers:(NSString *)numbers {
+    NSString *formatedString;
+    switch (self.hcui_inputType) {
+        case HCTextFieldInputTypeFormatedPhoneNumber:
+            formatedString = [self hcui_formatedPhoneNo:numbers];
+            break;
+        case HCTextFieldInputTypeFormatedCardNumber:
+            formatedString = [self hcui_formatedCardNo:numbers];
+            break;
+        default:
+            formatedString = numbers;
+            break;
+    }
+    
+    return formatedString;
 }
 
 #pragma mark - Associated Object
