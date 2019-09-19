@@ -9,6 +9,11 @@
 #ifndef RuntimeLearningMacro_h
 #define RuntimeLearningMacro_h
 
+/// 统计执行的时间
+/// @param count 执行的次数
+/// @warning private API
+extern uint64_t dispatch_benchmark(size_t count, void (^block)(void));
+
 #define onExit \
 __strong void(^block)(void) __attribute__((cleanup(blockCleanUp), unused)) = ^ \
 

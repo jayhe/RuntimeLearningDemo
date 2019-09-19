@@ -13,15 +13,19 @@
 #import "DispatchBarrierTest.h"
 #import "DispatchGroupLeaveTest.h"
 #import "TestTaggedPointer.h"
+#import "RuntimeLearningMacro.h"
+#import <objc/runtime.h>
 
 void testWaitUsage(void);
 void testLogicNot(NSInteger times);
 void testLogicEqualNil(NSInteger times);
 void testVAList(NSString *format, NSString *format1, ...) NS_REQUIRES_NIL_TERMINATION;
 void testVAList1(NSString *format, NSString *format1, ...) NS_NO_TAIL_CALL;
+void testBenchmark(void);
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
+        testBenchmark();
         dynamicCallPrintfFunction();
         dynamicCallAddFunction();
         [DispatchOnceTest sharedInstance];
@@ -166,4 +170,19 @@ void testVAList1(NSString *format, NSString *format1, ...) {
         param = va_arg(va_list, id);
     }
     va_end(va_list);
+}
+
+
+void testBenchmark(void) {
+    NSInteger count = 1000, iterations = 100;
+    NSString *obj = @"test";
+    uint64_t t = dispatch_benchmark(iterations, ^{
+        @autoreleasepool {
+            NSMutableArray *mutableArray = [NSMutableArray array];
+            for (size_t i = 0; i < count; i++) {
+                [mutableArray addObject:obj];
+            }
+        }
+    });
+    NSLog(@"[[NSMutableArray array] addObject:] Avg. Runtime: %llu ns", t);
 }

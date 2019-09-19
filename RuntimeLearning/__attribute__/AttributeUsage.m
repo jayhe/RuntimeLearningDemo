@@ -9,6 +9,8 @@
 #import "AttributeUsage.h"
 #import "RuntimeLearningMacro.h"
 
+//@compatibility_alias
+
 void unexcept(void) __attribute__ ((noreturn));
 
 @interface AttributeUsage ()
