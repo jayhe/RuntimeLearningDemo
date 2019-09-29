@@ -15,6 +15,7 @@
 #import "TestTaggedPointer.h"
 #import "RuntimeLearningMacro.h"
 #import <objc/runtime.h>
+#import "TestCode.h"
 
 void testWaitUsage(void);
 void testLogicNot(NSInteger times);
@@ -41,13 +42,13 @@ int main(int argc, char * argv[]) {
             testWaitUsage();
         });
         testVAList(@"%@, %@", @"0", @"1", @"11", nil);
-        //testVAList1(@"%@, %@", @"0", @"1", @"11");
+//        testVAList1(@"%@, %@", @"0", @"1", @"11");
         NSObject *obj = [[NSObject alloc] init];
         uintptr_t disguiseValue = ~(uintptr_t)obj;
         __unused uintptr_t undisguiseValue = ~disguiseValue;
 //        [TestTaggedPointer new];
 //        return 0;
-        
+        [TestCode new];
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }

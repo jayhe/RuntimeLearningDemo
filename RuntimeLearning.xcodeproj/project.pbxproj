@@ -23,6 +23,7 @@
 		1018FAF9225E12C60095BD95 /* AttributeUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1018FAF8225E12C60095BD95 /* AttributeUsage.m */; };
 		1025D0EB225DA683008E4CC3 /* UIFont+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 1025D0EA225DA683008E4CC3 /* UIFont+Test.m */; };
 		1025D0EE225DAED1008E4CC3 /* UIViewController+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 1025D0ED225DAED1008E4CC3 /* UIViewController+Test.m */; };
+		1026DD112333173D00738E85 /* TestCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1026DD102333173D00738E85 /* TestCode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		102E8648230A416900614371 /* TestTaggedPointer.m in Sources */ = {isa = PBXBuildFile; fileRef = 102E8647230A416900614371 /* TestTaggedPointer.m */; };
 		104BF8BD22771E9D000C464E /* DynamicCallFunctionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 104BF8BC22771E9D000C464E /* DynamicCallFunctionTest.m */; };
 		104BF8D922772F74000C464E /* calculate.c in Sources */ = {isa = PBXBuildFile; fileRef = 104BF8C622772333000C464E /* calculate.c */; };
@@ -90,6 +91,8 @@
 		1025D0EA225DA683008E4CC3 /* UIFont+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Test.m"; sourceTree = "<group>"; };
 		1025D0EC225DAED1008E4CC3 /* UIViewController+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Test.h"; sourceTree = "<group>"; };
 		1025D0ED225DAED1008E4CC3 /* UIViewController+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Test.m"; sourceTree = "<group>"; };
+		1026DD0F2333173D00738E85 /* TestCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCode.h; sourceTree = "<group>"; };
+		1026DD102333173D00738E85 /* TestCode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCode.m; sourceTree = "<group>"; };
 		102E8646230A416900614371 /* TestTaggedPointer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTaggedPointer.h; sourceTree = "<group>"; };
 		102E8647230A416900614371 /* TestTaggedPointer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTaggedPointer.m; sourceTree = "<group>"; };
 		104BF8BB22771E9D000C464E /* DynamicCallFunctionTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicCallFunctionTest.h; sourceTree = "<group>"; };
@@ -214,6 +217,8 @@
 				1012870F221D3B0900ED6CDE /* LaunchScreen.storyboard */,
 				10128712221D3B0900ED6CDE /* Info.plist */,
 				10128713221D3B0900ED6CDE /* main.m */,
+				1026DD0F2333173D00738E85 /* TestCode.h */,
+				1026DD102333173D00738E85 /* TestCode.m */,
 				10BF41EF22801333009F291E /* RuntimeLearningMacro.h */,
 			);
 			path = RuntimeLearning;
@@ -526,6 +531,7 @@
 				10D530FF2227B5B7007AE594 /* TestCategorySwizzle.m in Sources */,
 				10128734221D3B7300ED6CDE /* MethodSwizzleUtil.m in Sources */,
 				10C3235922781DCF0091B0ED /* NSObject+Injection.m in Sources */,
+				1026DD112333173D00738E85 /* TestCode.m in Sources */,
 				10113DE122CC8F7F00132833 /* CopyUsage.m in Sources */,
 				102E8648230A416900614371 /* TestTaggedPointer.m in Sources */,
 				10128733221D3B7300ED6CDE /* NSObject+RLSafe.m in Sources */,

@@ -41,9 +41,11 @@
         free(mList);
         
         __unused BOOL isMeta = class_isMetaClass(object_getClass([NSObject class]));
+        __unused BOOL isMineMeta = class_isMetaClass(object_getClass([self class])); // class->isa MetaClass
         Class cls = objc_getMetaClass("TestCategoryOveride");
         __unused BOOL isMeta1 = class_isMetaClass(cls);
         __unused BOOL responds = class_respondsToSelector(cls, @selector(log1));
+        NSLog(@"cls responds to:%d", responds);
     }
     
     return self;
