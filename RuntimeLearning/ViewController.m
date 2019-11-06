@@ -55,6 +55,10 @@
     [self testCopyUsage];
     [self testTextFieldUsage];
     [self testArrayReadWhileChange];
+//    NSMutableArray *array = [NSMutableArray arrayWithCapacity:2];
+//    [array addObject:@"1"];
+//    NSObject *obj;
+//    [array addObject:obj];//** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '*** -[__NSArrayM insertObject:atIndex:]: object cannot be nil'
 }
 
 - (void)setupUI {

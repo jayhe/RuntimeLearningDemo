@@ -13,7 +13,7 @@ static char HC_INPUTED_TYPE;
 static char HC_INPUTED_LIMIT_LENGTH;
 static char HC_INPUTED_MAX_VALUE;
 
-@implementation UITextField (KNInputType)
+@implementation UITextField (HCInputType)
 
 #pragma mark - Custom Method
 

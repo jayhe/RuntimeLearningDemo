@@ -16,6 +16,7 @@
 #import "RuntimeLearningMacro.h"
 #import <objc/runtime.h>
 #import "TestCode.h"
+#import "ByteAlignmentTest.h"
 
 void testWaitUsage(void);
 void testLogicNot(NSInteger times);
@@ -46,9 +47,14 @@ int main(int argc, char * argv[]) {
         NSObject *obj = [[NSObject alloc] init];
         uintptr_t disguiseValue = ~(uintptr_t)obj;
         __unused uintptr_t undisguiseValue = ~disguiseValue;
-//        [TestTaggedPointer new];
-//        return 0;
+        [TestTaggedPointer new];
         [TestCode new];
+        [ByteAlignmentTest new];
+        __block CGFloat testCGFloat; // be 0.0 ？？可能不是
+        float testFloat; // be 0.0 ？？
+        double testDouble; // be 0.0 ？？
+        NSInteger testInteger; // be 0
+        CGPoint testCGPoint; // be CGPointZero ？？可能不是
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }

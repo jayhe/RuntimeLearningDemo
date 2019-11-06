@@ -32,6 +32,7 @@
 		10BF41EB228012A7009F291E /* DispatchBarrierTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BF41EA228012A7009F291E /* DispatchBarrierTest.m */; };
 		10BF41F2228120C1009F291E /* DispatchGroupLeaveTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BF41F1228120C1009F291E /* DispatchGroupLeaveTest.m */; };
 		10C3235922781DCF0091B0ED /* NSObject+Injection.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C3235822781DCF0091B0ED /* NSObject+Injection.m */; };
+		10D160C0237119690051A7BA /* ByteAlignmentTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D160BF237119690051A7BA /* ByteAlignmentTest.m */; };
 		10D530FF2227B5B7007AE594 /* TestCategorySwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D530F92227B5B7007AE594 /* TestCategorySwizzle.m */; };
 		10D531002227B5B7007AE594 /* TestSubClassSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D530FA2227B5B7007AE594 /* TestSubClassSwizzle.m */; };
 		10D531012227B5B7007AE594 /* TestUnsafeSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D530FB2227B5B7007AE594 /* TestUnsafeSwizzle.m */; };
@@ -111,6 +112,8 @@
 		10BF41F1228120C1009F291E /* DispatchGroupLeaveTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DispatchGroupLeaveTest.m; sourceTree = "<group>"; };
 		10C3235722781DCF0091B0ED /* NSObject+Injection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Injection.h"; sourceTree = "<group>"; };
 		10C3235822781DCF0091B0ED /* NSObject+Injection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Injection.m"; sourceTree = "<group>"; };
+		10D160BE237119690051A7BA /* ByteAlignmentTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ByteAlignmentTest.h; sourceTree = "<group>"; };
+		10D160BF237119690051A7BA /* ByteAlignmentTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ByteAlignmentTest.m; sourceTree = "<group>"; };
 		10D530F92227B5B7007AE594 /* TestCategorySwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestCategorySwizzle.m; sourceTree = "<group>"; };
 		10D530FA2227B5B7007AE594 /* TestSubClassSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestSubClassSwizzle.m; sourceTree = "<group>"; };
 		10D530FB2227B5B7007AE594 /* TestUnsafeSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestUnsafeSwizzle.m; sourceTree = "<group>"; };
@@ -207,6 +210,7 @@
 				1018FAF6225E12A50095BD95 /* __attribute__ */,
 				104BF8BA22771E7B000C464E /* Dynamic */,
 				10BF41E5227FE65F009F291E /* Dispatch */,
+				10D160BD237119410051A7BA /* ByteAlign */,
 				102E8645230A414D00614371 /* Tagged Pointer */,
 				10128704221D3B0700ED6CDE /* AppDelegate.h */,
 				10128705221D3B0700ED6CDE /* AppDelegate.m */,
@@ -286,6 +290,15 @@
 				10BF41F1228120C1009F291E /* DispatchGroupLeaveTest.m */,
 			);
 			path = Dispatch;
+			sourceTree = "<group>";
+		};
+		10D160BD237119410051A7BA /* ByteAlign */ = {
+			isa = PBXGroup;
+			children = (
+				10D160BE237119690051A7BA /* ByteAlignmentTest.h */,
+				10D160BF237119690051A7BA /* ByteAlignmentTest.m */,
+			);
+			path = ByteAlign;
 			sourceTree = "<group>";
 		};
 		10D530F82227B5B7007AE594 /* Swizzle */ = {
@@ -534,6 +547,7 @@
 				1026DD112333173D00738E85 /* TestCode.m in Sources */,
 				10113DE122CC8F7F00132833 /* CopyUsage.m in Sources */,
 				102E8648230A416900614371 /* TestTaggedPointer.m in Sources */,
+				10D160C0237119690051A7BA /* ByteAlignmentTest.m in Sources */,
 				10128733221D3B7300ED6CDE /* NSObject+RLSafe.m in Sources */,
 				10BF41EB228012A7009F291E /* DispatchBarrierTest.m in Sources */,
 				104BF8BD22771E9D000C464E /* DynamicCallFunctionTest.m in Sources */,
@@ -719,6 +733,7 @@
 				DEVELOPMENT_TEAM = L2ZY2L7GYS;
 				"GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS[arch=*]" = "CATCH_CRASH=0";
 				INFOPLIST_FILE = RuntimeLearning/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -743,6 +758,7 @@
 				DEVELOPMENT_TEAM = L2ZY2L7GYS;
 				"GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS[arch=*]" = "CATCH_CRASH=1";
 				INFOPLIST_FILE = RuntimeLearning/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

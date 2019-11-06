@@ -41,6 +41,9 @@
     
 //    [self testNSDictionaryCopy];
     [self testNSMutableDictionaryCopy];
+    /*
+     心法：不到必须开辟新空间，编译器不会新开辟内存，能引用的就使用引用计数
+     */
 }
 
 - (void)testNSStringCopy {
