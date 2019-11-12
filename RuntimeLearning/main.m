@@ -17,6 +17,7 @@
 #import <objc/runtime.h>
 #import "TestCode.h"
 #import "ByteAlignmentTest.h"
+#import "DispatchExamnationTest.h"
 
 void testWaitUsage(void);
 void testLogicNot(NSInteger times);
@@ -50,6 +51,7 @@ int main(int argc, char * argv[]) {
         [TestTaggedPointer new];
         [TestCode new];
         [ByteAlignmentTest new];
+        [DispatchExamnationTest new];
         __block CGFloat testCGFloat; // be 0.0 ？？可能不是
         float testFloat; // be 0.0 ？？
         double testDouble; // be 0.0 ？？

@@ -8,6 +8,7 @@
 
 #import "ByteAlignmentTest.h"
 #import <objc/runtime.h>
+#import <malloc/malloc.h>
 
 #ifdef __LP64__
 #   define WORD_SHIFT 3UL
@@ -31,6 +32,8 @@ static inline size_t word_align(size_t x) {
 @property (nonatomic, assign) short d;
 @property (nonatomic, copy) NSString *testString; // 指针8字节
 @property (nonatomic, strong) ByteAlignmentTest *testObject; // 指针8字节
+
+- (void)test;
 
 @end
 
@@ -63,10 +66,24 @@ static inline size_t word_align(size_t x) {
     NSLog(@"doubleSize = %zu", doubleSize);
     
     __unused size_t alignedSize = word_align(9);
-    NSLog(@"sizeOf Self = %ld", class_getInstanceSize(self.class));
-    // 1. 没有定义任何属性的时候，是8
-    // 2. OC对象的实例 size是8
-    // 3. 字节按照8来对齐
+    /*
+     @property (nonatomic, assign) int a;
+     @property (nonatomic, assign) char b;
+     @property (nonatomic, assign) short c;
+     @property (nonatomic, assign) short d;
+     @property (nonatomic, copy) NSString *testString; // 指针8字节
+     @property (nonatomic, strong) ByteAlignmentTest *testObject; // 指针8字节
+     
+     NSLog(@"sizeOf self = %ld", sizeof(self)); // 8
+     NSLog(@"class_getInstanceSize self = %ld", class_getInstanceSize(self.class)); // 40
+     NSLog(@"malloc_size self = %ld", malloc_size((__bridge const void *)(self))); // 48
+     */
+    NSLog(@"sizeOf self = %ld", sizeof(self)); // 8
+    NSLog(@"class_getInstanceSize self = %ld", class_getInstanceSize(self.class)); // 40 [对象本身8 + 4 + 1 + 2 + 2 + 8 + 8 再对齐]
+    NSLog(@"malloc_size self = %ld", malloc_size((__bridge const void *)(self))); // 48
+    // 1. 没有定义任何属性的时候，sizeof(self)、class_getInstanceSize(self.class)是8 malloc_size是16
+    // 2. OC对象的指针 size是8字节
+    // 3. 64bit字节按照8来对齐
 }
 
 /*
