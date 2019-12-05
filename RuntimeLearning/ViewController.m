@@ -20,6 +20,7 @@
 #import "TestSwizzleInInitialize.h"
 #import "CopyUsage.h"
 #import "UITextField+HCInputType.h"
+#import "TestClassCluster.h"
 
 @interface ViewController () <UITextFieldDelegate>
 
@@ -55,10 +56,25 @@
     [self testCopyUsage];
     [self testTextFieldUsage];
     [self testArrayReadWhileChange];
+    [self testClassCluster];
 //    NSMutableArray *array = [NSMutableArray arrayWithCapacity:2];
 //    [array addObject:@"1"];
 //    NSObject *obj;
 //    [array addObject:obj];//** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '*** -[__NSArrayM insertObject:atIndex:]: object cannot be nil'
+}
+
+void functionF() {
+    // stack特点： LIFO 地址从高到低分配
+    // functionF先进栈，functionG后入栈
+
+    int x = functionG(1);
+    NSLog(@"%p", ((void*)functionG)); // 0x10c7f79d0
+    NSLog(@"%p", ((void*)functionF)); // 0x10c7f7990
+    x++; //g函数返回，当前堆栈顶部为f函数栈帧，在当前栈帧继续执行f函数的代码。
+}
+
+int functionG(int x) {
+    return x + 1;
 }
 
 - (void)setupUI {
@@ -77,6 +93,7 @@
     [super viewDidAppear:animated];
     
     NSLog(@"%s", __FUNCTION__);
+    functionF();
 }
 
 #pragma mark - Observer
@@ -279,6 +296,12 @@
 //            [array removeObjectAtIndex:0];
 //            NSLog(@"%@", array[i]);
 //    }
+}
+
+#pragma mark - Cluster
+
+- (void)testClassCluster {
+    [TestClassCluster new];
 }
 
 #pragma mark - UITextFieldDelegate

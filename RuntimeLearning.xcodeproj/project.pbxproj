@@ -38,6 +38,7 @@
 		10D531002227B5B7007AE594 /* TestSubClassSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D530FA2227B5B7007AE594 /* TestSubClassSwizzle.m */; };
 		10D531012227B5B7007AE594 /* TestUnsafeSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D530FB2227B5B7007AE594 /* TestUnsafeSwizzle.m */; };
 		10D531082227CC86007AE594 /* NSObject+HCWillDealloc.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D531072227CC86007AE594 /* NSObject+HCWillDealloc.m */; };
+		10F2DB622397AEEA00BA107A /* TestClassCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F2DB612397AEEA00BA107A /* TestClassCluster.m */; };
 		D7335419B0BF156CDF1C5B8E /* libPods-RuntimeLearning.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE1FAC32D91B262A68A7687 /* libPods-RuntimeLearning.a */; };
 /* End PBXBuildFile section */
 
@@ -125,6 +126,8 @@
 		10D530FE2227B5B7007AE594 /* TestUnsafeSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUnsafeSwizzle.h; sourceTree = "<group>"; };
 		10D531062227CC86007AE594 /* NSObject+HCWillDealloc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+HCWillDealloc.h"; sourceTree = "<group>"; };
 		10D531072227CC86007AE594 /* NSObject+HCWillDealloc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HCWillDealloc.m"; sourceTree = "<group>"; };
+		10F2DB602397AEEA00BA107A /* TestClassCluster.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestClassCluster.h; sourceTree = "<group>"; };
+		10F2DB612397AEEA00BA107A /* TestClassCluster.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestClassCluster.m; sourceTree = "<group>"; };
 		3FE1FAC32D91B262A68A7687 /* libPods-RuntimeLearning.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RuntimeLearning.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A7FAD87682FD1B94903588E /* libPods-RuntimeLearningTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RuntimeLearningTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		572909D309E5F0D3549F5040 /* Pods-RuntimeLearning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuntimeLearning.debug.xcconfig"; path = "Target Support Files/Pods-RuntimeLearning/Pods-RuntimeLearning.debug.xcconfig"; sourceTree = "<group>"; };
@@ -215,6 +218,7 @@
 				10BF41E5227FE65F009F291E /* Dispatch */,
 				10D160BD237119410051A7BA /* ByteAlign */,
 				102E8645230A414D00614371 /* Tagged Pointer */,
+				10F2DB5F2397AEC200BA107A /* ClassCluster */,
 				10128704221D3B0700ED6CDE /* AppDelegate.h */,
 				10128705221D3B0700ED6CDE /* AppDelegate.m */,
 				10128707221D3B0700ED6CDE /* ViewController.h */,
@@ -332,6 +336,15 @@
 				10D531072227CC86007AE594 /* NSObject+HCWillDealloc.m */,
 			);
 			path = Association;
+			sourceTree = "<group>";
+		};
+		10F2DB5F2397AEC200BA107A /* ClassCluster */ = {
+			isa = PBXGroup;
+			children = (
+				10F2DB602397AEEA00BA107A /* TestClassCluster.h */,
+				10F2DB612397AEEA00BA107A /* TestClassCluster.m */,
+			);
+			path = ClassCluster;
 			sourceTree = "<group>";
 		};
 		2DD0631C85D238BD92DA8F9A /* Pods */ = {
@@ -556,6 +569,7 @@
 				10D160C0237119690051A7BA /* ByteAlignmentTest.m in Sources */,
 				10128733221D3B7300ED6CDE /* NSObject+RLSafe.m in Sources */,
 				10BF41EB228012A7009F291E /* DispatchBarrierTest.m in Sources */,
+				10F2DB622397AEEA00BA107A /* TestClassCluster.m in Sources */,
 				104BF8BD22771E9D000C464E /* DynamicCallFunctionTest.m in Sources */,
 				10BF41F2228120C1009F291E /* DispatchGroupLeaveTest.m in Sources */,
 				10128709221D3B0700ED6CDE /* ViewController.m in Sources */,
