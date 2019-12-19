@@ -1,0 +1,3100 @@
+# Path: /Users/hechao/Library/Developer/Xcode/DerivedData/RuntimeLearning-bkgcdltgpnhvhzeddppatdlfcqch/Build/Products/Debug-iphonesimulator/RuntimeLearning.app/RuntimeLearning
+# Arch: x86_64
+# Object files:
+[  0] linker synthesized
+[  1] /Users/hechao/Library/Developer/Xcode/DerivedData/RuntimeLearning-bkgcdltgpnhvhzeddppatdlfcqch/Build/Intermediates.noindex/RuntimeLearning.build/Debug-iphonesimulator/RuntimeLearning.build/RuntimeLearning.app-Simulated.xcent
+[  2] /Users/hechao/Library/Developer/Xcode/DerivedData/RuntimeLearning-bkgcdltgpnhvhzeddppatdlfcqch/Build/Intermediates.noindex/RuntimeLearning.build/Debug-iphonesimulator/RuntimeLearning.build/Objects-normal/x86_64/AttributeUsage.o
+[  3] /Users/hechao/Library/Developer/Xcode/DerivedData/RuntimeLearning-bkgcdltgpnhvhzeddppatdlfcqch/Build/Intermediates.noindex/RuntimeLearning.build/Debug-iphonesimulator/RuntimeLearning.build/Objects-normal/x86_64/TestUnsafeSwizzle.o
+[  4] /Users/hechao/Library/Developer/Xcode/DerivedData/RuntimeLearning-bkgcdltgpnhvhzeddppatdlfcqch/Build/Intermediates.noindex/RuntimeLearning.build/Debug-iphonesimulator/RuntimeLearning.build/Objects-normal/x86_64/DispatchOnceTest.o
+[  5] /Users/hechao/Library/Developer/Xcode/DerivedData/RuntimeLearning-bkgcdltgpnhvhzeddppatdlfcqch/Build/Intermediates.noindex/RuntimeLearning.build/Debug-iphonesimulator/RuntimeLearning.build/Objects-normal/x86_64/TestCategorySwizzle.o
+[  6] /Users/hechao/Library/Developer/Xcode/DerivedData/RuntimeLearning-bkgcdltgpnhvhzeddppatdlfcqch/Build/Intermediates.noindex/RuntimeLearning.build/Debug-iphonesimulator/RuntimeLearning.build/Objects-normal/x86_64/MethodSwizzleUtil.o
+[  7] /Users/hechao/Library/Developer/Xcode/DerivedData/RuntimeLearning-bkgcdltgpnhvhzeddppatdlfcqch/Build/Intermediates.noindex/RuntimeLearning.build/Debug-iphonesimulator/RuntimeLearning.build/Objects-normal/x86_64/NSObject+Injection.o
+[  8] /Users/hechao/Library/Developer/Xcode/DerivedData/RuntimeLearning-bkgcdltgpnhvhzeddppatdlfcqch/Build/Intermediates.noindex/RuntimeLearning.build/Debug-iphonesimulator/RuntimeLearning.build/Objects-normal/x86_64/TestCode.o
+[  9] /Users/hechao/Library/Developer/Xcode/DerivedData/RuntimeLearning-bkgcdltgpnhvhzeddppatdlfcqch/Build/Intermediates.noindex/RuntimeLearning.build/Debug-iphonesimulator/RuntimeLearning.build/Objects-normal/x86_64/CopyUsage.o
+[ 10] /Users/hechao/Library/Developer/Xcode/DerivedData/RuntimeLearning-bkgcdltgpnhvhzeddppatdlfcqch/Build/Intermediates.noindex/RuntimeLearning.build/Debug-iphonesimulator/RuntimeLearning.build/Objects-normal/x86_64/DispatchExamnationTest.o
+[ 11] /Users/hechao/Library/Developer/Xcode/DerivedData/RuntimeLearning-bkgcdltgpnhvhzeddppatdlfcqch/Build/Intermediates.noindex/RuntimeLearning.build/Debug-iphonesimulator/RuntimeLearning.build/Objects-normal/x86_64/TestTaggedPointer.o
+[ 12] /Users/hechao/Library/Developer/Xcode/DerivedData/RuntimeLearning-bkgcdltgpnhvhzeddppatdlfcqch/Build/Intermediates.noindex/RuntimeLearning.build/Debug-iphonesimulator/RuntimeLearning.build/Objects-normal/x86_64/ByteAlignmentTest.o
+[ 13] /Users/hechao/Library/Developer/Xcode/DerivedData/RuntimeLearning-bkgcdltgpnhvhzeddppatdlfcqch/Build/Intermediates.noindex/RuntimeLearning.build/Debug-iphonesimulator/RuntimeLearning.build/Objects-normal/x86_64/NSObject+RLSafe.o
+[ 14] /Users/hechao/Library/Developer/Xcode/DerivedData/RuntimeLearning-bkgcdltgpnhvhzeddppatdlfcqch/Build/Intermediates.noindex/RuntimeLearning.build/Debug-iphonesimulator/RuntimeLearning.build/Objects-normal/x86_64/DispatchBarrierTest.o
+[ 15] /Users/hechao/Library/Developer/Xcode/DerivedData/RuntimeLearning-bkgcdltgpnhvhzeddppatdlfcqch/Build/Intermediates.noindex/RuntimeLearning.build/Debug-iphonesimulator/RuntimeLearning.build/Objects-normal/x86_64/TestClassCluster.o
+[ 16] /Users/hechao/Library/Developer/Xcode/DerivedData/RuntimeLearning-bkgcdltgpnhvhzeddppatdlfcqch/Build/Intermediates.noindex/RuntimeLearning.build/Debug-iphonesimulator/RuntimeLearning.build/Objects-normal/x86_64/DynamicCallFunctionTest.o
+[ 17] /Users/hechao/Library/Developer/Xcode/DerivedData/RuntimeLearning-bkgcdltgpnhvhzeddppatdlfcqch/Build/Intermediates.noindex/RuntimeLearning.build/Debug-iphonesimulator/RuntimeLearning.build/Objects-normal/x86_64/DispatchGroupLeaveTest.o
+[ 18] /Users/hechao/Library/Developer/Xcode/DerivedData/RuntimeLearning-bkgcdltgpnhvhzeddppatdlfcqch/Build/Intermediates.noindex/RuntimeLearning.build/Debug-iphonesimulator/RuntimeLearning.build/Objects-normal/x86_64/ViewController.o
+[ 19] /Users/hechao/Library/Developer/Xcode/DerivedData/RuntimeLearning-bkgcdltgpnhvhzeddppatdlfcqch/Build/Intermediates.noindex/RuntimeLearning.build/Debug-iphonesimulator/RuntimeLearning.build/Objects-normal/x86_64/TestSwizzleInInitialize.o
+[ 20] /Users/hechao/Library/Developer/Xcode/DerivedData/RuntimeLearning-bkgcdltgpnhvhzeddppatdlfcqch/Build/Intermediates.noindex/RuntimeLearning.build/Debug-iphonesimulator/RuntimeLearning.build/Objects-normal/x86_64/NSObject+HCWillDealloc.o
+[ 21] /Users/hechao/Library/Developer/Xcode/DerivedData/RuntimeLearning-bkgcdltgpnhvhzeddppatdlfcqch/Build/Intermediates.noindex/RuntimeLearning.build/Debug-iphonesimulator/RuntimeLearning.build/Objects-normal/x86_64/UIViewController+Test.o
+[ 22] /Users/hechao/Library/Developer/Xcode/DerivedData/RuntimeLearning-bkgcdltgpnhvhzeddppatdlfcqch/Build/Intermediates.noindex/RuntimeLearning.build/Debug-iphonesimulator/RuntimeLearning.build/Objects-normal/x86_64/TestCategoryOveride.o
+[ 23] /Users/hechao/Library/Developer/Xcode/DerivedData/RuntimeLearning-bkgcdltgpnhvhzeddppatdlfcqch/Build/Intermediates.noindex/RuntimeLearning.build/Debug-iphonesimulator/RuntimeLearning.build/Objects-normal/x86_64/main.o
+[ 24] /Users/hechao/Library/Developer/Xcode/DerivedData/RuntimeLearning-bkgcdltgpnhvhzeddppatdlfcqch/Build/Intermediates.noindex/RuntimeLearning.build/Debug-iphonesimulator/RuntimeLearning.build/Objects-normal/x86_64/TestSubClassSwizzle.o
+[ 25] /Users/hechao/Library/Developer/Xcode/DerivedData/RuntimeLearning-bkgcdltgpnhvhzeddppatdlfcqch/Build/Intermediates.noindex/RuntimeLearning.build/Debug-iphonesimulator/RuntimeLearning.build/Objects-normal/x86_64/UIFont+Test.o
+[ 26] /Users/hechao/Library/Developer/Xcode/DerivedData/RuntimeLearning-bkgcdltgpnhvhzeddppatdlfcqch/Build/Intermediates.noindex/RuntimeLearning.build/Debug-iphonesimulator/RuntimeLearning.build/Objects-normal/x86_64/AppDelegate.o
+[ 27] /Users/hechao/Library/Developer/Xcode/DerivedData/RuntimeLearning-bkgcdltgpnhvhzeddppatdlfcqch/Build/Intermediates.noindex/RuntimeLearning.build/Debug-iphonesimulator/RuntimeLearning.build/Objects-normal/x86_64/UITextField+HCInputType.o
+[ 28] /Users/hechao/Library/Developer/Xcode/DerivedData/RuntimeLearning-bkgcdltgpnhvhzeddppatdlfcqch/Build/Products/Debug-iphonesimulator/Aspects/libAspects.a(Aspects-dummy.o)
+[ 29] /Users/hechao/Library/Developer/Xcode/DerivedData/RuntimeLearning-bkgcdltgpnhvhzeddppatdlfcqch/Build/Products/Debug-iphonesimulator/Aspects/libAspects.a(Aspects.o)
+[ 30] /Users/hechao/Library/Developer/Xcode/DerivedData/RuntimeLearning-bkgcdltgpnhvhzeddppatdlfcqch/Build/Products/Debug-iphonesimulator/libPods-RuntimeLearning.a(Pods-RuntimeLearning-dummy.o)
+[ 31] /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks//Foundation.framework/Foundation.tbd
+[ 32] /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/lib/libobjc.tbd
+[ 33] /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/lib/libSystem.tbd
+[ 34] /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks//UIKit.framework/UIKit.tbd
+[ 35] /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/System/Library/Frameworks//CoreFoundation.framework/CoreFoundation.tbd
+# Sections:
+# Address	Size    	Segment	Section
+0x100001880	0x00017703	__TEXT	__text
+0x100018F84	0x00000252	__TEXT	__stubs
+0x1000191D8	0x000003EE	__TEXT	__stub_helper
+0x1000195C8	0x000001E4	__TEXT	__gcc_except_tab
+0x1000197AC	0x000024CF	__TEXT	__cstring
+0x10001BC7B	0x000021EA	__TEXT	__objc_methname
+0x10001DE65	0x00000300	__TEXT	__objc_classname
+0x10001E165	0x00000BB1	__TEXT	__objc_methtype
+0x10001ED20	0x00000050	__TEXT	__const
+0x10001ED70	0x00000176	__TEXT	__entitlements
+0x10001EEE8	0x00000110	__TEXT	__unwind_info
+0x10001F000	0x00000010	__DATA	__nl_symbol_ptr
+0x10001F010	0x00000070	__DATA	__got
+0x10001F080	0x00000318	__DATA	__la_symbol_ptr
+0x10001F398	0x00000010	__DATA	__mod_init_func
+0x10001F3A8	0x00000008	__DATA	__mod_term_func
+0x10001F3B0	0x00000ED8	__DATA	__const
+0x100020288	0x000018C0	__DATA	__cfstring
+0x100021B48	0x00000100	__DATA	__objc_classlist
+0x100021C48	0x00000008	__DATA	__objc_nlclslist
+0x100021C50	0x00000058	__DATA	__objc_catlist
+0x100021CA8	0x00000030	__DATA	__objc_nlcatlist
+0x100021CD8	0x00000020	__DATA	__objc_protolist
+0x100021CF8	0x00000008	__DATA	__objc_imageinfo
+0x100021D00	0x00003F18	__DATA	__objc_const
+0x100025C18	0x00000818	__DATA	__objc_selrefs
+0x100026430	0x000001C0	__DATA	__objc_classrefs
+0x1000265F0	0x00000088	__DATA	__objc_superrefs
+0x100026678	0x00000108	__DATA	__objc_ivar
+0x100026780	0x00000A00	__DATA	__objc_data
+0x100027180	0x00000180	__DATA	__data
+0x100027300	0x000000B8	__DATA	__bss
+# Symbols:
+# Address	Size    	File  Name
+0x100001880	0x00000060	[  2] -[AttributeUsage dealloc]
+0x1000018E0	0x000000D0	[  2] -[AttributeUsage init]
+0x1000019B0	0x00000060	[  2] -[AttributeUsage testUsages]
+0x100001A10	0x00000130	[  2] -[AttributeUsage cleanupUsage]
+0x100001B40	0x00000060	[  2] ___30-[AttributeUsage cleanupUsage]_block_invoke
+0x100001BA0	0x00000040	[  2] ___copy_helper_block_
+0x100001BE0	0x00000030	[  2] ___destroy_helper_block_
+0x100001C10	0x00000030	[  2] _blockCleanUp
+0x100001C40	0x00000020	[  2] _AttributeUsageConstructor1
+0x100001C60	0x00000020	[  2] _AttributeUsageConstructor
+0x100001C80	0x00000020	[  2] _AttributeUsageDestructor
+0x100001CA0	0x00000040	[  2] -[AttributeUsage testNoReturn:]
+0x100001CE0	0x00000010	[  2] _unexcept
+0x100001CF0	0x00000020	[  2] -[AttributeUsage lock]
+0x100001D10	0x00000040	[  2] -[AttributeUsage setLock:]
+0x100001D50	0x00000033	[  2] -[AttributeUsage .cxx_destruct]
+0x100001D90	0x00000040	[  3] -[TestUnsafeSwizzle testMethod]
+0x100001DD0	0x00000070	[  3] +[SubTestUnsafeSwizzle load]
+0x100001E40	0x00000043	[  3] -[SubTestUnsafeSwizzle test_testMethod]
+0x100001E90	0x000000F0	[  4] +[DispatchOnceTest sharedInstance]
+0x100001F80	0x00000060	[  4] ___34+[DispatchOnceTest sharedInstance]_block_invoke
+0x100001FE0	0x00000010	[  4] ___copy_helper_block_
+0x100001FF0	0x0000000A	[  4] ___destroy_helper_block_
+0x100002000	0x00000040	[  5] -[TestCategorySwizzle testCategorySwizzle]
+0x100002040	0x00000010	[  5] +[TestCategorySwizzle testClassMethod]
+0x100002050	0x00000080	[  5] +[TestCategorySwizzle(Log) load]
+0x1000020D0	0x00000060	[  5] ___32+[TestCategorySwizzle(Log) load]_block_invoke
+0x100002130	0x00000060	[  5] -[TestCategorySwizzle(Log) log_testCategorySwizzle]
+0x100002190	0x00000080	[  5] +[TestCategorySwizzle(EventTrack) load]
+0x100002210	0x00000060	[  5] ___39+[TestCategorySwizzle(EventTrack) load]_block_invoke
+0x100002270	0x00000060	[  5] -[TestCategorySwizzle(EventTrack) track_testCategorySwizzle]
+0x1000022D0	0x000000B0	[  5] +[TestCategorySwizzle(ClassMethod) load]
+0x100002380	0x00000110	[  5] ___40+[TestCategorySwizzle(ClassMethod) load]_block_invoke
+0x100002490	0x00000010	[  5] ___copy_helper_block_
+0x1000024A0	0x00000010	[  5] ___destroy_helper_block_
+0x1000024B0	0x0000000E	[  5] +[TestCategorySwizzle(ClassMethod) class_testClassMethod]
+0x1000024C0	0x000000E1	[  6] +[MethodSwizzleUtil swizzleInstanceMethodWithClass:originalSel:replacementSel:]
+0x1000025B0	0x00000090	[  7] -[NSObject(Injection) setInjectExcuteBlock:]
+0x100002640	0x00000030	[  7] -[NSObject(Injection) injectExcuteBlock]
+0x100002670	0x0000008E	[  7] -[NSObject(Injection) injected]
+0x100002700	0x00000070	[  8] -[TestCode init]
+0x100002770	0x00000071	[  8] -[TestCode test]
+0x1000027F0	0x00000090	[  9] -[CopyUsage init]
+0x100002880	0x00000040	[  9] -[CopyUsage testCopyAndMutableCopy]
+0x1000028C0	0x00000240	[  9] -[CopyUsage testNSStringCopy]
+0x100002B00	0x00000290	[  9] -[CopyUsage testNSMutableStringCopy]
+0x100002D90	0x00000450	[  9] -[CopyUsage testNSArrayCopy]
+0x1000031E0	0x00000380	[  9] -[CopyUsage testNSMutableArrayCopy]
+0x100003560	0x00000440	[  9] -[CopyUsage testNSDictionaryCopy]
+0x1000039A0	0x00000420	[  9] -[CopyUsage testNSMutableDictionaryCopy]
+0x100003DC0	0x00000030	[  9] -[CopyUsage pCopyStr]
+0x100003DF0	0x00000040	[  9] -[CopyUsage setPCopyStr:]
+0x100003E30	0x00000020	[  9] -[CopyUsage pStrongStr]
+0x100003E50	0x00000040	[  9] -[CopyUsage setPStrongStr:]
+0x100003E90	0x00000030	[  9] -[CopyUsage pCopyArray]
+0x100003EC0	0x00000040	[  9] -[CopyUsage setPCopyArray:]
+0x100003F00	0x00000020	[  9] -[CopyUsage pStrongArray]
+0x100003F20	0x00000040	[  9] -[CopyUsage setPStrongArray:]
+0x100003F60	0x00000030	[  9] -[CopyUsage pCopyDict]
+0x100003F90	0x00000040	[  9] -[CopyUsage setPCopyDict:]
+0x100003FD0	0x00000020	[  9] -[CopyUsage pStrongDict]
+0x100003FF0	0x00000040	[  9] -[CopyUsage setPStrongDict:]
+0x100004030	0x000000C0	[  9] -[CopyUsage .cxx_destruct]
+0x1000040F0	0x00000030	[  9] -[TestObj name]
+0x100004120	0x00000040	[  9] -[TestObj setName:]
+0x100004160	0x00000033	[  9] -[TestObj .cxx_destruct]
+0x1000041A0	0x00000070	[ 10] -[DispatchExamnationTest init]
+0x100004210	0x00000150	[ 10] -[DispatchExamnationTest testCurrentQueue]
+0x100004360	0x00000030	[ 10] ___42-[DispatchExamnationTest testCurrentQueue]_block_invoke
+0x100004390	0x00000030	[ 10] ___42-[DispatchExamnationTest testCurrentQueue]_block_invoke_2
+0x1000043C0	0x00000030	[ 10] ___42-[DispatchExamnationTest testCurrentQueue]_block_invoke_3
+0x1000043F0	0x00000030	[ 10] ___42-[DispatchExamnationTest testCurrentQueue]_block_invoke_4
+0x100004420	0x00000030	[ 10] ___42-[DispatchExamnationTest testCurrentQueue]_block_invoke_5
+0x100004450	0x00000030	[ 10] ___42-[DispatchExamnationTest testCurrentQueue]_block_invoke_6
+0x100004480	0x00000050	[ 10] ___42-[DispatchExamnationTest testCurrentQueue]_block_invoke_7
+0x1000044D0	0x00000040	[ 10] ___copy_helper_block_
+0x100004510	0x00000030	[ 10] ___destroy_helper_block_
+0x100004540	0x00000040	[ 10] -[DispatchExamnationTest testLog]
+0x100004580	0x00000110	[ 10] -[DispatchExamnationTest testCurrentQueue1]
+0x100004690	0x00000090	[ 10] ___43-[DispatchExamnationTest testCurrentQueue1]_block_invoke
+0x100004720	0x00000030	[ 10] ___copy_helper_block_.38
+0x100004750	0x00000030	[ 10] ___destroy_helper_block_.39
+0x100004780	0x000000F0	[ 10] -[DispatchExamnationTest testSerialQueue]
+0x100004870	0x00000070	[ 10] ___41-[DispatchExamnationTest testSerialQueue]_block_invoke
+0x1000048E0	0x00000030	[ 10] ___41-[DispatchExamnationTest testSerialQueue]_block_invoke_2
+0x100004910	0x00000040	[ 10] ___copy_helper_block_.46
+0x100004950	0x00000023	[ 10] ___destroy_helper_block_.47
+0x100004980	0x000000B0	[ 11] -[TestTaggedPointer init]
+0x100004A30	0x00000210	[ 11] -[TestTaggedPointer stringTaggedPointerTest]
+0x100004C40	0x00000030	[ 11] __objc_isTaggedPointer
+0x100004C70	0x000001C0	[ 11] -[TestTaggedPointer numberTest]
+0x100004E30	0x000001D0	[ 11] -[TestTaggedPointer dateTest]
+0x100005000	0x00000071	[ 11] -[TestTaggedPointer formatedLogObject:]
+0x100005080	0x000000A0	[ 12] -[ByteAlignmentTest init]
+0x100005120	0x00000150	[ 12] -[ByteAlignmentTest test]
+0x100005270	0x00000020	[ 12] _word_align
+0x100005290	0x00000020	[ 12] -[ByteAlignmentTest a]
+0x1000052B0	0x00000030	[ 12] -[ByteAlignmentTest setA:]
+0x1000052E0	0x00000020	[ 12] -[ByteAlignmentTest b]
+0x100005300	0x00000030	[ 12] -[ByteAlignmentTest setB:]
+0x100005330	0x00000020	[ 12] -[ByteAlignmentTest c]
+0x100005350	0x00000030	[ 12] -[ByteAlignmentTest setC:]
+0x100005380	0x00000020	[ 12] -[ByteAlignmentTest d]
+0x1000053A0	0x00000030	[ 12] -[ByteAlignmentTest setD:]
+0x1000053D0	0x00000030	[ 12] -[ByteAlignmentTest testString]
+0x100005400	0x00000040	[ 12] -[ByteAlignmentTest setTestString:]
+0x100005440	0x00000020	[ 12] -[ByteAlignmentTest testObject]
+0x100005460	0x00000040	[ 12] -[ByteAlignmentTest setTestObject:]
+0x1000054A0	0x00000054	[ 12] -[ByteAlignmentTest .cxx_destruct]
+0x100005500	0x00000010	[ 13] +[NSObject(RLSafe) load]
+0x100005510	0x00000050	[ 13] -[NSObject(RLSafe) rl_methodSignatureForSelector:]
+0x100005560	0x00000060	[ 13] -[NSObject(RLSafe) rl_forwardInvocation:]
+0x1000055C0	0x00000010	[ 13] -[NSObject(RLSafe) nilMessage]
+0x1000055D0	0x000000F0	[ 14] -[DispatchBarrierTest init]
+0x1000056C0	0x00000090	[ 14] -[DispatchBarrierTest testBarrier]
+0x100005750	0x00000060	[ 14] ___34-[DispatchBarrierTest testBarrier]_block_invoke
+0x1000057B0	0x00000050	[ 14] ___34-[DispatchBarrierTest testBarrier]_block_invoke_2
+0x100005800	0x00000060	[ 14] ___34-[DispatchBarrierTest testBarrier]_block_invoke_3
+0x100005860	0x00000050	[ 14] ___34-[DispatchBarrierTest testBarrier]_block_invoke_4
+0x1000058B0	0x00000030	[ 14] ___34-[DispatchBarrierTest testBarrier]_block_invoke_5
+0x1000058E0	0x00000060	[ 14] ___34-[DispatchBarrierTest testBarrier]_block_invoke_6
+0x100005940	0x00000050	[ 14] ___34-[DispatchBarrierTest testBarrier]_block_invoke_7
+0x100005990	0x000001A0	[ 14] -[DispatchBarrierTest testGroup]
+0x100005B30	0x000000D0	[ 14] ___32-[DispatchBarrierTest testGroup]_block_invoke
+0x100005C00	0x00000060	[ 14] ___32-[DispatchBarrierTest testGroup]_block_invoke_2
+0x100005C60	0x00000040	[ 14] ___copy_helper_block_
+0x100005CA0	0x00000030	[ 14] ___destroy_helper_block_
+0x100005CD0	0x00000040	[ 14] ___copy_helper_block_.45
+0x100005D10	0x00000030	[ 14] ___destroy_helper_block_.46
+0x100005D40	0x000000D0	[ 14] ___32-[DispatchBarrierTest testGroup]_block_invoke.48
+0x100005E10	0x00000060	[ 14] ___32-[DispatchBarrierTest testGroup]_block_invoke_2.51
+0x100005E70	0x00000040	[ 14] ___copy_helper_block_.54
+0x100005EB0	0x00000030	[ 14] ___destroy_helper_block_.55
+0x100005EE0	0x00000040	[ 14] ___copy_helper_block_.57
+0x100005F20	0x00000030	[ 14] ___destroy_helper_block_.58
+0x100005F50	0x00000030	[ 14] ___32-[DispatchBarrierTest testGroup]_block_invoke.60
+0x100005F80	0x00000060	[ 14] ___32-[DispatchBarrierTest testGroup]_block_invoke_2.65
+0x100005FE0	0x00000050	[ 14] ___32-[DispatchBarrierTest testGroup]_block_invoke_3
+0x100006030	0x000000C0	[ 14] -[DispatchBarrierTest testGroup1]
+0x1000060F0	0x00000060	[ 14] ___33-[DispatchBarrierTest testGroup1]_block_invoke
+0x100006150	0x00000050	[ 14] ___33-[DispatchBarrierTest testGroup1]_block_invoke_2
+0x1000061A0	0x00000060	[ 14] ___33-[DispatchBarrierTest testGroup1]_block_invoke_3
+0x100006200	0x00000050	[ 14] ___33-[DispatchBarrierTest testGroup1]_block_invoke_4
+0x100006250	0x00000030	[ 14] ___33-[DispatchBarrierTest testGroup1]_block_invoke_5
+0x100006280	0x00000060	[ 14] ___33-[DispatchBarrierTest testGroup1]_block_invoke_6
+0x1000062E0	0x00000050	[ 14] ___33-[DispatchBarrierTest testGroup1]_block_invoke_7
+0x100006330	0x00000210	[ 14] -[DispatchBarrierTest testSemaphore]
+0x100006540	0x000000E0	[ 14] ___36-[DispatchBarrierTest testSemaphore]_block_invoke
+0x100006620	0x00000060	[ 14] ___36-[DispatchBarrierTest testSemaphore]_block_invoke_2
+0x100006680	0x00000040	[ 14] ___copy_helper_block_.94
+0x1000066C0	0x00000030	[ 14] ___destroy_helper_block_.95
+0x1000066F0	0x00000040	[ 14] ___copy_helper_block_.97
+0x100006730	0x00000030	[ 14] ___destroy_helper_block_.98
+0x100006760	0x000000E0	[ 14] ___36-[DispatchBarrierTest testSemaphore]_block_invoke.100
+0x100006840	0x00000060	[ 14] ___36-[DispatchBarrierTest testSemaphore]_block_invoke_2.103
+0x1000068A0	0x00000040	[ 14] ___copy_helper_block_.106
+0x1000068E0	0x00000030	[ 14] ___destroy_helper_block_.107
+0x100006910	0x00000040	[ 14] ___copy_helper_block_.109
+0x100006950	0x00000030	[ 14] ___destroy_helper_block_.110
+0x100006980	0x00000100	[ 14] ___36-[DispatchBarrierTest testSemaphore]_block_invoke.112
+0x100006A80	0x00000070	[ 14] ___36-[DispatchBarrierTest testSemaphore]_block_invoke_2.115
+0x100006AF0	0x00000040	[ 14] ___copy_helper_block_.118
+0x100006B30	0x00000030	[ 14] ___destroy_helper_block_.119
+0x100006B60	0x00000040	[ 14] ___copy_helper_block_.121
+0x100006BA0	0x00000030	[ 14] ___destroy_helper_block_.122
+0x100006BD0	0x000001C0	[ 14] -[DispatchBarrierTest testRunloop]
+0x100006D90	0x000000A0	[ 14] ___34-[DispatchBarrierTest testRunloop]_block_invoke
+0x100006E30	0x00000060	[ 14] ___34-[DispatchBarrierTest testRunloop]_block_invoke_2
+0x100006E90	0x00000030	[ 14] ___copy_helper_block_.129
+0x100006EC0	0x00000030	[ 14] ___destroy_helper_block_.130
+0x100006EF0	0x00000030	[ 14] ___copy_helper_block_.132
+0x100006F20	0x00000030	[ 14] ___destroy_helper_block_.133
+0x100006F50	0x000000A0	[ 14] ___34-[DispatchBarrierTest testRunloop]_block_invoke.135
+0x100006FF0	0x00000060	[ 14] ___34-[DispatchBarrierTest testRunloop]_block_invoke_2.138
+0x100007050	0x00000030	[ 14] ___copy_helper_block_.141
+0x100007080	0x00000030	[ 14] ___destroy_helper_block_.142
+0x1000070B0	0x00000030	[ 14] ___copy_helper_block_.144
+0x1000070E0	0x00000030	[ 14] ___destroy_helper_block_.145
+0x100007110	0x00000130	[ 14] ___34-[DispatchBarrierTest testRunloop]_block_invoke.147
+0x100007240	0x00000050	[ 14] ___34-[DispatchBarrierTest testRunloop]_block_invoke_2.158
+0x100007290	0x00000060	[ 14] ___copy_helper_block_.163
+0x1000072F0	0x0000003D	[ 14] ___destroy_helper_block_.164
+0x100007330	0x000000A0	[ 15] -[TestClassCluster init]
+0x1000073D0	0x000000C0	[ 15] -[TestClassCluster test]
+0x100007490	0x00000260	[ 15] -[TestClassCluster testNSString]
+0x1000076F0	0x00000270	[ 15] -[TestClassCluster testArray]
+0x100007960	0x00000150	[ 15] -[TestClassCluster testNumber]
+0x100007AB0	0x00000150	[ 15] -[TestClassCluster testNSDate]
+0x100007C00	0x00000150	[ 15] -[TestClassCluster testNSSet]
+0x100007D50	0x00000146	[ 15] -[TestClassCluster testNSMap]
+0x100007EA0	0x000000A0	[ 16] -[DynamicCallFunctionTest dealloc]
+0x100007F40	0x00000090	[ 16] -[DynamicCallFunctionTest init]
+0x100007FD0	0x000000B0	[ 16] _dynamicCallPrintfFunction
+0x100008080	0x00000140	[ 16] _dynamicCallAddFunction
+0x1000081C0	0x00000050	[ 16] -[DynamicCallFunctionTest injected]
+0x100008210	0x0000001B	[ 16] -[DynamicCallFunctionTest testInject]
+0x100008230	0x000000A0	[ 17] -[DispatchGroupLeaveTest init]
+0x1000082D0	0x00000041	[ 17] -[DispatchGroupLeaveTest testGroupLeaveCrash]
+0x100008320	0x00000220	[ 18] -[ViewController viewDidLoad]
+0x100008540	0x00000030	[ 18] ___29-[ViewController viewDidLoad]_block_invoke
+0x100008570	0x00000040	[ 18] ___copy_helper_block_
+0x1000085B0	0x00000030	[ 18] ___destroy_helper_block_
+0x1000085E0	0x00000060	[ 18] _functionF
+0x100008640	0x00000020	[ 18] _functionG
+0x100008660	0x000000B0	[ 18] -[ViewController setupUI]
+0x100008710	0x000000E0	[ 18] -[ViewController viewWillAppear:]
+0x1000087F0	0x00000070	[ 18] -[ViewController viewDidAppear:]
+0x100008860	0x000000E0	[ 18] -[ViewController observeValueForKeyPath:ofObject:change:context:]
+0x100008940	0x00000040	[ 18] -[ViewController testAttributeUsage]
+0x100008980	0x00000040	[ 18] -[ViewController testClassSwizzle]
+0x1000089C0	0x00000140	[ 18] -[ViewController testUnsafeSwizzle]
+0x100008B00	0x00000060	[ 18] -[ViewController testCategorySwizzle]
+0x100008B60	0x00000130	[ 18] -[ViewController testSubClassSwizzleMethod]
+0x100008C90	0x00000140	[ 18] -[ViewController testDoSthWhenDealloc]
+0x100008DD0	0x000000D0	[ 18] ___38-[ViewController testDoSthWhenDealloc]_block_invoke
+0x100008EA0	0x00000030	[ 18] ___copy_helper_block_.88
+0x100008ED0	0x00000020	[ 18] ___destroy_helper_block_.89
+0x100008EF0	0x00000040	[ 18] -[ViewController testCategoryOveride]
+0x100008F30	0x00000060	[ 18] -[ViewController testSwizzleInInitialize]
+0x100008F90	0x00000060	[ 18] -[ViewController testCopyUsage]
+0x100008FF0	0x000000F0	[ 18] -[ViewController testTextFieldUsage]
+0x1000090E0	0x00000150	[ 18] -[ViewController testArrayReadWhileChange]
+0x100009230	0x000000E0	[ 18] ___42-[ViewController testArrayReadWhileChange]_block_invoke
+0x100009310	0x00000040	[ 18] ___copy_helper_block_.119
+0x100009350	0x00000030	[ 18] ___destroy_helper_block_.120
+0x100009380	0x00000040	[ 18] -[ViewController testClassCluster]
+0x1000093C0	0x000000B0	[ 18] -[ViewController textField:shouldChangeCharactersInRange:replacementString:]
+0x100009470	0x00000020	[ 18] -[ViewController dynamicFunctionTest]
+0x100009490	0x00000040	[ 18] -[ViewController setDynamicFunctionTest:]
+0x1000094D0	0x00000040	[ 18] -[ViewController aTextFiled]
+0x100009510	0x00000040	[ 18] -[ViewController setATextFiled:]
+0x100009550	0x0000004A	[ 18] -[ViewController .cxx_destruct]
+0x1000095A0	0x00000130	[ 19] +[TestSwizzleInInitialize initialize]
+0x1000096D0	0x00000050	[ 19] ___37+[TestSwizzleInInitialize initialize]_block_invoke
+0x100009720	0x00000010	[ 19] ___copy_helper_block_
+0x100009730	0x00000010	[ 19] ___destroy_helper_block_
+0x100009740	0x00000040	[ 19] -[TestSwizzleInInitialize testSwizzleMethod]
+0x100009780	0x00000040	[ 19] -[TestSwizzleInInitialize testLogMethod]
+0x1000097C0	0x00000040	[ 19] -[TestSwizzleInInitialize testTrackMethod]
+0x100009800	0x00000060	[ 19] -[TestSwizzleInInitialize s_testSwizzleMethod]
+0x100009860	0x00000130	[ 19] +[TestSwizzleInInitializeA initialize]
+0x100009990	0x00000050	[ 19] ___38+[TestSwizzleInInitializeA initialize]_block_invoke
+0x1000099E0	0x00000010	[ 19] ___copy_helper_block_.19
+0x1000099F0	0x00000010	[ 19] ___destroy_helper_block_.20
+0x100009A00	0x00000060	[ 19] -[TestSwizzleInInitializeA a_testSwizzleMethod]
+0x100009A60	0x00000130	[ 19] +[TestSwizzleInInitializeB initialize]
+0x100009B90	0x00000050	[ 19] ___38+[TestSwizzleInInitializeB initialize]_block_invoke
+0x100009BE0	0x00000010	[ 19] ___copy_helper_block_.29
+0x100009BF0	0x00000010	[ 19] ___destroy_helper_block_.30
+0x100009C00	0x00000060	[ 19] -[TestSwizzleInInitializeB b_testSwizzleMethod]
+0x100009C60	0x000000F0	[ 19] +[TestSwizzleInInitialize(Log) initialize]
+0x100009D50	0x00000050	[ 19] ___42+[TestSwizzleInInitialize(Log) initialize]_block_invoke
+0x100009DA0	0x00000010	[ 19] ___copy_helper_block_.38
+0x100009DB0	0x00000010	[ 19] ___destroy_helper_block_.39
+0x100009DC0	0x00000060	[ 19] -[TestSwizzleInInitialize(Log) log_testSwizzleMethod]
+0x100009E20	0x000000F0	[ 19] +[TestSwizzleInInitialize(Track) initialize]
+0x100009F10	0x00000050	[ 19] ___44+[TestSwizzleInInitialize(Track) initialize]_block_invoke
+0x100009F60	0x00000010	[ 19] ___copy_helper_block_.47
+0x100009F70	0x00000010	[ 19] ___destroy_helper_block_.48
+0x100009F80	0x00000052	[ 19] -[TestSwizzleInInitialize(Track) track_testSwizzleMethod]
+0x100009FE0	0x000000B0	[ 20] -[NSObject(HCWillDealloc) hc_doSthWhenDeallocWithBlock:]
+0x10000A090	0x00000120	[ 20] -[HCAssociatedObject initWithBlock:target:]
+0x10000A1B0	0x00000080	[ 20] -[HCAssociatedObject dealloc]
+0x10000A230	0x00000020	[ 20] -[HCAssociatedObject target]
+0x10000A250	0x00000030	[ 20] -[HCAssociatedObject setTarget:]
+0x10000A280	0x00000030	[ 20] -[HCAssociatedObject deallocBlock]
+0x10000A2B0	0x00000040	[ 20] -[HCAssociatedObject setDeallocBlock:]
+0x10000A2F0	0x00000033	[ 20] -[HCAssociatedObject .cxx_destruct]
+0x10000A330	0x000000B0	[ 21] +[UIViewController(Test) load]
+0x10000A3E0	0x00000100	[ 21] ___30+[UIViewController(Test) load]_block_invoke
+0x10000A4E0	0x00000010	[ 21] ___copy_helper_block_
+0x10000A4F0	0x00000010	[ 21] ___destroy_helper_block_
+0x10000A500	0x00000041	[ 21] -[UIViewController(Test) hc_viewWillAppear:]
+0x10000A550	0x00000010	[ 22] +[TestCategoryOveride initialize]
+0x10000A560	0x00000260	[ 22] -[TestCategoryOveride init]
+0x10000A7C0	0x00000030	[ 22] -[TestCategoryOveride log]
+0x10000A7F0	0x00000030	[ 22] +[TestCategoryOveride log1]
+0x10000A820	0x00000027	[ 22] -[TestCategoryOveride(TestOveride) log]
+0x10000A850	0x00000360	[ 23] _main
+0x10000ABB0	0x000000E0	[ 23] _testBenchmark
+0x10000AC90	0x00000050	[ 23] ___main_block_invoke
+0x10000ACE0	0x00000090	[ 23] _testWaitUsage
+0x10000AD70	0x000002B0	[ 23] _testVAList
+0x10000B020	0x00000100	[ 23] _testLogicNot
+0x10000B120	0x00000100	[ 23] _testLogicEqualNil
+0x10000B220	0x000002B0	[ 23] _testVAList1
+0x10000B4D0	0x000000B0	[ 23] ___testBenchmark_block_invoke
+0x10000B580	0x00000040	[ 23] ___copy_helper_block_
+0x10000B5C0	0x00000023	[ 23] ___destroy_helper_block_
+0x10000B5F0	0x00000040	[ 24] -[TestSubClassSwizzle testSubClassSwizzle]
+0x10000B630	0x00000040	[ 24] -[TestSubClassSwizzle s_testSubClassSwizzle]
+0x10000B670	0x00000060	[ 24] -[TestASubClassSwizzle a_testSubClassSwizzle]
+0x10000B6D0	0x00000052	[ 24] -[TestBSubClassSwizzle b_testSubClassSwizzle]
+0x10000B730	0x00000010	[ 25] +[UIFont(Test) initialize]
+0x10000B740	0x000000B0	[ 25] +[UIFont(Test) load]
+0x10000B7F0	0x00000100	[ 25] ___20+[UIFont(Test) load]_block_invoke
+0x10000B8F0	0x00000010	[ 25] ___copy_helper_block_
+0x10000B900	0x00000010	[ 25] ___destroy_helper_block_
+0x10000B910	0x0000007D	[ 25] +[UIFont(Test) hc_fontWithName:size:]
+0x10000B990	0x000000F0	[ 26] -[AppDelegate application:didFinishLaunchingWithOptions:]
+0x10000BA80	0x00000040	[ 26] -[AppDelegate applicationWillResignActive:]
+0x10000BAC0	0x00000040	[ 26] -[AppDelegate applicationDidEnterBackground:]
+0x10000BB00	0x00000040	[ 26] -[AppDelegate applicationWillEnterForeground:]
+0x10000BB40	0x00000060	[ 26] -[AppDelegate applicationDidBecomeActive:]
+0x10000BBA0	0x00000040	[ 26] -[AppDelegate applicationWillTerminate:]
+0x10000BBE0	0x00000020	[ 26] -[AppDelegate window]
+0x10000BC00	0x00000040	[ 26] -[AppDelegate setWindow:]
+0x10000BC40	0x00000033	[ 26] -[AppDelegate .cxx_destruct]
+0x10000BC80	0x00000210	[ 27] -[UITextField(HCInputType) hcui_shouldChangeCharactersInRange:replacementString:]
+0x10000BE90	0x00000150	[ 27] -[UITextField(HCInputType) configKeyboardType]
+0x10000BFE0	0x000000F0	[ 27] -[UITextField(HCInputType) hcui_phoneNumberCheckWithString:]
+0x10000C0D0	0x00000080	[ 27] -[UITextField(HCInputType) hcui_formatedPhoneNumberCheckWithString:range:]
+0x10000C150	0x000001E0	[ 27] -[UITextField(HCInputType) hcui_identityNumberCheckWithString:]
+0x10000C330	0x000005B0	[ 27] -[UITextField(HCInputType) hcui_priceCheckWithString:range:]
+0x10000C8E0	0x00000080	[ 27] -[UITextField(HCInputType) hcui_formatedCardCheckWithString:range:]
+0x10000C960	0x00000120	[ 27] -[UITextField(HCInputType) hcui_blankCountAfterCursorWithRange:]
+0x10000CA80	0x00000170	[ 27] -[UITextField(HCInputType) hcui_authCodeCheckWithString:range:]
+0x10000CBF0	0x00000160	[ 27] -[UITextField(HCInputType) hcui_paymentPWDCheckWithString:]
+0x10000CD50	0x000000F0	[ 27] -[UITextField(HCInputType) hcui_predicateString:withRegex:]
+0x10000CE40	0x000002F0	[ 27] -[UITextField(HCInputType) hcui_formatedCardNo:]
+0x10000D130	0x00000400	[ 27] -[UITextField(HCInputType) hcui_formatedPhoneNo:]
+0x10000D530	0x000008C0	[ 27] -[UITextField(HCInputType) _hcui_formatedNumberCheckWithString:range:]
+0x10000DDF0	0x00000080	[ 27] ___70-[UITextField(HCInputType) _hcui_formatedNumberCheckWithString:range:]_block_invoke
+0x10000DE70	0x00000080	[ 27] ___copy_helper_block_
+0x10000DEF0	0x00000050	[ 27] ___destroy_helper_block_
+0x10000DF40	0x00000140	[ 27] -[UITextField(HCInputType) _hcui_formatedNumbers:]
+0x10000E080	0x00000060	[ 27] -[UITextField(HCInputType) hcui_inputType]
+0x10000E0E0	0x00000090	[ 27] -[UITextField(HCInputType) setHcui_inputType:]
+0x10000E170	0x00000090	[ 27] -[UITextField(HCInputType) hcui_limitLegnth]
+0x10000E200	0x00000080	[ 27] -[UITextField(HCInputType) setHcui_limitLegnth:]
+0x10000E280	0x00000090	[ 27] -[UITextField(HCInputType) hcui_maxValue]
+0x10000E310	0x0000007B	[ 27] -[UITextField(HCInputType) setHcui_maxValue:]
+0x10000E390	0x00000090	[ 29] +[NSObject(Aspects) aspect_hookSelector:withOptions:usingBlock:error:]
+0x10000E420	0x000007D0	[ 29] _aspect_add
+0x10000EBF0	0x00000090	[ 29] -[NSObject(Aspects) aspect_hookSelector:withOptions:usingBlock:error:]
+0x10000EC80	0x00000130	[ 29] -[AspectTracker initWithTrackedClass:parent:]
+0x10000EDB0	0x00000130	[ 29] -[AspectTracker description]
+0x10000EEE0	0x00000020	[ 29] -[AspectTracker trackedClass]
+0x10000EF00	0x00000040	[ 29] -[AspectTracker setTrackedClass:]
+0x10000EF40	0x00000020	[ 29] -[AspectTracker selectorNames]
+0x10000EF60	0x00000040	[ 29] -[AspectTracker setSelectorNames:]
+0x10000EFA0	0x00000040	[ 29] -[AspectTracker parentEntry]
+0x10000EFE0	0x00000040	[ 29] -[AspectTracker setParentEntry:]
+0x10000F020	0x00000070	[ 29] -[AspectTracker .cxx_destruct]
+0x10000F090	0x00000AC0	[ 29] -[NSInvocation(Aspects) aspect_argumentAtIndex:]
+0x10000FB50	0x000001A0	[ 29] -[NSInvocation(Aspects) aspects_arguments]
+0x10000FCF0	0x00000560	[ 29] +[AspectIdentifier identifierWithSelector:object:options:block:error:]
+0x100010250	0x000003E0	[ 29] _aspect_blockMethodSignature
+0x100010630	0x000009A0	[ 29] _aspect_isCompatibleBlockSignature
+0x100010FD0	0x000003A0	[ 29] -[AspectIdentifier invokeWithInfo:]
+0x100011370	0x00000190	[ 29] -[AspectIdentifier description]
+0x100011500	0x00000030	[ 29] -[AspectIdentifier remove]
+0x100011530	0x00000350	[ 29] _aspect_remove
+0x100011880	0x00000020	[ 29] -[AspectIdentifier selector]
+0x1000118A0	0x00000030	[ 29] -[AspectIdentifier setSelector:]
+0x1000118D0	0x00000020	[ 29] -[AspectIdentifier block]
+0x1000118F0	0x00000040	[ 29] -[AspectIdentifier setBlock:]
+0x100011930	0x00000020	[ 29] -[AspectIdentifier blockSignature]
+0x100011950	0x00000040	[ 29] -[AspectIdentifier setBlockSignature:]
+0x100011990	0x00000040	[ 29] -[AspectIdentifier object]
+0x1000119D0	0x00000040	[ 29] -[AspectIdentifier setObject:]
+0x100011A10	0x00000020	[ 29] -[AspectIdentifier options]
+0x100011A30	0x00000030	[ 29] -[AspectIdentifier setOptions:]
+0x100011A60	0x00000070	[ 29] -[AspectIdentifier .cxx_destruct]
+0x100011AD0	0x00000140	[ 29] -[AspectsContainer hasAspects]
+0x100011C10	0x00000530	[ 29] -[AspectsContainer addAspect:withOptions:]
+0x100012140	0x00000450	[ 29] -[AspectsContainer removeAspect:]
+0x100012590	0x00000130	[ 29] -[AspectsContainer description]
+0x1000126C0	0x00000030	[ 29] -[AspectsContainer beforeAspects]
+0x1000126F0	0x00000040	[ 29] -[AspectsContainer setBeforeAspects:]
+0x100012730	0x00000030	[ 29] -[AspectsContainer insteadAspects]
+0x100012760	0x00000040	[ 29] -[AspectsContainer setInsteadAspects:]
+0x1000127A0	0x00000030	[ 29] -[AspectsContainer afterAspects]
+0x1000127D0	0x00000040	[ 29] -[AspectsContainer setAfterAspects:]
+0x100012810	0x00000070	[ 29] -[AspectsContainer .cxx_destruct]
+0x100012880	0x00000470	[ 29] -[AspectInfo initWithInstance:invocation:]
+0x100012CF0	0x000000A0	[ 29] -[AspectInfo arguments]
+0x100012D90	0x00000020	[ 29] -[AspectInfo instance]
+0x100012DB0	0x00000020	[ 29] -[AspectInfo originalInvocation]
+0x100012DD0	0x00000060	[ 29] -[AspectInfo .cxx_destruct]
+0x100012E30	0x00000060	[ 29] ___Block_byref_object_copy_
+0x100012E90	0x00000030	[ 29] ___Block_byref_object_dispose_
+0x100012EC0	0x00000060	[ 29] _aspect_performLocked
+0x100012F20	0x00000140	[ 29] ___aspect_add_block_invoke
+0x100013060	0x00000C60	[ 29] _aspect_isSelectorAllowedAndTrack
+0x100013CC0	0x000002A0	[ 29] _aspect_getContainerForObject
+0x100013F60	0x00000560	[ 29] _aspect_prepareClassAndHookSelector
+0x1000144C0	0x00000090	[ 29] ___copy_helper_block_
+0x100014550	0x00000060	[ 29] ___destroy_helper_block_
+0x1000145B0	0x000000A0	[ 29] ___aspect_isSelectorAllowedAndTrack_block_invoke
+0x100014650	0x00000070	[ 29] _aspect_getSwizzledClassesDict
+0x1000146C0	0x00000050	[ 29] ___aspect_getSwizzledClassesDict_block_invoke
+0x100014710	0x00000220	[ 29] _aspect_aliasForSelector
+0x100014930	0x000005E0	[ 29] _aspect_hookClass
+0x100014F10	0x00000040	[ 29] _aspect_isMsgForwardIMP
+0x100014F50	0x00000160	[ 29] _aspect_getMsgForwardIMP
+0x1000150B0	0x00000270	[ 29] _aspect_swizzleClassInPlace
+0x100015320	0x00000210	[ 29] _aspect_swizzleForwardInvocation
+0x100015530	0x00000470	[ 29] _aspect_hookedGetClass
+0x1000159A0	0x00000110	[ 29] __aspect_modifySwizzledClasses
+0x100015AB0	0x000000B0	[ 29] ___aspect_swizzleClassInPlace_block_invoke
+0x100015B60	0x00000040	[ 29] ___copy_helper_block_.385
+0x100015BA0	0x00000030	[ 29] ___destroy_helper_block_.386
+0x100015BD0	0x00000050	[ 29] ____aspect_modifySwizzledClasses_block_invoke
+0x100015C20	0x00001900	[ 29] ___ASPECTS_ARE_BEING_CALLED__
+0x100017520	0x00000250	[ 29] _aspect_getContainerForClass
+0x100017770	0x00000060	[ 29] ___aspect_hookedGetClass_block_invoke
+0x1000177D0	0x000002D0	[ 29] ___aspect_remove_block_invoke
+0x100017AA0	0x00000A50	[ 29] _aspect_cleanupHookedClassAndSelector
+0x1000184F0	0x00000070	[ 29] ___copy_helper_block_.436
+0x100018560	0x00000040	[ 29] ___destroy_helper_block_.437
+0x1000185A0	0x00000210	[ 29] _aspect_deregisterTrackedSelector
+0x1000187B0	0x00000210	[ 29] _aspect_destroyContainerForObject
+0x1000189C0	0x00000250	[ 29] _aspect_undoSwizzleClassInPlace
+0x100018C10	0x000000B0	[ 29] ___aspect_undoSwizzleClassInPlace_block_invoke
+0x100018CC0	0x00000260	[ 29] _aspect_undoSwizzleForwardInvocation
+0x100018F20	0x00000040	[ 29] ___copy_helper_block_.451
+0x100018F60	0x00000023	[ 29] ___destroy_helper_block_.452
+0x100018F84	0x00000006	[ 35] _CFAbsoluteTimeGetCurrent
+0x100018F8A	0x00000006	[ 35] _CFGetRetainCount
+0x100018F90	0x00000006	[ 31] _NSClassFromString
+0x100018F96	0x00000006	[ 35] _NSGetSizeAndAlignment
+0x100018F9C	0x00000006	[ 31] _NSHomeDirectory
+0x100018FA2	0x00000006	[ 31] _NSLog
+0x100018FA8	0x00000006	[ 31] _NSSelectorFromString
+0x100018FAE	0x00000006	[ 31] _NSStringFromClass
+0x100018FB4	0x00000006	[ 31] _NSStringFromSelector
+0x100018FBA	0x00000006	[ 33] _OSSpinLockLock
+0x100018FC0	0x00000006	[ 33] _OSSpinLockUnlock
+0x100018FC6	0x00000006	[ 34] _UIApplicationMain
+0x100018FCC	0x00000006	[ 33] __Block_object_assign
+0x100018FD2	0x00000006	[ 33] __Block_object_dispose
+0x100018FD8	0x00000006	[ 33] __Unwind_Resume
+0x100018FDE	0x00000006	[ 33] ___stack_chk_fail
+0x100018FE4	0x00000006	[ 33] _ceil
+0x100018FEA	0x00000006	[ 32] _class_addMethod
+0x100018FF0	0x00000006	[ 32] _class_copyMethodList
+0x100018FF6	0x00000006	[ 32] _class_getClassMethod
+0x100018FFC	0x00000006	[ 32] _class_getInstanceMethod
+0x100019002	0x00000006	[ 32] _class_getInstanceSize
+0x100019008	0x00000006	[ 32] _class_getSuperclass
+0x10001900E	0x00000006	[ 32] _class_isMetaClass
+0x100019014	0x00000006	[ 32] _class_replaceMethod
+0x10001901A	0x00000006	[ 32] _class_respondsToSelector
+0x100019020	0x00000006	[ 33] _dispatch_after
+0x100019026	0x00000006	[ 33] _dispatch_async
+0x10001902C	0x00000006	[ 33] _dispatch_barrier_async
+0x100019032	0x00000006	[ 33] _dispatch_benchmark
+0x100019038	0x00000006	[ 33] _dispatch_get_global_queue
+0x10001903E	0x00000006	[ 33] _dispatch_group_async
+0x100019044	0x00000006	[ 33] _dispatch_group_create
+0x10001904A	0x00000006	[ 33] _dispatch_group_enter
+0x100019050	0x00000006	[ 33] _dispatch_group_leave
+0x100019056	0x00000006	[ 33] _dispatch_group_notify
+0x10001905C	0x00000006	[ 33] _dispatch_once
+0x100019062	0x00000006	[ 33] _dispatch_queue_create
+0x100019068	0x00000006	[ 33] _dispatch_semaphore_create
+0x10001906E	0x00000006	[ 33] _dispatch_semaphore_signal
+0x100019074	0x00000006	[ 33] _dispatch_semaphore_wait
+0x10001907A	0x00000006	[ 33] _dispatch_sync
+0x100019080	0x00000006	[ 33] _dispatch_time
+0x100019086	0x00000006	[ 33] _dlclose
+0x10001908C	0x00000006	[ 33] _dlerror
+0x100019092	0x00000006	[ 33] _dlopen
+0x100019098	0x00000006	[ 33] _dlsym
+0x10001909E	0x00000006	[ 33] _exit
+0x1000190A4	0x00000006	[ 33] _fork
+0x1000190AA	0x00000006	[ 33] _fprintf
+0x1000190B0	0x00000006	[ 33] _free
+0x1000190B6	0x00000006	[ 33] _getpid
+0x1000190BC	0x00000006	[ 32] _imp_implementationWithBlock
+0x1000190C2	0x00000006	[ 33] _malloc
+0x1000190C8	0x00000006	[ 33] _malloc_size
+0x1000190CE	0x00000006	[ 33] _memset
+0x1000190D4	0x00000006	[ 32] _method_exchangeImplementations
+0x1000190DA	0x00000006	[ 32] _method_getDescription
+0x1000190E0	0x00000006	[ 32] _method_getImplementation
+0x1000190E6	0x00000006	[ 32] _method_getName
+0x1000190EC	0x00000006	[ 32] _method_getTypeEncoding
+0x1000190F2	0x00000006	[ 32] _objc_allocateClassPair
+0x1000190F8	0x00000006	[ 32] _objc_autorelease
+0x1000190FE	0x00000006	[ 32] _objc_autoreleasePoolPop
+0x100019104	0x00000006	[ 32] _objc_autoreleasePoolPush
+0x10001910A	0x00000006	[ 32] _objc_autoreleaseReturnValue
+0x100019110	0x00000006	[ 32] _objc_begin_catch
+0x100019116	0x00000006	[ 32] _objc_copyWeak
+0x10001911C	0x00000006	[ 32] _objc_destroyWeak
+0x100019122	0x00000006	[ 32] _objc_end_catch
+0x100019128	0x00000006	[ 32] _objc_enumerationMutation
+0x10001912E	0x00000006	[ 32] _objc_getAssociatedObject
+0x100019134	0x00000006	[ 32] _objc_getClass
+0x10001913A	0x00000006	[ 32] _objc_getMetaClass
+0x100019140	0x00000006	[ 32] _objc_getProperty
+0x100019146	0x00000006	[ 32] _objc_initWeak
+0x10001914C	0x00000006	[ 32] _objc_loadWeakRetained
+0x100019152	0x00000006	[ 32] _objc_msgSendSuper2
+0x100019158	0x00000006	[ 32] _objc_registerClassPair
+0x10001915E	0x00000006	[ 32] _objc_retainAutorelease
+0x100019164	0x00000006	[ 32] _objc_retainAutoreleaseReturnValue
+0x10001916A	0x00000006	[ 32] _objc_retainAutoreleasedReturnValue
+0x100019170	0x00000006	[ 32] _objc_retainBlock
+0x100019176	0x00000006	[ 32] _objc_setAssociatedObject
+0x10001917C	0x00000006	[ 32] _objc_setProperty_atomic_copy
+0x100019182	0x00000006	[ 32] _objc_setProperty_nonatomic_copy
+0x100019188	0x00000006	[ 32] _objc_storeStrong
+0x10001918E	0x00000006	[ 32] _objc_storeWeak
+0x100019194	0x00000006	[ 32] _objc_sync_enter
+0x10001919A	0x00000006	[ 32] _objc_sync_exit
+0x1000191A0	0x00000006	[ 32] _objc_terminate
+0x1000191A6	0x00000006	[ 32] _objc_unsafeClaimAutoreleasedReturnValue
+0x1000191AC	0x00000006	[ 32] _object_getClass
+0x1000191B2	0x00000006	[ 32] _object_setClass
+0x1000191B8	0x00000006	[ 33] _printf
+0x1000191BE	0x00000006	[ 33] _reallocf
+0x1000191C4	0x00000006	[ 33] _sleep
+0x1000191CA	0x00000006	[ 33] _strcmp
+0x1000191D0	0x00000006	[ 33] _wait
+0x1000191D8	0x00000010	[  0] helper helper
+0x1000191E8	0x0000000A	[ 31] _NSClassFromString
+0x1000191F2	0x0000000A	[ 31] _NSHomeDirectory
+0x1000191FC	0x0000000A	[ 31] _NSLog
+0x100019206	0x0000000A	[ 31] _NSSelectorFromString
+0x100019210	0x0000000A	[ 31] _NSStringFromClass
+0x10001921A	0x0000000A	[ 31] _NSStringFromSelector
+0x100019224	0x0000000A	[ 32] _class_addMethod
+0x10001922E	0x0000000A	[ 32] _class_copyMethodList
+0x100019238	0x0000000A	[ 32] _class_getClassMethod
+0x100019242	0x0000000A	[ 32] _class_getInstanceMethod
+0x10001924C	0x0000000A	[ 32] _class_getInstanceSize
+0x100019256	0x0000000A	[ 32] _class_getSuperclass
+0x100019260	0x0000000A	[ 32] _class_isMetaClass
+0x10001926A	0x0000000A	[ 32] _class_replaceMethod
+0x100019274	0x0000000A	[ 32] _class_respondsToSelector
+0x10001927E	0x0000000A	[ 32] _imp_implementationWithBlock
+0x100019288	0x0000000A	[ 32] _method_exchangeImplementations
+0x100019292	0x0000000A	[ 32] _method_getDescription
+0x10001929C	0x0000000A	[ 32] _method_getImplementation
+0x1000192A6	0x0000000A	[ 32] _method_getName
+0x1000192B0	0x0000000A	[ 32] _method_getTypeEncoding
+0x1000192BA	0x0000000A	[ 32] _objc_allocateClassPair
+0x1000192C4	0x0000000A	[ 32] _objc_autorelease
+0x1000192CE	0x0000000A	[ 32] _objc_autoreleasePoolPop
+0x1000192D8	0x0000000A	[ 32] _objc_autoreleasePoolPush
+0x1000192E2	0x0000000A	[ 32] _objc_autoreleaseReturnValue
+0x1000192EC	0x0000000A	[ 32] _objc_begin_catch
+0x1000192F6	0x0000000A	[ 32] _objc_copyWeak
+0x100019300	0x0000000A	[ 32] _objc_destroyWeak
+0x10001930A	0x0000000A	[ 32] _objc_end_catch
+0x100019314	0x0000000A	[ 32] _objc_enumerationMutation
+0x10001931E	0x0000000A	[ 32] _objc_getAssociatedObject
+0x100019328	0x0000000A	[ 32] _objc_getClass
+0x100019332	0x0000000A	[ 32] _objc_getMetaClass
+0x10001933C	0x0000000A	[ 32] _objc_getProperty
+0x100019346	0x0000000A	[ 32] _objc_initWeak
+0x100019350	0x0000000A	[ 32] _objc_loadWeakRetained
+0x10001935A	0x0000000A	[ 32] _objc_msgSendSuper2
+0x100019364	0x0000000A	[ 32] _objc_registerClassPair
+0x10001936E	0x0000000A	[ 32] _objc_retainAutorelease
+0x100019378	0x0000000A	[ 32] _objc_retainAutoreleaseReturnValue
+0x100019382	0x0000000A	[ 32] _objc_retainAutoreleasedReturnValue
+0x10001938C	0x0000000A	[ 32] _objc_retainBlock
+0x100019396	0x0000000A	[ 32] _objc_setAssociatedObject
+0x1000193A0	0x0000000A	[ 32] _objc_setProperty_atomic_copy
+0x1000193AA	0x0000000A	[ 32] _objc_setProperty_nonatomic_copy
+0x1000193B4	0x0000000A	[ 32] _objc_storeStrong
+0x1000193BE	0x0000000A	[ 32] _objc_storeWeak
+0x1000193C8	0x0000000A	[ 32] _objc_sync_enter
+0x1000193D2	0x0000000A	[ 32] _objc_sync_exit
+0x1000193DC	0x0000000A	[ 32] _objc_terminate
+0x1000193E6	0x0000000A	[ 32] _objc_unsafeClaimAutoreleasedReturnValue
+0x1000193F0	0x0000000A	[ 32] _object_getClass
+0x1000193FA	0x0000000A	[ 32] _object_setClass
+0x100019404	0x0000000A	[ 33] _OSSpinLockLock
+0x10001940E	0x0000000A	[ 33] _OSSpinLockUnlock
+0x100019418	0x0000000A	[ 33] __Block_object_assign
+0x100019422	0x0000000A	[ 33] __Block_object_dispose
+0x10001942C	0x0000000A	[ 33] __Unwind_Resume
+0x100019436	0x0000000A	[ 33] ___stack_chk_fail
+0x100019440	0x0000000A	[ 33] _ceil
+0x10001944A	0x0000000A	[ 33] _dispatch_after
+0x100019454	0x0000000A	[ 33] _dispatch_async
+0x10001945E	0x0000000A	[ 33] _dispatch_barrier_async
+0x100019468	0x0000000A	[ 33] _dispatch_benchmark
+0x100019472	0x0000000A	[ 33] _dispatch_get_global_queue
+0x10001947C	0x0000000A	[ 33] _dispatch_group_async
+0x100019486	0x0000000A	[ 33] _dispatch_group_create
+0x100019490	0x0000000A	[ 33] _dispatch_group_enter
+0x10001949A	0x0000000A	[ 33] _dispatch_group_leave
+0x1000194A4	0x0000000A	[ 33] _dispatch_group_notify
+0x1000194AE	0x0000000A	[ 33] _dispatch_once
+0x1000194B8	0x0000000A	[ 33] _dispatch_queue_create
+0x1000194C2	0x0000000A	[ 33] _dispatch_semaphore_create
+0x1000194CC	0x0000000A	[ 33] _dispatch_semaphore_signal
+0x1000194D6	0x0000000A	[ 33] _dispatch_semaphore_wait
+0x1000194E0	0x0000000A	[ 33] _dispatch_sync
+0x1000194EA	0x0000000A	[ 33] _dispatch_time
+0x1000194F4	0x0000000A	[ 33] _dlclose
+0x1000194FE	0x0000000A	[ 33] _dlerror
+0x100019508	0x0000000A	[ 33] _dlopen
+0x100019512	0x0000000A	[ 33] _dlsym
+0x10001951C	0x0000000A	[ 33] _exit
+0x100019526	0x0000000A	[ 33] _fork
+0x100019530	0x0000000A	[ 33] _fprintf
+0x10001953A	0x0000000A	[ 33] _free
+0x100019544	0x0000000A	[ 33] _getpid
+0x10001954E	0x0000000A	[ 33] _malloc
+0x100019558	0x0000000A	[ 33] _malloc_size
+0x100019562	0x0000000A	[ 33] _memset
+0x10001956C	0x0000000A	[ 33] _printf
+0x100019576	0x0000000A	[ 33] _reallocf
+0x100019580	0x0000000A	[ 33] _sleep
+0x10001958A	0x0000000A	[ 33] _strcmp
+0x100019594	0x0000000A	[ 33] _wait
+0x10001959E	0x0000000A	[ 34] _UIApplicationMain
+0x1000195A8	0x0000000A	[ 35] _CFAbsoluteTimeGetCurrent
+0x1000195B2	0x0000000A	[ 35] _CFGetRetainCount
+0x1000195BC	0x0000000A	[ 35] _NSGetSizeAndAlignment
+0x1000195C8	0x0000004C	[  2] GCC_except_table3
+0x100019614	0x0000002C	[ 10] GCC_except_table12
+0x100019640	0x00000040	[ 18] GCC_except_table12
+0x100019680	0x0000002C	[ 18] GCC_except_table15
+0x1000196AC	0x00000048	[ 23] GCC_except_table0
+0x1000196F4	0x0000002C	[ 29] GCC_except_table1
+0x100019720	0x0000002C	[ 29] GCC_except_table20
+0x10001974C	0x00000034	[ 29] GCC_except_table63
+0x100019780	0x0000002C	[ 29] GCC_except_table67
+0x1000197AC	0x00000003	[  2] literal string: %s
+0x1000197AF	0x0000001A	[  2] literal string: -[AttributeUsage dealloc]
+0x1000197C9	0x00000006	[  2] literal string: v8@?0
+0x1000197CF	0x0000001F	[  2] literal string: -[AttributeUsage cleanupUsage]
+0x1000197EE	0x00000013	[  2] literal string: Excute before main
+0x100019801	0x00000012	[  2] literal string: Excute after main
+0x100019813	0x00000005	[  2] literal string: lock
+0x100019818	0x00000016	[  2] literal string: T@"NSLock",&,N,V_lock
+0x10001982E	0x00000020	[  3] literal string: -[TestUnsafeSwizzle testMethod]
+0x10001984E	0x0000000D	[  3] literal string: swizzle~test
+0x10001985B	0x0000002B	[  5] literal string: -[TestCategorySwizzle testCategorySwizzle]
+0x100019886	0x00000034	[  5] literal string: -[TestCategorySwizzle(Log) log_testCategorySwizzle]
+0x1000198BA	0x0000003D	[  5] literal string: -[TestCategorySwizzle(EventTrack) track_testCategorySwizzle]
+0x1000198F7	0x00000012	[  7] literal string: injectExcuteBlock
+0x100019909	0x00000008	[  7] literal string: T@?,C,N
+0x100019911	0x00000004	[  8] literal string: %ld
+0x100019915	0x00000019	[  9] literal string: ========NSString========
+0x10001992E	0x00000004	[  9] literal string: 111
+0x100019932	0x00000018	[  9] literal string: original str address:%p
+0x10001994A	0x00000017	[  9] literal string: str by copy address:%p
+0x100019961	0x0000001E	[  9] literal string: str by mutableCopy address:%p
+0x10001997F	0x00000020	[  9] literal string: property str by copy address:%p
+0x10001999F	0x00000022	[  9] literal string: property str by strong address:%p
+0x1000199C1	0x00000021	[  9] literal string: ========NSString Changed========
+0x1000199E2	0x00000004	[  9] literal string: 222
+0x1000199E6	0x0000001F	[  9] literal string: original str:%@ and address:%p
+0x100019A05	0x0000001E	[  9] literal string: str by copy:%@ and address:%p
+0x100019A23	0x00000025	[  9] literal string: str by mutableCopy:%@ and address:%p
+0x100019A48	0x00000027	[  9] literal string: property str by copy:%@ and address:%p
+0x100019A6F	0x00000029	[  9] literal string: property str by strong:%@ and address:%p
+0x100019A98	0x00000020	[  9] literal string: ========NSMutableString========
+0x100019AB8	0x00000028	[  9] literal string: ========NSMutableString Changed========
+0x100019AE0	0x00000018	[  9] literal string: ========NSArray========
+0x100019AF8	0x00000021	[  9] literal string: original array:%@ and address:%p
+0x100019B19	0x00000020	[  9] literal string: array by copy:%@ and address:%p
+0x100019B39	0x00000027	[  9] literal string: array by mutableCopy:%@ and address:%p
+0x100019B60	0x00000029	[  9] literal string: property array by copy:%@ and address:%p
+0x100019B89	0x0000002B	[  9] literal string: property array by strong:%@ and address:%p
+0x100019BB4	0x00000020	[  9] literal string: ========NSArray Changed========
+0x100019BD4	0x00000028	[  9] literal string: ========NSArray element Changed========
+0x100019BFC	0x0000001F	[  9] literal string: ========NSMutableArray========
+0x100019C1B	0x00000027	[  9] literal string: ========NSMutableArray Changed========
+0x100019C42	0x0000001D	[  9] literal string: ========NSDictionary========
+0x100019C5F	0x00000005	[  9] literal string: obj1
+0x100019C64	0x00000020	[  9] literal string: original dict:%@ and address:%p
+0x100019C84	0x0000001F	[  9] literal string: dict by copy:%@ and address:%p
+0x100019CA3	0x00000026	[  9] literal string: dict by mutableCopy:%@ and address:%p
+0x100019CC9	0x00000028	[  9] literal string: property dict by copy:%@ and address:%p
+0x100019CF1	0x0000002A	[  9] literal string: property dict by strong:%@ and address:%p
+0x100019D1B	0x0000002D	[  9] literal string: ========NSDictionary element changed========
+0x100019D48	0x00000025	[  9] literal string: ========NSDictionary changed========
+0x100019D6D	0x00000005	[  9] literal string: obj0
+0x100019D72	0x00000024	[  9] literal string: ========NSMutableDictionary========
+0x100019D96	0x00000034	[  9] literal string: ========NSMutableDictionary element changed========
+0x100019DCA	0x0000002C	[  9] literal string: ========NSMutableDictionary changed========
+0x100019DF6	0x00000009	[  9] literal string: pCopyStr
+0x100019DFF	0x0000001C	[  9] literal string: T@"NSString",C,N,V_pCopyStr
+0x100019E1B	0x0000000B	[  9] literal string: pStrongStr
+0x100019E26	0x0000001E	[  9] literal string: T@"NSString",&,N,V_pStrongStr
+0x100019E44	0x0000000B	[  9] literal string: pCopyArray
+0x100019E4F	0x0000001D	[  9] literal string: T@"NSArray",C,N,V_pCopyArray
+0x100019E6C	0x0000000D	[  9] literal string: pStrongArray
+0x100019E79	0x0000001F	[  9] literal string: T@"NSArray",&,N,V_pStrongArray
+0x100019E98	0x0000000A	[  9] literal string: pCopyDict
+0x100019EA2	0x00000021	[  9] literal string: T@"NSDictionary",C,N,V_pCopyDict
+0x100019EC3	0x0000000C	[  9] literal string: pStrongDict
+0x100019ECF	0x00000023	[  9] literal string: T@"NSDictionary",&,N,V_pStrongDict
+0x100019EF2	0x00000005	[  9] literal string: name
+0x100019EF7	0x00000018	[  9] literal string: T@"NSString",C,N,V_name
+0x100019F0F	0x00000019	[ 10] literal string: com.hc.currentQueue.test
+0x100019F28	0x00000005	[ 10] literal string: %s:1
+0x100019F2D	0x00000038	[ 10] literal string: -[DispatchExamnationTest testCurrentQueue]_block_invoke
+0x100019F65	0x00000005	[ 10] literal string: %s:2
+0x100019F6A	0x0000003A	[ 10] literal string: -[DispatchExamnationTest testCurrentQueue]_block_invoke_2
+0x100019FA4	0x00000005	[ 10] literal string: %s:3
+0x100019FA9	0x0000003A	[ 10] literal string: -[DispatchExamnationTest testCurrentQueue]_block_invoke_3
+0x100019FE3	0x00000005	[ 10] literal string: %s:4
+0x100019FE8	0x0000002B	[ 10] literal string: -[DispatchExamnationTest testCurrentQueue]
+0x10001A013	0x00000005	[ 10] literal string: %s:5
+0x10001A018	0x0000003A	[ 10] literal string: -[DispatchExamnationTest testCurrentQueue]_block_invoke_4
+0x10001A052	0x00000005	[ 10] literal string: %s:6
+0x10001A057	0x0000003A	[ 10] literal string: -[DispatchExamnationTest testCurrentQueue]_block_invoke_5
+0x10001A091	0x00000005	[ 10] literal string: %s:7
+0x10001A096	0x0000003A	[ 10] literal string: -[DispatchExamnationTest testCurrentQueue]_block_invoke_6
+0x10001A0D0	0x00000005	[ 10] literal string: %s:8
+0x10001A0D5	0x00000022	[ 10] literal string: -[DispatchExamnationTest testLog]
+0x10001A0F7	0x00000019	[ 10] literal string: %d -- currentQueue -- %@
+0x10001A110	0x00000003	[ 10] literal string: %d
+0x10001A113	0x00000018	[ 10] literal string: com.hc.serialQueue.test
+0x10001A12B	0x0000002A	[ 10] literal string: -[DispatchExamnationTest testSerialQueue]
+0x10001A155	0x00000037	[ 10] literal string: -[DispatchExamnationTest testSerialQueue]_block_invoke
+0x10001A18C	0x00000039	[ 10] literal string: -[DispatchExamnationTest testSerialQueue]_block_invoke_2
+0x10001A1C5	0x0000000C	[ 11] literal string: 11111111111
+0x10001A1D1	0x00000003	[ 11] literal string: %@
+0x10001A1D4	0x00000005	[ 11] literal string: 2222
+0x10001A1D9	0x00000003	[ 11] literal string: %c
+0x10001A1DC	0x0000001A	[ 11] literal string: aNumber retainCount = %ld
+0x10001A1F6	0x0000002F	[ 11] literal string: aNumber retainCount after added to array = %ld
+0x10001A225	0x00000017	[ 11] literal string: date retainCount = %ld
+0x10001A23C	0x00000018	[ 11] literal string: today retainCount = %ld
+0x10001A254	0x0000002D	[ 11] literal string: today retainCount after added to array = %ld
+0x10001A281	0x0000000D	[ 11] literal string: 0x%6lx %@ %@
+0x10001A28E	0x0000000F	[ 12] literal string: charSize = %zu
+0x10001A29D	0x00000010	[ 12] literal string: shortSize = %zu
+0x10001A2AD	0x0000000E	[ 12] literal string: intSize = %zu
+0x10001A2BB	0x00000010	[ 12] literal string: floatSize = %zu
+0x10001A2CB	0x00000011	[ 12] literal string: doubleSize = %zu
+0x10001A2DC	0x00000012	[ 12] literal string: sizeOf self = %ld
+0x10001A2EE	0x00000021	[ 12] literal string: class_getInstanceSize self = %ld
+0x10001A30F	0x00000017	[ 12] literal string: malloc_size self = %ld
+0x10001A326	0x00000002	[ 12] literal string: a
+0x10001A328	0x00000009	[ 12] literal string: Ti,N,V_a
+0x10001A331	0x00000002	[ 12] literal string: b
+0x10001A333	0x00000009	[ 12] literal string: Tc,N,V_b
+0x10001A33C	0x00000002	[ 12] literal string: c
+0x10001A33E	0x00000009	[ 12] literal string: Ts,N,V_c
+0x10001A347	0x00000002	[ 12] literal string: d
+0x10001A349	0x00000009	[ 12] literal string: Ts,N,V_d
+0x10001A352	0x0000000B	[ 12] literal string: testString
+0x10001A35D	0x0000001E	[ 12] literal string: T@"NSString",C,N,V_testString
+0x10001A37B	0x0000000B	[ 12] literal string: testObject
+0x10001A386	0x00000027	[ 12] literal string: T@"ByteAlignmentTest",&,N,V_testObject
+0x10001A3AD	0x00000016	[ 14] literal string: rl.barrier.test.queue
+0x10001A3C3	0x00000012	[ 14] literal string: testBarrier-task1
+0x10001A3D5	0x0000001D	[ 14] literal string: testBarrier-task1:async task
+0x10001A3F2	0x00000012	[ 14] literal string: testBarrier-task2
+0x10001A404	0x0000001D	[ 14] literal string: testBarrier-task2:async task
+0x10001A421	0x00000017	[ 14] literal string: dispatch_barrier_async
+0x10001A438	0x00000012	[ 14] literal string: testBarrier-task3
+0x10001A44A	0x0000001D	[ 14] literal string: testBarrier-task3:async task
+0x10001A467	0x00000014	[ 14] literal string: rl.group.test.queue
+0x10001A47B	0x00000010	[ 14] literal string: testGroup-task1
+0x10001A48B	0x0000001B	[ 14] literal string: testGroup-task1:async task
+0x10001A4A6	0x00000010	[ 14] literal string: testGroup-task2
+0x10001A4B6	0x0000001B	[ 14] literal string: testGroup-task2:async task
+0x10001A4D1	0x00000016	[ 14] literal string: dispatch_group_notify
+0x10001A4E7	0x00000010	[ 14] literal string: testGroup-task3
+0x10001A4F7	0x0000001B	[ 14] literal string: testGroup-task3:async task
+0x10001A512	0x00000015	[ 14] literal string: rl.group1.test.queue
+0x10001A527	0x00000018	[ 14] literal string: rl.semaphore.test.queue
+0x10001A53F	0x00000014	[ 14] literal string: testSemaphore-task1
+0x10001A553	0x0000001F	[ 14] literal string: testSemaphore-task1:async task
+0x10001A572	0x00000014	[ 14] literal string: testSemaphore-task2
+0x10001A586	0x0000001F	[ 14] literal string: testSemaphore-task2:async task
+0x10001A5A5	0x00000014	[ 14] literal string: testSemaphore-task3
+0x10001A5B9	0x0000001F	[ 14] literal string: testSemaphore-task3:async task
+0x10001A5D8	0x00000016	[ 14] literal string: rl.runloop.test.queue
+0x10001A5EE	0x00000012	[ 14] literal string: testRunloop-task1
+0x10001A600	0x0000001D	[ 14] literal string: testRunloop-task1:async task
+0x10001A61D	0x00000012	[ 14] literal string: testRunloop-task2
+0x10001A62F	0x0000001D	[ 14] literal string: testRunloop-task2:async task
+0x10001A64C	0x00000012	[ 14] literal string: testRunloop-task3
+0x10001A65E	0x0000001D	[ 14] literal string: testRunloop-task3:async task
+0x10001A67B	0x0000002B	[ 15] literal string: [aString isMemberOfClass:[NSString class]]
+0x10001A6A6	0x00000029	[ 15] literal string: [aString isKindOfClass:[NSString class]]
+0x10001A6CF	0x00000014	[ 15] literal string: aString class is %@
+0x10001A6E3	0x00000014	[ 15] literal string: bString class is %@
+0x10001A6F7	0x0000000D	[ 15] literal string: 111111111111
+0x10001A704	0x00000014	[ 15] literal string: cString class is %@
+0x10001A718	0x00000028	[ 15] literal string: [array isMemberOfClass:[NSArray class]]
+0x10001A740	0x00000026	[ 15] literal string: [array isKindOfClass:[NSArray class]]
+0x10001A766	0x00000013	[ 15] literal string: arrary class is %@
+0x10001A779	0x00000036	[ 15] literal string: [mutableArray isMemberOfClass:[NSMutableArray class]]
+0x10001A7AF	0x00000034	[ 15] literal string: [mutableArray isKindOfClass:[NSMutableArray class]]
+0x10001A7E3	0x00000019	[ 15] literal string: mutableArray class is %@
+0x10001A7FC	0x0000002E	[ 15] literal string: [boolNumber isMemberOfClass:[NSNumber class]]
+0x10001A82A	0x0000002C	[ 15] literal string: [boolNumber isKindOfClass:[NSNumber class]]
+0x10001A856	0x00000017	[ 15] literal string: boolNumber class is %@
+0x10001A86D	0x00000026	[ 15] literal string: [date isMemberOfClass:[NSDate class]]
+0x10001A893	0x00000024	[ 15] literal string: [date isKindOfClass:[NSDate class]]
+0x10001A8B7	0x00000011	[ 15] literal string: date class is %@
+0x10001A8C8	0x00000024	[ 15] literal string: [set isMemberOfClass:[NSSet class]]
+0x10001A8EC	0x00000022	[ 15] literal string: [set isKindOfClass:[NSSet class]]
+0x10001A90E	0x00000010	[ 15] literal string: set class is %@
+0x10001A91E	0x0000002B	[ 15] literal string: [table isMemberOfClass:[NSMapTable class]]
+0x10001A949	0x00000029	[ 15] literal string: [table isKindOfClass:[NSMapTable class]]
+0x10001A972	0x00000017	[ 15] literal string: NSMapTable class is %@
+0x10001A989	0x00000019	[ 16] literal string: /usr/lib/libSystem.dylib
+0x10001A9A2	0x00000004	[ 16] literal string: %s\n
+0x10001A9A6	0x00000007	[ 16] literal string: printf
+0x10001A9AD	0x00000014	[ 16] literal string: dynamicCallFunction
+0x10001A9C1	0x00000016	[ 16] literal string: %@/Documents/libadd.a
+0x10001A9D7	0x00000004	[ 16] literal string: add
+0x10001A9DB	0x00000004	[ 16] literal string: %d\n
+0x10001A9DF	0x0000000D	[ 16] literal string: injected: %@
+0x10001A9EC	0x0000001E	[ 18] literal string: -[ViewController viewDidLoad]
+0x10001AA0A	0x00000003	[ 18] literal string: %p
+0x10001AA0D	0x0000000C	[ 18] literal string: Injected %s
+0x10001AA19	0x0000001A	[ 18] literal string: -[ViewController setupUI]
+0x10001AA33	0x00000022	[ 18] literal string: -[ViewController viewWillAppear:]
+0x10001AA55	0x00000021	[ 18] literal string: -[ViewController viewDidAppear:]
+0x10001AA76	0x00000010	[ 18] literal string: backgroundColor
+0x10001AA86	0x00000014	[ 18] literal string: backgroundColor: %@
+0x10001AA9A	0x0000000F	[ 18] literal string: exception = %@
+0x10001AAA9	0x00000013	[ 18] literal string: v16@?0@"NSObject"8
+0x10001AABC	0x00000019	[ 18] literal string: v32@?0@"TestObj"8Q16^B24
+0x10001AAD5	0x00000005	[ 18] literal string: hash
+0x10001AADA	0x00000005	[ 18] literal string: TQ,R
+0x10001AADF	0x0000000B	[ 18] literal string: superclass
+0x10001AAEA	0x00000005	[ 18] literal string: T#,R
+0x10001AAEF	0x0000000C	[ 18] literal string: description
+0x10001AAFB	0x00000011	[ 18] literal string: T@"NSString",R,C
+0x10001AB0C	0x00000011	[ 18] literal string: debugDescription
+0x10001AB1D	0x00000014	[ 18] literal string: dynamicFunctionTest
+0x10001AB31	0x00000036	[ 18] literal string: T@"DynamicCallFunctionTest",&,N,V_dynamicFunctionTest
+0x10001AB67	0x0000000B	[ 18] literal string: aTextFiled
+0x10001AB72	0x00000021	[ 18] literal string: T@"UITextField",W,N,V_aTextFiled
+0x10001AB93	0x0000002D	[ 19] literal string: -[TestSwizzleInInitialize testSwizzleMethod]
+0x10001ABC0	0x00000029	[ 19] literal string: -[TestSwizzleInInitialize testLogMethod]
+0x10001ABE9	0x0000002B	[ 19] literal string: -[TestSwizzleInInitialize testTrackMethod]
+0x10001AC14	0x0000002F	[ 19] literal string: -[TestSwizzleInInitialize s_testSwizzleMethod]
+0x10001AC43	0x00000030	[ 19] literal string: -[TestSwizzleInInitializeA a_testSwizzleMethod]
+0x10001AC73	0x00000030	[ 19] literal string: -[TestSwizzleInInitializeB b_testSwizzleMethod]
+0x10001ACA3	0x00000036	[ 19] literal string: -[TestSwizzleInInitialize(Log) log_testSwizzleMethod]
+0x10001ACD9	0x0000003A	[ 19] literal string: -[TestSwizzleInInitialize(Track) track_testSwizzleMethod]
+0x10001AD13	0x00000007	[ 20] literal string: target
+0x10001AD1A	0x00000018	[ 20] literal string: T@"NSObject",N,V_target
+0x10001AD32	0x0000000D	[ 20] literal string: deallocBlock
+0x10001AD3F	0x00000017	[ 20] literal string: T@?,C,N,V_deallocBlock
+0x10001AD56	0x00000014	[ 22] literal string: TestCategoryOveride
+0x10001AD6A	0x00000013	[ 22] literal string: cls responds to:%d
+0x10001AD7D	0x00000008	[ 22] literal string: orginal
+0x10001AD85	0x00000005	[ 22] literal string: log1
+0x10001AD8A	0x00000009	[ 22] literal string: category
+0x10001AD93	0x0000000B	[ 23] literal string: pid_t = %d
+0x10001AD9E	0x00000007	[ 23] literal string: %@, %@
+0x10001ADA5	0x00000002	[ 23] literal string: 0
+0x10001ADA7	0x00000002	[ 23] literal string: 1
+0x10001ADA9	0x00000003	[ 23] literal string: 11
+0x10001ADAC	0x00000011	[ 23] literal string: error ocurred!/n
+0x10001ADBD	0x00000027	[ 23] literal string: This is child process with pid of %d/n
+0x10001ADE4	0x0000002B	[ 23] literal string: I catched a child process with pid of %d/n
+0x10001AE0F	0x00000010	[ 23] literal string: time cost: %.4f
+0x10001AE1F	0x00000018	[ 23] literal string: average time cost: %.4f
+0x10001AE37	0x0000001C	[ 23] literal string: &param = %p\n and param = %@
+0x10001AE53	0x00000005	[ 23] literal string: test
+0x10001AE58	0x0000003A	[ 23] literal string: [[NSMutableArray array] addObject:] Avg. Runtime: %llu ns
+0x10001AE92	0x0000002B	[ 24] literal string: -[TestSubClassSwizzle testSubClassSwizzle]
+0x10001AEBD	0x0000002E	[ 24] literal string: -[TestASubClassSwizzle a_testSubClassSwizzle]
+0x10001AEEB	0x0000002E	[ 24] literal string: -[TestBSubClassSwizzle b_testSubClassSwizzle]
+0x10001AF19	0x00000048	[ 26] literal string: /Applications/InjectionIII.app/Contents/Resources/iOSInjection10.bundle
+0x10001AF61	0x0000003A	[ 26] literal string: -[AppDelegate application:didFinishLaunchingWithOptions:]
+0x10001AF9B	0x0000002B	[ 26] literal string: -[AppDelegate applicationDidBecomeActive:]
+0x10001AFC6	0x00000007	[ 26] literal string: window
+0x10001AFCD	0x00000011	[ 26] literal string: T@"UIWindow",&,N
+0x10001AFDE	0x0000001A	[ 26] literal string: T@"UIWindow",&,N,V_window
+0x10001AFF8	0x00000001	[ 27] literal string: 
+0x10001AFF9	0x00000006	[ 27] literal string: [0-9]
+0x10001AFFF	0x00000007	[ 27] literal string: [0-9X]
+0x10001B006	0x00000002	[ 27] literal string: .
+0x10001B008	0x00000003	[ 27] literal string: 0.
+0x10001B00B	0x00000002	[ 27] literal string:  
+0x10001B00D	0x0000000C	[ 27] literal string: [a-zA-Z0-9]
+0x10001B019	0x00000010	[ 27] literal string: SELF MATCHES %@
+0x10001B029	0x0000000F	[ 27] literal string: hcui_inputType
+0x10001B038	0x00000005	[ 27] literal string: Tq,N
+0x10001B03D	0x00000011	[ 27] literal string: hcui_limitLegnth
+0x10001B04E	0x0000000E	[ 27] literal string: hcui_maxValue
+0x10001B05C	0x00000005	[ 27] literal string: Td,N
+0x10001B061	0x00000012	[ 29] literal string: AspectErrorDomain
+0x10001B073	0x0000000A	[ 29] literal string: _Aspects_
+0x10001B07D	0x00000009	[ 29] literal string: aspects_
+0x10001B086	0x0000001D	[ 29] literal string: __aspects_forwardInvocation:
+0x10001B0A3	0x00000038	[ 29] literal string: <%@: %@, trackedClass: %@, selectorNames:%@, parent:%p>
+0x10001B0DB	0x0000000D	[ 29] literal string: trackedClass
+0x10001B0E8	0x00000016	[ 29] literal string: T#,&,N,V_trackedClass
+0x10001B0FE	0x0000000E	[ 29] literal string: selectorNames
+0x10001B10C	0x00000025	[ 29] literal string: T@"NSMutableSet",&,N,V_selectorNames
+0x10001B131	0x0000000C	[ 29] literal string: parentEntry
+0x10001B13D	0x00000024	[ 29] literal string: T@"AspectTracker",W,N,V_parentEntry
+0x10001B161	0x00000002	[ 29] literal string: @
+0x10001B163	0x00000002	[ 29] literal string: #
+0x10001B165	0x00000002	[ 29] literal string: :
+0x10001B167	0x00000002	[ 29] literal string: i
+0x10001B169	0x00000002	[ 29] literal string: s
+0x10001B16B	0x00000002	[ 29] literal string: q
+0x10001B16D	0x00000002	[ 29] literal string: C
+0x10001B16F	0x00000002	[ 29] literal string: I
+0x10001B171	0x00000002	[ 29] literal string: S
+0x10001B173	0x00000002	[ 29] literal string: Q
+0x10001B175	0x00000002	[ 29] literal string: f
+0x10001B177	0x00000002	[ 29] literal string: B
+0x10001B179	0x00000002	[ 29] literal string: *
+0x10001B17B	0x00000003	[ 29] literal string: @?
+0x10001B17E	0x00000047	[ 29] literal string: +[AspectIdentifier identifierWithSelector:object:options:block:error:]
+0x10001B1C5	0x00000013	[ 29] literal string: <Unknown Function>
+0x10001B1D8	0x00000045	[ 29] literal string: /Users/hechao/Documents/Demos/RuntimeLearning/Pods/Aspects/Aspects.m
+0x10001B21D	0x0000000F	[ 29] literal string: <Unknown File>
+0x10001B22C	0x00000025	[ 29] literal string: Invalid parameter not satisfying: %@
+0x10001B251	0x00000006	[ 29] literal string: block
+0x10001B257	0x00000009	[ 29] literal string: selector
+0x10001B260	0x0000002D	[ 29] literal string: Block has too many arguments. Not calling %@
+0x10001B28D	0x00000030	[ 29] literal string: Failed to allocate memory for block invocation.
+0x10001B2BD	0x0000003C	[ 29] literal string: <%@: %p, SEL:%@ object:%@ options:%tu block:%@ (#%tu args)>
+0x10001B2F9	0x00000010	[ 29] literal string: T:,N,V_selector
+0x10001B309	0x0000000F	[ 29] literal string: T@,&,N,V_block
+0x10001B318	0x0000000F	[ 29] literal string: blockSignature
+0x10001B327	0x0000002B	[ 29] literal string: T@"NSMethodSignature",&,N,V_blockSignature
+0x10001B352	0x00000007	[ 29] literal string: object
+0x10001B359	0x00000010	[ 29] literal string: T@,W,N,V_object
+0x10001B369	0x00000008	[ 29] literal string: options
+0x10001B371	0x0000000F	[ 29] literal string: TQ,N,V_options
+0x10001B380	0x00000007	[ 29] literal string: aspect
+0x10001B387	0x0000002A	[ 29] literal string: <%@: %p, before:%@, instead:%@, after:%@>
+0x10001B3B1	0x0000000E	[ 29] literal string: beforeAspects
+0x10001B3BF	0x0000001E	[ 29] literal string: T@"NSArray",C,V_beforeAspects
+0x10001B3DD	0x0000000F	[ 29] literal string: insteadAspects
+0x10001B3EC	0x0000001F	[ 29] literal string: T@"NSArray",C,V_insteadAspects
+0x10001B40B	0x0000000D	[ 29] literal string: afterAspects
+0x10001B418	0x0000001D	[ 29] literal string: T@"NSArray",C,V_afterAspects
+0x10001B435	0x0000002B	[ 29] literal string: -[AspectInfo initWithInstance:invocation:]
+0x10001B460	0x00000009	[ 29] literal string: instance
+0x10001B469	0x0000000B	[ 29] literal string: invocation
+0x10001B474	0x00000012	[ 29] literal string: T@,R,N,V_instance
+0x10001B486	0x0000000A	[ 29] literal string: arguments
+0x10001B490	0x0000001C	[ 29] literal string: T@"NSArray",R,N,V_arguments
+0x10001B4AC	0x00000013	[ 29] literal string: originalInvocation
+0x10001B4BF	0x0000002A	[ 29] literal string: T@"NSInvocation",R,N,V_originalInvocation
+0x10001B4E9	0x00000058	[ 29] literal string: id aspect_add(__strong id, SEL, AspectOptions, __strong id, NSError *__autoreleasing *)
+0x10001B541	0x00000005	[ 29] literal string: self
+0x10001B546	0x00000007	[ 29] literal string: retain
+0x10001B54D	0x00000008	[ 29] literal string: release
+0x10001B555	0x0000000C	[ 29] literal string: autorelease
+0x10001B561	0x00000013	[ 29] literal string: forwardInvocation:
+0x10001B574	0x0000001C	[ 29] literal string: Selector %@ is blacklisted.
+0x10001B590	0x0000000C	[ 29] literal string: Aspects: %@
+0x10001B59C	0x00000008	[ 29] literal string: dealloc
+0x10001B5A4	0x00000046	[ 29] literal string: AspectPositionBefore is the only valid position when hooking dealloc.
+0x10001B5EA	0x00000022	[ 29] literal string: Unable to find selector -[%@ %@].
+0x10001B60C	0x00000056	[ 29] literal string: Error: %@ already hooked in %@. A method can only be hooked once per class hierarchy.
+0x10001B662	0x00000048	[ 29] literal string: AspectsContainer *aspect_getContainerForObject(NSObject *__strong, SEL)
+0x10001B6AA	0x00000021	[ 29] literal string: SEL aspect_aliasForSelector(SEL)
+0x10001B6CB	0x00000004	[ 29] literal string: _%@
+0x10001B6CF	0x0000005D	[ 29] literal string: void aspect_prepareClassAndHookSelector(NSObject *__strong, SEL, NSError *__autoreleasing *)
+0x10001B72C	0x0000003D	[ 29] literal string: Original implementation for %@ is already copied to %@ on %@
+0x10001B769	0x00000047	[ 29] literal string: Class aspect_hookClass(NSObject *__strong, NSError *__autoreleasing *)
+0x10001B7B0	0x00000034	[ 29] literal string: objc_allocateClassPair failed to allocate class %s.
+0x10001B7E4	0x0000003C	[ 29] literal string: Class aspect_swizzleClassInPlace(__unsafe_unretained Class)
+0x10001B820	0x00000006	[ 29] literal string: klass
+0x10001B826	0x00000017	[ 29] literal string: v16@?0@"NSMutableSet"8
+0x10001B83D	0x00000040	[ 29] literal string: void aspect_swizzleForwardInvocation(__unsafe_unretained Class)
+0x10001B87D	0x00000005	[ 29] literal string: v@:@
+0x10001B882	0x0000005E	[ 29] literal string: void __ASPECTS_ARE_BEING_CALLED__(NSObject *__unsafe_unretained, SEL, NSInvocation *__strong)
+0x10001B8E0	0x0000004E	[ 29] literal string: AspectsContainer *aspect_getContainerForClass(__unsafe_unretained Class, SEL)
+0x10001B92E	0x00000051	[ 29] literal string: void aspect_hookedGetClass(__unsafe_unretained Class, __unsafe_unretained Class)
+0x10001B97F	0x00000006	[ 29] literal string: class
+0x10001B985	0x0000000C	[ 29] literal string: statedClass
+0x10001B991	0x00000009	[ 29] literal string: #16@?0@8
+0x10001B99A	0x0000002F	[ 29] literal string: The block %@ doesn't contain a type signature.
+0x10001B9C9	0x0000002B	[ 29] literal string: The block %@ doesn't has a type signature.
+0x10001B9F4	0x00000072	[ 29] literal string: BOOL aspect_isCompatibleBlockSignature(NSMethodSignature *__strong, __strong id, SEL, NSError *__autoreleasing *)
+0x10001BA66	0x00000024	[ 29] literal string: Blog signature %@ doesn't match %@.
+0x10001BA8A	0x0000004B	[ 29] literal string: BOOL aspect_remove(AspectIdentifier *__strong, NSError *__autoreleasing *)
+0x10001BAD5	0x00000018	[ 29] literal string: Must have correct type.
+0x10001BAED	0x0000003A	[ 29] literal string: Unable to deregister hook. Object already deallocated: %@
+0x10001BB27	0x00000043	[ 29] literal string: void aspect_cleanupHookedClassAndSelector(NSObject *__strong, SEL)
+0x10001BB6A	0x00000032	[ 29] literal string: Original implementation for %@ not found %@ on %@
+0x10001BB9C	0x0000001A	[ 29] literal string: Original class must exist
+0x10001BBB6	0x00000042	[ 29] literal string: void aspect_destroyContainerForObject(__strong id<NSObject>, SEL)
+0x10001BBF8	0x0000003F	[ 29] literal string: void aspect_undoSwizzleClassInPlace(__unsafe_unretained Class)
+0x10001BC37	0x00000044	[ 29] literal string: void aspect_undoSwizzleForwardInvocation(__unsafe_unretained Class)
+0x10001BC7B	0x00000008	[  2] literal string: dealloc
+0x10001BC83	0x00000005	[  2] literal string: init
+0x10001BC88	0x00000004	[  2] literal string: new
+0x10001BC8C	0x0000000B	[  2] literal string: testUsages
+0x10001BC97	0x0000000D	[  2] literal string: cleanupUsage
+0x10001BCA4	0x0000000E	[  2] literal string: testNoReturn:
+0x10001BCB2	0x00000005	[  2] literal string: lock
+0x10001BCB7	0x00000007	[  2] literal string: unlock
+0x10001BCBE	0x0000000E	[  2] literal string: .cxx_destruct
+0x10001BCCC	0x00000009	[  2] literal string: setLock:
+0x10001BCD5	0x00000006	[  2] literal string: _lock
+0x10001BCDB	0x0000000B	[  3] literal string: testMethod
+0x10001BCE6	0x00000006	[  3] literal string: class
+0x10001BCEC	0x00000010	[  3] literal string: test_testMethod
+0x10001BCFC	0x00000005	[  3] literal string: load
+0x10001BD01	0x00000006	[  4] literal string: alloc
+0x10001BD07	0x0000000F	[  4] literal string: sharedInstance
+0x10001BD16	0x00000010	[  5] literal string: testClassMethod
+0x10001BD26	0x00000014	[  5] literal string: testCategorySwizzle
+0x10001BD3A	0x00000018	[  5] literal string: log_testCategorySwizzle
+0x10001BD52	0x0000003B	[  5] literal string: swizzleInstanceMethodWithClass:originalSel:replacementSel:
+0x10001BD8D	0x0000001A	[  5] literal string: track_testCategorySwizzle
+0x10001BDA7	0x00000016	[  5] literal string: class_testClassMethod
+0x10001BDBD	0x00000012	[  7] literal string: injectExcuteBlock
+0x10001BDCF	0x00000016	[  7] literal string: setInjectExcuteBlock:
+0x10001BDE5	0x00000009	[  7] literal string: injected
+0x10001BDEE	0x00000005	[  8] literal string: test
+0x10001BDF3	0x0000001C	[  9] literal string: testNSMutableDictionaryCopy
+0x10001BE0F	0x0000000D	[  9] literal string: setPCopyStr:
+0x10001BE1C	0x0000000F	[  9] literal string: setPStrongStr:
+0x10001BE2B	0x00000005	[  9] literal string: copy
+0x10001BE30	0x0000000C	[  9] literal string: mutableCopy
+0x10001BE3C	0x00000010	[  9] literal string: initWithString:
+0x10001BE4C	0x0000000E	[  9] literal string: appendString:
+0x10001BE5A	0x00000009	[  9] literal string: setName:
+0x10001BE63	0x00000011	[  9] literal string: initWithObjects:
+0x10001BE74	0x0000000F	[  9] literal string: setPCopyArray:
+0x10001BE83	0x00000011	[  9] literal string: setPStrongArray:
+0x10001BE94	0x0000000B	[  9] literal string: addObject:
+0x10001BE9F	0x0000001E	[  9] literal string: dictionaryWithObjectsAndKeys:
+0x10001BEBD	0x0000000E	[  9] literal string: setPCopyDict:
+0x10001BECB	0x00000010	[  9] literal string: setPStrongDict:
+0x10001BEDB	0x00000012	[  9] literal string: setObject:forKey:
+0x10001BEED	0x00000017	[  9] literal string: testCopyAndMutableCopy
+0x10001BF04	0x00000011	[  9] literal string: testNSStringCopy
+0x10001BF15	0x00000018	[  9] literal string: testNSMutableStringCopy
+0x10001BF2D	0x00000010	[  9] literal string: testNSArrayCopy
+0x10001BF3D	0x00000017	[  9] literal string: testNSMutableArrayCopy
+0x10001BF54	0x00000015	[  9] literal string: testNSDictionaryCopy
+0x10001BF69	0x00000009	[  9] literal string: pCopyStr
+0x10001BF72	0x0000000B	[  9] literal string: pStrongStr
+0x10001BF7D	0x0000000B	[  9] literal string: pCopyArray
+0x10001BF88	0x0000000D	[  9] literal string: pStrongArray
+0x10001BF95	0x0000000A	[  9] literal string: pCopyDict
+0x10001BF9F	0x0000000C	[  9] literal string: pStrongDict
+0x10001BFAB	0x0000000A	[  9] literal string: _pCopyStr
+0x10001BFB5	0x0000000C	[  9] literal string: _pStrongStr
+0x10001BFC1	0x0000000C	[  9] literal string: _pCopyArray
+0x10001BFCD	0x0000000E	[  9] literal string: _pStrongArray
+0x10001BFDB	0x0000000B	[  9] literal string: _pCopyDict
+0x10001BFE6	0x0000000D	[  9] literal string: _pStrongDict
+0x10001BFF3	0x00000005	[  9] literal string: name
+0x10001BFF8	0x00000006	[  9] literal string: _name
+0x10001BFFE	0x00000011	[ 10] literal string: testCurrentQueue
+0x10001C00F	0x00000012	[ 10] literal string: testCurrentQueue1
+0x10001C021	0x00000008	[ 10] literal string: testLog
+0x10001C029	0x00000027	[ 10] literal string: performSelector:withObject:afterDelay:
+0x10001C050	0x0000000E	[ 10] literal string: currentThread
+0x10001C05E	0x00000010	[ 10] literal string: testSerialQueue
+0x10001C06E	0x0000000B	[ 11] literal string: numberTest
+0x10001C079	0x00000009	[ 11] literal string: dateTest
+0x10001C082	0x00000013	[ 11] literal string: formatedLogObject:
+0x10001C095	0x00000012	[ 11] literal string: stringWithFormat:
+0x10001C0A7	0x00000012	[ 11] literal string: stringWithString:
+0x10001C0B9	0x00000007	[ 11] literal string: string
+0x10001C0C0	0x0000000E	[ 11] literal string: appendFormat:
+0x10001C0CE	0x0000000F	[ 11] literal string: numberWithInt:
+0x10001C0DD	0x00000006	[ 11] literal string: array
+0x10001C0E3	0x00000010	[ 11] literal string: numberWithLong:
+0x10001C0F3	0x00000005	[ 11] literal string: date
+0x10001C0F8	0x00000018	[ 11] literal string: stringTaggedPointerTest
+0x10001C110	0x00000002	[ 12] literal string: a
+0x10001C112	0x00000006	[ 12] literal string: setA:
+0x10001C118	0x00000002	[ 12] literal string: b
+0x10001C11A	0x00000006	[ 12] literal string: setB:
+0x10001C120	0x00000002	[ 12] literal string: c
+0x10001C122	0x00000006	[ 12] literal string: setC:
+0x10001C128	0x00000002	[ 12] literal string: d
+0x10001C12A	0x00000006	[ 12] literal string: setD:
+0x10001C130	0x0000000B	[ 12] literal string: testString
+0x10001C13B	0x0000000F	[ 12] literal string: setTestString:
+0x10001C14A	0x0000000B	[ 12] literal string: testObject
+0x10001C155	0x0000000F	[ 12] literal string: setTestObject:
+0x10001C164	0x00000003	[ 12] literal string: _b
+0x10001C167	0x00000003	[ 12] literal string: _c
+0x10001C16A	0x00000003	[ 12] literal string: _d
+0x10001C16D	0x00000003	[ 12] literal string: _a
+0x10001C170	0x0000000C	[ 12] literal string: _testString
+0x10001C17C	0x0000000C	[ 12] literal string: _testObject
+0x10001C188	0x0000001F	[ 13] literal string: rl_methodSignatureForSelector:
+0x10001C1A7	0x00000016	[ 13] literal string: rl_forwardInvocation:
+0x10001C1BD	0x0000000B	[ 13] literal string: nilMessage
+0x10001C1C8	0x0000000C	[ 14] literal string: testBarrier
+0x10001C1D4	0x0000000A	[ 14] literal string: testGroup
+0x10001C1DE	0x0000000B	[ 14] literal string: testGroup1
+0x10001C1E9	0x0000000E	[ 14] literal string: testSemaphore
+0x10001C1F7	0x0000000C	[ 14] literal string: testRunloop
+0x10001C203	0x00000016	[ 14] literal string: sleepForTimeInterval:
+0x10001C219	0x0000000F	[ 14] literal string: currentRunLoop
+0x10001C228	0x0000001E	[ 14] literal string: dateWithTimeIntervalSinceNow:
+0x10001C246	0x0000000E	[ 14] literal string: runUntilDate:
+0x10001C254	0x0000000D	[ 15] literal string: testNSString
+0x10001C261	0x0000000A	[ 15] literal string: testArray
+0x10001C26B	0x0000000B	[ 15] literal string: testNumber
+0x10001C276	0x0000000B	[ 15] literal string: testNSDate
+0x10001C281	0x0000000A	[ 15] literal string: testNSSet
+0x10001C28B	0x0000000A	[ 15] literal string: testNSMap
+0x10001C295	0x00000011	[ 15] literal string: isMemberOfClass:
+0x10001C2A6	0x0000000F	[ 15] literal string: isKindOfClass:
+0x10001C2B5	0x00000010	[ 15] literal string: numberWithBool:
+0x10001C2C5	0x0000000E	[ 16] literal string: defaultCenter
+0x10001C2D3	0x00000010	[ 16] literal string: removeObserver:
+0x10001C2E3	0x00000016	[ 16] literal string: cStringUsingEncoding:
+0x10001C2F9	0x0000000B	[ 16] literal string: testInject
+0x10001C304	0x00000014	[ 17] literal string: testGroupLeaveCrash
+0x10001C318	0x0000000C	[ 18] literal string: viewDidLoad
+0x10001C324	0x00000012	[ 18] literal string: testUnsafeSwizzle
+0x10001C336	0x0000001A	[ 18] literal string: testSubClassSwizzleMethod
+0x10001C350	0x00000015	[ 18] literal string: testDoSthWhenDealloc
+0x10001C365	0x00000014	[ 18] literal string: testCategoryOveride
+0x10001C379	0x00000011	[ 18] literal string: testClassSwizzle
+0x10001C38A	0x00000018	[ 18] literal string: testSwizzleInInitialize
+0x10001C3A2	0x00000013	[ 18] literal string: testAttributeUsage
+0x10001C3B5	0x00000008	[ 18] literal string: setupUI
+0x10001C3BD	0x0000000E	[ 18] literal string: testCopyUsage
+0x10001C3CB	0x00000013	[ 18] literal string: testTextFieldUsage
+0x10001C3DE	0x00000019	[ 18] literal string: testArrayReadWhileChange
+0x10001C3F7	0x00000011	[ 18] literal string: testClassCluster
+0x10001C408	0x0000000C	[ 18] literal string: purpleColor
+0x10001C414	0x00000005	[ 18] literal string: view
+0x10001C419	0x00000014	[ 18] literal string: setBackgroundColor:
+0x10001C42D	0x00000010	[ 18] literal string: viewWillAppear:
+0x10001C43D	0x0000000F	[ 18] literal string: lightGrayColor
+0x10001C44C	0x0000000F	[ 18] literal string: viewDidAppear:
+0x10001C45B	0x00000011	[ 18] literal string: isEqualToString:
+0x10001C46C	0x00000014	[ 18] literal string: testSubClassSwizzle
+0x10001C480	0x00000016	[ 18] literal string: b_testSubClassSwizzle
+0x10001C496	0x00000016	[ 18] literal string: a_testSubClassSwizzle
+0x10001C4AC	0x00000016	[ 18] literal string: s_testSubClassSwizzle
+0x10001C4C2	0x00000028	[ 18] literal string: addObserver:forKeyPath:options:context:
+0x10001C4EA	0x0000001B	[ 18] literal string: removeObserver:forKeyPath:
+0x10001C505	0x0000001E	[ 18] literal string: hc_doSthWhenDeallocWithBlock:
+0x10001C523	0x00000012	[ 18] literal string: testSwizzleMethod
+0x10001C535	0x0000000B	[ 18] literal string: aTextFiled
+0x10001C540	0x0000000D	[ 18] literal string: setDelegate:
+0x10001C54D	0x00000013	[ 18] literal string: setHcui_inputType:
+0x10001C560	0x00000015	[ 18] literal string: setHcui_limitLegnth:
+0x10001C575	0x00000013	[ 18] literal string: arrayWithCapacity:
+0x10001C588	0x00000021	[ 18] literal string: replaceObjectAtIndex:withObject:
+0x10001C5A9	0x0000001C	[ 18] literal string: enumerateObjectsUsingBlock:
+0x10001C5C5	0x00000036	[ 18] literal string: hcui_shouldChangeCharactersInRange:replacementString:
+0x10001C5FB	0x00000009	[ 18] literal string: isEqual:
+0x10001C604	0x00000005	[ 18] literal string: self
+0x10001C609	0x00000011	[ 18] literal string: performSelector:
+0x10001C61A	0x0000001C	[ 18] literal string: performSelector:withObject:
+0x10001C636	0x00000027	[ 18] literal string: performSelector:withObject:withObject:
+0x10001C65D	0x00000008	[ 18] literal string: isProxy
+0x10001C665	0x00000014	[ 18] literal string: conformsToProtocol:
+0x10001C679	0x00000014	[ 18] literal string: respondsToSelector:
+0x10001C68D	0x00000007	[ 18] literal string: retain
+0x10001C694	0x00000008	[ 18] literal string: release
+0x10001C69C	0x0000000C	[ 18] literal string: autorelease
+0x10001C6A8	0x0000000C	[ 18] literal string: retainCount
+0x10001C6B4	0x00000005	[ 18] literal string: zone
+0x10001C6B9	0x00000005	[ 18] literal string: hash
+0x10001C6BE	0x0000000B	[ 18] literal string: superclass
+0x10001C6C9	0x0000000C	[ 18] literal string: description
+0x10001C6D5	0x00000011	[ 18] literal string: debugDescription
+0x10001C6E6	0x0000001D	[ 18] literal string: textFieldShouldBeginEditing:
+0x10001C703	0x0000001A	[ 18] literal string: textFieldDidBeginEditing:
+0x10001C71D	0x0000001B	[ 18] literal string: textFieldShouldEndEditing:
+0x10001C738	0x00000018	[ 18] literal string: textFieldDidEndEditing:
+0x10001C750	0x0000001F	[ 18] literal string: textFieldDidEndEditing:reason:
+0x10001C76F	0x0000003B	[ 18] literal string: textField:shouldChangeCharactersInRange:replacementString:
+0x10001C7AA	0x00000016	[ 18] literal string: textFieldShouldClear:
+0x10001C7C0	0x00000017	[ 18] literal string: textFieldShouldReturn:
+0x10001C7D7	0x00000030	[ 18] literal string: observeValueForKeyPath:ofObject:change:context:
+0x10001C807	0x00000014	[ 18] literal string: dynamicFunctionTest
+0x10001C81B	0x00000018	[ 18] literal string: setDynamicFunctionTest:
+0x10001C833	0x0000000F	[ 18] literal string: setATextFiled:
+0x10001C842	0x00000015	[ 18] literal string: _dynamicFunctionTest
+0x10001C857	0x0000000C	[ 18] literal string: _aTextFiled
+0x10001C863	0x0000000B	[ 19] literal string: initialize
+0x10001C86E	0x00000014	[ 19] literal string: s_testSwizzleMethod
+0x10001C882	0x0000000E	[ 19] literal string: testLogMethod
+0x10001C890	0x00000010	[ 19] literal string: testTrackMethod
+0x10001C8A0	0x00000014	[ 19] literal string: a_testSwizzleMethod
+0x10001C8B4	0x00000014	[ 19] literal string: b_testSwizzleMethod
+0x10001C8C8	0x00000016	[ 19] literal string: log_testSwizzleMethod
+0x10001C8DE	0x00000018	[ 19] literal string: track_testSwizzleMethod
+0x10001C8F6	0x00000016	[ 20] literal string: initWithBlock:target:
+0x10001C90C	0x00000007	[ 20] literal string: target
+0x10001C913	0x0000000B	[ 20] literal string: setTarget:
+0x10001C91E	0x0000000D	[ 20] literal string: deallocBlock
+0x10001C92B	0x00000011	[ 20] literal string: setDeallocBlock:
+0x10001C93C	0x00000008	[ 20] literal string: _target
+0x10001C944	0x0000000E	[ 20] literal string: _deallocBlock
+0x10001C952	0x00000013	[ 21] literal string: hc_viewWillAppear:
+0x10001C965	0x00000004	[ 22] literal string: log
+0x10001C969	0x00000005	[ 22] literal string: log1
+0x10001C96E	0x00000013	[ 25] literal string: fontWithName:size:
+0x10001C981	0x00000016	[ 25] literal string: hc_fontWithName:size:
+0x10001C997	0x00000012	[ 25] literal string: systemFontOfSize:
+0x10001C9A9	0x00000010	[ 26] literal string: bundleWithPath:
+0x10001C9B9	0x0000001F	[ 26] literal string: applicationDidFinishLaunching:
+0x10001C9D8	0x0000002C	[ 26] literal string: application:willFinishLaunchingWithOptions:
+0x10001CA04	0x0000002B	[ 26] literal string: application:didFinishLaunchingWithOptions:
+0x10001CA2F	0x0000001C	[ 26] literal string: applicationDidBecomeActive:
+0x10001CA4B	0x0000001D	[ 26] literal string: applicationWillResignActive:
+0x10001CA68	0x0000001B	[ 26] literal string: application:handleOpenURL:
+0x10001CA83	0x00000032	[ 26] literal string: application:openURL:sourceApplication:annotation:
+0x10001CAB5	0x0000001D	[ 26] literal string: application:openURL:options:
+0x10001CAD2	0x00000024	[ 26] literal string: applicationDidReceiveMemoryWarning:
+0x10001CAF6	0x0000001A	[ 26] literal string: applicationWillTerminate:
+0x10001CB10	0x00000022	[ 26] literal string: applicationSignificantTimeChange:
+0x10001CB32	0x00000035	[ 26] literal string: application:willChangeStatusBarOrientation:duration:
+0x10001CB67	0x0000002B	[ 26] literal string: application:didChangeStatusBarOrientation:
+0x10001CB92	0x00000026	[ 26] literal string: application:willChangeStatusBarFrame:
+0x10001CBB8	0x00000025	[ 26] literal string: application:didChangeStatusBarFrame:
+0x10001CBDD	0x00000031	[ 26] literal string: application:didRegisterUserNotificationSettings:
+0x10001CC0E	0x0000003E	[ 26] literal string: application:didRegisterForRemoteNotificationsWithDeviceToken:
+0x10001CC4C	0x0000003E	[ 26] literal string: application:didFailToRegisterForRemoteNotificationsWithError:
+0x10001CC8A	0x0000002A	[ 26] literal string: application:didReceiveRemoteNotification:
+0x10001CCB4	0x00000029	[ 26] literal string: application:didReceiveLocalNotification:
+0x10001CCDD	0x0000004F	[ 26] literal string: application:handleActionWithIdentifier:forLocalNotification:completionHandler:
+0x10001CD2C	0x00000061	[ 26] literal string: application:handleActionWithIdentifier:forRemoteNotification:withResponseInfo:completionHandler:
+0x10001CD8D	0x00000050	[ 26] literal string: application:handleActionWithIdentifier:forRemoteNotification:completionHandler:
+0x10001CDDD	0x00000060	[ 26] literal string: application:handleActionWithIdentifier:forLocalNotification:withResponseInfo:completionHandler:
+0x10001CE3D	0x00000041	[ 26] literal string: application:didReceiveRemoteNotification:fetchCompletionHandler:
+0x10001CE7E	0x0000002F	[ 26] literal string: application:performFetchWithCompletionHandler:
+0x10001CEAD	0x0000003C	[ 26] literal string: application:performActionForShortcutItem:completionHandler:
+0x10001CEE9	0x00000043	[ 26] literal string: application:handleEventsForBackgroundURLSession:completionHandler:
+0x10001CF2C	0x00000032	[ 26] literal string: application:handleWatchKitExtensionRequest:reply:
+0x10001CF5E	0x0000002D	[ 26] literal string: applicationShouldRequestHealthAuthorization:
+0x10001CF8B	0x0000002C	[ 26] literal string: application:handleIntent:completionHandler:
+0x10001CFB7	0x0000001F	[ 26] literal string: applicationDidEnterBackground:
+0x10001CFD6	0x00000020	[ 26] literal string: applicationWillEnterForeground:
+0x10001CFF6	0x0000002F	[ 26] literal string: applicationProtectedDataWillBecomeUnavailable:
+0x10001D025	0x0000002C	[ 26] literal string: applicationProtectedDataDidBecomeAvailable:
+0x10001D051	0x00000035	[ 26] literal string: application:supportedInterfaceOrientationsForWindow:
+0x10001D086	0x00000031	[ 26] literal string: application:shouldAllowExtensionPointIdentifier:
+0x10001D0B7	0x0000003F	[ 26] literal string: application:viewControllerWithRestorationIdentifierPath:coder:
+0x10001D0F6	0x00000028	[ 26] literal string: application:shouldSaveApplicationState:
+0x10001D11E	0x0000002B	[ 26] literal string: application:shouldRestoreApplicationState:
+0x10001D149	0x00000030	[ 26] literal string: application:willEncodeRestorableStateWithCoder:
+0x10001D179	0x0000002F	[ 26] literal string: application:didDecodeRestorableStateWithCoder:
+0x10001D1A8	0x0000002E	[ 26] literal string: application:willContinueUserActivityWithType:
+0x10001D1D6	0x00000035	[ 26] literal string: application:continueUserActivity:restorationHandler:
+0x10001D20B	0x00000039	[ 26] literal string: application:didFailToContinueUserActivityWithType:error:
+0x10001D244	0x00000023	[ 26] literal string: application:didUpdateUserActivity:
+0x10001D267	0x00000034	[ 26] literal string: application:userDidAcceptCloudKitShareWithMetadata:
+0x10001D29B	0x00000007	[ 26] literal string: window
+0x10001D2A2	0x0000000B	[ 26] literal string: setWindow:
+0x10001D2AD	0x00000008	[ 26] literal string: _window
+0x10001D2B5	0x0000000F	[ 27] literal string: hcui_inputType
+0x10001D2C4	0x00000021	[ 27] literal string: hcui_phoneNumberCheckWithString:
+0x10001D2E5	0x0000002F	[ 27] literal string: hcui_formatedPhoneNumberCheckWithString:range:
+0x10001D314	0x00000028	[ 27] literal string: hcui_formatedCardCheckWithString:range:
+0x10001D33C	0x00000021	[ 27] literal string: hcui_priceCheckWithString:range:
+0x10001D35D	0x00000024	[ 27] literal string: hcui_identityNumberCheckWithString:
+0x10001D381	0x00000024	[ 27] literal string: hcui_authCodeCheckWithString:range:
+0x10001D3A5	0x00000020	[ 27] literal string: hcui_paymentPWDCheckWithString:
+0x10001D3C5	0x00000011	[ 27] literal string: setKeyboardType:
+0x10001D3D6	0x0000001B	[ 27] literal string: setAutocapitalizationType:
+0x10001D3F1	0x00000005	[ 27] literal string: text
+0x10001D3F6	0x00000007	[ 27] literal string: length
+0x10001D3FD	0x0000002B	[ 27] literal string: _hcui_formatedNumberCheckWithString:range:
+0x10001D428	0x00000020	[ 27] literal string: hcui_predicateString:withRegex:
+0x10001D448	0x0000000F	[ 27] literal string: rangeOfString:
+0x10001D457	0x00000009	[ 27] literal string: setText:
+0x10001D460	0x00000016	[ 27] literal string: insertString:atIndex:
+0x10001D476	0x0000000C	[ 27] literal string: doubleValue
+0x10001D482	0x0000000E	[ 27] literal string: hcui_maxValue
+0x10001D490	0x00000014	[ 27] literal string: substringFromIndex:
+0x10001D4A4	0x0000001D	[ 27] literal string: componentsSeparatedByString:
+0x10001D4C1	0x00000006	[ 27] literal string: count
+0x10001D4C7	0x00000011	[ 27] literal string: hcui_limitLegnth
+0x10001D4D8	0x00000015	[ 27] literal string: predicateWithFormat:
+0x10001D4ED	0x00000014	[ 27] literal string: evaluateWithObject:
+0x10001D501	0x00000031	[ 27] literal string: stringByReplacingOccurrencesOfString:withString:
+0x10001D532	0x00000014	[ 27] literal string: substringWithRange:
+0x10001D546	0x0000001A	[ 27] literal string: componentsJoinedByString:
+0x10001D560	0x00000025	[ 27] literal string: replaceCharactersInRange:withString:
+0x10001D585	0x00000017	[ 27] literal string: _hcui_formatedNumbers:
+0x10001D59C	0x00000014	[ 27] literal string: beginningOfDocument
+0x10001D5B0	0x00000029	[ 27] literal string: positionFromPosition:inDirection:offset:
+0x10001D5D9	0x00000022	[ 27] literal string: textRangeFromPosition:toPosition:
+0x10001D5FB	0x00000016	[ 27] literal string: setSelectedTextRange:
+0x10001D611	0x0000001D	[ 27] literal string: sendActionsForControlEvents:
+0x10001D62E	0x00000025	[ 27] literal string: hcui_blankCountAfterCursorWithRange:
+0x10001D653	0x00000012	[ 27] literal string: selectedTextRange
+0x10001D665	0x00000004	[ 27] literal string: end
+0x10001D669	0x00000016	[ 27] literal string: hcui_formatedPhoneNo:
+0x10001D67F	0x00000015	[ 27] literal string: hcui_formatedCardNo:
+0x10001D694	0x0000000D	[ 27] literal string: integerValue
+0x10001D6A1	0x00000013	[ 27] literal string: numberWithInteger:
+0x10001D6B4	0x00000013	[ 27] literal string: configKeyboardType
+0x10001D6C7	0x00000012	[ 27] literal string: numberWithDouble:
+0x10001D6D9	0x00000012	[ 27] literal string: setHcui_maxValue:
+0x10001D6EB	0x00000032	[ 29] literal string: aspect_hookSelector:withOptions:usingBlock:error:
+0x10001D71D	0x0000000D	[ 29] literal string: trackedClass
+0x10001D72A	0x0000000E	[ 29] literal string: selectorNames
+0x10001D738	0x0000000C	[ 29] literal string: parentEntry
+0x10001D744	0x0000001D	[ 29] literal string: initWithTrackedClass:parent:
+0x10001D761	0x00000011	[ 29] literal string: setTrackedClass:
+0x10001D772	0x00000012	[ 29] literal string: setSelectorNames:
+0x10001D784	0x00000010	[ 29] literal string: setParentEntry:
+0x10001D794	0x0000000E	[ 29] literal string: _trackedClass
+0x10001D7A2	0x0000000F	[ 29] literal string: _selectorNames
+0x10001D7B1	0x0000000D	[ 29] literal string: _parentEntry
+0x10001D7BE	0x00000010	[ 29] literal string: methodSignature
+0x10001D7CE	0x00000018	[ 29] literal string: getArgumentTypeAtIndex:
+0x10001D7E6	0x00000015	[ 29] literal string: getArgument:atIndex:
+0x10001D7FB	0x00000010	[ 29] literal string: numberWithChar:
+0x10001D80B	0x00000011	[ 29] literal string: numberWithShort:
+0x10001D81C	0x00000014	[ 29] literal string: numberWithLongLong:
+0x10001D830	0x00000018	[ 29] literal string: numberWithUnsignedChar:
+0x10001D848	0x00000017	[ 29] literal string: numberWithUnsignedInt:
+0x10001D85F	0x00000019	[ 29] literal string: numberWithUnsignedShort:
+0x10001D878	0x00000018	[ 29] literal string: numberWithUnsignedLong:
+0x10001D890	0x0000001C	[ 29] literal string: numberWithUnsignedLongLong:
+0x10001D8AC	0x00000011	[ 29] literal string: numberWithFloat:
+0x10001D8BD	0x00000016	[ 29] literal string: stringWithUTF8String:
+0x10001D8D3	0x00000019	[ 29] literal string: valueWithBytes:objCType:
+0x10001D8EC	0x00000012	[ 29] literal string: numberOfArguments
+0x10001D8FE	0x00000018	[ 29] literal string: aspect_argumentAtIndex:
+0x10001D916	0x00000005	[ 29] literal string: null
+0x10001D91B	0x00000012	[ 29] literal string: aspects_arguments
+0x10001D92D	0x0000000F	[ 29] literal string: currentHandler
+0x10001D93C	0x00000035	[ 29] literal string: handleFailureInFunction:file:lineNumber:description:
+0x10001D971	0x0000000D	[ 29] literal string: setSelector:
+0x10001D97E	0x0000000A	[ 29] literal string: setBlock:
+0x10001D988	0x00000013	[ 29] literal string: setBlockSignature:
+0x10001D99B	0x0000000C	[ 29] literal string: setOptions:
+0x10001D9A7	0x0000000B	[ 29] literal string: setObject:
+0x10001D9B2	0x0000000F	[ 29] literal string: blockSignature
+0x10001D9C1	0x0000001F	[ 29] literal string: invocationWithMethodSignature:
+0x10001D9E0	0x00000013	[ 29] literal string: originalInvocation
+0x10001D9F3	0x00000015	[ 29] literal string: setArgument:atIndex:
+0x10001DA08	0x00000006	[ 29] literal string: block
+0x10001DA0E	0x00000012	[ 29] literal string: invokeWithTarget:
+0x10001DA20	0x00000009	[ 29] literal string: selector
+0x10001DA29	0x00000007	[ 29] literal string: object
+0x10001DA30	0x00000008	[ 29] literal string: options
+0x10001DA38	0x00000033	[ 29] literal string: identifierWithSelector:object:options:block:error:
+0x10001DA6B	0x00000010	[ 29] literal string: invokeWithInfo:
+0x10001DA7B	0x00000007	[ 29] literal string: remove
+0x10001DA82	0x0000000A	[ 29] literal string: _selector
+0x10001DA8C	0x00000007	[ 29] literal string: _block
+0x10001DA93	0x00000010	[ 29] literal string: _blockSignature
+0x10001DAA3	0x00000008	[ 29] literal string: _object
+0x10001DAAB	0x00000009	[ 29] literal string: _options
+0x10001DAB4	0x0000000E	[ 29] literal string: beforeAspects
+0x10001DAC2	0x0000000F	[ 29] literal string: insteadAspects
+0x10001DAD1	0x0000000D	[ 29] literal string: afterAspects
+0x10001DADE	0x0000003A	[ 29] literal string: handleFailureInMethod:object:file:lineNumber:description:
+0x10001DB18	0x00000018	[ 29] literal string: arrayWithObjects:count:
+0x10001DB30	0x00000015	[ 29] literal string: arrayByAddingObject:
+0x10001DB45	0x00000012	[ 29] literal string: setBeforeAspects:
+0x10001DB57	0x00000013	[ 29] literal string: setInsteadAspects:
+0x10001DB6A	0x00000011	[ 29] literal string: setAfterAspects:
+0x10001DB7B	0x0000002B	[ 29] literal string: countByEnumeratingWithState:objects:count:
+0x10001DBA6	0x0000000D	[ 29] literal string: valueForKey:
+0x10001DBB3	0x0000001A	[ 29] literal string: indexOfObjectIdenticalTo:
+0x10001DBCD	0x00000010	[ 29] literal string: arrayWithArray:
+0x10001DBDD	0x00000015	[ 29] literal string: removeObjectAtIndex:
+0x10001DBF2	0x00000011	[ 29] literal string: setValue:forKey:
+0x10001DC03	0x0000000B	[ 29] literal string: hasAspects
+0x10001DC0E	0x00000017	[ 29] literal string: addAspect:withOptions:
+0x10001DC25	0x0000000E	[ 29] literal string: removeAspect:
+0x10001DC33	0x0000000F	[ 29] literal string: _beforeAspects
+0x10001DC42	0x00000010	[ 29] literal string: _insteadAspects
+0x10001DC52	0x0000000E	[ 29] literal string: _afterAspects
+0x10001DC60	0x00000009	[ 29] literal string: instance
+0x10001DC69	0x0000000A	[ 29] literal string: arguments
+0x10001DC73	0x0000001D	[ 29] literal string: initWithInstance:invocation:
+0x10001DC90	0x0000000B	[ 29] literal string: _arguments
+0x10001DC9B	0x0000000A	[ 29] literal string: _instance
+0x10001DCA5	0x00000014	[ 29] literal string: _originalInvocation
+0x10001DCB9	0x00000010	[ 29] literal string: setWithObjects:
+0x10001DCC9	0x00000010	[ 29] literal string: containsObject:
+0x10001DCD9	0x00000025	[ 29] literal string: dictionaryWithObjects:forKeys:count:
+0x10001DCFE	0x0000001F	[ 29] literal string: errorWithDomain:code:userInfo:
+0x10001DD1D	0x0000001C	[ 29] literal string: instancesRespondToSelector:
+0x10001DD39	0x00000019	[ 29] literal string: objectForKeyedSubscript:
+0x10001DD52	0x0000001D	[ 29] literal string: setObject:forKeyedSubscript:
+0x10001DD6F	0x00000019	[ 29] literal string: stringByAppendingFormat:
+0x10001DD88	0x0000000B	[ 29] literal string: hasSuffix:
+0x10001DD93	0x00000019	[ 29] literal string: stringByAppendingString:
+0x10001DDAC	0x0000000B	[ 29] literal string: UTF8String
+0x10001DDB7	0x00000013	[ 29] literal string: forwardInvocation:
+0x10001DDCA	0x00000007	[ 29] literal string: invoke
+0x10001DDD1	0x0000001A	[ 29] literal string: doesNotRecognizeSelector:
+0x10001DDEB	0x0000001C	[ 29] literal string: makeObjectsPerformSelector:
+0x10001DE07	0x00000018	[ 29] literal string: signatureWithObjCTypes:
+0x10001DE1F	0x00000024	[ 29] literal string: instanceMethodSignatureForSelector:
+0x10001DE43	0x0000000E	[ 29] literal string: removeObject:
+0x10001DE51	0x00000014	[ 29] literal string: removeObjectForKey:
+0x10001DE65	0x0000000F	[  2] literal string: AttributeUsage
+0x10001DE74	0x00000002	[  2] literal string: 
+0x10001DE76	0x00000012	[  3] literal string: TestUnsafeSwizzle
+0x10001DE88	0x00000015	[  3] literal string: SubTestUnsafeSwizzle
+0x10001DE9D	0x00000001	[  4] literal string: 
+0x10001DE9E	0x00000011	[  4] literal string: DispatchOnceTest
+0x10001DEAF	0x00000014	[  5] literal string: TestCategorySwizzle
+0x10001DEC3	0x00000004	[  5] literal string: Log
+0x10001DEC7	0x0000000B	[  5] literal string: EventTrack
+0x10001DED2	0x0000000C	[  5] literal string: ClassMethod
+0x10001DEDE	0x00000012	[  6] literal string: MethodSwizzleUtil
+0x10001DEF0	0x0000000A	[  7] literal string: Injection
+0x10001DEFA	0x00000009	[  8] literal string: TestCode
+0x10001DF03	0x0000000A	[  9] literal string: CopyUsage
+0x10001DF0D	0x00000002	[  9] literal string: 
+0x10001DF0F	0x00000008	[  9] literal string: TestObj
+0x10001DF17	0x00000017	[ 10] literal string: DispatchExamnationTest
+0x10001DF2E	0x00000012	[ 11] literal string: TestTaggedPointer
+0x10001DF40	0x00000012	[ 12] literal string: ByteAlignmentTest
+0x10001DF52	0x00000002	[ 12] literal string: "
+0x10001DF54	0x00000007	[ 13] literal string: RLSafe
+0x10001DF5B	0x00000014	[ 14] literal string: DispatchBarrierTest
+0x10001DF6F	0x00000011	[ 15] literal string: TestClassCluster
+0x10001DF80	0x00000018	[ 16] literal string: DynamicCallFunctionTest
+0x10001DF98	0x00000017	[ 17] literal string: DispatchGroupLeaveTest
+0x10001DFAF	0x0000000F	[ 18] literal string: ViewController
+0x10001DFBE	0x00000014	[ 18] literal string: UITextFieldDelegate
+0x10001DFD2	0x00000009	[ 18] literal string: NSObject
+0x10001DFDB	0x00000002	[ 18] literal string: 
+0x10001DFDD	0x00000018	[ 19] literal string: TestSwizzleInInitialize
+0x10001DFF5	0x00000019	[ 19] literal string: TestSwizzleInInitializeA
+0x10001E00E	0x00000019	[ 19] literal string: TestSwizzleInInitializeB
+0x10001E027	0x00000006	[ 19] literal string: Track
+0x10001E02D	0x0000000E	[ 20] literal string: HCWillDealloc
+0x10001E03B	0x00000013	[ 20] literal string: HCAssociatedObject
+0x10001E04E	0x00000005	[ 21] literal string: Test
+0x10001E053	0x00000014	[ 22] literal string: TestCategoryOveride
+0x10001E067	0x0000000C	[ 22] literal string: TestOveride
+0x10001E073	0x00000014	[ 24] literal string: TestSubClassSwizzle
+0x10001E087	0x00000015	[ 24] literal string: TestASubClassSwizzle
+0x10001E09C	0x00000015	[ 24] literal string: TestBSubClassSwizzle
+0x10001E0B1	0x0000000C	[ 26] literal string: AppDelegate
+0x10001E0BD	0x00000016	[ 26] literal string: UIApplicationDelegate
+0x10001E0D3	0x0000000C	[ 27] literal string: HCInputType
+0x10001E0DF	0x00000012	[ 28] literal string: PodsDummy_Aspects
+0x10001E0F1	0x00000008	[ 29] literal string: Aspects
+0x10001E0F9	0x0000000E	[ 29] literal string: AspectTracker
+0x10001E107	0x00000002	[ 29] literal string: 
+0x10001E109	0x00000002	[ 29] literal string: !
+0x10001E10B	0x00000011	[ 29] literal string: AspectIdentifier
+0x10001E11C	0x00000002	[ 29] literal string: 
+0x10001E11E	0x00000002	[ 29] literal string: 1
+0x10001E120	0x00000011	[ 29] literal string: AspectsContainer
+0x10001E131	0x00000002	[ 29] literal string: 
+0x10001E133	0x0000000B	[ 29] literal string: AspectInfo
+0x10001E13E	0x00000003	[ 29] literal string: 
+0x10001E141	0x00000003	[ 29] literal string: 0`
+0x10001E144	0x00000002	[ 29] literal string: `
+0x10001E146	0x0000001F	[ 30] literal string: PodsDummy_Pods_RuntimeLearning
+0x10001E165	0x00000008	[  2] literal string: v16@0:8
+0x10001E16D	0x00000008	[  2] literal string: @16@0:8
+0x10001E175	0x0000000B	[  2] literal string: q20@0:8B16
+0x10001E180	0x0000000B	[  2] literal string: v24@0:8@16
+0x10001E18B	0x0000000A	[  2] literal string: @"NSLock"
+0x10001E195	0x00000011	[  6] literal string: v40@0:8#16:24:32
+0x10001E1A6	0x0000000C	[  7] literal string: v24@0:8@?16
+0x10001E1B2	0x00000009	[  7] literal string: @?16@0:8
+0x10001E1BB	0x0000000C	[  9] literal string: @"NSString"
+0x10001E1C7	0x0000000B	[  9] literal string: @"NSArray"
+0x10001E1D2	0x00000010	[  9] literal string: @"NSDictionary"
+0x10001E1E2	0x00000008	[ 12] literal string: i16@0:8
+0x10001E1EA	0x0000000B	[ 12] literal string: v20@0:8i16
+0x10001E1F5	0x00000008	[ 12] literal string: c16@0:8
+0x10001E1FD	0x0000000B	[ 12] literal string: v20@0:8c16
+0x10001E208	0x00000008	[ 12] literal string: s16@0:8
+0x10001E210	0x0000000B	[ 12] literal string: v20@0:8s16
+0x10001E21B	0x00000002	[ 12] literal string: c
+0x10001E21D	0x00000002	[ 12] literal string: s
+0x10001E21F	0x00000002	[ 12] literal string: i
+0x10001E221	0x00000015	[ 12] literal string: @"ByteAlignmentTest"
+0x10001E236	0x0000000B	[ 13] literal string: @24@0:8:16
+0x10001E241	0x0000000B	[ 18] literal string: B24@0:8@16
+0x10001E24C	0x00000008	[ 18] literal string: #16@0:8
+0x10001E254	0x0000000E	[ 18] literal string: @32@0:8:16@24
+0x10001E262	0x00000011	[ 18] literal string: @40@0:8:16@24@32
+0x10001E273	0x00000008	[ 18] literal string: B16@0:8
+0x10001E27B	0x0000000B	[ 18] literal string: B24@0:8#16
+0x10001E286	0x0000000B	[ 18] literal string: B24@0:8:16
+0x10001E291	0x00000009	[ 18] literal string: Vv16@0:8
+0x10001E29A	0x00000008	[ 18] literal string: Q16@0:8
+0x10001E2A2	0x00000012	[ 18] literal string: ^{_NSZone=}16@0:8
+0x10001E2B4	0x00000015	[ 18] literal string: B24@0:8@"Protocol"16
+0x10001E2C9	0x00000012	[ 18] literal string: @"NSString"16@0:8
+0x10001E2DB	0x0000000E	[ 18] literal string: v32@0:8@16q24
+0x10001E2E9	0x0000001D	[ 18] literal string: B48@0:8@16{_NSRange=QQ}24@40
+0x10001E306	0x00000018	[ 18] literal string: B24@0:8@"UITextField"16
+0x10001E31E	0x00000018	[ 18] literal string: v24@0:8@"UITextField"16
+0x10001E336	0x0000001B	[ 18] literal string: v32@0:8@"UITextField"16q24
+0x10001E351	0x00000034	[ 18] literal string: B48@0:8@"UITextField"16{_NSRange=QQ}24@"NSString"40
+0x10001E385	0x0000000B	[ 18] literal string: v20@0:8B16
+0x10001E390	0x00000015	[ 18] literal string: v48@0:8@16@24@32^v40
+0x10001E3A5	0x0000001B	[ 18] literal string: @"DynamicCallFunctionTest"
+0x10001E3C0	0x0000000F	[ 18] literal string: @"UITextField"
+0x10001E3CF	0x0000000F	[ 20] literal string: @32@0:8@?16@24
+0x10001E3DE	0x0000000C	[ 20] literal string: @"NSObject"
+0x10001E3EA	0x00000003	[ 20] literal string: @?
+0x10001E3ED	0x0000000E	[ 25] literal string: @32@0:8@16d24
+0x10001E3FB	0x0000000E	[ 26] literal string: B32@0:8@16@24
+0x10001E409	0x00000014	[ 26] literal string: B48@0:8@16@24@32@40
+0x10001E41D	0x00000011	[ 26] literal string: B40@0:8@16@24@32
+0x10001E42E	0x00000011	[ 26] literal string: v40@0:8@16q24d32
+0x10001E43F	0x0000002D	[ 26] literal string: v56@0:8@16{CGRect={CGPoint=dd}{CGSize=dd}}24
+0x10001E46C	0x0000000E	[ 26] literal string: v32@0:8@16@24
+0x10001E47A	0x00000015	[ 26] literal string: v48@0:8@16@24@32@?40
+0x10001E48F	0x00000018	[ 26] literal string: v56@0:8@16@24@32@40@?48
+0x10001E4A7	0x00000012	[ 26] literal string: v40@0:8@16@24@?32
+0x10001E4B9	0x0000000F	[ 26] literal string: v32@0:8@16@?24
+0x10001E4C8	0x0000000E	[ 26] literal string: Q32@0:8@16@24
+0x10001E4D6	0x00000011	[ 26] literal string: @40@0:8@16@24@32
+0x10001E4E7	0x00000012	[ 26] literal string: B40@0:8@16@24@?32
+0x10001E4F9	0x00000011	[ 26] literal string: v40@0:8@16@24@32
+0x10001E50A	0x0000001A	[ 26] literal string: v24@0:8@"UIApplication"16
+0x10001E524	0x0000002B	[ 26] literal string: B32@0:8@"UIApplication"16@"NSDictionary"24
+0x10001E54F	0x00000024	[ 26] literal string: B32@0:8@"UIApplication"16@"NSURL"24
+0x10001E573	0x00000034	[ 26] literal string: B48@0:8@"UIApplication"16@"NSURL"24@"NSString"32@40
+0x10001E5A7	0x00000035	[ 26] literal string: B40@0:8@"UIApplication"16@"NSURL"24@"NSDictionary"32
+0x10001E5DC	0x00000020	[ 26] literal string: v40@0:8@"UIApplication"16q24d32
+0x10001E5FC	0x0000001D	[ 26] literal string: v32@0:8@"UIApplication"16q24
+0x10001E619	0x0000003C	[ 26] literal string: v56@0:8@"UIApplication"16{CGRect={CGPoint=dd}{CGSize=dd}}24
+0x10001E655	0x00000039	[ 26] literal string: v32@0:8@"UIApplication"16@"UIUserNotificationSettings"24
+0x10001E68E	0x00000025	[ 26] literal string: v32@0:8@"UIApplication"16@"NSData"24
+0x10001E6B3	0x00000026	[ 26] literal string: v32@0:8@"UIApplication"16@"NSError"24
+0x10001E6D9	0x0000002B	[ 26] literal string: v32@0:8@"UIApplication"16@"NSDictionary"24
+0x10001E704	0x00000032	[ 26] literal string: v32@0:8@"UIApplication"16@"UILocalNotification"24
+0x10001E736	0x00000048	[ 26] literal string: v48@0:8@"UIApplication"16@"NSString"24@"UILocalNotification"32@?<v@?>40
+0x10001E77E	0x00000052	[ 26] literal string: v56@0:8@"UIApplication"16@"NSString"24@"NSDictionary"32@"NSDictionary"40@?<v@?>48
+0x10001E7D0	0x00000041	[ 26] literal string: v48@0:8@"UIApplication"16@"NSString"24@"NSDictionary"32@?<v@?>40
+0x10001E811	0x00000059	[ 26] literal string: v56@0:8@"UIApplication"16@"NSString"24@"UILocalNotification"32@"NSDictionary"40@?<v@?>48
+0x10001E86A	0x00000035	[ 26] literal string: v40@0:8@"UIApplication"16@"NSDictionary"24@?<v@?Q>32
+0x10001E89F	0x00000024	[ 26] literal string: v32@0:8@"UIApplication"16@?<v@?Q>24
+0x10001E8C3	0x00000042	[ 26] literal string: v40@0:8@"UIApplication"16@"UIApplicationShortcutItem"24@?<v@?B>32
+0x10001E905	0x00000030	[ 26] literal string: v40@0:8@"UIApplication"16@"NSString"24@?<v@?>32
+0x10001E935	0x00000043	[ 26] literal string: v40@0:8@"UIApplication"16@"NSDictionary"24@?<v@?@"NSDictionary">32
+0x10001E978	0x00000043	[ 26] literal string: v40@0:8@"UIApplication"16@"INIntent"24@?<v@?@"INIntentResponse">32
+0x10001E9BB	0x00000027	[ 26] literal string: Q32@0:8@"UIApplication"16@"UIWindow"24
+0x10001E9E2	0x00000027	[ 26] literal string: B32@0:8@"UIApplication"16@"NSString"24
+0x10001EA09	0x00000044	[ 26] literal string: @"UIViewController"40@0:8@"UIApplication"16@"NSArray"24@"NSCoder"32
+0x10001EA4D	0x00000026	[ 26] literal string: B32@0:8@"UIApplication"16@"NSCoder"24
+0x10001EA73	0x00000026	[ 26] literal string: v32@0:8@"UIApplication"16@"NSCoder"24
+0x10001EA99	0x00000040	[ 26] literal string: B40@0:8@"UIApplication"16@"NSUserActivity"24@?<v@?@"NSArray">32
+0x10001EAD9	0x00000033	[ 26] literal string: v40@0:8@"UIApplication"16@"NSString"24@"NSError"32
+0x10001EB0C	0x0000002D	[ 26] literal string: v32@0:8@"UIApplication"16@"NSUserActivity"24
+0x10001EB39	0x0000002E	[ 26] literal string: v32@0:8@"UIApplication"16@"CKShareMetadata"24
+0x10001EB67	0x00000012	[ 26] literal string: @"UIWindow"16@0:8
+0x10001EB79	0x00000015	[ 26] literal string: v24@0:8@"UIWindow"16
+0x10001EB8E	0x0000000C	[ 26] literal string: @"UIWindow"
+0x10001EB9A	0x0000001A	[ 27] literal string: B40@0:8{_NSRange=QQ}16@32
+0x10001EBB4	0x0000001A	[ 27] literal string: B40@0:8@16{_NSRange=QQ}24
+0x10001EBCE	0x00000017	[ 27] literal string: q32@0:8{_NSRange=QQ}16
+0x10001EBE5	0x0000000B	[ 27] literal string: @24@0:8@16
+0x10001EBF0	0x00000008	[ 27] literal string: q16@0:8
+0x10001EBF8	0x0000000B	[ 27] literal string: v24@0:8q16
+0x10001EC03	0x00000008	[ 27] literal string: d16@0:8
+0x10001EC0B	0x0000000B	[ 27] literal string: v24@0:8d16
+0x10001EC16	0x00000015	[ 29] literal string: @48@0:8:16Q24@32^@40
+0x10001EC2B	0x0000000E	[ 29] literal string: @32@0:8#16@24
+0x10001EC39	0x0000000B	[ 29] literal string: v24@0:8#16
+0x10001EC44	0x00000002	[ 29] literal string: #
+0x10001EC46	0x00000010	[ 29] literal string: @"NSMutableSet"
+0x10001EC56	0x00000011	[ 29] literal string: @"AspectTracker"
+0x10001EC67	0x0000000B	[ 29] literal string: @24@0:8Q16
+0x10001EC72	0x00000018	[ 29] literal string: @56@0:8:16@24Q32@40^@48
+0x10001EC8A	0x00000008	[ 29] literal string: :16@0:8
+0x10001EC92	0x0000000B	[ 29] literal string: v24@0:8:16
+0x10001EC9D	0x0000000B	[ 29] literal string: v24@0:8Q16
+0x10001ECA8	0x00000002	[ 29] literal string: :
+0x10001ECAA	0x00000002	[ 29] literal string: @
+0x10001ECAC	0x00000015	[ 29] literal string: @"NSMethodSignature"
+0x10001ECC1	0x00000002	[ 29] literal string: Q
+0x10001ECC3	0x0000000E	[ 29] literal string: v32@0:8@16Q24
+0x10001ECD1	0x00000016	[ 29] literal string: @"NSInvocation"16@0:8
+0x10001ECE7	0x00000011	[ 29] literal string: @"NSArray"16@0:8
+0x10001ECF8	0x0000000E	[ 29] literal string: @32@0:8@16@24
+0x10001ED06	0x00000010	[ 29] literal string: @"NSInvocation"
+0x10001ED20	0x00000008	[ 14] 8-byte-literal
+0x10001ED28	0x00000008	[ 14] 8-byte-literal
+0x10001ED30	0x00000008	[ 14] 8-byte-literal
+0x10001ED38	0x00000008	[ 27] 8-byte-literal
+0x10001ED40	0x00000008	[ 27] 8-byte-literal
+0x10001ED50	0x00000010	[ 27] 16-byte-literal
+0x10001ED60	0x00000010	[ 27] 16-byte-literal
+0x10001ED70	0x00000176	[  1] opaque_section
+0x10001EEE8	0x00000110	[  0] compact unwind info
+0x10001F000	0x00000008	[  0] non-lazy-pointer-to-local: dyld_stub_binder
+0x10001F008	0x00000008	[  0] non-lazy-pointer
+0x10001F010	0x00000008	[  0] non-lazy-pointer-to-local: _NSLocalizedDescriptionKey
+0x10001F018	0x00000008	[  0] non-lazy-pointer-to-local: _OBJC_EHTYPE_$_NSException
+0x10001F020	0x00000008	[  0] non-lazy-pointer-to-local: __NSConcreteStackBlock
+0x10001F028	0x00000008	[  0] non-lazy-pointer-to-local: ___NSArray0__
+0x10001F030	0x00000008	[  0] non-lazy-pointer-to-local: ___objc_personality_v0
+0x10001F038	0x00000008	[  0] non-lazy-pointer-to-local: ___stack_chk_guard
+0x10001F040	0x00000008	[  0] non-lazy-pointer-to-local: ___stderrp
+0x10001F048	0x00000008	[  0] non-lazy-pointer-to-local: __dispatch_main_q
+0x10001F050	0x00000008	[  0] non-lazy-pointer-to-local: __dispatch_queue_attr_concurrent
+0x10001F058	0x00000008	[  0] non-lazy-pointer-to-local: __objc_msgForward
+0x10001F060	0x00000008	[  0] non-lazy-pointer-to-local: __objc_msgForward_stret
+0x10001F068	0x00000008	[  0] non-lazy-pointer-to-local: _objc_msgSend
+0x10001F070	0x00000008	[  0] non-lazy-pointer-to-local: _objc_release
+0x10001F078	0x00000008	[  0] non-lazy-pointer-to-local: _objc_retain
+0x10001F080	0x00000008	[ 35] _CFAbsoluteTimeGetCurrent
+0x10001F088	0x00000008	[ 35] _CFGetRetainCount
+0x10001F090	0x00000008	[ 31] _NSClassFromString
+0x10001F098	0x00000008	[ 35] _NSGetSizeAndAlignment
+0x10001F0A0	0x00000008	[ 31] _NSHomeDirectory
+0x10001F0A8	0x00000008	[ 31] _NSLog
+0x10001F0B0	0x00000008	[ 31] _NSSelectorFromString
+0x10001F0B8	0x00000008	[ 31] _NSStringFromClass
+0x10001F0C0	0x00000008	[ 31] _NSStringFromSelector
+0x10001F0C8	0x00000008	[ 33] _OSSpinLockLock
+0x10001F0D0	0x00000008	[ 33] _OSSpinLockUnlock
+0x10001F0D8	0x00000008	[ 34] _UIApplicationMain
+0x10001F0E0	0x00000008	[ 33] __Block_object_assign
+0x10001F0E8	0x00000008	[ 33] __Block_object_dispose
+0x10001F0F0	0x00000008	[ 33] __Unwind_Resume
+0x10001F0F8	0x00000008	[ 33] ___stack_chk_fail
+0x10001F100	0x00000008	[ 33] _ceil
+0x10001F108	0x00000008	[ 32] _class_addMethod
+0x10001F110	0x00000008	[ 32] _class_copyMethodList
+0x10001F118	0x00000008	[ 32] _class_getClassMethod
+0x10001F120	0x00000008	[ 32] _class_getInstanceMethod
+0x10001F128	0x00000008	[ 32] _class_getInstanceSize
+0x10001F130	0x00000008	[ 32] _class_getSuperclass
+0x10001F138	0x00000008	[ 32] _class_isMetaClass
+0x10001F140	0x00000008	[ 32] _class_replaceMethod
+0x10001F148	0x00000008	[ 32] _class_respondsToSelector
+0x10001F150	0x00000008	[ 33] _dispatch_after
+0x10001F158	0x00000008	[ 33] _dispatch_async
+0x10001F160	0x00000008	[ 33] _dispatch_barrier_async
+0x10001F168	0x00000008	[ 33] _dispatch_benchmark
+0x10001F170	0x00000008	[ 33] _dispatch_get_global_queue
+0x10001F178	0x00000008	[ 33] _dispatch_group_async
+0x10001F180	0x00000008	[ 33] _dispatch_group_create
+0x10001F188	0x00000008	[ 33] _dispatch_group_enter
+0x10001F190	0x00000008	[ 33] _dispatch_group_leave
+0x10001F198	0x00000008	[ 33] _dispatch_group_notify
+0x10001F1A0	0x00000008	[ 33] _dispatch_once
+0x10001F1A8	0x00000008	[ 33] _dispatch_queue_create
+0x10001F1B0	0x00000008	[ 33] _dispatch_semaphore_create
+0x10001F1B8	0x00000008	[ 33] _dispatch_semaphore_signal
+0x10001F1C0	0x00000008	[ 33] _dispatch_semaphore_wait
+0x10001F1C8	0x00000008	[ 33] _dispatch_sync
+0x10001F1D0	0x00000008	[ 33] _dispatch_time
+0x10001F1D8	0x00000008	[ 33] _dlclose
+0x10001F1E0	0x00000008	[ 33] _dlerror
+0x10001F1E8	0x00000008	[ 33] _dlopen
+0x10001F1F0	0x00000008	[ 33] _dlsym
+0x10001F1F8	0x00000008	[ 33] _exit
+0x10001F200	0x00000008	[ 33] _fork
+0x10001F208	0x00000008	[ 33] _fprintf
+0x10001F210	0x00000008	[ 33] _free
+0x10001F218	0x00000008	[ 33] _getpid
+0x10001F220	0x00000008	[ 32] _imp_implementationWithBlock
+0x10001F228	0x00000008	[ 33] _malloc
+0x10001F230	0x00000008	[ 33] _malloc_size
+0x10001F238	0x00000008	[ 33] _memset
+0x10001F240	0x00000008	[ 32] _method_exchangeImplementations
+0x10001F248	0x00000008	[ 32] _method_getDescription
+0x10001F250	0x00000008	[ 32] _method_getImplementation
+0x10001F258	0x00000008	[ 32] _method_getName
+0x10001F260	0x00000008	[ 32] _method_getTypeEncoding
+0x10001F268	0x00000008	[ 32] _objc_allocateClassPair
+0x10001F270	0x00000008	[ 32] _objc_autorelease
+0x10001F278	0x00000008	[ 32] _objc_autoreleasePoolPop
+0x10001F280	0x00000008	[ 32] _objc_autoreleasePoolPush
+0x10001F288	0x00000008	[ 32] _objc_autoreleaseReturnValue
+0x10001F290	0x00000008	[ 32] _objc_begin_catch
+0x10001F298	0x00000008	[ 32] _objc_copyWeak
+0x10001F2A0	0x00000008	[ 32] _objc_destroyWeak
+0x10001F2A8	0x00000008	[ 32] _objc_end_catch
+0x10001F2B0	0x00000008	[ 32] _objc_enumerationMutation
+0x10001F2B8	0x00000008	[ 32] _objc_getAssociatedObject
+0x10001F2C0	0x00000008	[ 32] _objc_getClass
+0x10001F2C8	0x00000008	[ 32] _objc_getMetaClass
+0x10001F2D0	0x00000008	[ 32] _objc_getProperty
+0x10001F2D8	0x00000008	[ 32] _objc_initWeak
+0x10001F2E0	0x00000008	[ 32] _objc_loadWeakRetained
+0x10001F2E8	0x00000008	[ 32] _objc_msgSendSuper2
+0x10001F2F0	0x00000008	[ 32] _objc_registerClassPair
+0x10001F2F8	0x00000008	[ 32] _objc_retainAutorelease
+0x10001F300	0x00000008	[ 32] _objc_retainAutoreleaseReturnValue
+0x10001F308	0x00000008	[ 32] _objc_retainAutoreleasedReturnValue
+0x10001F310	0x00000008	[ 32] _objc_retainBlock
+0x10001F318	0x00000008	[ 32] _objc_setAssociatedObject
+0x10001F320	0x00000008	[ 32] _objc_setProperty_atomic_copy
+0x10001F328	0x00000008	[ 32] _objc_setProperty_nonatomic_copy
+0x10001F330	0x00000008	[ 32] _objc_storeStrong
+0x10001F338	0x00000008	[ 32] _objc_storeWeak
+0x10001F340	0x00000008	[ 32] _objc_sync_enter
+0x10001F348	0x00000008	[ 32] _objc_sync_exit
+0x10001F350	0x00000008	[ 32] _objc_terminate
+0x10001F358	0x00000008	[ 32] _objc_unsafeClaimAutoreleasedReturnValue
+0x10001F360	0x00000008	[ 32] _object_getClass
+0x10001F368	0x00000008	[ 32] _object_setClass
+0x10001F370	0x00000008	[ 33] _printf
+0x10001F378	0x00000008	[ 33] _reallocf
+0x10001F380	0x00000008	[ 33] _sleep
+0x10001F388	0x00000008	[ 33] _strcmp
+0x10001F390	0x00000008	[ 33] _wait
+0x10001F398	0x00000010	[  2] anon
+0x10001F3A8	0x00000008	[  2] anon
+0x10001F3B0	0x00000030	[  2] ___block_descriptor_tmp
+0x10001F3E0	0x00000030	[  4] ___block_descriptor_tmp
+0x10001F410	0x00000020	[  5] ___block_descriptor_tmp
+0x10001F430	0x00000020	[  5] ___block_literal_global
+0x10001F450	0x00000020	[  5] ___block_descriptor_tmp.13
+0x10001F470	0x00000020	[  5] ___block_literal_global.14
+0x10001F490	0x00000030	[  5] ___block_descriptor_tmp.23
+0x10001F4C0	0x00000020	[ 10] ___block_descriptor_tmp
+0x10001F4E0	0x00000020	[ 10] ___block_literal_global
+0x10001F500	0x00000020	[ 10] ___block_descriptor_tmp.5
+0x10001F520	0x00000020	[ 10] ___block_literal_global.6
+0x10001F540	0x00000020	[ 10] ___block_descriptor_tmp.9
+0x10001F560	0x00000020	[ 10] ___block_literal_global.10
+0x10001F580	0x00000020	[ 10] ___block_descriptor_tmp.15
+0x10001F5A0	0x00000020	[ 10] ___block_literal_global.16
+0x10001F5C0	0x00000020	[ 10] ___block_descriptor_tmp.19
+0x10001F5E0	0x00000020	[ 10] ___block_literal_global.20
+0x10001F600	0x00000020	[ 10] ___block_descriptor_tmp.23
+0x10001F620	0x00000020	[ 10] ___block_literal_global.24
+0x10001F640	0x00000030	[ 10] ___block_descriptor_tmp.31
+0x10001F670	0x00000030	[ 10] ___block_descriptor_tmp.40
+0x10001F6A0	0x00000020	[ 10] ___block_descriptor_tmp.44
+0x10001F6C0	0x00000020	[ 10] ___block_literal_global.45
+0x10001F6E0	0x00000030	[ 10] ___block_descriptor_tmp.48
+0x10001F710	0x00000020	[ 14] ___block_descriptor_tmp
+0x10001F730	0x00000020	[ 14] ___block_literal_global
+0x10001F750	0x00000020	[ 14] ___block_descriptor_tmp.13
+0x10001F770	0x00000020	[ 14] ___block_literal_global.14
+0x10001F790	0x00000020	[ 14] ___block_descriptor_tmp.19
+0x10001F7B0	0x00000020	[ 14] ___block_literal_global.20
+0x10001F7D0	0x00000020	[ 14] ___block_descriptor_tmp.23
+0x10001F7F0	0x00000020	[ 14] ___block_literal_global.24
+0x10001F810	0x00000020	[ 14] ___block_descriptor_tmp.27
+0x10001F830	0x00000020	[ 14] ___block_literal_global.28
+0x10001F850	0x00000020	[ 14] ___block_descriptor_tmp.31
+0x10001F870	0x00000020	[ 14] ___block_literal_global.32
+0x10001F890	0x00000020	[ 14] ___block_descriptor_tmp.35
+0x10001F8B0	0x00000020	[ 14] ___block_literal_global.36
+0x10001F8D0	0x00000030	[ 14] ___block_descriptor_tmp.44
+0x10001F900	0x00000030	[ 14] ___block_descriptor_tmp.47
+0x10001F930	0x00000030	[ 14] ___block_descriptor_tmp.56
+0x10001F960	0x00000030	[ 14] ___block_descriptor_tmp.59
+0x10001F990	0x00000020	[ 14] ___block_descriptor_tmp.61
+0x10001F9B0	0x00000020	[ 14] ___block_literal_global.62
+0x10001F9D0	0x00000020	[ 14] ___block_descriptor_tmp.66
+0x10001F9F0	0x00000020	[ 14] ___block_literal_global.67
+0x10001FA10	0x00000020	[ 14] ___block_descriptor_tmp.70
+0x10001FA30	0x00000020	[ 14] ___block_literal_global.71
+0x10001FA50	0x00000020	[ 14] ___block_descriptor_tmp.75
+0x10001FA70	0x00000020	[ 14] ___block_literal_global.76
+0x10001FA90	0x00000020	[ 14] ___block_descriptor_tmp.77
+0x10001FAB0	0x00000020	[ 14] ___block_literal_global.78
+0x10001FAD0	0x00000020	[ 14] ___block_descriptor_tmp.79
+0x10001FAF0	0x00000020	[ 14] ___block_literal_global.80
+0x10001FB10	0x00000020	[ 14] ___block_descriptor_tmp.81
+0x10001FB30	0x00000020	[ 14] ___block_literal_global.82
+0x10001FB50	0x00000020	[ 14] ___block_descriptor_tmp.83
+0x10001FB70	0x00000020	[ 14] ___block_literal_global.84
+0x10001FB90	0x00000020	[ 14] ___block_descriptor_tmp.85
+0x10001FBB0	0x00000020	[ 14] ___block_literal_global.86
+0x10001FBD0	0x00000020	[ 14] ___block_descriptor_tmp.87
+0x10001FBF0	0x00000020	[ 14] ___block_literal_global.88
+0x10001FC10	0x00000030	[ 14] ___block_descriptor_tmp.96
+0x10001FC40	0x00000030	[ 14] ___block_descriptor_tmp.99
+0x10001FC70	0x00000030	[ 14] ___block_descriptor_tmp.108
+0x10001FCA0	0x00000030	[ 14] ___block_descriptor_tmp.111
+0x10001FCD0	0x00000030	[ 14] ___block_descriptor_tmp.120
+0x10001FD00	0x00000030	[ 14] ___block_descriptor_tmp.123
+0x10001FD30	0x00000030	[ 14] ___block_descriptor_tmp.131
+0x10001FD60	0x00000030	[ 14] ___block_descriptor_tmp.134
+0x10001FD90	0x00000030	[ 14] ___block_descriptor_tmp.143
+0x10001FDC0	0x00000030	[ 14] ___block_descriptor_tmp.146
+0x10001FDF0	0x00000020	[ 14] ___block_descriptor_tmp.159
+0x10001FE10	0x00000020	[ 14] ___block_literal_global.160
+0x10001FE30	0x00000030	[ 14] ___block_descriptor_tmp.165
+0x10001FE60	0x00000030	[ 18] ___block_descriptor_tmp
+0x10001FE90	0x00000030	[ 18] ___block_descriptor_tmp.91
+0x10001FEC0	0x00000030	[ 18] ___block_descriptor_tmp.122
+0x10001FEF0	0x00000030	[ 19] ___block_descriptor_tmp
+0x10001FF20	0x00000030	[ 19] ___block_descriptor_tmp.22
+0x10001FF50	0x00000030	[ 19] ___block_descriptor_tmp.32
+0x10001FF80	0x00000030	[ 19] ___block_descriptor_tmp.41
+0x10001FFB0	0x00000030	[ 19] ___block_descriptor_tmp.50
+0x10001FFE0	0x00000030	[ 21] ___block_descriptor_tmp
+0x100020010	0x00000020	[ 23] ___block_descriptor_tmp
+0x100020030	0x00000020	[ 23] ___block_literal_global
+0x100020050	0x00000030	[ 23] ___block_descriptor_tmp.45
+0x100020080	0x00000030	[ 25] ___block_descriptor_tmp
+0x1000200B0	0x00000030	[ 27] ___block_descriptor_tmp
+0x1000200E0	0x00000008	[ 29] _AspectErrorDomain
+0x1000200E8	0x00000030	[ 29] ___block_descriptor_tmp
+0x100020118	0x00000020	[ 29] ___block_descriptor_tmp.320
+0x100020138	0x00000020	[ 29] ___block_literal_global
+0x100020158	0x00000020	[ 29] ___block_descriptor_tmp.365
+0x100020178	0x00000020	[ 29] ___block_literal_global.366
+0x100020198	0x00000030	[ 29] ___block_descriptor_tmp.389
+0x1000201C8	0x00000020	[ 29] ___block_descriptor_tmp.390
+0x1000201E8	0x00000020	[ 29] ___block_literal_global.391
+0x100020208	0x00000020	[ 29] ___block_descriptor_tmp.414
+0x100020228	0x00000030	[ 29] ___block_descriptor_tmp.438
+0x100020258	0x00000030	[ 29] ___block_descriptor_tmp.454
+0x100020288	0x00000020	[  2] CFString
+0x1000202A8	0x00000020	[  2] CFString
+0x1000202C8	0x00000020	[  2] CFString
+0x1000202E8	0x00000020	[  3] CFString
+0x100020308	0x00000020	[  8] CFString
+0x100020328	0x00000020	[  9] CFString
+0x100020348	0x00000020	[  9] CFString
+0x100020368	0x00000020	[  9] CFString
+0x100020388	0x00000020	[  9] CFString
+0x1000203A8	0x00000020	[  9] CFString
+0x1000203C8	0x00000020	[  9] CFString
+0x1000203E8	0x00000020	[  9] CFString
+0x100020408	0x00000020	[  9] CFString
+0x100020428	0x00000020	[  9] CFString
+0x100020448	0x00000020	[  9] CFString
+0x100020468	0x00000020	[  9] CFString
+0x100020488	0x00000020	[  9] CFString
+0x1000204A8	0x00000020	[  9] CFString
+0x1000204C8	0x00000020	[  9] CFString
+0x1000204E8	0x00000020	[  9] CFString
+0x100020508	0x00000020	[  9] CFString
+0x100020528	0x00000020	[  9] CFString
+0x100020548	0x00000020	[  9] CFString
+0x100020568	0x00000020	[  9] CFString
+0x100020588	0x00000020	[  9] CFString
+0x1000205A8	0x00000020	[  9] CFString
+0x1000205C8	0x00000020	[  9] CFString
+0x1000205E8	0x00000020	[  9] CFString
+0x100020608	0x00000020	[  9] CFString
+0x100020628	0x00000020	[  9] CFString
+0x100020648	0x00000020	[  9] CFString
+0x100020668	0x00000020	[  9] CFString
+0x100020688	0x00000020	[  9] CFString
+0x1000206A8	0x00000020	[  9] CFString
+0x1000206C8	0x00000020	[  9] CFString
+0x1000206E8	0x00000020	[  9] CFString
+0x100020708	0x00000020	[  9] CFString
+0x100020728	0x00000020	[  9] CFString
+0x100020748	0x00000020	[  9] CFString
+0x100020768	0x00000020	[  9] CFString
+0x100020788	0x00000020	[  9] CFString
+0x1000207A8	0x00000020	[  9] CFString
+0x1000207C8	0x00000020	[  9] CFString
+0x1000207E8	0x00000020	[  9] CFString
+0x100020808	0x00000020	[ 10] CFString
+0x100020828	0x00000020	[ 10] CFString
+0x100020848	0x00000020	[ 10] CFString
+0x100020868	0x00000020	[ 10] CFString
+0x100020888	0x00000020	[ 10] CFString
+0x1000208A8	0x00000020	[ 10] CFString
+0x1000208C8	0x00000020	[ 10] CFString
+0x1000208E8	0x00000020	[ 10] CFString
+0x100020908	0x00000020	[ 10] CFString
+0x100020928	0x00000020	[ 10] CFString
+0x100020948	0x00000020	[ 11] CFString
+0x100020968	0x00000020	[ 11] CFString
+0x100020988	0x00000020	[ 11] CFString
+0x1000209A8	0x00000020	[ 11] CFString
+0x1000209C8	0x00000020	[ 11] CFString
+0x1000209E8	0x00000020	[ 11] CFString
+0x100020A08	0x00000020	[ 11] CFString
+0x100020A28	0x00000020	[ 11] CFString
+0x100020A48	0x00000020	[ 11] CFString
+0x100020A68	0x00000020	[ 11] CFString
+0x100020A88	0x00000020	[ 12] CFString
+0x100020AA8	0x00000020	[ 12] CFString
+0x100020AC8	0x00000020	[ 12] CFString
+0x100020AE8	0x00000020	[ 12] CFString
+0x100020B08	0x00000020	[ 12] CFString
+0x100020B28	0x00000020	[ 12] CFString
+0x100020B48	0x00000020	[ 12] CFString
+0x100020B68	0x00000020	[ 12] CFString
+0x100020B88	0x00000020	[ 14] CFString
+0x100020BA8	0x00000020	[ 14] CFString
+0x100020BC8	0x00000020	[ 14] CFString
+0x100020BE8	0x00000020	[ 14] CFString
+0x100020C08	0x00000020	[ 14] CFString
+0x100020C28	0x00000020	[ 14] CFString
+0x100020C48	0x00000020	[ 14] CFString
+0x100020C68	0x00000020	[ 14] CFString
+0x100020C88	0x00000020	[ 14] CFString
+0x100020CA8	0x00000020	[ 14] CFString
+0x100020CC8	0x00000020	[ 14] CFString
+0x100020CE8	0x00000020	[ 14] CFString
+0x100020D08	0x00000020	[ 14] CFString
+0x100020D28	0x00000020	[ 14] CFString
+0x100020D48	0x00000020	[ 14] CFString
+0x100020D68	0x00000020	[ 14] CFString
+0x100020D88	0x00000020	[ 14] CFString
+0x100020DA8	0x00000020	[ 14] CFString
+0x100020DC8	0x00000020	[ 14] CFString
+0x100020DE8	0x00000020	[ 14] CFString
+0x100020E08	0x00000020	[ 14] CFString
+0x100020E28	0x00000020	[ 14] CFString
+0x100020E48	0x00000020	[ 14] CFString
+0x100020E68	0x00000020	[ 14] CFString
+0x100020E88	0x00000020	[ 14] CFString
+0x100020EA8	0x00000020	[ 14] CFString
+0x100020EC8	0x00000020	[ 15] CFString
+0x100020EE8	0x00000020	[ 15] CFString
+0x100020F08	0x00000020	[ 15] CFString
+0x100020F28	0x00000020	[ 15] CFString
+0x100020F48	0x00000020	[ 15] CFString
+0x100020F68	0x00000020	[ 15] CFString
+0x100020F88	0x00000020	[ 15] CFString
+0x100020FA8	0x00000020	[ 15] CFString
+0x100020FC8	0x00000020	[ 15] CFString
+0x100020FE8	0x00000020	[ 15] CFString
+0x100021008	0x00000020	[ 15] CFString
+0x100021028	0x00000020	[ 15] CFString
+0x100021048	0x00000020	[ 15] CFString
+0x100021068	0x00000020	[ 15] CFString
+0x100021088	0x00000020	[ 15] CFString
+0x1000210A8	0x00000020	[ 15] CFString
+0x1000210C8	0x00000020	[ 15] CFString
+0x1000210E8	0x00000020	[ 15] CFString
+0x100021108	0x00000020	[ 15] CFString
+0x100021128	0x00000020	[ 15] CFString
+0x100021148	0x00000020	[ 15] CFString
+0x100021168	0x00000020	[ 15] CFString
+0x100021188	0x00000020	[ 15] CFString
+0x1000211A8	0x00000020	[ 15] CFString
+0x1000211C8	0x00000020	[ 16] CFString
+0x1000211E8	0x00000020	[ 16] CFString
+0x100021208	0x00000020	[ 18] CFString
+0x100021228	0x00000020	[ 18] CFString
+0x100021248	0x00000020	[ 18] CFString
+0x100021268	0x00000020	[ 18] CFString
+0x100021288	0x00000020	[ 18] CFString
+0x1000212A8	0x00000020	[ 22] CFString
+0x1000212C8	0x00000020	[ 22] CFString
+0x1000212E8	0x00000020	[ 22] CFString
+0x100021308	0x00000020	[ 22] CFString
+0x100021328	0x00000020	[ 23] CFString
+0x100021348	0x00000020	[ 23] CFString
+0x100021368	0x00000020	[ 23] CFString
+0x100021388	0x00000020	[ 23] CFString
+0x1000213A8	0x00000020	[ 23] CFString
+0x1000213C8	0x00000020	[ 23] CFString
+0x1000213E8	0x00000020	[ 23] CFString
+0x100021408	0x00000020	[ 23] CFString
+0x100021428	0x00000020	[ 23] CFString
+0x100021448	0x00000020	[ 23] CFString
+0x100021468	0x00000020	[ 23] CFString
+0x100021488	0x00000020	[ 23] CFString
+0x1000214A8	0x00000020	[ 23] CFString
+0x1000214C8	0x00000020	[ 26] CFString
+0x1000214E8	0x00000020	[ 27] CFString
+0x100021508	0x00000020	[ 27] CFString
+0x100021528	0x00000020	[ 27] CFString
+0x100021548	0x00000020	[ 27] CFString
+0x100021568	0x00000020	[ 27] CFString
+0x100021588	0x00000020	[ 27] CFString
+0x1000215A8	0x00000020	[ 27] CFString
+0x1000215C8	0x00000020	[ 27] CFString
+0x1000215E8	0x00000020	[ 29] CFString
+0x100021608	0x00000020	[ 29] CFString
+0x100021628	0x00000020	[ 29] CFString
+0x100021648	0x00000020	[ 29] CFString
+0x100021668	0x00000020	[ 29] CFString
+0x100021688	0x00000020	[ 29] CFString
+0x1000216A8	0x00000020	[ 29] CFString
+0x1000216C8	0x00000020	[ 29] CFString
+0x1000216E8	0x00000020	[ 29] CFString
+0x100021708	0x00000020	[ 29] CFString
+0x100021728	0x00000020	[ 29] CFString
+0x100021748	0x00000020	[ 29] CFString
+0x100021768	0x00000020	[ 29] CFString
+0x100021788	0x00000020	[ 29] CFString
+0x1000217A8	0x00000020	[ 29] CFString
+0x1000217C8	0x00000020	[ 29] CFString
+0x1000217E8	0x00000020	[ 29] CFString
+0x100021808	0x00000020	[ 29] CFString
+0x100021828	0x00000020	[ 29] CFString
+0x100021848	0x00000020	[ 29] CFString
+0x100021868	0x00000020	[ 29] CFString
+0x100021888	0x00000020	[ 29] CFString
+0x1000218A8	0x00000020	[ 29] CFString
+0x1000218C8	0x00000020	[ 29] CFString
+0x1000218E8	0x00000020	[ 29] CFString
+0x100021908	0x00000020	[ 29] CFString
+0x100021928	0x00000020	[ 29] CFString
+0x100021948	0x00000020	[ 29] CFString
+0x100021968	0x00000020	[ 29] CFString
+0x100021988	0x00000020	[ 29] CFString
+0x1000219A8	0x00000020	[ 29] CFString
+0x1000219C8	0x00000020	[ 29] CFString
+0x1000219E8	0x00000020	[ 29] CFString
+0x100021A08	0x00000020	[ 29] CFString
+0x100021A28	0x00000020	[ 29] CFString
+0x100021A48	0x00000020	[ 29] CFString
+0x100021A68	0x00000020	[ 29] CFString
+0x100021A88	0x00000020	[ 29] CFString
+0x100021AA8	0x00000020	[ 29] CFString
+0x100021AC8	0x00000020	[ 29] CFString
+0x100021AE8	0x00000020	[ 29] CFString
+0x100021B08	0x00000020	[ 29] CFString
+0x100021B28	0x00000020	[ 29] CFString
+0x100021B48	0x00000008	[  2] anon
+0x100021B50	0x00000010	[  3] anon
+0x100021B60	0x00000008	[  4] anon
+0x100021B68	0x00000008	[  5] anon
+0x100021B70	0x00000008	[  6] anon
+0x100021B78	0x00000008	[  8] anon
+0x100021B80	0x00000010	[  9] anon
+0x100021B90	0x00000008	[ 10] anon
+0x100021B98	0x00000008	[ 11] anon
+0x100021BA0	0x00000008	[ 12] anon
+0x100021BA8	0x00000008	[ 14] anon
+0x100021BB0	0x00000008	[ 15] anon
+0x100021BB8	0x00000008	[ 16] anon
+0x100021BC0	0x00000008	[ 17] anon
+0x100021BC8	0x00000008	[ 18] anon
+0x100021BD0	0x00000018	[ 19] anon
+0x100021BE8	0x00000008	[ 20] anon
+0x100021BF0	0x00000008	[ 22] anon
+0x100021BF8	0x00000018	[ 24] anon
+0x100021C10	0x00000008	[ 26] anon
+0x100021C18	0x00000008	[ 28] anon
+0x100021C20	0x00000020	[ 29] anon
+0x100021C40	0x00000008	[ 30] anon
+0x100021C48	0x00000008	[  3] anon
+0x100021C50	0x00000008	[  5] objc-cat-list
+0x100021C58	0x00000008	[  5] objc-cat-list
+0x100021C60	0x00000008	[  5] objc-cat-list
+0x100021C68	0x00000008	[  7] objc-cat-list
+0x100021C70	0x00000008	[ 13] objc-cat-list
+0x100021C78	0x00000008	[ 20] objc-cat-list
+0x100021C80	0x00000008	[ 21] objc-cat-list
+0x100021C88	0x00000008	[ 25] objc-cat-list
+0x100021C90	0x00000008	[ 27] objc-cat-list
+0x100021C98	0x00000008	[ 29] objc-cat-list
+0x100021CA0	0x00000008	[ 29] objc-cat-list
+0x100021CA8	0x00000018	[  5] anon
+0x100021CC0	0x00000008	[ 13] anon
+0x100021CC8	0x00000008	[ 21] anon
+0x100021CD0	0x00000008	[ 25] anon
+0x100021CD8	0x00000008	[ 18] l_OBJC_LABEL_PROTOCOL_$_NSObject
+0x100021CE0	0x00000008	[ 18] l_OBJC_LABEL_PROTOCOL_$_UITextFieldDelegate
+0x100021CE8	0x00000008	[ 26] l_OBJC_LABEL_PROTOCOL_$_UIApplicationDelegate
+0x100021CF0	0x00000008	[ 29] l_OBJC_LABEL_PROTOCOL_$_AspectInfo
+0x100021CF8	0x00000008	[  0] objc image info
+0x100021D00	0x00000048	[  2] l_OBJC_METACLASS_RO_$_AttributeUsage
+0x100021D48	0x000000C8	[  2] l_OBJC_$_INSTANCE_METHODS_AttributeUsage
+0x100021E10	0x00000028	[  2] l_OBJC_$_INSTANCE_VARIABLES_AttributeUsage
+0x100021E38	0x00000018	[  2] l_OBJC_$_PROP_LIST_AttributeUsage
+0x100021E50	0x00000048	[  2] l_OBJC_CLASS_RO_$_AttributeUsage
+0x100021E98	0x00000048	[  3] l_OBJC_METACLASS_RO_$_TestUnsafeSwizzle
+0x100021EE0	0x00000020	[  3] l_OBJC_$_INSTANCE_METHODS_TestUnsafeSwizzle
+0x100021F00	0x00000048	[  3] l_OBJC_CLASS_RO_$_TestUnsafeSwizzle
+0x100021F48	0x00000020	[  3] l_OBJC_$_CLASS_METHODS_SubTestUnsafeSwizzle
+0x100021F68	0x00000048	[  3] l_OBJC_METACLASS_RO_$_SubTestUnsafeSwizzle
+0x100021FB0	0x00000020	[  3] l_OBJC_$_INSTANCE_METHODS_SubTestUnsafeSwizzle
+0x100021FD0	0x00000048	[  3] l_OBJC_CLASS_RO_$_SubTestUnsafeSwizzle
+0x100022018	0x00000020	[  4] l_OBJC_$_CLASS_METHODS_DispatchOnceTest
+0x100022038	0x00000048	[  4] l_OBJC_METACLASS_RO_$_DispatchOnceTest
+0x100022080	0x00000048	[  4] l_OBJC_CLASS_RO_$_DispatchOnceTest
+0x1000220C8	0x00000020	[  5] l_OBJC_$_CLASS_METHODS_TestCategorySwizzle
+0x1000220E8	0x00000048	[  5] l_OBJC_METACLASS_RO_$_TestCategorySwizzle
+0x100022130	0x00000020	[  5] l_OBJC_$_INSTANCE_METHODS_TestCategorySwizzle
+0x100022150	0x00000048	[  5] l_OBJC_CLASS_RO_$_TestCategorySwizzle
+0x100022198	0x00000020	[  5] l_OBJC_$_CATEGORY_INSTANCE_METHODS_TestCategorySwizzle_$_Log
+0x1000221B8	0x00000020	[  5] l_OBJC_$_CATEGORY_CLASS_METHODS_TestCategorySwizzle_$_Log
+0x1000221D8	0x00000040	[  5] l_OBJC_$_CATEGORY_TestCategorySwizzle_$_Log
+0x100022218	0x00000020	[  5] l_OBJC_$_CATEGORY_INSTANCE_METHODS_TestCategorySwizzle_$_EventTrack
+0x100022238	0x00000020	[  5] l_OBJC_$_CATEGORY_CLASS_METHODS_TestCategorySwizzle_$_EventTrack
+0x100022258	0x00000040	[  5] l_OBJC_$_CATEGORY_TestCategorySwizzle_$_EventTrack
+0x100022298	0x00000038	[  5] l_OBJC_$_CATEGORY_CLASS_METHODS_TestCategorySwizzle_$_ClassMethod
+0x1000222D0	0x00000040	[  5] l_OBJC_$_CATEGORY_TestCategorySwizzle_$_ClassMethod
+0x100022310	0x00000020	[  6] l_OBJC_$_CLASS_METHODS_MethodSwizzleUtil
+0x100022330	0x00000048	[  6] l_OBJC_METACLASS_RO_$_MethodSwizzleUtil
+0x100022378	0x00000048	[  6] l_OBJC_CLASS_RO_$_MethodSwizzleUtil
+0x1000223C0	0x00000050	[  7] l_OBJC_$_CATEGORY_INSTANCE_METHODS_NSObject_$_Injection
+0x100022410	0x00000018	[  7] l_OBJC_$_PROP_LIST_NSObject_$_Injection
+0x100022428	0x00000040	[  7] l_OBJC_$_CATEGORY_NSObject_$_Injection
+0x100022468	0x00000048	[  8] l_OBJC_METACLASS_RO_$_TestCode
+0x1000224B0	0x00000038	[  8] l_OBJC_$_INSTANCE_METHODS_TestCode
+0x1000224E8	0x00000048	[  8] l_OBJC_CLASS_RO_$_TestCode
+0x100022530	0x00000048	[  9] l_OBJC_METACLASS_RO_$_CopyUsage
+0x100022578	0x00000200	[  9] l_OBJC_$_INSTANCE_METHODS_CopyUsage
+0x100022778	0x000000C8	[  9] l_OBJC_$_INSTANCE_VARIABLES_CopyUsage
+0x100022840	0x00000068	[  9] l_OBJC_$_PROP_LIST_CopyUsage
+0x1000228A8	0x00000048	[  9] l_OBJC_CLASS_RO_$_CopyUsage
+0x1000228F0	0x00000048	[  9] l_OBJC_METACLASS_RO_$_TestObj
+0x100022938	0x00000050	[  9] l_OBJC_$_INSTANCE_METHODS_TestObj
+0x100022988	0x00000028	[  9] l_OBJC_$_INSTANCE_VARIABLES_TestObj
+0x1000229B0	0x00000018	[  9] l_OBJC_$_PROP_LIST_TestObj
+0x1000229C8	0x00000048	[  9] l_OBJC_CLASS_RO_$_TestObj
+0x100022A10	0x00000048	[ 10] l_OBJC_METACLASS_RO_$_DispatchExamnationTest
+0x100022A58	0x00000080	[ 10] l_OBJC_$_INSTANCE_METHODS_DispatchExamnationTest
+0x100022AD8	0x00000048	[ 10] l_OBJC_CLASS_RO_$_DispatchExamnationTest
+0x100022B20	0x00000048	[ 11] l_OBJC_METACLASS_RO_$_TestTaggedPointer
+0x100022B68	0x00000080	[ 11] l_OBJC_$_INSTANCE_METHODS_TestTaggedPointer
+0x100022BE8	0x00000048	[ 11] l_OBJC_CLASS_RO_$_TestTaggedPointer
+0x100022C30	0x00000048	[ 12] l_OBJC_METACLASS_RO_$_ByteAlignmentTest
+0x100022C78	0x00000170	[ 12] l_OBJC_$_INSTANCE_METHODS_ByteAlignmentTest
+0x100022DE8	0x000000C8	[ 12] l_OBJC_$_INSTANCE_VARIABLES_ByteAlignmentTest
+0x100022EB0	0x00000068	[ 12] l_OBJC_$_PROP_LIST_ByteAlignmentTest
+0x100022F18	0x00000048	[ 12] l_OBJC_CLASS_RO_$_ByteAlignmentTest
+0x100022F60	0x00000050	[ 13] l_OBJC_$_CATEGORY_INSTANCE_METHODS_NSObject_$_RLSafe
+0x100022FB0	0x00000020	[ 13] l_OBJC_$_CATEGORY_CLASS_METHODS_NSObject_$_RLSafe
+0x100022FD0	0x00000040	[ 13] l_OBJC_$_CATEGORY_NSObject_$_RLSafe
+0x100023010	0x00000048	[ 14] l_OBJC_METACLASS_RO_$_DispatchBarrierTest
+0x100023058	0x00000098	[ 14] l_OBJC_$_INSTANCE_METHODS_DispatchBarrierTest
+0x1000230F0	0x00000048	[ 14] l_OBJC_CLASS_RO_$_DispatchBarrierTest
+0x100023138	0x00000048	[ 15] l_OBJC_METACLASS_RO_$_TestClassCluster
+0x100023180	0x000000C8	[ 15] l_OBJC_$_INSTANCE_METHODS_TestClassCluster
+0x100023248	0x00000048	[ 15] l_OBJC_CLASS_RO_$_TestClassCluster
+0x100023290	0x00000048	[ 16] l_OBJC_METACLASS_RO_$_DynamicCallFunctionTest
+0x1000232D8	0x00000068	[ 16] l_OBJC_$_INSTANCE_METHODS_DynamicCallFunctionTest
+0x100023340	0x00000048	[ 16] l_OBJC_CLASS_RO_$_DynamicCallFunctionTest
+0x100023388	0x00000048	[ 17] l_OBJC_METACLASS_RO_$_DispatchGroupLeaveTest
+0x1000233D0	0x00000038	[ 17] l_OBJC_$_INSTANCE_METHODS_DispatchGroupLeaveTest
+0x100023408	0x00000048	[ 17] l_OBJC_CLASS_RO_$_DispatchGroupLeaveTest
+0x100023450	0x000001D0	[ 18] l_OBJC_$_PROTOCOL_INSTANCE_METHODS_NSObject
+0x100023620	0x00000020	[ 18] l_OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_NSObject
+0x100023640	0x00000048	[ 18] l_OBJC_$_PROP_LIST_NSObject
+0x100023688	0x000000A0	[ 18] l_OBJC_$_PROTOCOL_METHOD_TYPES_NSObject
+0x100023728	0x00000018	[ 18] l_OBJC_$_PROTOCOL_REFS_UITextFieldDelegate
+0x100023740	0x000000C8	[ 18] l_OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_UITextFieldDelegate
+0x100023808	0x00000040	[ 18] l_OBJC_$_PROTOCOL_METHOD_TYPES_UITextFieldDelegate
+0x100023848	0x00000018	[ 18] l_OBJC_CLASS_PROTOCOLS_$_ViewController
+0x100023860	0x00000048	[ 18] l_OBJC_METACLASS_RO_$_ViewController
+0x1000238A8	0x00000230	[ 18] l_OBJC_$_INSTANCE_METHODS_ViewController
+0x100023AD8	0x00000048	[ 18] l_OBJC_$_INSTANCE_VARIABLES_ViewController
+0x100023B20	0x00000068	[ 18] l_OBJC_$_PROP_LIST_ViewController
+0x100023B88	0x00000048	[ 18] l_OBJC_CLASS_RO_$_ViewController
+0x100023BD0	0x00000098	[ 19] objc merged method list
+0x100023C68	0x00000050	[ 19] objc merged method list
+0x100023CB8	0x00000048	[ 19] l_OBJC_METACLASS_RO_$_TestSwizzleInInitialize
+0x100023D00	0x00000048	[ 19] l_OBJC_CLASS_RO_$_TestSwizzleInInitialize
+0x100023D48	0x00000020	[ 19] l_OBJC_$_CLASS_METHODS_TestSwizzleInInitializeA
+0x100023D68	0x00000048	[ 19] l_OBJC_METACLASS_RO_$_TestSwizzleInInitializeA
+0x100023DB0	0x00000020	[ 19] l_OBJC_$_INSTANCE_METHODS_TestSwizzleInInitializeA
+0x100023DD0	0x00000048	[ 19] l_OBJC_CLASS_RO_$_TestSwizzleInInitializeA
+0x100023E18	0x00000020	[ 19] l_OBJC_$_CLASS_METHODS_TestSwizzleInInitializeB
+0x100023E38	0x00000048	[ 19] l_OBJC_METACLASS_RO_$_TestSwizzleInInitializeB
+0x100023E80	0x00000020	[ 19] l_OBJC_$_INSTANCE_METHODS_TestSwizzleInInitializeB
+0x100023EA0	0x00000048	[ 19] l_OBJC_CLASS_RO_$_TestSwizzleInInitializeB
+0x100023EE8	0x00000020	[ 20] l_OBJC_$_CATEGORY_INSTANCE_METHODS_NSObject_$_HCWillDealloc
+0x100023F08	0x00000040	[ 20] l_OBJC_$_CATEGORY_NSObject_$_HCWillDealloc
+0x100023F48	0x00000048	[ 20] l_OBJC_METACLASS_RO_$_HCAssociatedObject
+0x100023F90	0x000000B0	[ 20] l_OBJC_$_INSTANCE_METHODS_HCAssociatedObject
+0x100024040	0x00000048	[ 20] l_OBJC_$_INSTANCE_VARIABLES_HCAssociatedObject
+0x100024088	0x00000028	[ 20] l_OBJC_$_PROP_LIST_HCAssociatedObject
+0x1000240B0	0x00000048	[ 20] l_OBJC_CLASS_RO_$_HCAssociatedObject
+0x1000240F8	0x00000020	[ 21] l_OBJC_$_CATEGORY_INSTANCE_METHODS_UIViewController_$_Test
+0x100024118	0x00000020	[ 21] l_OBJC_$_CATEGORY_CLASS_METHODS_UIViewController_$_Test
+0x100024138	0x00000040	[ 21] l_OBJC_$_CATEGORY_UIViewController_$_Test
+0x100024178	0x00000050	[ 22] objc merged method list
+0x1000241C8	0x00000038	[ 22] l_OBJC_$_CLASS_METHODS_TestCategoryOveride
+0x100024200	0x00000048	[ 22] l_OBJC_METACLASS_RO_$_TestCategoryOveride
+0x100024248	0x00000048	[ 22] l_OBJC_CLASS_RO_$_TestCategoryOveride
+0x100024290	0x00000048	[ 24] l_OBJC_METACLASS_RO_$_TestSubClassSwizzle
+0x1000242D8	0x00000038	[ 24] l_OBJC_$_INSTANCE_METHODS_TestSubClassSwizzle
+0x100024310	0x00000048	[ 24] l_OBJC_CLASS_RO_$_TestSubClassSwizzle
+0x100024358	0x00000048	[ 24] l_OBJC_METACLASS_RO_$_TestASubClassSwizzle
+0x1000243A0	0x00000020	[ 24] l_OBJC_$_INSTANCE_METHODS_TestASubClassSwizzle
+0x1000243C0	0x00000048	[ 24] l_OBJC_CLASS_RO_$_TestASubClassSwizzle
+0x100024408	0x00000048	[ 24] l_OBJC_METACLASS_RO_$_TestBSubClassSwizzle
+0x100024450	0x00000020	[ 24] l_OBJC_$_INSTANCE_METHODS_TestBSubClassSwizzle
+0x100024470	0x00000048	[ 24] l_OBJC_CLASS_RO_$_TestBSubClassSwizzle
+0x1000244B8	0x00000050	[ 25] l_OBJC_$_CATEGORY_CLASS_METHODS_UIFont_$_Test
+0x100024508	0x00000040	[ 25] l_OBJC_$_CATEGORY_UIFont_$_Test
+0x100024548	0x00000018	[ 26] l_OBJC_$_PROTOCOL_REFS_UIApplicationDelegate
+0x100024560	0x000004A0	[ 26] l_OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_UIApplicationDelegate
+0x100024A00	0x00000018	[ 26] l_OBJC_$_PROP_LIST_UIApplicationDelegate
+0x100024A18	0x00000188	[ 26] l_OBJC_$_PROTOCOL_METHOD_TYPES_UIApplicationDelegate
+0x100024BA0	0x00000018	[ 26] l_OBJC_CLASS_PROTOCOLS_$_AppDelegate
+0x100024BB8	0x00000048	[ 26] l_OBJC_METACLASS_RO_$_AppDelegate
+0x100024C00	0x000000E0	[ 26] l_OBJC_$_INSTANCE_METHODS_AppDelegate
+0x100024CE0	0x00000028	[ 26] l_OBJC_$_INSTANCE_VARIABLES_AppDelegate
+0x100024D08	0x00000058	[ 26] l_OBJC_$_PROP_LIST_AppDelegate
+0x100024D60	0x00000048	[ 26] l_OBJC_CLASS_RO_$_AppDelegate
+0x100024DA8	0x00000200	[ 27] l_OBJC_$_CATEGORY_INSTANCE_METHODS_UITextField_$_HCInputType
+0x100024FA8	0x00000038	[ 27] l_OBJC_$_PROP_LIST_UITextField_$_HCInputType
+0x100024FE0	0x00000040	[ 27] l_OBJC_$_CATEGORY_UITextField_$_HCInputType
+0x100025020	0x00000048	[ 28] l_OBJC_METACLASS_RO_$_PodsDummy_Aspects
+0x100025068	0x00000048	[ 28] l_OBJC_CLASS_RO_$_PodsDummy_Aspects
+0x1000250B0	0x00000020	[ 29] l_OBJC_$_CATEGORY_INSTANCE_METHODS_NSObject_$_Aspects
+0x1000250D0	0x00000020	[ 29] l_OBJC_$_CATEGORY_CLASS_METHODS_NSObject_$_Aspects
+0x1000250F0	0x00000040	[ 29] l_OBJC_$_CATEGORY_NSObject_$_Aspects
+0x100025130	0x00000048	[ 29] l_OBJC_METACLASS_RO_$_AspectTracker
+0x100025178	0x000000E0	[ 29] l_OBJC_$_INSTANCE_METHODS_AspectTracker
+0x100025258	0x00000068	[ 29] l_OBJC_$_INSTANCE_VARIABLES_AspectTracker
+0x1000252C0	0x00000038	[ 29] l_OBJC_$_PROP_LIST_AspectTracker
+0x1000252F8	0x00000048	[ 29] l_OBJC_CLASS_RO_$_AspectTracker
+0x100025340	0x00000038	[ 29] l_OBJC_$_CATEGORY_INSTANCE_METHODS_NSInvocation_$_Aspects
+0x100025378	0x00000040	[ 29] l_OBJC_$_CATEGORY_NSInvocation_$_Aspects
+0x1000253B8	0x00000020	[ 29] l_OBJC_$_CLASS_METHODS_AspectIdentifier
+0x1000253D8	0x00000048	[ 29] l_OBJC_METACLASS_RO_$_AspectIdentifier
+0x100025420	0x00000158	[ 29] l_OBJC_$_INSTANCE_METHODS_AspectIdentifier
+0x100025578	0x000000A8	[ 29] l_OBJC_$_INSTANCE_VARIABLES_AspectIdentifier
+0x100025620	0x00000058	[ 29] l_OBJC_$_PROP_LIST_AspectIdentifier
+0x100025678	0x00000048	[ 29] l_OBJC_CLASS_RO_$_AspectIdentifier
+0x1000256C0	0x00000048	[ 29] l_OBJC_METACLASS_RO_$_AspectsContainer
+0x100025708	0x00000110	[ 29] l_OBJC_$_INSTANCE_METHODS_AspectsContainer
+0x100025818	0x00000068	[ 29] l_OBJC_$_INSTANCE_VARIABLES_AspectsContainer
+0x100025880	0x00000038	[ 29] l_OBJC_$_PROP_LIST_AspectsContainer
+0x1000258B8	0x00000048	[ 29] l_OBJC_CLASS_RO_$_AspectsContainer
+0x100025900	0x00000018	[ 29] l_OBJC_$_PROTOCOL_REFS_AspectInfo
+0x100025918	0x00000050	[ 29] l_OBJC_$_PROTOCOL_INSTANCE_METHODS_AspectInfo
+0x100025968	0x00000018	[ 29] l_OBJC_$_PROTOCOL_METHOD_TYPES_AspectInfo
+0x100025980	0x00000018	[ 29] l_OBJC_CLASS_PROTOCOLS_$_AspectInfo
+0x100025998	0x00000048	[ 29] l_OBJC_METACLASS_RO_$_AspectInfo
+0x1000259E0	0x00000080	[ 29] l_OBJC_$_INSTANCE_METHODS_AspectInfo
+0x100025A60	0x00000068	[ 29] l_OBJC_$_INSTANCE_VARIABLES_AspectInfo
+0x100025AC8	0x00000078	[ 29] l_OBJC_$_PROP_LIST_AspectInfo
+0x100025B40	0x00000048	[ 29] l_OBJC_CLASS_RO_$_AspectInfo
+0x100025B88	0x00000048	[ 30] l_OBJC_METACLASS_RO_$_PodsDummy_Pods_RuntimeLearning
+0x100025BD0	0x00000048	[ 30] l_OBJC_CLASS_RO_$_PodsDummy_Pods_RuntimeLearning
+0x100025C18	0x00000008	[  2] pointer-to-literal-cstring
+0x100025C20	0x00000008	[  2] pointer-to-literal-cstring
+0x100025C28	0x00000008	[  2] pointer-to-literal-cstring
+0x100025C30	0x00000008	[  2] pointer-to-literal-cstring
+0x100025C38	0x00000008	[  2] pointer-to-literal-cstring
+0x100025C40	0x00000008	[  2] pointer-to-literal-cstring
+0x100025C48	0x00000008	[  2] pointer-to-literal-cstring
+0x100025C50	0x00000008	[  2] pointer-to-literal-cstring
+0x100025C58	0x00000008	[  3] pointer-to-literal-cstring
+0x100025C60	0x00000008	[  3] pointer-to-literal-cstring
+0x100025C68	0x00000008	[  3] pointer-to-literal-cstring
+0x100025C70	0x00000008	[  4] pointer-to-literal-cstring
+0x100025C78	0x00000008	[  5] pointer-to-literal-cstring
+0x100025C80	0x00000008	[  5] pointer-to-literal-cstring
+0x100025C88	0x00000008	[  5] pointer-to-literal-cstring
+0x100025C90	0x00000008	[  5] pointer-to-literal-cstring
+0x100025C98	0x00000008	[  5] pointer-to-literal-cstring
+0x100025CA0	0x00000008	[  5] pointer-to-literal-cstring
+0x100025CA8	0x00000008	[  7] pointer-to-literal-cstring
+0x100025CB0	0x00000008	[  8] pointer-to-literal-cstring
+0x100025CB8	0x00000008	[  9] pointer-to-literal-cstring
+0x100025CC0	0x00000008	[  9] pointer-to-literal-cstring
+0x100025CC8	0x00000008	[  9] pointer-to-literal-cstring
+0x100025CD0	0x00000008	[  9] pointer-to-literal-cstring
+0x100025CD8	0x00000008	[  9] pointer-to-literal-cstring
+0x100025CE0	0x00000008	[  9] pointer-to-literal-cstring
+0x100025CE8	0x00000008	[  9] pointer-to-literal-cstring
+0x100025CF0	0x00000008	[  9] pointer-to-literal-cstring
+0x100025CF8	0x00000008	[  9] pointer-to-literal-cstring
+0x100025D00	0x00000008	[  9] pointer-to-literal-cstring
+0x100025D08	0x00000008	[  9] pointer-to-literal-cstring
+0x100025D10	0x00000008	[  9] pointer-to-literal-cstring
+0x100025D18	0x00000008	[  9] pointer-to-literal-cstring
+0x100025D20	0x00000008	[  9] pointer-to-literal-cstring
+0x100025D28	0x00000008	[  9] pointer-to-literal-cstring
+0x100025D30	0x00000008	[  9] pointer-to-literal-cstring
+0x100025D38	0x00000008	[ 10] pointer-to-literal-cstring
+0x100025D40	0x00000008	[ 10] pointer-to-literal-cstring
+0x100025D48	0x00000008	[ 10] pointer-to-literal-cstring
+0x100025D50	0x00000008	[ 10] pointer-to-literal-cstring
+0x100025D58	0x00000008	[ 10] pointer-to-literal-cstring
+0x100025D60	0x00000008	[ 11] pointer-to-literal-cstring
+0x100025D68	0x00000008	[ 11] pointer-to-literal-cstring
+0x100025D70	0x00000008	[ 11] pointer-to-literal-cstring
+0x100025D78	0x00000008	[ 11] pointer-to-literal-cstring
+0x100025D80	0x00000008	[ 11] pointer-to-literal-cstring
+0x100025D88	0x00000008	[ 11] pointer-to-literal-cstring
+0x100025D90	0x00000008	[ 11] pointer-to-literal-cstring
+0x100025D98	0x00000008	[ 11] pointer-to-literal-cstring
+0x100025DA0	0x00000008	[ 11] pointer-to-literal-cstring
+0x100025DA8	0x00000008	[ 11] pointer-to-literal-cstring
+0x100025DB0	0x00000008	[ 11] pointer-to-literal-cstring
+0x100025DB8	0x00000008	[ 13] pointer-to-literal-cstring
+0x100025DC0	0x00000008	[ 13] pointer-to-literal-cstring
+0x100025DC8	0x00000008	[ 14] pointer-to-literal-cstring
+0x100025DD0	0x00000008	[ 14] pointer-to-literal-cstring
+0x100025DD8	0x00000008	[ 14] pointer-to-literal-cstring
+0x100025DE0	0x00000008	[ 14] pointer-to-literal-cstring
+0x100025DE8	0x00000008	[ 14] pointer-to-literal-cstring
+0x100025DF0	0x00000008	[ 14] pointer-to-literal-cstring
+0x100025DF8	0x00000008	[ 14] pointer-to-literal-cstring
+0x100025E00	0x00000008	[ 14] pointer-to-literal-cstring
+0x100025E08	0x00000008	[ 14] pointer-to-literal-cstring
+0x100025E10	0x00000008	[ 15] pointer-to-literal-cstring
+0x100025E18	0x00000008	[ 15] pointer-to-literal-cstring
+0x100025E20	0x00000008	[ 15] pointer-to-literal-cstring
+0x100025E28	0x00000008	[ 15] pointer-to-literal-cstring
+0x100025E30	0x00000008	[ 15] pointer-to-literal-cstring
+0x100025E38	0x00000008	[ 15] pointer-to-literal-cstring
+0x100025E40	0x00000008	[ 15] pointer-to-literal-cstring
+0x100025E48	0x00000008	[ 15] pointer-to-literal-cstring
+0x100025E50	0x00000008	[ 15] pointer-to-literal-cstring
+0x100025E58	0x00000008	[ 16] pointer-to-literal-cstring
+0x100025E60	0x00000008	[ 16] pointer-to-literal-cstring
+0x100025E68	0x00000008	[ 16] pointer-to-literal-cstring
+0x100025E70	0x00000008	[ 16] pointer-to-literal-cstring
+0x100025E78	0x00000008	[ 17] pointer-to-literal-cstring
+0x100025E80	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025E88	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025E90	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025E98	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025EA0	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025EA8	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025EB0	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025EB8	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025EC0	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025EC8	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025ED0	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025ED8	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025EE0	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025EE8	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025EF0	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025EF8	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025F00	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025F08	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025F10	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025F18	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025F20	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025F28	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025F30	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025F38	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025F40	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025F48	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025F50	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025F58	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025F60	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025F68	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025F70	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025F78	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025F80	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025F88	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025F90	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025F98	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025FA0	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025FA8	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025FB0	0x00000008	[ 18] pointer-to-literal-cstring
+0x100025FB8	0x00000008	[ 19] pointer-to-literal-cstring
+0x100025FC0	0x00000008	[ 19] pointer-to-literal-cstring
+0x100025FC8	0x00000008	[ 19] pointer-to-literal-cstring
+0x100025FD0	0x00000008	[ 19] pointer-to-literal-cstring
+0x100025FD8	0x00000008	[ 19] pointer-to-literal-cstring
+0x100025FE0	0x00000008	[ 19] pointer-to-literal-cstring
+0x100025FE8	0x00000008	[ 19] pointer-to-literal-cstring
+0x100025FF0	0x00000008	[ 19] pointer-to-literal-cstring
+0x100025FF8	0x00000008	[ 19] pointer-to-literal-cstring
+0x100026000	0x00000008	[ 20] pointer-to-literal-cstring
+0x100026008	0x00000008	[ 21] pointer-to-literal-cstring
+0x100026010	0x00000008	[ 22] pointer-to-literal-cstring
+0x100026018	0x00000008	[ 22] pointer-to-literal-cstring
+0x100026020	0x00000008	[ 23] pointer-to-literal-cstring
+0x100026028	0x00000008	[ 25] pointer-to-literal-cstring
+0x100026030	0x00000008	[ 25] pointer-to-literal-cstring
+0x100026038	0x00000008	[ 25] pointer-to-literal-cstring
+0x100026040	0x00000008	[ 26] pointer-to-literal-cstring
+0x100026048	0x00000008	[ 27] pointer-to-literal-cstring
+0x100026050	0x00000008	[ 27] pointer-to-literal-cstring
+0x100026058	0x00000008	[ 27] pointer-to-literal-cstring
+0x100026060	0x00000008	[ 27] pointer-to-literal-cstring
+0x100026068	0x00000008	[ 27] pointer-to-literal-cstring
+0x100026070	0x00000008	[ 27] pointer-to-literal-cstring
+0x100026078	0x00000008	[ 27] pointer-to-literal-cstring
+0x100026080	0x00000008	[ 27] pointer-to-literal-cstring
+0x100026088	0x00000008	[ 27] pointer-to-literal-cstring
+0x100026090	0x00000008	[ 27] pointer-to-literal-cstring
+0x100026098	0x00000008	[ 27] pointer-to-literal-cstring
+0x1000260A0	0x00000008	[ 27] pointer-to-literal-cstring
+0x1000260A8	0x00000008	[ 27] pointer-to-literal-cstring
+0x1000260B0	0x00000008	[ 27] pointer-to-literal-cstring
+0x1000260B8	0x00000008	[ 27] pointer-to-literal-cstring
+0x1000260C0	0x00000008	[ 27] pointer-to-literal-cstring
+0x1000260C8	0x00000008	[ 27] pointer-to-literal-cstring
+0x1000260D0	0x00000008	[ 27] pointer-to-literal-cstring
+0x1000260D8	0x00000008	[ 27] pointer-to-literal-cstring
+0x1000260E0	0x00000008	[ 27] pointer-to-literal-cstring
+0x1000260E8	0x00000008	[ 27] pointer-to-literal-cstring
+0x1000260F0	0x00000008	[ 27] pointer-to-literal-cstring
+0x1000260F8	0x00000008	[ 27] pointer-to-literal-cstring
+0x100026100	0x00000008	[ 27] pointer-to-literal-cstring
+0x100026108	0x00000008	[ 27] pointer-to-literal-cstring
+0x100026110	0x00000008	[ 27] pointer-to-literal-cstring
+0x100026118	0x00000008	[ 27] pointer-to-literal-cstring
+0x100026120	0x00000008	[ 27] pointer-to-literal-cstring
+0x100026128	0x00000008	[ 27] pointer-to-literal-cstring
+0x100026130	0x00000008	[ 27] pointer-to-literal-cstring
+0x100026138	0x00000008	[ 27] pointer-to-literal-cstring
+0x100026140	0x00000008	[ 27] pointer-to-literal-cstring
+0x100026148	0x00000008	[ 27] pointer-to-literal-cstring
+0x100026150	0x00000008	[ 27] pointer-to-literal-cstring
+0x100026158	0x00000008	[ 27] pointer-to-literal-cstring
+0x100026160	0x00000008	[ 27] pointer-to-literal-cstring
+0x100026168	0x00000008	[ 27] pointer-to-literal-cstring
+0x100026170	0x00000008	[ 27] pointer-to-literal-cstring
+0x100026178	0x00000008	[ 27] pointer-to-literal-cstring
+0x100026180	0x00000008	[ 27] pointer-to-literal-cstring
+0x100026188	0x00000008	[ 27] pointer-to-literal-cstring
+0x100026190	0x00000008	[ 27] pointer-to-literal-cstring
+0x100026198	0x00000008	[ 27] pointer-to-literal-cstring
+0x1000261A0	0x00000008	[ 27] pointer-to-literal-cstring
+0x1000261A8	0x00000008	[ 29] pointer-to-literal-cstring
+0x1000261B0	0x00000008	[ 29] pointer-to-literal-cstring
+0x1000261B8	0x00000008	[ 29] pointer-to-literal-cstring
+0x1000261C0	0x00000008	[ 29] pointer-to-literal-cstring
+0x1000261C8	0x00000008	[ 29] pointer-to-literal-cstring
+0x1000261D0	0x00000008	[ 29] pointer-to-literal-cstring
+0x1000261D8	0x00000008	[ 29] pointer-to-literal-cstring
+0x1000261E0	0x00000008	[ 29] pointer-to-literal-cstring
+0x1000261E8	0x00000008	[ 29] pointer-to-literal-cstring
+0x1000261F0	0x00000008	[ 29] pointer-to-literal-cstring
+0x1000261F8	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026200	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026208	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026210	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026218	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026220	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026228	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026230	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026238	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026240	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026248	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026250	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026258	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026260	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026268	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026270	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026278	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026280	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026288	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026290	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026298	0x00000008	[ 29] pointer-to-literal-cstring
+0x1000262A0	0x00000008	[ 29] pointer-to-literal-cstring
+0x1000262A8	0x00000008	[ 29] pointer-to-literal-cstring
+0x1000262B0	0x00000008	[ 29] pointer-to-literal-cstring
+0x1000262B8	0x00000008	[ 29] pointer-to-literal-cstring
+0x1000262C0	0x00000008	[ 29] pointer-to-literal-cstring
+0x1000262C8	0x00000008	[ 29] pointer-to-literal-cstring
+0x1000262D0	0x00000008	[ 29] pointer-to-literal-cstring
+0x1000262D8	0x00000008	[ 29] pointer-to-literal-cstring
+0x1000262E0	0x00000008	[ 29] pointer-to-literal-cstring
+0x1000262E8	0x00000008	[ 29] pointer-to-literal-cstring
+0x1000262F0	0x00000008	[ 29] pointer-to-literal-cstring
+0x1000262F8	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026300	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026308	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026310	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026318	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026320	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026328	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026330	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026338	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026340	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026348	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026350	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026358	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026360	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026368	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026370	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026378	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026380	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026388	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026390	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026398	0x00000008	[ 29] pointer-to-literal-cstring
+0x1000263A0	0x00000008	[ 29] pointer-to-literal-cstring
+0x1000263A8	0x00000008	[ 29] pointer-to-literal-cstring
+0x1000263B0	0x00000008	[ 29] pointer-to-literal-cstring
+0x1000263B8	0x00000008	[ 29] pointer-to-literal-cstring
+0x1000263C0	0x00000008	[ 29] pointer-to-literal-cstring
+0x1000263C8	0x00000008	[ 29] pointer-to-literal-cstring
+0x1000263D0	0x00000008	[ 29] pointer-to-literal-cstring
+0x1000263D8	0x00000008	[ 29] pointer-to-literal-cstring
+0x1000263E0	0x00000008	[ 29] pointer-to-literal-cstring
+0x1000263E8	0x00000008	[ 29] pointer-to-literal-cstring
+0x1000263F0	0x00000008	[ 29] pointer-to-literal-cstring
+0x1000263F8	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026400	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026408	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026410	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026418	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026420	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026428	0x00000008	[ 29] pointer-to-literal-cstring
+0x100026430	0x00000008	[  2] objc-class-ref
+0x100026438	0x00000008	[  5] objc-class-ref
+0x100026440	0x00000008	[  5] objc-class-ref
+0x100026448	0x00000008	[  9] objc-class-ref
+0x100026450	0x00000008	[  9] objc-class-ref
+0x100026458	0x00000008	[  9] objc-class-ref
+0x100026460	0x00000008	[  9] objc-class-ref
+0x100026468	0x00000008	[  9] objc-class-ref
+0x100026470	0x00000008	[  9] objc-class-ref
+0x100026478	0x00000008	[  9] objc-class-ref
+0x100026480	0x00000008	[ 10] objc-class-ref
+0x100026488	0x00000008	[ 11] objc-class-ref
+0x100026490	0x00000008	[ 11] objc-class-ref
+0x100026498	0x00000008	[ 11] objc-class-ref
+0x1000264A0	0x00000008	[ 14] objc-class-ref
+0x1000264A8	0x00000008	[ 15] objc-class-ref
+0x1000264B0	0x00000008	[ 15] objc-class-ref
+0x1000264B8	0x00000008	[ 16] objc-class-ref
+0x1000264C0	0x00000008	[ 18] objc-class-ref
+0x1000264C8	0x00000008	[ 18] objc-class-ref
+0x1000264D0	0x00000008	[ 18] objc-class-ref
+0x1000264D8	0x00000008	[ 18] objc-class-ref
+0x1000264E0	0x00000008	[ 18] objc-class-ref
+0x1000264E8	0x00000008	[ 18] objc-class-ref
+0x1000264F0	0x00000008	[ 18] objc-class-ref
+0x1000264F8	0x00000008	[ 18] objc-class-ref
+0x100026500	0x00000008	[ 18] objc-class-ref
+0x100026508	0x00000008	[ 18] objc-class-ref
+0x100026510	0x00000008	[ 18] objc-class-ref
+0x100026518	0x00000008	[ 18] objc-class-ref
+0x100026520	0x00000008	[ 18] objc-class-ref
+0x100026528	0x00000008	[ 19] objc-class-ref
+0x100026530	0x00000008	[ 19] objc-class-ref
+0x100026538	0x00000008	[ 20] objc-class-ref
+0x100026540	0x00000008	[ 23] objc-class-ref
+0x100026548	0x00000008	[ 23] objc-class-ref
+0x100026550	0x00000008	[ 23] objc-class-ref
+0x100026558	0x00000008	[ 23] objc-class-ref
+0x100026560	0x00000008	[ 23] objc-class-ref
+0x100026568	0x00000008	[ 23] objc-class-ref
+0x100026570	0x00000008	[ 23] objc-class-ref
+0x100026578	0x00000008	[ 23] objc-class-ref
+0x100026580	0x00000008	[ 25] objc-class-ref
+0x100026588	0x00000008	[ 26] objc-class-ref
+0x100026590	0x00000008	[ 27] objc-class-ref
+0x100026598	0x00000008	[ 29] objc-class-ref
+0x1000265A0	0x00000008	[ 29] objc-class-ref
+0x1000265A8	0x00000008	[ 29] objc-class-ref
+0x1000265B0	0x00000008	[ 29] objc-class-ref
+0x1000265B8	0x00000008	[ 29] objc-class-ref
+0x1000265C0	0x00000008	[ 29] objc-class-ref
+0x1000265C8	0x00000008	[ 29] objc-class-ref
+0x1000265D0	0x00000008	[ 29] objc-class-ref
+0x1000265D8	0x00000008	[ 29] objc-class-ref
+0x1000265E0	0x00000008	[ 29] objc-class-ref
+0x1000265E8	0x00000008	[ 29] objc-class-ref
+0x1000265F0	0x00000008	[  2] anon
+0x1000265F8	0x00000008	[  8] anon
+0x100026600	0x00000008	[  9] anon
+0x100026608	0x00000008	[ 11] anon
+0x100026610	0x00000008	[ 12] anon
+0x100026618	0x00000008	[ 14] anon
+0x100026620	0x00000008	[ 15] anon
+0x100026628	0x00000008	[ 16] anon
+0x100026630	0x00000008	[ 17] anon
+0x100026638	0x00000008	[ 18] anon
+0x100026640	0x00000018	[ 19] anon
+0x100026658	0x00000008	[ 20] anon
+0x100026660	0x00000008	[ 22] anon
+0x100026668	0x00000010	[ 29] anon
+0x100026678	0x00000008	[  2] _OBJC_IVAR_$_AttributeUsage._lock
+0x100026680	0x00000008	[  9] _OBJC_IVAR_$_CopyUsage._pCopyStr
+0x100026688	0x00000008	[  9] _OBJC_IVAR_$_CopyUsage._pStrongStr
+0x100026690	0x00000008	[  9] _OBJC_IVAR_$_CopyUsage._pCopyArray
+0x100026698	0x00000008	[  9] _OBJC_IVAR_$_CopyUsage._pStrongArray
+0x1000266A0	0x00000008	[  9] _OBJC_IVAR_$_CopyUsage._pCopyDict
+0x1000266A8	0x00000008	[  9] _OBJC_IVAR_$_CopyUsage._pStrongDict
+0x1000266B0	0x00000008	[  9] _OBJC_IVAR_$_TestObj._name
+0x1000266B8	0x00000008	[ 12] _OBJC_IVAR_$_ByteAlignmentTest._a
+0x1000266C0	0x00000008	[ 12] _OBJC_IVAR_$_ByteAlignmentTest._b
+0x1000266C8	0x00000008	[ 12] _OBJC_IVAR_$_ByteAlignmentTest._c
+0x1000266D0	0x00000008	[ 12] _OBJC_IVAR_$_ByteAlignmentTest._d
+0x1000266D8	0x00000008	[ 12] _OBJC_IVAR_$_ByteAlignmentTest._testString
+0x1000266E0	0x00000008	[ 12] _OBJC_IVAR_$_ByteAlignmentTest._testObject
+0x1000266E8	0x00000008	[ 18] _OBJC_IVAR_$_ViewController._dynamicFunctionTest
+0x1000266F0	0x00000008	[ 18] _OBJC_IVAR_$_ViewController._aTextFiled
+0x1000266F8	0x00000008	[ 20] _OBJC_IVAR_$_HCAssociatedObject._deallocBlock
+0x100026700	0x00000008	[ 20] _OBJC_IVAR_$_HCAssociatedObject._target
+0x100026708	0x00000008	[ 26] _OBJC_IVAR_$_AppDelegate._window
+0x100026710	0x00000008	[ 29] _OBJC_IVAR_$_AspectTracker._trackedClass
+0x100026718	0x00000008	[ 29] _OBJC_IVAR_$_AspectTracker._parentEntry
+0x100026720	0x00000008	[ 29] _OBJC_IVAR_$_AspectTracker._selectorNames
+0x100026728	0x00000008	[ 29] _OBJC_IVAR_$_AspectIdentifier._selector
+0x100026730	0x00000008	[ 29] _OBJC_IVAR_$_AspectIdentifier._block
+0x100026738	0x00000008	[ 29] _OBJC_IVAR_$_AspectIdentifier._blockSignature
+0x100026740	0x00000008	[ 29] _OBJC_IVAR_$_AspectIdentifier._object
+0x100026748	0x00000008	[ 29] _OBJC_IVAR_$_AspectIdentifier._options
+0x100026750	0x00000008	[ 29] _OBJC_IVAR_$_AspectsContainer._beforeAspects
+0x100026758	0x00000008	[ 29] _OBJC_IVAR_$_AspectsContainer._insteadAspects
+0x100026760	0x00000008	[ 29] _OBJC_IVAR_$_AspectsContainer._afterAspects
+0x100026768	0x00000008	[ 29] _OBJC_IVAR_$_AspectInfo._instance
+0x100026770	0x00000008	[ 29] _OBJC_IVAR_$_AspectInfo._originalInvocation
+0x100026778	0x00000008	[ 29] _OBJC_IVAR_$_AspectInfo._arguments
+0x100026780	0x00000028	[  2] _OBJC_CLASS_$_AttributeUsage
+0x1000267A8	0x00000028	[  2] _OBJC_METACLASS_$_AttributeUsage
+0x1000267D0	0x00000028	[  3] _OBJC_METACLASS_$_TestUnsafeSwizzle
+0x1000267F8	0x00000028	[  3] _OBJC_CLASS_$_TestUnsafeSwizzle
+0x100026820	0x00000028	[  3] _OBJC_METACLASS_$_SubTestUnsafeSwizzle
+0x100026848	0x00000028	[  3] _OBJC_CLASS_$_SubTestUnsafeSwizzle
+0x100026870	0x00000028	[  4] _OBJC_METACLASS_$_DispatchOnceTest
+0x100026898	0x00000028	[  4] _OBJC_CLASS_$_DispatchOnceTest
+0x1000268C0	0x00000028	[  5] _OBJC_METACLASS_$_TestCategorySwizzle
+0x1000268E8	0x00000028	[  5] _OBJC_CLASS_$_TestCategorySwizzle
+0x100026910	0x00000028	[  6] _OBJC_METACLASS_$_MethodSwizzleUtil
+0x100026938	0x00000028	[  6] _OBJC_CLASS_$_MethodSwizzleUtil
+0x100026960	0x00000028	[  8] _OBJC_CLASS_$_TestCode
+0x100026988	0x00000028	[  8] _OBJC_METACLASS_$_TestCode
+0x1000269B0	0x00000028	[  9] _OBJC_CLASS_$_CopyUsage
+0x1000269D8	0x00000028	[  9] _OBJC_CLASS_$_TestObj
+0x100026A00	0x00000028	[  9] _OBJC_METACLASS_$_CopyUsage
+0x100026A28	0x00000028	[  9] _OBJC_METACLASS_$_TestObj
+0x100026A50	0x00000028	[ 10] _OBJC_METACLASS_$_DispatchExamnationTest
+0x100026A78	0x00000028	[ 10] _OBJC_CLASS_$_DispatchExamnationTest
+0x100026AA0	0x00000028	[ 11] _OBJC_CLASS_$_TestTaggedPointer
+0x100026AC8	0x00000028	[ 11] _OBJC_METACLASS_$_TestTaggedPointer
+0x100026AF0	0x00000028	[ 12] _OBJC_CLASS_$_ByteAlignmentTest
+0x100026B18	0x00000028	[ 12] _OBJC_METACLASS_$_ByteAlignmentTest
+0x100026B40	0x00000028	[ 14] _OBJC_CLASS_$_DispatchBarrierTest
+0x100026B68	0x00000028	[ 14] _OBJC_METACLASS_$_DispatchBarrierTest
+0x100026B90	0x00000028	[ 15] _OBJC_CLASS_$_TestClassCluster
+0x100026BB8	0x00000028	[ 15] _OBJC_METACLASS_$_TestClassCluster
+0x100026BE0	0x00000028	[ 16] _OBJC_CLASS_$_DynamicCallFunctionTest
+0x100026C08	0x00000028	[ 16] _OBJC_METACLASS_$_DynamicCallFunctionTest
+0x100026C30	0x00000028	[ 17] _OBJC_CLASS_$_DispatchGroupLeaveTest
+0x100026C58	0x00000028	[ 17] _OBJC_METACLASS_$_DispatchGroupLeaveTest
+0x100026C80	0x00000028	[ 18] _OBJC_CLASS_$_ViewController
+0x100026CA8	0x00000028	[ 18] _OBJC_METACLASS_$_ViewController
+0x100026CD0	0x00000028	[ 19] _OBJC_METACLASS_$_TestSwizzleInInitialize
+0x100026CF8	0x00000028	[ 19] _OBJC_CLASS_$_TestSwizzleInInitialize
+0x100026D20	0x00000028	[ 19] _OBJC_METACLASS_$_TestSwizzleInInitializeA
+0x100026D48	0x00000028	[ 19] _OBJC_CLASS_$_TestSwizzleInInitializeA
+0x100026D70	0x00000028	[ 19] _OBJC_METACLASS_$_TestSwizzleInInitializeB
+0x100026D98	0x00000028	[ 19] _OBJC_CLASS_$_TestSwizzleInInitializeB
+0x100026DC0	0x00000028	[ 20] _OBJC_CLASS_$_HCAssociatedObject
+0x100026DE8	0x00000028	[ 20] _OBJC_METACLASS_$_HCAssociatedObject
+0x100026E10	0x00000028	[ 22] _OBJC_CLASS_$_TestCategoryOveride
+0x100026E38	0x00000028	[ 22] _OBJC_METACLASS_$_TestCategoryOveride
+0x100026E60	0x00000028	[ 24] _OBJC_METACLASS_$_TestSubClassSwizzle
+0x100026E88	0x00000028	[ 24] _OBJC_CLASS_$_TestSubClassSwizzle
+0x100026EB0	0x00000028	[ 24] _OBJC_METACLASS_$_TestASubClassSwizzle
+0x100026ED8	0x00000028	[ 24] _OBJC_CLASS_$_TestASubClassSwizzle
+0x100026F00	0x00000028	[ 24] _OBJC_METACLASS_$_TestBSubClassSwizzle
+0x100026F28	0x00000028	[ 24] _OBJC_CLASS_$_TestBSubClassSwizzle
+0x100026F50	0x00000028	[ 26] _OBJC_METACLASS_$_AppDelegate
+0x100026F78	0x00000028	[ 26] _OBJC_CLASS_$_AppDelegate
+0x100026FA0	0x00000028	[ 28] _OBJC_METACLASS_$_PodsDummy_Aspects
+0x100026FC8	0x00000028	[ 28] _OBJC_CLASS_$_PodsDummy_Aspects
+0x100026FF0	0x00000028	[ 29] _OBJC_CLASS_$_AspectTracker
+0x100027018	0x00000028	[ 29] _OBJC_METACLASS_$_AspectTracker
+0x100027040	0x00000028	[ 29] _OBJC_CLASS_$_AspectIdentifier
+0x100027068	0x00000028	[ 29] _OBJC_METACLASS_$_AspectIdentifier
+0x100027090	0x00000028	[ 29] _OBJC_METACLASS_$_AspectsContainer
+0x1000270B8	0x00000028	[ 29] _OBJC_CLASS_$_AspectsContainer
+0x1000270E0	0x00000028	[ 29] _OBJC_CLASS_$_AspectInfo
+0x100027108	0x00000028	[ 29] _OBJC_METACLASS_$_AspectInfo
+0x100027130	0x00000028	[ 30] _OBJC_METACLASS_$_PodsDummy_Pods_RuntimeLearning
+0x100027158	0x00000028	[ 30] _OBJC_CLASS_$_PodsDummy_Pods_RuntimeLearning
+0x100027180	0x00000060	[ 18] l_OBJC_PROTOCOL_$_NSObject
+0x1000271E0	0x00000060	[ 18] l_OBJC_PROTOCOL_$_UITextFieldDelegate
+0x100027240	0x00000060	[ 26] l_OBJC_PROTOCOL_$_UIApplicationDelegate
+0x1000272A0	0x00000060	[ 29] l_OBJC_PROTOCOL_$_AspectInfo
+0x100027300	0x00000008	[  4] _sharedInstance.callCount
+0x100027308	0x00000008	[  4] _sharedInstance.onceToken
+0x100027310	0x00000008	[  4] _sharedInstance._instance
+0x100027318	0x00000008	[  5] _load.onceToken
+0x100027320	0x00000008	[  5] _load.onceToken.12
+0x100027328	0x00000008	[  5] _load.onceToken.18
+0x100027330	0x00000008	[  7] _kInjectExcuteBlockKey
+0x100027338	0x00000008	[ 19] _initialize.onceToken
+0x100027340	0x00000008	[ 19] _initialize.onceToken.16
+0x100027348	0x00000008	[ 19] _initialize.onceToken.26
+0x100027350	0x00000008	[ 19] _initialize.onceToken.34
+0x100027358	0x00000008	[ 19] _initialize.onceToken.43
+0x100027360	0x00000001	[ 20] _kHCAssociatedObjectKey
+0x100027368	0x00000008	[ 21] _load.onceToken
+0x100027370	0x00000008	[ 25] _load.onceToken
+0x100027378	0x00000001	[ 27] _HC_INPUTED_TYPE
+0x100027379	0x00000001	[ 27] _HC_INPUTED_LIMIT_LENGTH
+0x10002737A	0x00000001	[ 27] _HC_INPUTED_MAX_VALUE
+0x100027380	0x00000008	[ 29] _aspect_performLocked.aspect_lock
+0x100027388	0x00000008	[ 29] _aspect_isSelectorAllowedAndTrack.disallowedSelectorList
+0x100027390	0x00000008	[ 29] _aspect_isSelectorAllowedAndTrack.pred
+0x100027398	0x00000008	[ 29] _aspect_getSwizzledClassesDict.swizzledClassesDict
+0x1000273A0	0x00000008	[ 29] _aspect_getSwizzledClassesDict.pred
+0x1000273A8	0x00000008	[ 29] __aspect_modifySwizzledClasses.swizzledClasses
+0x1000273B0	0x00000008	[ 29] __aspect_modifySwizzledClasses.pred
+
+# Dead Stripped Symbols:
+#        	Size    	File  Name
+<<dead>> 	0x00000018	[  2] CIE
+<<dead>> 	0x00000020	[  2] CIE
+<<dead>> 	0x00000003	[  3] literal string: %s
+<<dead>> 	0x00000020	[  3] CFString
+<<dead>> 	0x00000008	[  3] literal string: v16@0:8
+<<dead>> 	0x00000018	[  3] CIE
+<<dead>> 	0x00000005	[  4] literal string: init
+<<dead>> 	0x00000006	[  4] literal string: v8@?0
+<<dead>> 	0x00000008	[  4] literal string: @16@0:8
+<<dead>> 	0x00000018	[  4] CIE
+<<dead>> 	0x00000003	[  5] literal string: %s
+<<dead>> 	0x00000006	[  5] literal string: v8@?0
+<<dead>> 	0x00000020	[  5] CFString
+<<dead>> 	0x00000001	[  5] literal string: 
+<<dead>> 	0x00000006	[  5] literal string: class
+<<dead>> 	0x00000005	[  5] literal string: load
+<<dead>> 	0x00000008	[  5] literal string: v16@0:8
+<<dead>> 	0x00000018	[  5] CIE
+<<dead>> 	0x0000003B	[  6] literal string: swizzleInstanceMethodWithClass:originalSel:replacementSel:
+<<dead>> 	0x00000018	[  6] CIE
+<<dead>> 	0x00000008	[  7] literal string: v16@0:8
+<<dead>> 	0x00000018	[  7] CIE
+<<dead>> 	0x00000005	[  8] literal string: init
+<<dead>> 	0x00000008	[  8] literal string: @16@0:8
+<<dead>> 	0x00000008	[  8] literal string: v16@0:8
+<<dead>> 	0x00000018	[  8] CIE
+<<dead>> 	0x00000005	[  9] literal string: init
+<<dead>> 	0x00000006	[  9] literal string: alloc
+<<dead>> 	0x00000004	[  9] literal string: new
+<<dead>> 	0x0000000E	[  9] literal string: .cxx_destruct
+<<dead>> 	0x00000002	[  9] literal string: 
+<<dead>> 	0x00000008	[  9] literal string: @16@0:8
+<<dead>> 	0x00000008	[  9] literal string: v16@0:8
+<<dead>> 	0x0000000B	[  9] literal string: v24@0:8@16
+<<dead>> 	0x00000018	[  9] CIE
+<<dead>> 	0x00000005	[ 10] literal string: init
+<<dead>> 	0x00000006	[ 10] literal string: v8@?0
+<<dead>> 	0x00000008	[ 10] literal string: @16@0:8
+<<dead>> 	0x00000008	[ 10] literal string: v16@0:8
+<<dead>> 	0x00000018	[ 10] CIE
+<<dead>> 	0x00000020	[ 10] CIE
+<<dead>> 	0x00000005	[ 11] literal string: init
+<<dead>> 	0x00000005	[ 11] literal string: copy
+<<dead>> 	0x0000000B	[ 11] literal string: addObject:
+<<dead>> 	0x00000008	[ 11] literal string: @16@0:8
+<<dead>> 	0x00000008	[ 11] literal string: v16@0:8
+<<dead>> 	0x0000000B	[ 11] literal string: v24@0:8@16
+<<dead>> 	0x00000018	[ 11] CIE
+<<dead>> 	0x00000005	[ 12] literal string: init
+<<dead>> 	0x00000005	[ 12] literal string: test
+<<dead>> 	0x00000006	[ 12] literal string: class
+<<dead>> 	0x0000000E	[ 12] literal string: .cxx_destruct
+<<dead>> 	0x00000008	[ 12] literal string: @16@0:8
+<<dead>> 	0x00000008	[ 12] literal string: v16@0:8
+<<dead>> 	0x0000000B	[ 12] literal string: v24@0:8@16
+<<dead>> 	0x0000000C	[ 12] literal string: @"NSString"
+<<dead>> 	0x00000018	[ 12] CIE
+<<dead>> 	0x00000005	[ 13] literal string: load
+<<dead>> 	0x0000000B	[ 13] literal string: v24@0:8@16
+<<dead>> 	0x00000008	[ 13] literal string: @16@0:8
+<<dead>> 	0x00000008	[ 13] literal string: v16@0:8
+<<dead>> 	0x00000018	[ 13] CIE
+<<dead>> 	0x00000008	[ 14] 8-byte-literal
+<<dead>> 	0x00000008	[ 14] 8-byte-literal
+<<dead>> 	0x00000008	[ 14] 8-byte-literal
+<<dead>> 	0x00000008	[ 14] 8-byte-literal
+<<dead>> 	0x00000008	[ 14] 8-byte-literal
+<<dead>> 	0x00000008	[ 14] 8-byte-literal
+<<dead>> 	0x00000008	[ 14] 8-byte-literal
+<<dead>> 	0x00000008	[ 14] 8-byte-literal
+<<dead>> 	0x00000008	[ 14] 8-byte-literal
+<<dead>> 	0x00000008	[ 14] 8-byte-literal
+<<dead>> 	0x00000008	[ 14] 8-byte-literal
+<<dead>> 	0x00000008	[ 14] 8-byte-literal
+<<dead>> 	0x00000008	[ 14] 8-byte-literal
+<<dead>> 	0x00000005	[ 14] literal string: init
+<<dead>> 	0x00000006	[ 14] literal string: v8@?0
+<<dead>> 	0x00000008	[ 14] literal string: @16@0:8
+<<dead>> 	0x00000008	[ 14] literal string: v16@0:8
+<<dead>> 	0x00000018	[ 14] CIE
+<<dead>> 	0x00000005	[ 15] literal string: init
+<<dead>> 	0x00000005	[ 15] literal string: test
+<<dead>> 	0x00000012	[ 15] literal string: stringWithFormat:
+<<dead>> 	0x00000006	[ 15] literal string: class
+<<dead>> 	0x0000000C	[ 15] literal string: mutableCopy
+<<dead>> 	0x00000005	[ 15] literal string: date
+<<dead>> 	0x00000004	[ 15] literal string: new
+<<dead>> 	0x00000004	[ 15] literal string: 111
+<<dead>> 	0x00000020	[ 15] CFString
+<<dead>> 	0x00000008	[ 15] literal string: @16@0:8
+<<dead>> 	0x00000008	[ 15] literal string: v16@0:8
+<<dead>> 	0x00000018	[ 15] CIE
+<<dead>> 	0x00000008	[ 16] literal string: dealloc
+<<dead>> 	0x00000005	[ 16] literal string: init
+<<dead>> 	0x00000012	[ 16] literal string: stringWithFormat:
+<<dead>> 	0x00000009	[ 16] literal string: injected
+<<dead>> 	0x00000008	[ 16] literal string: v16@0:8
+<<dead>> 	0x00000008	[ 16] literal string: @16@0:8
+<<dead>> 	0x00000018	[ 16] CIE
+<<dead>> 	0x00000005	[ 17] literal string: init
+<<dead>> 	0x00000008	[ 17] literal string: @16@0:8
+<<dead>> 	0x00000008	[ 17] literal string: v16@0:8
+<<dead>> 	0x00000018	[ 17] CIE
+<<dead>> 	0x00000004	[ 18] literal string: new
+<<dead>> 	0x00000014	[ 18] literal string: testCategorySwizzle
+<<dead>> 	0x00000016	[ 18] literal string: setInjectExcuteBlock:
+<<dead>> 	0x00000010	[ 18] literal string: testClassMethod
+<<dead>> 	0x0000000B	[ 18] literal string: testMethod
+<<dead>> 	0x00000005	[ 18] literal string: load
+<<dead>> 	0x00000006	[ 18] literal string: class
+<<dead>> 	0x0000003B	[ 18] literal string: swizzleInstanceMethodWithClass:originalSel:replacementSel:
+<<dead>> 	0x00000017	[ 18] literal string: testCopyAndMutableCopy
+<<dead>> 	0x0000000B	[ 18] literal string: addObject:
+<<dead>> 	0x0000000F	[ 18] literal string: isKindOfClass:
+<<dead>> 	0x00000011	[ 18] literal string: isMemberOfClass:
+<<dead>> 	0x0000000E	[ 18] literal string: .cxx_destruct
+<<dead>> 	0x00000003	[ 18] literal string: %s
+<<dead>> 	0x00000006	[ 18] literal string: v8@?0
+<<dead>> 	0x00000003	[ 18] literal string: %@
+<<dead>> 	0x00000020	[ 18] CFString
+<<dead>> 	0x00000020	[ 18] CFString
+<<dead>> 	0x00000002	[ 18] literal string: 
+<<dead>> 	0x00000008	[ 18] literal string: @16@0:8
+<<dead>> 	0x0000000B	[ 18] literal string: @24@0:8:16
+<<dead>> 	0x0000000B	[ 18] literal string: v24@0:8@16
+<<dead>> 	0x00000008	[ 18] literal string: v16@0:8
+<<dead>> 	0x00000018	[ 18] CIE
+<<dead>> 	0x00000020	[ 18] CIE
+<<dead>> 	0x00000005	[ 19] literal string: self
+<<dead>> 	0x00000012	[ 19] literal string: testSwizzleMethod
+<<dead>> 	0x0000003B	[ 19] literal string: swizzleInstanceMethodWithClass:originalSel:replacementSel:
+<<dead>> 	0x00000006	[ 19] literal string: v8@?0
+<<dead>> 	0x00000003	[ 19] literal string: %s
+<<dead>> 	0x00000001	[ 19] literal string: 
+<<dead>> 	0x00000001	[ 19] literal string: 
+<<dead>> 	0x00000001	[ 19] literal string: 
+<<dead>> 	0x00000001	[ 19] literal string: 
+<<dead>> 	0x00000004	[ 19] literal string: Log
+<<dead>> 	0x00000001	[ 19] literal string: 
+<<dead>> 	0x00000020	[ 19] CFString
+<<dead>> 	0x00000008	[ 19] literal string: v16@0:8
+<<dead>> 	0x00000018	[ 19] CIE
+<<dead>> 	0x00000006	[ 20] literal string: alloc
+<<dead>> 	0x0000001E	[ 20] literal string: hc_doSthWhenDeallocWithBlock:
+<<dead>> 	0x00000005	[ 20] literal string: init
+<<dead>> 	0x00000008	[ 20] literal string: dealloc
+<<dead>> 	0x0000000E	[ 20] literal string: .cxx_destruct
+<<dead>> 	0x00000002	[ 20] literal string: 
+<<dead>> 	0x0000000C	[ 20] literal string: v24@0:8@?16
+<<dead>> 	0x00000008	[ 20] literal string: v16@0:8
+<<dead>> 	0x00000008	[ 20] literal string: @16@0:8
+<<dead>> 	0x0000000B	[ 20] literal string: v24@0:8@16
+<<dead>> 	0x00000009	[ 20] literal string: @?16@0:8
+<<dead>> 	0x00000018	[ 20] CIE
+<<dead>> 	0x00000010	[ 21] literal string: viewWillAppear:
+<<dead>> 	0x00000005	[ 21] literal string: load
+<<dead>> 	0x00000006	[ 21] literal string: v8@?0
+<<dead>> 	0x00000001	[ 21] literal string: 
+<<dead>> 	0x0000000B	[ 21] literal string: v20@0:8B16
+<<dead>> 	0x00000008	[ 21] literal string: v16@0:8
+<<dead>> 	0x00000018	[ 21] CIE
+<<dead>> 	0x00000005	[ 22] literal string: init
+<<dead>> 	0x00000006	[ 22] literal string: class
+<<dead>> 	0x0000000B	[ 22] literal string: initialize
+<<dead>> 	0x00000003	[ 22] literal string: %@
+<<dead>> 	0x00000020	[ 22] CFString
+<<dead>> 	0x00000008	[ 22] literal string: v16@0:8
+<<dead>> 	0x00000008	[ 22] literal string: @16@0:8
+<<dead>> 	0x00000018	[ 22] CIE
+<<dead>> 	0x0000000F	[ 23] literal string: sharedInstance
+<<dead>> 	0x00000004	[ 23] literal string: new
+<<dead>> 	0x00000006	[ 23] literal string: alloc
+<<dead>> 	0x00000005	[ 23] literal string: init
+<<dead>> 	0x00000006	[ 23] literal string: class
+<<dead>> 	0x00000006	[ 23] literal string: array
+<<dead>> 	0x0000000B	[ 23] literal string: addObject:
+<<dead>> 	0x00000006	[ 23] literal string: v8@?0
+<<dead>> 	0x00000020	[ 23] CIE
+<<dead>> 	0x00000018	[ 23] CIE
+<<dead>> 	0x00000003	[ 24] literal string: %s
+<<dead>> 	0x00000020	[ 24] CFString
+<<dead>> 	0x00000016	[ 24] literal string: s_testSubClassSwizzle
+<<dead>> 	0x00000014	[ 24] literal string: testSubClassSwizzle
+<<dead>> 	0x00000016	[ 24] literal string: a_testSubClassSwizzle
+<<dead>> 	0x00000016	[ 24] literal string: b_testSubClassSwizzle
+<<dead>> 	0x00000008	[ 24] literal string: v16@0:8
+<<dead>> 	0x00000018	[ 24] CIE
+<<dead>> 	0x0000000B	[ 25] literal string: initialize
+<<dead>> 	0x00000005	[ 25] literal string: load
+<<dead>> 	0x00000006	[ 25] literal string: v8@?0
+<<dead>> 	0x00000001	[ 25] literal string: 
+<<dead>> 	0x00000005	[ 25] literal string: Test
+<<dead>> 	0x00000008	[ 25] literal string: v16@0:8
+<<dead>> 	0x00000018	[ 25] CIE
+<<dead>> 	0x00000003	[ 26] literal string: %s
+<<dead>> 	0x00000005	[ 26] literal string: hash
+<<dead>> 	0x00000005	[ 26] literal string: TQ,R
+<<dead>> 	0x0000000B	[ 26] literal string: superclass
+<<dead>> 	0x00000005	[ 26] literal string: T#,R
+<<dead>> 	0x0000000C	[ 26] literal string: description
+<<dead>> 	0x00000011	[ 26] literal string: T@"NSString",R,C
+<<dead>> 	0x00000011	[ 26] literal string: debugDescription
+<<dead>> 	0x00000020	[ 26] CFString
+<<dead>> 	0x00000005	[ 26] literal string: load
+<<dead>> 	0x00000009	[ 26] literal string: isEqual:
+<<dead>> 	0x00000006	[ 26] literal string: class
+<<dead>> 	0x00000005	[ 26] literal string: self
+<<dead>> 	0x00000011	[ 26] literal string: performSelector:
+<<dead>> 	0x0000001C	[ 26] literal string: performSelector:withObject:
+<<dead>> 	0x00000027	[ 26] literal string: performSelector:withObject:withObject:
+<<dead>> 	0x00000008	[ 26] literal string: isProxy
+<<dead>> 	0x0000000F	[ 26] literal string: isKindOfClass:
+<<dead>> 	0x00000011	[ 26] literal string: isMemberOfClass:
+<<dead>> 	0x00000014	[ 26] literal string: conformsToProtocol:
+<<dead>> 	0x00000014	[ 26] literal string: respondsToSelector:
+<<dead>> 	0x00000007	[ 26] literal string: retain
+<<dead>> 	0x00000008	[ 26] literal string: release
+<<dead>> 	0x0000000C	[ 26] literal string: autorelease
+<<dead>> 	0x0000000C	[ 26] literal string: retainCount
+<<dead>> 	0x00000005	[ 26] literal string: zone
+<<dead>> 	0x00000005	[ 26] literal string: hash
+<<dead>> 	0x0000000B	[ 26] literal string: superclass
+<<dead>> 	0x0000000C	[ 26] literal string: description
+<<dead>> 	0x00000011	[ 26] literal string: debugDescription
+<<dead>> 	0x0000000E	[ 26] literal string: .cxx_destruct
+<<dead>> 	0x00000009	[ 26] literal string: NSObject
+<<dead>> 	0x00000002	[ 26] literal string: 
+<<dead>> 	0x0000000B	[ 26] literal string: B24@0:8@16
+<<dead>> 	0x00000008	[ 26] literal string: #16@0:8
+<<dead>> 	0x00000008	[ 26] literal string: @16@0:8
+<<dead>> 	0x0000000B	[ 26] literal string: @24@0:8:16
+<<dead>> 	0x0000000E	[ 26] literal string: @32@0:8:16@24
+<<dead>> 	0x00000011	[ 26] literal string: @40@0:8:16@24@32
+<<dead>> 	0x00000008	[ 26] literal string: B16@0:8
+<<dead>> 	0x0000000B	[ 26] literal string: B24@0:8#16
+<<dead>> 	0x0000000B	[ 26] literal string: B24@0:8:16
+<<dead>> 	0x00000009	[ 26] literal string: Vv16@0:8
+<<dead>> 	0x00000008	[ 26] literal string: Q16@0:8
+<<dead>> 	0x00000012	[ 26] literal string: ^{_NSZone=}16@0:8
+<<dead>> 	0x00000015	[ 26] literal string: B24@0:8@"Protocol"16
+<<dead>> 	0x00000012	[ 26] literal string: @"NSString"16@0:8
+<<dead>> 	0x0000000B	[ 26] literal string: v24@0:8@16
+<<dead>> 	0x0000000E	[ 26] literal string: v32@0:8@16q24
+<<dead>> 	0x00000008	[ 26] literal string: v16@0:8
+<<dead>> 	0x000001D0	[ 26] l_OBJC_$_PROTOCOL_INSTANCE_METHODS_NSObject
+<<dead>> 	0x00000020	[ 26] l_OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_NSObject
+<<dead>> 	0x00000048	[ 26] l_OBJC_$_PROP_LIST_NSObject
+<<dead>> 	0x000000A0	[ 26] l_OBJC_$_PROTOCOL_METHOD_TYPES_NSObject
+<<dead>> 	0x00000060	[ 26] l_OBJC_PROTOCOL_$_NSObject
+<<dead>> 	0x00000018	[ 26] CIE
+<<dead>> 	0x00000008	[ 27] 8-byte-literal
+<<dead>> 	0x00000010	[ 27] 16-byte-literal
+<<dead>> 	0x00000010	[ 27] 16-byte-literal
+<<dead>> 	0x00000011	[ 27] literal string: isEqualToString:
+<<dead>> 	0x0000000C	[ 27] literal string: mutableCopy
+<<dead>> 	0x00000006	[ 27] literal string: array
+<<dead>> 	0x0000000B	[ 27] literal string: addObject:
+<<dead>> 	0x00000012	[ 27] literal string: stringWithString:
+<<dead>> 	0x00000036	[ 27] literal string: hcui_shouldChangeCharactersInRange:replacementString:
+<<dead>> 	0x00000013	[ 27] literal string: setHcui_inputType:
+<<dead>> 	0x00000015	[ 27] literal string: setHcui_limitLegnth:
+<<dead>> 	0x00000002	[ 27] literal string: 0
+<<dead>> 	0x00000006	[ 27] literal string: v8@?0
+<<dead>> 	0x00000020	[ 27] CFString
+<<dead>> 	0x00000008	[ 27] literal string: v16@0:8
+<<dead>> 	0x0000000B	[ 27] literal string: B24@0:8@16
+<<dead>> 	0x0000000E	[ 27] literal string: B32@0:8@16@24
+<<dead>> 	0x00000018	[ 27] CIE
+<<dead>> 	0x00000002	[ 29] literal string: c
+<<dead>> 	0x00000002	[ 29] literal string: d
+<<dead>> 	0x00000009	[ 29] literal string: selector
+<<dead>> 	0x00000006	[ 29] literal string: block
+<<dead>> 	0x00000005	[ 29] literal string: hash
+<<dead>> 	0x00000005	[ 29] literal string: TQ,R
+<<dead>> 	0x0000000B	[ 29] literal string: superclass
+<<dead>> 	0x00000005	[ 29] literal string: T#,R
+<<dead>> 	0x0000000C	[ 29] literal string: description
+<<dead>> 	0x00000011	[ 29] literal string: T@"NSString",R,C
+<<dead>> 	0x00000011	[ 29] literal string: debugDescription
+<<dead>> 	0x00000009	[ 29] literal string: instance
+<<dead>> 	0x00000006	[ 29] literal string: v8@?0
+<<dead>> 	0x0000000F	[ 29] literal string: blockSignature
+<<dead>> 	0x00000007	[ 29] literal string: object
+<<dead>> 	0x00000001	[ 29] literal string: 
+<<dead>> 	0x00000020	[ 29] CFString
+<<dead>> 	0x00000008	[ 29] _AspectsSubclassSuffix
+<<dead>> 	0x00000008	[ 29] _AspectsMessagePrefix
+<<dead>> 	0x00000008	[ 29] _AspectsForwardInvocationSelectorName
+<<dead>> 	0x00000009	[ 29] literal string: NSObject
+<<dead>> 	0x00000003	[ 29] literal string: 0`
+<<dead>> 	0x00000005	[ 29] literal string: init
+<<dead>> 	0x00000004	[ 29] literal string: new
+<<dead>> 	0x00000006	[ 29] literal string: class
+<<dead>> 	0x00000012	[ 29] literal string: stringWithFormat:
+<<dead>> 	0x0000000C	[ 29] literal string: description
+<<dead>> 	0x0000000E	[ 29] literal string: .cxx_destruct
+<<dead>> 	0x0000000F	[ 29] literal string: numberWithInt:
+<<dead>> 	0x00000010	[ 29] literal string: numberWithLong:
+<<dead>> 	0x00000012	[ 29] literal string: numberWithDouble:
+<<dead>> 	0x00000010	[ 29] literal string: numberWithBool:
+<<dead>> 	0x00000005	[ 29] literal string: copy
+<<dead>> 	0x00000006	[ 29] literal string: array
+<<dead>> 	0x0000000B	[ 29] literal string: addObject:
+<<dead>> 	0x00000006	[ 29] literal string: count
+<<dead>> 	0x00000009	[ 29] literal string: isEqual:
+<<dead>> 	0x00000005	[ 29] literal string: self
+<<dead>> 	0x00000011	[ 29] literal string: performSelector:
+<<dead>> 	0x0000001C	[ 29] literal string: performSelector:withObject:
+<<dead>> 	0x00000027	[ 29] literal string: performSelector:withObject:withObject:
+<<dead>> 	0x00000008	[ 29] literal string: isProxy
+<<dead>> 	0x0000000F	[ 29] literal string: isKindOfClass:
+<<dead>> 	0x00000011	[ 29] literal string: isMemberOfClass:
+<<dead>> 	0x00000014	[ 29] literal string: conformsToProtocol:
+<<dead>> 	0x00000014	[ 29] literal string: respondsToSelector:
+<<dead>> 	0x00000007	[ 29] literal string: retain
+<<dead>> 	0x00000008	[ 29] literal string: release
+<<dead>> 	0x0000000C	[ 29] literal string: autorelease
+<<dead>> 	0x0000000C	[ 29] literal string: retainCount
+<<dead>> 	0x00000005	[ 29] literal string: zone
+<<dead>> 	0x00000005	[ 29] literal string: hash
+<<dead>> 	0x0000000B	[ 29] literal string: superclass
+<<dead>> 	0x00000011	[ 29] literal string: debugDescription
+<<dead>> 	0x00000011	[ 29] literal string: isEqualToString:
+<<dead>> 	0x00000006	[ 29] literal string: alloc
+<<dead>> 	0x00000007	[ 29] literal string: target
+<<dead>> 	0x00000031	[ 29] literal string: stringByReplacingOccurrencesOfString:withString:
+<<dead>> 	0x00000008	[ 29] literal string: @16@0:8
+<<dead>> 	0x00000008	[ 29] literal string: v16@0:8
+<<dead>> 	0x00000008	[ 29] literal string: #16@0:8
+<<dead>> 	0x0000000B	[ 29] literal string: v24@0:8@16
+<<dead>> 	0x0000000B	[ 29] literal string: B24@0:8@16
+<<dead>> 	0x00000008	[ 29] literal string: B16@0:8
+<<dead>> 	0x00000008	[ 29] literal string: Q16@0:8
+<<dead>> 	0x0000000B	[ 29] literal string: @"NSArray"
+<<dead>> 	0x0000000B	[ 29] literal string: @24@0:8:16
+<<dead>> 	0x0000000E	[ 29] literal string: @32@0:8:16@24
+<<dead>> 	0x00000011	[ 29] literal string: @40@0:8:16@24@32
+<<dead>> 	0x0000000B	[ 29] literal string: B24@0:8#16
+<<dead>> 	0x0000000B	[ 29] literal string: B24@0:8:16
+<<dead>> 	0x00000009	[ 29] literal string: Vv16@0:8
+<<dead>> 	0x00000012	[ 29] literal string: ^{_NSZone=}16@0:8
+<<dead>> 	0x00000015	[ 29] literal string: B24@0:8@"Protocol"16
+<<dead>> 	0x00000012	[ 29] literal string: @"NSString"16@0:8
+<<dead>> 	0x000001D0	[ 29] l_OBJC_$_PROTOCOL_INSTANCE_METHODS_NSObject
+<<dead>> 	0x00000020	[ 29] l_OBJC_$_PROTOCOL_INSTANCE_METHODS_OPT_NSObject
+<<dead>> 	0x00000048	[ 29] l_OBJC_$_PROP_LIST_NSObject
+<<dead>> 	0x000000A0	[ 29] l_OBJC_$_PROTOCOL_METHOD_TYPES_NSObject
+<<dead>> 	0x00000060	[ 29] l_OBJC_PROTOCOL_$_NSObject
+<<dead>> 	0x00000018	[ 29] CIE
+<<dead>> 	0x00000020	[ 29] CIE

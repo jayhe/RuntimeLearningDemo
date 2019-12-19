@@ -67,9 +67,9 @@ static inline size_t word_align(size_t x) {
     
     __unused size_t alignedSize = word_align(9);
     /*
-     @property (nonatomic, assign) int a;
-     @property (nonatomic, assign) char b;
-     @property (nonatomic, assign) short c;
+     @property (nonatomic, assign) int a; // int 大小是4
+     @property (nonatomic, assign) char b; // char 大小是1
+     @property (nonatomic, assign) short c; // short 大小是2
      @property (nonatomic, assign) short d;
      @property (nonatomic, copy) NSString *testString; // 指针8字节
      @property (nonatomic, strong) ByteAlignmentTest *testObject; // 指针8字节
@@ -81,9 +81,10 @@ static inline size_t word_align(size_t x) {
     NSLog(@"sizeOf self = %ld", sizeof(self)); // 8
     NSLog(@"class_getInstanceSize self = %ld", class_getInstanceSize(self.class)); // 40 [对象本身8 + 4 + 1 + 2 + 2 + 8 + 8 再对齐]
     NSLog(@"malloc_size self = %ld", malloc_size((__bridge const void *)(self))); // 48
-    // 1. 没有定义任何属性的时候，sizeof(self)、class_getInstanceSize(self.class)是8 malloc_size是16
+    // 1. 没有定义任何属性的时候，sizeof(self)、class_getInstanceSize(self.class)是8 malloc_size是16 [isa的大小是8 内部创建的时候判断小于16则会返回16]
     // 2. OC对象的指针 size是8字节
     // 3. 64bit字节按照8来对齐
+    // 4. malloc的大小对于分配的空间小于256的时候内部是nano_malloc，字节对齐的规则是16的倍数
 }
 
 /*

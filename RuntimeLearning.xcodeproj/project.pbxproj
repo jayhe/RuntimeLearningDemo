@@ -754,6 +754,7 @@
 				"GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS[arch=*]" = "CATCH_CRASH=0";
 				INFOPLIST_FILE = RuntimeLearning/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_GENERATE_MAP_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -763,9 +764,16 @@
 					"$(PROJECT_DIR)/RuntimeLearning/Dynamic",
 				);
 				ONLY_ACTIVE_ARCH = YES;
+				ORDER_FILE = "${SRCROOT}/RuntimeLearning.order";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Aspects\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = hc.RuntimeLearning;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				WARNING_LDFLAGS = "-order_file_statistics";
 			};
 			name = Debug;
 		};
@@ -779,6 +787,7 @@
 				"GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS[arch=*]" = "CATCH_CRASH=1";
 				INFOPLIST_FILE = RuntimeLearning/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_GENERATE_MAP_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -788,9 +797,16 @@
 					"$(PROJECT_DIR)/RuntimeLearning/Dynamic",
 				);
 				ONLY_ACTIVE_ARCH = NO;
+				ORDER_FILE = "${SRCROOT}/RuntimeLearning.order";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"Aspects\"",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = hc.RuntimeLearning;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
+				WARNING_LDFLAGS = "-order_file_statistics";
 			};
 			name = Release;
 		};
