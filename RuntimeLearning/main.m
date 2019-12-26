@@ -18,6 +18,10 @@
 #import "TestCode.h"
 #import "ByteAlignmentTest.h"
 #import "DispatchExamnationTest.h"
+#import "TestMapTable.h"
+#import "calculate.h"
+#import "TestStaticLib.h"
+#import "FishhookUsage.h"
 
 void testWaitUsage(void);
 void testLogicNot(NSInteger times);
@@ -28,6 +32,13 @@ void testBenchmark(void);
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
+        //int tmp = calculate_add(2, 5); // 动态库的方法调用 动态库需要dyld load_commonds加载动态库
+        // 0x109812513 <+24>: callq  0x10981ec4e               ; symbol stub for: calculate_add
+        //int tmp1 = static_calculate_add(2, 5);
+        // 0x109812522 <+39>: callq  0x10981ebe0               ; static_calculate_add at TestStaticLib.m:13
+        [FishhookUsage new];
+        return 0;
+        [TestMapTable new];
         testBenchmark();
         dynamicCallPrintfFunction();
         dynamicCallAddFunction();

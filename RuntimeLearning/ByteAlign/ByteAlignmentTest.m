@@ -85,6 +85,70 @@ static inline size_t word_align(size_t x) {
     // 2. OC对象的指针 size是8字节
     // 3. 64bit字节按照8来对齐
     // 4. malloc的大小对于分配的空间小于256的时候内部是nano_malloc，字节对齐的规则是16的倍数
+    self.a = 0xFFFFFF;
+    /*
+     汇编指令：
+     sub x0, x1, x2 ===> 将x1和x2寄存器的值相减，存到x0中
+     add x0, x1, x2 ===> 将x1和x2寄存器的值相加，存到x0中
+     str x0, x1, x8 ===> 将寄存器x0的值保存到栈内存 x1+x8处
+     ldr x0, x1, x2 ===> 将寄存器x1和x2的值相加作为地址，取该内存地址的值放入x0中
+     */
+    /*
+     RuntimeLearning`-[ByteAlignmentTest setA:]:
+     0x1040a71e4 <+0>:  sub    sp, sp, #0x20             ; =0x20
+     0x1040a71e8 <+4>:  adrp   x8, 32
+     0x1040a71ec <+8>:  add    x8, x8, #0x628            ; =0x628
+     0x1040a71f0 <+12>: str    x0, [sp, #0x18]
+     0x1040a71f4 <+16>: str    x1, [sp, #0x10]
+     0x1040a71f8 <+20>: str    w2, [sp, #0xc]
+     0x1040a71fc <+24>: ldr    w2, [sp, #0xc]
+     0x1040a7200 <+28>: ldr    x0, [sp, #0x18]
+     0x1040a7204 <+32>: ldrsw  x8, [x8]
+     0x1040a7208 <+36>: add    x8, x0, x8
+     0x1040a720c <+40>: str    w2, [x8]
+     ->  0x1040a7210 <+44>: add    sp, sp, #0x20             ; =0x20
+     0x1040a7214 <+48>: ret
+     */
+    self.b = 'd';
+    self.c = 0xccc;
+    self.testString = @"eeeeee";
+    /*
+     setTestString下断点，查看汇编代码
+     bl跳转指令
+     
+     RuntimeLearning`-[ByteAlignmentTest setTestString:]:
+     0x1040a7380 <+0>:  sub    sp, sp, #0x30             ; =0x30 (48)
+     0x1040a7384 <+4>:  stp    x29, x30, [sp, #0x20]
+     0x1040a7388 <+8>:  add    x29, sp, #0x20            ; =0x20 (36)
+     0x1040a738c <+12>: adrp   x8, 32
+     0x1040a7390 <+16>: add    x8, x8, #0x638            ; =0x638
+     0x1040a7394 <+20>: stur   x0, [x29, #-0x8]
+     0x1040a7398 <+24>: str    x1, [sp, #0x10]
+     0x1040a739c <+28>: str    x2, [sp, #0x8]
+     ->  0x1040a73a0 <+32>: ldr    x1, [sp, #0x10]
+     0x1040a73a4 <+36>: ldur   x0, [x29, #-0x8]
+     0x1040a73a8 <+40>: ldrsw  x3, [x8]
+     0x1040a73ac <+44>: ldr    x8, [sp, #0x8]
+     0x1040a73b0 <+48>: mov    x2, x8
+     0x1040a73b4 <+52>: bl     0x1040ba0c0               ; symbol stub for: objc_setProperty_nonatomic_copy
+     0x1040a73b8 <+56>: ldp    x29, x30, [sp, #0x20]
+     0x1040a73bc <+60>: add    sp, sp, #0x30             ; =0x30
+     0x1040a73c0 <+64>: ret
+     
+     // x0 self
+     (lldb) register read x0
+     x0 = 0x00000002832a19e0
+     (lldb) p self
+     (ByteAlignmentTest *) $0 = 0x00000002832a19e0
+     // x1 cmd
+     (lldb) register read x1
+     x1 = 0x0000000100685169  "setTestString:"
+     // x2 第一个参数
+     (lldb) register read x2
+     x2 = 0x0000000100689b48  @"eeeeee"
+     (lldb) register read x8
+     x8 = 0x000000010068f638  RuntimeLearning`ByteAlignmentTest._testString
+     */
 }
 
 /*

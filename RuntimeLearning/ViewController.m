@@ -39,7 +39,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     NSLog(@"%s", __FUNCTION__);
-    _dynamicFunctionTest = [DynamicCallFunctionTest new];
     [self testUnsafeSwizzle];
     [self testCategorySwizzle];
     [self testSubClassSwizzleMethod];
@@ -91,8 +90,8 @@ int functionG(int x) {
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
     NSLog(@"%s", __FUNCTION__);
+//    [NSThread sleepForTimeInterval:2];
     functionF();
 }
 

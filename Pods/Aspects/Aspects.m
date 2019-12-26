@@ -19,7 +19,6 @@ typedef NS_OPTIONS(int, AspectBlockFlags) {
 	AspectBlockFlagsHasCopyDisposeHelpers = (1 << 25),
 	AspectBlockFlagsHasSignature          = (1 << 30)
 };
-// 这里定义了一个跟系统的block一样定义的结构体
 typedef struct _AspectBlock {
 	__unused Class isa;
 	AspectBlockFlags flags;
@@ -28,11 +27,11 @@ typedef struct _AspectBlock {
 	struct {
 		unsigned long int reserved;
 		unsigned long int size;
-        // requires AspectBlockFlagsHasCopyDisposeHelpers : 这里只有当有截获变量的时候才会有copy和dispose方法
+		// requires AspectBlockFlagsHasCopyDisposeHelpers
 		void (*copy)(void *dst, const void *src);
 		void (*dispose)(const void *);
 		// requires AspectBlockFlagsHasSignature
-		const char *signature; // 这个就是block的签名
+		const char *signature;
 		const char *layout;
 	} *descriptor;
 	// imported variables
@@ -167,16 +166,14 @@ static SEL aspect_aliasForSelector(SEL selector) {
 }
 
 static NSMethodSignature *aspect_blockMethodSignature(id block, NSError **error) {
-    AspectBlockRef layout = (__bridge void *)block; // 桥接转换，将系统的block转换成自定义的block结构体[这里只要定义的跟系统的block的底层结构一样就可以转换]
+    AspectBlockRef layout = (__bridge void *)block;
 	if (!(layout->flags & AspectBlockFlagsHasSignature)) {
         NSString *description = [NSString stringWithFormat:@"The block %@ doesn't contain a type signature.", block];
         AspectError(AspectErrorMissingBlockSignature, description);
         return nil;
     }
-    // 取到block的layout的descriptor，内部包含着签名的信息，通过指针的偏移来找到signature
 	void *desc = layout->descriptor;
-	desc += 2 * sizeof(unsigned long int); // 跳过reversed、size
-    // 判断是否有copy和dispose方法，有的话就指针偏移2个指针的大小
+	desc += 2 * sizeof(unsigned long int);
 	if (layout->flags & AspectBlockFlagsHasCopyDisposeHelpers) {
 		desc += 2 * sizeof(void *);
     }
@@ -185,7 +182,6 @@ static NSMethodSignature *aspect_blockMethodSignature(id block, NSError **error)
         AspectError(AspectErrorMissingBlockSignature, description);
         return nil;
     }
-    // 这里就是block的签名了
 	const char *signature = (*(const char **)desc);
 	return [NSMethodSignature signatureWithObjCTypes:signature];
 }

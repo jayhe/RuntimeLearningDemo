@@ -27,6 +27,12 @@
 		102E8648230A416900614371 /* TestTaggedPointer.m in Sources */ = {isa = PBXBuildFile; fileRef = 102E8647230A416900614371 /* TestTaggedPointer.m */; };
 		104BF8BD22771E9D000C464E /* DynamicCallFunctionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 104BF8BC22771E9D000C464E /* DynamicCallFunctionTest.m */; };
 		104BF8D922772F74000C464E /* calculate.c in Sources */ = {isa = PBXBuildFile; fileRef = 104BF8C622772333000C464E /* calculate.c */; };
+		1072564423B30DBD00BC3A00 /* TestMapTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1072564323B30DBD00BC3A00 /* TestMapTable.m */; };
+		1086B36A23B491DC0002F990 /* libadd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 104BF8D022772F55000C464E /* libadd.a */; };
+		1086B37323B4930B0002F990 /* TestStaticLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 1086B37223B4930B0002F990 /* TestStaticLib.m */; };
+		1086B37423B4930B0002F990 /* TestStaticLib.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1086B37123B4930B0002F990 /* TestStaticLib.h */; };
+		1086B37A23B493550002F990 /* libTestStaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1086B36F23B4930B0002F990 /* libTestStaticLib.a */; };
+		1086B37E23B4AE910002F990 /* FishhookUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1086B37D23B4AE910002F990 /* FishhookUsage.m */; };
 		10AC43E7228A563D00F8F435 /* TestSwizzleInInitialize.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AC43E6228A563D00F8F435 /* TestSwizzleInInitialize.m */; };
 		10BF41E8227FE671009F291E /* DispatchOnceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BF41E7227FE671009F291E /* DispatchOnceTest.m */; };
 		10BF41EB228012A7009F291E /* DispatchBarrierTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BF41EA228012A7009F291E /* DispatchBarrierTest.m */; };
@@ -50,6 +56,20 @@
 			remoteGlobalIDString = 10128700221D3B0700ED6CDE;
 			remoteInfo = RuntimeLearning;
 		};
+		1086B36823B491260002F990 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 101286F9221D3B0700ED6CDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 104BF8CF22772F55000C464E;
+			remoteInfo = add;
+		};
+		1086B37823B4934C0002F990 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 101286F9221D3B0700ED6CDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1086B36E23B4930B0002F990;
+			remoteInfo = TestStaticLib;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -59,6 +79,16 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1086B36D23B4930B0002F990 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				1086B37423B4930B0002F990 /* TestStaticLib.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +133,13 @@
 		104BF8C522772333000C464E /* calculate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = calculate.h; sourceTree = "<group>"; };
 		104BF8C622772333000C464E /* calculate.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = calculate.c; sourceTree = "<group>"; };
 		104BF8D022772F55000C464E /* libadd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libadd.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1072564223B30DBD00BC3A00 /* TestMapTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestMapTable.h; sourceTree = "<group>"; };
+		1072564323B30DBD00BC3A00 /* TestMapTable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMapTable.m; sourceTree = "<group>"; };
+		1086B36F23B4930B0002F990 /* libTestStaticLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTestStaticLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		1086B37123B4930B0002F990 /* TestStaticLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestStaticLib.h; sourceTree = "<group>"; };
+		1086B37223B4930B0002F990 /* TestStaticLib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestStaticLib.m; sourceTree = "<group>"; };
+		1086B37C23B4AE910002F990 /* FishhookUsage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FishhookUsage.h; sourceTree = "<group>"; };
+		1086B37D23B4AE910002F990 /* FishhookUsage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FishhookUsage.m; sourceTree = "<group>"; };
 		10AC43E5228A563D00F8F435 /* TestSwizzleInInitialize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestSwizzleInInitialize.h; sourceTree = "<group>"; };
 		10AC43E6228A563D00F8F435 /* TestSwizzleInInitialize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestSwizzleInInitialize.m; sourceTree = "<group>"; };
 		10BF41E6227FE671009F291E /* DispatchOnceTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DispatchOnceTest.h; sourceTree = "<group>"; };
@@ -114,6 +151,7 @@
 		10BF41F1228120C1009F291E /* DispatchGroupLeaveTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DispatchGroupLeaveTest.m; sourceTree = "<group>"; };
 		10C3235722781DCF0091B0ED /* NSObject+Injection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Injection.h"; sourceTree = "<group>"; };
 		10C3235822781DCF0091B0ED /* NSObject+Injection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Injection.m"; sourceTree = "<group>"; };
+		10CF127023AC6499001B5BA2 /* RuntimeLearning.profdata */ = {isa = PBXFileReference; lastKnownFileType = file; path = RuntimeLearning.profdata; sourceTree = "<group>"; };
 		10D160BE237119690051A7BA /* ByteAlignmentTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ByteAlignmentTest.h; sourceTree = "<group>"; };
 		10D160BF237119690051A7BA /* ByteAlignmentTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ByteAlignmentTest.m; sourceTree = "<group>"; };
 		10D160FE237456940051A7BA /* DispatchExamnationTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DispatchExamnationTest.h; sourceTree = "<group>"; };
@@ -129,10 +167,14 @@
 		10F2DB602397AEEA00BA107A /* TestClassCluster.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestClassCluster.h; sourceTree = "<group>"; };
 		10F2DB612397AEEA00BA107A /* TestClassCluster.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestClassCluster.m; sourceTree = "<group>"; };
 		3FE1FAC32D91B262A68A7687 /* libPods-RuntimeLearning.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RuntimeLearning.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		42B72C379E9A6D914DB316E2 /* Pods-RuntimeLearningTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuntimeLearningTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RuntimeLearningTests/Pods-RuntimeLearningTests.release.xcconfig"; sourceTree = "<group>"; };
 		4A7FAD87682FD1B94903588E /* libPods-RuntimeLearningTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RuntimeLearningTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		572909D309E5F0D3549F5040 /* Pods-RuntimeLearning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuntimeLearning.debug.xcconfig"; path = "Target Support Files/Pods-RuntimeLearning/Pods-RuntimeLearning.debug.xcconfig"; sourceTree = "<group>"; };
+		77B00A47F9E3508DD942BF78 /* Pods-RuntimeLearning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuntimeLearning.release.xcconfig"; path = "Pods/Target Support Files/Pods-RuntimeLearning/Pods-RuntimeLearning.release.xcconfig"; sourceTree = "<group>"; };
 		80706F469BC347C48B83AD30 /* Pods-RuntimeLearningTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuntimeLearningTests.debug.xcconfig"; path = "Target Support Files/Pods-RuntimeLearningTests/Pods-RuntimeLearningTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8CD6766B6DC6A64A87FED4AC /* Pods-RuntimeLearning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuntimeLearning.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RuntimeLearning/Pods-RuntimeLearning.debug.xcconfig"; sourceTree = "<group>"; };
 		A08115034046DAE31C80CBB7 /* Pods-RuntimeLearning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuntimeLearning.release.xcconfig"; path = "Target Support Files/Pods-RuntimeLearning/Pods-RuntimeLearning.release.xcconfig"; sourceTree = "<group>"; };
+		B806095785599F281F0CEA5E /* Pods-RuntimeLearningTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuntimeLearningTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RuntimeLearningTests/Pods-RuntimeLearningTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D2C81A8D13612D343D3F21F0 /* Pods-RuntimeLearningTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuntimeLearningTests.release.xcconfig"; path = "Target Support Files/Pods-RuntimeLearningTests/Pods-RuntimeLearningTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,6 +183,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1086B37A23B493550002F990 /* libTestStaticLib.a in Frameworks */,
+				1086B36A23B491DC0002F990 /* libadd.a in Frameworks */,
 				D7335419B0BF156CDF1C5B8E /* libPods-RuntimeLearning.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,6 +198,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		104BF8CD22772F55000C464E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1086B36C23B4930B0002F990 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -189,9 +240,11 @@
 			children = (
 				10128703221D3B0700ED6CDE /* RuntimeLearning */,
 				1012871C221D3B0A00ED6CDE /* RuntimeLearningTests */,
+				1086B37023B4930B0002F990 /* TestStaticLib */,
 				10128702221D3B0700ED6CDE /* Products */,
 				CFF0684E9602261EE5E7CF98 /* Frameworks */,
 				2DD0631C85D238BD92DA8F9A /* Pods */,
+				10CF126F23AC6499001B5BA2 /* OptimizationProfiles */,
 			);
 			sourceTree = "<group>";
 		};
@@ -201,6 +254,7 @@
 				10128701221D3B0700ED6CDE /* RuntimeLearning.app */,
 				10128719221D3B0A00ED6CDE /* RuntimeLearningTests.xctest */,
 				104BF8D022772F55000C464E /* libadd.a */,
+				1086B36F23B4930B0002F990 /* libTestStaticLib.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -219,6 +273,8 @@
 				10D160BD237119410051A7BA /* ByteAlign */,
 				102E8645230A414D00614371 /* Tagged Pointer */,
 				10F2DB5F2397AEC200BA107A /* ClassCluster */,
+				1072564123B30D9E00BC3A00 /* MapTable */,
+				1086B37B23B4AE6E0002F990 /* fishhook */,
 				10128704221D3B0700ED6CDE /* AppDelegate.h */,
 				10128705221D3B0700ED6CDE /* AppDelegate.m */,
 				10128707221D3B0700ED6CDE /* ViewController.h */,
@@ -286,6 +342,33 @@
 			path = Dynamic;
 			sourceTree = "<group>";
 		};
+		1072564123B30D9E00BC3A00 /* MapTable */ = {
+			isa = PBXGroup;
+			children = (
+				1072564223B30DBD00BC3A00 /* TestMapTable.h */,
+				1072564323B30DBD00BC3A00 /* TestMapTable.m */,
+			);
+			path = MapTable;
+			sourceTree = "<group>";
+		};
+		1086B37023B4930B0002F990 /* TestStaticLib */ = {
+			isa = PBXGroup;
+			children = (
+				1086B37123B4930B0002F990 /* TestStaticLib.h */,
+				1086B37223B4930B0002F990 /* TestStaticLib.m */,
+			);
+			path = TestStaticLib;
+			sourceTree = "<group>";
+		};
+		1086B37B23B4AE6E0002F990 /* fishhook */ = {
+			isa = PBXGroup;
+			children = (
+				1086B37C23B4AE910002F990 /* FishhookUsage.h */,
+				1086B37D23B4AE910002F990 /* FishhookUsage.m */,
+			);
+			path = fishhook;
+			sourceTree = "<group>";
+		};
 		10BF41E5227FE65F009F291E /* Dispatch */ = {
 			isa = PBXGroup;
 			children = (
@@ -299,6 +382,14 @@
 				10D160FF237456940051A7BA /* DispatchExamnationTest.m */,
 			);
 			path = Dispatch;
+			sourceTree = "<group>";
+		};
+		10CF126F23AC6499001B5BA2 /* OptimizationProfiles */ = {
+			isa = PBXGroup;
+			children = (
+				10CF127023AC6499001B5BA2 /* RuntimeLearning.profdata */,
+			);
+			path = OptimizationProfiles;
 			sourceTree = "<group>";
 		};
 		10D160BD237119410051A7BA /* ByteAlign */ = {
@@ -354,6 +445,10 @@
 				A08115034046DAE31C80CBB7 /* Pods-RuntimeLearning.release.xcconfig */,
 				80706F469BC347C48B83AD30 /* Pods-RuntimeLearningTests.debug.xcconfig */,
 				D2C81A8D13612D343D3F21F0 /* Pods-RuntimeLearningTests.release.xcconfig */,
+				8CD6766B6DC6A64A87FED4AC /* Pods-RuntimeLearning.debug.xcconfig */,
+				77B00A47F9E3508DD942BF78 /* Pods-RuntimeLearning.release.xcconfig */,
+				B806095785599F281F0CEA5E /* Pods-RuntimeLearningTests.debug.xcconfig */,
+				42B72C379E9A6D914DB316E2 /* Pods-RuntimeLearningTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -374,8 +469,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10128722221D3B0A00ED6CDE /* Build configuration list for PBXNativeTarget "RuntimeLearning" */;
 			buildPhases = (
-				10B16119223F4C5E00655040 /* Modify Project Conifg Shell */,
 				D7FE33F4AB2485269D37C3C3 /* [CP] Check Pods Manifest.lock */,
+				10B16119223F4C5E00655040 /* Modify Project Conifg Shell */,
 				101286FD221D3B0700ED6CDE /* Sources */,
 				101286FE221D3B0700ED6CDE /* Frameworks */,
 				101286FF221D3B0700ED6CDE /* Resources */,
@@ -383,6 +478,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				1086B37923B4934C0002F990 /* PBXTargetDependency */,
+				1086B36923B491260002F990 /* PBXTargetDependency */,
 			);
 			name = RuntimeLearning;
 			productName = RuntimeLearning;
@@ -425,12 +522,30 @@
 			productReference = 104BF8D022772F55000C464E /* libadd.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		1086B36E23B4930B0002F990 /* TestStaticLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1086B37523B4930B0002F990 /* Build configuration list for PBXNativeTarget "TestStaticLib" */;
+			buildPhases = (
+				1086B36B23B4930B0002F990 /* Sources */,
+				1086B36C23B4930B0002F990 /* Frameworks */,
+				1086B36D23B4930B0002F990 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TestStaticLib;
+			productName = TestStaticLib;
+			productReference = 1086B36F23B4930B0002F990 /* libTestStaticLib.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		101286F9221D3B0700ED6CDE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				DefaultBuildSystemTypeForWorkspace = Original;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = hechao;
 				TargetAttributes = {
@@ -442,6 +557,9 @@
 						TestTargetID = 10128700221D3B0700ED6CDE;
 					};
 					104BF8CF22772F55000C464E = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					1086B36E23B4930B0002F990 = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
@@ -462,6 +580,7 @@
 				10128700221D3B0700ED6CDE /* RuntimeLearning */,
 				10128718221D3B0A00ED6CDE /* RuntimeLearningTests */,
 				104BF8CF22772F55000C464E /* add */,
+				1086B36E23B4930B0002F990 /* TestStaticLib */,
 			);
 		};
 /* End PBXProject section */
@@ -562,6 +681,7 @@
 				10D530FF2227B5B7007AE594 /* TestCategorySwizzle.m in Sources */,
 				10128734221D3B7300ED6CDE /* MethodSwizzleUtil.m in Sources */,
 				10C3235922781DCF0091B0ED /* NSObject+Injection.m in Sources */,
+				1086B37E23B4AE910002F990 /* FishhookUsage.m in Sources */,
 				1026DD112333173D00738E85 /* TestCode.m in Sources */,
 				10113DE122CC8F7F00132833 /* CopyUsage.m in Sources */,
 				10D16100237456940051A7BA /* DispatchExamnationTest.m in Sources */,
@@ -576,6 +696,7 @@
 				10AC43E7228A563D00F8F435 /* TestSwizzleInInitialize.m in Sources */,
 				10D531082227CC86007AE594 /* NSObject+HCWillDealloc.m in Sources */,
 				1025D0EE225DAED1008E4CC3 /* UIViewController+Test.m in Sources */,
+				1072564423B30DBD00BC3A00 /* TestMapTable.m in Sources */,
 				1001DA0B222E521700E5EBEF /* TestCategoryOveride.m in Sources */,
 				10128714221D3B0900ED6CDE /* main.m in Sources */,
 				10D531002227B5B7007AE594 /* TestSubClassSwizzle.m in Sources */,
@@ -601,6 +722,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1086B36B23B4930B0002F990 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1086B37323B4930B0002F990 /* TestStaticLib.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -608,6 +737,16 @@
 			isa = PBXTargetDependency;
 			target = 10128700221D3B0700ED6CDE /* RuntimeLearning */;
 			targetProxy = 1012871A221D3B0A00ED6CDE /* PBXContainerItemProxy */;
+		};
+		1086B36923B491260002F990 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 104BF8CF22772F55000C464E /* add */;
+			targetProxy = 1086B36823B491260002F990 /* PBXContainerItemProxy */;
+		};
+		1086B37923B4934C0002F990 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1086B36E23B4930B0002F990 /* TestStaticLib */;
+			targetProxy = 1086B37823B4934C0002F990 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -682,7 +821,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -735,7 +874,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = NO;
@@ -749,8 +888,12 @@
 			baseConfigurationReference = 572909D309E5F0D3549F5040 /* Pods-RuntimeLearning.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_OPTIMIZATION_PROFILE_FILE = "$(SRCROOT)/OptimizationProfiles/$(PROJECT_NAME).profdata";
+				CLANG_USE_OPTIMIZATION_PROFILE = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2ZY2L7GYS;
+				GCC_OPTIMIZATION_LEVEL = s;
 				"GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS[arch=*]" = "CATCH_CRASH=0";
 				INFOPLIST_FILE = RuntimeLearning/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -773,7 +916,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = hc.RuntimeLearning;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
-				WARNING_LDFLAGS = "-order_file_statistics";
+				WARNING_LDFLAGS = "";
 			};
 			name = Debug;
 		};
@@ -782,8 +925,11 @@
 			baseConfigurationReference = A08115034046DAE31C80CBB7 /* Pods-RuntimeLearning.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_USE_OPTIMIZATION_PROFILE = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2ZY2L7GYS;
+				GCC_OPTIMIZATION_LEVEL = s;
 				"GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS[arch=*]" = "CATCH_CRASH=1";
 				INFOPLIST_FILE = RuntimeLearning/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
@@ -806,7 +952,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = hc.RuntimeLearning;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
-				WARNING_LDFLAGS = "-order_file_statistics";
+				WARNING_LDFLAGS = "";
 			};
 			name = Release;
 		};
@@ -876,6 +1022,30 @@
 			};
 			name = Release;
 		};
+		1086B37623B4930B0002F990 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2ZY2L7GYS;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1086B37723B4930B0002F990 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = L2ZY2L7GYS;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -911,6 +1081,15 @@
 			buildConfigurations = (
 				104BF8D722772F55000C464E /* Debug */,
 				104BF8D822772F55000C464E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1086B37523B4930B0002F990 /* Build configuration list for PBXNativeTarget "TestStaticLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1086B37623B4930B0002F990 /* Debug */,
+				1086B37723B4930B0002F990 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

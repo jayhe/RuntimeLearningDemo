@@ -12,5 +12,6 @@
 #include <stdio.h>
 
 int add(int a, int b);
+int calculate_add(int a, int b);
 
 #endif /* calculate_h */

@@ -45,7 +45,7 @@
         //[self performSelector:@selector(testLog) withObject:nil];
     });
     // 3在4之前 12乱序
-    // 567画乱序
+    // 567会乱序
     // 8不会打印：runloop默认没开启
 }
 

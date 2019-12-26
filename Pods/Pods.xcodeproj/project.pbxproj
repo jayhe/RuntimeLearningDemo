@@ -7,50 +7,70 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A5A7F508454E32D90BC87D5AEB7B089 /* Aspects-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 786587BD911A45F5A76A03E1D23AA280 /* Aspects-dummy.m */; };
-		0ECD4630DBACAFEC07B7E1D81DF20965 /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = 86429B9296478D798A288217DFFBC51A /* Aspects.m */; };
-		186DB86345A9B16C3447E00DD52B3987 /* Aspects.h in Headers */ = {isa = PBXBuildFile; fileRef = CC40F1C41FCB9B2BDCA16245047437A8 /* Aspects.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A6B1B36BF0D3A440BB7A1A418E7F8E33 /* Pods-RuntimeLearningTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C24C98C3D49FE80A1A41DE2BEF324D /* Pods-RuntimeLearningTests-dummy.m */; };
-		AFCC18F497ECFFB62C83A3DB851850F3 /* Pods-RuntimeLearning-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 46E7922D3F1E55DFF332D1CFC87464CA /* Pods-RuntimeLearning-dummy.m */; };
+		0A5A7F508454E32D90BC87D5AEB7B089 /* Aspects-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 96ABC1BFE10AAB967E4663B38560CE3A /* Aspects-dummy.m */; };
+		0ECD4630DBACAFEC07B7E1D81DF20965 /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = B01BF09B75883C125F6C76246F88056A /* Aspects.m */; };
+		186DB86345A9B16C3447E00DD52B3987 /* Aspects.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AF7566912A63242905A6C3AB81B34AC /* Aspects.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		4564FA13818FA9E6A5BC0C0C4949821D /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = FEACFFA4E5A5FE0CC19D1E0D621604C8 /* fishhook.c */; };
+		6160435810621072D0BD4BF11677ABDB /* fishhook-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7449D12E3B58AF5A012090A40CE38 /* fishhook-dummy.m */; };
+		A6B1B36BF0D3A440BB7A1A418E7F8E33 /* Pods-RuntimeLearningTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 574B1F31CA1DA4745B356A71A6EE0D2B /* Pods-RuntimeLearningTests-dummy.m */; };
+		B838F274AB2E1A3C9B284069569026AE /* fishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D8429BC0708582A774A031CB2B740CD /* fishhook.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C99A586F797530843B6B391BCE025D11 /* Pods-RuntimeLearning-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A7DED9098A41A782537EFB95F44E1FB /* Pods-RuntimeLearning-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9152319A8658E0FF729E037A6A977305 /* PBXContainerItemProxy */ = {
+		BD8DB658CCD85CF8AE9232FE2E1324A2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8CEC84F063A1BCD5510752F23CF9B51;
+			remoteInfo = "Pods-RuntimeLearning";
+		};
+		C47CF327A9477C1E215D5D7438B7FF20 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 085A935814BBB24C262EB89BCFFFC046;
+			remoteInfo = fishhook;
+		};
+		FB3ABD5D19BB7C2E0D9196C12B1EEA43 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C0BA4675ED5DE0C1D26ACAD6AF9D32ED;
 			remoteInfo = Aspects;
 		};
-		BD8DB658CCD85CF8AE9232FE2E1324A2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D351D06F119BB1C877577474AD95F7DF;
-			remoteInfo = "Pods-RuntimeLearning";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		12AA1E1E3EA1BF898D2ECB6DCE4E568C /* libPods-RuntimeLearning.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-RuntimeLearning.a"; path = "libPods-RuntimeLearning.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		18BB3966EDAB523004BB4167CF7C5E16 /* Pods-RuntimeLearningTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RuntimeLearningTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2D3A8E1FC20906ED9C0EE40E0B04D75D /* Pods-RuntimeLearning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RuntimeLearning.debug.xcconfig"; sourceTree = "<group>"; };
-		46E7922D3F1E55DFF332D1CFC87464CA /* Pods-RuntimeLearning-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RuntimeLearning-dummy.m"; sourceTree = "<group>"; };
-		556D9F92E95848F69321AEA643C77AA4 /* Pods-RuntimeLearning-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RuntimeLearning-acknowledgements.markdown"; sourceTree = "<group>"; };
-		5E62646C8A55E8C97336A8A0627E6A2A /* Pods-RuntimeLearning-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RuntimeLearning-acknowledgements.plist"; sourceTree = "<group>"; };
-		6032CB9293B5DA150D77C7B3F5F74217 /* libAspects.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAspects.a; path = libAspects.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		786587BD911A45F5A76A03E1D23AA280 /* Aspects-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Aspects-dummy.m"; sourceTree = "<group>"; };
-		86429B9296478D798A288217DFFBC51A /* Aspects.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
-		979CADE3197D595B4D57148CEA299EBE /* Aspects-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Aspects-prefix.pch"; sourceTree = "<group>"; };
-		A50CFF9B6EDC03C36C98A6689CE7D603 /* Pods-RuntimeLearning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RuntimeLearning.release.xcconfig"; sourceTree = "<group>"; };
-		A9574DEBB3F753E8385B645E0696AC16 /* Aspects.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Aspects.xcconfig; sourceTree = "<group>"; };
-		B059B9F687942C790532BCCEB209A9D7 /* Pods-RuntimeLearningTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RuntimeLearningTests.debug.xcconfig"; sourceTree = "<group>"; };
-		B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C1DE3D813F2F057D32E1C9E6FBB9D593 /* Pods-RuntimeLearningTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RuntimeLearningTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		C798B582DE139ECB0D8DAFB0F4F45450 /* Pods-RuntimeLearningTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RuntimeLearningTests.release.xcconfig"; sourceTree = "<group>"; };
-		CC40F1C41FCB9B2BDCA16245047437A8 /* Aspects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
-		CD2F230310C2782934706A0EFF459F4B /* libPods-RuntimeLearningTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-RuntimeLearningTests.a"; path = "libPods-RuntimeLearningTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8C24C98C3D49FE80A1A41DE2BEF324D /* Pods-RuntimeLearningTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RuntimeLearningTests-dummy.m"; sourceTree = "<group>"; };
+		033A7F3340FB32B9D8AB5A74DC2F3A4C /* Pods-RuntimeLearningTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RuntimeLearningTests-frameworks.sh"; sourceTree = "<group>"; };
+		0D8429BC0708582A774A031CB2B740CD /* fishhook.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
+		0FD7EFB1EEF82C3E0B49C785DA954C13 /* fishhook.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = fishhook.xcconfig; sourceTree = "<group>"; };
+		13BE9C54CE25C44E2780686CEAE2C693 /* Pods-RuntimeLearning-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RuntimeLearning-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1F9C31575C668FC1A9F8648064AE68CC /* Pods-RuntimeLearningTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RuntimeLearningTests-resources.sh"; sourceTree = "<group>"; };
+		227057A4A1717863C7B6E7C98576792E /* libPods-RuntimeLearningTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-RuntimeLearningTests.a"; path = "libPods-RuntimeLearningTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28D7449D12E3B58AF5A012090A40CE38 /* fishhook-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "fishhook-dummy.m"; sourceTree = "<group>"; };
+		2A7DED9098A41A782537EFB95F44E1FB /* Pods-RuntimeLearning-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RuntimeLearning-dummy.m"; sourceTree = "<group>"; };
+		32C7F0169F18DBC20DFEE7AB8D06D5BC /* libAspects.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAspects.a; path = libAspects.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4B4077B9B9CD4186DAA78930D2D0E2E7 /* Pods-RuntimeLearningTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RuntimeLearningTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		56447099E292801C63F3573FF147B648 /* Pods-RuntimeLearning-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RuntimeLearning-acknowledgements.plist"; sourceTree = "<group>"; };
+		574B1F31CA1DA4745B356A71A6EE0D2B /* Pods-RuntimeLearningTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RuntimeLearningTests-dummy.m"; sourceTree = "<group>"; };
+		5A5B063966CF3BBC6450AF6FE03F4D45 /* Pods-RuntimeLearning-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RuntimeLearning-resources.sh"; sourceTree = "<group>"; };
+		7183CAAEA95D7DA43B56E8F4CE99A777 /* Aspects.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Aspects.xcconfig; sourceTree = "<group>"; };
+		7AF7566912A63242905A6C3AB81B34AC /* Aspects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		96ABC1BFE10AAB967E4663B38560CE3A /* Aspects-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Aspects-dummy.m"; sourceTree = "<group>"; };
+		9F0C5238572C5CCC5D0E011D7CFCC3D5 /* Pods-RuntimeLearningTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RuntimeLearningTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A0B724A998D2C356057F9DC45490720D /* Pods-RuntimeLearning-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-RuntimeLearning-frameworks.sh"; sourceTree = "<group>"; };
+		B011A8C878AB44B36DF5E7CB5EC17918 /* Pods-RuntimeLearning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RuntimeLearning.release.xcconfig"; sourceTree = "<group>"; };
+		B01BF09B75883C125F6C76246F88056A /* Aspects.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
+		D916AF9F85B1CB1285DD89A330B072E6 /* libfishhook.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libfishhook.a; path = libfishhook.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAB19C201A7E7C6ED93AD04E17559E0E /* Pods-RuntimeLearningTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RuntimeLearningTests.release.xcconfig"; sourceTree = "<group>"; };
+		DFACA297F950E953B75DF271BECCDB26 /* libPods-RuntimeLearning.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-RuntimeLearning.a"; path = "libPods-RuntimeLearning.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7BF0B5FDC9094CC12C660E36B743D33 /* Pods-RuntimeLearning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RuntimeLearning.debug.xcconfig"; sourceTree = "<group>"; };
+		E98CDB306DA819FBBACC3853FCB62458 /* Aspects-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Aspects-prefix.pch"; sourceTree = "<group>"; };
+		ED903460D8E22EE5A38FC5ABF7CFF323 /* fishhook-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "fishhook-prefix.pch"; sourceTree = "<group>"; };
+		FC1A9383A43A3B2DBBAAC6EB39BC425A /* Pods-RuntimeLearningTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RuntimeLearningTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FEACFFA4E5A5FE0CC19D1E0D621604C8 /* fishhook.c */ = {isa = PBXFileReference; includeInIndex = 1; path = fishhook.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +81,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7CC587FE0796ABD174713AD89CC0A64D /* Frameworks */ = {
+		43FAAAD80989D6B2AFE7FDAC148AFB00 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A67204E3D5CF7FE3E7705ACD94747D76 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -85,87 +112,115 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1AA9519F00FE6BAF8D92C8E29EA1D74D /* Targets Support Files */ = {
+		101AF60B3AEEFDA867652BD76BC4FF40 /* Pods-RuntimeLearning */ = {
 			isa = PBXGroup;
 			children = (
-				1C35057142A07FFBC8CACA1F1AEDFCD7 /* Pods-RuntimeLearning */,
-				EF430C4EBF28D9138FFE5CD91E1FD987 /* Pods-RuntimeLearningTests */,
-			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		1C35057142A07FFBC8CACA1F1AEDFCD7 /* Pods-RuntimeLearning */ = {
-			isa = PBXGroup;
-			children = (
-				556D9F92E95848F69321AEA643C77AA4 /* Pods-RuntimeLearning-acknowledgements.markdown */,
-				5E62646C8A55E8C97336A8A0627E6A2A /* Pods-RuntimeLearning-acknowledgements.plist */,
-				46E7922D3F1E55DFF332D1CFC87464CA /* Pods-RuntimeLearning-dummy.m */,
-				2D3A8E1FC20906ED9C0EE40E0B04D75D /* Pods-RuntimeLearning.debug.xcconfig */,
-				A50CFF9B6EDC03C36C98A6689CE7D603 /* Pods-RuntimeLearning.release.xcconfig */,
+				13BE9C54CE25C44E2780686CEAE2C693 /* Pods-RuntimeLearning-acknowledgements.markdown */,
+				56447099E292801C63F3573FF147B648 /* Pods-RuntimeLearning-acknowledgements.plist */,
+				2A7DED9098A41A782537EFB95F44E1FB /* Pods-RuntimeLearning-dummy.m */,
+				A0B724A998D2C356057F9DC45490720D /* Pods-RuntimeLearning-frameworks.sh */,
+				5A5B063966CF3BBC6450AF6FE03F4D45 /* Pods-RuntimeLearning-resources.sh */,
+				E7BF0B5FDC9094CC12C660E36B743D33 /* Pods-RuntimeLearning.debug.xcconfig */,
+				B011A8C878AB44B36DF5E7CB5EC17918 /* Pods-RuntimeLearning.release.xcconfig */,
 			);
 			name = "Pods-RuntimeLearning";
 			path = "Target Support Files/Pods-RuntimeLearning";
 			sourceTree = "<group>";
 		};
-		7DB346D0F39D3F0E887471402A8071AB = {
+		3424A6E23F60F790476AC53E4B3848D9 /* Pods-RuntimeLearningTests */ = {
 			isa = PBXGroup;
 			children = (
-				B36AB396275697EEE1A5B13BA8A38FE3 /* Podfile */,
-				0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */,
-				F44F05A8F527D3FE55781A7396EFE39E /* Pods */,
-				84C2582B4D172E2D23800E94910C4A40 /* Products */,
-				1AA9519F00FE6BAF8D92C8E29EA1D74D /* Targets Support Files */,
-			);
-			sourceTree = "<group>";
-		};
-		84C2582B4D172E2D23800E94910C4A40 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6032CB9293B5DA150D77C7B3F5F74217 /* libAspects.a */,
-				12AA1E1E3EA1BF898D2ECB6DCE4E568C /* libPods-RuntimeLearning.a */,
-				CD2F230310C2782934706A0EFF459F4B /* libPods-RuntimeLearningTests.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		AB1C6504361C5C1B6E3D2AF3EB01ADC2 /* Aspects */ = {
-			isa = PBXGroup;
-			children = (
-				CC40F1C41FCB9B2BDCA16245047437A8 /* Aspects.h */,
-				86429B9296478D798A288217DFFBC51A /* Aspects.m */,
-				F58BDFA3535649F4E0376394DCD504B9 /* Support Files */,
-			);
-			name = Aspects;
-			path = Aspects;
-			sourceTree = "<group>";
-		};
-		EF430C4EBF28D9138FFE5CD91E1FD987 /* Pods-RuntimeLearningTests */ = {
-			isa = PBXGroup;
-			children = (
-				18BB3966EDAB523004BB4167CF7C5E16 /* Pods-RuntimeLearningTests-acknowledgements.markdown */,
-				C1DE3D813F2F057D32E1C9E6FBB9D593 /* Pods-RuntimeLearningTests-acknowledgements.plist */,
-				E8C24C98C3D49FE80A1A41DE2BEF324D /* Pods-RuntimeLearningTests-dummy.m */,
-				B059B9F687942C790532BCCEB209A9D7 /* Pods-RuntimeLearningTests.debug.xcconfig */,
-				C798B582DE139ECB0D8DAFB0F4F45450 /* Pods-RuntimeLearningTests.release.xcconfig */,
+				FC1A9383A43A3B2DBBAAC6EB39BC425A /* Pods-RuntimeLearningTests-acknowledgements.markdown */,
+				4B4077B9B9CD4186DAA78930D2D0E2E7 /* Pods-RuntimeLearningTests-acknowledgements.plist */,
+				574B1F31CA1DA4745B356A71A6EE0D2B /* Pods-RuntimeLearningTests-dummy.m */,
+				033A7F3340FB32B9D8AB5A74DC2F3A4C /* Pods-RuntimeLearningTests-frameworks.sh */,
+				1F9C31575C668FC1A9F8648064AE68CC /* Pods-RuntimeLearningTests-resources.sh */,
+				9F0C5238572C5CCC5D0E011D7CFCC3D5 /* Pods-RuntimeLearningTests.debug.xcconfig */,
+				DAB19C201A7E7C6ED93AD04E17559E0E /* Pods-RuntimeLearningTests.release.xcconfig */,
 			);
 			name = "Pods-RuntimeLearningTests";
 			path = "Target Support Files/Pods-RuntimeLearningTests";
 			sourceTree = "<group>";
 		};
-		F44F05A8F527D3FE55781A7396EFE39E /* Pods */ = {
+		370918CB03D1422958DBC2D0FF220FB4 /* fishhook */ = {
 			isa = PBXGroup;
 			children = (
-				AB1C6504361C5C1B6E3D2AF3EB01ADC2 /* Aspects */,
+				FEACFFA4E5A5FE0CC19D1E0D621604C8 /* fishhook.c */,
+				0D8429BC0708582A774A031CB2B740CD /* fishhook.h */,
+				3A029BD16FB37D3A648BAA88E6C7C151 /* Support Files */,
+			);
+			name = fishhook;
+			path = fishhook;
+			sourceTree = "<group>";
+		};
+		3A029BD16FB37D3A648BAA88E6C7C151 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0FD7EFB1EEF82C3E0B49C785DA954C13 /* fishhook.xcconfig */,
+				28D7449D12E3B58AF5A012090A40CE38 /* fishhook-dummy.m */,
+				ED903460D8E22EE5A38FC5ABF7CFF323 /* fishhook-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/fishhook";
+			sourceTree = "<group>";
+		};
+		4FCD432F067824E564410B4FEB801B25 /* Aspects */ = {
+			isa = PBXGroup;
+			children = (
+				7AF7566912A63242905A6C3AB81B34AC /* Aspects.h */,
+				B01BF09B75883C125F6C76246F88056A /* Aspects.m */,
+				D250BFC7889F9C5C111C137FA71E4573 /* Support Files */,
+			);
+			name = Aspects;
+			path = Aspects;
+			sourceTree = "<group>";
+		};
+		6934D832BFFEA75AA075FE15B2241745 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				32C7F0169F18DBC20DFEE7AB8D06D5BC /* libAspects.a */,
+				D916AF9F85B1CB1285DD89A330B072E6 /* libfishhook.a */,
+				DFACA297F950E953B75DF271BECCDB26 /* libPods-RuntimeLearning.a */,
+				227057A4A1717863C7B6E7C98576792E /* libPods-RuntimeLearningTests.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				0F8D2E47FE03D3B91B51069F7C273AF4 /* Frameworks */,
+				B5A6029E5866DC0B8C831849424B5914 /* Pods */,
+				6934D832BFFEA75AA075FE15B2241745 /* Products */,
+				BF015045BDE4CC517C2ABC0F0FB27F29 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		B5A6029E5866DC0B8C831849424B5914 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4FCD432F067824E564410B4FEB801B25 /* Aspects */,
+				370918CB03D1422958DBC2D0FF220FB4 /* fishhook */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		F58BDFA3535649F4E0376394DCD504B9 /* Support Files */ = {
+		BF015045BDE4CC517C2ABC0F0FB27F29 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A9574DEBB3F753E8385B645E0696AC16 /* Aspects.xcconfig */,
-				786587BD911A45F5A76A03E1D23AA280 /* Aspects-dummy.m */,
-				979CADE3197D595B4D57148CEA299EBE /* Aspects-prefix.pch */,
+				101AF60B3AEEFDA867652BD76BC4FF40 /* Pods-RuntimeLearning */,
+				3424A6E23F60F790476AC53E4B3848D9 /* Pods-RuntimeLearningTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		D250BFC7889F9C5C111C137FA71E4573 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7183CAAEA95D7DA43B56E8F4CE99A777 /* Aspects.xcconfig */,
+				96ABC1BFE10AAB967E4663B38560CE3A /* Aspects-dummy.m */,
+				E98CDB306DA819FBBACC3853FCB62458 /* Aspects-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Aspects";
@@ -174,11 +229,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		138B72AE4F9200368B335E99A69AC953 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B838F274AB2E1A3C9B284069569026AE /* fishhook.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6D52BAC9820D1E75B269CABF0CECDD47 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				186DB86345A9B16C3447E00DD52B3987 /* Aspects.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7552EFDB69D32633C8DDFA20AA92AE8C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,16 +259,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A419DEAF14CDD36F5C8A2965ACB3A288 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		085A935814BBB24C262EB89BCFFFC046 /* fishhook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4ADFC6FA689F4CE74BAA24E9D29637B /* Build configuration list for PBXNativeTarget "fishhook" */;
+			buildPhases = (
+				138B72AE4F9200368B335E99A69AC953 /* Headers */,
+				C887FB3F531AE6B645EE132CC9DE5106 /* Sources */,
+				A67204E3D5CF7FE3E7705ACD94747D76 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = fishhook;
+			productName = fishhook;
+			productReference = D916AF9F85B1CB1285DD89A330B072E6 /* libfishhook.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B8CEC84F063A1BCD5510752F23CF9B51 /* Pods-RuntimeLearning */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7FA2D0CD27B96245E7C643077D541542 /* Build configuration list for PBXNativeTarget "Pods-RuntimeLearning" */;
+			buildPhases = (
+				7552EFDB69D32633C8DDFA20AA92AE8C /* Headers */,
+				3C3B90D916948150CD7FCB3AB04D5EA9 /* Sources */,
+				43FAAAD80989D6B2AFE7FDAC148AFB00 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E396A54499340DADA81C06306EA6169F /* PBXTargetDependency */,
+				D12F8B1FFE1B2FAA2D03A32948BCB01C /* PBXTargetDependency */,
+			);
+			name = "Pods-RuntimeLearning";
+			productName = "Pods-RuntimeLearning";
+			productReference = DFACA297F950E953B75DF271BECCDB26 /* libPods-RuntimeLearning.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		C0BA4675ED5DE0C1D26ACAD6AF9D32ED /* Aspects */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A22BE112E291CFE5F3DA055FE44D64BB /* Build configuration list for PBXNativeTarget "Aspects" */;
@@ -213,25 +312,7 @@
 			);
 			name = Aspects;
 			productName = Aspects;
-			productReference = 6032CB9293B5DA150D77C7B3F5F74217 /* libAspects.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		D351D06F119BB1C877577474AD95F7DF /* Pods-RuntimeLearning */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3B6AA22606A4C94E2A13AAD21539DBF3 /* Build configuration list for PBXNativeTarget "Pods-RuntimeLearning" */;
-			buildPhases = (
-				A419DEAF14CDD36F5C8A2965ACB3A288 /* Headers */,
-				27DC698A1508772AE78850D3A7430057 /* Sources */,
-				7CC587FE0796ABD174713AD89CC0A64D /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				78FF9A01EA1ACD13F4E1B10E309F5933 /* PBXTargetDependency */,
-			);
-			name = "Pods-RuntimeLearning";
-			productName = "Pods-RuntimeLearning";
-			productReference = 12AA1E1E3EA1BF898D2ECB6DCE4E568C /* libPods-RuntimeLearning.a */;
+			productReference = 32C7F0169F18DBC20DFEE7AB8D06D5BC /* libAspects.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		FE64D5755C4E1774EE5A147B3BB30921 /* Pods-RuntimeLearningTests */ = {
@@ -249,7 +330,7 @@
 			);
 			name = "Pods-RuntimeLearningTests";
 			productName = "Pods-RuntimeLearningTests";
-			productReference = CD2F230310C2782934706A0EFF459F4B /* libPods-RuntimeLearningTests.a */;
+			productReference = 227057A4A1717863C7B6E7C98576792E /* libPods-RuntimeLearningTests.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -269,23 +350,24 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 84C2582B4D172E2D23800E94910C4A40 /* Products */;
+			productRefGroup = 6934D832BFFEA75AA075FE15B2241745 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				C0BA4675ED5DE0C1D26ACAD6AF9D32ED /* Aspects */,
-				D351D06F119BB1C877577474AD95F7DF /* Pods-RuntimeLearning */,
+				085A935814BBB24C262EB89BCFFFC046 /* fishhook */,
+				B8CEC84F063A1BCD5510752F23CF9B51 /* Pods-RuntimeLearning */,
 				FE64D5755C4E1774EE5A147B3BB30921 /* Pods-RuntimeLearningTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		27DC698A1508772AE78850D3A7430057 /* Sources */ = {
+		3C3B90D916948150CD7FCB3AB04D5EA9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AFCC18F497ECFFB62C83A3DB851850F3 /* Pods-RuntimeLearning-dummy.m in Sources */,
+				C99A586F797530843B6B391BCE025D11 /* Pods-RuntimeLearning-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +376,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6B1B36BF0D3A440BB7A1A418E7F8E33 /* Pods-RuntimeLearningTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C887FB3F531AE6B645EE132CC9DE5106 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6160435810621072D0BD4BF11677ABDB /* fishhook-dummy.m in Sources */,
+				4564FA13818FA9E6A5BC0C0C4949821D /* fishhook.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,24 +400,51 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		78FF9A01EA1ACD13F4E1B10E309F5933 /* PBXTargetDependency */ = {
+		D12F8B1FFE1B2FAA2D03A32948BCB01C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = fishhook;
+			target = 085A935814BBB24C262EB89BCFFFC046 /* fishhook */;
+			targetProxy = C47CF327A9477C1E215D5D7438B7FF20 /* PBXContainerItemProxy */;
+		};
+		E396A54499340DADA81C06306EA6169F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Aspects;
 			target = C0BA4675ED5DE0C1D26ACAD6AF9D32ED /* Aspects */;
-			targetProxy = 9152319A8658E0FF729E037A6A977305 /* PBXContainerItemProxy */;
+			targetProxy = FB3ABD5D19BB7C2E0D9196C12B1EEA43 /* PBXContainerItemProxy */;
 		};
 		F9299AFB09CFD7224F93EF86A197B648 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-RuntimeLearning";
-			target = D351D06F119BB1C877577474AD95F7DF /* Pods-RuntimeLearning */;
+			target = B8CEC84F063A1BCD5510752F23CF9B51 /* Pods-RuntimeLearning */;
 			targetProxy = BD8DB658CCD85CF8AE9232FE2E1324A2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		131E398530E596929D6F0D844B1B51BF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7BF0B5FDC9094CC12C660E36B743D33 /* Pods-RuntimeLearning.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		16BA2E6E8FF06603A96D950F3E5E5102 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A9574DEBB3F753E8385B645E0696AC16 /* Aspects.xcconfig */;
+			baseConfigurationReference = 7183CAAEA95D7DA43B56E8F4CE99A777 /* Aspects.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -348,9 +466,33 @@
 			};
 			name = Release;
 		};
+		45C951E98FBBE598E2B8473F1BF6F6B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FD7EFB1EEF82C3E0B49C785DA954C13 /* fishhook.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/fishhook/fishhook-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = fishhook;
+				PRODUCT_NAME = fishhook;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		46D9831F052FA124DA48E0E3ACEC6E5F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C798B582DE139ECB0D8DAFB0F4F45450 /* Pods-RuntimeLearningTests.release.xcconfig */;
+			baseConfigurationReference = DAB19C201A7E7C6ED93AD04E17559E0E /* Pods-RuntimeLearningTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -372,7 +514,7 @@
 		};
 		6487F40EE5844C574EBE04EB00C437AD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A9574DEBB3F753E8385B645E0696AC16 /* Aspects.xcconfig */;
+			baseConfigurationReference = 7183CAAEA95D7DA43B56E8F4CE99A777 /* Aspects.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -393,50 +535,7 @@
 			};
 			name = Debug;
 		};
-		991C6D2ECAAF1D542FFC43CCE0776922 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A50CFF9B6EDC03C36C98A6689CE7D603 /* Pods-RuntimeLearning.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		B2B630D2CD65D45D35EBEE6D0246246D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2D3A8E1FC20906ED9C0EE40E0B04D75D /* Pods-RuntimeLearning.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		BE01AF5D395AE305A54D518A9B774D2A /* Release */ = {
+		85B95B1234E227C814CCC2C7902D0916 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -468,6 +567,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -496,7 +597,7 @@
 			};
 			name = Release;
 		};
-		CFC8DEA7B5326676BA33093221AAE4F4 /* Debug */ = {
+		A73625DEBD810B78234FA1958C191C8C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -528,6 +629,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -560,9 +663,32 @@
 			};
 			name = Debug;
 		};
+		A77556045243AB2B932385DE0773F86B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FD7EFB1EEF82C3E0B49C785DA954C13 /* fishhook.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/fishhook/fishhook-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = fishhook;
+				PRODUCT_NAME = fishhook;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		D91B14836E7EBA53CE5594124C81F7A7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B059B9F687942C790532BCCEB209A9D7 /* Pods-RuntimeLearningTests.debug.xcconfig */;
+			baseConfigurationReference = 9F0C5238572C5CCC5D0E011D7CFCC3D5 /* Pods-RuntimeLearningTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -581,23 +707,45 @@
 			};
 			name = Debug;
 		};
+		E2CECF77723FBB3E5DC0F1C6DC0A447B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B011A8C878AB44B36DF5E7CB5EC17918 /* Pods-RuntimeLearning.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CFC8DEA7B5326676BA33093221AAE4F4 /* Debug */,
-				BE01AF5D395AE305A54D518A9B774D2A /* Release */,
+				A73625DEBD810B78234FA1958C191C8C /* Debug */,
+				85B95B1234E227C814CCC2C7902D0916 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3B6AA22606A4C94E2A13AAD21539DBF3 /* Build configuration list for PBXNativeTarget "Pods-RuntimeLearning" */ = {
+		7FA2D0CD27B96245E7C643077D541542 /* Build configuration list for PBXNativeTarget "Pods-RuntimeLearning" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B2B630D2CD65D45D35EBEE6D0246246D /* Debug */,
-				991C6D2ECAAF1D542FFC43CCE0776922 /* Release */,
+				131E398530E596929D6F0D844B1B51BF /* Debug */,
+				E2CECF77723FBB3E5DC0F1C6DC0A447B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -616,6 +764,15 @@
 			buildConfigurations = (
 				D91B14836E7EBA53CE5594124C81F7A7 /* Debug */,
 				46D9831F052FA124DA48E0E3ACEC6E5F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4ADFC6FA689F4CE74BAA24E9D29637B /* Build configuration list for PBXNativeTarget "fishhook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A77556045243AB2B932385DE0773F86B /* Debug */,
+				45C951E98FBBE598E2B8473F1BF6F6B6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

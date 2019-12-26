@@ -11,3 +11,7 @@
 int add(int a, int b) {
     return a + b;
 }
+
+int calculate_add(int a, int b) {
+    return a + b;
+}

@@ -5,6 +5,7 @@ target 'RuntimeLearning' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
   pod 'Aspects', '~> 1.4.1'
+  pod 'fishhook', '~> 0.2'
   # Pods for RuntimeLearning
 
   target 'RuntimeLearningTests' do
