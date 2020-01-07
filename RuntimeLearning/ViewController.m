@@ -60,6 +60,9 @@
 //    [array addObject:@"1"];
 //    NSObject *obj;
 //    [array addObject:obj];//** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '*** -[__NSArrayM insertObject:atIndex:]: object cannot be nil'
+    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithCapacity:0];
+    [dict setObject:@"2222" forKey:@"111"]; // dict的hash返回的就是count
+    [dict setValue:nil forKey:@"111"]; // 如果value是nil则内部调用remove CoreFoundation`-[__NSDictionaryM removeObjectForKey:]:
 }
 
 void functionF() {
