@@ -7,7 +7,7 @@ target 'RuntimeLearning' do
   pod 'Aspects', '~> 1.4.1'
   pod 'fishhook', '~> 0.2'
   # Pods for RuntimeLearning
-
+  # pod 'xxx', :podspec => 'path'
   target 'RuntimeLearningTests' do
     inherit! :search_paths
     # Pods for testing
