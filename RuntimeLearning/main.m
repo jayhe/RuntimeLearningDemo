@@ -37,7 +37,6 @@ int main(int argc, char * argv[]) {
         //int tmp1 = static_calculate_add(2, 5);
         // 0x109812522 <+39>: callq  0x10981ebe0               ; static_calculate_add at TestStaticLib.m:13
         [FishhookUsage new];
-        return 0;
         [TestMapTable new];
         testBenchmark();
         dynamicCallPrintfFunction();

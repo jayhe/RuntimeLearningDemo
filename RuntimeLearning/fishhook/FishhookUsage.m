@@ -22,7 +22,7 @@ static int (*libadd_calculate_add)(int a, int b);
     self = [super init];
     if (self) {
         [self testHookCocoaFrameworkMethod];
-        [self testHookSelfDefineDynamicFrameworkMethod];
+        //[self testHookSelfDefineDynamicFrameworkMethod]; // 模拟器可测试
     }
     
     return self;

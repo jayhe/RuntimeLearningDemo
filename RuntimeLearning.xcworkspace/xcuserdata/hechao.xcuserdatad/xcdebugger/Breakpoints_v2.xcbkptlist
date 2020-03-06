@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
+   uuid = "C62A7DFC-E3E4-48A8-B69F-EE7365EDDB30"
    type = "0"
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            uuid = "D3A4809E-05AE-4C02-9416-42819B06F435"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             symbolName = "removeObjectForKey:"
             moduleName = "">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - a711ff88da59b395"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[NSMapTable removeObjectForKey:]"
@@ -22,7 +25,8 @@
                   offsetFromSymbolStart = "0">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - 654248a01170ea56"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[NSConcreteMapTable removeObjectForKey:]"
@@ -31,7 +35,8 @@
                   offsetFromSymbolStart = "0">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - 33cbf08e36cce724"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[NSClassicMapTable removeObjectForKey:]"
@@ -40,7 +45,8 @@
                   offsetFromSymbolStart = "0">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - 1e857959eef092cb"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[NSUserDefaults(NSUserDefaults) removeObjectForKey:]"
@@ -49,7 +55,8 @@
                   offsetFromSymbolStart = "0">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - b8c8c8d805396a36"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[_NSNestedDictionary removeObjectForKey:]"
@@ -58,7 +65,8 @@
                   offsetFromSymbolStart = "0">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - 83bc5872d4e86d43"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[NSRTFD removeObjectForKey:]"
@@ -67,7 +75,8 @@
                   offsetFromSymbolStart = "0">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - e23a1ffee58d21e1"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[NSDirInfo removeObjectForKey:]"
@@ -76,7 +85,8 @@
                   offsetFromSymbolStart = "0">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - b54dd60b3ca19e93"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[NSUbiquitousKeyValueStore removeObjectForKey:]"
@@ -85,7 +95,8 @@
                   offsetFromSymbolStart = "0">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - 43d2c4ede8f73fb7"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[__NSCFDictionary removeObjectForKey:]"
@@ -94,7 +105,8 @@
                   offsetFromSymbolStart = "0">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - ac9aad777f7f3481"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[_NSMoribundCache removeObjectForKey:]"
@@ -103,7 +115,8 @@
                   offsetFromSymbolStart = "0">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - f1b6f39ef350aba9"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[NSCache removeObjectForKey:]"
@@ -112,7 +125,8 @@
                   offsetFromSymbolStart = "0">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - 3d37a1350fa791b1"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[NSMutableDictionary removeObjectForKey:]"
@@ -121,7 +135,8 @@
                   offsetFromSymbolStart = "0">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - b927855f4df07bd2"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[__NSPlaceholderDictionary removeObjectForKey:]"
@@ -130,7 +145,8 @@
                   offsetFromSymbolStart = "0">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - 6986d7e72a399af2"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[__NSDictionaryM removeObjectForKey:]"
@@ -139,7 +155,8 @@
                   offsetFromSymbolStart = "0">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - 6275a76df0fe0279"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[NSSharedKeyDictionary removeObjectForKey:]"
@@ -148,7 +165,8 @@
                   offsetFromSymbolStart = "0">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - ce0c02d5d7a3c8b1"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[_UIWebFormDelegateEditedFormsMap removeObjectForKey:]"
@@ -157,16 +175,8 @@
                   offsetFromSymbolStart = "0">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[_UICache removeObjectForKey:]"
-                  moduleName = "UIFoundation"
-                  usesParentBreakpointCondition = "Yes"
-                  offsetFromSymbolStart = "0">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - 4c55bcb5c284be9e"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[CPLRUDictionary removeObjectForKey:]"
@@ -175,34 +185,8 @@
                   offsetFromSymbolStart = "0">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[BKSApplicationDataStore removeObjectForKey:]"
-                  moduleName = "BackBoardServices"
-                  usesParentBreakpointCondition = "Yes"
-                  offsetFromSymbolStart = "0">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[BSUserDefaultsTestDoubleDictionaryImpl removeObjectForKey:]"
-                  moduleName = "BaseBoard"
-                  usesParentBreakpointCondition = "Yes"
-                  offsetFromSymbolStart = "0">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[BSMutableIntegerMap removeObjectForKey:]"
-                  moduleName = "BaseBoard"
-                  usesParentBreakpointCondition = "Yes"
-                  offsetFromSymbolStart = "0">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - 9c4967032a68383f"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[FBSApplicationDataStore removeObjectForKey:]"
@@ -211,7 +195,48 @@
                   offsetFromSymbolStart = "0">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - 92e0007be777a9ac"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[BSUserDefaultsTestDoubleDictionaryImpl removeObjectForKey:]"
+                  moduleName = "BaseBoard"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - e102587db2401c85"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[BSMutableIntegerMap removeObjectForKey:]"
+                  moduleName = "BaseBoard"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - 6e0874125b74c7d3"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[BKSApplicationDataStore removeObjectForKey:]"
+                  moduleName = "BackBoardServices"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - 389bceb0cbcae0a5"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[_UICache removeObjectForKey:]"
+                  moduleName = "UIFoundation"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - 8709cfd9f3688739"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[NSKnownKeysDictionary1 removeObjectForKey:]"
@@ -220,52 +245,8 @@
                   offsetFromSymbolStart = "0">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[BFFPreferencesController removeObjectForKey:]"
-                  moduleName = "SetupAssistant"
-                  usesParentBreakpointCondition = "Yes"
-                  offsetFromSymbolStart = "0">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[GEOTileKeyMap removeObjectForKey:]"
-                  moduleName = "GeoServices"
-                  usesParentBreakpointCondition = "Yes"
-                  offsetFromSymbolStart = "0">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[SCNOrderedDictionary removeObjectForKey:]"
-                  moduleName = "SceneKit"
-                  usesParentBreakpointCondition = "Yes"
-                  offsetFromSymbolStart = "0">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[VKTileKeyMap removeObjectForKey:]"
-                  moduleName = "VectorKit"
-                  usesParentBreakpointCondition = "Yes"
-                  offsetFromSymbolStart = "0">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "-[VKTilePool removeObjectForKey:]"
-                  moduleName = "VectorKit"
-                  usesParentBreakpointCondition = "Yes"
-                  offsetFromSymbolStart = "0">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - 28b0841977885949"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[CNUserDefaults removeObjectForKey:]"
@@ -274,7 +255,8 @@
                   offsetFromSymbolStart = "0">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - 617347acc72896b3"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[CNMutableOrderedDictionary removeObjectForKey:]"
@@ -283,7 +265,118 @@
                   offsetFromSymbolStart = "0">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - 52ac6205ba5e4b0a"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[BYPreferencesController removeObjectForKey:]"
+                  moduleName = "SetupAssistant"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - fe2cb5bc905f2ab6"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[NPSDomainAccessor removeObjectForKey:]"
+                  moduleName = "NanoPreferencesSync"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - 1b6c5edfdd211cf3"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[NPSDomainAccessorInternal removeObjectForKey:]"
+                  moduleName = "NanoPreferencesSync"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - 16f9742ae23c5a2"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[GEOTileKeyMap removeObjectForKey:]"
+                  moduleName = "GeoServices"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - db0dfd830cb40c13"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[_PASLRUCache removeObjectForKey:]"
+                  moduleName = "ProactiveSupport"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - 99df47cb5ba6ffc9"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[CalDefaultDictionary removeObjectForKey:]"
+                  moduleName = "CalendarFoundation"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - f995f699e04de68a"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[MSVMutableBidirectionalDictionary removeObjectForKey:]"
+                  moduleName = "MediaServices"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - 4f6e8a7941401aab"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[MSVLRUDictionary removeObjectForKey:]"
+                  moduleName = "MediaServices"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - 71399bc4cc10ac67"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[MLStringProbabilityDictionary removeObjectForKey:]"
+                  moduleName = "CoreML"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - c866c84c2af64644"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[MLInt64ProbabilityDictionary removeObjectForKey:]"
+                  moduleName = "CoreML"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - 77b5f5f21de2eb40"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SCNOrderedDictionary removeObjectForKey:]"
+                  moduleName = "SceneKit"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - 5a3a79d875047a3a"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[_DKPreferences removeObjectForKey:]"
@@ -292,7 +385,8 @@
                   offsetFromSymbolStart = "0">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - ea8aec27150b539f"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[_DKKeyValueStore removeObjectForKey:]"
@@ -301,7 +395,8 @@
                   offsetFromSymbolStart = "0">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  uuid = "D3A4809E-05AE-4C02-9416-42819B06F435 - 2c2d8ecc3d609292"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "-[_DKKnowledgeStorageSimpleKeyValueStore removeObjectForKey:]"
@@ -315,6 +410,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
+            uuid = "17116B9B-5E5C-4ABF-8CBC-2960C360E75E"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -324,8 +420,95 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "42"
             endingLineNumber = "42"
-            landmarkName = "main()"
+            landmarkName = "main(argc, argv)"
             landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0506CB14-F5C4-4603-AE1D-C44BCA61FE9B"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RuntimeLearning/Cache/NSCacheTest.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "-cache:willEvictObject:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "52169924-D9CC-43E2-AE65-557E5D3083EB"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RuntimeLearning/Cache/NSCacheTest.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "-testOverlimit"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B269B559-95AA-4362-A07D-BC1EF144CB03"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RuntimeLearning/Cache/NSCacheTest.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "-checkIfHasLFU"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BC3D4C5F-7F57-4561-9460-245A397E79A8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RuntimeLearning/Cache/NSCacheTest.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "-checkIfHasLRU"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
+         <BreakpointContent
+            uuid = "10DB53F2-6BCF-49DD-9C75-A207AE9935AD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = "[NSCache removeAllObjects]"
+            moduleName = "">
+            <Locations>
+               <Location
+                  uuid = "10DB53F2-6BCF-49DD-9C75-A207AE9935AD - bdd16d37f907dca8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[NSCache removeAllObjects]"
+                  moduleName = "CoreFoundation"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

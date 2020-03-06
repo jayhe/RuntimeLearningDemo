@@ -28,7 +28,8 @@
 		104BF8BD22771E9D000C464E /* DynamicCallFunctionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 104BF8BC22771E9D000C464E /* DynamicCallFunctionTest.m */; };
 		104BF8D922772F74000C464E /* calculate.c in Sources */ = {isa = PBXBuildFile; fileRef = 104BF8C622772333000C464E /* calculate.c */; };
 		1072564423B30DBD00BC3A00 /* TestMapTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1072564323B30DBD00BC3A00 /* TestMapTable.m */; };
-		1086B36A23B491DC0002F990 /* libadd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 104BF8D022772F55000C464E /* libadd.a */; };
+		107B55D62410C79100EDCCD6 /* NSCacheTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 107B55D52410C79100EDCCD6 /* NSCacheTest.m */; };
+		1086B36A23B491DC0002F990 /* libadd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 104BF8D022772F55000C464E /* libadd.a */; settings = {ATTRIBUTES = (Weak, ); }; };
 		1086B37323B4930B0002F990 /* TestStaticLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 1086B37223B4930B0002F990 /* TestStaticLib.m */; };
 		1086B37423B4930B0002F990 /* TestStaticLib.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1086B37123B4930B0002F990 /* TestStaticLib.h */; };
 		1086B37A23B493550002F990 /* libTestStaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1086B36F23B4930B0002F990 /* libTestStaticLib.a */; };
@@ -135,6 +136,8 @@
 		104BF8D022772F55000C464E /* libadd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libadd.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1072564223B30DBD00BC3A00 /* TestMapTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestMapTable.h; sourceTree = "<group>"; };
 		1072564323B30DBD00BC3A00 /* TestMapTable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMapTable.m; sourceTree = "<group>"; };
+		107B55D42410C79100EDCCD6 /* NSCacheTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSCacheTest.h; sourceTree = "<group>"; };
+		107B55D52410C79100EDCCD6 /* NSCacheTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSCacheTest.m; sourceTree = "<group>"; };
 		1086B36F23B4930B0002F990 /* libTestStaticLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libTestStaticLib.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		1086B37123B4930B0002F990 /* TestStaticLib.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestStaticLib.h; sourceTree = "<group>"; };
 		1086B37223B4930B0002F990 /* TestStaticLib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestStaticLib.m; sourceTree = "<group>"; };
@@ -275,6 +278,7 @@
 				10F2DB5F2397AEC200BA107A /* ClassCluster */,
 				1072564123B30D9E00BC3A00 /* MapTable */,
 				1086B37B23B4AE6E0002F990 /* fishhook */,
+				107B55D32410C76F00EDCCD6 /* Cache */,
 				10128704221D3B0700ED6CDE /* AppDelegate.h */,
 				10128705221D3B0700ED6CDE /* AppDelegate.m */,
 				10128707221D3B0700ED6CDE /* ViewController.h */,
@@ -349,6 +353,15 @@
 				1072564323B30DBD00BC3A00 /* TestMapTable.m */,
 			);
 			path = MapTable;
+			sourceTree = "<group>";
+		};
+		107B55D32410C76F00EDCCD6 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				107B55D42410C79100EDCCD6 /* NSCacheTest.h */,
+				107B55D52410C79100EDCCD6 /* NSCacheTest.m */,
+			);
+			path = Cache;
 			sourceTree = "<group>";
 		};
 		1086B37023B4930B0002F990 /* TestStaticLib */ = {
@@ -699,6 +712,7 @@
 				1072564423B30DBD00BC3A00 /* TestMapTable.m in Sources */,
 				1001DA0B222E521700E5EBEF /* TestCategoryOveride.m in Sources */,
 				10128714221D3B0900ED6CDE /* main.m in Sources */,
+				107B55D62410C79100EDCCD6 /* NSCacheTest.m in Sources */,
 				10D531002227B5B7007AE594 /* TestSubClassSwizzle.m in Sources */,
 				1025D0EB225DA683008E4CC3 /* UIFont+Test.m in Sources */,
 				10128706221D3B0700ED6CDE /* AppDelegate.m in Sources */,

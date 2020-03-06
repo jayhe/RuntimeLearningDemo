@@ -21,11 +21,13 @@
 #import "CopyUsage.h"
 #import "UITextField+HCInputType.h"
 #import "TestClassCluster.h"
+#import "NSCacheTest.h"
 
 @interface ViewController () <UITextFieldDelegate>
 
 @property (nonatomic, strong) DynamicCallFunctionTest *dynamicFunctionTest;
 @property (weak, nonatomic) IBOutlet UITextField *aTextFiled;
+@property (nonatomic, strong) NSCacheTest *testCache;
 
 @end
 
@@ -63,6 +65,8 @@
     NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithCapacity:0];
     [dict setObject:@"2222" forKey:@"111"]; // dict的hash返回的就是count
     [dict setValue:nil forKey:@"111"]; // 如果value是nil则内部调用remove CoreFoundation`-[__NSDictionaryM removeObjectForKey:]:
+    
+    [self testCacheUsage];
 }
 
 void functionF() {
@@ -304,6 +308,13 @@ int functionG(int x) {
 
 - (void)testClassCluster {
     [TestClassCluster new];
+}
+
+#pragma mark - Cache
+
+- (void)testCacheUsage {
+    self.testCache = [NSCacheTest new];
+    [self.testCache test];
 }
 
 #pragma mark - UITextFieldDelegate
