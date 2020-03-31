@@ -9,8 +9,13 @@
 #import "TestCategoryOveride.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
+#import "TestCategoryOveride+TestOveride.h"
 
 @implementation TestCategoryOveride
+
++ (void)load {
+    
+}
 
 + (void)initialize {
     
@@ -19,27 +24,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        unsigned int count;
-        Method *mList = class_copyMethodList(self.class, &count);
-        unsigned int findIndex = 0;
-        for (unsigned int i = 0; i < count; i++) {
-            Method method = mList[i];
-            struct objc_method_description *description = method_getDescription(method);
-            NSLog(@"%@", NSStringFromSelector(description->name));
-            if (description->name == @selector(log)) {
-                findIndex = i;
-            }
-        }
-        if (findIndex) {
-            Method method = mList[findIndex];
-            SEL selector = method_getName(method);
-            IMP imp = method_getImplementation(method);
-            ((void (*)(id, SEL))imp)(self,selector);//_objc_msgForward
-            //            ((void (*)(id,SEL))objc_msgSend)(self, selector);
-        }
-        
-        free(mList);
-        
+        [self callOriginalClassMethod];
         __unused BOOL isMeta = class_isMetaClass(object_getClass([NSObject class]));
         __unused BOOL isMineMeta = class_isMetaClass(object_getClass([self class])); // class->isa MetaClass
         Class cls = objc_getMetaClass("TestCategoryOveride");
@@ -49,6 +34,29 @@
     }
     
     return self;
+}
+
+- (void)callOriginalClassMethod {
+    unsigned int count;
+    Method *mList = class_copyMethodList(self.class, &count);
+    unsigned int findIndex = 0;
+    for (unsigned int i = 0; i < count; i++) {
+        Method method = mList[i];
+        struct objc_method_description *description = method_getDescription(method);
+        NSLog(@"%@", NSStringFromSelector(description->name));
+        if (description->name == @selector(log)) {
+            findIndex = i;
+        }
+    }
+    if (findIndex) {
+        Method method = mList[findIndex];
+        SEL selector = method_getName(method);
+        IMP imp = method_getImplementation(method);
+        ((void (*)(id, SEL))imp)(self,selector);//_objc_msgForward
+        //            ((void (*)(id,SEL))objc_msgSend)(self, selector);
+    }
+    
+    free(mList);
 }
 
 - (void)log {
@@ -61,18 +69,4 @@
 
 @end
 
-@interface TestCategoryOveride (TestOveride)
 
-
-@end
-
-@implementation TestCategoryOveride(TestOveride)
-
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wobjc-protocol-method-implementation"
-- (void)log {
-    NSLog(@"category");
-}
-#pragma clang diagnostic pop
-
-@end

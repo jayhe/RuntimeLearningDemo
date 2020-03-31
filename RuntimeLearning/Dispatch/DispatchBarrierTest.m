@@ -15,11 +15,12 @@
     self = [super init];
     if (self) {
         // 实现前面的任务执行完了再执行后面的任务
-        [self testBarrier]; // x
-        [self testGroup]; // ⩗
-        [self testGroup1]; // x
-        [self testSemaphore]; // ⩗
-        [self testRunloop]; // ⩗
+        //[self testBarrier]; // x
+        [self testBarrier1]; // x
+        //[self testGroup]; // ⩗
+        //[self testGroup1]; // x
+        //[self testSemaphore]; // ⩗
+        //[self testRunloop]; // ⩗
     }
     
     return self;
@@ -44,6 +45,35 @@
     });
     dispatch_barrier_async(queue, ^{
         NSLog(@"dispatch_barrier_async");
+    });
+    dispatch_async(queue, ^{
+        NSLog(@"testBarrier-task3");
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            [NSThread sleepForTimeInterval:2];
+            NSLog(@"testBarrier-task3:async task");
+        });
+    });
+}
+
+- (void)testBarrier1 {
+    dispatch_queue_t queue = dispatch_queue_create("rl.barrier.test.queue", DISPATCH_QUEUE_CONCURRENT);
+    
+    dispatch_async(queue, ^{
+        NSLog(@"testBarrier-task1");
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            [NSThread sleepForTimeInterval:1];
+            NSLog(@"testBarrier-task1:async task");
+        });
+    });
+    dispatch_async(queue, ^{
+        NSLog(@"testBarrier-task2");
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            [NSThread sleepForTimeInterval:2];
+            NSLog(@"testBarrier-task2:async task");
+        });
+    });
+    dispatch_barrier_async_and_wait(queue, ^{
+        NSLog(@"dispatch_barrier_async_and_wait");
     });
     dispatch_async(queue, ^{
         NSLog(@"testBarrier-task3");

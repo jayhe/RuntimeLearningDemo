@@ -22,6 +22,7 @@
 #import "calculate.h"
 #import "TestStaticLib.h"
 #import "FishhookUsage.h"
+#import "TestMethodInvocation.h"
 
 void testWaitUsage(void);
 void testLogicNot(NSInteger times);
@@ -36,6 +37,8 @@ int main(int argc, char * argv[]) {
         // 0x109812513 <+24>: callq  0x10981ec4e               ; symbol stub for: calculate_add
         //int tmp1 = static_calculate_add(2, 5);
         // 0x109812522 <+39>: callq  0x10981ebe0               ; static_calculate_add at TestStaticLib.m:13
+        [[TestMethodInvocation new] testSetPropertyWhenChangeDeclareOrder];
+        return 0;
         [FishhookUsage new];
         [TestMapTable new];
         testBenchmark();

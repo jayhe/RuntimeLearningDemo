@@ -237,7 +237,7 @@ int functionG(int x) {
 
 - (void)testTextFieldUsage {
     self.aTextFiled.delegate = self;
-    self.aTextFiled.hcui_inputType = HCTextFieldInputTypeFormatedCardNumber;
+    self.aTextFiled.hcui_inputType = HCTextFieldInputTypeIdentityNo;
     self.aTextFiled.hcui_limitLegnth = 19;
 }
 
@@ -249,8 +249,8 @@ int functionG(int x) {
     // 数组的枚举函数，遍历的时候在非尾部插入元素会异常。
     [array enumerateObjectsUsingBlock:^(TestObj *obj, NSUInteger idx, BOOL * _Nonnull stop) {
             // case1:遍历的时候修改元素【不会有问题】
-            NSLog(@"%@", obj);
-            [array replaceObjectAtIndex:3 withObject:[TestObj new]];
+//            NSLog(@"%@", obj);
+//            [array replaceObjectAtIndex:3 withObject:[TestObj new]];
         
             // case2:遍历的时候添加元素及在尾部insert
 //            [array addObject:@"added"];
@@ -260,7 +260,7 @@ int functionG(int x) {
 //            [array insertObject:@"added" atIndex:0]; // EXC_BAD_ACCESS (code=EXC_I386_GPFLT)
 //            NSLog(@"%@", obj);
             // case3.2:遍历的时候在数组的某个index插入；eg：index == （0, count) insert的index是数组的尾部 array.count则不会闪退
-//            [array insertObject:@"added" atIndex:1]; //  EXC_BAD_ACCESS (code=1, address=0x1)
+//            [array insertObject:@"added" atIndex:array.count]; // 这个类似于addObject
 //            NSLog(@"%@", obj);
         
             // case4: 遍历的时候移除数组的元素；【不会有问题】
@@ -269,7 +269,7 @@ int functionG(int x) {
     }];
     // 在for in的循环中，如果只是修改数组内部引用的元素的属性则不会有问题，如果是修改了数组内部引用或者是改变数组的大小则会闪退
 //    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//        for (id obj in array) {
+        for (id obj in array) {
             // case1:遍历的时候修改元素【 EXC_BAD_ACCESS (code=EXC_I386_GPFLT)】
 //            [array replaceObjectAtIndex:0 withObject:[TestObj new]];
 //            NSLog(@"%@", obj);
@@ -279,9 +279,9 @@ int functionG(int x) {
 //            NSLog(@"%@", obj);
     
             // case3: 遍历的时候移除数组的元素；【同上】
-//            [array removeObjectAtIndex:0];
+//            [array removeLastObject];
 //            NSLog(@"%@", obj); // EXC_BAD_ACCESS (code=1, address=0x4ca0af4303c8)
-//        }
+        }
 //    });
     
     // 在for循环中，增删改没有问题
