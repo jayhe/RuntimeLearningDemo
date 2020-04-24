@@ -7,7 +7,7 @@ DEPENDENCIES:
   - fishhook (~> 0.2)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Aspects
     - fishhook
 
@@ -15,6 +15,6 @@ SPEC CHECKSUMS:
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
 
-PODFILE CHECKSUM: e3dd825925beaac2c648932609eb13223cc838fb
+PODFILE CHECKSUM: 9133d4091291d9606afcfb321724a1584ab45ae4
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.4

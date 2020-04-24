@@ -1,20 +1,190 @@
-+[TestCategoryOveride(TestOveride) load]
-+[UIViewController(Test) load]
-+[UIFont(Test) load]
++[SubTestUnsafeSwizzle load]
++[TestCategoryOveride load]
 +[TestCategorySwizzle(Log) load]
+___32+[TestCategorySwizzle(Log) load]_block_invoke
++[MethodSwizzleUtil swizzleInstanceMethodWithClass:originalSel:replacementSel:]
 +[TestCategorySwizzle(EventTrack) load]
+___39+[TestCategorySwizzle(EventTrack) load]_block_invoke
 +[TestCategorySwizzle(ClassMethod) load]
+___40+[TestCategorySwizzle(ClassMethod) load]_block_invoke
++[TestCategoryOveride(TestOverideOne) load]
 +[NSObject(RLSafe) load]
--[AppDelegate application:didFinishLaunchingWithOptions:]
--[AppDelegate applicationWillResignActive:]
--[AppDelegate applicationDidEnterBackground:]
--[AppDelegate applicationWillEnterForeground:]
--[AppDelegate applicationDidBecomeActive:]
--[AppDelegate applicationWillTerminate:]
++[UIViewController(Test) load]
+___30+[UIViewController(Test) load]_block_invoke
++[TestCategoryOveride(TestOveride) load]
++[UIFont(Test) load]
+___20+[UIFont(Test) load]_block_invoke
+_AttributeUsageConstructor
+_AttributeUsageConstructor1
+___GLOBAL_init_65535
+_main
+-[TestCode init]
+-[TestCode test]
+__ZN3ObsC1Ev
+__ZN3ObsC2Ev
+__ZN3ObsD1Ev
+__ZN3ObsD2Ev
+-[TestCode dealloc]
+-[TestMethodInvocation testSetPropertyWhenChangeDeclareOrder]
+-[TestMethodInvocation(Category) setName:]
+-[TestMethodInvocation Name]
+-[TestMethodInvocation name]
+-[TestMethodInvocation .cxx_destruct]
+-[FishhookUsage init]
+-[FishhookUsage testHookCocoaFrameworkMethod]
+_rebind_symbols
+_prepend_rebindings
+__rebind_symbols_for_image
+_rebind_symbols_for_image
+_perform_rebinding_with_section
+_hook_objc_setAssociatedObject
+-[TestMapTable init]
+-[TestMapTable setObjArray:]
+-[TestMapTable testHashTableWeakMememory]
+-[TestMapTable setWeakCache:]
+-[TestMapTable objArray]
+-[TestMapTable weakCache]
+-[TestMapTable test]
+-[TestMapTable .cxx_destruct]
+_testBenchmark
+___testBenchmark_block_invoke
+_dynamicCallPrintfFunction
+_dynamicCallAddFunction
++[DispatchOnceTest sharedInstance]
+___34+[DispatchOnceTest sharedInstance]_block_invoke
+-[DispatchBarrierTest init]
+-[DispatchBarrierTest testBarrier1]
+___35-[DispatchBarrierTest testBarrier1]_block_invoke
+___35-[DispatchBarrierTest testBarrier1]_block_invoke_3
+___35-[DispatchBarrierTest testBarrier1]_block_invoke_2
+___35-[DispatchBarrierTest testBarrier1]_block_invoke_4
+___35-[DispatchBarrierTest testBarrier1]_block_invoke_5
+-[DispatchGroupLeaveTest init]
+-[DispatchGroupLeaveTest testGroupLeaveCrash]
+___35-[DispatchBarrierTest testBarrier1]_block_invoke_6
+_testVAList
+___main_block_invoke
+___35-[DispatchBarrierTest testBarrier1]_block_invoke_7
+_testWaitUsage
+-[TestTaggedPointer init]
+-[TestTaggedPointer numberTest]
+-[TestTaggedPointer formatedLogObject:]
+__objc_isTaggedPointer
+-[TestTaggedPointer dateTest]
+-[ByteAlignmentTest init]
+-[ByteAlignmentTest test]
+_word_align
+-[ByteAlignmentTest setA:]
+-[ByteAlignmentTest setB:]
+-[ByteAlignmentTest setC:]
+-[ByteAlignmentTest setTestString:]
+-[ByteAlignmentTest .cxx_destruct]
+-[DispatchExamnationTest init]
+-[DispatchExamnationTest testCurrentQueue]
+___42-[DispatchExamnationTest testCurrentQueue]_block_invoke_3
+___42-[DispatchExamnationTest testCurrentQueue]_block_invoke
+___42-[DispatchExamnationTest testCurrentQueue]_block_invoke_2
+___copy_helper_block_e8_32s
+-[DispatchExamnationTest testCurrentQueue1]
+___copy_helper_block_e8_32r
+___42-[DispatchExamnationTest testCurrentQueue]_block_invoke_4
+___42-[DispatchExamnationTest testCurrentQueue]_block_invoke_5
+___42-[DispatchExamnationTest testCurrentQueue]_block_invoke_6
+___42-[DispatchExamnationTest testCurrentQueue]_block_invoke_7
+___43-[DispatchExamnationTest testCurrentQueue1]_block_invoke
+___destroy_helper_block_e8_32s
+___destroy_helper_block_e8_32r
++[UIFont(Test) initialize]
 -[AppDelegate window]
 -[AppDelegate setWindow:]
--[AppDelegate .cxx_destruct]
--[TestClass notFound]
-+[SubTestUnsafeSwizzle load]
-+[TestCategoryOveride(TestOverideOne) load]
-+[TestCategoryOveride load]
+-[AppDelegate application:didFinishLaunchingWithOptions:]
+-[UIViewController(Test) hc_viewWillAppear:]
+-[ViewController setATextFiled:]
+-[ViewController viewDidLoad]
+-[AddressInfo logDescription]
+-[AddressInfo addressName]
+-[AddressInfo addressNumber]
+-[AddressInfo addressDesc]
+-[ViewController testUnsafeSwizzle]
+-[SubTestUnsafeSwizzle test_testMethod]
+-[TestUnsafeSwizzle testMethod]
+-[ViewController testCategorySwizzle]
+-[TestCategorySwizzle(EventTrack) track_testCategorySwizzle]
+-[TestCategorySwizzle(Log) log_testCategorySwizzle]
+-[TestCategorySwizzle testCategorySwizzle]
+-[ViewController testSubClassSwizzleMethod]
+-[TestBSubClassSwizzle b_testSubClassSwizzle]
+-[TestSubClassSwizzle testSubClassSwizzle]
+-[ViewController testDoSthWhenDealloc]
+-[NSObject(HCWillDealloc) hc_doSthWhenDeallocWithBlock:]
+-[HCAssociatedObject initWithBlock:target:]
+___copy_helper_block_e8_32w
+-[HCAssociatedObject dealloc]
+___38-[ViewController testDoSthWhenDealloc]_block_invoke
+-[HCAssociatedObject .cxx_destruct]
+___destroy_helper_block_e8_32w
+-[ViewController testCategoryOveride]
++[TestCategoryOveride initialize]
+-[TestCategoryOveride init]
+-[TestCategoryOveride callOriginalClassMethod]
+-[TestCategoryOveride log]
+-[ViewController testClassSwizzle]
++[TestCategorySwizzle(ClassMethod) class_testClassMethod]
+-[ViewController testSwizzleInInitialize]
++[TestSwizzleInInitialize(Track) initialize]
+___44+[TestSwizzleInInitialize(Track) initialize]_block_invoke
++[TestSwizzleInInitializeA initialize]
+___38+[TestSwizzleInInitializeA initialize]_block_invoke
+-[TestSwizzleInInitializeA a_testSwizzleMethod]
+-[TestSwizzleInInitialize testSwizzleMethod]
+-[ViewController testAttributeUsage]
+-[AttributeUsage init]
+-[AttributeUsage testUsages]
+-[AttributeUsage cleanupUsage]
+-[AttributeUsage lock]
+_blockCleanUp
+___30-[AttributeUsage cleanupUsage]_block_invoke
+-[AttributeUsage testNoReturn:]
+-[AttributeUsage dealloc]
+-[AttributeUsage .cxx_destruct]
+-[NSObject(Injection) setInjectExcuteBlock:]
+-[ViewController testCopyUsage]
+-[CopyUsage init]
+-[CopyUsage testCopyAndMutableCopy]
+-[CopyUsage testNSMutableDictionaryCopy]
+-[TestObj setName:]
+-[CopyUsage setPCopyDict:]
+-[CopyUsage setPStrongDict:]
+-[CopyUsage .cxx_destruct]
+-[ViewController testTextFieldUsage]
+-[ViewController aTextFiled]
+-[UITextField(HCInputType) setHcui_inputType:]
+-[UITextField(HCInputType) configKeyboardType]
+-[UITextField(HCInputType) hcui_inputType]
+-[UITextField(HCInputType) setHcui_limitLegnth:]
+-[ViewController testArrayReadWhileChange]
+___42-[ViewController testArrayReadWhileChange]_block_invoke
+-[TestObj .cxx_destruct]
+-[ViewController testClassCluster]
+-[TestClassCluster init]
+-[TestClassCluster test]
+-[TestClassCluster testNSString]
+-[TestClassCluster testArray]
+-[TestClassCluster testNumber]
+-[TestClassCluster testNSDate]
+-[TestClassCluster testNSSet]
+-[TestClassCluster testNSMap]
+-[ViewController testCacheUsage]
+-[NSCacheTest init]
+-[ViewController setTestCache:]
+-[ViewController testCache]
+-[NSCacheTest test]
+-[NSCacheTest checkIfHasLFU]
+-[NSCacheTest memoryCache]
+-[NSCacheTest logAllCachedData]
+-[NSCacheTest cache:willEvictObject:]
+-[ViewController viewWillAppear:]
+-[AppDelegate applicationDidBecomeActive:]
+-[ViewController viewDidAppear:]
+_functionF
+_functionG

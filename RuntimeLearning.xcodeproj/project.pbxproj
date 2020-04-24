@@ -23,7 +23,8 @@
 		1018FAF9225E12C60095BD95 /* AttributeUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1018FAF8225E12C60095BD95 /* AttributeUsage.m */; };
 		1025D0EB225DA683008E4CC3 /* UIFont+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 1025D0EA225DA683008E4CC3 /* UIFont+Test.m */; };
 		1025D0EE225DAED1008E4CC3 /* UIViewController+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 1025D0ED225DAED1008E4CC3 /* UIViewController+Test.m */; };
-		1026DD112333173D00738E85 /* TestCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 1026DD102333173D00738E85 /* TestCode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		1026DD112333173D00738E85 /* TestCode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1026DD102333173D00738E85 /* TestCode.mm */; };
+		10271A322452BD3E00B37275 /* TestSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10271A312452BD3E00B37275 /* TestSwift.swift */; };
 		102E8648230A416900614371 /* TestTaggedPointer.m in Sources */ = {isa = PBXBuildFile; fileRef = 102E8647230A416900614371 /* TestTaggedPointer.m */; };
 		104BF8BD22771E9D000C464E /* DynamicCallFunctionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 104BF8BC22771E9D000C464E /* DynamicCallFunctionTest.m */; };
 		104BF8D922772F74000C464E /* calculate.c in Sources */ = {isa = PBXBuildFile; fileRef = 104BF8C622772333000C464E /* calculate.c */; };
@@ -41,6 +42,7 @@
 		10BF41E8227FE671009F291E /* DispatchOnceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BF41E7227FE671009F291E /* DispatchOnceTest.m */; };
 		10BF41EB228012A7009F291E /* DispatchBarrierTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BF41EA228012A7009F291E /* DispatchBarrierTest.m */; };
 		10BF41F2228120C1009F291E /* DispatchGroupLeaveTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BF41F1228120C1009F291E /* DispatchGroupLeaveTest.m */; };
+		10C0854624527BF7002EA11B /* HCClangTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C0854524527BF7002EA11B /* HCClangTrace.m */; };
 		10C3235922781DCF0091B0ED /* NSObject+Injection.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C3235822781DCF0091B0ED /* NSObject+Injection.m */; };
 		10D160C0237119690051A7BA /* ByteAlignmentTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D160BF237119690051A7BA /* ByteAlignmentTest.m */; };
 		10D16100237456940051A7BA /* DispatchExamnationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D160FF237456940051A7BA /* DispatchExamnationTest.m */; };
@@ -129,7 +131,9 @@
 		1025D0EC225DAED1008E4CC3 /* UIViewController+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Test.h"; sourceTree = "<group>"; };
 		1025D0ED225DAED1008E4CC3 /* UIViewController+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Test.m"; sourceTree = "<group>"; };
 		1026DD0F2333173D00738E85 /* TestCode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCode.h; sourceTree = "<group>"; };
-		1026DD102333173D00738E85 /* TestCode.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCode.m; sourceTree = "<group>"; };
+		1026DD102333173D00738E85 /* TestCode.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = TestCode.mm; sourceTree = "<group>"; };
+		10271A302452BD3D00B37275 /* RuntimeLearning-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RuntimeLearning-Bridging-Header.h"; sourceTree = "<group>"; };
+		10271A312452BD3E00B37275 /* TestSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSwift.swift; sourceTree = "<group>"; };
 		102E8646230A416900614371 /* TestTaggedPointer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTaggedPointer.h; sourceTree = "<group>"; };
 		102E8647230A416900614371 /* TestTaggedPointer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTaggedPointer.m; sourceTree = "<group>"; };
 		104BF8BB22771E9D000C464E /* DynamicCallFunctionTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicCallFunctionTest.h; sourceTree = "<group>"; };
@@ -161,6 +165,8 @@
 		10BF41EF22801333009F291E /* RuntimeLearningMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeLearningMacro.h; sourceTree = "<group>"; };
 		10BF41F0228120C1009F291E /* DispatchGroupLeaveTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DispatchGroupLeaveTest.h; sourceTree = "<group>"; };
 		10BF41F1228120C1009F291E /* DispatchGroupLeaveTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DispatchGroupLeaveTest.m; sourceTree = "<group>"; };
+		10C0854424527BF7002EA11B /* HCClangTrace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCClangTrace.h; sourceTree = "<group>"; };
+		10C0854524527BF7002EA11B /* HCClangTrace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCClangTrace.m; sourceTree = "<group>"; };
 		10C3235722781DCF0091B0ED /* NSObject+Injection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Injection.h"; sourceTree = "<group>"; };
 		10C3235822781DCF0091B0ED /* NSObject+Injection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Injection.m"; sourceTree = "<group>"; };
 		10CF127023AC6499001B5BA2 /* RuntimeLearning.profdata */ = {isa = PBXFileReference; lastKnownFileType = file; path = RuntimeLearning.profdata; sourceTree = "<group>"; };
@@ -280,6 +286,7 @@
 		10128703221D3B0700ED6CDE /* RuntimeLearning */ = {
 			isa = PBXGroup;
 			children = (
+				10C0854324527BB2002EA11B /* Clang */,
 				10128728221D3B7200ED6CDE /* Utility */,
 				10113DDE22CC8F5600132833 /* Copy */,
 				1001DA08222E51E700E5EBEF /* Category */,
@@ -304,8 +311,10 @@
 				10128712221D3B0900ED6CDE /* Info.plist */,
 				10128713221D3B0900ED6CDE /* main.m */,
 				1026DD0F2333173D00738E85 /* TestCode.h */,
-				1026DD102333173D00738E85 /* TestCode.m */,
+				1026DD102333173D00738E85 /* TestCode.mm */,
+				10271A312452BD3E00B37275 /* TestSwift.swift */,
 				10BF41EF22801333009F291E /* RuntimeLearningMacro.h */,
+				10271A302452BD3D00B37275 /* RuntimeLearning-Bridging-Header.h */,
 			);
 			path = RuntimeLearning;
 			sourceTree = "<group>";
@@ -410,6 +419,15 @@
 				10D160FF237456940051A7BA /* DispatchExamnationTest.m */,
 			);
 			path = Dispatch;
+			sourceTree = "<group>";
+		};
+		10C0854324527BB2002EA11B /* Clang */ = {
+			isa = PBXGroup;
+			children = (
+				10C0854424527BF7002EA11B /* HCClangTrace.h */,
+				10C0854524527BF7002EA11B /* HCClangTrace.m */,
+			);
+			path = Clang;
 			sourceTree = "<group>";
 		};
 		10CF126F23AC6499001B5BA2 /* OptimizationProfiles */ = {
@@ -579,6 +597,7 @@
 				TargetAttributes = {
 					10128700221D3B0700ED6CDE = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1130;
 					};
 					10128718221D3B0A00ED6CDE = {
 						CreatedOnToolsVersion = 10.1;
@@ -711,7 +730,7 @@
 				10C3235922781DCF0091B0ED /* NSObject+Injection.m in Sources */,
 				10518D81241F79A600AE5265 /* TestCategoryOveride+TestOverideOne.m in Sources */,
 				1086B37E23B4AE910002F990 /* FishhookUsage.m in Sources */,
-				1026DD112333173D00738E85 /* TestCode.m in Sources */,
+				1026DD112333173D00738E85 /* TestCode.mm in Sources */,
 				10113DE122CC8F7F00132833 /* CopyUsage.m in Sources */,
 				10D16100237456940051A7BA /* DispatchExamnationTest.m in Sources */,
 				102E8648230A416900614371 /* TestTaggedPointer.m in Sources */,
@@ -720,6 +739,7 @@
 				10BF41EB228012A7009F291E /* DispatchBarrierTest.m in Sources */,
 				10A6CA9D241CA882002BFAC5 /* TestMethodInvocation.m in Sources */,
 				10F2DB622397AEEA00BA107A /* TestClassCluster.m in Sources */,
+				10C0854624527BF7002EA11B /* HCClangTrace.m in Sources */,
 				104BF8BD22771E9D000C464E /* DynamicCallFunctionTest.m in Sources */,
 				10BF41F2228120C1009F291E /* DispatchGroupLeaveTest.m in Sources */,
 				10128709221D3B0700ED6CDE /* ViewController.m in Sources */,
@@ -727,6 +747,7 @@
 				10D531082227CC86007AE594 /* NSObject+HCWillDealloc.m in Sources */,
 				1025D0EE225DAED1008E4CC3 /* UIViewController+Test.m in Sources */,
 				1072564423B30DBD00BC3A00 /* TestMapTable.m in Sources */,
+				10271A322452BD3E00B37275 /* TestSwift.swift in Sources */,
 				1076819A241B3B0700D486A9 /* TestCategoryOveride+TestOveride.m in Sources */,
 				1001DA0B222E521700E5EBEF /* TestCategoryOveride.m in Sources */,
 				10128714221D3B0900ED6CDE /* main.m in Sources */,
@@ -857,6 +878,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -910,6 +932,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -921,6 +944,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_OPTIMIZATION_PROFILE_FILE = "$(SRCROOT)/OptimizationProfiles/$(PROJECT_NAME).profdata";
 				CLANG_USE_OPTIMIZATION_PROFILE = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -940,13 +964,18 @@
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				ORDER_FILE = "${SRCROOT}/RuntimeLearning.order";
+				OTHER_CFLAGS = "-fsanitize-coverage=func,trace-pc-guard";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-l\"Aspects\"",
 				);
+				OTHER_SWIFT_FLAGS = "-sanitize-coverage=func -sanitize=undefined";
 				PRODUCT_BUNDLE_IDENTIFIER = hc.RuntimeLearning;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RuntimeLearning/RuntimeLearning-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				WARNING_LDFLAGS = "";
 			};
@@ -958,6 +987,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_USE_OPTIMIZATION_PROFILE = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2ZY2L7GYS;
@@ -976,13 +1006,17 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				ORDER_FILE = "${SRCROOT}/RuntimeLearning.order";
+				OTHER_CFLAGS = "-fsanitize-coverage=func,trace-pc-guard";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-l\"Aspects\"",
 				);
+				OTHER_SWIFT_FLAGS = "-sanitize-coverage=func -sanitize=undefined";
 				PRODUCT_BUNDLE_IDENTIFIER = hc.RuntimeLearning;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RuntimeLearning/RuntimeLearning-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				WARNING_LDFLAGS = "";
 			};
@@ -992,6 +1026,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 80706F469BC347C48B83AD30 /* Pods-RuntimeLearningTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2ZY2L7GYS;
@@ -1012,6 +1047,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D2C81A8D13612D343D3F21F0 /* Pods-RuntimeLearningTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2ZY2L7GYS;
@@ -1034,6 +1070,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2ZY2L7GYS;
 				MACH_O_TYPE = mh_dylib;
+				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1047,6 +1084,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2ZY2L7GYS;
 				MACH_O_TYPE = mh_dylib;
+				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1059,6 +1097,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2ZY2L7GYS;
+				OTHER_CFLAGS = "-fsanitize-coverage=func,trace-pc-guard";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -1071,6 +1110,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2ZY2L7GYS;
+				OTHER_CFLAGS = "-fsanitize-coverage=func,trace-pc-guard";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;

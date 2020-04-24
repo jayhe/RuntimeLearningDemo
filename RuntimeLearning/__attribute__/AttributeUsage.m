@@ -49,12 +49,14 @@ void unexcept(void) __attribute__ ((noreturn));
 //}
 
 - (void)cleanupUsage {
+    //C++中的RAII机制
     [self.lock lock];
     onExit {
         [self.lock unlock];
     };
     // 做很多事情
     NSLog(@"%s", __FUNCTION__);
+    return;
 }
 
 #pragma mark - constructor && destructor

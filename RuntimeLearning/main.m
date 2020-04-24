@@ -33,12 +33,13 @@ void testBenchmark(void);
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
+        [TestCode new];
         //int tmp = calculate_add(2, 5); // 动态库的方法调用 动态库需要dyld load_commonds加载动态库
         // 0x109812513 <+24>: callq  0x10981ec4e               ; symbol stub for: calculate_add
         //int tmp1 = static_calculate_add(2, 5);
         // 0x109812522 <+39>: callq  0x10981ebe0               ; static_calculate_add at TestStaticLib.m:13
         [[TestMethodInvocation new] testSetPropertyWhenChangeDeclareOrder];
-        return 0;
+//        return 0;
         [FishhookUsage new];
         [TestMapTable new];
         testBenchmark();
@@ -62,7 +63,6 @@ int main(int argc, char * argv[]) {
         uintptr_t disguiseValue = ~(uintptr_t)obj;
         __unused uintptr_t undisguiseValue = ~disguiseValue;
         [TestTaggedPointer new];
-        [TestCode new];
         [ByteAlignmentTest new];
         [DispatchExamnationTest new];
         __block CGFloat testCGFloat; // be 0.0 ？？可能不是

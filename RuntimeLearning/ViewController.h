@@ -13,3 +13,14 @@
 
 @end
 
+@interface AddressInfo : NSObject
+
+@property (nonatomic, copy) NSString *addressName;
+@property (nonatomic, copy) NSString *addressNumber;
+@property (nonatomic, copy) NSString *addressId;
+@property (nonatomic, copy) NSString *addressDesc;
+
+- (void)logDescription;
+
+@end
+

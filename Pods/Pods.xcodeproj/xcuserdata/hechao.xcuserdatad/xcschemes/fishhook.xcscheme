@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0930"
+   LastUpgradeVersion = "1100"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "085A935814BBB24C262EB89BCFFFC046"
+               BlueprintIdentifier = "58CAF5B0291DAB42086F0645150E1791"
+               BuildableName = "libfishhook.a"
                BlueprintName = "fishhook"
-               ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "libfishhook.a">
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
