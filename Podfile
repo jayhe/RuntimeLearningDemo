@@ -6,6 +6,7 @@ target 'RuntimeLearning' do
   # use_frameworks!
   pod 'Aspects', '~> 1.4.1'
   pod 'fishhook', '~> 0.2'
+  pod 'HCClangTrace', :git => 'https://github.com/jayhe/HCClangTrace.git'
   # Pods for RuntimeLearning
   # pod 'xxx', :podspec => 'path'
   target 'RuntimeLearningTests' do

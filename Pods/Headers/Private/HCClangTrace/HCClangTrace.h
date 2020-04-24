@@ -1,0 +1,1 @@
+../../../HCClangTrace/HCClangTrace/Classes/HCClangTrace.h

@@ -1,20 +1,32 @@
 PODS:
   - Aspects (1.4.1)
   - fishhook (0.2)
+  - HCClangTrace (1.0.0)
 
 DEPENDENCIES:
   - Aspects (~> 1.4.1)
   - fishhook (~> 0.2)
+  - HCClangTrace (from `https://github.com/jayhe/HCClangTrace.git`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - Aspects
     - fishhook
 
+EXTERNAL SOURCES:
+  HCClangTrace:
+    :git: https://github.com/jayhe/HCClangTrace.git
+
+CHECKOUT OPTIONS:
+  HCClangTrace:
+    :commit: 354975bd8a7874eb712a7d7dcf1a9ab695c9cbe2
+    :git: https://github.com/jayhe/HCClangTrace.git
+
 SPEC CHECKSUMS:
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
+  HCClangTrace: 979d4577d6510fbba59c375160d793b95248fd83
 
-PODFILE CHECKSUM: 9133d4091291d9606afcfb321724a1584ab45ae4
+PODFILE CHECKSUM: 11c8d7fee82e67c9586c3013a721b44d71ce88f4
 
 COCOAPODS: 1.8.4

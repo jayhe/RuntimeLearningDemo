@@ -42,7 +42,6 @@
 		10BF41E8227FE671009F291E /* DispatchOnceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BF41E7227FE671009F291E /* DispatchOnceTest.m */; };
 		10BF41EB228012A7009F291E /* DispatchBarrierTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BF41EA228012A7009F291E /* DispatchBarrierTest.m */; };
 		10BF41F2228120C1009F291E /* DispatchGroupLeaveTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BF41F1228120C1009F291E /* DispatchGroupLeaveTest.m */; };
-		10C0854624527BF7002EA11B /* HCClangTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C0854524527BF7002EA11B /* HCClangTrace.m */; };
 		10C3235922781DCF0091B0ED /* NSObject+Injection.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C3235822781DCF0091B0ED /* NSObject+Injection.m */; };
 		10D160C0237119690051A7BA /* ByteAlignmentTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D160BF237119690051A7BA /* ByteAlignmentTest.m */; };
 		10D16100237456940051A7BA /* DispatchExamnationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D160FF237456940051A7BA /* DispatchExamnationTest.m */; };
@@ -165,8 +164,6 @@
 		10BF41EF22801333009F291E /* RuntimeLearningMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeLearningMacro.h; sourceTree = "<group>"; };
 		10BF41F0228120C1009F291E /* DispatchGroupLeaveTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DispatchGroupLeaveTest.h; sourceTree = "<group>"; };
 		10BF41F1228120C1009F291E /* DispatchGroupLeaveTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DispatchGroupLeaveTest.m; sourceTree = "<group>"; };
-		10C0854424527BF7002EA11B /* HCClangTrace.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCClangTrace.h; sourceTree = "<group>"; };
-		10C0854524527BF7002EA11B /* HCClangTrace.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCClangTrace.m; sourceTree = "<group>"; };
 		10C3235722781DCF0091B0ED /* NSObject+Injection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Injection.h"; sourceTree = "<group>"; };
 		10C3235822781DCF0091B0ED /* NSObject+Injection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Injection.m"; sourceTree = "<group>"; };
 		10CF127023AC6499001B5BA2 /* RuntimeLearning.profdata */ = {isa = PBXFileReference; lastKnownFileType = file; path = RuntimeLearning.profdata; sourceTree = "<group>"; };
@@ -286,7 +283,6 @@
 		10128703221D3B0700ED6CDE /* RuntimeLearning */ = {
 			isa = PBXGroup;
 			children = (
-				10C0854324527BB2002EA11B /* Clang */,
 				10128728221D3B7200ED6CDE /* Utility */,
 				10113DDE22CC8F5600132833 /* Copy */,
 				1001DA08222E51E700E5EBEF /* Category */,
@@ -419,15 +415,6 @@
 				10D160FF237456940051A7BA /* DispatchExamnationTest.m */,
 			);
 			path = Dispatch;
-			sourceTree = "<group>";
-		};
-		10C0854324527BB2002EA11B /* Clang */ = {
-			isa = PBXGroup;
-			children = (
-				10C0854424527BF7002EA11B /* HCClangTrace.h */,
-				10C0854524527BF7002EA11B /* HCClangTrace.m */,
-			);
-			path = Clang;
 			sourceTree = "<group>";
 		};
 		10CF126F23AC6499001B5BA2 /* OptimizationProfiles */ = {
@@ -739,7 +726,6 @@
 				10BF41EB228012A7009F291E /* DispatchBarrierTest.m in Sources */,
 				10A6CA9D241CA882002BFAC5 /* TestMethodInvocation.m in Sources */,
 				10F2DB622397AEEA00BA107A /* TestClassCluster.m in Sources */,
-				10C0854624527BF7002EA11B /* HCClangTrace.m in Sources */,
 				104BF8BD22771E9D000C464E /* DynamicCallFunctionTest.m in Sources */,
 				10BF41F2228120C1009F291E /* DispatchGroupLeaveTest.m in Sources */,
 				10128709221D3B0700ED6CDE /* ViewController.m in Sources */,
