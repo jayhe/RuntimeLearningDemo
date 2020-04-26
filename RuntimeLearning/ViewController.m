@@ -285,9 +285,106 @@ int functionG(int x) {
     ].mutableCopy;
 }
 
+#pragma mark - 基础部分
+
 - (void)testAttributeUsage {
     [AttributeUsage new];
 }
+
+- (void)testPropertyWithSameNameButDifferentCapUsage {
+    [[TestMethodInvocation new] testSetPropertyWhenChangeDeclareOrder];
+}
+
+- (void)testCopyUsage {
+    [[CopyUsage new] testCopyAndMutableCopy];
+}
+
+- (void)testArrayReadWhileChange {
+    NSMutableArray *array = [NSMutableArray arrayWithCapacity:0];
+    for (NSInteger i = 0; i < 10; i ++) {
+        [array addObject:[TestObj new]];
+    }
+    // 数组的枚举函数，遍历的时候在非尾部插入元素会异常。
+    [array enumerateObjectsUsingBlock:^(TestObj *obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            // case1:遍历的时候修改元素【不会有问题】
+//            NSLog(@"%@", obj);
+//            [array replaceObjectAtIndex:3 withObject:[TestObj new]];
+        
+            // case2:遍历的时候添加元素及在尾部insert
+//            [array addObject:@"added"];
+//            NSLog(@"%@", obj); // 会一直输出，因为执行一次添加一个元素，一直添加；Executes a given block using each object in the array, starting with the first object and continuing through the array to the last object.
+        
+            // case3.1:遍历的时候在数组的某个index插入；eg：index == 0
+//            [array insertObject:@"added" atIndex:0]; // EXC_BAD_ACCESS (code=EXC_I386_GPFLT)
+//            NSLog(@"%@", obj);
+            // case3.2:遍历的时候在数组的某个index插入；eg：index == （0, count) insert的index是数组的尾部 array.count则不会闪退
+//            [array insertObject:@"added" atIndex:array.count]; // 这个类似于addObject
+//            NSLog(@"%@", obj);
+        
+            // case4: 遍历的时候移除数组的元素；【不会有问题】
+//            [array removeObjectAtIndex:0];
+//            NSLog(@"%@", obj);
+    }];
+    // 在for in的循环中，如果只是修改数组内部引用的元素的属性则不会有问题，如果是修改了数组内部引用或者是改变数组的大小则会闪退
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        for (id obj in array) {
+            // case1:遍历的时候修改元素【 EXC_BAD_ACCESS (code=EXC_I386_GPFLT)】
+//            [array replaceObjectAtIndex:0 withObject:[TestObj new]];
+//            NSLog(@"%@", obj);
+    
+            // case2:遍历的时候添加元素及在尾部insert 【*** Collection <__NSArrayM: 0x6000003c0900> was mutated while being enumerated.'】
+//            [array addObject:@"added"];
+//            NSLog(@"%@", obj);
+    
+            // case3: 遍历的时候移除数组的元素；【同上】
+//            [array removeLastObject];
+//            NSLog(@"%@", obj); // EXC_BAD_ACCESS (code=1, address=0x4ca0af4303c8)
+        }
+//    });
+    
+    // 在for循环中，增删改没有问题
+//    for (NSInteger i = 0; i < array.count; i ++) {
+            // case1:遍历的时候修改元素【 没有问题 】
+//            [array replaceObjectAtIndex:4 withObject:[TestObj new]];
+//            NSLog(@"%@", array[i]);
+            // case2:遍历的时候添加元素及在尾部insert 【 跟enumerate效果一样】
+//            [array addObject:@"added"];
+//            NSLog(@"%@", array[i]);
+            // case3.1:遍历的时候在数组的某个index插入；eg：index == 0 【 跟enumerate效果一样】
+//            [array insertObject:@"added" atIndex:0];
+//            NSLog(@"%@", array[i]);
+            // case3.2:遍历的时候在数组的某个index插入；eg：index == （0, count) 【 跟enumerate效果一样】
+//            [array insertObject:@"added" atIndex:1];
+//            NSLog(@"%@", array[i]);
+            // case4: 遍历的时候移除数组的元素；【不会有问题】
+//            [array removeObjectAtIndex:0];
+//            NSLog(@"%@", array[i]);
+//    }
+}
+
+- (void)testMapTableUsage {
+    [TestMapTable new];
+}
+
+- (void)testVAListUsage {
+    testVAList(@"%@, %@", @"0", @"1", @"11", nil);
+    // testVAList1(@"%@, %@", @"0", @"1", @"11");
+}
+
+- (void)testStructUsage {
+    [TestCode new];
+}
+
+- (void)testClassCluster {
+    [TestClassCluster new];
+}
+
+- (void)testCacheUsage {
+    self.testCache = [NSCacheTest new];
+    [self.testCache test];
+}
+
+#pragma mark - Runtime部分
 
 - (void)testClassSwizzle {
     [TestCategorySwizzle testClassMethod];
@@ -404,77 +501,6 @@ int functionG(int x) {
     /*类别中的initialize会覆盖类中的，执行compile source的最后加入的类别的方法*/
 }
 
-- (void)testPropertyWithSameNameButDifferentCapUsage {
-    [[TestMethodInvocation new] testSetPropertyWhenChangeDeclareOrder];
-}
-
-- (void)testCopyUsage {
-    [[CopyUsage new] testCopyAndMutableCopy];
-}
-
-- (void)testArrayReadWhileChange {
-    NSMutableArray *array = [NSMutableArray arrayWithCapacity:0];
-    for (NSInteger i = 0; i < 10; i ++) {
-        [array addObject:[TestObj new]];
-    }
-    // 数组的枚举函数，遍历的时候在非尾部插入元素会异常。
-    [array enumerateObjectsUsingBlock:^(TestObj *obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            // case1:遍历的时候修改元素【不会有问题】
-//            NSLog(@"%@", obj);
-//            [array replaceObjectAtIndex:3 withObject:[TestObj new]];
-        
-            // case2:遍历的时候添加元素及在尾部insert
-//            [array addObject:@"added"];
-//            NSLog(@"%@", obj); // 会一直输出，因为执行一次添加一个元素，一直添加；Executes a given block using each object in the array, starting with the first object and continuing through the array to the last object.
-        
-            // case3.1:遍历的时候在数组的某个index插入；eg：index == 0
-//            [array insertObject:@"added" atIndex:0]; // EXC_BAD_ACCESS (code=EXC_I386_GPFLT)
-//            NSLog(@"%@", obj);
-            // case3.2:遍历的时候在数组的某个index插入；eg：index == （0, count) insert的index是数组的尾部 array.count则不会闪退
-//            [array insertObject:@"added" atIndex:array.count]; // 这个类似于addObject
-//            NSLog(@"%@", obj);
-        
-            // case4: 遍历的时候移除数组的元素；【不会有问题】
-//            [array removeObjectAtIndex:0];
-//            NSLog(@"%@", obj);
-    }];
-    // 在for in的循环中，如果只是修改数组内部引用的元素的属性则不会有问题，如果是修改了数组内部引用或者是改变数组的大小则会闪退
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        for (id obj in array) {
-            // case1:遍历的时候修改元素【 EXC_BAD_ACCESS (code=EXC_I386_GPFLT)】
-//            [array replaceObjectAtIndex:0 withObject:[TestObj new]];
-//            NSLog(@"%@", obj);
-    
-            // case2:遍历的时候添加元素及在尾部insert 【*** Collection <__NSArrayM: 0x6000003c0900> was mutated while being enumerated.'】
-//            [array addObject:@"added"];
-//            NSLog(@"%@", obj);
-    
-            // case3: 遍历的时候移除数组的元素；【同上】
-//            [array removeLastObject];
-//            NSLog(@"%@", obj); // EXC_BAD_ACCESS (code=1, address=0x4ca0af4303c8)
-        }
-//    });
-    
-    // 在for循环中，增删改没有问题
-//    for (NSInteger i = 0; i < array.count; i ++) {
-            // case1:遍历的时候修改元素【 没有问题 】
-//            [array replaceObjectAtIndex:4 withObject:[TestObj new]];
-//            NSLog(@"%@", array[i]);
-            // case2:遍历的时候添加元素及在尾部insert 【 跟enumerate效果一样】
-//            [array addObject:@"added"];
-//            NSLog(@"%@", array[i]);
-            // case3.1:遍历的时候在数组的某个index插入；eg：index == 0 【 跟enumerate效果一样】
-//            [array insertObject:@"added" atIndex:0];
-//            NSLog(@"%@", array[i]);
-            // case3.2:遍历的时候在数组的某个index插入；eg：index == （0, count) 【 跟enumerate效果一样】
-//            [array insertObject:@"added" atIndex:1];
-//            NSLog(@"%@", array[i]);
-            // case4: 遍历的时候移除数组的元素；【不会有问题】
-//            [array removeObjectAtIndex:0];
-//            NSLog(@"%@", array[i]);
-//    }
-}
-
 - (void)logLibASLR {
     NSLog(@"www.dllhook.com\nDyld image count is: %d.\n", _dyld_image_count());
     for (int i = 0; i < _dyld_image_count(); i++) {
@@ -513,19 +539,6 @@ int functionG(int x) {
     [FishhookUsage new];
 }
 
-- (void)testMapTableUsage {
-    [TestMapTable new];
-}
-
-- (void)testVAListUsage {
-    testVAList(@"%@, %@", @"0", @"1", @"11", nil);
-    // testVAList1(@"%@, %@", @"0", @"1", @"11");
-}
-
-- (void)testStructUsage {
-    [TestCode new];
-}
-
 - (void)testDynamicCall {
     dynamicCallPrintfFunction();
     dynamicCallAddFunction();
@@ -533,10 +546,6 @@ int functionG(int x) {
     // 0x109812513 <+24>: callq  0x10981ec4e               ; symbol stub for: calculate_add
     //int tmp1 = static_calculate_add(2, 5);
     // 0x109812522 <+39>: callq  0x10981ebe0               ; static_calculate_add at TestStaticLib.m:13
-}
-
-- (void)testDispatchBenchmark {
-    testBenchmark();
 }
 
 #pragma mark - 多线程
@@ -558,6 +567,10 @@ int functionG(int x) {
     [DispatchExamnationTest new];
 }
 
+- (void)testDispatchBenchmark {
+    testBenchmark();
+}
+
 - (void)testThreadFork {
     __unused pid_t mainPid = getpid();
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -568,6 +581,8 @@ int functionG(int x) {
         testWaitUsage();
     });
 }
+
+#pragma mark - C Method
 
 void testWaitUsage(void) {
     pid_t pc,pr;
@@ -704,19 +719,6 @@ void testBenchmark(void) {
     NSLog(@"[[NSMutableArray array] addObject:] Avg. Runtime: %llu ns", t);
 }
 
-#pragma mark - Cluster
-
-- (void)testClassCluster {
-    [TestClassCluster new];
-}
-
-#pragma mark - Cache
-
-- (void)testCacheUsage {
-    self.testCache = [NSCacheTest new];
-    [self.testCache test];
-}
-
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -765,7 +767,7 @@ void testBenchmark(void) {
         _entryTableView.delegate = self;
         _entryTableView.dataSource = self;
         _entryTableView.rowHeight = 44;
-        _entryTableView.estimatedSectionHeaderHeight = 50;
+        _entryTableView.sectionHeaderHeight = 50;
         _entryTableView.estimatedSectionFooterHeight = 0;
         [_entryTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kCellID];
         [_entryTableView registerClass:[UITableViewHeaderFooterView class] forHeaderFooterViewReuseIdentifier:kHeaderID];
