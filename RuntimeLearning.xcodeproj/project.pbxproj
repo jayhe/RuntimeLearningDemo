@@ -49,6 +49,7 @@
 		10D531002227B5B7007AE594 /* TestSubClassSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D530FA2227B5B7007AE594 /* TestSubClassSwizzle.m */; };
 		10D531012227B5B7007AE594 /* TestUnsafeSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D530FB2227B5B7007AE594 /* TestUnsafeSwizzle.m */; };
 		10D531082227CC86007AE594 /* NSObject+HCWillDealloc.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D531072227CC86007AE594 /* NSObject+HCWillDealloc.m */; };
+		10E383A924558132004ADBB5 /* TestViewDidLoadCallStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E383A824558132004ADBB5 /* TestViewDidLoadCallStackViewController.m */; };
 		10F2DB622397AEEA00BA107A /* TestClassCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F2DB612397AEEA00BA107A /* TestClassCluster.m */; };
 		D7335419B0BF156CDF1C5B8E /* libPods-RuntimeLearning.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE1FAC32D91B262A68A7687 /* libPods-RuntimeLearning.a */; };
 /* End PBXBuildFile section */
@@ -179,6 +180,8 @@
 		10D530FE2227B5B7007AE594 /* TestUnsafeSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUnsafeSwizzle.h; sourceTree = "<group>"; };
 		10D531062227CC86007AE594 /* NSObject+HCWillDealloc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+HCWillDealloc.h"; sourceTree = "<group>"; };
 		10D531072227CC86007AE594 /* NSObject+HCWillDealloc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HCWillDealloc.m"; sourceTree = "<group>"; };
+		10E383A724558132004ADBB5 /* TestViewDidLoadCallStackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewDidLoadCallStackViewController.h; sourceTree = "<group>"; };
+		10E383A824558132004ADBB5 /* TestViewDidLoadCallStackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewDidLoadCallStackViewController.m; sourceTree = "<group>"; };
 		10F2DB602397AEEA00BA107A /* TestClassCluster.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestClassCluster.h; sourceTree = "<group>"; };
 		10F2DB612397AEEA00BA107A /* TestClassCluster.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestClassCluster.m; sourceTree = "<group>"; };
 		3FE1FAC32D91B262A68A7687 /* libPods-RuntimeLearning.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RuntimeLearning.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -301,6 +304,8 @@
 				10128705221D3B0700ED6CDE /* AppDelegate.m */,
 				10128707221D3B0700ED6CDE /* ViewController.h */,
 				10128708221D3B0700ED6CDE /* ViewController.m */,
+				10E383A724558132004ADBB5 /* TestViewDidLoadCallStackViewController.h */,
+				10E383A824558132004ADBB5 /* TestViewDidLoadCallStackViewController.m */,
 				1012870A221D3B0700ED6CDE /* Main.storyboard */,
 				1012870D221D3B0900ED6CDE /* Assets.xcassets */,
 				1012870F221D3B0900ED6CDE /* LaunchScreen.storyboard */,
@@ -717,6 +722,7 @@
 				10C3235922781DCF0091B0ED /* NSObject+Injection.m in Sources */,
 				10518D81241F79A600AE5265 /* TestCategoryOveride+TestOverideOne.m in Sources */,
 				1086B37E23B4AE910002F990 /* FishhookUsage.m in Sources */,
+				10E383A924558132004ADBB5 /* TestViewDidLoadCallStackViewController.m in Sources */,
 				1026DD112333173D00738E85 /* TestCode.mm in Sources */,
 				10113DE122CC8F7F00132833 /* CopyUsage.m in Sources */,
 				10D16100237456940051A7BA /* DispatchExamnationTest.m in Sources */,

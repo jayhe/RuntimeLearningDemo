@@ -24,12 +24,40 @@
 #import "NSCacheTest.h"
 #import "HCClangTrace.h"
 #import "RuntimeLearning-Swift.h"
+#include <mach-o/dyld.h>
+#import "DispatchOnceTest.h"
+#import "DispatchBarrierTest.h"
+#import "DispatchGroupLeaveTest.h"
+#import "DispatchExamnationTest.h"
+#import "RuntimeLearningMacro.h"
+#import <objc/runtime.h>
+#import "TestTaggedPointer.h"
+#import "ByteAlignmentTest.h"
+#import "FishhookUsage.h"
+#import "TestMapTable.h"
+#import "TestCode.h"
+#import "DynamicCallFunctionTest.h"
+#import "calculate.h"
+#import "TestStaticLib.h"
+#import "TestMethodInvocation.h"
+#import "TestViewDidLoadCallStackViewController.h"
 
-@interface ViewController () <UITextFieldDelegate>
+static NSString *kCellID    = @"CELLID";
+static NSString *kHeaderID  = @"HEADERID";
+
+void testWaitUsage(void);
+void testLogicNot(NSInteger times);
+void testLogicEqualNil(NSInteger times);
+void testVAList(NSString *format, NSString *format1, ...) NS_REQUIRES_NIL_TERMINATION;
+void testVAList1(NSString *format, NSString *format1, ...) NS_NO_TAIL_CALL;
+void testBenchmark(void);
+
+@interface ViewController () <UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) DynamicCallFunctionTest *dynamicFunctionTest;
-@property (weak, nonatomic) IBOutlet UITextField *aTextFiled;
 @property (nonatomic, strong) NSCacheTest *testCache;
+@property (nonatomic, strong) UITableView *entryTableView;
+@property (nonatomic, strong) NSMutableArray<TableDataSection*> *dataSource;
 
 @end
 
@@ -38,135 +66,25 @@
 //- (void)injected {
 //    [self setupUI];
 //}
-/*
- static void _I_ViewController_viewDidLoad(ViewController * self, SEL _cmd) {
-     ((void (*)(__rw_objc_super *, SEL))(void *)objc_msgSendSuper)((__rw_objc_super){(id)self, (id)class_getSuperclass(objc_getClass("ViewController"))}, sel_registerName("viewDidLoad"));
 
-     NSLog((NSString *)&__NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_ViewController_85b4cc_mi_0, __FUNCTION__);
-     id cls = ((Class (*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("AddressInfo"), sel_registerName("class"));
-     NSLog((NSString *)&__NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_ViewController_85b4cc_mi_1, &cls);
-     id cls1 = ((Class (*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("AddressInfo"), sel_registerName("class"));
-     NSLog((NSString *)&__NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_ViewController_85b4cc_mi_2, &cls1);
-     void *obj = &cls;
-     NSLog((NSString *)&__NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_ViewController_85b4cc_mi_3, &obj);
-     ((void (*)(id, SEL))(void *)objc_msgSend)((id)(__bridgeid)obj, sel_registerName("logDescription"));
-     return;
- }
- 
- RuntimeLearning`-[ViewController viewDidLoad]:
-     0x10b6da030 <+0>:   pushq  %rbp
-     0x10b6da031 <+1>:   movq   %rsp, %rbp
-     0x10b6da034 <+4>:   subq   $0x60, %rsp
-     0x10b6da038 <+8>:   movq   %rdi, -0x8(%rbp)
-     0x10b6da03c <+12>:  movq   %rsi, -0x10(%rbp)
- ->  0x10b6da040 <+16>:  movq   -0x8(%rbp), %rsi
-     0x10b6da044 <+20>:  movq   %rsi, -0x20(%rbp)
-     0x10b6da048 <+24>:  movq   0x21a41(%rip), %rsi       ; (void *)0x000000010b6fc1e0: ViewController
-     0x10b6da04f <+31>:  movq   %rsi, -0x18(%rbp)
-     0x10b6da053 <+35>:  movq   0x211fe(%rip), %rsi       ; "viewDidLoad"
-     0x10b6da05a <+42>:  leaq   -0x20(%rbp), %rdi
-     0x10b6da05e <+46>:  callq  0x10b6ec6d8               ; symbol stub for: objc_msgSendSuper2
-     0x10b6da063 <+51>:  leaq   0x19b06(%rip), %rsi       ; @"%s"
-     0x10b6da06a <+58>:  movq   %rsi, %rdi
-     0x10b6da06d <+61>:  leaq   0x14092(%rip), %rsi       ; "-[ViewController viewDidLoad]"
-     0x10b6da074 <+68>:  movb   $0x0, %al
-     0x10b6da076 <+70>:  callq  0x10b6ec4c2               ; symbol stub for: NSLog
-     0x10b6da07b <+75>:  movq   0x2185e(%rip), %rsi       ; (void *)0x000000010b6fc208: AddressInfo
-     0x10b6da082 <+82>:  movq   0x20f6f(%rip), %rdi       ; "class"
-     0x10b6da089 <+89>:  movq   %rdi, -0x50(%rbp)
-     0x10b6da08d <+93>:  movq   %rsi, %rdi
-     0x10b6da090 <+96>:  movq   -0x50(%rbp), %rsi
-     0x10b6da094 <+100>: callq  *0x18fce(%rip)            ; (void *)0x00007fff513f7780: objc_msgSend
-     0x10b6da09a <+106>: movq   %rax, %rdi
-     0x10b6da09d <+109>: callq  0x10b6ec6f0               ; symbol stub for: objc_retainAutoreleasedReturnValue
-     0x10b6da0a2 <+114>: leaq   0x1ac27(%rip), %rsi       ; @"&cls = %p"
-     0x10b6da0a9 <+121>: movq   %rax, -0x28(%rbp)
-     0x10b6da0ad <+125>: movq   %rsi, %rdi
-     0x10b6da0b0 <+128>: leaq   -0x28(%rbp), %rsi
-     0x10b6da0b4 <+132>: movb   $0x0, %al
-     0x10b6da0b6 <+134>: callq  0x10b6ec4c2               ; symbol stub for: NSLog
-     0x10b6da0bb <+139>: movq   0x2181e(%rip), %rsi       ; (void *)0x000000010b6fc208: AddressInfo
-     0x10b6da0c2 <+146>: movq   0x20f2f(%rip), %rdi       ; "class"
-     0x10b6da0c9 <+153>: movq   %rdi, -0x58(%rbp)
-     0x10b6da0cd <+157>: movq   %rsi, %rdi
-     0x10b6da0d0 <+160>: movq   -0x58(%rbp), %rsi
-     0x10b6da0d4 <+164>: callq  *0x18f8e(%rip)            ; (void *)0x00007fff513f7780: objc_msgSend
-     0x10b6da0da <+170>: movq   %rax, %rdi
-     0x10b6da0dd <+173>: callq  0x10b6ec6f0               ; symbol stub for: objc_retainAutoreleasedReturnValue
-     0x10b6da0e2 <+178>: leaq   0x1ac07(%rip), %rsi       ; @"&cls1 = %p"
-     0x10b6da0e9 <+185>: movq   %rax, -0x30(%rbp)
-     0x10b6da0ed <+189>: movq   %rsi, %rdi
-     0x10b6da0f0 <+192>: leaq   -0x30(%rbp), %rsi
-     0x10b6da0f4 <+196>: movb   $0x0, %al
-     0x10b6da0f6 <+198>: callq  0x10b6ec4c2               ; symbol stub for: NSLog
-     0x10b6da0fb <+203>: leaq   0x1ac0e(%rip), %rsi       ; @"&obj = %p"
-     0x10b6da102 <+210>: leaq   -0x28(%rbp), %rdi
-     0x10b6da106 <+214>: movq   %rdi, -0x38(%rbp)
-     0x10b6da10a <+218>: movq   %rsi, %rdi
-     0x10b6da10d <+221>: leaq   -0x38(%rbp), %rsi
-     0x10b6da111 <+225>: movb   $0x0, %al
-     0x10b6da113 <+227>: callq  0x10b6ec4c2               ; symbol stub for: NSLog
-     0x10b6da118 <+232>: movq   -0x38(%rbp), %rdi
-     0x10b6da11c <+236>: movq   0x2113d(%rip), %rsi       ; "logDescription"
-     0x10b6da123 <+243>: callq  *0x18f3f(%rip)            ; (void *)0x00007fff513f7780: objc_msgSend
-     0x10b6da129 <+249>: xorl   %ecx, %ecx
-     0x10b6da12b <+251>: movl   %ecx, %esi
-     0x10b6da12d <+253>: leaq   -0x30(%rbp), %rdi
-     0x10b6da131 <+257>: callq  0x10b6ec70e               ; symbol stub for: objc_storeStrong
-     0x10b6da136 <+262>: xorl   %ecx, %ecx
-     0x10b6da138 <+264>: movl   %ecx, %esi
-     0x10b6da13a <+266>: leaq   -0x28(%rbp), %rdi
-     0x10b6da13e <+270>: callq  0x10b6ec70e               ; symbol stub for: objc_storeStrong
-     0x10b6da143 <+275>: addq   $0x60, %rsp
-     0x10b6da147 <+279>: popq   %rbp
-     0x10b6da148 <+280>: retq  
- */
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [self initDataSource];
+    [self.view addSubview:self.entryTableView];
     NSLog(@"%s", __FUNCTION__);
-    id cls = [AddressInfo class];
-    NSLog(@"&cls = %p", &cls);
-    id cls1 = [AddressInfo class];
-    NSLog(@"&cls1 = %p", &cls1);
-    void *obj = &cls;
-    NSLog(@"&obj = %p", &obj);
-    /*
-    020-04-20 11:25:03.692657+0800 RuntimeLearning[11725:3284998] &cls = 0x7ffee5734fe8
-    2020-04-20 11:25:03.692745+0800 RuntimeLearning[11725:3284998] &cls1 = 0x7ffee5734fe0
-    2020-04-20 11:25:03.692847+0800 RuntimeLearning[11725:3284998] &obj = 0x7ffee5734fd8
-    [AddressInfo class]这块块区域就在内存中。你要访问它 那么你得有钥匙。&cls就是一把钥匙；void *obj = &cls 就是相当于拷贝一个钥匙
-    */
-    [(__bridge id)obj logDescription];
-//    return;
-    [self testUnsafeSwizzle];
-    [self testCategorySwizzle];
-    [self testSubClassSwizzleMethod];
-    [self testDoSthWhenDealloc];
-    [self testCategoryOveride];
-    [self testClassSwizzle];
-    [self testSwizzleInInitialize];
-    [self testAttributeUsage];
 #if DEBUG
     injectBlock {
         [weakSelf setupUI];
     };
 #endif
-    [self testCopyUsage];
-    [self testTextFieldUsage];
-    [self testArrayReadWhileChange];
-    [self testClassCluster];
-    
 //    NSMutableArray *array = [NSMutableArray arrayWithCapacity:2];
 //    [array addObject:@"1"];
 //    NSObject *obj;
 //    [array addObject:obj];//** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '*** -[__NSArrayM insertObject:atIndex:]: object cannot be nil'
-    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithCapacity:0];
-    [dict setObject:@"2222" forKey:@"111"]; // dict的hash返回的就是count
-    [dict setValue:nil forKey:@"111"]; // 如果value是nil则内部调用remove CoreFoundation`-[__NSDictionaryM removeObjectForKey:]:
-    
-    [self testCacheUsage];
-    [TestSwift testSwiftMethod];
+//    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithCapacity:0];
+//    [dict setObject:@"2222" forKey:@"111"]; // dict的hash返回的就是count
+//    [dict setValue:nil forKey:@"111"]; // 如果value是nil则内部调用remove CoreFoundation`-[__NSDictionaryM removeObjectForKey:]:
 }
 
 void functionF() {
@@ -199,8 +117,6 @@ int functionG(int x) {
     [super viewDidAppear:animated];
     NSLog(@"%s", __FUNCTION__);
 //    [NSThread sleepForTimeInterval:2];
-    functionF();
-    [HCClangTrace generateOrderFile];
 }
 
 #pragma mark - Observer
@@ -212,6 +128,162 @@ int functionG(int x) {
 }
 
 #pragma mark - Private Methods
+
+- (void)initDataSource {
+    TableDataSection *section0 = [TableDataSection new];
+    section0.title = @"基础部分";
+    {
+        TableDataRow *row0 = [TableDataRow new];
+        row0.title = @"拷贝使用";
+        row0.action = @selector(testCopyUsage);
+        TableDataRow *row1 = [TableDataRow new];
+        row1.title = @"集合遍历使用";
+        row1.action = @selector(testArrayReadWhileChange);
+        TableDataRow *row2 = [TableDataRow new];
+        row2.title = @"类簇测试";
+        row2.action = @selector(testClassCluster);
+        TableDataRow *row3 = [TableDataRow new];
+        row3.title = @"NSCache使用";
+        row3.action = @selector(testCacheUsage);
+        TableDataRow *row4 = [TableDataRow new];
+        row4.title = @"__attribute使用";
+        row4.action = @selector(testAttributeUsage);
+        TableDataRow *row5 = [TableDataRow new];
+        row5.title = @"mapTable使用";
+        row5.action = @selector(testMapTableUsage);
+        TableDataRow *row6 = [TableDataRow new];
+        row6.title = @"不定参数使用";
+        row6.action = @selector(testVAListUsage);
+        TableDataRow *row7 = [TableDataRow new];
+        row7.title = @"测试结构体内存管理";
+        row7.action = @selector(testStructUsage);
+        TableDataRow *row8 = [TableDataRow new];
+        row8.title = @"属性名相同就是首字母大小写的差异引发的问题";
+        row8.action = @selector(testPropertyWithSameNameButDifferentCapUsage);
+        section0.items = @[
+            row0,
+            row1,
+            row2,
+            row3,
+            row4,
+            row5,
+            row6,
+            row7,
+            row8].mutableCopy;
+    }
+    
+    TableDataSection *section1 = [TableDataSection new];
+    section1.title = @"Runtime部分";
+    {
+        TableDataRow *row0 = [TableDataRow new];
+        row0.title = @"类方法交换";
+        row0.action = @selector(testClassMethod);
+        TableDataRow *row1 = [TableDataRow new];
+        row1.title = @"实例方法交换";
+        row1.action = @selector(testSwizzleMethod);
+        TableDataRow *row2 = [TableDataRow new];
+        row2.title = @"子类实例方法交换";
+        row2.action = @selector(testSubClassSwizzleMethod);
+        TableDataRow *row3 = [TableDataRow new];
+        row3.title = @"不安全的方法交换";
+        row3.action = @selector(testUnsafeSwizzle);
+        TableDataRow *row4 = [TableDataRow new];
+        row4.title = @"initialize中方法交换";
+        row4.action = @selector(testSwizzleInInitialize);
+        TableDataRow *row5 = [TableDataRow new];
+        row5.title = @"类别方法交换";
+        row5.action = @selector(testCategorySwizzle);
+        TableDataRow *row6 = [TableDataRow new];
+        row6.title = @"类别方法覆盖测试";
+        row6.action = @selector(testCategoryOveride);
+        TableDataRow *row7 = [TableDataRow new];
+        row7.title = @"测试对象释放之后做些事情";
+        row7.action = @selector(testDoSthWhenDealloc);
+        TableDataRow *row8 = [TableDataRow new];
+        row8.title = @"方法调用栈";
+        row8.action = @selector(testCallStack);
+        TableDataRow *row13 = [TableDataRow new];
+        row13.title = @"viewDidLoad方法调用栈面试题";
+        row13.action = @selector(testViewDidLoadCallStack);
+        TableDataRow *row9 = [TableDataRow new];
+        row9.title = @"TaggedPointer测试";
+        row9.action = @selector(testTaggedPointerUsage);
+        TableDataRow *row10 = [TableDataRow new];
+        row10.title = @"字节对齐测试";
+        row10.action = @selector(testWordAlignUsage);
+        TableDataRow *row11 = [TableDataRow new];
+        row11.title = @"fishhook使用";
+        row11.action = @selector(testFishhookUsage);
+        TableDataRow *row12 = [TableDataRow new];
+        row12.title = @"动态调用使用";
+        row12.action = @selector(testDynamicCall);
+        section1.items = @[
+            row0,
+            row1,
+            row2,
+            row3,
+            row4,
+            row5,
+            row6,
+            row7,
+            row8,
+            row13,
+            row9,
+            row10,
+            row11,
+            row12].mutableCopy;
+    }
+    TableDataSection *section2 = [TableDataSection new];
+    section2.title = @"优化部分";
+    {
+        TableDataRow *row0 = [TableDataRow new];
+        row0.title = @"打印ALSR";
+        row0.action = @selector(logLibASLR);
+        TableDataRow *row1 = [TableDataRow new];
+        row1.title = @"Clang插桩测试";
+        row1.action = @selector(testClangTraceUsage);
+        section2.items = @[
+                   row0,
+                   row1].mutableCopy;
+    }
+    
+    TableDataSection *section3 = [TableDataSection new];
+    section3.title = @"多线程部分";
+    {
+        TableDataRow *row0 = [TableDataRow new];
+        row0.title = @"dispatch_once使用";
+        row0.action = @selector(testDispatchOnceUsage);
+        TableDataRow *row1 = [TableDataRow new];
+        row1.title = @"测试几个任务完成后再执行任务";
+        row1.action = @selector(testBarrierUsage);
+        TableDataRow *row2 = [TableDataRow new];
+        row2.title = @"测试dispatch_group_leave异常";
+        row2.action = @selector(testDispatchGroupLeaveUsage);
+        TableDataRow *row3 = [TableDataRow new];
+        row3.title = @"多线程题目";
+        row3.action = @selector(dispatchExamnations);
+        TableDataRow *row4 = [TableDataRow new];
+        row4.title = @"thread fork";
+        row4.action = @selector(testAttributeUsage);
+        TableDataRow *row5 = [TableDataRow new];
+        row5.title = @"dispatch_benchmark做时间统计";
+        row5.action = @selector(testDispatchBenchmark);
+        section3.items = @[
+            row0,
+            row1,
+            row2,
+            row3,
+            row4,
+            row5].mutableCopy;
+    }
+    
+    self.dataSource = @[
+        section0,
+        section1,
+        section2,
+        section3,
+    ].mutableCopy;
+}
 
 - (void)testAttributeUsage {
     [AttributeUsage new];
@@ -332,14 +404,12 @@ int functionG(int x) {
     /*类别中的initialize会覆盖类中的，执行compile source的最后加入的类别的方法*/
 }
 
-- (void)testCopyUsage {
-    [[CopyUsage new] testCopyAndMutableCopy];
+- (void)testPropertyWithSameNameButDifferentCapUsage {
+    [[TestMethodInvocation new] testSetPropertyWhenChangeDeclareOrder];
 }
 
-- (void)testTextFieldUsage {
-    self.aTextFiled.delegate = self;
-    self.aTextFiled.hcui_inputType = HCTextFieldInputTypeIdentityNo;
-    self.aTextFiled.hcui_limitLegnth = 19;
+- (void)testCopyUsage {
+    [[CopyUsage new] testCopyAndMutableCopy];
 }
 
 - (void)testArrayReadWhileChange {
@@ -405,6 +475,235 @@ int functionG(int x) {
 //    }
 }
 
+- (void)logLibASLR {
+    NSLog(@"www.dllhook.com\nDyld image count is: %d.\n", _dyld_image_count());
+    for (int i = 0; i < _dyld_image_count(); i++) {
+        char *image_name = (char *)_dyld_get_image_name(i);
+        const struct mach_header *mh = _dyld_get_image_header(i);
+        intptr_t vmaddr_slide = _dyld_get_image_vmaddr_slide(i);
+        NSLog(@"Image name %s at address 0x%llx and ASLR slide 0x%lx.\n",
+               image_name, (mach_vm_address_t)mh, vmaddr_slide);
+    }
+}
+
+- (void)testCallStack {
+    functionF();
+}
+
+- (void)testViewDidLoadCallStack {
+    TestViewDidLoadCallStackViewController *vc = [TestViewDidLoadCallStackViewController new];
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
+- (void)testClangTraceUsage {
+    [TestSwift testSwiftMethod];
+    
+    [HCClangTrace generateOrderFile];
+}
+
+- (void)testTaggedPointerUsage {
+    [TestTaggedPointer new];
+}
+
+- (void)testWordAlignUsage {
+    [ByteAlignmentTest new];
+}
+
+- (void)testFishhookUsage {
+    [FishhookUsage new];
+}
+
+- (void)testMapTableUsage {
+    [TestMapTable new];
+}
+
+- (void)testVAListUsage {
+    testVAList(@"%@, %@", @"0", @"1", @"11", nil);
+    // testVAList1(@"%@, %@", @"0", @"1", @"11");
+}
+
+- (void)testStructUsage {
+    [TestCode new];
+}
+
+- (void)testDynamicCall {
+    dynamicCallPrintfFunction();
+    dynamicCallAddFunction();
+    //int tmp = calculate_add(2, 5); // 动态库的方法调用 动态库需要dyld load_commonds加载动态库
+    // 0x109812513 <+24>: callq  0x10981ec4e               ; symbol stub for: calculate_add
+    //int tmp1 = static_calculate_add(2, 5);
+    // 0x109812522 <+39>: callq  0x10981ebe0               ; static_calculate_add at TestStaticLib.m:13
+}
+
+- (void)testDispatchBenchmark {
+    testBenchmark();
+}
+
+#pragma mark - 多线程
+
+- (void)testDispatchOnceUsage {
+    [DispatchOnceTest sharedInstance];
+    [DispatchOnceTest sharedInstance];
+}
+
+- (void)testBarrierUsage {
+    [DispatchBarrierTest new];
+}
+
+- (void)testDispatchGroupLeaveUsage {
+    [DispatchGroupLeaveTest new];
+}
+
+- (void)dispatchExamnations {
+    [DispatchExamnationTest new];
+}
+
+- (void)testThreadFork {
+    __unused pid_t mainPid = getpid();
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        int *statloc = NULL;
+        __unused pid_t tmpPid = getpid();
+        pid_t pid = wait(statloc);
+        NSLog(@"pid_t = %d", (int)pid);
+        testWaitUsage();
+    });
+}
+
+void testWaitUsage(void) {
+    pid_t pc,pr;
+    pc = fork();
+    if(pc < 0) {
+        NSLog(@"error ocurred!/n");
+    } else if (pc == 0) {
+        NSLog(@"This is child process with pid of %d/n", getpid());
+        sleep(5);
+    } else {
+        pr = wait(NULL);
+        NSLog(@"I catched a child process with pid of %d/n", pr);
+    }
+}
+
+void testLogicNot(NSInteger times) {
+    if (times == 0) {
+        return;
+    }
+    CFAbsoluteTime totalCost = 0;
+    for (NSInteger i = 0; i < times; i ++) {
+        CFAbsoluteTime time = CFAbsoluteTimeGetCurrent();
+        NSObject *test;
+        for (NSInteger j = 0; j < 100000000; j ++) {
+            if (!test) {
+                
+            }
+        }
+        totalCost += (CFAbsoluteTimeGetCurrent() - time);
+        NSLog(@"time cost: %.4f", CFAbsoluteTimeGetCurrent() - time);
+    }
+    NSLog(@"average time cost: %.4f", totalCost / times);
+    /*
+     2019-07-13 10:07:36.597256+0800 RuntimeLearning[7885:8687005] time cost: 0.1631
+     2019-07-13 10:07:36.764009+0800 RuntimeLearning[7885:8687005] time cost: 0.1666
+     2019-07-13 10:07:36.927153+0800 RuntimeLearning[7885:8687005] time cost: 0.1630
+     2019-07-13 10:07:37.095567+0800 RuntimeLearning[7885:8687005] time cost: 0.1683
+     2019-07-13 10:07:37.256778+0800 RuntimeLearning[7885:8687005] time cost: 0.1611
+     2019-07-13 10:07:37.412076+0800 RuntimeLearning[7885:8687005] time cost: 0.1552
+     2019-07-13 10:07:37.577263+0800 RuntimeLearning[7885:8687005] time cost: 0.1650
+     2019-07-13 10:07:37.732546+0800 RuntimeLearning[7885:8687005] time cost: 0.1552
+     2019-07-13 10:07:37.901192+0800 RuntimeLearning[7885:8687005] time cost: 0.1685
+     2019-07-13 10:07:38.061348+0800 RuntimeLearning[7885:8687005] time cost: 0.1600
+     2019-07-13 10:07:38.225245+0800 RuntimeLearning[7885:8687005] time cost: 0.1638
+     2019-07-13 10:07:38.383679+0800 RuntimeLearning[7885:8687005] time cost: 0.1583
+     2019-07-13 10:07:38.550693+0800 RuntimeLearning[7885:8687005] time cost: 0.1669
+     2019-07-13 10:07:38.715068+0800 RuntimeLearning[7885:8687005] time cost: 0.1642
+     2019-07-13 10:07:38.886890+0800 RuntimeLearning[7885:8687005] time cost: 0.1717
+     2019-07-13 10:07:39.041844+0800 RuntimeLearning[7885:8687005] time cost: 0.1548
+     2019-07-13 10:07:39.203011+0800 RuntimeLearning[7885:8687005] time cost: 0.1610
+     2019-07-13 10:07:39.362856+0800 RuntimeLearning[7885:8687005] time cost: 0.1597
+     2019-07-13 10:07:39.523183+0800 RuntimeLearning[7885:8687005] time cost: 0.1602
+     2019-07-13 10:07:39.677425+0800 RuntimeLearning[7885:8687005] time cost: 0.1541
+     2019-07-13 10:07:39.677538+0800 RuntimeLearning[7885:8687005] average time cost: 0.1620
+     */
+}
+
+void testLogicEqualNil(NSInteger times) {
+    if (times == 0) {
+        return;
+    }
+    CFAbsoluteTime totalCost = 0;
+    for (NSInteger i = 0; i < 20; i ++) {
+        CFAbsoluteTime time = CFAbsoluteTimeGetCurrent();
+        NSObject *test;
+        for (NSInteger j = 0; j < 100000000; j ++) {
+            if (test == nil) {
+                
+            }
+        }
+        totalCost += (CFAbsoluteTimeGetCurrent() - time);
+        NSLog(@"time cost: %.4f", CFAbsoluteTimeGetCurrent() - time);
+    }
+    NSLog(@"average time cost: %.4f", totalCost / times);
+    /*
+     2019-07-13 10:08:27.736487+0800 RuntimeLearning[7925:8688951] time cost: 0.1454
+     2019-07-13 10:08:27.880481+0800 RuntimeLearning[7925:8688951] time cost: 0.1438
+     2019-07-13 10:08:28.023278+0800 RuntimeLearning[7925:8688951] time cost: 0.1427
+     2019-07-13 10:08:28.173704+0800 RuntimeLearning[7925:8688951] time cost: 0.1503
+     2019-07-13 10:08:28.320942+0800 RuntimeLearning[7925:8688951] time cost: 0.1471
+     2019-07-13 10:08:28.469281+0800 RuntimeLearning[7925:8688951] time cost: 0.1482
+     2019-07-13 10:08:28.614297+0800 RuntimeLearning[7925:8688951] time cost: 0.1448
+     2019-07-13 10:08:28.762971+0800 RuntimeLearning[7925:8688951] time cost: 0.1486
+     2019-07-13 10:08:28.907184+0800 RuntimeLearning[7925:8688951] time cost: 0.1441
+     2019-07-13 10:08:29.052712+0800 RuntimeLearning[7925:8688951] time cost: 0.1454
+     2019-07-13 10:08:29.194756+0800 RuntimeLearning[7925:8688951] time cost: 0.1419
+     2019-07-13 10:08:29.337975+0800 RuntimeLearning[7925:8688951] time cost: 0.1431
+     2019-07-13 10:08:29.481757+0800 RuntimeLearning[7925:8688951] time cost: 0.1436
+     2019-07-13 10:08:29.626273+0800 RuntimeLearning[7925:8688951] time cost: 0.1443
+     2019-07-13 10:08:29.773237+0800 RuntimeLearning[7925:8688951] time cost: 0.1468
+     2019-07-13 10:08:29.920283+0800 RuntimeLearning[7925:8688951] time cost: 0.1469
+     2019-07-13 10:08:30.063997+0800 RuntimeLearning[7925:8688951] time cost: 0.1436
+     2019-07-13 10:08:30.207566+0800 RuntimeLearning[7925:8688951] time cost: 0.1434
+     2019-07-13 10:08:30.352019+0800 RuntimeLearning[7925:8688951] time cost: 0.1443
+     2019-07-13 10:08:30.502022+0800 RuntimeLearning[7925:8688951] time cost: 0.1499
+     2019-07-13 10:08:30.502139+0800 RuntimeLearning[7925:8688951] average time cost: 0.1454
+     */
+}
+
+void testVAList(NSString *format, NSString *format1, ...) {
+    va_list va_list;
+    va_start(va_list, format1);
+    NSString *param = format1;
+    while (param != nil) {
+        NSLog(@"&param = %p\n and param = %@", param, param);
+        param = va_arg(va_list, id);
+    }
+    va_end(va_list);
+}
+
+void testVAList1(NSString *format, NSString *format1, ...) {
+    va_list va_list;
+    va_start(va_list, format1);
+    NSString *param = format1;
+    while (param != nil) {
+        NSLog(@"&param = %p\n and param = %@", param, param);
+        param = va_arg(va_list, id);
+    }
+    va_end(va_list);
+}
+
+
+void testBenchmark(void) {
+    NSInteger count = 1000, iterations = 100;
+    NSString *obj = @"test";
+    uint64_t t = dispatch_benchmark(iterations, ^{
+        @autoreleasepool {
+            NSMutableArray *mutableArray = [NSMutableArray array];
+            for (size_t i = 0; i < count; i++) {
+                [mutableArray addObject:obj];
+            }
+        }
+    });
+    NSLog(@"[[NSMutableArray array] addObject:] Avg. Runtime: %llu ns", t);
+}
+
 #pragma mark - Cluster
 
 - (void)testClassCluster {
@@ -418,57 +717,75 @@ int functionG(int x) {
     [self.testCache test];
 }
 
-#pragma mark - UITextFieldDelegate
+#pragma mark - UITableViewDataSource
 
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    return [textField hcui_shouldChangeCharactersInRange:range replacementString:string];
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return self.dataSource.count;
 }
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    TableDataSection *sectionData = [self.dataSource objectAtIndex:section];
+    return sectionData.items.count;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    UITableViewHeaderFooterView *headerView = [tableView dequeueReusableHeaderFooterViewWithIdentifier:kHeaderID];
+    TableDataSection *sectionData = [self.dataSource objectAtIndex:section];
+    headerView.textLabel.text = sectionData.title;
+    
+    return headerView;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellID];
+    TableDataSection *sectionData = [self.dataSource objectAtIndex:indexPath.section];
+    TableDataRow *item = [sectionData.items objectAtIndex:indexPath.row];
+    cell.textLabel.text = item.title;
+    
+    return cell;
+}
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    TableDataSection *sectionData = [self.dataSource objectAtIndex:indexPath.section];
+    TableDataRow *item = [sectionData.items objectAtIndex:indexPath.row];
+    if (item.action && [self respondsToSelector:item.action]) {
+        ((void(*)(id, SEL))objc_msgSend)(self, item.action);
+    }
+}
+
+#pragma mark - Getter && Setter
+
+- (UITableView *)entryTableView {
+    if (_entryTableView == nil) {
+        _entryTableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        _entryTableView.delegate = self;
+        _entryTableView.dataSource = self;
+        _entryTableView.rowHeight = 44;
+        _entryTableView.estimatedSectionHeaderHeight = 50;
+        _entryTableView.estimatedSectionFooterHeight = 0;
+        [_entryTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:kCellID];
+        [_entryTableView registerClass:[UITableViewHeaderFooterView class] forHeaderFooterViewReuseIdentifier:kHeaderID];
+    }
+    
+    return _entryTableView;
+}
+
 
 @end
 
+@implementation TableDataSection
 
-@implementation AddressInfo
 
-- (void)logDescription {
-    /*
-     1. obj已经满足了构成一个objc对象的全部要求（首地址指向ClassObject），遂能够正常走消息机制；由于这个人造的对象在栈上，而取self.addressName的操作本质上是self指针在内存向高位地址偏移（64位下一个指针是8字节），按viewDidLoad执行时各个变量入栈顺序从高到底为（self, _cmd, self.class, self, obj）（前两个是方法隐含入参，随后两个为super调用的两个压栈参数），遂栈低地址的obj+8取到了self。
-     2. [SomeClass class] 内部实现返回的是self；self转成指针，首地址就是isa的地址；对象的方法列表是在类的isa中
-     3.
-     // objc_msgSendSuper2() takes the current search class, not its superclass.
-     OBJC_EXPORT id objc_msgSendSuper2(struct objc_super *super, SEL op, ...)
-         __OSX_AVAILABLE_STARTING(__MAC_10_6, __IPHONE_2_0);
-     4.
-     struct objc_super {
-         /// Specifies an instance of a class.
-         __unsafe_unretained id receiver;
+@end
 
-         /// Specifies the particular superclass of the instance to message.
-     #if !defined(__cplusplus)  &&  !__OBJC2__
-         __unsafe_unretained Class class;
-     #else
-         __unsafe_unretained Class super_class;
-     #endif
-     };
-     #endif
-     */
-    /*
-     地址由高到低
-     |self       |
-     |_cmd       |
-     |super_class|
-     |self       |
-     |obj        | <--- sp
-     */
-    NSLog(@"self.name = %@", self.addressName);
-    // 2020-04-16 14:35:19.912864+0800 RuntimeLearning[63814:1887914] self.name = <ViewController: 0x7f96b170bdc0>
-    NSLog(@"self.description = %@", self.description);
-    // 2020-04-16 14:38:24.022511+0800 RuntimeLearning[63851:1890041] self.description = <AddressInfo: 0x7ffee3889fe8>
-    NSLog(@"self.addressNumber = %@", self.addressNumber);
-    // 2020-04-16 14:39:36.469594+0800 RuntimeLearning[63880:1891104] self.addressNumber = ViewController
-    //NSLog(@"self.addressId = %@", self.addressId);
-    // Thread 1: EXC_BAD_ACCESS (code=EXC_I386_GPFLT)
-    NSLog(@"self.addressDesc = %@", self.addressDesc);
-    // 2020-04-20 11:14:58.234131+0800 RuntimeLearning[11587:3275641] self.addressDesc = <ViewController: 0x7fdb8bc0f5c0>
+@implementation TableDataRow
+
+- (void)dealloc {
+    _action = nil;
 }
 
 @end

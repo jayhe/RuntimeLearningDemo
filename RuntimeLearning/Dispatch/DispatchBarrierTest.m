@@ -72,6 +72,7 @@
             NSLog(@"testBarrier-task2:async task");
         });
     });
+    // dispatch_barrier_async_and_wait
     dispatch_barrier_async_and_wait(queue, ^{
         NSLog(@"dispatch_barrier_async_and_wait");
     });

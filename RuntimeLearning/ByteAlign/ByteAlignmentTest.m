@@ -50,6 +50,10 @@ static inline size_t word_align(size_t x) {
 }
 
 - (void)test {
+    NSObject *obj = [[NSObject alloc] init];
+    uintptr_t disguiseValue = ~(uintptr_t)obj;
+    __unused uintptr_t undisguiseValue = ~disguiseValue;
+    
     size_t charSize = sizeof(char);
     NSLog(@"charSize = %zu", charSize);
     

@@ -13,14 +13,19 @@
 
 @end
 
-@interface AddressInfo : NSObject
+@class TableDataRow;
 
-@property (nonatomic, copy) NSString *addressName;
-@property (nonatomic, copy) NSString *addressNumber;
-@property (nonatomic, copy) NSString *addressId;
-@property (nonatomic, copy) NSString *addressDesc;
+@interface TableDataSection : NSObject
 
-- (void)logDescription;
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, strong) NSMutableArray<TableDataRow *> *items;
+
+@end
+
+@interface TableDataRow : NSObject
+
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, assign) SEL action;
 
 @end
 
