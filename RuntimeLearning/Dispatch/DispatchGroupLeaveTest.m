@@ -7,23 +7,38 @@
 //
 
 #import "DispatchGroupLeaveTest.h"
+#import <fishhook/fishhook.h>
+
+static void (*system_dispatch_group_leave)(dispatch_group_t dg);
+void mine_dispatch_group_leave(dispatch_group_t dg);
 
 @implementation DispatchGroupLeaveTest
 
 - (instancetype)init {
     self = [super init];
     if (self) {
+        [self hook];
         [self testGroupLeaveCrash];
     }
     
     return self;
 }
+
+- (void)hook {
+    struct rebinding rb = {};
+    rb.name = "dispatch_group_leave";
+    rb.replaced = (void **)&system_dispatch_group_leave;
+    rb.replacement = (void *)mine_dispatch_group_leave;
+    struct rebinding rbs[] = {rb};
+    rebind_symbols(rbs, 1);
+}
+
 // xcrun -sdk iphonesimulator clang -S DispatchGroupLeaveTest.m
 - (void)testGroupLeaveCrash {
     dispatch_group_t group = dispatch_group_create();
     dispatch_group_enter(group);
     dispatch_group_leave(group);
-//    dispatch_group_leave(group); // "BUG IN CLIENT OF LIBDISPATCH: Unbalanced call to dispatch_group_leave()
+    dispatch_group_leave(group); // "BUG IN CLIENT OF LIBDISPATCH: Unbalanced call to dispatch_group_leave()
 }
 
 /*
@@ -70,5 +85,24 @@
  }
 
  */
+
+struct my_dispatch_queue_t {
+    int xref;
+    int ref;
+    int count;
+    int gen;
+    int waiters;
+    int notifs;
+};
+
+void mine_dispatch_group_leave(dispatch_group_t dg) {
+    // 尝试hook系统的dispatch_group_leave符号，这里拦截系统的leave和enter不批对导致的异常
+    struct my_dispatch_queue_t *my_queue_t = (__bridge void *)dg;
+    if (my_queue_t->count <= 0) {
+        //NSCAssert(NO, @"dispatch_group_leave这里出错了");
+    } else {
+        system_dispatch_group_leave(dg);
+    }
+}
 
 @end

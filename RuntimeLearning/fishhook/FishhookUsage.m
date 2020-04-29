@@ -21,12 +21,14 @@ static int (*libadd_calculate_add)(int a, int b);
 - (instancetype)init {
     self = [super init];
     if (self) {
-        [self testHookCocoaFrameworkMethod];
-        //[self testHookSelfDefineDynamicFrameworkMethod]; // 模拟器可测试
+        //[self testHookCocoaFrameworkMethod];
+        [self testHookSelfDefineDynamicFrameworkMethod]; // 模拟器可测试
     }
     
     return self;
 }
+
+#pragma mark - hook Cocoa框架中的C函数符号
 
 - (void)testHookCocoaFrameworkMethod {
     NSLog(@"before objc_setAssociatedObject hook");
@@ -47,7 +49,10 @@ void hook_objc_setAssociatedObject(id _Nonnull object, const void * _Nonnull key
     system_objc_setAssociatedObject(object, key, value, policy);
 }
 
+#pragma mark - hook自定义的动态库中的C函数符号
+
 - (void)testHookSelfDefineDynamicFrameworkMethod {
+#if TARGET_IPHONE_SIMULATOR
     int sum = calculate_add(2, 3);
     NSLog(@"before calculate_add hook: 2 + 3 = %d", sum);
     struct rebinding rebindingStruct;
@@ -58,6 +63,7 @@ void hook_objc_setAssociatedObject(id _Nonnull object, const void * _Nonnull key
     
     int sum1 = calculate_add(2, 3);
     NSLog(@"after calculate_add hook: 2 + 3 = %d", sum1);
+#endif
 }
 
 int hook_calculate_add(int a, int b) {

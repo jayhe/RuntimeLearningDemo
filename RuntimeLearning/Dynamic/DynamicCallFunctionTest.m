@@ -40,6 +40,7 @@ void dynamicCallPrintfFunction(void) {
     const char *dylib_path = "/usr/lib/libSystem.dylib";
     //打开动态库
     void *handle = dlopen(dylib_path, RTLD_GLOBAL | RTLD_NOW);
+    //void *handle = dlopen(NULL, RTLD_GLOBAL | RTLD_NOW); //传个NULL也可以
     if (handle == NULL) {
         //打开动态库出错
         fprintf(stderr, "%s\n", dlerror());
