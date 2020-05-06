@@ -22,6 +22,26 @@
 
 static inline size_t word_align(size_t x) {
     return (x + WORD_MASK) & ~WORD_MASK;
+    /*
+     1. (x + 7) / 8 * 8 [取上整 * 8]
+     2. ((x + 7) >> 3) << 3 // 7 == 0111
+     3. 将(x + 7)的低三位置0
+     p/d 输出10进制 p/x输出16进制 p/o输出8进制
+     (lldb) p/x ~7
+     (int) $7 = 0xfffffff8
+     */
+}
+
+static inline size_t word_align10(size_t x) {
+    /*
+     1. (x + 9) / 10 * 10 [取上整 * 10]
+     2. 9 == 1001 10 == 1010
+     3. (lldb) p/x ~9
+     (int) $4 = 0xfffffffa
+     6 == 0110
+     */
+    return ((x + 9) / 10) * 10;
+    //return (x + 9) & 0xfffffffa;// ???
 }
 
 @interface ByteAlignmentTest ()
@@ -43,10 +63,17 @@ static inline size_t word_align(size_t x) {
     self = [super init];
     if (self) {
 //        _testString = @"test test test test test";
-        [self test];
+        //[self test];
+        [self testAlign10Byte];
     }
     
     return self;
+}
+
+- (void)testAlign10Byte {
+    for (NSInteger i = 1; i < 112; i++) {
+        NSLog(@"%ld align with 10 byte is %ld", i, word_align10(i));
+    }
 }
 
 - (void)test {
@@ -85,7 +112,7 @@ static inline size_t word_align(size_t x) {
     NSLog(@"sizeOf self = %ld", sizeof(self)); // 8
     NSLog(@"class_getInstanceSize self = %ld", class_getInstanceSize(self.class)); // 40 [对象本身8 + 4 + 1 + 2 + 2 + 8 + 8 再对齐]
     NSLog(@"malloc_size self = %ld", malloc_size((__bridge const void *)(self))); // 48
-    // 1. 没有定义任何属性的时候，sizeof(self)、class_getInstanceSize(self.class)是8 malloc_size是16 [isa的大小是8 内部创建的时候判断小于16则会返回16]
+    // 1. 没有定义任何属性的时候，sizeof(self)、class_getInstanceSize(self.class)是8 malloc_size是16 [isa的大小是8 内部创建的时候判断小于16则会返回16] malloc出来是16字节对齐
     // 2. OC对象的指针 size是8字节
     // 3. 64bit字节按照8来对齐
     // 4. malloc的大小对于分配的空间小于256的时候内部是nano_malloc，字节对齐的规则是16的倍数

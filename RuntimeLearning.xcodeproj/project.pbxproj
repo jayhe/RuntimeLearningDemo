@@ -50,6 +50,7 @@
 		10D531012227B5B7007AE594 /* TestUnsafeSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D530FB2227B5B7007AE594 /* TestUnsafeSwizzle.m */; };
 		10D531082227CC86007AE594 /* NSObject+HCWillDealloc.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D531072227CC86007AE594 /* NSObject+HCWillDealloc.m */; };
 		10E383A924558132004ADBB5 /* TestViewDidLoadCallStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E383A824558132004ADBB5 /* TestViewDidLoadCallStackViewController.m */; };
+		10E6B1402462863E00A37097 /* KeychainUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E6B13F2462863E00A37097 /* KeychainUsage.m */; };
 		10F2DB622397AEEA00BA107A /* TestClassCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F2DB612397AEEA00BA107A /* TestClassCluster.m */; };
 		D7335419B0BF156CDF1C5B8E /* libPods-RuntimeLearning.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE1FAC32D91B262A68A7687 /* libPods-RuntimeLearning.a */; };
 /* End PBXBuildFile section */
@@ -182,6 +183,9 @@
 		10D531072227CC86007AE594 /* NSObject+HCWillDealloc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HCWillDealloc.m"; sourceTree = "<group>"; };
 		10E383A724558132004ADBB5 /* TestViewDidLoadCallStackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewDidLoadCallStackViewController.h; sourceTree = "<group>"; };
 		10E383A824558132004ADBB5 /* TestViewDidLoadCallStackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewDidLoadCallStackViewController.m; sourceTree = "<group>"; };
+		10E6B13E2462863E00A37097 /* KeychainUsage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeychainUsage.h; sourceTree = "<group>"; };
+		10E6B13F2462863E00A37097 /* KeychainUsage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeychainUsage.m; sourceTree = "<group>"; };
+		10E6B141246296BF00A37097 /* RuntimeLearning.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RuntimeLearning.entitlements; sourceTree = "<group>"; };
 		10F2DB602397AEEA00BA107A /* TestClassCluster.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestClassCluster.h; sourceTree = "<group>"; };
 		10F2DB612397AEEA00BA107A /* TestClassCluster.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestClassCluster.m; sourceTree = "<group>"; };
 		3FE1FAC32D91B262A68A7687 /* libPods-RuntimeLearning.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RuntimeLearning.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -286,6 +290,7 @@
 		10128703221D3B0700ED6CDE /* RuntimeLearning */ = {
 			isa = PBXGroup;
 			children = (
+				10E6B141246296BF00A37097 /* RuntimeLearning.entitlements */,
 				10128728221D3B7200ED6CDE /* Utility */,
 				10113DDE22CC8F5600132833 /* Copy */,
 				1001DA08222E51E700E5EBEF /* Category */,
@@ -300,6 +305,7 @@
 				1072564123B30D9E00BC3A00 /* MapTable */,
 				1086B37B23B4AE6E0002F990 /* fishhook */,
 				107B55D32410C76F00EDCCD6 /* Cache */,
+				10E6B13D2462861F00A37097 /* Keychain */,
 				10128704221D3B0700ED6CDE /* AppDelegate.h */,
 				10128705221D3B0700ED6CDE /* AppDelegate.m */,
 				10128707221D3B0700ED6CDE /* ViewController.h */,
@@ -465,6 +471,15 @@
 				10D531072227CC86007AE594 /* NSObject+HCWillDealloc.m */,
 			);
 			path = Association;
+			sourceTree = "<group>";
+		};
+		10E6B13D2462861F00A37097 /* Keychain */ = {
+			isa = PBXGroup;
+			children = (
+				10E6B13E2462863E00A37097 /* KeychainUsage.h */,
+				10E6B13F2462863E00A37097 /* KeychainUsage.m */,
+			);
+			path = Keychain;
 			sourceTree = "<group>";
 		};
 		10F2DB5F2397AEC200BA107A /* ClassCluster */ = {
@@ -731,6 +746,7 @@
 				10128733221D3B7300ED6CDE /* NSObject+RLSafe.m in Sources */,
 				10BF41EB228012A7009F291E /* DispatchBarrierTest.m in Sources */,
 				10A6CA9D241CA882002BFAC5 /* TestMethodInvocation.m in Sources */,
+				10E6B1402462863E00A37097 /* KeychainUsage.m in Sources */,
 				10F2DB622397AEEA00BA107A /* TestClassCluster.m in Sources */,
 				104BF8BD22771E9D000C464E /* DynamicCallFunctionTest.m in Sources */,
 				10BF41F2228120C1009F291E /* DispatchGroupLeaveTest.m in Sources */,
@@ -939,6 +955,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_OPTIMIZATION_PROFILE_FILE = "$(SRCROOT)/OptimizationProfiles/$(PROJECT_NAME).profdata";
 				CLANG_USE_OPTIMIZATION_PROFILE = YES;
+				CODE_SIGN_ENTITLEMENTS = RuntimeLearning/RuntimeLearning.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2ZY2L7GYS;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -981,6 +998,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_USE_OPTIMIZATION_PROFILE = YES;
+				CODE_SIGN_ENTITLEMENTS = RuntimeLearning/RuntimeLearning.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2ZY2L7GYS;
 				GCC_OPTIMIZATION_LEVEL = s;

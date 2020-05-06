@@ -86,18 +86,18 @@ void mine_dispatch_group_leave(dispatch_group_t dg);
 
  */
 
-struct my_dispatch_queue_t {
+typedef struct my_dispatch_queue_t {
     int xref;
     int ref;
     int count;
     int gen;
     int waiters;
     int notifs;
-};
+} *dispatch_queue_t_layout;
 
 void mine_dispatch_group_leave(dispatch_group_t dg) {
     // 尝试hook系统的dispatch_group_leave符号，这里拦截系统的leave和enter不批对导致的异常
-    struct my_dispatch_queue_t *my_queue_t = (__bridge void *)dg;
+    dispatch_queue_t_layout my_queue_t = (__bridge void *)dg;
     if (my_queue_t->count <= 0) {
         //NSCAssert(NO, @"dispatch_group_leave这里出错了");
     } else {

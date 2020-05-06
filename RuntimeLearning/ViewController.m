@@ -41,6 +41,8 @@
 #import "TestStaticLib.h"
 #import "TestMethodInvocation.h"
 #import "TestViewDidLoadCallStackViewController.h"
+#import <fishhook/fishhook.h>
+#import "KeychainUsage.h"
 
 static NSString *kCellID    = @"CELLID";
 static NSString *kHeaderID  = @"HEADERID";
@@ -160,6 +162,9 @@ int functionG(int x) {
         TableDataRow *row8 = [TableDataRow new];
         row8.title = @"属性名相同就是首字母大小写的差异引发的问题";
         row8.action = @selector(testPropertyWithSameNameButDifferentCapUsage);
+        TableDataRow *row9 = [TableDataRow new];
+        row9.title = @"钥匙串的使用";
+        row9.action = @selector(testKeychainUsage);
         section0.items = @[
             row0,
             row1,
@@ -169,7 +174,8 @@ int functionG(int x) {
             row5,
             row6,
             row7,
-            row8].mutableCopy;
+            row8,
+            row9].mutableCopy;
     }
     
     TableDataSection *section1 = [TableDataSection new];
@@ -382,6 +388,11 @@ int functionG(int x) {
 - (void)testCacheUsage {
     self.testCache = [NSCacheTest new];
     [self.testCache test];
+}
+
+- (void)testKeychainUsage {
+    KeychainUsage *keychain = [[KeychainUsage alloc] initWithService:@"com.hc.runtimelearning"];
+    [keychain testKeychainUsage];
 }
 
 #pragma mark - Runtime部分
