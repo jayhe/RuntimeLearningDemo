@@ -15,15 +15,21 @@ OSStatus (*System_SecItemCopyMatching)(CFDictionaryRef query, CFTypeRef * __null
 @interface KeychainUsage ()
 
 @property (nonatomic, copy) NSString *service;
+@property (nonatomic, nullable, copy) NSString *accessGroup;
 
 @end
 
 @implementation KeychainUsage
 
 - (instancetype)initWithService:(NSString *)service {
+    return [self initWithService:service accessGroup:nil];
+}
+
+- (instancetype)initWithService:(NSString *)service accessGroup:(NSString *)accessGroup {
     self = [super init];
     if (self) {
         _service = service;
+        _accessGroup = accessGroup;
     }
     
     return self;
@@ -40,18 +46,18 @@ OSStatus (*System_SecItemCopyMatching)(CFDictionaryRef query, CFTypeRef * __null
 
 - (nullable id)queryItemByKey:(NSString *)key {
     NSMutableDictionary *query = [NSMutableDictionary dictionary];
+    [query addEntriesFromDictionary:[self commonParams]];
     query[(__bridge id)kSecMatchLimit] = (__bridge id)kSecMatchLimitAll;
     query[(__bridge id)kSecReturnAttributes] = @YES;
     query[(__bridge id)kSecReturnData] = @YES;
-    query[(__bridge id)kSecClass] = (__bridge id)kSecClassGenericPassword;
     query[(__bridge id)kSecAttrAccount] = key;
     query[(__bridge id)kSecAttrAccessible] = (__bridge id)kSecAttrAccessibleAlways;
-    query[(__bridge id)kSecAttrService] = self.service;
     
     CFTypeRef result = NULL;
     OSStatus status = SecItemCopyMatching((__bridge CFDictionaryRef)query, &result);
     // -50 errSecParam
     // -25300 errSecItemNotFound
+    // -34018 errSecMissingEntitlement 设置了accessGroup则需要
     if (status != errSecSuccess) {
         return nil;
     } else {
@@ -72,9 +78,8 @@ OSStatus (*System_SecItemCopyMatching)(CFDictionaryRef query, CFTypeRef * __null
 
 - (BOOL)updateItem:(NSString *)value forKey:(NSString *)key {
     NSMutableDictionary *query = [NSMutableDictionary dictionary];
-    query[(__bridge id)kSecClass] = (__bridge id)kSecClassGenericPassword;
+    [query addEntriesFromDictionary:[self commonParams]];
     query[(__bridge id)kSecAttrAccount] = key;
-    query[(__bridge id)kSecAttrService] = self.service;
     NSMutableDictionary *updateDict = [NSMutableDictionary dictionary];
     //updateDict[(__bridge id)kSecAttrService] = self.service;
     updateDict[(__bridge id)kSecValueData] = [value dataUsingEncoding:NSUTF8StringEncoding];
@@ -89,9 +94,8 @@ OSStatus (*System_SecItemCopyMatching)(CFDictionaryRef query, CFTypeRef * __null
 
 - (BOOL)deleteItemByKey:(NSString *)key {
     NSMutableDictionary *query = [NSMutableDictionary dictionary];
-    query[(__bridge id)kSecClass] = (__bridge id)kSecClassGenericPassword;
+    [query addEntriesFromDictionary:[self commonParams]];
     query[(__bridge id)kSecAttrAccount] = key;
-    query[(__bridge id)kSecAttrService] = self.service;
     OSStatus status = SecItemDelete((__bridge CFDictionaryRef)query);
     if (status != errSecSuccess) {
         return NO;
@@ -103,10 +107,9 @@ OSStatus (*System_SecItemCopyMatching)(CFDictionaryRef query, CFTypeRef * __null
 - (BOOL)_insertItem:(NSString *)value forKey:(NSString *)key {
     BOOL isSuccess;
     NSMutableDictionary *query = [[NSMutableDictionary alloc] init];
-    query[(__bridge id)kSecClass] = (__bridge id)kSecClassGenericPassword;
+    [query addEntriesFromDictionary:[self commonParams]];
     query[(__bridge id)kSecAttrAccessible] = (__bridge id)kSecAttrAccessibleAlways;
     query[(__bridge id)kSecAttrAccount] = key;
-    query[(__bridge id)kSecAttrService] = self.service;
     query[(__bridge id)kSecValueData] = [value dataUsingEncoding:NSUTF8StringEncoding];
     OSStatus status = SecItemAdd((__bridge CFDictionaryRef)query, NULL);
     // -25299 errSecDuplicateItem
@@ -119,8 +122,21 @@ OSStatus (*System_SecItemCopyMatching)(CFDictionaryRef query, CFTypeRef * __null
     return isSuccess;
 }
 
+- (NSDictionary *)commonParams {
+    NSMutableDictionary *dict = [NSMutableDictionary dictionary];
+    if (self.service.length) {
+        dict[(__bridge id)kSecAttrService] = self.service;
+    }
+    if (self.accessGroup.length) {
+        dict[(__bridge id)kSecAttrAccessGroup] = self.accessGroup;
+    }
+    dict[(__bridge id)kSecClass] = (__bridge id)kSecClassGenericPassword;
+    
+    return dict.copy;
+}
+
 - (void)testKeychainUsage {
-    NSString *account = @"hechao";
+    NSString *account = @"jayhe";
     BOOL insertStatus = [self insertItem:@"111111" forKey:account];
     if (insertStatus) {
         NSString *pwd = [self queryItemByKey:account];

@@ -12,7 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface KeychainUsage : NSObject
 
-- (instancetype)initWithService:(NSString *)service;
+- (instancetype)initWithService:(nullable NSString *)service;
+- (instancetype)initWithService:(nullable NSString *)service accessGroup:(nullable NSString *)accessGroup;
 
 - (void)testKeychainUsage;
 

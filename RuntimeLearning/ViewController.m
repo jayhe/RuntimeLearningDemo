@@ -391,7 +391,7 @@ int functionG(int x) {
 }
 
 - (void)testKeychainUsage {
-    KeychainUsage *keychain = [[KeychainUsage alloc] initWithService:@"com.hc.runtimelearning"];
+    KeychainUsage *keychain = [[KeychainUsage alloc] initWithService:@"com.hc.runtimelearning" accessGroup:@"group.hc.demo"]; // L2ZY2L7GYS.group.hc.demo
     [keychain testKeychainUsage];
 }
 
