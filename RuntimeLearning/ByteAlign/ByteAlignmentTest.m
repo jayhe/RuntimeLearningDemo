@@ -44,6 +44,26 @@ static inline size_t word_align10(size_t x) {
     //return (x + 9) & 0xfffffffa;// ???
 }
 
+struct HCLinkNode {
+    struct HCLinkNode *pre;
+    struct HCLinkNode *next;
+    NSString *key;
+    id value;
+}; // 32
+
+struct HCLinkedList {
+    struct HCLinkNode head;
+    struct HCLinkNode tail;
+    int nodeCount;
+}; // 72
+/*
+struct HCLinkedList {
+    struct HCLinkNode *head;
+    struct HCLinkNode *tail;
+    int nodeCount;
+}; // 24
+*/
+// 指针大小就是8字节，结构体内部也是一样；malloc的时候是16字节对齐；获取instanceSize对齐市8字节对齐，最少16
 @interface ByteAlignmentTest ()
 
 @property (nonatomic, assign) int a;
@@ -199,7 +219,7 @@ static inline size_t word_align10(size_t x) {
  uint32_t alignedInstanceSize() {
  return word_align(unalignedInstanceSize());
  }
- 
+ // malloc的时候会用到instanceSize，最少是16
  size_t instanceSize(size_t extraBytes) {
  size_t size = alignedInstanceSize() + extraBytes;
  // CF requires all objects be at least 16 bytes.

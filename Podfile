@@ -1,12 +1,13 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '8.0'
-
+source 'https://github.com/CocoaPods/Specs.git'
 target 'RuntimeLearning' do
   # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
   # use_frameworks!
   pod 'Aspects', '~> 1.4.1'
   pod 'fishhook', '~> 0.2'
   pod 'HCClangTrace', :git => 'https://github.com/jayhe/HCClangTrace.git'
+  pod 'BlockHook'
   # Pods for RuntimeLearning
   # pod 'xxx', :podspec => 'path'
   target 'RuntimeLearningTests' do

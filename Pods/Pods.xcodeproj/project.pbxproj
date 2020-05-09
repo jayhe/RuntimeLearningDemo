@@ -7,35 +7,49 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		086E4C73D242A4091BAAF5D5EE5FF176 /* fishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = B51CE20C0FD0E3D02781BBF58C784D26 /* fishhook.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		19D9061F99D71554210DD5E2BAFE3B5B /* Aspects.h in Headers */ = {isa = PBXBuildFile; fileRef = C2E4935DCB7DB4131BD6920BF4BBAADA /* Aspects.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		21EFC05C0AC4DC530A44FF31A4C97830 /* HCClangTrace.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F43D3EB4EC53F5560F71685297A216A /* HCClangTrace.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		3AF17343CCFAB6AFCF0BC73F380108B3 /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6C2FA3E5EA4CF57F1EB2DAAC4778CF /* Aspects.m */; };
-		424CC55DA6286FE863A5B2FC6F336BFF /* Pods-RuntimeLearning-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 632E3A5F5F17FC735281BC52F046EE7C /* Pods-RuntimeLearning-dummy.m */; };
-		467F847F6C3A4B30382AB9C9B8FFDE0D /* HCClangTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = B2A80BF96F831C87CF5DFE9B7D9E7B7E /* HCClangTrace.m */; };
-		60223AC7BC1EFD2C58ED83D18149D691 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = 1D6B55CF0695A7297D45DABFCD0CADF2 /* fishhook.c */; };
+		086E4C73D242A4091BAAF5D5EE5FF176 /* fishhook.h in Headers */ = {isa = PBXBuildFile; fileRef = 79A594D8492FF4393BE99AFBABF4A721 /* fishhook.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		09F5091137904B110AC79355F0DE9A1D /* BlockHook-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 66211163F937C66D3D9B917B2FB8B2A8 /* BlockHook-dummy.m */; };
+		19D9061F99D71554210DD5E2BAFE3B5B /* Aspects.h in Headers */ = {isa = PBXBuildFile; fileRef = 205F132D53651F3027365DDB98F9E104 /* Aspects.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		21EFC05C0AC4DC530A44FF31A4C97830 /* HCClangTrace.h in Headers */ = {isa = PBXBuildFile; fileRef = E413988A9EB6EDB84EC770E1911B4FFD /* HCClangTrace.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		24328FC6B337EEE52BE26E6243E75144 /* BlockHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 62568DAD13F60043755AA6BC11AA6789 /* BlockHook.m */; };
+		26106E673057BCCC7AC94B627575CDB7 /* Pods-RuntimeLearning-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 632E3A5F5F17FC735281BC52F046EE7C /* Pods-RuntimeLearning-dummy.m */; };
+		373DF4ED601492DE48641800AD5DDF42 /* ffi_x86_64.h in Headers */ = {isa = PBXBuildFile; fileRef = B9101F55AEF80927C2B54F5A57B81674 /* ffi_x86_64.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3AF17343CCFAB6AFCF0BC73F380108B3 /* Aspects.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E67E132A04F1260AD6E741F71FE3EE6 /* Aspects.m */; };
+		3C17E616CE2A27C9D0A27B9A85AD8365 /* ffi_common.h in Headers */ = {isa = PBXBuildFile; fileRef = 7084ABB75AFC6F82B7DBEE00294C471A /* ffi_common.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		3F0018B5B6CAD712496A46E5401101D6 /* ffitarget_x86_64.h in Headers */ = {isa = PBXBuildFile; fileRef = 0EAD7B2C78C0502423755ED101380F7F /* ffitarget_x86_64.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		46451E997ADE83FA5C1870F9FA9584A2 /* ffitarget_arm64.h in Headers */ = {isa = PBXBuildFile; fileRef = 283FD101379560E64424AC806D5D7332 /* ffitarget_arm64.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		467F847F6C3A4B30382AB9C9B8FFDE0D /* HCClangTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = FAA9F68835E96A7AB3B3BA57DEDEAC36 /* HCClangTrace.m */; };
+		4D1E34228D3FC0CCC8E627A0DC2F3E1E /* ffitarget.h in Headers */ = {isa = PBXBuildFile; fileRef = 61211D0831560E5DB9CD9449EEC323F5 /* ffitarget.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		60223AC7BC1EFD2C58ED83D18149D691 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = D9F9B2DACAB42ABBC7AAA234C8EF0A37 /* fishhook.c */; };
+		63DACC7E4D0E1D24917E6BB1E2F410EB /* ffi_i386.h in Headers */ = {isa = PBXBuildFile; fileRef = 9BF6D490271654DD8CB2BE2C0499BC68 /* ffi_i386.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		80FC943B2CCCD66BE3769EE8D409D987 /* Pods-RuntimeLearningTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1744592CAEECAECDF67E2C2896E436AD /* Pods-RuntimeLearningTests-dummy.m */; };
-		84F2C36CE03339D9889851C2086EFC6D /* HCClangTrace-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CC0EE7D27201894063B98C60B7AADFB2 /* HCClangTrace-dummy.m */; };
-		A349F58717474689607A4420C5138861 /* fishhook-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 58B558B73CE8B9BE425FF94541B3BADB /* fishhook-dummy.m */; };
-		ED3669B16BA9603B4764FE727594C2F7 /* Aspects-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C9CC96907E6A0C869623681FD8268BB4 /* Aspects-dummy.m */; };
+		84F2C36CE03339D9889851C2086EFC6D /* HCClangTrace-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 24D1CB14A1DC6DAE9D8E48D93391BFFC /* HCClangTrace-dummy.m */; };
+		85C5A3DF0F27E04E2C72714378124D0F /* ffi_arm64.h in Headers */ = {isa = PBXBuildFile; fileRef = 90988F82064F8E00DFAF76209E9D340D /* ffi_arm64.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		961115F939C981913F636330593B785B /* ffitarget_i386.h in Headers */ = {isa = PBXBuildFile; fileRef = 57F26C0235E4A916B2489E302A39B8B6 /* ffitarget_i386.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A047844FBE06A03419392A56DA041AFB /* ffitarget_arm.h in Headers */ = {isa = PBXBuildFile; fileRef = 87B9AA6079616D677F7912CEDB4B901D /* ffitarget_arm.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		A349F58717474689607A4420C5138861 /* fishhook-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0BE9EA3A7ABBB075A7B1039746AB425A /* fishhook-dummy.m */; };
+		A60C6D0374354DD4D0D54FEF5CD5C821 /* ffi_arm.h in Headers */ = {isa = PBXBuildFile; fileRef = 204A9BD61F927CC5C0B7CF52A85DDF2C /* ffi_arm.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		B1BBF085FF5B049E1F9E5162E6FE48E3 /* BlockHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 01C7DA139627B66F592442BB30297EB9 /* BlockHook.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E89838F511CF8F596943E040D9D4F7E1 /* ffi.h in Headers */ = {isa = PBXBuildFile; fileRef = AA33B1209848B161D3FD54A97424DD09 /* ffi.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		ED3669B16BA9603B4764FE727594C2F7 /* Aspects-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B9E3FC52D8209A74E769D09253BAFE /* Aspects-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3BEDD56D856BB43679B3C4B1B4573534 /* PBXContainerItemProxy */ = {
+		070C3DD0D238690832AFE42455E701CE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = DBD5524668FD864DF6915F331531CAF0;
 			remoteInfo = HCClangTrace;
 		};
-		D965F063D31B62199F76760E4A9D4A4D /* PBXContainerItemProxy */ = {
+		28ACD244C81566E999162DF7F819CFB9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = C6539905C4D50932B36244650B93C79B;
 			remoteInfo = Aspects;
 		};
-		E30FE2CAEFE901F6B522C6273F1F0084 /* PBXContainerItemProxy */ = {
+		6E27B5A7518712AB5C842CB831CC356F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -49,44 +63,73 @@
 			remoteGlobalIDString = CCCFF37F117315CA44068E8FBBC1F24C;
 			remoteInfo = "Pods-RuntimeLearning";
 		};
+		F02844EC581AE3BE91A1AAA705E7AD90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACEC240691765BAEC015334327AA6B4A;
+			remoteInfo = BlockHook;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0B6C2FA3E5EA4CF57F1EB2DAAC4778CF /* Aspects.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
-		0F94271DBB6908FDEECCAFBDFA340E4C /* HCClangTrace-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HCClangTrace-prefix.pch"; sourceTree = "<group>"; };
+		0035D6F5A23C995561090EDD8882974A /* fishhook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = fishhook.release.xcconfig; sourceTree = "<group>"; };
+		01C7DA139627B66F592442BB30297EB9 /* BlockHook.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BlockHook.h; path = BlockHook/BlockHook.h; sourceTree = "<group>"; };
+		03A6F235D0644EFF12C51ECFCF32E81D /* BlockHook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BlockHook.release.xcconfig; sourceTree = "<group>"; };
+		0BE9EA3A7ABBB075A7B1039746AB425A /* fishhook-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "fishhook-dummy.m"; sourceTree = "<group>"; };
+		0EAD7B2C78C0502423755ED101380F7F /* ffitarget_x86_64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ffitarget_x86_64.h; path = libffi/ffitarget_x86_64.h; sourceTree = "<group>"; };
 		1744592CAEECAECDF67E2C2896E436AD /* Pods-RuntimeLearningTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RuntimeLearningTests-dummy.m"; sourceTree = "<group>"; };
+		19B9E3FC52D8209A74E769D09253BAFE /* Aspects-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Aspects-dummy.m"; sourceTree = "<group>"; };
 		1C2CE033E80597D1617C6E78488ACC16 /* Pods-RuntimeLearning-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RuntimeLearning-acknowledgements.plist"; sourceTree = "<group>"; };
-		1D6B55CF0695A7297D45DABFCD0CADF2 /* fishhook.c */ = {isa = PBXFileReference; includeInIndex = 1; path = fishhook.c; sourceTree = "<group>"; };
+		1F0960C1B67F19C2AC233AF65F7EEBBE /* HCClangTrace.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HCClangTrace.debug.xcconfig; sourceTree = "<group>"; };
+		204A9BD61F927CC5C0B7CF52A85DDF2C /* ffi_arm.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ffi_arm.h; path = libffi/ffi_arm.h; sourceTree = "<group>"; };
+		205F132D53651F3027365DDB98F9E104 /* Aspects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
+		24D1CB14A1DC6DAE9D8E48D93391BFFC /* HCClangTrace-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HCClangTrace-dummy.m"; sourceTree = "<group>"; };
+		283FD101379560E64424AC806D5D7332 /* ffitarget_arm64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ffitarget_arm64.h; path = libffi/ffitarget_arm64.h; sourceTree = "<group>"; };
 		381B289095E0B405AAD175AF8476E597 /* Pods-RuntimeLearningTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RuntimeLearningTests.debug.xcconfig"; sourceTree = "<group>"; };
+		39458767E6BAEA2F4D87C1590944CF7F /* libffi_bh.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libffi_bh.a; path = libffi/libffi_bh.a; sourceTree = "<group>"; };
 		39BE1F29A73A458CD7CD5176C4CCF543 /* libPods-RuntimeLearningTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-RuntimeLearningTests.a"; path = "libPods-RuntimeLearningTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CC94F15BFA3BA89C435CEF48F0E31EB /* Pods-RuntimeLearning-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RuntimeLearning-acknowledgements.markdown"; sourceTree = "<group>"; };
-		4F43D3EB4EC53F5560F71685297A216A /* HCClangTrace.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HCClangTrace.h; path = HCClangTrace/Classes/HCClangTrace.h; sourceTree = "<group>"; };
-		58B558B73CE8B9BE425FF94541B3BADB /* fishhook-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "fishhook-dummy.m"; sourceTree = "<group>"; };
+		4E51647BAFD27E647B9FF1180D44759A /* Aspects.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Aspects.debug.xcconfig; sourceTree = "<group>"; };
+		57F26C0235E4A916B2489E302A39B8B6 /* ffitarget_i386.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ffitarget_i386.h; path = libffi/ffitarget_i386.h; sourceTree = "<group>"; };
 		5B784DC3F53AAD2C015F318041BFC134 /* Pods-RuntimeLearning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RuntimeLearning.release.xcconfig"; sourceTree = "<group>"; };
-		621BB5720DB05469DE3AB59C3912D469 /* HCClangTrace.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HCClangTrace.xcconfig; sourceTree = "<group>"; };
+		61211D0831560E5DB9CD9449EEC323F5 /* ffitarget.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ffitarget.h; path = libffi/ffitarget.h; sourceTree = "<group>"; };
+		62568DAD13F60043755AA6BC11AA6789 /* BlockHook.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BlockHook.m; path = BlockHook/BlockHook.m; sourceTree = "<group>"; };
 		632E3A5F5F17FC735281BC52F046EE7C /* Pods-RuntimeLearning-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RuntimeLearning-dummy.m"; sourceTree = "<group>"; };
+		63922F895F6626F419A797A4B6F5897C /* HCClangTrace-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HCClangTrace-prefix.pch"; sourceTree = "<group>"; };
+		66211163F937C66D3D9B917B2FB8B2A8 /* BlockHook-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BlockHook-dummy.m"; sourceTree = "<group>"; };
+		68DCA651A5B4F47E0150EBB94D58AACA /* Aspects-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Aspects-prefix.pch"; sourceTree = "<group>"; };
 		69D4CA296240E8B562B5DE453CF48B0A /* Pods-RuntimeLearningTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RuntimeLearningTests.release.xcconfig"; sourceTree = "<group>"; };
-		867A7A9B4CE867B72373EC0841B5001B /* Aspects-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Aspects-prefix.pch"; sourceTree = "<group>"; };
+		7084ABB75AFC6F82B7DBEE00294C471A /* ffi_common.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ffi_common.h; path = libffi/ffi_common.h; sourceTree = "<group>"; };
+		720DFA47946CF4049D7F9A987D63DFAC /* fishhook-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "fishhook-prefix.pch"; sourceTree = "<group>"; };
+		79A594D8492FF4393BE99AFBABF4A721 /* fishhook.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
+		7E67E132A04F1260AD6E741F71FE3EE6 /* Aspects.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Aspects.m; sourceTree = "<group>"; };
+		87B9AA6079616D677F7912CEDB4B901D /* ffitarget_arm.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ffitarget_arm.h; path = libffi/ffitarget_arm.h; sourceTree = "<group>"; };
+		881D59038FDA6F480ECEC97406D55744 /* HCClangTrace.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HCClangTrace.release.xcconfig; sourceTree = "<group>"; };
 		8FF515721CD02DA78ECBEBF7BF3588CF /* libHCClangTrace.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libHCClangTrace.a; path = libHCClangTrace.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		90988F82064F8E00DFAF76209E9D340D /* ffi_arm64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ffi_arm64.h; path = libffi/ffi_arm64.h; sourceTree = "<group>"; };
 		9808BF74538141204E4EB5B49809FE77 /* libAspects.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libAspects.a; path = libAspects.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A4EDB73AA0279E1DDDA142341364E7A /* BlockHook-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BlockHook-prefix.pch"; sourceTree = "<group>"; };
+		9BF6D490271654DD8CB2BE2C0499BC68 /* ffi_i386.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ffi_i386.h; path = libffi/ffi_i386.h; sourceTree = "<group>"; };
 		9CA216629A7529B075F3AC826470B254 /* libfishhook.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libfishhook.a; path = libfishhook.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		AA54E04CF72BEA9830F8597D9C17F375 /* fishhook.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = fishhook.xcconfig; sourceTree = "<group>"; };
+		AA33B1209848B161D3FD54A97424DD09 /* ffi.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ffi.h; path = libffi/ffi.h; sourceTree = "<group>"; };
 		B065CBACA16DCEA86E08CFBEE2CC68E8 /* Pods-RuntimeLearning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RuntimeLearning.debug.xcconfig"; sourceTree = "<group>"; };
-		B2A80BF96F831C87CF5DFE9B7D9E7B7E /* HCClangTrace.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HCClangTrace.m; path = HCClangTrace/Classes/HCClangTrace.m; sourceTree = "<group>"; };
-		B51CE20C0FD0E3D02781BBF58C784D26 /* fishhook.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
+		B9101F55AEF80927C2B54F5A57B81674 /* ffi_x86_64.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ffi_x86_64.h; path = libffi/ffi_x86_64.h; sourceTree = "<group>"; };
 		C097A52552B81D5D4223E5AC183E4E9B /* Pods-RuntimeLearningTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RuntimeLearningTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C2E4935DCB7DB4131BD6920BF4BBAADA /* Aspects.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Aspects.h; sourceTree = "<group>"; };
-		C9CC96907E6A0C869623681FD8268BB4 /* Aspects-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Aspects-dummy.m"; sourceTree = "<group>"; };
 		CC0A9A35098C572F79A1D85240EB9E51 /* libPods-RuntimeLearning.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-RuntimeLearning.a"; path = "libPods-RuntimeLearning.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC0EE7D27201894063B98C60B7AADFB2 /* HCClangTrace-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HCClangTrace-dummy.m"; sourceTree = "<group>"; };
-		D1951933D19EE3760C0C7A71459589D8 /* Aspects.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Aspects.xcconfig; sourceTree = "<group>"; };
-		E82A94516F447116FFBFEA3D1C661A35 /* fishhook-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "fishhook-prefix.pch"; sourceTree = "<group>"; };
+		D9F9B2DACAB42ABBC7AAA234C8EF0A37 /* fishhook.c */ = {isa = PBXFileReference; includeInIndex = 1; path = fishhook.c; sourceTree = "<group>"; };
+		DC7893694939D8E3BA2BDAF64CE85D04 /* Aspects.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Aspects.release.xcconfig; sourceTree = "<group>"; };
+		E1CDE8989A6FE3DFD41E4EF62954DB25 /* libBlockHook.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libBlockHook.a; path = libBlockHook.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E413988A9EB6EDB84EC770E1911B4FFD /* HCClangTrace.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HCClangTrace.h; path = HCClangTrace/Classes/HCClangTrace.h; sourceTree = "<group>"; };
+		F34A936C5E23D1B452B7D4B0E5E1CBD2 /* fishhook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = fishhook.debug.xcconfig; sourceTree = "<group>"; };
+		F3693028039EBE74BD5A9008173648DC /* BlockHook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BlockHook.debug.xcconfig; sourceTree = "<group>"; };
+		FAA9F68835E96A7AB3B3BA57DEDEAC36 /* HCClangTrace.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HCClangTrace.m; path = HCClangTrace/Classes/HCClangTrace.m; sourceTree = "<group>"; };
 		FEBF10CBCCD5FDB4A3D48D4C88B9F54B /* Pods-RuntimeLearningTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RuntimeLearningTests-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		024AFC5FBBC89260820E5D91F1C55376 /* Frameworks */ = {
+		08DD7E281EEA1C4CE7FB26AF6DE3A74B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -94,6 +137,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		486FCE9CBD416A84C9E1C96B92CADF3D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56DC5AB38D147FDB7CAC5F34B92EF290 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -124,47 +174,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		04286B259F52A86B607C087EFCB65781 /* Pods */ = {
+		1908526DCB48777C2847172C5F5E8B48 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				BDFAFF0E96ABD984425407EE8F392957 /* Aspects */,
-				104E17179EC0C716192F9761E30D3315 /* fishhook */,
-				C2F586466178007E7C61FC3CC06EC013 /* HCClangTrace */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		104E17179EC0C716192F9761E30D3315 /* fishhook */ = {
-			isa = PBXGroup;
-			children = (
-				1D6B55CF0695A7297D45DABFCD0CADF2 /* fishhook.c */,
-				B51CE20C0FD0E3D02781BBF58C784D26 /* fishhook.h */,
-				1AA2DF841EDA5B7135AB75A9F4108361 /* Support Files */,
-			);
-			name = fishhook;
-			path = fishhook;
-			sourceTree = "<group>";
-		};
-		1AA2DF841EDA5B7135AB75A9F4108361 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				AA54E04CF72BEA9830F8597D9C17F375 /* fishhook.xcconfig */,
-				58B558B73CE8B9BE425FF94541B3BADB /* fishhook-dummy.m */,
-				E82A94516F447116FFBFEA3D1C661A35 /* fishhook-prefix.pch */,
+				19B9E3FC52D8209A74E769D09253BAFE /* Aspects-dummy.m */,
+				68DCA651A5B4F47E0150EBB94D58AACA /* Aspects-prefix.pch */,
+				4E51647BAFD27E647B9FF1180D44759A /* Aspects.debug.xcconfig */,
+				DC7893694939D8E3BA2BDAF64CE85D04 /* Aspects.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/fishhook";
-			sourceTree = "<group>";
-		};
-		2847A158C8CDDA4E622DFDB93AD1B03B /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				621BB5720DB05469DE3AB59C3912D469 /* HCClangTrace.xcconfig */,
-				CC0EE7D27201894063B98C60B7AADFB2 /* HCClangTrace-dummy.m */,
-				0F94271DBB6908FDEECCAFBDFA340E4C /* HCClangTrace-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/HCClangTrace";
+			path = "../Target Support Files/Aspects";
 			sourceTree = "<group>";
 		};
 		3AFF4E9EBD364A941C35C82313A560D1 /* Targets Support Files */ = {
@@ -176,10 +195,11 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		6E35F69F714F499D9A9C95C1D345BD6B /* Products */ = {
+		4E3BAAB166FBA8EA2D6B0B87B83A00A8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				9808BF74538141204E4EB5B49809FE77 /* libAspects.a */,
+				E1CDE8989A6FE3DFD41E4EF62954DB25 /* libBlockHook.a */,
 				9CA216629A7529B075F3AC826470B254 /* libfishhook.a */,
 				8FF515721CD02DA78ECBEBF7BF3588CF /* libHCClangTrace.a */,
 				CC0A9A35098C572F79A1D85240EB9E51 /* libPods-RuntimeLearning.a */,
@@ -188,37 +208,61 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		BDFAFF0E96ABD984425407EE8F392957 /* Aspects */ = {
+		6A43FDE36EE9BDC4E73E36807BBDF98B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				C2E4935DCB7DB4131BD6920BF4BBAADA /* Aspects.h */,
-				0B6C2FA3E5EA4CF57F1EB2DAAC4778CF /* Aspects.m */,
-				C1C4A93AA39B23A44124EF45E8084BD7 /* Support Files */,
-			);
-			name = Aspects;
-			path = Aspects;
-			sourceTree = "<group>";
-		};
-		C1C4A93AA39B23A44124EF45E8084BD7 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				D1951933D19EE3760C0C7A71459589D8 /* Aspects.xcconfig */,
-				C9CC96907E6A0C869623681FD8268BB4 /* Aspects-dummy.m */,
-				867A7A9B4CE867B72373EC0841B5001B /* Aspects-prefix.pch */,
+				0BE9EA3A7ABBB075A7B1039746AB425A /* fishhook-dummy.m */,
+				720DFA47946CF4049D7F9A987D63DFAC /* fishhook-prefix.pch */,
+				F34A936C5E23D1B452B7D4B0E5E1CBD2 /* fishhook.debug.xcconfig */,
+				0035D6F5A23C995561090EDD8882974A /* fishhook.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/Aspects";
+			path = "../Target Support Files/fishhook";
 			sourceTree = "<group>";
 		};
-		C2F586466178007E7C61FC3CC06EC013 /* HCClangTrace */ = {
+		6C6E9A73C6976A68EDF9F6BD47A7EE16 /* HCClangTrace */ = {
 			isa = PBXGroup;
 			children = (
-				4F43D3EB4EC53F5560F71685297A216A /* HCClangTrace.h */,
-				B2A80BF96F831C87CF5DFE9B7D9E7B7E /* HCClangTrace.m */,
-				2847A158C8CDDA4E622DFDB93AD1B03B /* Support Files */,
+				E413988A9EB6EDB84EC770E1911B4FFD /* HCClangTrace.h */,
+				FAA9F68835E96A7AB3B3BA57DEDEAC36 /* HCClangTrace.m */,
+				D3E79BE2A184F9345624A375A54A7A10 /* Support Files */,
 			);
 			name = HCClangTrace;
 			path = HCClangTrace;
+			sourceTree = "<group>";
+		};
+		704DD38B65405A91E965A60C0F2B1E3A /* BlockHook */ = {
+			isa = PBXGroup;
+			children = (
+				01C7DA139627B66F592442BB30297EB9 /* BlockHook.h */,
+				62568DAD13F60043755AA6BC11AA6789 /* BlockHook.m */,
+				AA33B1209848B161D3FD54A97424DD09 /* ffi.h */,
+				204A9BD61F927CC5C0B7CF52A85DDF2C /* ffi_arm.h */,
+				90988F82064F8E00DFAF76209E9D340D /* ffi_arm64.h */,
+				7084ABB75AFC6F82B7DBEE00294C471A /* ffi_common.h */,
+				9BF6D490271654DD8CB2BE2C0499BC68 /* ffi_i386.h */,
+				B9101F55AEF80927C2B54F5A57B81674 /* ffi_x86_64.h */,
+				61211D0831560E5DB9CD9449EEC323F5 /* ffitarget.h */,
+				87B9AA6079616D677F7912CEDB4B901D /* ffitarget_arm.h */,
+				283FD101379560E64424AC806D5D7332 /* ffitarget_arm64.h */,
+				57F26C0235E4A916B2489E302A39B8B6 /* ffitarget_i386.h */,
+				0EAD7B2C78C0502423755ED101380F7F /* ffitarget_x86_64.h */,
+				D90B811ECD60D4E15CC6A7447AF412DF /* Frameworks */,
+				DCCDCFC19490FDDCF8AAC59C4816E16A /* Support Files */,
+			);
+			name = BlockHook;
+			path = BlockHook;
+			sourceTree = "<group>";
+		};
+		80F8628DADA9562E02C783D26A2D8A45 /* Aspects */ = {
+			isa = PBXGroup;
+			children = (
+				205F132D53651F3027365DDB98F9E104 /* Aspects.h */,
+				7E67E132A04F1260AD6E741F71FE3EE6 /* Aspects.m */,
+				1908526DCB48777C2847172C5F5E8B48 /* Support Files */,
+			);
+			name = Aspects;
+			path = Aspects;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -226,10 +270,22 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
-				04286B259F52A86B607C087EFCB65781 /* Pods */,
-				6E35F69F714F499D9A9C95C1D345BD6B /* Products */,
+				ED5CF4362A03DA081443E0767B469778 /* Pods */,
+				4E3BAAB166FBA8EA2D6B0B87B83A00A8 /* Products */,
 				3AFF4E9EBD364A941C35C82313A560D1 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		D3E79BE2A184F9345624A375A54A7A10 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				24D1CB14A1DC6DAE9D8E48D93391BFFC /* HCClangTrace-dummy.m */,
+				63922F895F6626F419A797A4B6F5897C /* HCClangTrace-prefix.pch */,
+				1F0960C1B67F19C2AC233AF65F7EEBBE /* HCClangTrace.debug.xcconfig */,
+				881D59038FDA6F480ECEC97406D55744 /* HCClangTrace.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/HCClangTrace";
 			sourceTree = "<group>";
 		};
 		D7464483BD6B0D7875DBCBE9ABEBEFCF /* Pods-RuntimeLearning */ = {
@@ -265,9 +321,77 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D90B811ECD60D4E15CC6A7447AF412DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				39458767E6BAEA2F4D87C1590944CF7F /* libffi_bh.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DCCDCFC19490FDDCF8AAC59C4816E16A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				66211163F937C66D3D9B917B2FB8B2A8 /* BlockHook-dummy.m */,
+				9A4EDB73AA0279E1DDDA142341364E7A /* BlockHook-prefix.pch */,
+				F3693028039EBE74BD5A9008173648DC /* BlockHook.debug.xcconfig */,
+				03A6F235D0644EFF12C51ECFCF32E81D /* BlockHook.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BlockHook";
+			sourceTree = "<group>";
+		};
+		EB678F6EA263ED74CE05BB7D55661ECF /* fishhook */ = {
+			isa = PBXGroup;
+			children = (
+				D9F9B2DACAB42ABBC7AAA234C8EF0A37 /* fishhook.c */,
+				79A594D8492FF4393BE99AFBABF4A721 /* fishhook.h */,
+				6A43FDE36EE9BDC4E73E36807BBDF98B /* Support Files */,
+			);
+			name = fishhook;
+			path = fishhook;
+			sourceTree = "<group>";
+		};
+		ED5CF4362A03DA081443E0767B469778 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				80F8628DADA9562E02C783D26A2D8A45 /* Aspects */,
+				704DD38B65405A91E965A60C0F2B1E3A /* BlockHook */,
+				EB678F6EA263ED74CE05BB7D55661ECF /* fishhook */,
+				6C6E9A73C6976A68EDF9F6BD47A7EE16 /* HCClangTrace */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		213066E0CBA4FB76404BC711B0972EC1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2EC4E150CFD74BC058914E82AB41326D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B1BBF085FF5B049E1F9E5162E6FE48E3 /* BlockHook.h in Headers */,
+				E89838F511CF8F596943E040D9D4F7E1 /* ffi.h in Headers */,
+				A60C6D0374354DD4D0D54FEF5CD5C821 /* ffi_arm.h in Headers */,
+				85C5A3DF0F27E04E2C72714378124D0F /* ffi_arm64.h in Headers */,
+				3C17E616CE2A27C9D0A27B9A85AD8365 /* ffi_common.h in Headers */,
+				63DACC7E4D0E1D24917E6BB1E2F410EB /* ffi_i386.h in Headers */,
+				373DF4ED601492DE48641800AD5DDF42 /* ffi_x86_64.h in Headers */,
+				4D1E34228D3FC0CCC8E627A0DC2F3E1E /* ffitarget.h in Headers */,
+				A047844FBE06A03419392A56DA041AFB /* ffitarget_arm.h in Headers */,
+				46451E997ADE83FA5C1870F9FA9584A2 /* ffitarget_arm64.h in Headers */,
+				961115F939C981913F636330593B785B /* ffitarget_i386.h in Headers */,
+				3F0018B5B6CAD712496A46E5401101D6 /* ffitarget_x86_64.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		3928B76410C43A8203B55B865DFB8B55 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -293,13 +417,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		76857659A316E7FCB035C9B8C8955FB6 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A12F3AF4F5D400A7EE4CCE738C91087A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -344,6 +461,23 @@
 			productReference = 39BE1F29A73A458CD7CD5176C4CCF543 /* libPods-RuntimeLearningTests.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		ACEC240691765BAEC015334327AA6B4A /* BlockHook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83DAD781546B1B7BF58E7F7FCEA5BCBB /* Build configuration list for PBXNativeTarget "BlockHook" */;
+			buildPhases = (
+				2EC4E150CFD74BC058914E82AB41326D /* Headers */,
+				2A573848E9E1A154590558A5843142A6 /* Sources */,
+				08DD7E281EEA1C4CE7FB26AF6DE3A74B /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BlockHook;
+			productName = BlockHook;
+			productReference = E1CDE8989A6FE3DFD41E4EF62954DB25 /* libBlockHook.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		C6539905C4D50932B36244650B93C79B /* Aspects */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 926BB87AF71503C64757F8405AFA5445 /* Build configuration list for PBXNativeTarget "Aspects" */;
@@ -363,18 +497,19 @@
 		};
 		CCCFF37F117315CA44068E8FBBC1F24C /* Pods-RuntimeLearning */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7528A1D51C3858AE3304F4D6FE5F7F36 /* Build configuration list for PBXNativeTarget "Pods-RuntimeLearning" */;
+			buildConfigurationList = D02E1D32A1A48F0098B99C287304ED3A /* Build configuration list for PBXNativeTarget "Pods-RuntimeLearning" */;
 			buildPhases = (
-				A12F3AF4F5D400A7EE4CCE738C91087A /* Headers */,
-				0196877B4BDFC04417CEB1C407A4CD00 /* Sources */,
-				024AFC5FBBC89260820E5D91F1C55376 /* Frameworks */,
+				213066E0CBA4FB76404BC711B0972EC1 /* Headers */,
+				8454500530A2791739F82A5665260AE7 /* Sources */,
+				56DC5AB38D147FDB7CAC5F34B92EF290 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				3BC45A1F89F039E09E9236FC16622474 /* PBXTargetDependency */,
-				3B2E6B87A6D5128570A83F299D2A5029 /* PBXTargetDependency */,
-				7BF16B17BA5F220FDCCEFB3F167D2EAA /* PBXTargetDependency */,
+				76EFFD73648A135ECB5564526962EFFD /* PBXTargetDependency */,
+				CE521A192DBD6FFAF2F5A4551A0E3170 /* PBXTargetDependency */,
+				381F0AD91835D9CBB339F038271DBCB6 /* PBXTargetDependency */,
+				7B8EFBC9BB3BA62604C3AA1B1CAE3334 /* PBXTargetDependency */,
 			);
 			name = "Pods-RuntimeLearning";
 			productName = "Pods-RuntimeLearning";
@@ -416,11 +551,12 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 6E35F69F714F499D9A9C95C1D345BD6B /* Products */;
+			productRefGroup = 4E3BAAB166FBA8EA2D6B0B87B83A00A8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				C6539905C4D50932B36244650B93C79B /* Aspects */,
+				ACEC240691765BAEC015334327AA6B4A /* BlockHook */,
 				58CAF5B0291DAB42086F0645150E1791 /* fishhook */,
 				DBD5524668FD864DF6915F331531CAF0 /* HCClangTrace */,
 				CCCFF37F117315CA44068E8FBBC1F24C /* Pods-RuntimeLearning */,
@@ -430,14 +566,6 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0196877B4BDFC04417CEB1C407A4CD00 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				424CC55DA6286FE863A5B2FC6F336BFF /* Pods-RuntimeLearning-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0C759CEFF2A195ADD12C40E0E994DFE8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -447,11 +575,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2A573848E9E1A154590558A5843142A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09F5091137904B110AC79355F0DE9A1D /* BlockHook-dummy.m in Sources */,
+				24328FC6B337EEE52BE26E6243E75144 /* BlockHook.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2B641E351CCB0695A13EBFCA1D6BD0A5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				80FC943B2CCCD66BE3769EE8D409D987 /* Pods-RuntimeLearningTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8454500530A2791739F82A5665260AE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26106E673057BCCC7AC94B627575CDB7 /* Pods-RuntimeLearning-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,17 +621,17 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3B2E6B87A6D5128570A83F299D2A5029 /* PBXTargetDependency */ = {
+		381F0AD91835D9CBB339F038271DBCB6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = HCClangTrace;
 			target = DBD5524668FD864DF6915F331531CAF0 /* HCClangTrace */;
-			targetProxy = 3BEDD56D856BB43679B3C4B1B4573534 /* PBXContainerItemProxy */;
+			targetProxy = 070C3DD0D238690832AFE42455E701CE /* PBXContainerItemProxy */;
 		};
-		3BC45A1F89F039E09E9236FC16622474 /* PBXTargetDependency */ = {
+		76EFFD73648A135ECB5564526962EFFD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Aspects;
 			target = C6539905C4D50932B36244650B93C79B /* Aspects */;
-			targetProxy = D965F063D31B62199F76760E4A9D4A4D /* PBXContainerItemProxy */;
+			targetProxy = 28ACD244C81566E999162DF7F819CFB9 /* PBXContainerItemProxy */;
 		};
 		797B6FE230238614B1400440E6AD083C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -494,25 +639,32 @@
 			target = CCCFF37F117315CA44068E8FBBC1F24C /* Pods-RuntimeLearning */;
 			targetProxy = EEA15EB7D8DDF3030FEE961AEE86ABA1 /* PBXContainerItemProxy */;
 		};
-		7BF16B17BA5F220FDCCEFB3F167D2EAA /* PBXTargetDependency */ = {
+		7B8EFBC9BB3BA62604C3AA1B1CAE3334 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = fishhook;
 			target = 58CAF5B0291DAB42086F0645150E1791 /* fishhook */;
-			targetProxy = E30FE2CAEFE901F6B522C6273F1F0084 /* PBXContainerItemProxy */;
+			targetProxy = 6E27B5A7518712AB5C842CB831CC356F /* PBXContainerItemProxy */;
+		};
+		CE521A192DBD6FFAF2F5A4551A0E3170 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BlockHook;
+			target = ACEC240691765BAEC015334327AA6B4A /* BlockHook */;
+			targetProxy = F02844EC581AE3BE91A1AAA705E7AD90 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0BA61D3EF30151EDC5B3D3BDB61B4AE8 /* Release */ = {
+		0883B897F71E75BC0B7521BAACCF3764 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1951933D19EE3760C0C7A71459589D8 /* Aspects.xcconfig */;
+			baseConfigurationReference = 5B784DC3F53AAD2C015F318041BFC134 /* Pods-RuntimeLearning.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/Aspects/Aspects-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
 				OTHER_CFLAGS = (
 					"$(inherited)",
 					"-fsanitize-coverage=func,trace-pc-guard",
@@ -520,51 +672,18 @@
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				OTHER_SWIFT_FLAGS = "$(inherited) -fsanitize-coverage=func,trace-pc-guard";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = Aspects;
-				PRODUCT_NAME = Aspects;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		19FA41D890D62F9CF76CDC44F2AF5F1E /* Debug */ = {
+		32C3B8466839B54285D214A83B6A5CC5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 621BB5720DB05469DE3AB59C3912D469 /* HCClangTrace.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/HCClangTrace/HCClangTrace-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				OTHER_CFLAGS = (
-					"$(inherited)",
-					"-fsanitize-coverage=func,trace-pc-guard",
-				);
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				OTHER_SWIFT_FLAGS = "$(inherited) -fsanitize-coverage=func,trace-pc-guard";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = HCClangTrace;
-				PRODUCT_NAME = HCClangTrace;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		32B3FEEA55BC26F5787D38053FA8C8CB /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA54E04CF72BEA9830F8597D9C17F375 /* fishhook.xcconfig */;
+			baseConfigurationReference = F34A936C5E23D1B452B7D4B0E5E1CBD2 /* fishhook.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -588,9 +707,8 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
 		4BE66A09A74FD25164AAB3C2645B9B93 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -652,9 +770,39 @@
 			};
 			name = Release;
 		};
-		53A9413C832B6773F4BA5CF518E7171D /* Release */ = {
+		59314121DE84E40823876E62E9751E4C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 621BB5720DB05469DE3AB59C3912D469 /* HCClangTrace.xcconfig */;
+			baseConfigurationReference = DC7893694939D8E3BA2BDAF64CE85D04 /* Aspects.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Aspects/Aspects-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-fsanitize-coverage=func,trace-pc-guard",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				OTHER_SWIFT_FLAGS = "$(inherited) -fsanitize-coverage=func,trace-pc-guard";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Aspects;
+				PRODUCT_NAME = Aspects;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		68614EFDAFF92CB56D2A00A99CC54E13 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 881D59038FDA6F480ECEC97406D55744 /* HCClangTrace.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -682,36 +830,7 @@
 			};
 			name = Release;
 		};
-		5E40B7A0E1E13085E2A7CBD7979F09B6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D1951933D19EE3760C0C7A71459589D8 /* Aspects.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/Aspects/Aspects-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				OTHER_CFLAGS = (
-					"$(inherited)",
-					"-fsanitize-coverage=func,trace-pc-guard",
-				);
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				OTHER_SWIFT_FLAGS = "$(inherited) -fsanitize-coverage=func,trace-pc-guard";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_MODULE_NAME = Aspects;
-				PRODUCT_NAME = Aspects;
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		76570E962214062FD2F7753BB3E4BF51 /* Debug */ = {
+		6A011C797003DFEDBCC7ACB819B53D0A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B065CBACA16DCEA86E08CFBEE2CC68E8 /* Pods-RuntimeLearning.debug.xcconfig */;
 			buildSettings = {
@@ -828,9 +947,126 @@
 			};
 			name = Release;
 		};
-		CC3F2D191DECC83C6587B93B90FCC0E1 /* Debug */ = {
+		A2CB19BE68075546BEB7D21A434D78AA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA54E04CF72BEA9830F8597D9C17F375 /* fishhook.xcconfig */;
+			baseConfigurationReference = 4E51647BAFD27E647B9FF1180D44759A /* Aspects.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/Aspects/Aspects-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-fsanitize-coverage=func,trace-pc-guard",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				OTHER_SWIFT_FLAGS = "$(inherited) -fsanitize-coverage=func,trace-pc-guard";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Aspects;
+				PRODUCT_NAME = Aspects;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B0AC76600E3CFE52651B42930AB1B455 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F0960C1B67F19C2AC233AF65F7EEBBE /* HCClangTrace.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/HCClangTrace/HCClangTrace-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-fsanitize-coverage=func,trace-pc-guard",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				OTHER_SWIFT_FLAGS = "$(inherited) -fsanitize-coverage=func,trace-pc-guard";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = HCClangTrace;
+				PRODUCT_NAME = HCClangTrace;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B5C72746CB09B7453A4EF4D49E6671C0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 03A6F235D0644EFF12C51ECFCF32E81D /* BlockHook.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/BlockHook/BlockHook-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-fsanitize-coverage=func,trace-pc-guard",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				OTHER_SWIFT_FLAGS = "$(inherited) -fsanitize-coverage=func,trace-pc-guard";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = BlockHook;
+				PRODUCT_NAME = BlockHook;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C3A82AEFBE603D04EEA19EFAC8173851 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3693028039EBE74BD5A9008173648DC /* BlockHook.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/BlockHook/BlockHook-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_CFLAGS = (
+					"$(inherited)",
+					"-fsanitize-coverage=func,trace-pc-guard",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				OTHER_SWIFT_FLAGS = "$(inherited) -fsanitize-coverage=func,trace-pc-guard";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = BlockHook;
+				PRODUCT_NAME = BlockHook;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E18F2A1A66238BBA1FF6D2E875AA7715 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0035D6F5A23C995561090EDD8882974A /* fishhook.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -853,32 +1089,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		D7AB57FF7B23645E85D59770C644881C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B784DC3F53AAD2C015F318041BFC134 /* Pods-RuntimeLearning.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_CFLAGS = (
-					"$(inherited)",
-					"-fsanitize-coverage=func,trace-pc-guard",
-				);
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				OTHER_SWIFT_FLAGS = "$(inherited) -fsanitize-coverage=func,trace-pc-guard";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -931,20 +1141,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7528A1D51C3858AE3304F4D6FE5F7F36 /* Build configuration list for PBXNativeTarget "Pods-RuntimeLearning" */ = {
+		8355B98F47FDFFD6A2D9442DF7F75B04 /* Build configuration list for PBXNativeTarget "HCClangTrace" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				76570E962214062FD2F7753BB3E4BF51 /* Debug */,
-				D7AB57FF7B23645E85D59770C644881C /* Release */,
+				B0AC76600E3CFE52651B42930AB1B455 /* Debug */,
+				68614EFDAFF92CB56D2A00A99CC54E13 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8355B98F47FDFFD6A2D9442DF7F75B04 /* Build configuration list for PBXNativeTarget "HCClangTrace" */ = {
+		83DAD781546B1B7BF58E7F7FCEA5BCBB /* Build configuration list for PBXNativeTarget "BlockHook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				19FA41D890D62F9CF76CDC44F2AF5F1E /* Debug */,
-				53A9413C832B6773F4BA5CF518E7171D /* Release */,
+				C3A82AEFBE603D04EEA19EFAC8173851 /* Debug */,
+				B5C72746CB09B7453A4EF4D49E6671C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -952,8 +1162,8 @@
 		926BB87AF71503C64757F8405AFA5445 /* Build configuration list for PBXNativeTarget "Aspects" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5E40B7A0E1E13085E2A7CBD7979F09B6 /* Debug */,
-				0BA61D3EF30151EDC5B3D3BDB61B4AE8 /* Release */,
+				A2CB19BE68075546BEB7D21A434D78AA /* Debug */,
+				59314121DE84E40823876E62E9751E4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -961,8 +1171,17 @@
 		C67F982415108EEDBA176638B888F9BD /* Build configuration list for PBXNativeTarget "fishhook" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				CC3F2D191DECC83C6587B93B90FCC0E1 /* Debug */,
-				32B3FEEA55BC26F5787D38053FA8C8CB /* Release */,
+				32C3B8466839B54285D214A83B6A5CC5 /* Debug */,
+				E18F2A1A66238BBA1FF6D2E875AA7715 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D02E1D32A1A48F0098B99C287304ED3A /* Build configuration list for PBXNativeTarget "Pods-RuntimeLearning" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6A011C797003DFEDBCC7ACB819B53D0A /* Debug */,
+				0883B897F71E75BC0B7521BAACCF3764 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

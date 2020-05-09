@@ -43,6 +43,36 @@
 #import "TestViewDidLoadCallStackViewController.h"
 #import <fishhook/fishhook.h>
 #import "KeychainUsage.h"
+#import "TestFuctionalProgromming.h"
+
+@class TableDataRow;
+
+@interface TableDataSection : NSObject
+
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, strong) NSMutableArray<TableDataRow *> *items;
+
+@end
+
+@interface TableDataRow : NSObject
+
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, assign) SEL action;
+
+@end
+
+@implementation TableDataSection
+
+
+@end
+
+@implementation TableDataRow
+
+- (void)dealloc {
+    _action = nil;
+}
+
+@end
 
 static NSString *kCellID    = @"CELLID";
 static NSString *kHeaderID  = @"HEADERID";
@@ -165,6 +195,9 @@ int functionG(int x) {
         TableDataRow *row9 = [TableDataRow new];
         row9.title = @"钥匙串的使用";
         row9.action = @selector(testKeychainUsage);
+        TableDataRow *row10 = [TableDataRow new];
+        row10.title = @"函数式编程的使用";
+        row10.action = @selector(testFP);
         section0.items = @[
             row0,
             row1,
@@ -175,7 +208,8 @@ int functionG(int x) {
             row6,
             row7,
             row8,
-            row9].mutableCopy;
+            row9,
+            row10].mutableCopy;
     }
     
     TableDataSection *section1 = [TableDataSection new];
@@ -393,6 +427,10 @@ int functionG(int x) {
 - (void)testKeychainUsage {
     KeychainUsage *keychain = [[KeychainUsage alloc] initWithService:@"com.hc.runtimelearning" accessGroup:@"group.hc.demo"]; // L2ZY2L7GYS.group.hc.demo
     [keychain testKeychainUsage];
+}
+
+- (void)testFP {
+    [TestFuctionalProgromming new];
 }
 
 #pragma mark - Runtime部分
@@ -787,18 +825,5 @@ void testBenchmark(void) {
     return _entryTableView;
 }
 
-
-@end
-
-@implementation TableDataSection
-
-
-@end
-
-@implementation TableDataRow
-
-- (void)dealloc {
-    _action = nil;
-}
 
 @end

@@ -13,19 +13,3 @@
 
 @end
 
-@class TableDataRow;
-
-@interface TableDataSection : NSObject
-
-@property (nonatomic, copy) NSString *title;
-@property (nonatomic, strong) NSMutableArray<TableDataRow *> *items;
-
-@end
-
-@interface TableDataRow : NSObject
-
-@property (nonatomic, copy) NSString *title;
-@property (nonatomic, assign) SEL action;
-
-@end
-
