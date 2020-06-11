@@ -53,15 +53,17 @@ _objc_isTaggedPointer(const void * _Nullable ptr)
 - (instancetype)init {
     self = [super init];
     if (self) {
-        //[self stringTaggedPointerTest];
-        [self numberTest];
-        [self dateTest];
+        [self stringTaggedPointerTest];
+        //[self numberTest];
+        //[self dateTest];
     }
     
     return self;
 }
 
 - (void)stringTaggedPointerTest {
+    // https://mikeash.com/pyblog/friday-qa-2015-07-31-tagged-pointer-strings.html
+    // http://www.cocoachina.com/articles/13449
     // 以下结果在真机下打印：
     NSString *gloablString = @"11111111111"; // __NSCFConstantString
     [self formatedLogObject:gloablString];
@@ -69,8 +71,10 @@ _objc_isTaggedPointer(const void * _Nullable ptr)
     [self formatedLogObject:stringWithFormat];
     // 1111  输出： 0xa000000313131314 1111 NSTaggedPointerString 8bit编码
     // 11位1 输出：0xa7bdef7bdef7bdeb 11111111111 NSTaggedPointerString 5位编码
-    // 最后4位表示长度；最高4位是标记位【标记是否是taggedPointer以及类类型
-    // a = 1011 最高位1标记是taggedPointer
+    // mac下：
+    // 1.4位表示长度；最高4位是标记位【最高位是标记是否是TaggedPointer、另外3位标记类类型的index】
+    // 2.a = 1011 最高位1标记是taggedPointer
+    // 3.类型存储的是索引，会根据索引去查找类的映射关系
     NSString *stringWithString = [NSString stringWithString:@"2222"]; // __NSCFConstantString [warning: Replace '[NSString stringWithString:@"2222"]' with '@"2222"']
     [self formatedLogObject:stringWithFormat];
     NSMutableString *mutable = [NSMutableString string];
@@ -82,6 +86,24 @@ _objc_isTaggedPointer(const void * _Nullable ptr)
         immutable = [mutable copy];
         stringClass = object_getClass(immutable);
         [self formatedLogObject:immutable];
+        // 下个符号断点[NSTaggedPointerString length]，查看汇编
+        /*
+         mac下：
+         CoreFoundation`-[NSTaggedPointerString length]:
+             0x7fff23c4e220 <+0>:  movq   %rdi, %rax
+             0x7fff23c4e223 <+3>:  movq   0x5c9c80f6(%rip), %rcx    ; (void *)0x00007fff89e07288: objc_debug_taggedpointer_obfuscator
+             0x7fff23c4e22a <+10>: xorl   (%rcx), %eax
+         ->  0x7fff23c4e22c <+12>: andl   $0xf, %eax
+             0x7fff23c4e22f <+15>: retq
+         执行前2次循环发现
+         (lldb) register read eax
+              eax = 0x00000001
+         (lldb) register read eax
+              eax = 0x00000002
+         (lldb)
+         */
+        __unused NSInteger length = immutable.length;
+        // 输出的结果有差异
         // y的ASCII对照表值就是79 http://ascii.911cha.com/
         // 0xa000000000000791 y NSTaggedPointerString
         // 0xa000000000079792 yy NSTaggedPointerString
@@ -98,6 +120,9 @@ _objc_isTaggedPointer(const void * _Nullable ptr)
     }
     while(_objc_isTaggedPointer((__bridge const void * _Nullable)(immutable)));
 //    while (stringClass == NSClassFromString(@"NSTaggedPointerString"));
+    NSString *chineseStr = [NSString stringWithFormat:@"%@", @"我"];
+    Class chineseStrClass = object_getClass(chineseStr);
+    NSLog(@"chineseStr class = %@", chineseStrClass); // chineseStr class = __NSCFString
 }
 
 - (void)numberTest {

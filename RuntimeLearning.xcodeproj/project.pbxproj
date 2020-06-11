@@ -21,6 +21,7 @@
 		10128733221D3B7300ED6CDE /* NSObject+RLSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 10128729221D3B7200ED6CDE /* NSObject+RLSafe.m */; };
 		10128734221D3B7300ED6CDE /* MethodSwizzleUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1012872C221D3B7200ED6CDE /* MethodSwizzleUtil.m */; };
 		1018FAF9225E12C60095BD95 /* AttributeUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1018FAF8225E12C60095BD95 /* AttributeUsage.m */; };
+		101C2C372478FEE7001403F5 /* HCSwizzleInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 101C2C322478FEE7001403F5 /* HCSwizzleInstance.m */; };
 		1025D0EB225DA683008E4CC3 /* UIFont+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 1025D0EA225DA683008E4CC3 /* UIFont+Test.m */; };
 		1025D0EE225DAED1008E4CC3 /* UIViewController+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 1025D0ED225DAED1008E4CC3 /* UIViewController+Test.m */; };
 		1026DD112333173D00738E85 /* TestCode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1026DD102333173D00738E85 /* TestCode.mm */; };
@@ -30,6 +31,8 @@
 		104BF8BD22771E9D000C464E /* DynamicCallFunctionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 104BF8BC22771E9D000C464E /* DynamicCallFunctionTest.m */; };
 		104BF8D922772F74000C464E /* calculate.c in Sources */ = {isa = PBXBuildFile; fileRef = 104BF8C622772333000C464E /* calculate.c */; };
 		10518D81241F79A600AE5265 /* TestCategoryOveride+TestOverideOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 10518D80241F79A600AE5265 /* TestCategoryOveride+TestOverideOne.m */; };
+		1059F82A2488DFD7005673C8 /* PropertyUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1059F8292488DFD7005673C8 /* PropertyUsage.m */; };
+		1059F82D2488E225005673C8 /* NSObject+HCLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 1059F82C2488E225005673C8 /* NSObject+HCLog.m */; };
 		1072564423B30DBD00BC3A00 /* TestMapTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1072564323B30DBD00BC3A00 /* TestMapTable.m */; };
 		1076819A241B3B0700D486A9 /* TestCategoryOveride+TestOveride.m in Sources */ = {isa = PBXBuildFile; fileRef = 10768199241B3B0700D486A9 /* TestCategoryOveride+TestOveride.m */; };
 		107B55D62410C79100EDCCD6 /* NSCacheTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 107B55D52410C79100EDCCD6 /* NSCacheTest.m */; };
@@ -128,6 +131,12 @@
 		1012872C221D3B7200ED6CDE /* MethodSwizzleUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MethodSwizzleUtil.m; sourceTree = "<group>"; };
 		1018FAF7225E12C60095BD95 /* AttributeUsage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AttributeUsage.h; sourceTree = "<group>"; };
 		1018FAF8225E12C60095BD95 /* AttributeUsage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AttributeUsage.m; sourceTree = "<group>"; };
+		101C2C2E2478FEE7001403F5 /* RCTProfileTrampoline-arm.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = "RCTProfileTrampoline-arm.S"; sourceTree = "<group>"; };
+		101C2C2F2478FEE7001403F5 /* RCTProfileTrampoline-i386.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = "RCTProfileTrampoline-i386.S"; sourceTree = "<group>"; };
+		101C2C302478FEE7001403F5 /* HCSwizzleInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCSwizzleInstance.h; sourceTree = "<group>"; };
+		101C2C312478FEE7001403F5 /* RCTProfileTrampoline-arm64.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = "RCTProfileTrampoline-arm64.S"; sourceTree = "<group>"; };
+		101C2C322478FEE7001403F5 /* HCSwizzleInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCSwizzleInstance.m; sourceTree = "<group>"; };
+		101C2C332478FEE7001403F5 /* RCTProfileTrampoline-x86_64.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = "RCTProfileTrampoline-x86_64.S"; sourceTree = "<group>"; };
 		1025D0E9225DA683008E4CC3 /* UIFont+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIFont+Test.h"; sourceTree = "<group>"; };
 		1025D0EA225DA683008E4CC3 /* UIFont+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Test.m"; sourceTree = "<group>"; };
 		1025D0EC225DAED1008E4CC3 /* UIViewController+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Test.h"; sourceTree = "<group>"; };
@@ -147,6 +156,11 @@
 		104BF8D022772F55000C464E /* libadd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libadd.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		10518D7F241F79A600AE5265 /* TestCategoryOveride+TestOverideOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestCategoryOveride+TestOverideOne.h"; sourceTree = "<group>"; };
 		10518D80241F79A600AE5265 /* TestCategoryOveride+TestOverideOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TestCategoryOveride+TestOverideOne.m"; sourceTree = "<group>"; };
+		1059F8282488DFD7005673C8 /* PropertyUsage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PropertyUsage.h; sourceTree = "<group>"; };
+		1059F8292488DFD7005673C8 /* PropertyUsage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropertyUsage.m; sourceTree = "<group>"; };
+		1059F82B2488E225005673C8 /* NSObject+HCLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+HCLog.h"; sourceTree = "<group>"; };
+		1059F82C2488E225005673C8 /* NSObject+HCLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HCLog.m"; sourceTree = "<group>"; };
+		1059F82F2488F4C4005673C8 /* PropertyUsage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PropertyUsage.cpp; sourceTree = "<group>"; };
 		1072564223B30DBD00BC3A00 /* TestMapTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestMapTable.h; sourceTree = "<group>"; };
 		1072564323B30DBD00BC3A00 /* TestMapTable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMapTable.m; sourceTree = "<group>"; };
 		10768198241B3B0700D486A9 /* TestCategoryOveride+TestOveride.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestCategoryOveride+TestOveride.h"; sourceTree = "<group>"; };
@@ -310,6 +324,7 @@
 				107B55D32410C76F00EDCCD6 /* Cache */,
 				10E6B13D2462861F00A37097 /* Keychain */,
 				102CDD3F246656A6002150BE /* FunctionalProgromming */,
+				1059F8272488DFAF005673C8 /* Property */,
 				10128704221D3B0700ED6CDE /* AppDelegate.h */,
 				10128705221D3B0700ED6CDE /* AppDelegate.m */,
 				10128707221D3B0700ED6CDE /* ViewController.h */,
@@ -348,6 +363,8 @@
 				10128729221D3B7200ED6CDE /* NSObject+RLSafe.m */,
 				10C3235722781DCF0091B0ED /* NSObject+Injection.h */,
 				10C3235822781DCF0091B0ED /* NSObject+Injection.m */,
+				1059F82B2488E225005673C8 /* NSObject+HCLog.h */,
+				1059F82C2488E225005673C8 /* NSObject+HCLog.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -359,6 +376,19 @@
 				1018FAF8225E12C60095BD95 /* AttributeUsage.m */,
 			);
 			path = __attribute__;
+			sourceTree = "<group>";
+		};
+		101C2C2D2478FEE7001403F5 /* HookInstance */ = {
+			isa = PBXGroup;
+			children = (
+				101C2C302478FEE7001403F5 /* HCSwizzleInstance.h */,
+				101C2C322478FEE7001403F5 /* HCSwizzleInstance.m */,
+				101C2C2E2478FEE7001403F5 /* RCTProfileTrampoline-arm.S */,
+				101C2C312478FEE7001403F5 /* RCTProfileTrampoline-arm64.S */,
+				101C2C2F2478FEE7001403F5 /* RCTProfileTrampoline-i386.S */,
+				101C2C332478FEE7001403F5 /* RCTProfileTrampoline-x86_64.S */,
+			);
+			path = HookInstance;
 			sourceTree = "<group>";
 		};
 		102CDD3F246656A6002150BE /* FunctionalProgromming */ = {
@@ -388,6 +418,16 @@
 				104BF8C622772333000C464E /* calculate.c */,
 			);
 			path = Dynamic;
+			sourceTree = "<group>";
+		};
+		1059F8272488DFAF005673C8 /* Property */ = {
+			isa = PBXGroup;
+			children = (
+				1059F8282488DFD7005673C8 /* PropertyUsage.h */,
+				1059F8292488DFD7005673C8 /* PropertyUsage.m */,
+				1059F82F2488F4C4005673C8 /* PropertyUsage.cpp */,
+			);
+			path = Property;
 			sourceTree = "<group>";
 		};
 		1072564123B30D9E00BC3A00 /* MapTable */ = {
@@ -473,6 +513,7 @@
 				1025D0EA225DA683008E4CC3 /* UIFont+Test.m */,
 				1025D0EC225DAED1008E4CC3 /* UIViewController+Test.h */,
 				1025D0ED225DAED1008E4CC3 /* UIViewController+Test.m */,
+				101C2C2D2478FEE7001403F5 /* HookInstance */,
 			);
 			path = Swizzle;
 			sourceTree = "<group>";
@@ -748,6 +789,7 @@
 				10D530FF2227B5B7007AE594 /* TestCategorySwizzle.m in Sources */,
 				10128734221D3B7300ED6CDE /* MethodSwizzleUtil.m in Sources */,
 				10C3235922781DCF0091B0ED /* NSObject+Injection.m in Sources */,
+				1059F82D2488E225005673C8 /* NSObject+HCLog.m in Sources */,
 				10518D81241F79A600AE5265 /* TestCategoryOveride+TestOverideOne.m in Sources */,
 				102CDD42246656CD002150BE /* TestFuctionalProgromming.m in Sources */,
 				1086B37E23B4AE910002F990 /* FishhookUsage.m in Sources */,
@@ -756,7 +798,9 @@
 				10113DE122CC8F7F00132833 /* CopyUsage.m in Sources */,
 				10D16100237456940051A7BA /* DispatchExamnationTest.m in Sources */,
 				102E8648230A416900614371 /* TestTaggedPointer.m in Sources */,
+				101C2C372478FEE7001403F5 /* HCSwizzleInstance.m in Sources */,
 				10D160C0237119690051A7BA /* ByteAlignmentTest.m in Sources */,
+				1059F82A2488DFD7005673C8 /* PropertyUsage.m in Sources */,
 				10128733221D3B7300ED6CDE /* NSObject+RLSafe.m in Sources */,
 				10BF41EB228012A7009F291E /* DispatchBarrierTest.m in Sources */,
 				10A6CA9D241CA882002BFAC5 /* TestMethodInvocation.m in Sources */,
@@ -1000,6 +1044,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				WARNING_CFLAGS = "-Werror=incompatible-pointer-types";
 				WARNING_LDFLAGS = "";
 			};
 			name = Debug;
@@ -1042,6 +1087,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "RuntimeLearning/RuntimeLearning-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+				WARNING_CFLAGS = "-Werror=incompatible-pointer-types";
 				WARNING_LDFLAGS = "";
 			};
 			name = Release;

@@ -1,0 +1,3474 @@
+#objdump --macho -x macho名称
+RuntimeLearning:
+Sections:
+Idx Name          Size      Address          Type
+  0 __text        00012044 0000000100001bb0 TEXT 
+  1 __stubs       00000246 0000000100013bf4 TEXT 
+  2 __stub_helper 000003da 0000000100013e3c TEXT 
+  3 __gcc_except_tab 0000019c 0000000100014218 DATA 
+  4 __cstring     0000257c 00000001000143b4 DATA 
+  5 __objc_methname 00002290 0000000100016930 DATA 
+  6 __objc_classname 0000031b 0000000100018bc0 DATA 
+  7 __objc_methtype 00000bd1 0000000100018edb DATA 
+  8 __const       00000050 0000000100019ab0 DATA 
+  9 __entitlements 00000176 0000000100019b00 DATA 
+ 10 __unwind_info 0000037c 0000000100019c78 DATA 
+ 11 __nl_symbol_ptr 00000010 000000010001a000 DATA 
+ 12 __got         00000070 000000010001a010 DATA 
+ 13 __la_symbol_ptr 00000308 000000010001a080 DATA 
+ 14 __mod_init_func 00000010 000000010001a388 DATA 
+ 15 __mod_term_func 00000008 000000010001a398 DATA 
+ 16 __const       00000e68 000000010001a3a0 DATA 
+ 17 __cfstring    00001920 000000010001b208 DATA 
+ 18 __objc_classlist 00000110 000000010001cb28 DATA 
+ 19 __objc_nlclslist 00000008 000000010001cc38 DATA 
+ 20 __objc_catlist 00000058 000000010001cc40 DATA 
+ 21 __objc_nlcatlist 00000030 000000010001cc98 DATA 
+ 22 __objc_protolist 00000020 000000010001ccc8 DATA 
+ 23 __objc_imageinfo 00000008 000000010001cce8 DATA 
+ 24 __objc_const  00004170 000000010001ccf0 DATA 
+ 25 __objc_selrefs 00000808 0000000100020e60 DATA 
+ 26 __objc_classrefs 00000178 0000000100021668 DATA 
+ 27 __objc_superrefs 00000090 00000001000217e0 DATA 
+ 28 __objc_ivar   00000118 0000000100021870 DATA 
+ 29 __objc_data   00000aa0 0000000100021988 DATA 
+ 30 __data        00000180 0000000100022428 DATA 
+ 31 __bss         000000b8 00000001000225a8 BSS
+
+SYMBOL TABLE:
+0000000000000000 l    d  *UND*	/Users/hechao/Documents/Demos/RuntimeLearning/RuntimeLearning/__attribute__/
+0000000000000000 l    d  *UND*	AttributeUsage.m
+000000005e045873 l    d  __TEXT,__stub_helper	__stub_helper
+0000000100001e33 l    d  __TEXT,__text	__text
+0000000100001e33 l    d  __TEXT,__text	__text
+0000000000000046 l    d  *UND*	
+0000000000000046 l    d  __TEXT,__text	__text
+0000000100001e79 l    d  __TEXT,__text	__text
+0000000100001e79 l    d  __TEXT,__text	__text
+000000000000007a l    d  *UND*	
+000000000000007a l    d  __TEXT,__text	__text
+0000000100001ef3 l    d  __TEXT,__text	__text
+0000000100001ef3 l    d  __TEXT,__text	__text
+0000000000000030 l    d  *UND*	
+0000000000000030 l    d  __TEXT,__text	__text
+0000000100001f23 l    d  __TEXT,__text	__text
+0000000100001f23 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	/Users/hechao/Documents/Demos/RuntimeLearning/RuntimeLearning/RuntimeLearningMacro.h
+00000000000000c5 l    d  *UND*	
+00000000000000c5 l    d  __TEXT,__text	__text
+0000000100001fe8 l    d  __TEXT,__text	__text
+0000000100001fe8 l    d  __TEXT,__text	__text
+0000000000000041 l    d  *UND*	
+0000000000000041 l    d  __TEXT,__text	__text
+0000000100002029 l    d  __TEXT,__text	__text
+0000000100002029 l    d  __TEXT,__text	__text
+000000000000000f l    d  *UND*	
+000000000000000f l    d  __TEXT,__text	__text
+0000000100002038 l    d  __TEXT,__text	__text
+0000000100002038 l    d  __TEXT,__text	__text
+000000000000000f l    d  *UND*	
+000000000000000f l    d  __TEXT,__text	__text
+0000000100002047 l    d  __TEXT,__text	__text
+0000000100002047 l    d  __TEXT,__text	__text
+0000000000000014 l    d  *UND*	
+0000000000000014 l    d  __TEXT,__text	__text
+000000010000205b l    d  __TEXT,__text	__text
+000000010000205b l    d  __TEXT,__text	__text
+0000000000000014 l    d  *UND*	
+0000000000000014 l    d  __TEXT,__text	__text
+000000010000206f l    d  __TEXT,__text	__text
+000000010000206f l    d  __TEXT,__text	__text
+0000000000000014 l    d  *UND*	
+0000000000000014 l    d  __TEXT,__text	__text
+0000000100002083 l    d  __TEXT,__text	__text
+0000000100002083 l    d  __TEXT,__text	__text
+0000000000000010 l    d  *UND*	
+0000000000000010 l    d  __TEXT,__text	__text
+0000000100002093 l    d  __TEXT,__text	__text
+0000000100002093 l    d  __TEXT,__text	__text
+000000000000000e l    d  *UND*	
+000000000000000e l    d  __TEXT,__text	__text
+00000001000020a1 l    d  __TEXT,__text	__text
+00000001000020a1 l    d  __TEXT,__text	__text
+0000000000000011 l    d  *UND*	
+0000000000000011 l    d  __TEXT,__text	__text
+00000001000020b2 l    d  __TEXT,__text	__text
+00000001000020b2 l    d  __TEXT,__text	__text
+0000000000000014 l    d  *UND*	
+0000000000000014 l    d  __TEXT,__text	__text
+00000001000020c6 l    d  __TEXT,__text	__text
+00000001000020c6 l    d  __TEXT,__text	__text
+0000000000000013 l    d  *UND*	
+0000000000000013 l    d  __TEXT,__text	__text
+0000000100014218 l    d  __TEXT,__gcc_except_tab	__gcc_except_tab
+000000010001a3a0 l    d  __DATA,__const	__const
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_AttributeUsage._lock
+0000000000000000 l    d  *UND*	_OBJC_CLASS_$_AttributeUsage
+0000000000000000 l    d  *UND*	_OBJC_METACLASS_$_AttributeUsage
+0000000000000000 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	/Users/hechao/Documents/Demos/RuntimeLearning/RuntimeLearning/Swizzle/
+0000000000000000 l    d  *UND*	TestUnsafeSwizzle.m
+000000005e045873 l    d  __TEXT,__stub_helper	__stub_helper
+0000000100001c60 l    d  __TEXT,__text	__text
+0000000100001c60 l    d  __TEXT,__text	__text
+000000000000005f l    d  *UND*	
+000000000000005f l    d  __TEXT,__text	__text
+00000001000020d9 l    d  __TEXT,__text	__text
+00000001000020d9 l    d  __TEXT,__text	__text
+000000000000001b l    d  *UND*	
+000000000000001b l    d  __TEXT,__text	__text
+00000001000020f4 l    d  __TEXT,__text	__text
+00000001000020f4 l    d  __TEXT,__text	__text
+0000000000000021 l    d  *UND*	
+0000000000000021 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	_OBJC_METACLASS_$_TestUnsafeSwizzle
+0000000000000000 l    d  *UND*	_OBJC_CLASS_$_TestUnsafeSwizzle
+0000000000000000 l    d  *UND*	_OBJC_METACLASS_$_SubTestUnsafeSwizzle
+0000000000000000 l    d  *UND*	_OBJC_CLASS_$_SubTestUnsafeSwizzle
+0000000000000000 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	/Users/hechao/Documents/Demos/RuntimeLearning/RuntimeLearning/Dispatch/
+0000000000000000 l    d  *UND*	DispatchOnceTest.m
+000000005e045873 l    d  __TEXT,__stub_helper	__stub_helper
+0000000100002115 l    d  __TEXT,__text	__text
+0000000100002115 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator12.1.sdk/usr/include/dispatch/once.h
+0000000000000088 l    d  *UND*	
+0000000000000088 l    d  __TEXT,__text	__text
+000000010000219d l    d  __TEXT,__text	__text
+000000010000219d l    d  __TEXT,__text	__text
+0000000000000040 l    d  *UND*	
+0000000000000040 l    d  __TEXT,__text	__text
+00000001000021dd l    d  __TEXT,__text	__text
+00000001000021dd l    d  __TEXT,__text	__text
+0000000000000006 l    d  *UND*	
+0000000000000006 l    d  __TEXT,__text	__text
+00000001000021e3 l    d  __TEXT,__text	__text
+00000001000021e3 l    d  __TEXT,__text	__text
+0000000000000006 l    d  *UND*	
+0000000000000006 l    d  __TEXT,__text	__text
+000000010001a3d0 l    d  __DATA,__const	__const
+0000000000000000 l    d  *UND*	_OBJC_METACLASS_$_DispatchOnceTest
+0000000000000000 l    d  *UND*	_OBJC_CLASS_$_DispatchOnceTest
+00000001000225a8 l    d  __DATA,__bss	__bss
+00000001000225b0 l    d  __DATA,__bss	__bss
+00000001000225b8 l    d  __DATA,__bss	__bss
+0000000000000000 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	/Users/hechao/Documents/Demos/RuntimeLearning/RuntimeLearning/Swizzle/
+0000000000000000 l    d  *UND*	TestCategorySwizzle.m
+000000005e045873 l    d  __TEXT,__stub_helper	__stub_helper
+0000000100001cbf l    d  __TEXT,__text	__text
+0000000100001cbf l    d  __TEXT,__text	__text
+0000000000000024 l    d  *UND*	
+0000000000000024 l    d  __TEXT,__text	__text
+0000000100001ce3 l    d  __TEXT,__text	__text
+0000000100001ce3 l    d  __TEXT,__text	__text
+0000000000000024 l    d  *UND*	
+0000000000000024 l    d  __TEXT,__text	__text
+0000000100001d07 l    d  __TEXT,__text	__text
+0000000100001d07 l    d  __TEXT,__text	__text
+0000000000000058 l    d  *UND*	
+0000000000000058 l    d  __TEXT,__text	__text
+00000001000021e9 l    d  __TEXT,__text	__text
+00000001000021e9 l    d  __TEXT,__text	__text
+000000000000001b l    d  *UND*	
+000000000000001b l    d  __TEXT,__text	__text
+0000000100002204 l    d  __TEXT,__text	__text
+0000000100002204 l    d  __TEXT,__text	__text
+0000000000000006 l    d  *UND*	
+0000000000000006 l    d  __TEXT,__text	__text
+000000010000220a l    d  __TEXT,__text	__text
+000000010000220a l    d  __TEXT,__text	__text
+000000000000004a l    d  *UND*	
+000000000000004a l    d  __TEXT,__text	__text
+0000000100002254 l    d  __TEXT,__text	__text
+0000000100002254 l    d  __TEXT,__text	__text
+0000000000000028 l    d  *UND*	
+0000000000000028 l    d  __TEXT,__text	__text
+000000010000227c l    d  __TEXT,__text	__text
+000000010000227c l    d  __TEXT,__text	__text
+000000000000004a l    d  *UND*	
+000000000000004a l    d  __TEXT,__text	__text
+00000001000022c6 l    d  __TEXT,__text	__text
+00000001000022c6 l    d  __TEXT,__text	__text
+0000000000000028 l    d  *UND*	
+0000000000000028 l    d  __TEXT,__text	__text
+00000001000022ee l    d  __TEXT,__text	__text
+00000001000022ee l    d  __TEXT,__text	__text
+00000000000000c6 l    d  *UND*	
+00000000000000c6 l    d  __TEXT,__text	__text
+00000001000023b4 l    d  __TEXT,__text	__text
+00000001000023b4 l    d  __TEXT,__text	__text
+0000000000000006 l    d  *UND*	
+0000000000000006 l    d  __TEXT,__text	__text
+00000001000023ba l    d  __TEXT,__text	__text
+00000001000023ba l    d  __TEXT,__text	__text
+0000000000000006 l    d  *UND*	
+0000000000000006 l    d  __TEXT,__text	__text
+00000001000023c0 l    d  __TEXT,__text	__text
+00000001000023c0 l    d  __TEXT,__text	__text
+0000000000000006 l    d  *UND*	
+0000000000000006 l    d  __TEXT,__text	__text
+000000010001a400 l    d  __DATA,__const	__const
+000000010001a420 l    d  __DATA,__const	__const
+000000010001a440 l    d  __DATA,__const	__const
+000000010001a460 l    d  __DATA,__const	__const
+000000010001a480 l    d  __DATA,__const	__const
+0000000000000000 l    d  *UND*	_OBJC_METACLASS_$_TestCategorySwizzle
+0000000000000000 l    d  *UND*	_OBJC_CLASS_$_TestCategorySwizzle
+00000001000225c0 l    d  __DATA,__bss	__bss
+00000001000225c8 l    d  __DATA,__bss	__bss
+00000001000225d0 l    d  __DATA,__bss	__bss
+0000000000000000 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	/Users/hechao/Documents/Demos/RuntimeLearning/RuntimeLearning/Utility/
+0000000000000000 l    d  *UND*	MethodSwizzleUtil.m
+000000005e045873 l    d  __TEXT,__stub_helper	__stub_helper
+00000001000023c6 l    d  __TEXT,__text	__text
+00000001000023c6 l    d  __TEXT,__text	__text
+00000000000000ab l    d  *UND*	
+00000000000000ab l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	_OBJC_METACLASS_$_MethodSwizzleUtil
+0000000000000000 l    d  *UND*	_OBJC_CLASS_$_MethodSwizzleUtil
+0000000000000000 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	/Users/hechao/Documents/Demos/RuntimeLearning/RuntimeLearning/Utility/
+0000000000000000 l    d  *UND*	NSObject+Injection.m
+000000005e045873 l    d  __TEXT,__stub_helper	__stub_helper
+0000000100002471 l    d  __TEXT,__text	__text
+0000000100002471 l    d  __TEXT,__text	__text
+0000000000000039 l    d  *UND*	
+0000000000000039 l    d  __TEXT,__text	__text
+00000001000024aa l    d  __TEXT,__text	__text
+00000001000024aa l    d  __TEXT,__text	__text
+0000000000000011 l    d  *UND*	
+0000000000000011 l    d  __TEXT,__text	__text
+00000001000024bb l    d  __TEXT,__text	__text
+00000001000024bb l    d  __TEXT,__text	__text
+0000000000000071 l    d  *UND*	
+0000000000000071 l    d  __TEXT,__text	__text
+00000001000225d8 l    d  __DATA,__bss	__bss
+0000000000000000 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	/Users/hechao/Documents/Demos/RuntimeLearning/RuntimeLearning/
+0000000000000000 l    d  *UND*	TestCode.m
+000000005e045873 l    d  __TEXT,__stub_helper	__stub_helper
+000000010000252c l    d  __TEXT,__text	__text
+000000010000252c l    d  __TEXT,__text	__text
+000000000000004c l    d  *UND*	
+000000000000004c l    d  __TEXT,__text	__text
+0000000100002578 l    d  __TEXT,__text	__text
+0000000100002578 l    d  __TEXT,__text	__text
+0000000000000043 l    d  *UND*	
+0000000000000043 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	_OBJC_CLASS_$_TestCode
+0000000000000000 l    d  *UND*	_OBJC_METACLASS_$_TestCode
+0000000000000000 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	/Users/hechao/Documents/Demos/RuntimeLearning/RuntimeLearning/Copy/
+0000000000000000 l    d  *UND*	CopyUsage.m
+000000005e045873 l    d  __TEXT,__stub_helper	__stub_helper
+00000001000025bb l    d  __TEXT,__text	__text
+00000001000025bb l    d  __TEXT,__text	__text
+000000000000002f l    d  *UND*	
+000000000000002f l    d  __TEXT,__text	__text
+00000001000025ea l    d  __TEXT,__text	__text
+00000001000025ea l    d  __TEXT,__text	__text
+0000000000000012 l    d  *UND*	
+0000000000000012 l    d  __TEXT,__text	__text
+00000001000025fc l    d  __TEXT,__text	__text
+00000001000025fc l    d  __TEXT,__text	__text
+000000000000016c l    d  *UND*	
+000000000000016c l    d  __TEXT,__text	__text
+0000000100002768 l    d  __TEXT,__text	__text
+0000000100002768 l    d  __TEXT,__text	__text
+00000000000001b2 l    d  *UND*	
+00000000000001b2 l    d  __TEXT,__text	__text
+000000010000291a l    d  __TEXT,__text	__text
+000000010000291a l    d  __TEXT,__text	__text
+0000000000000327 l    d  *UND*	
+0000000000000327 l    d  __TEXT,__text	__text
+0000000100002c41 l    d  __TEXT,__text	__text
+0000000100002c41 l    d  __TEXT,__text	__text
+000000000000026e l    d  *UND*	
+000000000000026e l    d  __TEXT,__text	__text
+0000000100002eaf l    d  __TEXT,__text	__text
+0000000100002eaf l    d  __TEXT,__text	__text
+00000000000002ef l    d  *UND*	
+00000000000002ef l    d  __TEXT,__text	__text
+000000010000319e l    d  __TEXT,__text	__text
+000000010000319e l    d  __TEXT,__text	__text
+00000000000002d5 l    d  *UND*	
+00000000000002d5 l    d  __TEXT,__text	__text
+0000000100003473 l    d  __TEXT,__text	__text
+0000000100003473 l    d  __TEXT,__text	__text
+0000000000000013 l    d  *UND*	
+0000000000000013 l    d  __TEXT,__text	__text
+0000000100003486 l    d  __TEXT,__text	__text
+0000000100003486 l    d  __TEXT,__text	__text
+0000000000000011 l    d  *UND*	
+0000000000000011 l    d  __TEXT,__text	__text
+0000000100003497 l    d  __TEXT,__text	__text
+0000000100003497 l    d  __TEXT,__text	__text
+0000000000000011 l    d  *UND*	
+0000000000000011 l    d  __TEXT,__text	__text
+00000001000034a8 l    d  __TEXT,__text	__text
+00000001000034a8 l    d  __TEXT,__text	__text
+0000000000000014 l    d  *UND*	
+0000000000000014 l    d  __TEXT,__text	__text
+00000001000034bc l    d  __TEXT,__text	__text
+00000001000034bc l    d  __TEXT,__text	__text
+0000000000000013 l    d  *UND*	
+0000000000000013 l    d  __TEXT,__text	__text
+00000001000034cf l    d  __TEXT,__text	__text
+00000001000034cf l    d  __TEXT,__text	__text
+0000000000000011 l    d  *UND*	
+0000000000000011 l    d  __TEXT,__text	__text
+00000001000034e0 l    d  __TEXT,__text	__text
+00000001000034e0 l    d  __TEXT,__text	__text
+0000000000000011 l    d  *UND*	
+0000000000000011 l    d  __TEXT,__text	__text
+00000001000034f1 l    d  __TEXT,__text	__text
+00000001000034f1 l    d  __TEXT,__text	__text
+0000000000000014 l    d  *UND*	
+0000000000000014 l    d  __TEXT,__text	__text
+0000000100003505 l    d  __TEXT,__text	__text
+0000000100003505 l    d  __TEXT,__text	__text
+0000000000000013 l    d  *UND*	
+0000000000000013 l    d  __TEXT,__text	__text
+0000000100003518 l    d  __TEXT,__text	__text
+0000000100003518 l    d  __TEXT,__text	__text
+0000000000000011 l    d  *UND*	
+0000000000000011 l    d  __TEXT,__text	__text
+0000000100003529 l    d  __TEXT,__text	__text
+0000000100003529 l    d  __TEXT,__text	__text
+0000000000000011 l    d  *UND*	
+0000000000000011 l    d  __TEXT,__text	__text
+000000010000353a l    d  __TEXT,__text	__text
+000000010000353a l    d  __TEXT,__text	__text
+0000000000000014 l    d  *UND*	
+0000000000000014 l    d  __TEXT,__text	__text
+000000010000354e l    d  __TEXT,__text	__text
+000000010000354e l    d  __TEXT,__text	__text
+0000000000000075 l    d  *UND*	
+0000000000000075 l    d  __TEXT,__text	__text
+00000001000035c3 l    d  __TEXT,__text	__text
+00000001000035c3 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	/Users/hechao/Documents/Demos/RuntimeLearning/RuntimeLearning/Copy/CopyUsage.h
+0000000000000013 l    d  *UND*	
+0000000000000013 l    d  __TEXT,__text	__text
+00000001000035d6 l    d  __TEXT,__text	__text
+00000001000035d6 l    d  __TEXT,__text	__text
+0000000000000011 l    d  *UND*	
+0000000000000011 l    d  __TEXT,__text	__text
+00000001000035e7 l    d  __TEXT,__text	__text
+00000001000035e7 l    d  __TEXT,__text	__text
+0000000000000013 l    d  *UND*	
+0000000000000013 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_CopyUsage._pCopyStr
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_CopyUsage._pStrongStr
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_CopyUsage._pCopyArray
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_CopyUsage._pStrongArray
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_CopyUsage._pCopyDict
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_CopyUsage._pStrongDict
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_TestObj._name
+0000000000000000 l    d  *UND*	_OBJC_CLASS_$_CopyUsage
+0000000000000000 l    d  *UND*	_OBJC_CLASS_$_TestObj
+0000000000000000 l    d  *UND*	_OBJC_METACLASS_$_CopyUsage
+0000000000000000 l    d  *UND*	_OBJC_METACLASS_$_TestObj
+0000000000000000 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	/Users/hechao/Documents/Demos/RuntimeLearning/RuntimeLearning/Dispatch/
+0000000000000000 l    d  *UND*	DispatchExamnationTest.m
+000000005e045873 l    d  __TEXT,__stub_helper	__stub_helper
+00000001000035fa l    d  __TEXT,__text	__text
+00000001000035fa l    d  __TEXT,__text	__text
+0000000000000038 l    d  *UND*	
+0000000000000038 l    d  __TEXT,__text	__text
+0000000100003632 l    d  __TEXT,__text	__text
+0000000100003632 l    d  __TEXT,__text	__text
+00000000000000de l    d  *UND*	
+00000000000000de l    d  __TEXT,__text	__text
+0000000100003710 l    d  __TEXT,__text	__text
+0000000100003710 l    d  __TEXT,__text	__text
+000000000000001b l    d  *UND*	
+000000000000001b l    d  __TEXT,__text	__text
+000000010000372b l    d  __TEXT,__text	__text
+000000010000372b l    d  __TEXT,__text	__text
+000000000000001b l    d  *UND*	
+000000000000001b l    d  __TEXT,__text	__text
+0000000100003746 l    d  __TEXT,__text	__text
+0000000100003746 l    d  __TEXT,__text	__text
+000000000000001b l    d  *UND*	
+000000000000001b l    d  __TEXT,__text	__text
+0000000100003761 l    d  __TEXT,__text	__text
+0000000100003761 l    d  __TEXT,__text	__text
+000000000000001b l    d  *UND*	
+000000000000001b l    d  __TEXT,__text	__text
+000000010000377c l    d  __TEXT,__text	__text
+000000010000377c l    d  __TEXT,__text	__text
+000000000000001b l    d  *UND*	
+000000000000001b l    d  __TEXT,__text	__text
+0000000100003797 l    d  __TEXT,__text	__text
+0000000100003797 l    d  __TEXT,__text	__text
+000000000000001b l    d  *UND*	
+000000000000001b l    d  __TEXT,__text	__text
+00000001000037b2 l    d  __TEXT,__text	__text
+00000001000037b2 l    d  __TEXT,__text	__text
+0000000000000022 l    d  *UND*	
+0000000000000022 l    d  __TEXT,__text	__text
+00000001000037d4 l    d  __TEXT,__text	__text
+00000001000037d4 l    d  __TEXT,__text	__text
+000000000000000f l    d  *UND*	
+000000000000000f l    d  __TEXT,__text	__text
+00000001000037e3 l    d  __TEXT,__text	__text
+00000001000037e3 l    d  __TEXT,__text	__text
+000000000000000f l    d  *UND*	
+000000000000000f l    d  __TEXT,__text	__text
+00000001000037f2 l    d  __TEXT,__text	__text
+00000001000037f2 l    d  __TEXT,__text	__text
+000000000000001b l    d  *UND*	
+000000000000001b l    d  __TEXT,__text	__text
+000000010000380d l    d  __TEXT,__text	__text
+000000010000380d l    d  __TEXT,__text	__text
+00000000000000e9 l    d  *UND*	
+00000000000000e9 l    d  __TEXT,__text	__text
+00000001000038f6 l    d  __TEXT,__text	__text
+00000001000038f6 l    d  __TEXT,__text	__text
+000000000000005e l    d  *UND*	
+000000000000005e l    d  __TEXT,__text	__text
+0000000100003954 l    d  __TEXT,__text	__text
+0000000100003954 l    d  __TEXT,__text	__text
+0000000000000017 l    d  *UND*	
+0000000000000017 l    d  __TEXT,__text	__text
+000000010000396b l    d  __TEXT,__text	__text
+000000010000396b l    d  __TEXT,__text	__text
+0000000000000013 l    d  *UND*	
+0000000000000013 l    d  __TEXT,__text	__text
+000000010000397e l    d  __TEXT,__text	__text
+000000010000397e l    d  __TEXT,__text	__text
+00000000000000ac l    d  *UND*	
+00000000000000ac l    d  __TEXT,__text	__text
+0000000100003a2a l    d  __TEXT,__text	__text
+0000000100003a2a l    d  __TEXT,__text	__text
+0000000000000048 l    d  *UND*	
+0000000000000048 l    d  __TEXT,__text	__text
+0000000100003a72 l    d  __TEXT,__text	__text
+0000000100003a72 l    d  __TEXT,__text	__text
+000000000000001b l    d  *UND*	
+000000000000001b l    d  __TEXT,__text	__text
+0000000100003a8d l    d  __TEXT,__text	__text
+0000000100003a8d l    d  __TEXT,__text	__text
+000000000000000f l    d  *UND*	
+000000000000000f l    d  __TEXT,__text	__text
+0000000100003a9c l    d  __TEXT,__text	__text
+0000000100003a9c l    d  __TEXT,__text	__text
+000000000000000f l    d  *UND*	
+000000000000000f l    d  __TEXT,__text	__text
+0000000100014264 l    d  __TEXT,__gcc_except_tab	__gcc_except_tab
+000000010001a4b0 l    d  __DATA,__const	__const
+000000010001a4d0 l    d  __DATA,__const	__const
+000000010001a4f0 l    d  __DATA,__const	__const
+000000010001a510 l    d  __DATA,__const	__const
+000000010001a530 l    d  __DATA,__const	__const
+000000010001a550 l    d  __DATA,__const	__const
+000000010001a570 l    d  __DATA,__const	__const
+000000010001a590 l    d  __DATA,__const	__const
+000000010001a5b0 l    d  __DATA,__const	__const
+000000010001a5d0 l    d  __DATA,__const	__const
+000000010001a5f0 l    d  __DATA,__const	__const
+000000010001a610 l    d  __DATA,__const	__const
+000000010001a630 l    d  __DATA,__const	__const
+000000010001a660 l    d  __DATA,__const	__const
+000000010001a690 l    d  __DATA,__const	__const
+000000010001a6b0 l    d  __DATA,__const	__const
+000000010001a6d0 l    d  __DATA,__const	__const
+0000000000000000 l    d  *UND*	_OBJC_METACLASS_$_DispatchExamnationTest
+0000000000000000 l    d  *UND*	_OBJC_CLASS_$_DispatchExamnationTest
+0000000000000000 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	/Users/hechao/Documents/Demos/RuntimeLearning/RuntimeLearning/Tagged Pointer/
+0000000000000000 l    d  *UND*	TestTaggedPointer.m
+000000005e045873 l    d  __TEXT,__stub_helper	__stub_helper
+0000000100003aab l    d  __TEXT,__text	__text
+0000000100003aab l    d  __TEXT,__text	__text
+0000000000000061 l    d  *UND*	
+0000000000000061 l    d  __TEXT,__text	__text
+0000000100003b0c l    d  __TEXT,__text	__text
+0000000100003b0c l    d  __TEXT,__text	__text
+0000000000000152 l    d  *UND*	
+0000000000000152 l    d  __TEXT,__text	__text
+0000000100003c5e l    d  __TEXT,__text	__text
+0000000100003c5e l    d  __TEXT,__text	__text
+000000000000014d l    d  *UND*	
+000000000000014d l    d  __TEXT,__text	__text
+0000000100003dab l    d  __TEXT,__text	__text
+0000000100003dab l    d  __TEXT,__text	__text
+0000000000000144 l    d  *UND*	
+0000000000000144 l    d  __TEXT,__text	__text
+0000000100003eef l    d  __TEXT,__text	__text
+0000000100003eef l    d  __TEXT,__text	__text
+0000000000000040 l    d  *UND*	
+0000000000000040 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	_OBJC_CLASS_$_TestTaggedPointer
+0000000000000000 l    d  *UND*	_OBJC_METACLASS_$_TestTaggedPointer
+0000000000000000 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	/Users/hechao/Documents/Demos/RuntimeLearning/RuntimeLearning/ByteAlign/
+0000000000000000 l    d  *UND*	ByteAlignmentTest.m
+000000005e045873 l    d  __TEXT,__stub_helper	__stub_helper
+0000000100003f2f l    d  __TEXT,__text	__text
+0000000100003f2f l    d  __TEXT,__text	__text
+000000000000004c l    d  *UND*	
+000000000000004c l    d  __TEXT,__text	__text
+0000000100003f7b l    d  __TEXT,__text	__text
+0000000100003f7b l    d  __TEXT,__text	__text
+0000000000000118 l    d  *UND*	
+0000000000000118 l    d  __TEXT,__text	__text
+0000000100004093 l    d  __TEXT,__text	__text
+0000000100004093 l    d  __TEXT,__text	__text
+0000000000000010 l    d  *UND*	
+0000000000000010 l    d  __TEXT,__text	__text
+00000001000040a3 l    d  __TEXT,__text	__text
+00000001000040a3 l    d  __TEXT,__text	__text
+0000000000000010 l    d  *UND*	
+0000000000000010 l    d  __TEXT,__text	__text
+00000001000040b3 l    d  __TEXT,__text	__text
+00000001000040b3 l    d  __TEXT,__text	__text
+0000000000000011 l    d  *UND*	
+0000000000000011 l    d  __TEXT,__text	__text
+00000001000040c4 l    d  __TEXT,__text	__text
+00000001000040c4 l    d  __TEXT,__text	__text
+0000000000000010 l    d  *UND*	
+0000000000000010 l    d  __TEXT,__text	__text
+00000001000040d4 l    d  __TEXT,__text	__text
+00000001000040d4 l    d  __TEXT,__text	__text
+0000000000000011 l    d  *UND*	
+0000000000000011 l    d  __TEXT,__text	__text
+00000001000040e5 l    d  __TEXT,__text	__text
+00000001000040e5 l    d  __TEXT,__text	__text
+0000000000000011 l    d  *UND*	
+0000000000000011 l    d  __TEXT,__text	__text
+00000001000040f6 l    d  __TEXT,__text	__text
+00000001000040f6 l    d  __TEXT,__text	__text
+0000000000000011 l    d  *UND*	
+0000000000000011 l    d  __TEXT,__text	__text
+0000000100004107 l    d  __TEXT,__text	__text
+0000000100004107 l    d  __TEXT,__text	__text
+0000000000000011 l    d  *UND*	
+0000000000000011 l    d  __TEXT,__text	__text
+0000000100004118 l    d  __TEXT,__text	__text
+0000000100004118 l    d  __TEXT,__text	__text
+0000000000000013 l    d  *UND*	
+0000000000000013 l    d  __TEXT,__text	__text
+000000010000412b l    d  __TEXT,__text	__text
+000000010000412b l    d  __TEXT,__text	__text
+0000000000000011 l    d  *UND*	
+0000000000000011 l    d  __TEXT,__text	__text
+000000010000413c l    d  __TEXT,__text	__text
+000000010000413c l    d  __TEXT,__text	__text
+0000000000000011 l    d  *UND*	
+0000000000000011 l    d  __TEXT,__text	__text
+000000010000414d l    d  __TEXT,__text	__text
+000000010000414d l    d  __TEXT,__text	__text
+0000000000000014 l    d  *UND*	
+0000000000000014 l    d  __TEXT,__text	__text
+0000000100004161 l    d  __TEXT,__text	__text
+0000000100004161 l    d  __TEXT,__text	__text
+0000000000000031 l    d  *UND*	
+0000000000000031 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_ByteAlignmentTest._a
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_ByteAlignmentTest._b
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_ByteAlignmentTest._c
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_ByteAlignmentTest._d
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_ByteAlignmentTest._testString
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_ByteAlignmentTest._testObject
+0000000000000000 l    d  *UND*	_OBJC_CLASS_$_ByteAlignmentTest
+0000000000000000 l    d  *UND*	_OBJC_METACLASS_$_ByteAlignmentTest
+0000000000000000 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	/Users/hechao/Documents/Demos/RuntimeLearning/RuntimeLearning/Utility/
+0000000000000000 l    d  *UND*	NSObject+RLSafe.m
+000000005e045873 l    d  __TEXT,__stub_helper	__stub_helper
+0000000100001d5f l    d  __TEXT,__text	__text
+0000000100001d5f l    d  __TEXT,__text	__text
+0000000000000006 l    d  *UND*	
+0000000000000006 l    d  __TEXT,__text	__text
+0000000100004192 l    d  __TEXT,__text	__text
+0000000100004192 l    d  __TEXT,__text	__text
+0000000000000012 l    d  *UND*	
+0000000000000012 l    d  __TEXT,__text	__text
+00000001000041a4 l    d  __TEXT,__text	__text
+00000001000041a4 l    d  __TEXT,__text	__text
+0000000000000012 l    d  *UND*	
+0000000000000012 l    d  __TEXT,__text	__text
+00000001000041b6 l    d  __TEXT,__text	__text
+00000001000041b6 l    d  __TEXT,__text	__text
+0000000000000008 l    d  *UND*	
+0000000000000008 l    d  __TEXT,__text	__text
+0000000000000000 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	/Users/hechao/Documents/Demos/RuntimeLearning/RuntimeLearning/Dispatch/
+0000000000000000 l    d  *UND*	DispatchBarrierTest.m
+000000005e045874 l    d  __TEXT,__stub_helper	__stub_helper
+00000001000041be l    d  __TEXT,__text	__text
+00000001000041be l    d  __TEXT,__text	__text
+0000000000000088 l    d  *UND*	
+0000000000000088 l    d  __TEXT,__text	__text
+0000000100004246 l    d  __TEXT,__text	__text
+0000000100004246 l    d  __TEXT,__text	__text
+0000000000000067 l    d  *UND*	
+0000000000000067 l    d  __TEXT,__text	__text
+00000001000042ad l    d  __TEXT,__text	__text
+00000001000042ad l    d  __TEXT,__text	__text
+0000000000000046 l    d  *UND*	
+0000000000000046 l    d  __TEXT,__text	__text
+00000001000042f3 l    d  __TEXT,__text	__text
+00000001000042f3 l    d  __TEXT,__text	__text
+0000000000000030 l    d  *UND*	
+0000000000000030 l    d  __TEXT,__text	__text
+0000000100004323 l    d  __TEXT,__text	__text
+0000000100004323 l    d  __TEXT,__text	__text
+0000000000000046 l    d  *UND*	
+0000000000000046 l    d  __TEXT,__text	__text
+0000000100004369 l    d  __TEXT,__text	__text
+0000000100004369 l    d  __TEXT,__text	__text
+0000000000000030 l    d  *UND*	
+0000000000000030 l    d  __TEXT,__text	__text
+0000000100004399 l    d  __TEXT,__text	__text
+0000000100004399 l    d  __TEXT,__text	__text
+0000000000000014 l    d  *UND*	
+0000000000000014 l    d  __TEXT,__text	__text
+00000001000043ad l    d  __TEXT,__text	__text
+00000001000043ad l    d  __TEXT,__text	__text
+0000000000000046 l    d  *UND*	
+0000000000000046 l    d  __TEXT,__text	__text
+00000001000043f3 l    d  __TEXT,__text	__text
+00000001000043f3 l    d  __TEXT,__text	__text
+0000000000000030 l    d  *UND*	
+0000000000000030 l    d  __TEXT,__text	__text
+0000000100004423 l    d  __TEXT,__text	__text
+0000000100004423 l    d  __TEXT,__text	__text
+000000000000011e l    d  *UND*	
+000000000000011e l    d  __TEXT,__text	__text
+0000000100004541 l    d  __TEXT,__text	__text
+0000000100004541 l    d  __TEXT,__text	__text
+0000000000000097 l    d  *UND*	
+0000000000000097 l    d  __TEXT,__text	__text
+00000001000045d8 l    d  __TEXT,__text	__text
+00000001000045d8 l    d  __TEXT,__text	__text
+0000000000000042 l    d  *UND*	
+0000000000000042 l    d  __TEXT,__text	__text
+000000010000461a l    d  __TEXT,__text	__text
+000000010000461a l    d  __TEXT,__text	__text
+000000000000000f l    d  *UND*	
+000000000000000f l    d  __TEXT,__text	__text
+0000000100004629 l    d  __TEXT,__text	__text
+0000000100004629 l    d  __TEXT,__text	__text
+000000000000000f l    d  *UND*	
+000000000000000f l    d  __TEXT,__text	__text
+0000000100004638 l    d  __TEXT,__text	__text
+0000000100004638 l    d  __TEXT,__text	__text
+000000000000000f l    d  *UND*	
+000000000000000f l    d  __TEXT,__text	__text
+0000000100004647 l    d  __TEXT,__text	__text
+0000000100004647 l    d  __TEXT,__text	__text
+000000000000000f l    d  *UND*	
+000000000000000f l    d  __TEXT,__text	__text
+0000000100004656 l    d  __TEXT,__text	__text
+0000000100004656 l    d  __TEXT,__text	__text
+0000000000000097 l    d  *UND*	
+0000000000000097 l    d  __TEXT,__text	__text
+00000001000046ed l    d  __TEXT,__text	__text
+00000001000046ed l    d  __TEXT,__text	__text
+0000000000000042 l    d  *UND*	
+0000000000000042 l    d  __TEXT,__text	__text
+000000010000472f l    d  __TEXT,__text	__text
+000000010000472f l    d  __TEXT,__text	__text
+000000000000000f l    d  *UND*	
+000000000000000f l    d  __TEXT,__text	__text
+000000010000473e l    d  __TEXT,__text	__text
+000000010000473e l    d  __TEXT,__text	__text
+000000000000000f l    d  *UND*	
+000000000000000f l    d  __TEXT,__text	__text
+000000010000474d l    d  __TEXT,__text	__text
+000000010000474d l    d  __TEXT,__text	__text
+000000000000000f l    d  *UND*	
+000000000000000f l    d  __TEXT,__text	__text
+000000010000475c l    d  __TEXT,__text	__text
+000000010000475c l    d  __TEXT,__text	__text
+000000000000000f l    d  *UND*	
+000000000000000f l    d  __TEXT,__text	__text
+000000010000476b l    d  __TEXT,__text	__text
+000000010000476b l    d  __TEXT,__text	__text
+0000000000000014 l    d  *UND*	
+0000000000000014 l    d  __TEXT,__text	__text
+000000010000477f l    d  __TEXT,__text	__text
+000000010000477f l    d  __TEXT,__text	__text
+0000000000000046 l    d  *UND*	
+0000000000000046 l    d  __TEXT,__text	__text
+00000001000047c5 l    d  __TEXT,__text	__text
+00000001000047c5 l    d  __TEXT,__text	__text
+0000000000000030 l    d  *UND*	
+0000000000000030 l    d  __TEXT,__text	__text
+00000001000047f5 l    d  __TEXT,__text	__text
+00000001000047f5 l    d  __TEXT,__text	__text
+000000000000008f l    d  *UND*	
+000000000000008f l    d  __TEXT,__text	__text
+0000000100004884 l    d  __TEXT,__text	__text
+0000000100004884 l    d  __TEXT,__text	__text
+0000000000000046 l    d  *UND*	
+0000000000000046 l    d  __TEXT,__text	__text
+00000001000048ca l    d  __TEXT,__text	__text
+00000001000048ca l    d  __TEXT,__text	__text
+0000000000000030 l    d  *UND*	
+0000000000000030 l    d  __TEXT,__text	__text
+00000001000048fa l    d  __TEXT,__text	__text
+00000001000048fa l    d  __TEXT,__text	__text
+0000000000000046 l    d  *UND*	
+0000000000000046 l    d  __TEXT,__text	__text
+0000000100004940 l    d  __TEXT,__text	__text
+0000000100004940 l    d  __TEXT,__text	__text
+0000000000000030 l    d  *UND*	
+0000000000000030 l    d  __TEXT,__text	__text
+0000000100004970 l    d  __TEXT,__text	__text
+0000000100004970 l    d  __TEXT,__text	__text
+0000000000000014 l    d  *UND*	
+0000000000000014 l    d  __TEXT,__text	__text
+0000000100004984 l    d  __TEXT,__text	__text
+0000000100004984 l    d  __TEXT,__text	__text
+0000000000000046 l    d  *UND*	
+0000000000000046 l    d  __TEXT,__text	__text
+00000001000049ca l    d  __TEXT,__text	__text
+00000001000049ca l    d  __TEXT,__text	__text
+0000000000000030 l    d  *UND*	
+0000000000000030 l    d  __TEXT,__text	__text
+00000001000049fa l    d  __TEXT,__text	__text
+00000001000049fa l    d  __TEXT,__text	__text
+0000000000000151 l    d  *UND*	
+0000000000000151 l    d  __TEXT,__text	__text
+0000000100004b4b l    d  __TEXT,__text	__text
+0000000100004b4b l    d  __TEXT,__text	__text
+00000000000000a7 l    d  *UND*	
+00000000000000a7 l    d  __TEXT,__text	__text
+0000000100004bf2 l    d  __TEXT,__text	__text
+0000000100004bf2 l    d  __TEXT,__text	__text
+0000000000000042 l    d  *UND*	
+0000000000000042 l    d  __TEXT,__text	__text
+0000000100004c34 l    d  __TEXT,__text	__text
+0000000100004c34 l    d  __TEXT,__text	__text
+000000000000000f l    d  *UND*	
+000000000000000f l    d  __TEXT,__text	__text
+0000000100004c43 l    d  __TEXT,__text	__text
+0000000100004c43 l    d  __TEXT,__text	__text
+000000000000000f l    d  *UND*	
+000000000000000f l    d  __TEXT,__text	__text
+0000000100004c52 l    d  __TEXT,__text	__text
+0000000100004c52 l    d  __TEXT,__text	__text
+000000000000000f l    d  *UND*	
+000000000000000f l    d  __TEXT,__text	__text
+0000000100004c61 l    d  __TEXT,__text	__text
+0000000100004c61 l    d  __TEXT,__text	__text
+000000000000000f l    d  *UND*	
+000000000000000f l    d  __TEXT,__text	__text
+0000000100004c70 l    d  __TEXT,__text	__text
+0000000100004c70 l    d  __TEXT,__text	__text
+00000000000000a7 l    d  *UND*	
+00000000000000a7 l    d  __TEXT,__text	__text
+0000000100004d17 l    d  __TEXT,__text	__text
+0000000100004d17 l    d  __TEXT,__text	__text
+0000000000000042 l    d  *UND*	
+0000000000000042 l    d  __TEXT,__text	__text
+0000000100004d59 l    d  __TEXT,__text	__text
+0000000100004d59 l    d  __TEXT,__text	__text
+000000000000000f l    d  *UND*	
+000000000000000f l    d  __TEXT,__text	__text
+0000000100004d68 l    d  __TEXT,__text	__text
+0000000100004d68 l    d  __TEXT,__text	__text
+000000000000000f l    d  *UND*	
+000000000000000f l    d  __TEXT,__text	__text
+0000000100004d77 l    d  __TEXT,__text	__text
+0000000100004d77 l    d  __TEXT,__text	__text
+000000000000000f l    d  *UND*	
+000000000000000f l    d  __TEXT,__text	__text
+0000000100004d86 l    d  __TEXT,__text	__text
+0000000100004d86 l    d  __TEXT,__text	__text
+000000000000000f l    d  *UND*	
+000000000000000f l    d  __TEXT,__text	__text
+0000000100004d95 l    d  __TEXT,__text	__text
+0000000100004d95 l    d  __TEXT,__text	__text
+00000000000000b7 l    d  *UND*	
+00000000000000b7 l    d  __TEXT,__text	__text
+0000000100004e4c l    d  __TEXT,__text	__text
+0000000100004e4c l    d  __TEXT,__text	__text
+000000000000004b l    d  *UND*	
+000000000000004b l    d  __TEXT,__text	__text
+0000000100004e97 l    d  __TEXT,__text	__text
+0000000100004e97 l    d  __TEXT,__text	__text
+000000000000000f l    d  *UND*	
+000000000000000f l    d  __TEXT,__text	__text
+0000000100004ea6 l    d  __TEXT,__text	__text
+0000000100004ea6 l    d  __TEXT,__text	__text
+000000000000000f l    d  *UND*	
+000000000000000f l    d  __TEXT,__text	__text
+0000000100004eb5 l    d  __TEXT,__text	__text
+0000000100004eb5 l    d  __TEXT,__text	__text
+000000000000000f l    d  *UND*	
+000000000000000f l    d  __TEXT,__text	__text
+0000000100004ec4 l    d  __TEXT,__text	__text
+0000000100004ec4 l    d  __TEXT,__text	__text
+000000000000000f l    d  *UND*	
+000000000000000f l    d  __TEXT,__text	__text
+0000000100004ed3 l    d  __TEXT,__text	__text
+0000000100004ed3 l    d  __TEXT,__text	__text
+0000000000000132 l    d  *UND*	
+0000000000000132 l    d  __TEXT,__text	__text
+0000000100005005 l    d  __TEXT,__text	__text
+0000000100005005 l    d  __TEXT,__text	__text
+000000000000007f l    d  *UND*	
+000000000000007f l    d  __TEXT,__text	__text
+0000000100005084 l    d  __TEXT,__text	__text
+0000000100005084 l    d  __TEXT,__text	__text
+0000000000000046 l    d  *UND*	
+0000000000000046 l    d  __TEXT,__text	__text
+00000001000050ca l    d  __TEXT,__text	__text
+00000001000050ca l    d  __TEXT,__text	__text
+0000000000000017 l    d  *UND*	
+0000000000000017 l    d  __TEXT,__text	__text
+00000001000050e1 l    d  __TEXT,__text	__text
+00000001000050e1 l    d  __TEXT,__text	__text
+0000000000000013 l    d  *UND*	
+0000000000000013 l    d  __TEXT,__text	__text
+00000001000050f4 l    d  __TEXT,__text	__text
+00000001000050f4 l    d  __TEXT,__text	__text
+0000000000000017 l    d  *UND*	
+0000000000000017 l    d  __TEXT,__text	__text
+000000010000510b l    d  __TEXT,__text	__text
+000000010000510b l    d  __TEXT,__text	__text
+0000000000000013 l    d  *UND*	
+0000000000000013 l    d  __TEXT,__text	__text
+000000010000511e l    d  __TEXT,__text	__text
+000000010000511e l    d  __TEXT,__text	__text
+000000000000007f l    d  *UND*	
+000000000000007f l    d  __TEXT,__text	__text
+000000010000519d l    d  __TEXT,__text	__text
+000000010000519d l    d  __TEXT,__text	__text
+0000000000000046 l    d  *UND*	
+0000000000000046 l    d  __TEXT,__text	__text
+00000001000051e3 l    d  __TEXT,__text	__text
+00000001000051e3 l    d  __TEXT,__text	__text
+0000000000000017 l    d  *UND*	
+0000000000000017 l    d  __TEXT,__text	__text
+00000001000051fa l    d  __TEXT,__text	__text
+00000001000051fa l    d  __TEXT,__text	__text
+0000000000000013 l    d  *UND*	
+0000000000000013 l    d  __TEXT,__text	__text
+000000010000520d l    d  __TEXT,__text	__text
+000000010000520d l    d  __TEXT,__text	__text
+0000000000000017 l    d  *UND*	
+0000000000000017 l    d  __TEXT,__text	__text
+0000000100005224 l    d  __TEXT,__text	__text
+0000000100005224 l    d  __TEXT,__text	__text
+0000000000000013 l    d  *UND*	
+0000000000000013 l    d  __TEXT,__text	__text
+0000000100005237 l    d  __TEXT,__text	__text
+0000000100005237 l    d  __TEXT,__text	__text
+00000000000000fc l    d  *UND*	
+00000000000000fc l    d  __TEXT,__text	__text
+0000000100005333 l    d  __TEXT,__text	__text
+0000000100005333 l    d  __TEXT,__text	__text
+0000000000000030 l    d  *UND*	
+0000000000000030 l    d  __TEXT,__text	__text
+0000000100005363 l    d  __TEXT,__text	__text
+0000000100005363 l    d  __TEXT,__text	__text
+0000000000000038 l    d  *UND*	
+0000000000000038 l    d  __TEXT,__text	__text
+000000010000539b l    d  __TEXT,__text	__text
+000000010000539b l    d  __TEXT,__text	__text
+000000000000002b l    d  *UND*	
+000000000000002b l    d  __TEXT,__text	__text
+000000010001a700 l    d  __DATA,__const	__const
+000000010001a720 l    d  __DATA,__const	__const
+000000010001a740 l    d  __DATA,__const	__const
+000000010001a760 l    d  __DATA,__const	__const
+000000010001a780 l    d  __DATA,__const	__const
+000000010001a7a0 l    d  __DATA,__const	__const
+000000010001a7c0 l    d  __DATA,__const	__const
+000000010001a7e0 l    d  __DATA,__const	__const
+000000010001a800 l    d  __DATA,__const	__const
+000000010001a820 l    d  __DATA,__const	__const
+000000010001a840 l    d  __DATA,__const	__const
+000000010001a860 l    d  __DATA,__const	__const
+000000010001a880 l    d  __DATA,__const	__const
+000000010001a8a0 l    d  __DATA,__const	__const
+000000010001a8c0 l    d  __DATA,__const	__const
+000000010001a8f0 l    d  __DATA,__const	__const
+000000010001a920 l    d  __DATA,__const	__const
+000000010001a950 l    d  __DATA,__const	__const
+000000010001a980 l    d  __DATA,__const	__const
+000000010001a9a0 l    d  __DATA,__const	__const
+000000010001a9c0 l    d  __DATA,__const	__const
+000000010001a9e0 l    d  __DATA,__const	__const
+000000010001aa00 l    d  __DATA,__const	__const
+000000010001aa20 l    d  __DATA,__const	__const
+000000010001aa40 l    d  __DATA,__const	__const
+000000010001aa60 l    d  __DATA,__const	__const
+000000010001aa80 l    d  __DATA,__const	__const
+000000010001aaa0 l    d  __DATA,__const	__const
+000000010001aac0 l    d  __DATA,__const	__const
+000000010001aae0 l    d  __DATA,__const	__const
+000000010001ab00 l    d  __DATA,__const	__const
+000000010001ab20 l    d  __DATA,__const	__const
+000000010001ab40 l    d  __DATA,__const	__const
+000000010001ab60 l    d  __DATA,__const	__const
+000000010001ab80 l    d  __DATA,__const	__const
+000000010001aba0 l    d  __DATA,__const	__const
+000000010001abc0 l    d  __DATA,__const	__const
+000000010001abe0 l    d  __DATA,__const	__const
+000000010001ac00 l    d  __DATA,__const	__const
+000000010001ac30 l    d  __DATA,__const	__const
+000000010001ac60 l    d  __DATA,__const	__const
+000000010001ac90 l    d  __DATA,__const	__const
+000000010001acc0 l    d  __DATA,__const	__const
+000000010001acf0 l    d  __DATA,__const	__const
+000000010001ad20 l    d  __DATA,__const	__const
+000000010001ad50 l    d  __DATA,__const	__const
+000000010001ad80 l    d  __DATA,__const	__const
+000000010001adb0 l    d  __DATA,__const	__const
+000000010001ade0 l    d  __DATA,__const	__const
+000000010001ae00 l    d  __DATA,__const	__const
+000000010001ae20 l    d  __DATA,__const	__const
+0000000000000000 l    d  *UND*	_OBJC_CLASS_$_DispatchBarrierTest
+0000000000000000 l    d  *UND*	_OBJC_METACLASS_$_DispatchBarrierTest
+0000000000000000 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	/Users/hechao/Documents/Demos/RuntimeLearning/RuntimeLearning/ClassCluster/
+0000000000000000 l    d  *UND*	TestClassCluster.m
+000000005e045873 l    d  __TEXT,__stub_helper	__stub_helper
+00000001000053c6 l    d  __TEXT,__text	__text
+00000001000053c6 l    d  __TEXT,__text	__text
+000000000000004c l    d  *UND*	
+000000000000004c l    d  __TEXT,__text	__text
+0000000100005412 l    d  __TEXT,__text	__text
+0000000100005412 l    d  __TEXT,__text	__text
+0000000000000062 l    d  *UND*	
+0000000000000062 l    d  __TEXT,__text	__text
+0000000100005474 l    d  __TEXT,__text	__text
+0000000100005474 l    d  __TEXT,__text	__text
+000000000000018e l    d  *UND*	
+000000000000018e l    d  __TEXT,__text	__text
+0000000100005602 l    d  __TEXT,__text	__text
+0000000100005602 l    d  __TEXT,__text	__text
+0000000000000196 l    d  *UND*	
+0000000000000196 l    d  __TEXT,__text	__text
+0000000100005798 l    d  __TEXT,__text	__text
+0000000100005798 l    d  __TEXT,__text	__text
+00000000000000d9 l    d  *UND*	
+00000000000000d9 l    d  __TEXT,__text	__text
+0000000100005871 l    d  __TEXT,__text	__text
+0000000100005871 l    d  __TEXT,__text	__text
+00000000000000d7 l    d  *UND*	
+00000000000000d7 l    d  __TEXT,__text	__text
+0000000100005948 l    d  __TEXT,__text	__text
+0000000100005948 l    d  __TEXT,__text	__text
+00000000000000cf l    d  *UND*	
+00000000000000cf l    d  __TEXT,__text	__text
+0000000100005a17 l    d  __TEXT,__text	__text
+0000000100005a17 l    d  __TEXT,__text	__text
+00000000000000cf l    d  *UND*	
+00000000000000cf l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	_OBJC_CLASS_$_TestClassCluster
+0000000000000000 l    d  *UND*	_OBJC_METACLASS_$_TestClassCluster
+0000000000000000 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	/Users/hechao/Documents/Demos/RuntimeLearning/RuntimeLearning/Dynamic/
+0000000000000000 l    d  *UND*	DynamicCallFunctionTest.m
+000000005e0459fe l    d  __TEXT,__stub_helper	__stub_helper
+0000000100005ae6 l    d  __TEXT,__text	__text
+0000000100005ae6 l    d  __TEXT,__text	__text
+0000000000000075 l    d  *UND*	
+0000000000000075 l    d  __TEXT,__text	__text
+0000000100005b5b l    d  __TEXT,__text	__text
+0000000100005b5b l    d  __TEXT,__text	__text
+000000000000002f l    d  *UND*	
+000000000000002f l    d  __TEXT,__text	__text
+0000000100005b8a l    d  __TEXT,__text	__text
+0000000100005b8a l    d  __TEXT,__text	__text
+0000000000000082 l    d  *UND*	
+0000000000000082 l    d  __TEXT,__text	__text
+0000000100005c0c l    d  __TEXT,__text	__text
+0000000100005c0c l    d  __TEXT,__text	__text
+00000000000000f1 l    d  *UND*	
+00000000000000f1 l    d  __TEXT,__text	__text
+0000000100005cfd l    d  __TEXT,__text	__text
+0000000100005cfd l    d  __TEXT,__text	__text
+0000000000000030 l    d  *UND*	
+0000000000000030 l    d  __TEXT,__text	__text
+0000000100005d2d l    d  __TEXT,__text	__text
+0000000100005d2d l    d  __TEXT,__text	__text
+000000000000000a l    d  *UND*	
+000000000000000a l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	_OBJC_CLASS_$_DynamicCallFunctionTest
+0000000000000000 l    d  *UND*	_OBJC_METACLASS_$_DynamicCallFunctionTest
+0000000000000000 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	/Users/hechao/Documents/Demos/RuntimeLearning/RuntimeLearning/Dispatch/
+0000000000000000 l    d  *UND*	DispatchGroupLeaveTest.m
+000000005e045873 l    d  __TEXT,__stub_helper	__stub_helper
+0000000100005d37 l    d  __TEXT,__text	__text
+0000000100005d37 l    d  __TEXT,__text	__text
+000000000000004c l    d  *UND*	
+000000000000004c l    d  __TEXT,__text	__text
+0000000100005d83 l    d  __TEXT,__text	__text
+0000000100005d83 l    d  __TEXT,__text	__text
+000000000000002d l    d  *UND*	
+000000000000002d l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	_OBJC_CLASS_$_DispatchGroupLeaveTest
+0000000000000000 l    d  *UND*	_OBJC_METACLASS_$_DispatchGroupLeaveTest
+0000000000000000 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	/Users/hechao/Documents/Demos/RuntimeLearning/RuntimeLearning/
+0000000000000000 l    d  *UND*	ViewController.m
+000000005e045874 l    d  __TEXT,__stub_helper	__stub_helper
+0000000100005db0 l    d  __TEXT,__text	__text
+0000000100005db0 l    d  __TEXT,__text	__text
+0000000000000044 l    d  *UND*	
+0000000000000044 l    d  __TEXT,__text	__text
+0000000100005df4 l    d  __TEXT,__text	__text
+0000000100005df4 l    d  __TEXT,__text	__text
+0000000000000036 l    d  *UND*	
+0000000000000036 l    d  __TEXT,__text	__text
+0000000100005e2a l    d  __TEXT,__text	__text
+0000000100005e2a l    d  __TEXT,__text	__text
+0000000000000009 l    d  *UND*	
+0000000000000009 l    d  __TEXT,__text	__text
+0000000100005e33 l    d  __TEXT,__text	__text
+0000000100005e33 l    d  __TEXT,__text	__text
+000000000000008a l    d  *UND*	
+000000000000008a l    d  __TEXT,__text	__text
+0000000100005ebd l    d  __TEXT,__text	__text
+0000000100005ebd l    d  __TEXT,__text	__text
+00000000000000b0 l    d  *UND*	
+00000000000000b0 l    d  __TEXT,__text	__text
+0000000100005f6d l    d  __TEXT,__text	__text
+0000000100005f6d l    d  __TEXT,__text	__text
+0000000000000049 l    d  *UND*	
+0000000000000049 l    d  __TEXT,__text	__text
+0000000100005fb6 l    d  __TEXT,__text	__text
+0000000100005fb6 l    d  __TEXT,__text	__text
+0000000000000072 l    d  *UND*	
+0000000000000072 l    d  __TEXT,__text	__text
+0000000100006028 l    d  __TEXT,__text	__text
+0000000100006028 l    d  __TEXT,__text	__text
+0000000000000022 l    d  *UND*	
+0000000000000022 l    d  __TEXT,__text	__text
+000000010000604a l    d  __TEXT,__text	__text
+000000010000604a l    d  __TEXT,__text	__text
+0000000000000019 l    d  *UND*	
+0000000000000019 l    d  __TEXT,__text	__text
+0000000100006063 l    d  __TEXT,__text	__text
+0000000100006063 l    d  __TEXT,__text	__text
+00000000000000db l    d  *UND*	
+00000000000000db l    d  __TEXT,__text	__text
+000000010000613e l    d  __TEXT,__text	__text
+000000010000613e l    d  __TEXT,__text	__text
+000000000000003c l    d  *UND*	
+000000000000003c l    d  __TEXT,__text	__text
+000000010000617a l    d  __TEXT,__text	__text
+000000010000617a l    d  __TEXT,__text	__text
+00000000000000dc l    d  *UND*	
+00000000000000dc l    d  __TEXT,__text	__text
+0000000100006256 l    d  __TEXT,__text	__text
+0000000100006256 l    d  __TEXT,__text	__text
+00000000000000eb l    d  *UND*	
+00000000000000eb l    d  __TEXT,__text	__text
+0000000100006341 l    d  __TEXT,__text	__text
+0000000100006341 l    d  __TEXT,__text	__text
+0000000000000064 l    d  *UND*	
+0000000000000064 l    d  __TEXT,__text	__text
+00000001000063a5 l    d  __TEXT,__text	__text
+00000001000063a5 l    d  __TEXT,__text	__text
+0000000000000012 l    d  *UND*	
+0000000000000012 l    d  __TEXT,__text	__text
+00000001000063b7 l    d  __TEXT,__text	__text
+00000001000063b7 l    d  __TEXT,__text	__text
+000000000000000e l    d  *UND*	
+000000000000000e l    d  __TEXT,__text	__text
+00000001000063c5 l    d  __TEXT,__text	__text
+00000001000063c5 l    d  __TEXT,__text	__text
+0000000000000022 l    d  *UND*	
+0000000000000022 l    d  __TEXT,__text	__text
+00000001000063e7 l    d  __TEXT,__text	__text
+00000001000063e7 l    d  __TEXT,__text	__text
+000000000000003c l    d  *UND*	
+000000000000003c l    d  __TEXT,__text	__text
+0000000100006423 l    d  __TEXT,__text	__text
+0000000100006423 l    d  __TEXT,__text	__text
+000000000000003c l    d  *UND*	
+000000000000003c l    d  __TEXT,__text	__text
+000000010000645f l    d  __TEXT,__text	__text
+000000010000645f l    d  __TEXT,__text	__text
+00000000000000b5 l    d  *UND*	
+00000000000000b5 l    d  __TEXT,__text	__text
+0000000100006514 l    d  __TEXT,__text	__text
+0000000100006514 l    d  __TEXT,__text	__text
+00000000000000f2 l    d  *UND*	
+00000000000000f2 l    d  __TEXT,__text	__text
+0000000100006606 l    d  __TEXT,__text	__text
+0000000100006606 l    d  __TEXT,__text	__text
+0000000000000062 l    d  *UND*	
+0000000000000062 l    d  __TEXT,__text	__text
+0000000100006668 l    d  __TEXT,__text	__text
+0000000100006668 l    d  __TEXT,__text	__text
+000000000000000f l    d  *UND*	
+000000000000000f l    d  __TEXT,__text	__text
+0000000100006677 l    d  __TEXT,__text	__text
+0000000100006677 l    d  __TEXT,__text	__text
+000000000000000f l    d  *UND*	
+000000000000000f l    d  __TEXT,__text	__text
+0000000100006686 l    d  __TEXT,__text	__text
+0000000100006686 l    d  __TEXT,__text	__text
+0000000000000022 l    d  *UND*	
+0000000000000022 l    d  __TEXT,__text	__text
+00000001000066a8 l    d  __TEXT,__text	__text
+00000001000066a8 l    d  __TEXT,__text	__text
+000000000000005b l    d  *UND*	
+000000000000005b l    d  __TEXT,__text	__text
+0000000100006703 l    d  __TEXT,__text	__text
+0000000100006703 l    d  __TEXT,__text	__text
+0000000000000011 l    d  *UND*	
+0000000000000011 l    d  __TEXT,__text	__text
+0000000100006714 l    d  __TEXT,__text	__text
+0000000100006714 l    d  __TEXT,__text	__text
+0000000000000014 l    d  *UND*	
+0000000000000014 l    d  __TEXT,__text	__text
+0000000100006728 l    d  __TEXT,__text	__text
+0000000100006728 l    d  __TEXT,__text	__text
+0000000000000019 l    d  *UND*	
+0000000000000019 l    d  __TEXT,__text	__text
+0000000100006741 l    d  __TEXT,__text	__text
+0000000100006741 l    d  __TEXT,__text	__text
+0000000000000014 l    d  *UND*	
+0000000000000014 l    d  __TEXT,__text	__text
+0000000100006755 l    d  __TEXT,__text	__text
+0000000100006755 l    d  __TEXT,__text	__text
+000000000000002f l    d  *UND*	
+000000000000002f l    d  __TEXT,__text	__text
+0000000100014290 l    d  __TEXT,__gcc_except_tab	__gcc_except_tab
+00000001000142d0 l    d  __TEXT,__gcc_except_tab	__gcc_except_tab
+000000010001ae50 l    d  __DATA,__const	__const
+000000010001ae80 l    d  __DATA,__const	__const
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_ViewController._dynamicFunctionTest
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_ViewController._aTextFiled
+0000000000000000 l    d  *UND*	_OBJC_CLASS_$_ViewController
+0000000000000000 l    d  *UND*	_OBJC_METACLASS_$_ViewController
+0000000000000000 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	/Users/hechao/Documents/Demos/RuntimeLearning/RuntimeLearning/Swizzle/
+0000000000000000 l    d  *UND*	TestSwizzleInInitialize.m
+000000005e045874 l    d  __TEXT,__stub_helper	__stub_helper
+0000000100006784 l    d  __TEXT,__text	__text
+0000000100006784 l    d  __TEXT,__text	__text
+00000000000000ae l    d  *UND*	
+00000000000000ae l    d  __TEXT,__text	__text
+0000000100006832 l    d  __TEXT,__text	__text
+0000000100006832 l    d  __TEXT,__text	__text
+000000000000002e l    d  *UND*	
+000000000000002e l    d  __TEXT,__text	__text
+0000000100006860 l    d  __TEXT,__text	__text
+0000000100006860 l    d  __TEXT,__text	__text
+0000000000000006 l    d  *UND*	
+0000000000000006 l    d  __TEXT,__text	__text
+0000000100006866 l    d  __TEXT,__text	__text
+0000000100006866 l    d  __TEXT,__text	__text
+0000000000000006 l    d  *UND*	
+0000000000000006 l    d  __TEXT,__text	__text
+000000010000686c l    d  __TEXT,__text	__text
+000000010000686c l    d  __TEXT,__text	__text
+000000000000001b l    d  *UND*	
+000000000000001b l    d  __TEXT,__text	__text
+0000000100006887 l    d  __TEXT,__text	__text
+0000000100006887 l    d  __TEXT,__text	__text
+000000000000001b l    d  *UND*	
+000000000000001b l    d  __TEXT,__text	__text
+00000001000068a2 l    d  __TEXT,__text	__text
+00000001000068a2 l    d  __TEXT,__text	__text
+000000000000001b l    d  *UND*	
+000000000000001b l    d  __TEXT,__text	__text
+00000001000068bd l    d  __TEXT,__text	__text
+00000001000068bd l    d  __TEXT,__text	__text
+0000000000000028 l    d  *UND*	
+0000000000000028 l    d  __TEXT,__text	__text
+00000001000068e5 l    d  __TEXT,__text	__text
+00000001000068e5 l    d  __TEXT,__text	__text
+00000000000000ae l    d  *UND*	
+00000000000000ae l    d  __TEXT,__text	__text
+0000000100006993 l    d  __TEXT,__text	__text
+0000000100006993 l    d  __TEXT,__text	__text
+000000000000002e l    d  *UND*	
+000000000000002e l    d  __TEXT,__text	__text
+00000001000069c1 l    d  __TEXT,__text	__text
+00000001000069c1 l    d  __TEXT,__text	__text
+0000000000000006 l    d  *UND*	
+0000000000000006 l    d  __TEXT,__text	__text
+00000001000069c7 l    d  __TEXT,__text	__text
+00000001000069c7 l    d  __TEXT,__text	__text
+0000000000000006 l    d  *UND*	
+0000000000000006 l    d  __TEXT,__text	__text
+00000001000069cd l    d  __TEXT,__text	__text
+00000001000069cd l    d  __TEXT,__text	__text
+0000000000000028 l    d  *UND*	
+0000000000000028 l    d  __TEXT,__text	__text
+00000001000069f5 l    d  __TEXT,__text	__text
+00000001000069f5 l    d  __TEXT,__text	__text
+00000000000000ae l    d  *UND*	
+00000000000000ae l    d  __TEXT,__text	__text
+0000000100006aa3 l    d  __TEXT,__text	__text
+0000000100006aa3 l    d  __TEXT,__text	__text
+000000000000002e l    d  *UND*	
+000000000000002e l    d  __TEXT,__text	__text
+0000000100006ad1 l    d  __TEXT,__text	__text
+0000000100006ad1 l    d  __TEXT,__text	__text
+0000000000000006 l    d  *UND*	
+0000000000000006 l    d  __TEXT,__text	__text
+0000000100006ad7 l    d  __TEXT,__text	__text
+0000000100006ad7 l    d  __TEXT,__text	__text
+0000000000000006 l    d  *UND*	
+0000000000000006 l    d  __TEXT,__text	__text
+0000000100006add l    d  __TEXT,__text	__text
+0000000100006add l    d  __TEXT,__text	__text
+0000000000000028 l    d  *UND*	
+0000000000000028 l    d  __TEXT,__text	__text
+0000000100006b05 l    d  __TEXT,__text	__text
+0000000100006b05 l    d  __TEXT,__text	__text
+0000000000000090 l    d  *UND*	
+0000000000000090 l    d  __TEXT,__text	__text
+0000000100006b95 l    d  __TEXT,__text	__text
+0000000100006b95 l    d  __TEXT,__text	__text
+000000000000002e l    d  *UND*	
+000000000000002e l    d  __TEXT,__text	__text
+0000000100006bc3 l    d  __TEXT,__text	__text
+0000000100006bc3 l    d  __TEXT,__text	__text
+0000000000000006 l    d  *UND*	
+0000000000000006 l    d  __TEXT,__text	__text
+0000000100006bc9 l    d  __TEXT,__text	__text
+0000000100006bc9 l    d  __TEXT,__text	__text
+0000000000000006 l    d  *UND*	
+0000000000000006 l    d  __TEXT,__text	__text
+0000000100006bcf l    d  __TEXT,__text	__text
+0000000100006bcf l    d  __TEXT,__text	__text
+0000000000000028 l    d  *UND*	
+0000000000000028 l    d  __TEXT,__text	__text
+0000000100006bf7 l    d  __TEXT,__text	__text
+0000000100006bf7 l    d  __TEXT,__text	__text
+0000000000000090 l    d  *UND*	
+0000000000000090 l    d  __TEXT,__text	__text
+0000000100006c87 l    d  __TEXT,__text	__text
+0000000100006c87 l    d  __TEXT,__text	__text
+000000000000002e l    d  *UND*	
+000000000000002e l    d  __TEXT,__text	__text
+0000000100006cb5 l    d  __TEXT,__text	__text
+0000000100006cb5 l    d  __TEXT,__text	__text
+0000000000000006 l    d  *UND*	
+0000000000000006 l    d  __TEXT,__text	__text
+0000000100006cbb l    d  __TEXT,__text	__text
+0000000100006cbb l    d  __TEXT,__text	__text
+0000000000000006 l    d  *UND*	
+0000000000000006 l    d  __TEXT,__text	__text
+0000000100006cc1 l    d  __TEXT,__text	__text
+0000000100006cc1 l    d  __TEXT,__text	__text
+0000000000000028 l    d  *UND*	
+0000000000000028 l    d  __TEXT,__text	__text
+000000010001aeb0 l    d  __DATA,__const	__const
+000000010001aee0 l    d  __DATA,__const	__const
+000000010001af10 l    d  __DATA,__const	__const
+000000010001af40 l    d  __DATA,__const	__const
+000000010001af70 l    d  __DATA,__const	__const
+0000000000000000 l    d  *UND*	_OBJC_METACLASS_$_TestSwizzleInInitialize
+0000000000000000 l    d  *UND*	_OBJC_CLASS_$_TestSwizzleInInitialize
+0000000000000000 l    d  *UND*	_OBJC_METACLASS_$_TestSwizzleInInitializeA
+0000000000000000 l    d  *UND*	_OBJC_CLASS_$_TestSwizzleInInitializeA
+0000000000000000 l    d  *UND*	_OBJC_METACLASS_$_TestSwizzleInInitializeB
+0000000000000000 l    d  *UND*	_OBJC_CLASS_$_TestSwizzleInInitializeB
+00000001000225e0 l    d  __DATA,__bss	__bss
+00000001000225e8 l    d  __DATA,__bss	__bss
+00000001000225f0 l    d  __DATA,__bss	__bss
+00000001000225f8 l    d  __DATA,__bss	__bss
+0000000100022600 l    d  __DATA,__bss	__bss
+0000000000000000 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	/Users/hechao/Documents/Demos/RuntimeLearning/RuntimeLearning/Association/
+0000000000000000 l    d  *UND*	NSObject+HCWillDealloc.m
+000000005e045874 l    d  __TEXT,__stub_helper	__stub_helper
+0000000100006ce9 l    d  __TEXT,__text	__text
+0000000100006ce9 l    d  __TEXT,__text	__text
+000000000000009d l    d  *UND*	
+000000000000009d l    d  __TEXT,__text	__text
+0000000100006d86 l    d  __TEXT,__text	__text
+0000000100006d86 l    d  __TEXT,__text	__text
+000000000000009f l    d  *UND*	
+000000000000009f l    d  __TEXT,__text	__text
+0000000100006e25 l    d  __TEXT,__text	__text
+0000000100006e25 l    d  __TEXT,__text	__text
+000000000000004f l    d  *UND*	
+000000000000004f l    d  __TEXT,__text	__text
+0000000100006e74 l    d  __TEXT,__text	__text
+0000000100006e74 l    d  __TEXT,__text	__text
+0000000000000011 l    d  *UND*	
+0000000000000011 l    d  __TEXT,__text	__text
+0000000100006e85 l    d  __TEXT,__text	__text
+0000000100006e85 l    d  __TEXT,__text	__text
+0000000000000011 l    d  *UND*	
+0000000000000011 l    d  __TEXT,__text	__text
+0000000100006e96 l    d  __TEXT,__text	__text
+0000000100006e96 l    d  __TEXT,__text	__text
+0000000000000013 l    d  *UND*	
+0000000000000013 l    d  __TEXT,__text	__text
+0000000100006ea9 l    d  __TEXT,__text	__text
+0000000100006ea9 l    d  __TEXT,__text	__text
+0000000000000011 l    d  *UND*	
+0000000000000011 l    d  __TEXT,__text	__text
+0000000100006eba l    d  __TEXT,__text	__text
+0000000100006eba l    d  __TEXT,__text	__text
+0000000000000013 l    d  *UND*	
+0000000000000013 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_HCAssociatedObject._deallocBlock
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_HCAssociatedObject._target
+0000000000000000 l    d  *UND*	_OBJC_CLASS_$_HCAssociatedObject
+0000000000000000 l    d  *UND*	_OBJC_METACLASS_$_HCAssociatedObject
+0000000100022608 l    d  __DATA,__bss	__bss
+0000000000000000 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	/Users/hechao/Documents/Demos/RuntimeLearning/RuntimeLearning/Swizzle/
+0000000000000000 l    d  *UND*	UIViewController+Test.m
+000000005e045874 l    d  __TEXT,__stub_helper	__stub_helper
+0000000100001bb0 l    d  __TEXT,__text	__text
+0000000100001bb0 l    d  __TEXT,__text	__text
+0000000000000058 l    d  *UND*	
+0000000000000058 l    d  __TEXT,__text	__text
+0000000100006ecd l    d  __TEXT,__text	__text
+0000000100006ecd l    d  __TEXT,__text	__text
+00000000000000be l    d  *UND*	
+00000000000000be l    d  __TEXT,__text	__text
+0000000100006f8b l    d  __TEXT,__text	__text
+0000000100006f8b l    d  __TEXT,__text	__text
+0000000000000006 l    d  *UND*	
+0000000000000006 l    d  __TEXT,__text	__text
+0000000100006f91 l    d  __TEXT,__text	__text
+0000000100006f91 l    d  __TEXT,__text	__text
+0000000000000006 l    d  *UND*	
+0000000000000006 l    d  __TEXT,__text	__text
+0000000100006f97 l    d  __TEXT,__text	__text
+0000000100006f97 l    d  __TEXT,__text	__text
+0000000000000012 l    d  *UND*	
+0000000000000012 l    d  __TEXT,__text	__text
+000000010001afa0 l    d  __DATA,__const	__const
+0000000100022610 l    d  __DATA,__bss	__bss
+0000000000000000 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	/Users/hechao/Documents/Demos/RuntimeLearning/RuntimeLearning/MapTable/
+0000000000000000 l    d  *UND*	TestMapTable.m
+000000005e045874 l    d  __TEXT,__stub_helper	__stub_helper
+0000000100006fa9 l    d  __TEXT,__text	__text
+0000000100006fa9 l    d  __TEXT,__text	__text
+000000000000009c l    d  *UND*	
+000000000000009c l    d  __TEXT,__text	__text
+0000000100007045 l    d  __TEXT,__text	__text
+0000000100007045 l    d  __TEXT,__text	__text
+0000000000000188 l    d  *UND*	
+0000000000000188 l    d  __TEXT,__text	__text
+00000001000071cd l    d  __TEXT,__text	__text
+00000001000071cd l    d  __TEXT,__text	__text
+00000000000000d2 l    d  *UND*	
+00000000000000d2 l    d  __TEXT,__text	__text
+000000010000729f l    d  __TEXT,__text	__text
+000000010000729f l    d  __TEXT,__text	__text
+0000000000000011 l    d  *UND*	
+0000000000000011 l    d  __TEXT,__text	__text
+00000001000072b0 l    d  __TEXT,__text	__text
+00000001000072b0 l    d  __TEXT,__text	__text
+0000000000000014 l    d  *UND*	
+0000000000000014 l    d  __TEXT,__text	__text
+00000001000072c4 l    d  __TEXT,__text	__text
+00000001000072c4 l    d  __TEXT,__text	__text
+0000000000000011 l    d  *UND*	
+0000000000000011 l    d  __TEXT,__text	__text
+00000001000072d5 l    d  __TEXT,__text	__text
+00000001000072d5 l    d  __TEXT,__text	__text
+0000000000000014 l    d  *UND*	
+0000000000000014 l    d  __TEXT,__text	__text
+00000001000072e9 l    d  __TEXT,__text	__text
+00000001000072e9 l    d  __TEXT,__text	__text
+0000000000000031 l    d  *UND*	
+0000000000000031 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_TestMapTable._weakCache
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_TestMapTable._objArray
+0000000000000000 l    d  *UND*	_OBJC_CLASS_$_TestMapTable
+0000000000000000 l    d  *UND*	_OBJC_METACLASS_$_TestMapTable
+0000000000000000 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	/Users/hechao/Documents/Demos/RuntimeLearning/RuntimeLearning/Category/
+0000000000000000 l    d  *UND*	TestCategoryOveride.m
+000000005e045874 l    d  __TEXT,__stub_helper	__stub_helper
+000000010000731a l    d  __TEXT,__text	__text
+000000010000731a l    d  __TEXT,__text	__text
+0000000000000006 l    d  *UND*	
+0000000000000006 l    d  __TEXT,__text	__text
+0000000100007320 l    d  __TEXT,__text	__text
+0000000100007320 l    d  __TEXT,__text	__text
+000000000000019f l    d  *UND*	
+000000000000019f l    d  __TEXT,__text	__text
+00000001000074bf l    d  __TEXT,__text	__text
+00000001000074bf l    d  __TEXT,__text	__text
+0000000000000014 l    d  *UND*	
+0000000000000014 l    d  __TEXT,__text	__text
+00000001000074d3 l    d  __TEXT,__text	__text
+00000001000074d3 l    d  __TEXT,__text	__text
+0000000000000014 l    d  *UND*	
+0000000000000014 l    d  __TEXT,__text	__text
+00000001000074e7 l    d  __TEXT,__text	__text
+00000001000074e7 l    d  __TEXT,__text	__text
+0000000000000014 l    d  *UND*	
+0000000000000014 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	_OBJC_CLASS_$_TestCategoryOveride
+0000000000000000 l    d  *UND*	_OBJC_METACLASS_$_TestCategoryOveride
+0000000000000000 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	/Users/hechao/Documents/Demos/RuntimeLearning/RuntimeLearning/
+0000000000000000 l    d  *UND*	main.m
+000000005e04681f l    d  __TEXT,__stub_helper	__stub_helper
+00000001000074fb l    d  __TEXT,__text	__text
+00000001000074fb l    d  __TEXT,__text	__text
+000000000000003d l    d  *UND*	
+000000000000003d l    d  __TEXT,__text	__text
+0000000100007538 l    d  __TEXT,__text	__text
+0000000100007538 l    d  __TEXT,__text	__text
+000000000000005c l    d  *UND*	
+000000000000005c l    d  __TEXT,__text	__text
+0000000100007594 l    d  __TEXT,__text	__text
+0000000100007594 l    d  __TEXT,__text	__text
+0000000000000096 l    d  *UND*	
+0000000000000096 l    d  __TEXT,__text	__text
+000000010000762a l    d  __TEXT,__text	__text
+000000010000762a l    d  __TEXT,__text	__text
+000000000000008f l    d  *UND*	
+000000000000008f l    d  __TEXT,__text	__text
+00000001000076b9 l    d  __TEXT,__text	__text
+00000001000076b9 l    d  __TEXT,__text	__text
+000000000000012b l    d  *UND*	
+000000000000012b l    d  __TEXT,__text	__text
+00000001000077e4 l    d  __TEXT,__text	__text
+00000001000077e4 l    d  __TEXT,__text	__text
+0000000000000134 l    d  *UND*	
+0000000000000134 l    d  __TEXT,__text	__text
+0000000100007918 l    d  __TEXT,__text	__text
+0000000100007918 l    d  __TEXT,__text	__text
+0000000000000088 l    d  *UND*	
+0000000000000088 l    d  __TEXT,__text	__text
+00000001000079a0 l    d  __TEXT,__text	__text
+00000001000079a0 l    d  __TEXT,__text	__text
+0000000000000086 l    d  *UND*	
+0000000000000086 l    d  __TEXT,__text	__text
+0000000100007a26 l    d  __TEXT,__text	__text
+0000000100007a26 l    d  __TEXT,__text	__text
+000000000000000f l    d  *UND*	
+000000000000000f l    d  __TEXT,__text	__text
+0000000100007a35 l    d  __TEXT,__text	__text
+0000000100007a35 l    d  __TEXT,__text	__text
+000000000000000f l    d  *UND*	
+000000000000000f l    d  __TEXT,__text	__text
+000000010001afd0 l    d  __DATA,__const	__const
+0000000000000000 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	/Users/hechao/Documents/Demos/RuntimeLearning/RuntimeLearning/Swizzle/
+0000000000000000 l    d  *UND*	TestSubClassSwizzle.m
+000000005e045874 l    d  __TEXT,__stub_helper	__stub_helper
+0000000100007a44 l    d  __TEXT,__text	__text
+0000000100007a44 l    d  __TEXT,__text	__text
+000000000000001b l    d  *UND*	
+000000000000001b l    d  __TEXT,__text	__text
+0000000100007a5f l    d  __TEXT,__text	__text
+0000000100007a5f l    d  __TEXT,__text	__text
+0000000000000012 l    d  *UND*	
+0000000000000012 l    d  __TEXT,__text	__text
+0000000100007a71 l    d  __TEXT,__text	__text
+0000000100007a71 l    d  __TEXT,__text	__text
+0000000000000028 l    d  *UND*	
+0000000000000028 l    d  __TEXT,__text	__text
+0000000100007a99 l    d  __TEXT,__text	__text
+0000000100007a99 l    d  __TEXT,__text	__text
+0000000000000028 l    d  *UND*	
+0000000000000028 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	_OBJC_METACLASS_$_TestSubClassSwizzle
+0000000000000000 l    d  *UND*	_OBJC_CLASS_$_TestSubClassSwizzle
+0000000000000000 l    d  *UND*	_OBJC_METACLASS_$_TestASubClassSwizzle
+0000000000000000 l    d  *UND*	_OBJC_CLASS_$_TestASubClassSwizzle
+0000000000000000 l    d  *UND*	_OBJC_METACLASS_$_TestBSubClassSwizzle
+0000000000000000 l    d  *UND*	_OBJC_CLASS_$_TestBSubClassSwizzle
+0000000000000000 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	/Users/hechao/Documents/Demos/RuntimeLearning/RuntimeLearning/Swizzle/
+0000000000000000 l    d  *UND*	UIFont+Test.m
+000000005e045874 l    d  __TEXT,__stub_helper	__stub_helper
+0000000100001c08 l    d  __TEXT,__text	__text
+0000000100001c08 l    d  __TEXT,__text	__text
+0000000000000058 l    d  *UND*	
+0000000000000058 l    d  __TEXT,__text	__text
+0000000100007ac1 l    d  __TEXT,__text	__text
+0000000100007ac1 l    d  __TEXT,__text	__text
+0000000000000006 l    d  *UND*	
+0000000000000006 l    d  __TEXT,__text	__text
+0000000100007ac7 l    d  __TEXT,__text	__text
+0000000100007ac7 l    d  __TEXT,__text	__text
+00000000000000ba l    d  *UND*	
+00000000000000ba l    d  __TEXT,__text	__text
+0000000100007b81 l    d  __TEXT,__text	__text
+0000000100007b81 l    d  __TEXT,__text	__text
+0000000000000006 l    d  *UND*	
+0000000000000006 l    d  __TEXT,__text	__text
+0000000100007b87 l    d  __TEXT,__text	__text
+0000000100007b87 l    d  __TEXT,__text	__text
+0000000000000006 l    d  *UND*	
+0000000000000006 l    d  __TEXT,__text	__text
+0000000100007b8d l    d  __TEXT,__text	__text
+0000000100007b8d l    d  __TEXT,__text	__text
+0000000000000019 l    d  *UND*	
+0000000000000019 l    d  __TEXT,__text	__text
+000000010001b000 l    d  __DATA,__const	__const
+0000000100022618 l    d  __DATA,__bss	__bss
+0000000000000000 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	/Users/hechao/Documents/Demos/RuntimeLearning/RuntimeLearning/
+0000000000000000 l    d  *UND*	AppDelegate.m
+000000005e045874 l    d  __TEXT,__stub_helper	__stub_helper
+0000000100001d65 l    d  __TEXT,__text	__text
+0000000100001d65 l    d  __TEXT,__text	__text
+0000000000000063 l    d  *UND*	
+0000000000000063 l    d  __TEXT,__text	__text
+0000000100001dc8 l    d  __TEXT,__text	__text
+0000000100001dc8 l    d  __TEXT,__text	__text
+0000000000000006 l    d  *UND*	
+0000000000000006 l    d  __TEXT,__text	__text
+0000000100001dce l    d  __TEXT,__text	__text
+0000000100001dce l    d  __TEXT,__text	__text
+0000000000000006 l    d  *UND*	
+0000000000000006 l    d  __TEXT,__text	__text
+0000000100001dd4 l    d  __TEXT,__text	__text
+0000000100001dd4 l    d  __TEXT,__text	__text
+0000000000000006 l    d  *UND*	
+0000000000000006 l    d  __TEXT,__text	__text
+0000000100001dda l    d  __TEXT,__text	__text
+0000000100001dda l    d  __TEXT,__text	__text
+000000000000001b l    d  *UND*	
+000000000000001b l    d  __TEXT,__text	__text
+0000000100001df5 l    d  __TEXT,__text	__text
+0000000100001df5 l    d  __TEXT,__text	__text
+0000000000000006 l    d  *UND*	
+0000000000000006 l    d  __TEXT,__text	__text
+0000000100001dfb l    d  __TEXT,__text	__text
+0000000100001dfb l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	/Users/hechao/Documents/Demos/RuntimeLearning/RuntimeLearning/AppDelegate.h
+0000000000000011 l    d  *UND*	
+0000000000000011 l    d  __TEXT,__text	__text
+0000000100001e0c l    d  __TEXT,__text	__text
+0000000100001e0c l    d  __TEXT,__text	__text
+0000000000000014 l    d  *UND*	
+0000000000000014 l    d  __TEXT,__text	__text
+0000000100001e20 l    d  __TEXT,__text	__text
+0000000100001e20 l    d  __TEXT,__text	__text
+0000000000000013 l    d  *UND*	
+0000000000000013 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_AppDelegate._window
+0000000000000000 l    d  *UND*	_OBJC_METACLASS_$_AppDelegate
+0000000000000000 l    d  *UND*	_OBJC_CLASS_$_AppDelegate
+0000000000000000 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	/Users/hechao/Documents/Demos/RuntimeLearning/RuntimeLearning/Category/
+0000000000000000 l    d  *UND*	UITextField+HCInputType.m
+000000005e045874 l    d  __TEXT,__stub_helper	__stub_helper
+0000000100007ba8 l    d  __TEXT,__text	__text
+0000000100007ba8 l    d  __TEXT,__text	__text
+00000000000000dc l    d  *UND*	
+00000000000000dc l    d  __TEXT,__text	__text
+0000000100007c84 l    d  __TEXT,__text	__text
+0000000100007c84 l    d  __TEXT,__text	__text
+00000000000000c0 l    d  *UND*	
+00000000000000c0 l    d  __TEXT,__text	__text
+0000000100007d44 l    d  __TEXT,__text	__text
+0000000100007d44 l    d  __TEXT,__text	__text
+000000000000006b l    d  *UND*	
+000000000000006b l    d  __TEXT,__text	__text
+0000000100007daf l    d  __TEXT,__text	__text
+0000000100007daf l    d  __TEXT,__text	__text
+0000000000000012 l    d  *UND*	
+0000000000000012 l    d  __TEXT,__text	__text
+0000000100007dc1 l    d  __TEXT,__text	__text
+0000000100007dc1 l    d  __TEXT,__text	__text
+00000000000000fa l    d  *UND*	
+00000000000000fa l    d  __TEXT,__text	__text
+0000000100007ebb l    d  __TEXT,__text	__text
+0000000100007ebb l    d  __TEXT,__text	__text
+0000000000000326 l    d  *UND*	
+0000000000000326 l    d  __TEXT,__text	__text
+00000001000081e1 l    d  __TEXT,__text	__text
+00000001000081e1 l    d  __TEXT,__text	__text
+0000000000000012 l    d  *UND*	
+0000000000000012 l    d  __TEXT,__text	__text
+00000001000081f3 l    d  __TEXT,__text	__text
+00000001000081f3 l    d  __TEXT,__text	__text
+00000000000000b4 l    d  *UND*	
+00000000000000b4 l    d  __TEXT,__text	__text
+00000001000082a7 l    d  __TEXT,__text	__text
+00000001000082a7 l    d  __TEXT,__text	__text
+00000000000000c9 l    d  *UND*	
+00000000000000c9 l    d  __TEXT,__text	__text
+0000000100008370 l    d  __TEXT,__text	__text
+0000000100008370 l    d  __TEXT,__text	__text
+00000000000000c9 l    d  *UND*	
+00000000000000c9 l    d  __TEXT,__text	__text
+0000000100008439 l    d  __TEXT,__text	__text
+0000000100008439 l    d  __TEXT,__text	__text
+0000000000000087 l    d  *UND*	
+0000000000000087 l    d  __TEXT,__text	__text
+00000001000084c0 l    d  __TEXT,__text	__text
+00000001000084c0 l    d  __TEXT,__text	__text
+0000000000000184 l    d  *UND*	
+0000000000000184 l    d  __TEXT,__text	__text
+0000000100008644 l    d  __TEXT,__text	__text
+0000000100008644 l    d  __TEXT,__text	__text
+00000000000001ef l    d  *UND*	
+00000000000001ef l    d  __TEXT,__text	__text
+0000000100008833 l    d  __TEXT,__text	__text
+0000000100008833 l    d  __TEXT,__text	__text
+00000000000004a4 l    d  *UND*	
+00000000000004a4 l    d  __TEXT,__text	__text
+0000000100008cd7 l    d  __TEXT,__text	__text
+0000000100008cd7 l    d  __TEXT,__text	__text
+0000000000000057 l    d  *UND*	
+0000000000000057 l    d  __TEXT,__text	__text
+0000000100008d2e l    d  __TEXT,__text	__text
+0000000100008d2e l    d  __TEXT,__text	__text
+0000000000000025 l    d  *UND*	
+0000000000000025 l    d  __TEXT,__text	__text
+0000000100008d53 l    d  __TEXT,__text	__text
+0000000100008d53 l    d  __TEXT,__text	__text
+0000000000000025 l    d  *UND*	
+0000000000000025 l    d  __TEXT,__text	__text
+0000000100008d78 l    d  __TEXT,__text	__text
+0000000100008d78 l    d  __TEXT,__text	__text
+0000000000000079 l    d  *UND*	
+0000000000000079 l    d  __TEXT,__text	__text
+0000000100008df1 l    d  __TEXT,__text	__text
+0000000100008df1 l    d  __TEXT,__text	__text
+0000000000000042 l    d  *UND*	
+0000000000000042 l    d  __TEXT,__text	__text
+0000000100008e33 l    d  __TEXT,__text	__text
+0000000100008e33 l    d  __TEXT,__text	__text
+0000000000000069 l    d  *UND*	
+0000000000000069 l    d  __TEXT,__text	__text
+0000000100008e9c l    d  __TEXT,__text	__text
+0000000100008e9c l    d  __TEXT,__text	__text
+0000000000000053 l    d  *UND*	
+0000000000000053 l    d  __TEXT,__text	__text
+0000000100008eef l    d  __TEXT,__text	__text
+0000000100008eef l    d  __TEXT,__text	__text
+000000000000004d l    d  *UND*	
+000000000000004d l    d  __TEXT,__text	__text
+0000000100008f3c l    d  __TEXT,__text	__text
+0000000100008f3c l    d  __TEXT,__text	__text
+0000000000000056 l    d  *UND*	
+0000000000000056 l    d  __TEXT,__text	__text
+0000000100008f92 l    d  __TEXT,__text	__text
+0000000100008f92 l    d  __TEXT,__text	__text
+000000000000004d l    d  *UND*	
+000000000000004d l    d  __TEXT,__text	__text
+000000010001b030 l    d  __DATA,__const	__const
+0000000100022620 l    d  __DATA,__bss	__bss
+0000000100022621 l    d  __DATA,__bss	__bss
+0000000100022622 l    d  __DATA,__bss	__bss
+0000000000000000 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	/Users/hechao/Documents/Demos/RuntimeLearning/Pods/Target Support Files/Aspects/
+0000000000000000 l    d  *UND*	Aspects-dummy.m
+000000005e045870 l    d  __TEXT,__stub_helper	__stub_helper
+0000000000000000 l    d  *UND*	_OBJC_METACLASS_$_PodsDummy_Aspects
+0000000000000000 l    d  *UND*	_OBJC_CLASS_$_PodsDummy_Aspects
+0000000000000000 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	/Users/hechao/Documents/Demos/RuntimeLearning/Pods/Aspects/
+0000000000000000 l    d  *UND*	Aspects.m
+000000005e045871 l    d  __TEXT,__stub_helper	__stub_helper
+0000000100008fe0 l    d  __TEXT,__text	__text
+0000000100008fe0 l    d  __TEXT,__text	__text
+0000000000000090 l    d  *UND*	
+0000000000000090 l    d  __TEXT,__text	__text
+0000000100009070 l    d  __TEXT,__text	__text
+0000000100009070 l    d  __TEXT,__text	__text
+00000000000007d0 l    d  *UND*	
+00000000000007d0 l    d  __TEXT,__text	__text
+0000000100009840 l    d  __TEXT,__text	__text
+0000000100009840 l    d  __TEXT,__text	__text
+0000000000000090 l    d  *UND*	
+0000000000000090 l    d  __TEXT,__text	__text
+00000001000098d0 l    d  __TEXT,__text	__text
+00000001000098d0 l    d  __TEXT,__text	__text
+0000000000000130 l    d  *UND*	
+0000000000000130 l    d  __TEXT,__text	__text
+0000000100009a00 l    d  __TEXT,__text	__text
+0000000100009a00 l    d  __TEXT,__text	__text
+0000000000000130 l    d  *UND*	
+0000000000000130 l    d  __TEXT,__text	__text
+0000000100009b30 l    d  __TEXT,__text	__text
+0000000100009b30 l    d  __TEXT,__text	__text
+0000000000000020 l    d  *UND*	
+0000000000000020 l    d  __TEXT,__text	__text
+0000000100009b50 l    d  __TEXT,__text	__text
+0000000100009b50 l    d  __TEXT,__text	__text
+0000000000000040 l    d  *UND*	
+0000000000000040 l    d  __TEXT,__text	__text
+0000000100009b90 l    d  __TEXT,__text	__text
+0000000100009b90 l    d  __TEXT,__text	__text
+0000000000000020 l    d  *UND*	
+0000000000000020 l    d  __TEXT,__text	__text
+0000000100009bb0 l    d  __TEXT,__text	__text
+0000000100009bb0 l    d  __TEXT,__text	__text
+0000000000000040 l    d  *UND*	
+0000000000000040 l    d  __TEXT,__text	__text
+0000000100009bf0 l    d  __TEXT,__text	__text
+0000000100009bf0 l    d  __TEXT,__text	__text
+0000000000000040 l    d  *UND*	
+0000000000000040 l    d  __TEXT,__text	__text
+0000000100009c30 l    d  __TEXT,__text	__text
+0000000100009c30 l    d  __TEXT,__text	__text
+0000000000000040 l    d  *UND*	
+0000000000000040 l    d  __TEXT,__text	__text
+0000000100009c70 l    d  __TEXT,__text	__text
+0000000100009c70 l    d  __TEXT,__text	__text
+0000000000000070 l    d  *UND*	
+0000000000000070 l    d  __TEXT,__text	__text
+0000000100009ce0 l    d  __TEXT,__text	__text
+0000000100009ce0 l    d  __TEXT,__text	__text
+0000000000000ac0 l    d  *UND*	
+0000000000000ac0 l    d  __TEXT,__text	__text
+000000010000a7a0 l    d  __TEXT,__text	__text
+000000010000a7a0 l    d  __TEXT,__text	__text
+00000000000001a0 l    d  *UND*	
+00000000000001a0 l    d  __TEXT,__text	__text
+000000010000a940 l    d  __TEXT,__text	__text
+000000010000a940 l    d  __TEXT,__text	__text
+0000000000000560 l    d  *UND*	
+0000000000000560 l    d  __TEXT,__text	__text
+000000010000aea0 l    d  __TEXT,__text	__text
+000000010000aea0 l    d  __TEXT,__text	__text
+00000000000003e0 l    d  *UND*	
+00000000000003e0 l    d  __TEXT,__text	__text
+000000010000b280 l    d  __TEXT,__text	__text
+000000010000b280 l    d  __TEXT,__text	__text
+00000000000009a0 l    d  *UND*	
+00000000000009a0 l    d  __TEXT,__text	__text
+000000010000bc20 l    d  __TEXT,__text	__text
+000000010000bc20 l    d  __TEXT,__text	__text
+00000000000003a0 l    d  *UND*	
+00000000000003a0 l    d  __TEXT,__text	__text
+000000010000bfc0 l    d  __TEXT,__text	__text
+000000010000bfc0 l    d  __TEXT,__text	__text
+0000000000000190 l    d  *UND*	
+0000000000000190 l    d  __TEXT,__text	__text
+000000010000c150 l    d  __TEXT,__text	__text
+000000010000c150 l    d  __TEXT,__text	__text
+0000000000000030 l    d  *UND*	
+0000000000000030 l    d  __TEXT,__text	__text
+000000010000c180 l    d  __TEXT,__text	__text
+000000010000c180 l    d  __TEXT,__text	__text
+0000000000000350 l    d  *UND*	
+0000000000000350 l    d  __TEXT,__text	__text
+000000010000c4d0 l    d  __TEXT,__text	__text
+000000010000c4d0 l    d  __TEXT,__text	__text
+0000000000000020 l    d  *UND*	
+0000000000000020 l    d  __TEXT,__text	__text
+000000010000c4f0 l    d  __TEXT,__text	__text
+000000010000c4f0 l    d  __TEXT,__text	__text
+0000000000000030 l    d  *UND*	
+0000000000000030 l    d  __TEXT,__text	__text
+000000010000c520 l    d  __TEXT,__text	__text
+000000010000c520 l    d  __TEXT,__text	__text
+0000000000000020 l    d  *UND*	
+0000000000000020 l    d  __TEXT,__text	__text
+000000010000c540 l    d  __TEXT,__text	__text
+000000010000c540 l    d  __TEXT,__text	__text
+0000000000000040 l    d  *UND*	
+0000000000000040 l    d  __TEXT,__text	__text
+000000010000c580 l    d  __TEXT,__text	__text
+000000010000c580 l    d  __TEXT,__text	__text
+0000000000000020 l    d  *UND*	
+0000000000000020 l    d  __TEXT,__text	__text
+000000010000c5a0 l    d  __TEXT,__text	__text
+000000010000c5a0 l    d  __TEXT,__text	__text
+0000000000000040 l    d  *UND*	
+0000000000000040 l    d  __TEXT,__text	__text
+000000010000c5e0 l    d  __TEXT,__text	__text
+000000010000c5e0 l    d  __TEXT,__text	__text
+0000000000000040 l    d  *UND*	
+0000000000000040 l    d  __TEXT,__text	__text
+000000010000c620 l    d  __TEXT,__text	__text
+000000010000c620 l    d  __TEXT,__text	__text
+0000000000000040 l    d  *UND*	
+0000000000000040 l    d  __TEXT,__text	__text
+000000010000c660 l    d  __TEXT,__text	__text
+000000010000c660 l    d  __TEXT,__text	__text
+0000000000000020 l    d  *UND*	
+0000000000000020 l    d  __TEXT,__text	__text
+000000010000c680 l    d  __TEXT,__text	__text
+000000010000c680 l    d  __TEXT,__text	__text
+0000000000000030 l    d  *UND*	
+0000000000000030 l    d  __TEXT,__text	__text
+000000010000c6b0 l    d  __TEXT,__text	__text
+000000010000c6b0 l    d  __TEXT,__text	__text
+0000000000000070 l    d  *UND*	
+0000000000000070 l    d  __TEXT,__text	__text
+000000010000c720 l    d  __TEXT,__text	__text
+000000010000c720 l    d  __TEXT,__text	__text
+0000000000000140 l    d  *UND*	
+0000000000000140 l    d  __TEXT,__text	__text
+000000010000c860 l    d  __TEXT,__text	__text
+000000010000c860 l    d  __TEXT,__text	__text
+0000000000000530 l    d  *UND*	
+0000000000000530 l    d  __TEXT,__text	__text
+000000010000cd90 l    d  __TEXT,__text	__text
+000000010000cd90 l    d  __TEXT,__text	__text
+0000000000000450 l    d  *UND*	
+0000000000000450 l    d  __TEXT,__text	__text
+000000010000d1e0 l    d  __TEXT,__text	__text
+000000010000d1e0 l    d  __TEXT,__text	__text
+0000000000000130 l    d  *UND*	
+0000000000000130 l    d  __TEXT,__text	__text
+000000010000d310 l    d  __TEXT,__text	__text
+000000010000d310 l    d  __TEXT,__text	__text
+0000000000000030 l    d  *UND*	
+0000000000000030 l    d  __TEXT,__text	__text
+000000010000d340 l    d  __TEXT,__text	__text
+000000010000d340 l    d  __TEXT,__text	__text
+0000000000000040 l    d  *UND*	
+0000000000000040 l    d  __TEXT,__text	__text
+000000010000d380 l    d  __TEXT,__text	__text
+000000010000d380 l    d  __TEXT,__text	__text
+0000000000000030 l    d  *UND*	
+0000000000000030 l    d  __TEXT,__text	__text
+000000010000d3b0 l    d  __TEXT,__text	__text
+000000010000d3b0 l    d  __TEXT,__text	__text
+0000000000000040 l    d  *UND*	
+0000000000000040 l    d  __TEXT,__text	__text
+000000010000d3f0 l    d  __TEXT,__text	__text
+000000010000d3f0 l    d  __TEXT,__text	__text
+0000000000000030 l    d  *UND*	
+0000000000000030 l    d  __TEXT,__text	__text
+000000010000d420 l    d  __TEXT,__text	__text
+000000010000d420 l    d  __TEXT,__text	__text
+0000000000000040 l    d  *UND*	
+0000000000000040 l    d  __TEXT,__text	__text
+000000010000d460 l    d  __TEXT,__text	__text
+000000010000d460 l    d  __TEXT,__text	__text
+0000000000000070 l    d  *UND*	
+0000000000000070 l    d  __TEXT,__text	__text
+000000010000d4d0 l    d  __TEXT,__text	__text
+000000010000d4d0 l    d  __TEXT,__text	__text
+0000000000000470 l    d  *UND*	
+0000000000000470 l    d  __TEXT,__text	__text
+000000010000d940 l    d  __TEXT,__text	__text
+000000010000d940 l    d  __TEXT,__text	__text
+00000000000000a0 l    d  *UND*	
+00000000000000a0 l    d  __TEXT,__text	__text
+000000010000d9e0 l    d  __TEXT,__text	__text
+000000010000d9e0 l    d  __TEXT,__text	__text
+0000000000000020 l    d  *UND*	
+0000000000000020 l    d  __TEXT,__text	__text
+000000010000da00 l    d  __TEXT,__text	__text
+000000010000da00 l    d  __TEXT,__text	__text
+0000000000000020 l    d  *UND*	
+0000000000000020 l    d  __TEXT,__text	__text
+000000010000da20 l    d  __TEXT,__text	__text
+000000010000da20 l    d  __TEXT,__text	__text
+0000000000000060 l    d  *UND*	
+0000000000000060 l    d  __TEXT,__text	__text
+000000010000da80 l    d  __TEXT,__text	__text
+000000010000da80 l    d  __TEXT,__text	__text
+0000000000000060 l    d  *UND*	
+0000000000000060 l    d  __TEXT,__text	__text
+000000010000dae0 l    d  __TEXT,__text	__text
+000000010000dae0 l    d  __TEXT,__text	__text
+0000000000000030 l    d  *UND*	
+0000000000000030 l    d  __TEXT,__text	__text
+000000010000db10 l    d  __TEXT,__text	__text
+000000010000db10 l    d  __TEXT,__text	__text
+0000000000000060 l    d  *UND*	
+0000000000000060 l    d  __TEXT,__text	__text
+000000010000db70 l    d  __TEXT,__text	__text
+000000010000db70 l    d  __TEXT,__text	__text
+0000000000000140 l    d  *UND*	
+0000000000000140 l    d  __TEXT,__text	__text
+000000010000dcb0 l    d  __TEXT,__text	__text
+000000010000dcb0 l    d  __TEXT,__text	__text
+0000000000000c60 l    d  *UND*	
+0000000000000c60 l    d  __TEXT,__text	__text
+000000010000e910 l    d  __TEXT,__text	__text
+000000010000e910 l    d  __TEXT,__text	__text
+00000000000002a0 l    d  *UND*	
+00000000000002a0 l    d  __TEXT,__text	__text
+000000010000ebb0 l    d  __TEXT,__text	__text
+000000010000ebb0 l    d  __TEXT,__text	__text
+0000000000000560 l    d  *UND*	
+0000000000000560 l    d  __TEXT,__text	__text
+000000010000f110 l    d  __TEXT,__text	__text
+000000010000f110 l    d  __TEXT,__text	__text
+0000000000000090 l    d  *UND*	
+0000000000000090 l    d  __TEXT,__text	__text
+000000010000f1a0 l    d  __TEXT,__text	__text
+000000010000f1a0 l    d  __TEXT,__text	__text
+0000000000000060 l    d  *UND*	
+0000000000000060 l    d  __TEXT,__text	__text
+000000010000f200 l    d  __TEXT,__text	__text
+000000010000f200 l    d  __TEXT,__text	__text
+00000000000000a0 l    d  *UND*	
+00000000000000a0 l    d  __TEXT,__text	__text
+000000010000f2a0 l    d  __TEXT,__text	__text
+000000010000f2a0 l    d  __TEXT,__text	__text
+0000000000000070 l    d  *UND*	
+0000000000000070 l    d  __TEXT,__text	__text
+000000010000f310 l    d  __TEXT,__text	__text
+000000010000f310 l    d  __TEXT,__text	__text
+0000000000000050 l    d  *UND*	
+0000000000000050 l    d  __TEXT,__text	__text
+000000010000f360 l    d  __TEXT,__text	__text
+000000010000f360 l    d  __TEXT,__text	__text
+0000000000000220 l    d  *UND*	
+0000000000000220 l    d  __TEXT,__text	__text
+000000010000f580 l    d  __TEXT,__text	__text
+000000010000f580 l    d  __TEXT,__text	__text
+00000000000005e0 l    d  *UND*	
+00000000000005e0 l    d  __TEXT,__text	__text
+000000010000fb60 l    d  __TEXT,__text	__text
+000000010000fb60 l    d  __TEXT,__text	__text
+0000000000000040 l    d  *UND*	
+0000000000000040 l    d  __TEXT,__text	__text
+000000010000fba0 l    d  __TEXT,__text	__text
+000000010000fba0 l    d  __TEXT,__text	__text
+0000000000000160 l    d  *UND*	
+0000000000000160 l    d  __TEXT,__text	__text
+000000010000fd00 l    d  __TEXT,__text	__text
+000000010000fd00 l    d  __TEXT,__text	__text
+0000000000000270 l    d  *UND*	
+0000000000000270 l    d  __TEXT,__text	__text
+000000010000ff70 l    d  __TEXT,__text	__text
+000000010000ff70 l    d  __TEXT,__text	__text
+0000000000000210 l    d  *UND*	
+0000000000000210 l    d  __TEXT,__text	__text
+0000000100010180 l    d  __TEXT,__text	__text
+0000000100010180 l    d  __TEXT,__text	__text
+0000000000000470 l    d  *UND*	
+0000000000000470 l    d  __TEXT,__text	__text
+00000001000105f0 l    d  __TEXT,__text	__text
+00000001000105f0 l    d  __TEXT,__text	__text
+0000000000000110 l    d  *UND*	
+0000000000000110 l    d  __TEXT,__text	__text
+0000000100010700 l    d  __TEXT,__text	__text
+0000000100010700 l    d  __TEXT,__text	__text
+00000000000000b0 l    d  *UND*	
+00000000000000b0 l    d  __TEXT,__text	__text
+00000001000107b0 l    d  __TEXT,__text	__text
+00000001000107b0 l    d  __TEXT,__text	__text
+0000000000000040 l    d  *UND*	
+0000000000000040 l    d  __TEXT,__text	__text
+00000001000107f0 l    d  __TEXT,__text	__text
+00000001000107f0 l    d  __TEXT,__text	__text
+0000000000000030 l    d  *UND*	
+0000000000000030 l    d  __TEXT,__text	__text
+0000000100010820 l    d  __TEXT,__text	__text
+0000000100010820 l    d  __TEXT,__text	__text
+0000000000000050 l    d  *UND*	
+0000000000000050 l    d  __TEXT,__text	__text
+0000000100010870 l    d  __TEXT,__text	__text
+0000000100010870 l    d  __TEXT,__text	__text
+0000000000001900 l    d  *UND*	
+0000000000001900 l    d  __TEXT,__text	__text
+0000000100012170 l    d  __TEXT,__text	__text
+0000000100012170 l    d  __TEXT,__text	__text
+0000000000000250 l    d  *UND*	
+0000000000000250 l    d  __TEXT,__text	__text
+00000001000123c0 l    d  __TEXT,__text	__text
+00000001000123c0 l    d  __TEXT,__text	__text
+0000000000000060 l    d  *UND*	
+0000000000000060 l    d  __TEXT,__text	__text
+0000000100012420 l    d  __TEXT,__text	__text
+0000000100012420 l    d  __TEXT,__text	__text
+00000000000002d0 l    d  *UND*	
+00000000000002d0 l    d  __TEXT,__text	__text
+00000001000126f0 l    d  __TEXT,__text	__text
+00000001000126f0 l    d  __TEXT,__text	__text
+0000000000000a50 l    d  *UND*	
+0000000000000a50 l    d  __TEXT,__text	__text
+0000000100013140 l    d  __TEXT,__text	__text
+0000000100013140 l    d  __TEXT,__text	__text
+0000000000000070 l    d  *UND*	
+0000000000000070 l    d  __TEXT,__text	__text
+00000001000131b0 l    d  __TEXT,__text	__text
+00000001000131b0 l    d  __TEXT,__text	__text
+0000000000000040 l    d  *UND*	
+0000000000000040 l    d  __TEXT,__text	__text
+00000001000131f0 l    d  __TEXT,__text	__text
+00000001000131f0 l    d  __TEXT,__text	__text
+0000000000000210 l    d  *UND*	
+0000000000000210 l    d  __TEXT,__text	__text
+0000000100013400 l    d  __TEXT,__text	__text
+0000000100013400 l    d  __TEXT,__text	__text
+0000000000000210 l    d  *UND*	
+0000000000000210 l    d  __TEXT,__text	__text
+0000000100013610 l    d  __TEXT,__text	__text
+0000000100013610 l    d  __TEXT,__text	__text
+0000000000000250 l    d  *UND*	
+0000000000000250 l    d  __TEXT,__text	__text
+0000000100013860 l    d  __TEXT,__text	__text
+0000000100013860 l    d  __TEXT,__text	__text
+00000000000000b0 l    d  *UND*	
+00000000000000b0 l    d  __TEXT,__text	__text
+0000000100013910 l    d  __TEXT,__text	__text
+0000000100013910 l    d  __TEXT,__text	__text
+0000000000000260 l    d  *UND*	
+0000000000000260 l    d  __TEXT,__text	__text
+0000000100013b70 l    d  __TEXT,__text	__text
+0000000100013b70 l    d  __TEXT,__text	__text
+0000000000000040 l    d  *UND*	
+0000000000000040 l    d  __TEXT,__text	__text
+0000000100013bb0 l    d  __TEXT,__text	__text
+0000000100013bb0 l    d  __TEXT,__text	__text
+0000000000000023 l    d  *UND*	
+0000000000000023 l    d  __TEXT,__text	__text
+00000001000142fc l    d  __TEXT,__gcc_except_tab	__gcc_except_tab
+0000000100014328 l    d  __TEXT,__gcc_except_tab	__gcc_except_tab
+0000000100014354 l    d  __TEXT,__gcc_except_tab	__gcc_except_tab
+0000000100014388 l    d  __TEXT,__gcc_except_tab	__gcc_except_tab
+0000000000000000 l    d  *UND*	_AspectErrorDomain
+000000010001b068 l    d  __DATA,__const	__const
+000000010001b098 l    d  __DATA,__const	__const
+000000010001b0b8 l    d  __DATA,__const	__const
+000000010001b0d8 l    d  __DATA,__const	__const
+000000010001b0f8 l    d  __DATA,__const	__const
+000000010001b118 l    d  __DATA,__const	__const
+000000010001b148 l    d  __DATA,__const	__const
+000000010001b168 l    d  __DATA,__const	__const
+000000010001b188 l    d  __DATA,__const	__const
+000000010001b1a8 l    d  __DATA,__const	__const
+000000010001b1d8 l    d  __DATA,__const	__const
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_AspectTracker._trackedClass
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_AspectTracker._parentEntry
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_AspectTracker._selectorNames
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_AspectIdentifier._selector
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_AspectIdentifier._block
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_AspectIdentifier._blockSignature
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_AspectIdentifier._object
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_AspectIdentifier._options
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_AspectsContainer._beforeAspects
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_AspectsContainer._insteadAspects
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_AspectsContainer._afterAspects
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_AspectInfo._instance
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_AspectInfo._originalInvocation
+0000000000000000 l    d  *UND*	_OBJC_IVAR_$_AspectInfo._arguments
+0000000000000000 l    d  *UND*	_OBJC_CLASS_$_AspectTracker
+0000000000000000 l    d  *UND*	_OBJC_METACLASS_$_AspectTracker
+0000000000000000 l    d  *UND*	_OBJC_CLASS_$_AspectIdentifier
+0000000000000000 l    d  *UND*	_OBJC_METACLASS_$_AspectIdentifier
+0000000000000000 l    d  *UND*	_OBJC_METACLASS_$_AspectsContainer
+0000000000000000 l    d  *UND*	_OBJC_CLASS_$_AspectsContainer
+0000000000000000 l    d  *UND*	_OBJC_CLASS_$_AspectInfo
+0000000000000000 l    d  *UND*	_OBJC_METACLASS_$_AspectInfo
+0000000100022628 l    d  __DATA,__bss	__bss
+0000000100022630 l    d  __DATA,__bss	__bss
+0000000100022638 l    d  __DATA,__bss	__bss
+0000000100022640 l    d  __DATA,__bss	__bss
+0000000100022648 l    d  __DATA,__bss	__bss
+0000000100022650 l    d  __DATA,__bss	__bss
+0000000100022658 l    d  __DATA,__bss	__bss
+0000000000000000 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	/Users/hechao/Documents/Demos/RuntimeLearning/TestStaticLib/
+0000000000000000 l    d  *UND*	TestStaticLib.m
+000000005e0461b6 l    d  __TEXT,__stub_helper	__stub_helper
+0000000100013be0 l    d  __TEXT,__text	__text
+0000000100013be0 l    d  __TEXT,__text	__text
+0000000000000014 l    d  *UND*	
+0000000000000014 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	_OBJC_METACLASS_$_TestStaticLib
+0000000000000000 l    d  *UND*	_OBJC_CLASS_$_TestStaticLib
+0000000000000000 l    d  __TEXT,__text	__text
+0000000000000000 l    d  *UND*	/Users/hechao/Documents/Demos/RuntimeLearning/Pods/Target Support Files/Pods-RuntimeLearning/
+0000000000000000 l    d  *UND*	Pods-RuntimeLearning-dummy.m
+000000005e045872 l    d  __TEXT,__stub_helper	__stub_helper
+0000000000000000 l    d  *UND*	_OBJC_METACLASS_$_PodsDummy_Pods_RuntimeLearning
+0000000000000000 l    d  *UND*	_OBJC_CLASS_$_PodsDummy_Pods_RuntimeLearning
+0000000000000000 l    d  __TEXT,__text	__text
+0000000100001bb0 l     F __TEXT,__text	+[UIViewController(Test) load]
+0000000100001c08 l     F __TEXT,__text	+[UIFont(Test) load]
+0000000100001c60 l     F __TEXT,__text	+[SubTestUnsafeSwizzle load]
+0000000100001cbf l     F __TEXT,__text	+[TestCategorySwizzle(Log) load]
+0000000100001ce3 l     F __TEXT,__text	+[TestCategorySwizzle(EventTrack) load]
+0000000100001d07 l     F __TEXT,__text	+[TestCategorySwizzle(ClassMethod) load]
+0000000100001d5f l     F __TEXT,__text	+[NSObject(RLSafe) load]
+0000000100001d65 l     F __TEXT,__text	-[AppDelegate application:didFinishLaunchingWithOptions:]
+0000000100001dc8 l     F __TEXT,__text	-[AppDelegate applicationWillResignActive:]
+0000000100001dce l     F __TEXT,__text	-[AppDelegate applicationDidEnterBackground:]
+0000000100001dd4 l     F __TEXT,__text	-[AppDelegate applicationWillEnterForeground:]
+0000000100001dda l     F __TEXT,__text	-[AppDelegate applicationDidBecomeActive:]
+0000000100001df5 l     F __TEXT,__text	-[AppDelegate applicationWillTerminate:]
+0000000100001dfb l     F __TEXT,__text	-[AppDelegate window]
+0000000100001e0c l     F __TEXT,__text	-[AppDelegate setWindow:]
+0000000100001e20 l     F __TEXT,__text	-[AppDelegate .cxx_destruct]
+0000000100001e33 l     F __TEXT,__text	-[AttributeUsage dealloc]
+0000000100001e79 l     F __TEXT,__text	-[AttributeUsage init]
+0000000100001ef3 l     F __TEXT,__text	-[AttributeUsage testUsages]
+0000000100001f23 l     F __TEXT,__text	-[AttributeUsage cleanupUsage]
+0000000100001fe8 l     F __TEXT,__text	___30-[AttributeUsage cleanupUsage]_block_invoke
+0000000100002029 l     F __TEXT,__text	___copy_helper_block_
+0000000100002038 l     F __TEXT,__text	___destroy_helper_block_
+0000000100002047 l     F __TEXT,__text	_AttributeUsageConstructor1
+000000010000205b l     F __TEXT,__text	_AttributeUsageConstructor
+000000010000206f l     F __TEXT,__text	_AttributeUsageDestructor
+0000000100002083 l     F __TEXT,__text	-[AttributeUsage testNoReturn:]
+00000001000020a1 l     F __TEXT,__text	-[AttributeUsage lock]
+00000001000020b2 l     F __TEXT,__text	-[AttributeUsage setLock:]
+00000001000020c6 l     F __TEXT,__text	-[AttributeUsage .cxx_destruct]
+00000001000020d9 l     F __TEXT,__text	-[TestUnsafeSwizzle testMethod]
+00000001000020f4 l     F __TEXT,__text	-[SubTestUnsafeSwizzle test_testMethod]
+0000000100002115 l     F __TEXT,__text	+[DispatchOnceTest sharedInstance]
+000000010000219d l     F __TEXT,__text	___34+[DispatchOnceTest sharedInstance]_block_invoke
+00000001000021dd l     F __TEXT,__text	___copy_helper_block_
+00000001000021e3 l     F __TEXT,__text	___destroy_helper_block_
+00000001000021e9 l     F __TEXT,__text	-[TestCategorySwizzle testCategorySwizzle]
+0000000100002204 l     F __TEXT,__text	+[TestCategorySwizzle testClassMethod]
+000000010000220a l     F __TEXT,__text	___32+[TestCategorySwizzle(Log) load]_block_invoke
+0000000100002254 l     F __TEXT,__text	-[TestCategorySwizzle(Log) log_testCategorySwizzle]
+000000010000227c l     F __TEXT,__text	___39+[TestCategorySwizzle(EventTrack) load]_block_invoke
+00000001000022c6 l     F __TEXT,__text	-[TestCategorySwizzle(EventTrack) track_testCategorySwizzle]
+00000001000022ee l     F __TEXT,__text	___40+[TestCategorySwizzle(ClassMethod) load]_block_invoke
+00000001000023b4 l     F __TEXT,__text	___copy_helper_block_
+00000001000023ba l     F __TEXT,__text	___destroy_helper_block_
+00000001000023c0 l     F __TEXT,__text	+[TestCategorySwizzle(ClassMethod) class_testClassMethod]
+00000001000023c6 l     F __TEXT,__text	+[MethodSwizzleUtil swizzleInstanceMethodWithClass:originalSel:replacementSel:]
+0000000100002471 l     F __TEXT,__text	-[NSObject(Injection) setInjectExcuteBlock:]
+00000001000024aa l     F __TEXT,__text	-[NSObject(Injection) injectExcuteBlock]
+00000001000024bb l     F __TEXT,__text	-[NSObject(Injection) injected]
+000000010000252c l     F __TEXT,__text	-[TestCode init]
+0000000100002578 l     F __TEXT,__text	-[TestCode test]
+00000001000025bb l     F __TEXT,__text	-[CopyUsage init]
+00000001000025ea l     F __TEXT,__text	-[CopyUsage testCopyAndMutableCopy]
+00000001000025fc l     F __TEXT,__text	-[CopyUsage testNSStringCopy]
+0000000100002768 l     F __TEXT,__text	-[CopyUsage testNSMutableStringCopy]
+000000010000291a l     F __TEXT,__text	-[CopyUsage testNSArrayCopy]
+0000000100002c41 l     F __TEXT,__text	-[CopyUsage testNSMutableArrayCopy]
+0000000100002eaf l     F __TEXT,__text	-[CopyUsage testNSDictionaryCopy]
+000000010000319e l     F __TEXT,__text	-[CopyUsage testNSMutableDictionaryCopy]
+0000000100003473 l     F __TEXT,__text	-[CopyUsage pCopyStr]
+0000000100003486 l     F __TEXT,__text	-[CopyUsage setPCopyStr:]
+0000000100003497 l     F __TEXT,__text	-[CopyUsage pStrongStr]
+00000001000034a8 l     F __TEXT,__text	-[CopyUsage setPStrongStr:]
+00000001000034bc l     F __TEXT,__text	-[CopyUsage pCopyArray]
+00000001000034cf l     F __TEXT,__text	-[CopyUsage setPCopyArray:]
+00000001000034e0 l     F __TEXT,__text	-[CopyUsage pStrongArray]
+00000001000034f1 l     F __TEXT,__text	-[CopyUsage setPStrongArray:]
+0000000100003505 l     F __TEXT,__text	-[CopyUsage pCopyDict]
+0000000100003518 l     F __TEXT,__text	-[CopyUsage setPCopyDict:]
+0000000100003529 l     F __TEXT,__text	-[CopyUsage pStrongDict]
+000000010000353a l     F __TEXT,__text	-[CopyUsage setPStrongDict:]
+000000010000354e l     F __TEXT,__text	-[CopyUsage .cxx_destruct]
+00000001000035c3 l     F __TEXT,__text	-[TestObj name]
+00000001000035d6 l     F __TEXT,__text	-[TestObj setName:]
+00000001000035e7 l     F __TEXT,__text	-[TestObj .cxx_destruct]
+00000001000035fa l     F __TEXT,__text	-[DispatchExamnationTest init]
+0000000100003632 l     F __TEXT,__text	-[DispatchExamnationTest testCurrentQueue]
+0000000100003710 l     F __TEXT,__text	___42-[DispatchExamnationTest testCurrentQueue]_block_invoke
+000000010000372b l     F __TEXT,__text	___42-[DispatchExamnationTest testCurrentQueue]_block_invoke_2
+0000000100003746 l     F __TEXT,__text	___42-[DispatchExamnationTest testCurrentQueue]_block_invoke_3
+0000000100003761 l     F __TEXT,__text	___42-[DispatchExamnationTest testCurrentQueue]_block_invoke_4
+000000010000377c l     F __TEXT,__text	___42-[DispatchExamnationTest testCurrentQueue]_block_invoke_5
+0000000100003797 l     F __TEXT,__text	___42-[DispatchExamnationTest testCurrentQueue]_block_invoke_6
+00000001000037b2 l     F __TEXT,__text	___42-[DispatchExamnationTest testCurrentQueue]_block_invoke_7
+00000001000037d4 l     F __TEXT,__text	___copy_helper_block_
+00000001000037e3 l     F __TEXT,__text	___destroy_helper_block_
+00000001000037f2 l     F __TEXT,__text	-[DispatchExamnationTest testLog]
+000000010000380d l     F __TEXT,__text	-[DispatchExamnationTest testCurrentQueue1]
+00000001000038f6 l     F __TEXT,__text	___43-[DispatchExamnationTest testCurrentQueue1]_block_invoke
+0000000100003954 l     F __TEXT,__text	___copy_helper_block_.38
+000000010000396b l     F __TEXT,__text	___destroy_helper_block_.39
+000000010000397e l     F __TEXT,__text	-[DispatchExamnationTest testSerialQueue]
+0000000100003a2a l     F __TEXT,__text	___41-[DispatchExamnationTest testSerialQueue]_block_invoke
+0000000100003a72 l     F __TEXT,__text	___41-[DispatchExamnationTest testSerialQueue]_block_invoke_2
+0000000100003a8d l     F __TEXT,__text	___copy_helper_block_.46
+0000000100003a9c l     F __TEXT,__text	___destroy_helper_block_.47
+0000000100003aab l     F __TEXT,__text	-[TestTaggedPointer init]
+0000000100003b0c l     F __TEXT,__text	-[TestTaggedPointer stringTaggedPointerTest]
+0000000100003c5e l     F __TEXT,__text	-[TestTaggedPointer numberTest]
+0000000100003dab l     F __TEXT,__text	-[TestTaggedPointer dateTest]
+0000000100003eef l     F __TEXT,__text	-[TestTaggedPointer formatedLogObject:]
+0000000100003f2f l     F __TEXT,__text	-[ByteAlignmentTest init]
+0000000100003f7b l     F __TEXT,__text	-[ByteAlignmentTest test]
+0000000100004093 l     F __TEXT,__text	-[ByteAlignmentTest a]
+00000001000040a3 l     F __TEXT,__text	-[ByteAlignmentTest setA:]
+00000001000040b3 l     F __TEXT,__text	-[ByteAlignmentTest b]
+00000001000040c4 l     F __TEXT,__text	-[ByteAlignmentTest setB:]
+00000001000040d4 l     F __TEXT,__text	-[ByteAlignmentTest c]
+00000001000040e5 l     F __TEXT,__text	-[ByteAlignmentTest setC:]
+00000001000040f6 l     F __TEXT,__text	-[ByteAlignmentTest d]
+0000000100004107 l     F __TEXT,__text	-[ByteAlignmentTest setD:]
+0000000100004118 l     F __TEXT,__text	-[ByteAlignmentTest testString]
+000000010000412b l     F __TEXT,__text	-[ByteAlignmentTest setTestString:]
+000000010000413c l     F __TEXT,__text	-[ByteAlignmentTest testObject]
+000000010000414d l     F __TEXT,__text	-[ByteAlignmentTest setTestObject:]
+0000000100004161 l     F __TEXT,__text	-[ByteAlignmentTest .cxx_destruct]
+0000000100004192 l     F __TEXT,__text	-[NSObject(RLSafe) rl_methodSignatureForSelector:]
+00000001000041a4 l     F __TEXT,__text	-[NSObject(RLSafe) rl_forwardInvocation:]
+00000001000041b6 l     F __TEXT,__text	-[NSObject(RLSafe) nilMessage]
+00000001000041be l     F __TEXT,__text	-[DispatchBarrierTest init]
+0000000100004246 l     F __TEXT,__text	-[DispatchBarrierTest testBarrier]
+00000001000042ad l     F __TEXT,__text	___34-[DispatchBarrierTest testBarrier]_block_invoke
+00000001000042f3 l     F __TEXT,__text	___34-[DispatchBarrierTest testBarrier]_block_invoke_2
+0000000100004323 l     F __TEXT,__text	___34-[DispatchBarrierTest testBarrier]_block_invoke_3
+0000000100004369 l     F __TEXT,__text	___34-[DispatchBarrierTest testBarrier]_block_invoke_4
+0000000100004399 l     F __TEXT,__text	___34-[DispatchBarrierTest testBarrier]_block_invoke_5
+00000001000043ad l     F __TEXT,__text	___34-[DispatchBarrierTest testBarrier]_block_invoke_6
+00000001000043f3 l     F __TEXT,__text	___34-[DispatchBarrierTest testBarrier]_block_invoke_7
+0000000100004423 l     F __TEXT,__text	-[DispatchBarrierTest testGroup]
+0000000100004541 l     F __TEXT,__text	___32-[DispatchBarrierTest testGroup]_block_invoke
+00000001000045d8 l     F __TEXT,__text	___32-[DispatchBarrierTest testGroup]_block_invoke_2
+000000010000461a l     F __TEXT,__text	___copy_helper_block_
+0000000100004629 l     F __TEXT,__text	___destroy_helper_block_
+0000000100004638 l     F __TEXT,__text	___copy_helper_block_.45
+0000000100004647 l     F __TEXT,__text	___destroy_helper_block_.46
+0000000100004656 l     F __TEXT,__text	___32-[DispatchBarrierTest testGroup]_block_invoke.48
+00000001000046ed l     F __TEXT,__text	___32-[DispatchBarrierTest testGroup]_block_invoke_2.51
+000000010000472f l     F __TEXT,__text	___copy_helper_block_.54
+000000010000473e l     F __TEXT,__text	___destroy_helper_block_.55
+000000010000474d l     F __TEXT,__text	___copy_helper_block_.57
+000000010000475c l     F __TEXT,__text	___destroy_helper_block_.58
+000000010000476b l     F __TEXT,__text	___32-[DispatchBarrierTest testGroup]_block_invoke.60
+000000010000477f l     F __TEXT,__text	___32-[DispatchBarrierTest testGroup]_block_invoke_2.65
+00000001000047c5 l     F __TEXT,__text	___32-[DispatchBarrierTest testGroup]_block_invoke_3
+00000001000047f5 l     F __TEXT,__text	-[DispatchBarrierTest testGroup1]
+0000000100004884 l     F __TEXT,__text	___33-[DispatchBarrierTest testGroup1]_block_invoke
+00000001000048ca l     F __TEXT,__text	___33-[DispatchBarrierTest testGroup1]_block_invoke_2
+00000001000048fa l     F __TEXT,__text	___33-[DispatchBarrierTest testGroup1]_block_invoke_3
+0000000100004940 l     F __TEXT,__text	___33-[DispatchBarrierTest testGroup1]_block_invoke_4
+0000000100004970 l     F __TEXT,__text	___33-[DispatchBarrierTest testGroup1]_block_invoke_5
+0000000100004984 l     F __TEXT,__text	___33-[DispatchBarrierTest testGroup1]_block_invoke_6
+00000001000049ca l     F __TEXT,__text	___33-[DispatchBarrierTest testGroup1]_block_invoke_7
+00000001000049fa l     F __TEXT,__text	-[DispatchBarrierTest testSemaphore]
+0000000100004b4b l     F __TEXT,__text	___36-[DispatchBarrierTest testSemaphore]_block_invoke
+0000000100004bf2 l     F __TEXT,__text	___36-[DispatchBarrierTest testSemaphore]_block_invoke_2
+0000000100004c34 l     F __TEXT,__text	___copy_helper_block_.94
+0000000100004c43 l     F __TEXT,__text	___destroy_helper_block_.95
+0000000100004c52 l     F __TEXT,__text	___copy_helper_block_.97
+0000000100004c61 l     F __TEXT,__text	___destroy_helper_block_.98
+0000000100004c70 l     F __TEXT,__text	___36-[DispatchBarrierTest testSemaphore]_block_invoke.100
+0000000100004d17 l     F __TEXT,__text	___36-[DispatchBarrierTest testSemaphore]_block_invoke_2.103
+0000000100004d59 l     F __TEXT,__text	___copy_helper_block_.106
+0000000100004d68 l     F __TEXT,__text	___destroy_helper_block_.107
+0000000100004d77 l     F __TEXT,__text	___copy_helper_block_.109
+0000000100004d86 l     F __TEXT,__text	___destroy_helper_block_.110
+0000000100004d95 l     F __TEXT,__text	___36-[DispatchBarrierTest testSemaphore]_block_invoke.112
+0000000100004e4c l     F __TEXT,__text	___36-[DispatchBarrierTest testSemaphore]_block_invoke_2.115
+0000000100004e97 l     F __TEXT,__text	___copy_helper_block_.118
+0000000100004ea6 l     F __TEXT,__text	___destroy_helper_block_.119
+0000000100004eb5 l     F __TEXT,__text	___copy_helper_block_.121
+0000000100004ec4 l     F __TEXT,__text	___destroy_helper_block_.122
+0000000100004ed3 l     F __TEXT,__text	-[DispatchBarrierTest testRunloop]
+0000000100005005 l     F __TEXT,__text	___34-[DispatchBarrierTest testRunloop]_block_invoke
+0000000100005084 l     F __TEXT,__text	___34-[DispatchBarrierTest testRunloop]_block_invoke_2
+00000001000050ca l     F __TEXT,__text	___copy_helper_block_.129
+00000001000050e1 l     F __TEXT,__text	___destroy_helper_block_.130
+00000001000050f4 l     F __TEXT,__text	___copy_helper_block_.132
+000000010000510b l     F __TEXT,__text	___destroy_helper_block_.133
+000000010000511e l     F __TEXT,__text	___34-[DispatchBarrierTest testRunloop]_block_invoke.135
+000000010000519d l     F __TEXT,__text	___34-[DispatchBarrierTest testRunloop]_block_invoke_2.138
+00000001000051e3 l     F __TEXT,__text	___copy_helper_block_.141
+00000001000051fa l     F __TEXT,__text	___destroy_helper_block_.142
+000000010000520d l     F __TEXT,__text	___copy_helper_block_.144
+0000000100005224 l     F __TEXT,__text	___destroy_helper_block_.145
+0000000100005237 l     F __TEXT,__text	___34-[DispatchBarrierTest testRunloop]_block_invoke.147
+0000000100005333 l     F __TEXT,__text	___34-[DispatchBarrierTest testRunloop]_block_invoke_2.158
+0000000100005363 l     F __TEXT,__text	___copy_helper_block_.163
+000000010000539b l     F __TEXT,__text	___destroy_helper_block_.164
+00000001000053c6 l     F __TEXT,__text	-[TestClassCluster init]
+0000000100005412 l     F __TEXT,__text	-[TestClassCluster test]
+0000000100005474 l     F __TEXT,__text	-[TestClassCluster testNSString]
+0000000100005602 l     F __TEXT,__text	-[TestClassCluster testArray]
+0000000100005798 l     F __TEXT,__text	-[TestClassCluster testNumber]
+0000000100005871 l     F __TEXT,__text	-[TestClassCluster testNSDate]
+0000000100005948 l     F __TEXT,__text	-[TestClassCluster testNSSet]
+0000000100005a17 l     F __TEXT,__text	-[TestClassCluster testNSMap]
+0000000100005ae6 l     F __TEXT,__text	-[DynamicCallFunctionTest dealloc]
+0000000100005b5b l     F __TEXT,__text	-[DynamicCallFunctionTest init]
+0000000100005cfd l     F __TEXT,__text	-[DynamicCallFunctionTest injected]
+0000000100005d2d l     F __TEXT,__text	-[DynamicCallFunctionTest testInject]
+0000000100005d37 l     F __TEXT,__text	-[DispatchGroupLeaveTest init]
+0000000100005d83 l     F __TEXT,__text	-[DispatchGroupLeaveTest testGroupLeaveCrash]
+0000000100005db0 l     F __TEXT,__text	-[ViewController viewDidLoad]
+0000000100005e33 l     F __TEXT,__text	-[ViewController setupUI]
+0000000100005ebd l     F __TEXT,__text	-[ViewController viewWillAppear:]
+0000000100005f6d l     F __TEXT,__text	-[ViewController viewDidAppear:]
+0000000100005fb6 l     F __TEXT,__text	-[ViewController observeValueForKeyPath:ofObject:change:context:]
+0000000100006028 l     F __TEXT,__text	-[ViewController testAttributeUsage]
+000000010000604a l     F __TEXT,__text	-[ViewController testClassSwizzle]
+0000000100006063 l     F __TEXT,__text	-[ViewController testUnsafeSwizzle]
+000000010000613e l     F __TEXT,__text	-[ViewController testCategorySwizzle]
+000000010000617a l     F __TEXT,__text	-[ViewController testSubClassSwizzleMethod]
+0000000100006256 l     F __TEXT,__text	-[ViewController testDoSthWhenDealloc]
+0000000100006341 l     F __TEXT,__text	___38-[ViewController testDoSthWhenDealloc]_block_invoke
+00000001000063a5 l     F __TEXT,__text	___copy_helper_block_
+00000001000063b7 l     F __TEXT,__text	___destroy_helper_block_
+00000001000063c5 l     F __TEXT,__text	-[ViewController testCategoryOveride]
+00000001000063e7 l     F __TEXT,__text	-[ViewController testSwizzleInInitialize]
+0000000100006423 l     F __TEXT,__text	-[ViewController testCopyUsage]
+000000010000645f l     F __TEXT,__text	-[ViewController testTextFieldUsage]
+0000000100006514 l     F __TEXT,__text	-[ViewController testArrayReadWhileChange]
+0000000100006606 l     F __TEXT,__text	___42-[ViewController testArrayReadWhileChange]_block_invoke
+0000000100006668 l     F __TEXT,__text	___copy_helper_block_.88
+0000000100006677 l     F __TEXT,__text	___destroy_helper_block_.89
+0000000100006686 l     F __TEXT,__text	-[ViewController testClassCluster]
+00000001000066a8 l     F __TEXT,__text	-[ViewController textField:shouldChangeCharactersInRange:replacementString:]
+0000000100006703 l     F __TEXT,__text	-[ViewController dynamicFunctionTest]
+0000000100006714 l     F __TEXT,__text	-[ViewController setDynamicFunctionTest:]
+0000000100006728 l     F __TEXT,__text	-[ViewController aTextFiled]
+0000000100006741 l     F __TEXT,__text	-[ViewController setATextFiled:]
+0000000100006755 l     F __TEXT,__text	-[ViewController .cxx_destruct]
+0000000100006784 l     F __TEXT,__text	+[TestSwizzleInInitialize initialize]
+0000000100006832 l     F __TEXT,__text	___37+[TestSwizzleInInitialize initialize]_block_invoke
+0000000100006860 l     F __TEXT,__text	___copy_helper_block_
+0000000100006866 l     F __TEXT,__text	___destroy_helper_block_
+000000010000686c l     F __TEXT,__text	-[TestSwizzleInInitialize testSwizzleMethod]
+0000000100006887 l     F __TEXT,__text	-[TestSwizzleInInitialize testLogMethod]
+00000001000068a2 l     F __TEXT,__text	-[TestSwizzleInInitialize testTrackMethod]
+00000001000068bd l     F __TEXT,__text	-[TestSwizzleInInitialize s_testSwizzleMethod]
+00000001000068e5 l     F __TEXT,__text	+[TestSwizzleInInitializeA initialize]
+0000000100006993 l     F __TEXT,__text	___38+[TestSwizzleInInitializeA initialize]_block_invoke
+00000001000069c1 l     F __TEXT,__text	___copy_helper_block_.19
+00000001000069c7 l     F __TEXT,__text	___destroy_helper_block_.20
+00000001000069cd l     F __TEXT,__text	-[TestSwizzleInInitializeA a_testSwizzleMethod]
+00000001000069f5 l     F __TEXT,__text	+[TestSwizzleInInitializeB initialize]
+0000000100006aa3 l     F __TEXT,__text	___38+[TestSwizzleInInitializeB initialize]_block_invoke
+0000000100006ad1 l     F __TEXT,__text	___copy_helper_block_.29
+0000000100006ad7 l     F __TEXT,__text	___destroy_helper_block_.30
+0000000100006add l     F __TEXT,__text	-[TestSwizzleInInitializeB b_testSwizzleMethod]
+0000000100006b05 l     F __TEXT,__text	+[TestSwizzleInInitialize(Log) initialize]
+0000000100006b95 l     F __TEXT,__text	___42+[TestSwizzleInInitialize(Log) initialize]_block_invoke
+0000000100006bc3 l     F __TEXT,__text	___copy_helper_block_.38
+0000000100006bc9 l     F __TEXT,__text	___destroy_helper_block_.39
+0000000100006bcf l     F __TEXT,__text	-[TestSwizzleInInitialize(Log) log_testSwizzleMethod]
+0000000100006bf7 l     F __TEXT,__text	+[TestSwizzleInInitialize(Track) initialize]
+0000000100006c87 l     F __TEXT,__text	___44+[TestSwizzleInInitialize(Track) initialize]_block_invoke
+0000000100006cb5 l     F __TEXT,__text	___copy_helper_block_.47
+0000000100006cbb l     F __TEXT,__text	___destroy_helper_block_.48
+0000000100006cc1 l     F __TEXT,__text	-[TestSwizzleInInitialize(Track) track_testSwizzleMethod]
+0000000100006ce9 l     F __TEXT,__text	-[NSObject(HCWillDealloc) hc_doSthWhenDeallocWithBlock:]
+0000000100006d86 l     F __TEXT,__text	-[HCAssociatedObject initWithBlock:target:]
+0000000100006e25 l     F __TEXT,__text	-[HCAssociatedObject dealloc]
+0000000100006e74 l     F __TEXT,__text	-[HCAssociatedObject target]
+0000000100006e85 l     F __TEXT,__text	-[HCAssociatedObject setTarget:]
+0000000100006e96 l     F __TEXT,__text	-[HCAssociatedObject deallocBlock]
+0000000100006ea9 l     F __TEXT,__text	-[HCAssociatedObject setDeallocBlock:]
+0000000100006eba l     F __TEXT,__text	-[HCAssociatedObject .cxx_destruct]
+0000000100006ecd l     F __TEXT,__text	___30+[UIViewController(Test) load]_block_invoke
+0000000100006f8b l     F __TEXT,__text	___copy_helper_block_
+0000000100006f91 l     F __TEXT,__text	___destroy_helper_block_
+0000000100006f97 l     F __TEXT,__text	-[UIViewController(Test) hc_viewWillAppear:]
+0000000100006fa9 l     F __TEXT,__text	-[TestMapTable init]
+0000000100007045 l     F __TEXT,__text	-[TestMapTable testHashTableWeakMememory]
+00000001000071cd l     F __TEXT,__text	-[TestMapTable test]
+000000010000729f l     F __TEXT,__text	-[TestMapTable weakCache]
+00000001000072b0 l     F __TEXT,__text	-[TestMapTable setWeakCache:]
+00000001000072c4 l     F __TEXT,__text	-[TestMapTable objArray]
+00000001000072d5 l     F __TEXT,__text	-[TestMapTable setObjArray:]
+00000001000072e9 l     F __TEXT,__text	-[TestMapTable .cxx_destruct]
+000000010000731a l     F __TEXT,__text	+[TestCategoryOveride initialize]
+0000000100007320 l     F __TEXT,__text	-[TestCategoryOveride init]
+00000001000074bf l     F __TEXT,__text	-[TestCategoryOveride log]
+00000001000074d3 l     F __TEXT,__text	+[TestCategoryOveride log1]
+00000001000074e7 l     F __TEXT,__text	-[TestCategoryOveride(TestOveride) log]
+00000001000079a0 l     F __TEXT,__text	___testBenchmark_block_invoke
+0000000100007a26 l     F __TEXT,__text	___copy_helper_block_
+0000000100007a35 l     F __TEXT,__text	___destroy_helper_block_
+0000000100007a44 l     F __TEXT,__text	-[TestSubClassSwizzle testSubClassSwizzle]
+0000000100007a5f l     F __TEXT,__text	-[TestSubClassSwizzle s_testSubClassSwizzle]
+0000000100007a71 l     F __TEXT,__text	-[TestASubClassSwizzle a_testSubClassSwizzle]
+0000000100007a99 l     F __TEXT,__text	-[TestBSubClassSwizzle b_testSubClassSwizzle]
+0000000100007ac1 l     F __TEXT,__text	+[UIFont(Test) initialize]
+0000000100007ac7 l     F __TEXT,__text	___20+[UIFont(Test) load]_block_invoke
+0000000100007b81 l     F __TEXT,__text	___copy_helper_block_
+0000000100007b87 l     F __TEXT,__text	___destroy_helper_block_
+0000000100007b8d l     F __TEXT,__text	+[UIFont(Test) hc_fontWithName:size:]
+0000000100007ba8 l     F __TEXT,__text	-[UITextField(HCInputType) hcui_shouldChangeCharactersInRange:replacementString:]
+0000000100007c84 l     F __TEXT,__text	-[UITextField(HCInputType) configKeyboardType]
+0000000100007d44 l     F __TEXT,__text	-[UITextField(HCInputType) hcui_phoneNumberCheckWithString:]
+0000000100007daf l     F __TEXT,__text	-[UITextField(HCInputType) hcui_formatedPhoneNumberCheckWithString:range:]
+0000000100007dc1 l     F __TEXT,__text	-[UITextField(HCInputType) hcui_identityNumberCheckWithString:]
+0000000100007ebb l     F __TEXT,__text	-[UITextField(HCInputType) hcui_priceCheckWithString:range:]
+00000001000081e1 l     F __TEXT,__text	-[UITextField(HCInputType) hcui_formatedCardCheckWithString:range:]
+00000001000081f3 l     F __TEXT,__text	-[UITextField(HCInputType) hcui_blankCountAfterCursorWithRange:]
+00000001000082a7 l     F __TEXT,__text	-[UITextField(HCInputType) hcui_authCodeCheckWithString:range:]
+0000000100008370 l     F __TEXT,__text	-[UITextField(HCInputType) hcui_paymentPWDCheckWithString:]
+0000000100008439 l     F __TEXT,__text	-[UITextField(HCInputType) hcui_predicateString:withRegex:]
+00000001000084c0 l     F __TEXT,__text	-[UITextField(HCInputType) hcui_formatedCardNo:]
+0000000100008644 l     F __TEXT,__text	-[UITextField(HCInputType) hcui_formatedPhoneNo:]
+0000000100008833 l     F __TEXT,__text	-[UITextField(HCInputType) _hcui_formatedNumberCheckWithString:range:]
+0000000100008cd7 l     F __TEXT,__text	___70-[UITextField(HCInputType) _hcui_formatedNumberCheckWithString:range:]_block_invoke
+0000000100008d2e l     F __TEXT,__text	___copy_helper_block_
+0000000100008d53 l     F __TEXT,__text	___destroy_helper_block_
+0000000100008d78 l     F __TEXT,__text	-[UITextField(HCInputType) _hcui_formatedNumbers:]
+0000000100008df1 l     F __TEXT,__text	-[UITextField(HCInputType) hcui_inputType]
+0000000100008e33 l     F __TEXT,__text	-[UITextField(HCInputType) setHcui_inputType:]
+0000000100008e9c l     F __TEXT,__text	-[UITextField(HCInputType) hcui_limitLegnth]
+0000000100008eef l     F __TEXT,__text	-[UITextField(HCInputType) setHcui_limitLegnth:]
+0000000100008f3c l     F __TEXT,__text	-[UITextField(HCInputType) hcui_maxValue]
+0000000100008f92 l     F __TEXT,__text	-[UITextField(HCInputType) setHcui_maxValue:]
+0000000100008fe0 l     F __TEXT,__text	+[NSObject(Aspects) aspect_hookSelector:withOptions:usingBlock:error:]
+0000000100009070 l     F __TEXT,__text	_aspect_add
+0000000100009840 l     F __TEXT,__text	-[NSObject(Aspects) aspect_hookSelector:withOptions:usingBlock:error:]
+00000001000098d0 l     F __TEXT,__text	-[AspectTracker initWithTrackedClass:parent:]
+0000000100009a00 l     F __TEXT,__text	-[AspectTracker description]
+0000000100009b30 l     F __TEXT,__text	-[AspectTracker trackedClass]
+0000000100009b50 l     F __TEXT,__text	-[AspectTracker setTrackedClass:]
+0000000100009b90 l     F __TEXT,__text	-[AspectTracker selectorNames]
+0000000100009bb0 l     F __TEXT,__text	-[AspectTracker setSelectorNames:]
+0000000100009bf0 l     F __TEXT,__text	-[AspectTracker parentEntry]
+0000000100009c30 l     F __TEXT,__text	-[AspectTracker setParentEntry:]
+0000000100009c70 l     F __TEXT,__text	-[AspectTracker .cxx_destruct]
+0000000100009ce0 l     F __TEXT,__text	-[NSInvocation(Aspects) aspect_argumentAtIndex:]
+000000010000a7a0 l     F __TEXT,__text	-[NSInvocation(Aspects) aspects_arguments]
+000000010000a940 l     F __TEXT,__text	+[AspectIdentifier identifierWithSelector:object:options:block:error:]
+000000010000aea0 l     F __TEXT,__text	_aspect_blockMethodSignature
+000000010000b280 l     F __TEXT,__text	_aspect_isCompatibleBlockSignature
+000000010000bc20 l     F __TEXT,__text	-[AspectIdentifier invokeWithInfo:]
+000000010000bfc0 l     F __TEXT,__text	-[AspectIdentifier description]
+000000010000c150 l     F __TEXT,__text	-[AspectIdentifier remove]
+000000010000c180 l     F __TEXT,__text	_aspect_remove
+000000010000c4d0 l     F __TEXT,__text	-[AspectIdentifier selector]
+000000010000c4f0 l     F __TEXT,__text	-[AspectIdentifier setSelector:]
+000000010000c520 l     F __TEXT,__text	-[AspectIdentifier block]
+000000010000c540 l     F __TEXT,__text	-[AspectIdentifier setBlock:]
+000000010000c580 l     F __TEXT,__text	-[AspectIdentifier blockSignature]
+000000010000c5a0 l     F __TEXT,__text	-[AspectIdentifier setBlockSignature:]
+000000010000c5e0 l     F __TEXT,__text	-[AspectIdentifier object]
+000000010000c620 l     F __TEXT,__text	-[AspectIdentifier setObject:]
+000000010000c660 l     F __TEXT,__text	-[AspectIdentifier options]
+000000010000c680 l     F __TEXT,__text	-[AspectIdentifier setOptions:]
+000000010000c6b0 l     F __TEXT,__text	-[AspectIdentifier .cxx_destruct]
+000000010000c720 l     F __TEXT,__text	-[AspectsContainer hasAspects]
+000000010000c860 l     F __TEXT,__text	-[AspectsContainer addAspect:withOptions:]
+000000010000cd90 l     F __TEXT,__text	-[AspectsContainer removeAspect:]
+000000010000d1e0 l     F __TEXT,__text	-[AspectsContainer description]
+000000010000d310 l     F __TEXT,__text	-[AspectsContainer beforeAspects]
+000000010000d340 l     F __TEXT,__text	-[AspectsContainer setBeforeAspects:]
+000000010000d380 l     F __TEXT,__text	-[AspectsContainer insteadAspects]
+000000010000d3b0 l     F __TEXT,__text	-[AspectsContainer setInsteadAspects:]
+000000010000d3f0 l     F __TEXT,__text	-[AspectsContainer afterAspects]
+000000010000d420 l     F __TEXT,__text	-[AspectsContainer setAfterAspects:]
+000000010000d460 l     F __TEXT,__text	-[AspectsContainer .cxx_destruct]
+000000010000d4d0 l     F __TEXT,__text	-[AspectInfo initWithInstance:invocation:]
+000000010000d940 l     F __TEXT,__text	-[AspectInfo arguments]
+000000010000d9e0 l     F __TEXT,__text	-[AspectInfo instance]
+000000010000da00 l     F __TEXT,__text	-[AspectInfo originalInvocation]
+000000010000da20 l     F __TEXT,__text	-[AspectInfo .cxx_destruct]
+000000010000da80 l     F __TEXT,__text	___Block_byref_object_copy_
+000000010000dae0 l     F __TEXT,__text	___Block_byref_object_dispose_
+000000010000db10 l     F __TEXT,__text	_aspect_performLocked
+000000010000db70 l     F __TEXT,__text	___aspect_add_block_invoke
+000000010000dcb0 l     F __TEXT,__text	_aspect_isSelectorAllowedAndTrack
+000000010000e910 l     F __TEXT,__text	_aspect_getContainerForObject
+000000010000ebb0 l     F __TEXT,__text	_aspect_prepareClassAndHookSelector
+000000010000f110 l     F __TEXT,__text	___copy_helper_block_
+000000010000f1a0 l     F __TEXT,__text	___destroy_helper_block_
+000000010000f200 l     F __TEXT,__text	___aspect_isSelectorAllowedAndTrack_block_invoke
+000000010000f2a0 l     F __TEXT,__text	_aspect_getSwizzledClassesDict
+000000010000f310 l     F __TEXT,__text	___aspect_getSwizzledClassesDict_block_invoke
+000000010000f360 l     F __TEXT,__text	_aspect_aliasForSelector
+000000010000f580 l     F __TEXT,__text	_aspect_hookClass
+000000010000fb60 l     F __TEXT,__text	_aspect_isMsgForwardIMP
+000000010000fba0 l     F __TEXT,__text	_aspect_getMsgForwardIMP
+000000010000fd00 l     F __TEXT,__text	_aspect_swizzleClassInPlace
+000000010000ff70 l     F __TEXT,__text	_aspect_swizzleForwardInvocation
+0000000100010180 l     F __TEXT,__text	_aspect_hookedGetClass
+00000001000105f0 l     F __TEXT,__text	__aspect_modifySwizzledClasses
+0000000100010700 l     F __TEXT,__text	___aspect_swizzleClassInPlace_block_invoke
+00000001000107b0 l     F __TEXT,__text	___copy_helper_block_.385
+00000001000107f0 l     F __TEXT,__text	___destroy_helper_block_.386
+0000000100010820 l     F __TEXT,__text	____aspect_modifySwizzledClasses_block_invoke
+0000000100010870 l     F __TEXT,__text	___ASPECTS_ARE_BEING_CALLED__
+0000000100012170 l     F __TEXT,__text	_aspect_getContainerForClass
+00000001000123c0 l     F __TEXT,__text	___aspect_hookedGetClass_block_invoke
+0000000100012420 l     F __TEXT,__text	___aspect_remove_block_invoke
+00000001000126f0 l     F __TEXT,__text	_aspect_cleanupHookedClassAndSelector
+0000000100013140 l     F __TEXT,__text	___copy_helper_block_.436
+00000001000131b0 l     F __TEXT,__text	___destroy_helper_block_.437
+00000001000131f0 l     F __TEXT,__text	_aspect_deregisterTrackedSelector
+0000000100013400 l     F __TEXT,__text	_aspect_destroyContainerForObject
+0000000100013610 l     F __TEXT,__text	_aspect_undoSwizzleClassInPlace
+0000000100013860 l     F __TEXT,__text	___aspect_undoSwizzleClassInPlace_block_invoke
+0000000100013910 l     F __TEXT,__text	_aspect_undoSwizzleForwardInvocation
+0000000100013b70 l     F __TEXT,__text	___copy_helper_block_.451
+0000000100013bb0 l     F __TEXT,__text	___destroy_helper_block_.452
+0000000100014218 l     O __TEXT,__gcc_except_tab	GCC_except_table3
+0000000100014264 l     O __TEXT,__gcc_except_tab	GCC_except_table12
+0000000100014290 l     O __TEXT,__gcc_except_tab	GCC_except_table9
+00000001000142d0 l     O __TEXT,__gcc_except_tab	GCC_except_table12
+00000001000142fc l     O __TEXT,__gcc_except_tab	GCC_except_table1
+0000000100014328 l     O __TEXT,__gcc_except_tab	GCC_except_table20
+0000000100014354 l     O __TEXT,__gcc_except_tab	GCC_except_table63
+0000000100014388 l     O __TEXT,__gcc_except_tab	GCC_except_table67
+000000010001a3a0 l     O __DATA,__const	___block_descriptor_tmp
+000000010001a3d0 l     O __DATA,__const	___block_descriptor_tmp
+000000010001a400 l     O __DATA,__const	___block_descriptor_tmp
+000000010001a420 l     O __DATA,__const	___block_literal_global
+000000010001a440 l     O __DATA,__const	___block_descriptor_tmp.13
+000000010001a460 l     O __DATA,__const	___block_literal_global.14
+000000010001a480 l     O __DATA,__const	___block_descriptor_tmp.23
+000000010001a4b0 l     O __DATA,__const	___block_descriptor_tmp
+000000010001a4d0 l     O __DATA,__const	___block_literal_global
+000000010001a4f0 l     O __DATA,__const	___block_descriptor_tmp.5
+000000010001a510 l     O __DATA,__const	___block_literal_global.6
+000000010001a530 l     O __DATA,__const	___block_descriptor_tmp.9
+000000010001a550 l     O __DATA,__const	___block_literal_global.10
+000000010001a570 l     O __DATA,__const	___block_descriptor_tmp.15
+000000010001a590 l     O __DATA,__const	___block_literal_global.16
+000000010001a5b0 l     O __DATA,__const	___block_descriptor_tmp.19
+000000010001a5d0 l     O __DATA,__const	___block_literal_global.20
+000000010001a5f0 l     O __DATA,__const	___block_descriptor_tmp.23
+000000010001a610 l     O __DATA,__const	___block_literal_global.24
+000000010001a630 l     O __DATA,__const	___block_descriptor_tmp.31
+000000010001a660 l     O __DATA,__const	___block_descriptor_tmp.40
+000000010001a690 l     O __DATA,__const	___block_descriptor_tmp.44
+000000010001a6b0 l     O __DATA,__const	___block_literal_global.45
+000000010001a6d0 l     O __DATA,__const	___block_descriptor_tmp.48
+000000010001a700 l     O __DATA,__const	___block_descriptor_tmp
+000000010001a720 l     O __DATA,__const	___block_literal_global
+000000010001a740 l     O __DATA,__const	___block_descriptor_tmp.13
+000000010001a760 l     O __DATA,__const	___block_literal_global.14
+000000010001a780 l     O __DATA,__const	___block_descriptor_tmp.19
+000000010001a7a0 l     O __DATA,__const	___block_literal_global.20
+000000010001a7c0 l     O __DATA,__const	___block_descriptor_tmp.23
+000000010001a7e0 l     O __DATA,__const	___block_literal_global.24
+000000010001a800 l     O __DATA,__const	___block_descriptor_tmp.27
+000000010001a820 l     O __DATA,__const	___block_literal_global.28
+000000010001a840 l     O __DATA,__const	___block_descriptor_tmp.31
+000000010001a860 l     O __DATA,__const	___block_literal_global.32
+000000010001a880 l     O __DATA,__const	___block_descriptor_tmp.35
+000000010001a8a0 l     O __DATA,__const	___block_literal_global.36
+000000010001a8c0 l     O __DATA,__const	___block_descriptor_tmp.44
+000000010001a8f0 l     O __DATA,__const	___block_descriptor_tmp.47
+000000010001a920 l     O __DATA,__const	___block_descriptor_tmp.56
+000000010001a950 l     O __DATA,__const	___block_descriptor_tmp.59
+000000010001a980 l     O __DATA,__const	___block_descriptor_tmp.61
+000000010001a9a0 l     O __DATA,__const	___block_literal_global.62
+000000010001a9c0 l     O __DATA,__const	___block_descriptor_tmp.66
+000000010001a9e0 l     O __DATA,__const	___block_literal_global.67
+000000010001aa00 l     O __DATA,__const	___block_descriptor_tmp.70
+000000010001aa20 l     O __DATA,__const	___block_literal_global.71
+000000010001aa40 l     O __DATA,__const	___block_descriptor_tmp.75
+000000010001aa60 l     O __DATA,__const	___block_literal_global.76
+000000010001aa80 l     O __DATA,__const	___block_descriptor_tmp.77
+000000010001aaa0 l     O __DATA,__const	___block_literal_global.78
+000000010001aac0 l     O __DATA,__const	___block_descriptor_tmp.79
+000000010001aae0 l     O __DATA,__const	___block_literal_global.80
+000000010001ab00 l     O __DATA,__const	___block_descriptor_tmp.81
+000000010001ab20 l     O __DATA,__const	___block_literal_global.82
+000000010001ab40 l     O __DATA,__const	___block_descriptor_tmp.83
+000000010001ab60 l     O __DATA,__const	___block_literal_global.84
+000000010001ab80 l     O __DATA,__const	___block_descriptor_tmp.85
+000000010001aba0 l     O __DATA,__const	___block_literal_global.86
+000000010001abc0 l     O __DATA,__const	___block_descriptor_tmp.87
+000000010001abe0 l     O __DATA,__const	___block_literal_global.88
+000000010001ac00 l     O __DATA,__const	___block_descriptor_tmp.96
+000000010001ac30 l     O __DATA,__const	___block_descriptor_tmp.99
+000000010001ac60 l     O __DATA,__const	___block_descriptor_tmp.108
+000000010001ac90 l     O __DATA,__const	___block_descriptor_tmp.111
+000000010001acc0 l     O __DATA,__const	___block_descriptor_tmp.120
+000000010001acf0 l     O __DATA,__const	___block_descriptor_tmp.123
+000000010001ad20 l     O __DATA,__const	___block_descriptor_tmp.131
+000000010001ad50 l     O __DATA,__const	___block_descriptor_tmp.134
+000000010001ad80 l     O __DATA,__const	___block_descriptor_tmp.143
+000000010001adb0 l     O __DATA,__const	___block_descriptor_tmp.146
+000000010001ade0 l     O __DATA,__const	___block_descriptor_tmp.159
+000000010001ae00 l     O __DATA,__const	___block_literal_global.160
+000000010001ae20 l     O __DATA,__const	___block_descriptor_tmp.165
+000000010001ae50 l     O __DATA,__const	___block_descriptor_tmp
+000000010001ae80 l     O __DATA,__const	___block_descriptor_tmp.91
+000000010001aeb0 l     O __DATA,__const	___block_descriptor_tmp
+000000010001aee0 l     O __DATA,__const	___block_descriptor_tmp.22
+000000010001af10 l     O __DATA,__const	___block_descriptor_tmp.32
+000000010001af40 l     O __DATA,__const	___block_descriptor_tmp.41
+000000010001af70 l     O __DATA,__const	___block_descriptor_tmp.50
+000000010001afa0 l     O __DATA,__const	___block_descriptor_tmp
+000000010001afd0 l     O __DATA,__const	___block_descriptor_tmp
+000000010001b000 l     O __DATA,__const	___block_descriptor_tmp
+000000010001b030 l     O __DATA,__const	___block_descriptor_tmp
+000000010001b068 l     O __DATA,__const	___block_descriptor_tmp
+000000010001b098 l     O __DATA,__const	___block_descriptor_tmp.320
+000000010001b0b8 l     O __DATA,__const	___block_literal_global
+000000010001b0d8 l     O __DATA,__const	___block_descriptor_tmp.365
+000000010001b0f8 l     O __DATA,__const	___block_literal_global.366
+000000010001b118 l     O __DATA,__const	___block_descriptor_tmp.389
+000000010001b148 l     O __DATA,__const	___block_descriptor_tmp.390
+000000010001b168 l     O __DATA,__const	___block_literal_global.391
+000000010001b188 l     O __DATA,__const	___block_descriptor_tmp.414
+000000010001b1a8 l     O __DATA,__const	___block_descriptor_tmp.438
+000000010001b1d8 l     O __DATA,__const	___block_descriptor_tmp.454
+0000000100021870 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_AttributeUsage._lock
+0000000100021878 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_CopyUsage._pCopyStr
+0000000100021880 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_CopyUsage._pStrongStr
+0000000100021888 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_CopyUsage._pCopyArray
+0000000100021890 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_CopyUsage._pStrongArray
+0000000100021898 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_CopyUsage._pCopyDict
+00000001000218a0 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_CopyUsage._pStrongDict
+00000001000218a8 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_TestObj._name
+00000001000218b0 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_ByteAlignmentTest._a
+00000001000218b8 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_ByteAlignmentTest._b
+00000001000218c0 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_ByteAlignmentTest._c
+00000001000218c8 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_ByteAlignmentTest._d
+00000001000218d0 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_ByteAlignmentTest._testString
+00000001000218d8 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_ByteAlignmentTest._testObject
+00000001000218e0 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_ViewController._dynamicFunctionTest
+00000001000218e8 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_ViewController._aTextFiled
+00000001000218f0 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_HCAssociatedObject._deallocBlock
+00000001000218f8 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_HCAssociatedObject._target
+0000000100021900 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_TestMapTable._weakCache
+0000000100021908 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_TestMapTable._objArray
+0000000100021910 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_AppDelegate._window
+0000000100021918 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_AspectTracker._trackedClass
+0000000100021920 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_AspectTracker._parentEntry
+0000000100021928 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_AspectTracker._selectorNames
+0000000100021930 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_AspectIdentifier._selector
+0000000100021938 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_AspectIdentifier._block
+0000000100021940 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_AspectIdentifier._blockSignature
+0000000100021948 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_AspectIdentifier._object
+0000000100021950 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_AspectIdentifier._options
+0000000100021958 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_AspectsContainer._beforeAspects
+0000000100021960 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_AspectsContainer._insteadAspects
+0000000100021968 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_AspectsContainer._afterAspects
+0000000100021970 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_AspectInfo._instance
+0000000100021978 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_AspectInfo._originalInvocation
+0000000100021980 l     O __DATA,__objc_ivar	_OBJC_IVAR_$_AspectInfo._arguments
+00000001000225a8 l     O __DATA,__bss	_sharedInstance.callCount
+00000001000225b0 l     O __DATA,__bss	_sharedInstance.onceToken
+00000001000225b8 l     O __DATA,__bss	_sharedInstance._instance
+00000001000225c0 l     O __DATA,__bss	_load.onceToken
+00000001000225c8 l     O __DATA,__bss	_load.onceToken.12
+00000001000225d0 l     O __DATA,__bss	_load.onceToken.18
+00000001000225d8 l     O __DATA,__bss	_kInjectExcuteBlockKey
+00000001000225e0 l     O __DATA,__bss	_initialize.onceToken
+00000001000225e8 l     O __DATA,__bss	_initialize.onceToken.16
+00000001000225f0 l     O __DATA,__bss	_initialize.onceToken.26
+00000001000225f8 l     O __DATA,__bss	_initialize.onceToken.34
+0000000100022600 l     O __DATA,__bss	_initialize.onceToken.43
+0000000100022608 l     O __DATA,__bss	_kHCAssociatedObjectKey
+0000000100022610 l     O __DATA,__bss	_load.onceToken
+0000000100022618 l     O __DATA,__bss	_load.onceToken
+0000000100022620 l     O __DATA,__bss	_HC_INPUTED_TYPE
+0000000100022621 l     O __DATA,__bss	_HC_INPUTED_LIMIT_LENGTH
+0000000100022622 l     O __DATA,__bss	_HC_INPUTED_MAX_VALUE
+0000000100022628 l     O __DATA,__bss	_aspect_performLocked.aspect_lock
+0000000100022630 l     O __DATA,__bss	_aspect_isSelectorAllowedAndTrack.disallowedSelectorList
+0000000100022638 l     O __DATA,__bss	_aspect_isSelectorAllowedAndTrack.pred
+0000000100022640 l     O __DATA,__bss	_aspect_getSwizzledClassesDict.swizzledClassesDict
+0000000100022648 l     O __DATA,__bss	_aspect_getSwizzledClassesDict.pred
+0000000100022650 l     O __DATA,__bss	__aspect_modifySwizzledClasses.swizzledClasses
+0000000100022658 l     O __DATA,__bss	__aspect_modifySwizzledClasses.pred
+000000010001b060 g     O __DATA,__const	_AspectErrorDomain
+00000001000221d0 g     O __DATA,__objc_data	_OBJC_CLASS_$_AppDelegate
+0000000100022298 g     O __DATA,__objc_data	_OBJC_CLASS_$_AspectIdentifier
+0000000100022338 g     O __DATA,__objc_data	_OBJC_CLASS_$_AspectInfo
+0000000100022248 g     O __DATA,__objc_data	_OBJC_CLASS_$_AspectTracker
+0000000100022310 g     O __DATA,__objc_data	_OBJC_CLASS_$_AspectsContainer
+0000000100021988 g     O __DATA,__objc_data	_OBJC_CLASS_$_AttributeUsage
+0000000100021cf8 g     O __DATA,__objc_data	_OBJC_CLASS_$_ByteAlignmentTest
+0000000100021bb8 g     O __DATA,__objc_data	_OBJC_CLASS_$_CopyUsage
+0000000100021d48 g     O __DATA,__objc_data	_OBJC_CLASS_$_DispatchBarrierTest
+0000000100021c80 g     O __DATA,__objc_data	_OBJC_CLASS_$_DispatchExamnationTest
+0000000100021e38 g     O __DATA,__objc_data	_OBJC_CLASS_$_DispatchGroupLeaveTest
+0000000100021aa0 g     O __DATA,__objc_data	_OBJC_CLASS_$_DispatchOnceTest
+0000000100021de8 g     O __DATA,__objc_data	_OBJC_CLASS_$_DynamicCallFunctionTest
+0000000100021fc8 g     O __DATA,__objc_data	_OBJC_CLASS_$_HCAssociatedObject
+0000000100021b40 g     O __DATA,__objc_data	_OBJC_CLASS_$_MethodSwizzleUtil
+0000000100022220 g     O __DATA,__objc_data	_OBJC_CLASS_$_PodsDummy_Aspects
+0000000100022400 g     O __DATA,__objc_data	_OBJC_CLASS_$_PodsDummy_Pods_RuntimeLearning
+0000000100021a50 g     O __DATA,__objc_data	_OBJC_CLASS_$_SubTestUnsafeSwizzle
+0000000100022130 g     O __DATA,__objc_data	_OBJC_CLASS_$_TestASubClassSwizzle
+0000000100022180 g     O __DATA,__objc_data	_OBJC_CLASS_$_TestBSubClassSwizzle
+0000000100022068 g     O __DATA,__objc_data	_OBJC_CLASS_$_TestCategoryOveride
+0000000100021af0 g     O __DATA,__objc_data	_OBJC_CLASS_$_TestCategorySwizzle
+0000000100021d98 g     O __DATA,__objc_data	_OBJC_CLASS_$_TestClassCluster
+0000000100021b68 g     O __DATA,__objc_data	_OBJC_CLASS_$_TestCode
+0000000100022018 g     O __DATA,__objc_data	_OBJC_CLASS_$_TestMapTable
+0000000100021be0 g     O __DATA,__objc_data	_OBJC_CLASS_$_TestObj
+00000001000223b0 g     O __DATA,__objc_data	_OBJC_CLASS_$_TestStaticLib
+00000001000220e0 g     O __DATA,__objc_data	_OBJC_CLASS_$_TestSubClassSwizzle
+0000000100021f00 g     O __DATA,__objc_data	_OBJC_CLASS_$_TestSwizzleInInitialize
+0000000100021f50 g     O __DATA,__objc_data	_OBJC_CLASS_$_TestSwizzleInInitializeA
+0000000100021fa0 g     O __DATA,__objc_data	_OBJC_CLASS_$_TestSwizzleInInitializeB
+0000000100021ca8 g     O __DATA,__objc_data	_OBJC_CLASS_$_TestTaggedPointer
+0000000100021a00 g     O __DATA,__objc_data	_OBJC_CLASS_$_TestUnsafeSwizzle
+0000000100021e88 g     O __DATA,__objc_data	_OBJC_CLASS_$_ViewController
+00000001000221a8 g     O __DATA,__objc_data	_OBJC_METACLASS_$_AppDelegate
+00000001000222c0 g     O __DATA,__objc_data	_OBJC_METACLASS_$_AspectIdentifier
+0000000100022360 g     O __DATA,__objc_data	_OBJC_METACLASS_$_AspectInfo
+0000000100022270 g     O __DATA,__objc_data	_OBJC_METACLASS_$_AspectTracker
+00000001000222e8 g     O __DATA,__objc_data	_OBJC_METACLASS_$_AspectsContainer
+00000001000219b0 g     O __DATA,__objc_data	_OBJC_METACLASS_$_AttributeUsage
+0000000100021d20 g     O __DATA,__objc_data	_OBJC_METACLASS_$_ByteAlignmentTest
+0000000100021c08 g     O __DATA,__objc_data	_OBJC_METACLASS_$_CopyUsage
+0000000100021d70 g     O __DATA,__objc_data	_OBJC_METACLASS_$_DispatchBarrierTest
+0000000100021c58 g     O __DATA,__objc_data	_OBJC_METACLASS_$_DispatchExamnationTest
+0000000100021e60 g     O __DATA,__objc_data	_OBJC_METACLASS_$_DispatchGroupLeaveTest
+0000000100021a78 g     O __DATA,__objc_data	_OBJC_METACLASS_$_DispatchOnceTest
+0000000100021e10 g     O __DATA,__objc_data	_OBJC_METACLASS_$_DynamicCallFunctionTest
+0000000100021ff0 g     O __DATA,__objc_data	_OBJC_METACLASS_$_HCAssociatedObject
+0000000100021b18 g     O __DATA,__objc_data	_OBJC_METACLASS_$_MethodSwizzleUtil
+00000001000221f8 g     O __DATA,__objc_data	_OBJC_METACLASS_$_PodsDummy_Aspects
+00000001000223d8 g     O __DATA,__objc_data	_OBJC_METACLASS_$_PodsDummy_Pods_RuntimeLearning
+0000000100021a28 g     O __DATA,__objc_data	_OBJC_METACLASS_$_SubTestUnsafeSwizzle
+0000000100022108 g     O __DATA,__objc_data	_OBJC_METACLASS_$_TestASubClassSwizzle
+0000000100022158 g     O __DATA,__objc_data	_OBJC_METACLASS_$_TestBSubClassSwizzle
+0000000100022090 g     O __DATA,__objc_data	_OBJC_METACLASS_$_TestCategoryOveride
+0000000100021ac8 g     O __DATA,__objc_data	_OBJC_METACLASS_$_TestCategorySwizzle
+0000000100021dc0 g     O __DATA,__objc_data	_OBJC_METACLASS_$_TestClassCluster
+0000000100021b90 g     O __DATA,__objc_data	_OBJC_METACLASS_$_TestCode
+0000000100022040 g     O __DATA,__objc_data	_OBJC_METACLASS_$_TestMapTable
+0000000100021c30 g     O __DATA,__objc_data	_OBJC_METACLASS_$_TestObj
+0000000100022388 g     O __DATA,__objc_data	_OBJC_METACLASS_$_TestStaticLib
+00000001000220b8 g     O __DATA,__objc_data	_OBJC_METACLASS_$_TestSubClassSwizzle
+0000000100021ed8 g     O __DATA,__objc_data	_OBJC_METACLASS_$_TestSwizzleInInitialize
+0000000100021f28 g     O __DATA,__objc_data	_OBJC_METACLASS_$_TestSwizzleInInitializeA
+0000000100021f78 g     O __DATA,__objc_data	_OBJC_METACLASS_$_TestSwizzleInInitializeB
+0000000100021cd0 g     O __DATA,__objc_data	_OBJC_METACLASS_$_TestTaggedPointer
+00000001000219d8 g     O __DATA,__objc_data	_OBJC_METACLASS_$_TestUnsafeSwizzle
+0000000100021eb0 g     O __DATA,__objc_data	_OBJC_METACLASS_$_ViewController
+0000000100000000 g     F __TEXT,__text	__mh_execute_header
+0000000100005c0c g     F __TEXT,__text	_dynamicCallAddFunction
+0000000100005b8a g     F __TEXT,__text	_dynamicCallPrintfFunction
+0000000100005df4 g     F __TEXT,__text	_functionF
+0000000100005e2a g     F __TEXT,__text	_functionG
+00000001000074fb g     F __TEXT,__text	_main
+0000000100013be0 g     F __TEXT,__text	_static_calculate_add
+0000000100007918 g     F __TEXT,__text	_testBenchmark
+000000010000762a g     F __TEXT,__text	_testLogicEqualNil
+0000000100007594 g     F __TEXT,__text	_testLogicNot
+00000001000076b9 g     F __TEXT,__text	_testVAList
+00000001000077e4 g     F __TEXT,__text	_testVAList1
+0000000100007538 g     F __TEXT,__text	_testWaitUsage
+0000000100002093 g     F __TEXT,__text	_unexcept
+0000000000000000         *UND*	_CFAbsoluteTimeGetCurrent
+0000000000000000         *UND*	_CFGetRetainCount
+0000000000000000         *UND*	_NSClassFromString
+0000000000000000         *UND*	_NSGetSizeAndAlignment
+0000000000000000         *UND*	_NSHomeDirectory
+0000000000000000         *UND*	_NSLocalizedDescriptionKey
+0000000000000000         *UND*	_NSLog
+0000000000000000         *UND*	_NSSelectorFromString
+0000000000000000         *UND*	_NSStringFromClass
+0000000000000000         *UND*	_NSStringFromSelector
+0000000000000000         *UND*	_OBJC_CLASS_$_NSArray
+0000000000000000         *UND*	_OBJC_CLASS_$_NSAssertionHandler
+0000000000000000         *UND*	_OBJC_CLASS_$_NSBundle
+0000000000000000         *UND*	_OBJC_CLASS_$_NSDate
+0000000000000000         *UND*	_OBJC_CLASS_$_NSDictionary
+0000000000000000         *UND*	_OBJC_CLASS_$_NSError
+0000000000000000         *UND*	_OBJC_CLASS_$_NSInvocation
+0000000000000000         *UND*	_OBJC_CLASS_$_NSLock
+0000000000000000         *UND*	_OBJC_CLASS_$_NSMapTable
+0000000000000000         *UND*	_OBJC_CLASS_$_NSMethodSignature
+0000000000000000         *UND*	_OBJC_CLASS_$_NSMutableArray
+0000000000000000         *UND*	_OBJC_CLASS_$_NSMutableDictionary
+0000000000000000         *UND*	_OBJC_CLASS_$_NSMutableSet
+0000000000000000         *UND*	_OBJC_CLASS_$_NSMutableString
+0000000000000000         *UND*	_OBJC_CLASS_$_NSNotificationCenter
+0000000000000000         *UND*	_OBJC_CLASS_$_NSNull
+0000000000000000         *UND*	_OBJC_CLASS_$_NSNumber
+0000000000000000         *UND*	_OBJC_CLASS_$_NSObject
+0000000000000000         *UND*	_OBJC_CLASS_$_NSPredicate
+0000000000000000         *UND*	_OBJC_CLASS_$_NSRunLoop
+0000000000000000         *UND*	_OBJC_CLASS_$_NSSet
+0000000000000000         *UND*	_OBJC_CLASS_$_NSString
+0000000000000000         *UND*	_OBJC_CLASS_$_NSThread
+0000000000000000         *UND*	_OBJC_CLASS_$_NSValue
+0000000000000000         *UND*	_OBJC_CLASS_$_UIColor
+0000000000000000         *UND*	_OBJC_CLASS_$_UIFont
+0000000000000000         *UND*	_OBJC_CLASS_$_UIResponder
+0000000000000000         *UND*	_OBJC_CLASS_$_UIScrollView
+0000000000000000         *UND*	_OBJC_CLASS_$_UITextField
+0000000000000000         *UND*	_OBJC_CLASS_$_UIViewController
+0000000000000000         *UND*	_OBJC_EHTYPE_$_NSException
+0000000000000000         *UND*	_OBJC_METACLASS_$_NSObject
+0000000000000000         *UND*	_OBJC_METACLASS_$_UIResponder
+0000000000000000         *UND*	_OBJC_METACLASS_$_UIViewController
+0000000000000000         *UND*	_OSSpinLockLock
+0000000000000000         *UND*	_OSSpinLockUnlock
+0000000000000000         *UND*	__Block_object_assign
+0000000000000000         *UND*	__Block_object_dispose
+0000000000000000         *UND*	__NSConcreteGlobalBlock
+0000000000000000         *UND*	__NSConcreteStackBlock
+0000000000000000         *UND*	__Unwind_Resume
+0000000000000000         *UND*	___CFConstantStringClassReference
+0000000000000000         *UND*	___NSArray0__
+0000000000000000         *UND*	___objc_personality_v0
+0000000000000000         *UND*	___stack_chk_fail
+0000000000000000         *UND*	___stack_chk_guard
+0000000000000000         *UND*	___stderrp
+0000000000000000         *UND*	__dispatch_main_q
+0000000000000000         *UND*	__dispatch_queue_attr_concurrent
+0000000000000000         *UND*	__objc_empty_cache
+0000000000000000         *UND*	__objc_msgForward
+0000000000000000         *UND*	__objc_msgForward_stret
+0000000000000000         *UND*	_calculate_add
+0000000000000000         *UND*	_ceil
+0000000000000000         *UND*	_class_addMethod
+0000000000000000         *UND*	_class_copyMethodList
+0000000000000000         *UND*	_class_getClassMethod
+0000000000000000         *UND*	_class_getInstanceMethod
+0000000000000000         *UND*	_class_getInstanceSize
+0000000000000000         *UND*	_class_getSuperclass
+0000000000000000         *UND*	_class_isMetaClass
+0000000000000000         *UND*	_class_replaceMethod
+0000000000000000         *UND*	_class_respondsToSelector
+0000000000000000         *UND*	_dispatch_after
+0000000000000000         *UND*	_dispatch_async
+0000000000000000         *UND*	_dispatch_barrier_async
+0000000000000000         *UND*	_dispatch_benchmark
+0000000000000000         *UND*	_dispatch_get_global_queue
+0000000000000000         *UND*	_dispatch_group_async
+0000000000000000         *UND*	_dispatch_group_create
+0000000000000000         *UND*	_dispatch_group_enter
+0000000000000000         *UND*	_dispatch_group_leave
+0000000000000000         *UND*	_dispatch_group_notify
+0000000000000000         *UND*	_dispatch_once
+0000000000000000         *UND*	_dispatch_queue_create
+0000000000000000         *UND*	_dispatch_semaphore_create
+0000000000000000         *UND*	_dispatch_semaphore_signal
+0000000000000000         *UND*	_dispatch_semaphore_wait
+0000000000000000         *UND*	_dispatch_sync
+0000000000000000         *UND*	_dispatch_time
+0000000000000000         *UND*	_dlclose
+0000000000000000         *UND*	_dlerror
+0000000000000000         *UND*	_dlopen
+0000000000000000         *UND*	_dlsym
+0000000000000000         *UND*	_exit
+0000000000000000         *UND*	_fork
+0000000000000000         *UND*	_fprintf
+0000000000000000         *UND*	_free
+0000000000000000         *UND*	_getpid
+0000000000000000         *UND*	_imp_implementationWithBlock
+0000000000000000         *UND*	_malloc_size
+0000000000000000         *UND*	_memset
+0000000000000000         *UND*	_method_exchangeImplementations
+0000000000000000         *UND*	_method_getDescription
+0000000000000000         *UND*	_method_getImplementation
+0000000000000000         *UND*	_method_getName
+0000000000000000         *UND*	_method_getTypeEncoding
+0000000000000000         *UND*	_objc_allocateClassPair
+0000000000000000         *UND*	_objc_autorelease
+0000000000000000         *UND*	_objc_autoreleasePoolPop
+0000000000000000         *UND*	_objc_autoreleasePoolPush
+0000000000000000         *UND*	_objc_autoreleaseReturnValue
+0000000000000000         *UND*	_objc_begin_catch
+0000000000000000         *UND*	_objc_copyWeak
+0000000000000000         *UND*	_objc_destroyWeak
+0000000000000000         *UND*	_objc_end_catch
+0000000000000000         *UND*	_objc_enumerationMutation
+0000000000000000         *UND*	_objc_getAssociatedObject
+0000000000000000         *UND*	_objc_getClass
+0000000000000000         *UND*	_objc_getMetaClass
+0000000000000000         *UND*	_objc_getProperty
+0000000000000000         *UND*	_objc_initWeak
+0000000000000000         *UND*	_objc_loadWeakRetained
+0000000000000000         *UND*	_objc_msgSend
+0000000000000000         *UND*	_objc_msgSendSuper2
+0000000000000000         *UND*	_objc_registerClassPair
+0000000000000000         *UND*	_objc_release
+0000000000000000         *UND*	_objc_retain
+0000000000000000         *UND*	_objc_retainAutorelease
+0000000000000000         *UND*	_objc_retainAutoreleaseReturnValue
+0000000000000000         *UND*	_objc_retainAutoreleasedReturnValue
+0000000000000000         *UND*	_objc_retainBlock
+0000000000000000         *UND*	_objc_setAssociatedObject
+0000000000000000         *UND*	_objc_setProperty_atomic_copy
+0000000000000000         *UND*	_objc_setProperty_nonatomic_copy
+0000000000000000         *UND*	_objc_storeStrong
+0000000000000000         *UND*	_objc_storeWeak
+0000000000000000         *UND*	_objc_sync_enter
+0000000000000000         *UND*	_objc_sync_exit
+0000000000000000         *UND*	_objc_terminate
+0000000000000000         *UND*	_object_getClass
+0000000000000000         *UND*	_object_setClass
+0000000000000000         *UND*	_printf
+0000000000000000         *UND*	_reallocf
+0000000000000000         *UND*	_sleep
+0000000000000000         *UND*	_strcmp
+0000000000000000         *UND*	_wait
+0000000000000000         *UND*	dyld_stub_binder
+Mach header
+      magic cputype cpusubtype  caps    filetype ncmds sizeofcmds      flags
+MH_MAGIC_64  X86_64        ALL  0x00     EXECUTE    22       3744   NOUNDEFS DYLDLINK TWOLEVEL PIE
+Load command 0
+      cmd LC_SEGMENT_64
+  cmdsize 72
+  segname __PAGEZERO
+   vmaddr 0x0000000000000000
+   vmsize 0x0000000100000000
+  fileoff 0
+ filesize 0
+  maxprot ---
+ initprot ---
+   nsects 0
+    flags (none)
+Load command 1
+      cmd LC_SEGMENT_64
+  cmdsize 952
+  segname __TEXT
+   vmaddr 0x0000000100000000
+   vmsize 0x000000000001a000
+  fileoff 0
+ filesize 106496
+  maxprot rwx
+ initprot r-x
+   nsects 11
+    flags (none)
+Section
+  sectname __text
+   segname __TEXT
+      addr 0x0000000100001bb0
+      size 0x0000000000012044
+    offset 7088
+     align 2^4 (16)
+    reloff 0
+    nreloc 0
+      type S_REGULAR
+attributes PURE_INSTRUCTIONS SOME_INSTRUCTIONS
+ reserved1 0
+ reserved2 0
+Section
+  sectname __stubs
+   segname __TEXT
+      addr 0x0000000100013bf4
+      size 0x0000000000000246
+    offset 80884
+     align 2^1 (2)
+    reloff 0
+    nreloc 0
+      type S_SYMBOL_STUBS
+attributes PURE_INSTRUCTIONS SOME_INSTRUCTIONS
+ reserved1 0 (index into indirect symbol table)
+ reserved2 6 (size of stubs)
+Section
+  sectname __stub_helper
+   segname __TEXT
+      addr 0x0000000100013e3c
+      size 0x00000000000003da
+    offset 81468
+     align 2^2 (4)
+    reloff 0
+    nreloc 0
+      type S_REGULAR
+attributes PURE_INSTRUCTIONS SOME_INSTRUCTIONS
+ reserved1 0
+ reserved2 0
+Section
+  sectname __gcc_except_tab
+   segname __TEXT
+      addr 0x0000000100014218
+      size 0x000000000000019c
+    offset 82456
+     align 2^2 (4)
+    reloff 0
+    nreloc 0
+      type S_REGULAR
+attributes (none)
+ reserved1 0
+ reserved2 0
+Section
+  sectname __cstring
+   segname __TEXT
+      addr 0x00000001000143b4
+      size 0x000000000000257c
+    offset 82868
+     align 2^0 (1)
+    reloff 0
+    nreloc 0
+      type S_CSTRING_LITERALS
+attributes (none)
+ reserved1 0
+ reserved2 0
+Section
+  sectname __objc_methname
+   segname __TEXT
+      addr 0x0000000100016930
+      size 0x0000000000002290
+    offset 92464
+     align 2^0 (1)
+    reloff 0
+    nreloc 0
+      type S_CSTRING_LITERALS
+attributes (none)
+ reserved1 0
+ reserved2 0
+Section
+  sectname __objc_classname
+   segname __TEXT
+      addr 0x0000000100018bc0
+      size 0x000000000000031b
+    offset 101312
+     align 2^0 (1)
+    reloff 0
+    nreloc 0
+      type S_CSTRING_LITERALS
+attributes (none)
+ reserved1 0
+ reserved2 0
+Section
+  sectname __objc_methtype
+   segname __TEXT
+      addr 0x0000000100018edb
+      size 0x0000000000000bd1
+    offset 102107
+     align 2^0 (1)
+    reloff 0
+    nreloc 0
+      type S_CSTRING_LITERALS
+attributes (none)
+ reserved1 0
+ reserved2 0
+Section
+  sectname __const
+   segname __TEXT
+      addr 0x0000000100019ab0
+      size 0x0000000000000050
+    offset 105136
+     align 2^4 (16)
+    reloff 0
+    nreloc 0
+      type S_REGULAR
+attributes (none)
+ reserved1 0
+ reserved2 0
+Section
+  sectname __entitlements
+   segname __TEXT
+      addr 0x0000000100019b00
+      size 0x0000000000000176
+    offset 105216
+     align 2^0 (1)
+    reloff 0
+    nreloc 0
+      type S_REGULAR
+attributes (none)
+ reserved1 0
+ reserved2 0
+Section
+  sectname __unwind_info
+   segname __TEXT
+      addr 0x0000000100019c78
+      size 0x000000000000037c
+    offset 105592
+     align 2^2 (4)
+    reloff 0
+    nreloc 0
+      type S_REGULAR
+attributes (none)
+ reserved1 0
+ reserved2 0
+Load command 2
+      cmd LC_SEGMENT_64
+  cmdsize 1752
+  segname __DATA
+   vmaddr 0x000000010001a000
+   vmsize 0x0000000000009000
+  fileoff 106496
+ filesize 36864
+  maxprot rwx
+ initprot rw-
+   nsects 21
+    flags (none)
+Section
+  sectname __nl_symbol_ptr
+   segname __DATA
+      addr 0x000000010001a000
+      size 0x0000000000000010
+    offset 106496
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+      type S_NON_LAZY_SYMBOL_POINTERS
+attributes (none)
+ reserved1 97 (index into indirect symbol table)
+ reserved2 0
+Section
+  sectname __got
+   segname __DATA
+      addr 0x000000010001a010
+      size 0x0000000000000070
+    offset 106512
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+      type S_NON_LAZY_SYMBOL_POINTERS
+attributes (none)
+ reserved1 99 (index into indirect symbol table)
+ reserved2 0
+Section
+  sectname __la_symbol_ptr
+   segname __DATA
+      addr 0x000000010001a080
+      size 0x0000000000000308
+    offset 106624
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+      type S_LAZY_SYMBOL_POINTERS
+attributes (none)
+ reserved1 113 (index into indirect symbol table)
+ reserved2 0
+Section
+  sectname __mod_init_func
+   segname __DATA
+      addr 0x000000010001a388
+      size 0x0000000000000010
+    offset 107400
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+      type S_MOD_INIT_FUNC_POINTERS
+attributes (none)
+ reserved1 0
+ reserved2 0
+Section
+  sectname __mod_term_func
+   segname __DATA
+      addr 0x000000010001a398
+      size 0x0000000000000008
+    offset 107416
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+      type S_MOD_TERM_FUNC_POINTERS
+attributes (none)
+ reserved1 0
+ reserved2 0
+Section
+  sectname __const
+   segname __DATA
+      addr 0x000000010001a3a0
+      size 0x0000000000000e68
+    offset 107424
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+      type S_REGULAR
+attributes (none)
+ reserved1 0
+ reserved2 0
+Section
+  sectname __cfstring
+   segname __DATA
+      addr 0x000000010001b208
+      size 0x0000000000001920
+    offset 111112
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+      type S_REGULAR
+attributes (none)
+ reserved1 0
+ reserved2 0
+Section
+  sectname __objc_classlist
+   segname __DATA
+      addr 0x000000010001cb28
+      size 0x0000000000000110
+    offset 117544
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+      type S_REGULAR
+attributes NO_DEAD_STRIP
+ reserved1 0
+ reserved2 0
+Section
+  sectname __objc_nlclslist
+   segname __DATA
+      addr 0x000000010001cc38
+      size 0x0000000000000008
+    offset 117816
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+      type S_REGULAR
+attributes NO_DEAD_STRIP
+ reserved1 0
+ reserved2 0
+Section
+  sectname __objc_catlist
+   segname __DATA
+      addr 0x000000010001cc40
+      size 0x0000000000000058
+    offset 117824
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+      type S_REGULAR
+attributes NO_DEAD_STRIP
+ reserved1 0
+ reserved2 0
+Section
+  sectname __objc_nlcatlist
+   segname __DATA
+      addr 0x000000010001cc98
+      size 0x0000000000000030
+    offset 117912
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+      type S_REGULAR
+attributes NO_DEAD_STRIP
+ reserved1 0
+ reserved2 0
+Section
+  sectname __objc_protolist
+   segname __DATA
+      addr 0x000000010001ccc8
+      size 0x0000000000000020
+    offset 117960
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+      type S_REGULAR
+attributes (none)
+ reserved1 0
+ reserved2 0
+Section
+  sectname __objc_imageinfo
+   segname __DATA
+      addr 0x000000010001cce8
+      size 0x0000000000000008
+    offset 117992
+     align 2^2 (4)
+    reloff 0
+    nreloc 0
+      type S_REGULAR
+attributes (none)
+ reserved1 0
+ reserved2 0
+Section
+  sectname __objc_const
+   segname __DATA
+      addr 0x000000010001ccf0
+      size 0x0000000000004170
+    offset 118000
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+      type S_REGULAR
+attributes (none)
+ reserved1 0
+ reserved2 0
+Section
+  sectname __objc_selrefs
+   segname __DATA
+      addr 0x0000000100020e60
+      size 0x0000000000000808
+    offset 134752
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+      type S_LITERAL_POINTERS
+attributes NO_DEAD_STRIP
+ reserved1 0
+ reserved2 0
+Section
+  sectname __objc_classrefs
+   segname __DATA
+      addr 0x0000000100021668
+      size 0x0000000000000178
+    offset 136808
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+      type S_REGULAR
+attributes NO_DEAD_STRIP
+ reserved1 0
+ reserved2 0
+Section
+  sectname __objc_superrefs
+   segname __DATA
+      addr 0x00000001000217e0
+      size 0x0000000000000090
+    offset 137184
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+      type S_REGULAR
+attributes NO_DEAD_STRIP
+ reserved1 0
+ reserved2 0
+Section
+  sectname __objc_ivar
+   segname __DATA
+      addr 0x0000000100021870
+      size 0x0000000000000118
+    offset 137328
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+      type S_REGULAR
+attributes (none)
+ reserved1 0
+ reserved2 0
+Section
+  sectname __objc_data
+   segname __DATA
+      addr 0x0000000100021988
+      size 0x0000000000000aa0
+    offset 137608
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+      type S_REGULAR
+attributes (none)
+ reserved1 0
+ reserved2 0
+Section
+  sectname __data
+   segname __DATA
+      addr 0x0000000100022428
+      size 0x0000000000000180
+    offset 140328
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+      type S_REGULAR
+attributes (none)
+ reserved1 0
+ reserved2 0
+Section
+  sectname __bss
+   segname __DATA
+      addr 0x00000001000225a8
+      size 0x00000000000000b8
+    offset 0
+     align 2^3 (8)
+    reloff 0
+    nreloc 0
+      type S_ZEROFILL
+attributes (none)
+ reserved1 0
+ reserved2 0
+Load command 3
+      cmd LC_SEGMENT_64
+  cmdsize 72
+  segname __LINKEDIT
+   vmaddr 0x0000000100023000
+   vmsize 0x0000000000021000
+  fileoff 143360
+ filesize 133536
+  maxprot rwx
+ initprot r--
+   nsects 0
+    flags (none)
+Load command 4
+            cmd LC_DYLD_INFO_ONLY
+        cmdsize 48
+     rebase_off 143360
+    rebase_size 1000
+       bind_off 144360
+      bind_size 1800
+  weak_bind_off 0
+ weak_bind_size 0
+  lazy_bind_off 146160
+ lazy_bind_size 2520
+     export_off 148680
+    export_size 1912
+Load command 5
+     cmd LC_SYMTAB
+ cmdsize 24
+  symoff 151152
+   nsyms 2845
+  stroff 197512
+ strsize 57288
+Load command 6
+            cmd LC_DYSYMTAB
+        cmdsize 80
+      ilocalsym 0
+      nlocalsym 2614
+     iextdefsym 2614
+     nextdefsym 83
+      iundefsym 2697
+      nundefsym 148
+         tocoff 0
+           ntoc 0
+      modtaboff 0
+        nmodtab 0
+   extrefsymoff 0
+    nextrefsyms 0
+ indirectsymoff 196672
+  nindirectsyms 210
+      extreloff 0
+        nextrel 0
+      locreloff 0
+        nlocrel 0
+Load command 7
+          cmd LC_LOAD_DYLINKER
+      cmdsize 32
+         name /usr/lib/dyld (offset 12)
+Load command 8
+     cmd LC_UUID
+ cmdsize 24
+    uuid 505431B5-6689-38ED-B280-E07E039689A7
+Load command 9
+      cmd LC_VERSION_MIN_IPHONEOS
+  cmdsize 16
+  version 9.0
+      sdk 12.1
+Load command 10
+      cmd LC_SOURCE_VERSION
+  cmdsize 16
+  version 0.0
+Load command 11
+       cmd LC_MAIN
+   cmdsize 24
+  entryoff 29947
+ stacksize 0
+Load command 12
+          cmd LC_LOAD_DYLIB
+      cmdsize 168
+         name /Users/hechao/Library/Developer/Xcode/DerivedData/RuntimeLearning-bkgcdltgpnhvhzeddppatdlfcqch/Build/Products/Debug-iphonesimulator/libadd.a (offset 24)
+   time stamp 2 Thu Jan  1 08:00:02 1970
+      current version 0.0.0
+compatibility version 0.0.0
+Load command 13
+          cmd LC_LOAD_DYLIB
+      cmdsize 88
+         name /System/Library/Frameworks/Foundation.framework/Foundation (offset 24)
+   time stamp 2 Thu Jan  1 08:00:02 1970
+      current version 1560.10.0
+compatibility version 300.0.0
+Load command 14
+          cmd LC_LOAD_DYLIB
+      cmdsize 56
+         name /usr/lib/libobjc.A.dylib (offset 24)
+   time stamp 2 Thu Jan  1 08:00:02 1970
+      current version 228.0.0
+compatibility version 1.0.0
+Load command 15
+          cmd LC_LOAD_DYLIB
+      cmdsize 56
+         name /usr/lib/libSystem.B.dylib (offset 24)
+   time stamp 2 Thu Jan  1 08:00:02 1970
+      current version 1252.200.5
+compatibility version 1.0.0
+Load command 16
+          cmd LC_LOAD_DYLIB
+      cmdsize 96
+         name /System/Library/Frameworks/CoreFoundation.framework/CoreFoundation (offset 24)
+   time stamp 2 Thu Jan  1 08:00:02 1970
+      current version 1560.10.0
+compatibility version 150.0.0
+Load command 17
+          cmd LC_LOAD_DYLIB
+      cmdsize 80
+         name /System/Library/Frameworks/UIKit.framework/UIKit (offset 24)
+   time stamp 2 Thu Jan  1 08:00:02 1970
+      current version 61000.0.0
+compatibility version 1.0.0
+Load command 18
+          cmd LC_RPATH
+      cmdsize 40
+         path @executable_path/Frameworks (offset 12)
+Load command 19
+      cmd LC_FUNCTION_STARTS
+  cmdsize 16
+  dataoff 150592
+ datasize 544
+Load command 20
+      cmd LC_DATA_IN_CODE
+  cmdsize 16
+  dataoff 151136
+ datasize 16
+Load command 21
+      cmd LC_CODE_SIGNATURE
+  cmdsize 16
+  dataoff 254800
+ datasize 22096

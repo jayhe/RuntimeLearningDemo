@@ -12,8 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TestMethodInvocation : NSObject
 
-@property (nonatomic, readonly, copy) NSString *address; //只会生成get方法+ivar不会生产set方法
-
 - (void)testKVCSetProperty;
 - (void)testSetProperty;
 - (void)testSetPropertyWhenChangeDeclareOrder;

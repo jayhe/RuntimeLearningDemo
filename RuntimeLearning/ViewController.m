@@ -44,6 +44,8 @@
 #import <fishhook/fishhook.h>
 #import "KeychainUsage.h"
 #import "TestFuctionalProgromming.h"
+#import "HCSwizzleInstance.h"
+#import "PropertyUsage.h"
 
 @class TableDataRow;
 
@@ -80,8 +82,9 @@ static NSString *kHeaderID  = @"HEADERID";
 void testWaitUsage(void);
 void testLogicNot(NSInteger times);
 void testLogicEqualNil(NSInteger times);
-void testVAList(NSString *format, NSString *format1, ...) NS_REQUIRES_NIL_TERMINATION;
-void testVAList1(NSString *format, NSString *format1, ...) NS_NO_TAIL_CALL;
+void testVAList(NSString *format, ...) NS_REQUIRES_NIL_TERMINATION;
+void testVAList1(NSString *format, ...) NS_NO_TAIL_CALL;
+int addNumbers(int a, ...) NS_NO_TAIL_CALL;
 void testBenchmark(void);
 
 @interface ViewController () <UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate>
@@ -117,6 +120,18 @@ void testBenchmark(void);
 //    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithCapacity:0];
 //    [dict setObject:@"2222" forKey:@"111"]; // dict的hash返回的就是count
 //    [dict setValue:nil forKey:@"111"]; // 如果value是nil则内部调用remove CoreFoundation`-[__NSDictionaryM removeObjectForKey:]:
+    
+    ViewController *vc = [ViewController new];
+    object_setClass(vc, [UIViewController class]);
+    Class cls = [vc class];
+    NSLog(@"cls = %@", cls);
+    Class cls1 = object_getClass(vc);
+    NSLog(@"cls1 = %@", cls1);
+    if (cls == cls1) {
+        NSLog(@"is Equal");
+    } else {
+        NSLog(@"not Equal");
+    }
 }
 
 void functionF() {
@@ -257,6 +272,9 @@ int functionG(int x) {
         TableDataRow *row12 = [TableDataRow new];
         row12.title = @"动态调用使用";
         row12.action = @selector(testDynamicCall);
+        TableDataRow *row14 = [TableDataRow new];
+        row14.title = @"修改类的isa";
+        row14.action = @selector(changeInstanceClass);
         section1.items = @[
             row0,
             row1,
@@ -271,7 +289,8 @@ int functionG(int x) {
             row9,
             row10,
             row11,
-            row12].mutableCopy;
+            row12,
+            row14].mutableCopy;
     }
     TableDataSection *section2 = [TableDataSection new];
     section2.title = @"优化部分";
@@ -344,6 +363,7 @@ int functionG(int x) {
     for (NSInteger i = 0; i < 10; i ++) {
         [array addObject:[TestObj new]];
     }
+//    https://www.jianshu.com/p/66f8410c6bbc
     // 数组的枚举函数，遍历的时候在非尾部插入元素会异常。
     [array enumerateObjectsUsingBlock:^(TestObj *obj, NSUInteger idx, BOOL * _Nonnull stop) {
             // case1:遍历的时候修改元素【不会有问题】
@@ -407,8 +427,9 @@ int functionG(int x) {
 }
 
 - (void)testVAListUsage {
-    testVAList(@"%@, %@", @"0", @"1", @"11", nil);
-    // testVAList1(@"%@, %@", @"0", @"1", @"11");
+    testVAList(@"%@, %@, %@", @"0", @"1", @"11", nil);
+    testVAList1(@"%@, %@, %@", @"0", @"1", @"11");
+    addNumbers(10, 11, 12, 10, 13, -11, 100, 111, 222, 333, 444);
 }
 
 - (void)testStructUsage {
@@ -597,6 +618,16 @@ int functionG(int x) {
     // 0x109812522 <+39>: callq  0x10981ebe0               ; static_calculate_add at TestStaticLib.m:13
 }
 
+- (void)changeInstanceClass {
+    UIView *vc = [UIView new];
+    HCSwizzleHookInstance(vc);
+    NSLog(@"hook:\nself.class = %@ object_getClass(self) = %@", vc.class, object_getClass(vc));
+    //HCObserveValueForKey(vc, @"backgroundColor");
+    vc.backgroundColor = [UIColor redColor];
+    HCSwizzleUnhookInstance(vc);
+    NSLog(@"unhook:\n self.class = %@ object_getClass(self) = %@", vc.class, object_getClass(vc));
+}
+
 #pragma mark - 多线程
 
 - (void)testDispatchOnceUsage {
@@ -731,26 +762,48 @@ void testLogicEqualNil(NSInteger times) {
      */
 }
 
-void testVAList(NSString *format, NSString *format1, ...) {
+typedef struct my_va_list {
+    int gp_offset;
+    int fp_offset;
+    void *overflow_arg_area;
+    void *reg_save_area;
+} *my_va_list_layout;
+
+void testVAList(NSString *format, ...) {
     va_list va_list;
-    va_start(va_list, format1);
-    NSString *param = format1;
-    while (param != nil) {
-        NSLog(@"&param = %p\n and param = %@", param, param);
-        param = va_arg(va_list, id);
-    }
+    va_start(va_list, format);
+//    NSString *param = format;
+//    while (param != nil) {
+//        NSLog(@"&param = %p\n and param = %@", param, param);
+//        param = va_arg(va_list, id);
+//    }
+    NSString *text = [[NSString alloc] initWithFormat:format arguments:va_list];
     va_end(va_list);
+    NSLog(@"%@", text);
 }
 
-void testVAList1(NSString *format, NSString *format1, ...) {
+int addNumbers(int a, ...) {
     va_list va_list;
-    va_start(va_list, format1);
-    NSString *param = format1;
-    while (param != nil) {
-        NSLog(@"&param = %p\n and param = %@", param, param);
-        param = va_arg(va_list, id);
-    }
+    int result = a;
+    int param;
+    my_va_list_layout va_layout = NULL;
+    va_start(va_list, a);
     va_end(va_list);
+    return result;
+}
+
+void testVAList1(NSString *format, ...) {
+    va_list va_list;
+//    NSString *param;
+    if (format) {
+        va_start(va_list, format);
+//        while ((param = va_arg(va_list, NSString *))) {
+//            NSLog(@"param = %@", param);
+//        }
+        NSString *text = [[NSString alloc] initWithFormat:format arguments:va_list];
+        va_end(va_list);
+        NSLog(@"testVAList1: %@", text);
+    }
 }
 
 
