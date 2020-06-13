@@ -100,9 +100,9 @@ RuntimeLearning`-[ViewController viewDidLoad]:
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     // Do any additional setup after loading the view.
-    id cls = [AddressInfo class];
+    id cls = [AddressInfo1 class];
     NSLog(@"&cls = %p", &cls);
-    id cls1 = [AddressInfo class];
+    id cls1 = [AddressInfo1 class];
     NSLog(@"&cls1 = %p", &cls1);
     void *obj = &cls;
     NSLog(@"&obj = %p", &obj);
@@ -159,6 +159,14 @@ RuntimeLearning`-[ViewController viewDidLoad]:
     // Thread 1: EXC_BAD_ACCESS (code=EXC_I386_GPFLT)
     NSLog(@"self.addressDesc = %@", self.addressDesc);
     // 2020-04-20 11:14:58.234131+0800 RuntimeLearning[11587:3275641] self.addressDesc = <ViewController: 0x7fdb8bc0f5c0>
+}
+
+@end
+
+@implementation AddressInfo1
+
+- (void)logDescription {
+    NSLog(@"self.name = %@", self.addressName);
 }
 
 @end

@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 #import "PropertyUsage.h"
+#import "TestFilterUsage.h"
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
@@ -19,6 +20,7 @@ int main(int argc, char * argv[]) {
 //        NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
         [[PropertyUsage new] testPropertyUsage];
         [[SubPropertyUsage new] testSubClassPropertyUsage];
+        [[TestFilterUsage new] logAllFilterNames];
         /*
         NSObject *testObj = [NSObject new];
         __weak typeof (testObj) weak1 = testObj;

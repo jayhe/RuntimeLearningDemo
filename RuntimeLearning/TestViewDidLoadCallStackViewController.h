@@ -25,4 +25,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
+@interface AddressInfo1 : NSObject
+// isa 8字节
+@property (nonatomic, copy) NSString *addressName; // 8字节
+@property (nonatomic, assign) int countryCode; // 4字节
+@property (nonatomic, assign) int cityCode; // 4字节
+//@property (nonatomic, assign) int provinceCode; // 4字节
+/*
+ case 1:
+ [  isa                  ]
+ [countryCode   cityCode ]
+ [addressName            ]
+ */
+
+- (void)logDescription;
+
+@end
+
 NS_ASSUME_NONNULL_END

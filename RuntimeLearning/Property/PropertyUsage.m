@@ -14,6 +14,7 @@
 @property (nonatomic, copy) NSString *address;
 @property (nonatomic, setter=_hcSetName:, getter=_hcGetName, copy) NSString *name;
 @property (nonatomic, copy) void(^testBlockProperty)(void);
+@property (nonatomic, copy) NSString *firstName;
 
 @end
 
@@ -132,6 +133,43 @@
         NSLog(@"outter self.subTest = %@", self.subTest);
     });
     self.testBlockProperty();
+    
+    
+    [self testMuiThreadSetProperty];
+}
+
+- (void)testMuiThreadSetProperty {
+#define TagPointer 1
+#if !TagPointer
+    /*
+     notnatimic + strong or copy 偶现闪退
+     atomic则保证setter的操作是原子性的安全的，所以不会闪退，但是影响性能
+     (lldb) bt
+     * thread #2, queue = 'com.apple.root.default-qos', stop reason = EXC_BAD_ACCESS (code=1, address=0x4187c5cd0ba0)
+         frame #0: 0x00007fff5141100b libobjc.A.dylib`objc_release + 11
+         frame #1: 0x000000010302da77 RuntimeLearning`-[PropertyUsage setFirstName:](self=0x0000600000291c70, _cmd="setFirstName:", firstName=@"abcdefjhjk") at PropertyUsage.m:0
+       * frame #2: 0x000000010302d380 RuntimeLearning`__41-[PropertyUsage testMuiThreadSetProperty]_block_invoke(.block_descriptor=0x0000600002fbc900) at PropertyUsage.m:144:18
+         frame #3: 0x0000000103a63dd4 libdispatch.dylib`_dispatch_call_block_and_release + 12
+         frame #4: 0x0000000103a64d48 libdispatch.dylib`_dispatch_client_callout + 8
+         frame #5: 0x0000000103a671ef libdispatch.dylib`_dispatch_queue_override_invoke + 1022
+         frame #6: 0x0000000103a7628c libdispatch.dylib`_dispatch_root_queue_drain + 351
+         frame #7: 0x0000000103a76b96 libdispatch.dylib`_dispatch_worker_thread2 + 132
+         frame #8: 0x00007fff524636b6 libsystem_pthread.dylib`_pthread_wqthread + 220
+         frame #9: 0x00007fff52462827 libsystem_pthread.dylib`start_wqthread + 15
+     (lldb)
+     */
+    for (NSInteger i = 0; i < 1000; i++) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            self.firstName = [NSString stringWithFormat:@"%@", @"abcdefjhjk"];
+        });
+    }
+#else
+    for (NSInteger i = 0; i < 1000; i++) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            self.firstName = [NSString stringWithFormat:@"%@", @"abc"];
+        });
+    }
+#endif
 }
 
 - (void)dealloc {

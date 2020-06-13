@@ -54,6 +54,8 @@
 		10D531012227B5B7007AE594 /* TestUnsafeSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D530FB2227B5B7007AE594 /* TestUnsafeSwizzle.m */; };
 		10D531082227CC86007AE594 /* NSObject+HCWillDealloc.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D531072227CC86007AE594 /* NSObject+HCWillDealloc.m */; };
 		10E383A924558132004ADBB5 /* TestViewDidLoadCallStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E383A824558132004ADBB5 /* TestViewDidLoadCallStackViewController.m */; };
+		10E6545024939EEE0022156D /* TestFilterUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E6544F24939EEE0022156D /* TestFilterUsage.m */; };
+		10E6545224939F4E0022156D /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E6545124939F4E0022156D /* CoreImage.framework */; };
 		10E6B1402462863E00A37097 /* KeychainUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E6B13F2462863E00A37097 /* KeychainUsage.m */; };
 		10F2DB622397AEEA00BA107A /* TestClassCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F2DB612397AEEA00BA107A /* TestClassCluster.m */; };
 		D7335419B0BF156CDF1C5B8E /* libPods-RuntimeLearning.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE1FAC32D91B262A68A7687 /* libPods-RuntimeLearning.a */; };
@@ -200,6 +202,9 @@
 		10D531072227CC86007AE594 /* NSObject+HCWillDealloc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HCWillDealloc.m"; sourceTree = "<group>"; };
 		10E383A724558132004ADBB5 /* TestViewDidLoadCallStackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewDidLoadCallStackViewController.h; sourceTree = "<group>"; };
 		10E383A824558132004ADBB5 /* TestViewDidLoadCallStackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewDidLoadCallStackViewController.m; sourceTree = "<group>"; };
+		10E6544E24939EEE0022156D /* TestFilterUsage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestFilterUsage.h; sourceTree = "<group>"; };
+		10E6544F24939EEE0022156D /* TestFilterUsage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestFilterUsage.m; sourceTree = "<group>"; };
+		10E6545124939F4E0022156D /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		10E6B13E2462863E00A37097 /* KeychainUsage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeychainUsage.h; sourceTree = "<group>"; };
 		10E6B13F2462863E00A37097 /* KeychainUsage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeychainUsage.m; sourceTree = "<group>"; };
 		10E6B141246296BF00A37097 /* RuntimeLearning.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RuntimeLearning.entitlements; sourceTree = "<group>"; };
@@ -222,6 +227,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10E6545224939F4E0022156D /* CoreImage.framework in Frameworks */,
 				1086B37A23B493550002F990 /* libTestStaticLib.a in Frameworks */,
 				1086B36A23B491DC0002F990 /* libadd.a in Frameworks */,
 				D7335419B0BF156CDF1C5B8E /* libPods-RuntimeLearning.a in Frameworks */,
@@ -308,6 +314,7 @@
 			isa = PBXGroup;
 			children = (
 				10E6B141246296BF00A37097 /* RuntimeLearning.entitlements */,
+				10E6544D24939ED40022156D /* Filters */,
 				10128728221D3B7200ED6CDE /* Utility */,
 				10113DDE22CC8F5600132833 /* Copy */,
 				1001DA08222E51E700E5EBEF /* Category */,
@@ -527,6 +534,15 @@
 			path = Association;
 			sourceTree = "<group>";
 		};
+		10E6544D24939ED40022156D /* Filters */ = {
+			isa = PBXGroup;
+			children = (
+				10E6544E24939EEE0022156D /* TestFilterUsage.h */,
+				10E6544F24939EEE0022156D /* TestFilterUsage.m */,
+			);
+			path = Filters;
+			sourceTree = "<group>";
+		};
 		10E6B13D2462861F00A37097 /* Keychain */ = {
 			isa = PBXGroup;
 			children = (
@@ -563,6 +579,7 @@
 		CFF0684E9602261EE5E7CF98 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				10E6545124939F4E0022156D /* CoreImage.framework */,
 				3FE1FAC32D91B262A68A7687 /* libPods-RuntimeLearning.a */,
 				4A7FAD87682FD1B94903588E /* libPods-RuntimeLearningTests.a */,
 			);
@@ -814,6 +831,7 @@
 				1025D0EE225DAED1008E4CC3 /* UIViewController+Test.m in Sources */,
 				1072564423B30DBD00BC3A00 /* TestMapTable.m in Sources */,
 				10271A322452BD3E00B37275 /* TestSwift.swift in Sources */,
+				10E6545024939EEE0022156D /* TestFilterUsage.m in Sources */,
 				1076819A241B3B0700D486A9 /* TestCategoryOveride+TestOveride.m in Sources */,
 				1001DA0B222E521700E5EBEF /* TestCategoryOveride.m in Sources */,
 				10128714221D3B0900ED6CDE /* main.m in Sources */,
@@ -1075,13 +1093,13 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				ORDER_FILE = "${SRCROOT}/RuntimeLearning.order";
-				OTHER_CFLAGS = "-fsanitize-coverage=func,trace-pc-guard";
+				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-l\"Aspects\"",
 				);
-				OTHER_SWIFT_FLAGS = "-sanitize-coverage=func -sanitize=undefined";
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = hc.RuntimeLearning;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "RuntimeLearning/RuntimeLearning-Bridging-Header.h";
@@ -1180,7 +1198,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2ZY2L7GYS;
-				OTHER_CFLAGS = "-fsanitize-coverage=func,trace-pc-guard";
+				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
