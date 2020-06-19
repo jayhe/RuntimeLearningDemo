@@ -30,6 +30,9 @@
 		102E8648230A416900614371 /* TestTaggedPointer.m in Sources */ = {isa = PBXBuildFile; fileRef = 102E8647230A416900614371 /* TestTaggedPointer.m */; };
 		104BF8BD22771E9D000C464E /* DynamicCallFunctionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 104BF8BC22771E9D000C464E /* DynamicCallFunctionTest.m */; };
 		104BF8D922772F74000C464E /* calculate.c in Sources */ = {isa = PBXBuildFile; fileRef = 104BF8C622772333000C464E /* calculate.c */; };
+		104D73472498CCB600055968 /* HookMethodInInitialize.m in Sources */ = {isa = PBXBuildFile; fileRef = 104D73462498CCB600055968 /* HookMethodInInitialize.m */; };
+		104D734A2498DD7800055968 /* NSObject+Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 104D73492498DD7800055968 /* NSObject+Utility.m */; };
+		104D7354249A596B00055968 /* TestCategorySwizzle+LoadOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 104D7352249A58A500055968 /* TestCategorySwizzle+LoadOrder.m */; };
 		10518D81241F79A600AE5265 /* TestCategoryOveride+TestOverideOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 10518D80241F79A600AE5265 /* TestCategoryOveride+TestOverideOne.m */; };
 		1059F82A2488DFD7005673C8 /* PropertyUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1059F8292488DFD7005673C8 /* PropertyUsage.m */; };
 		1059F82D2488E225005673C8 /* NSObject+HCLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 1059F82C2488E225005673C8 /* NSObject+HCLog.m */; };
@@ -156,6 +159,12 @@
 		104BF8C522772333000C464E /* calculate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = calculate.h; sourceTree = "<group>"; };
 		104BF8C622772333000C464E /* calculate.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = calculate.c; sourceTree = "<group>"; };
 		104BF8D022772F55000C464E /* libadd.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libadd.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		104D73452498CCB600055968 /* HookMethodInInitialize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HookMethodInInitialize.h; sourceTree = "<group>"; };
+		104D73462498CCB600055968 /* HookMethodInInitialize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HookMethodInInitialize.m; sourceTree = "<group>"; };
+		104D73482498DD7800055968 /* NSObject+Utility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Utility.h"; sourceTree = "<group>"; };
+		104D73492498DD7800055968 /* NSObject+Utility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Utility.m"; sourceTree = "<group>"; };
+		104D7351249A58A500055968 /* TestCategorySwizzle+LoadOrder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestCategorySwizzle+LoadOrder.h"; sourceTree = "<group>"; };
+		104D7352249A58A500055968 /* TestCategorySwizzle+LoadOrder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TestCategorySwizzle+LoadOrder.m"; sourceTree = "<group>"; };
 		10518D7F241F79A600AE5265 /* TestCategoryOveride+TestOverideOne.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestCategoryOveride+TestOverideOne.h"; sourceTree = "<group>"; };
 		10518D80241F79A600AE5265 /* TestCategoryOveride+TestOverideOne.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TestCategoryOveride+TestOverideOne.m"; sourceTree = "<group>"; };
 		1059F8282488DFD7005673C8 /* PropertyUsage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PropertyUsage.h; sourceTree = "<group>"; };
@@ -314,6 +323,7 @@
 			isa = PBXGroup;
 			children = (
 				10E6B141246296BF00A37097 /* RuntimeLearning.entitlements */,
+				104D73442498CC4400055968 /* Load&Initialize */,
 				10E6544D24939ED40022156D /* Filters */,
 				10128728221D3B7200ED6CDE /* Utility */,
 				10113DDE22CC8F5600132833 /* Copy */,
@@ -427,6 +437,17 @@
 			path = Dynamic;
 			sourceTree = "<group>";
 		};
+		104D73442498CC4400055968 /* Load&Initialize */ = {
+			isa = PBXGroup;
+			children = (
+				104D73452498CCB600055968 /* HookMethodInInitialize.h */,
+				104D73462498CCB600055968 /* HookMethodInInitialize.m */,
+				104D73482498DD7800055968 /* NSObject+Utility.h */,
+				104D73492498DD7800055968 /* NSObject+Utility.m */,
+			);
+			path = "Load&Initialize";
+			sourceTree = "<group>";
+		};
 		1059F8272488DFAF005673C8 /* Property */ = {
 			isa = PBXGroup;
 			children = (
@@ -510,6 +531,8 @@
 			children = (
 				10D530FC2227B5B7007AE594 /* TestCategorySwizzle.h */,
 				10D530F92227B5B7007AE594 /* TestCategorySwizzle.m */,
+				104D7351249A58A500055968 /* TestCategorySwizzle+LoadOrder.h */,
+				104D7352249A58A500055968 /* TestCategorySwizzle+LoadOrder.m */,
 				10D530FD2227B5B7007AE594 /* TestSubClassSwizzle.h */,
 				10D530FA2227B5B7007AE594 /* TestSubClassSwizzle.m */,
 				10D530FE2227B5B7007AE594 /* TestUnsafeSwizzle.h */,
@@ -808,7 +831,10 @@
 				10C3235922781DCF0091B0ED /* NSObject+Injection.m in Sources */,
 				1059F82D2488E225005673C8 /* NSObject+HCLog.m in Sources */,
 				10518D81241F79A600AE5265 /* TestCategoryOveride+TestOverideOne.m in Sources */,
+				104D7354249A596B00055968 /* TestCategorySwizzle+LoadOrder.m in Sources */,
 				102CDD42246656CD002150BE /* TestFuctionalProgromming.m in Sources */,
+				104D73472498CCB600055968 /* HookMethodInInitialize.m in Sources */,
+				104D734A2498DD7800055968 /* NSObject+Utility.m in Sources */,
 				1086B37E23B4AE910002F990 /* FishhookUsage.m in Sources */,
 				10E383A924558132004ADBB5 /* TestViewDidLoadCallStackViewController.m in Sources */,
 				1026DD112333173D00738E85 /* TestCode.mm in Sources */,

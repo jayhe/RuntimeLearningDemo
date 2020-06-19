@@ -24,6 +24,12 @@
 @synthesize name = _hcTestName;
 @synthesize addressFormate = _addressFormate;
 
++ (void)initialize {
+    if (self == [PropertyUsage self]) { // 这个玩意能防止子类没有实现调用父类的，why
+        NSLog(@"initialize test");
+    }
+}
+
 - (void)testPropertyUsage {
     [self hc_logMethodListDescription];
     [self hc_logIvarListDescription];
@@ -123,15 +129,20 @@
     self.addressFormate = @"xxx";
     //self.categoryTest;
     self.testBlockProperty = ^(void) {
+        NSLog(@"11111");
         //NSLog(@"%@", self.subTest);
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             NSLog(@"inner self.subTest = %@", self.subTest);
         });
+        __weak typeof(self) weakSelf = self;
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            NSLog(@"22222 %@", weakSelf);
+        });
     };
     
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        NSLog(@"outter self.subTest = %@", self.subTest);
-    });
+//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+//        NSLog(@"outter self.subTest = %@", self.subTest);
+//    });
     self.testBlockProperty();
     
     

@@ -13,6 +13,10 @@
 
 @implementation TestCategorySwizzle
 
++ (void)load {
+    
+}
+
 - (void)testCategorySwizzle {
     NSLog(@"%s", __FUNCTION__);
 }

@@ -46,6 +46,7 @@
 #import "TestFuctionalProgromming.h"
 #import "HCSwizzleInstance.h"
 #import "PropertyUsage.h"
+#import "HookMethodInInitialize.h"
 
 @class TableDataRow;
 
@@ -301,9 +302,13 @@ int functionG(int x) {
         TableDataRow *row1 = [TableDataRow new];
         row1.title = @"Clang插桩测试";
         row1.action = @selector(testClangTraceUsage);
+        TableDataRow *row2 = [TableDataRow new];
+        row2.title = @"将load中的hook迁移到initialize中hook";
+        row2.action = @selector(testHookInInitialize);
         section2.items = @[
-                   row0,
-                   row1].mutableCopy;
+            row0,
+            row1,
+            row2].mutableCopy;
     }
     
     TableDataSection *section3 = [TableDataSection new];
@@ -595,6 +600,10 @@ int functionG(int x) {
     [TestSwift testSwiftMethod];
     
     [HCClangTrace generateOrderFile];
+}
+
+- (void)testHookInInitialize {
+   [[SubHookMethodInInitialize new] methodToBeHooked];
 }
 
 - (void)testTaggedPointerUsage {
