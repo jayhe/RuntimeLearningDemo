@@ -8,6 +8,7 @@
 
 #import "NSObject+Utility.h"
 #import <objc/runtime.h>
+
 /*
  + (Class)class {
      return self;
@@ -23,10 +24,6 @@
      else return Nil;
  }
  */
-
-
-
-
 
 @implementation NSObject (Utility)
 
@@ -86,6 +83,7 @@ void callClassMethods(Class cls, SEL callSel, IMP originalImp) {
         free(initailize_classes);
         initailize_classes = nil;
     }
+    asm("");
 }
 
 @end

@@ -20,7 +20,8 @@ typedef void (*initalize_imp)(id, SEL) ;
 @interface NSObject (Utility)
 
 struct initailize_class * _Nullable gatherClassMethodImps(Class gatherCls, SEL gatherSel, unsigned int *count);
-void callClassMethods(Class cls, SEL callSel, IMP originalImp);
+// asm可以用到重命名符号:那是不是可以做一些关键函数的符号混淆
+void callClassMethods(Class cls, SEL callSel, IMP originalImp) asm("HC_Call_Class_method");
 
 @end
 

@@ -106,19 +106,18 @@ struct __AtAutoreleasePool {
 };
 
 #define __OFFSETOFIVAR__(TYPE, MEMBER) ((long long) &((TYPE *)0)->MEMBER)
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_9c99da_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"initialize test",15};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_9c99da_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"HC",2};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_9c99da_mi_2 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"_hcTestName",11};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_9c99da_mi_3 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"1",1};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_9c99da_mi_4 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"xxx",3};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_9c99da_mi_5 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"11111",5};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_9c99da_mi_6 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"inner self.subTest = %@",23};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_9c99da_mi_7 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"22222 %@",8};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_9c99da_mi_8 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%@",2};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_9c99da_mi_9 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"abc",3};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_9c99da_mi_10 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"[%@ %s]",7};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_9c99da_mi_11 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"subclass",8};
-static __NSConstantStringImpl __NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_9c99da_mi_12 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%@",2};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_76c365_mi_0 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"initialize test",15};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_76c365_mi_1 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"HC",2};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_76c365_mi_2 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"_hcTestName",11};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_76c365_mi_3 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"1",1};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_76c365_mi_4 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"xxx",3};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_76c365_mi_5 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"excute block",12};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_76c365_mi_6 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"inner self.subTest = %@",23};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_76c365_mi_7 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%@",2};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_76c365_mi_8 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"abc",3};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_76c365_mi_9 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"[%@ %s]",7};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_76c365_mi_10 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"subclass",8};
+static __NSConstantStringImpl __NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_76c365_mi_11 __attribute__ ((section ("__DATA, __cfstring"))) = {__CFConstantStringClassReference,0x000007c8,"%@",2};
 
 
 
@@ -34473,7 +34472,7 @@ static void _I_PropertyUsage_setAddressFormate_(PropertyUsage * self, SEL _cmd, 
 
 static void _C_PropertyUsage_initialize(Class self, SEL _cmd) {
     if (self == ((id (*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("PropertyUsage"), sel_registerName("self"))) {
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_9c99da_mi_0);
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_76c365_mi_0);
     }
 }
 
@@ -34481,8 +34480,8 @@ static void _C_PropertyUsage_initialize(Class self, SEL _cmd) {
 struct __PropertyUsage__testPropertyUsage_block_impl_0 {
   struct __block_impl impl;
   struct __PropertyUsage__testPropertyUsage_block_desc_0* Desc;
-  PropertyUsage *const __strong self;
-  __PropertyUsage__testPropertyUsage_block_impl_0(void *fp, struct __PropertyUsage__testPropertyUsage_block_desc_0 *desc, PropertyUsage *const __strong _self, int flags=0) : self(_self) {
+  PropertyUsage *const __weak weakSelf;
+  __PropertyUsage__testPropertyUsage_block_impl_0(void *fp, struct __PropertyUsage__testPropertyUsage_block_desc_0 *desc, PropertyUsage *const __weak _weakSelf, int flags=0) : weakSelf(_weakSelf) {
     impl.isa = &_NSConcreteStackBlock;
     impl.Flags = flags;
     impl.FuncPtr = fp;
@@ -34490,13 +34489,13 @@ struct __PropertyUsage__testPropertyUsage_block_impl_0 {
   }
 };
 static void __PropertyUsage__testPropertyUsage_block_func_0(struct __PropertyUsage__testPropertyUsage_block_impl_0 *__cself) {
-  PropertyUsage *const __strong self = __cself->self; // bound by copy
+  PropertyUsage *const __weak weakSelf = __cself->weakSelf; // bound by copy
 
-            NSLog((NSString *)&__NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_9c99da_mi_6, ((NSDate *(*)(id, SEL))(void *)objc_msgSend)((id)self, sel_registerName("subTest")));
+            NSLog((NSString *)&__NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_76c365_mi_6, ((NSDate *(*)(id, SEL))(void *)objc_msgSend)((id)weakSelf, sel_registerName("subTest")));
         }
-static void __PropertyUsage__testPropertyUsage_block_copy_0(struct __PropertyUsage__testPropertyUsage_block_impl_0*dst, struct __PropertyUsage__testPropertyUsage_block_impl_0*src) {_Block_object_assign((void*)&dst->self, (void*)src->self, 3/*BLOCK_FIELD_IS_OBJECT*/);}
+static void __PropertyUsage__testPropertyUsage_block_copy_0(struct __PropertyUsage__testPropertyUsage_block_impl_0*dst, struct __PropertyUsage__testPropertyUsage_block_impl_0*src) {_Block_object_assign((void*)&dst->weakSelf, (void*)src->weakSelf, 3/*BLOCK_FIELD_IS_OBJECT*/);}
 
-static void __PropertyUsage__testPropertyUsage_block_dispose_0(struct __PropertyUsage__testPropertyUsage_block_impl_0*src) {_Block_object_dispose((void*)src->self, 3/*BLOCK_FIELD_IS_OBJECT*/);}
+static void __PropertyUsage__testPropertyUsage_block_dispose_0(struct __PropertyUsage__testPropertyUsage_block_impl_0*src) {_Block_object_dispose((void*)src->weakSelf, 3/*BLOCK_FIELD_IS_OBJECT*/);}
 
 static struct __PropertyUsage__testPropertyUsage_block_desc_0 {
   size_t reserved;
@@ -34508,8 +34507,7 @@ static struct __PropertyUsage__testPropertyUsage_block_desc_0 {
 struct __PropertyUsage__testPropertyUsage_block_impl_1 {
   struct __block_impl impl;
   struct __PropertyUsage__testPropertyUsage_block_desc_1* Desc;
-  PropertyUsage *const __weak weakSelf;
-  __PropertyUsage__testPropertyUsage_block_impl_1(void *fp, struct __PropertyUsage__testPropertyUsage_block_desc_1 *desc, PropertyUsage *const __weak _weakSelf, int flags=0) : weakSelf(_weakSelf) {
+  __PropertyUsage__testPropertyUsage_block_impl_1(void *fp, struct __PropertyUsage__testPropertyUsage_block_desc_1 *desc, int flags=0) {
     impl.isa = &_NSConcreteStackBlock;
     impl.Flags = flags;
     impl.FuncPtr = fp;
@@ -34517,61 +34515,27 @@ struct __PropertyUsage__testPropertyUsage_block_impl_1 {
   }
 };
 static void __PropertyUsage__testPropertyUsage_block_func_1(struct __PropertyUsage__testPropertyUsage_block_impl_1 *__cself) {
-  PropertyUsage *const __weak weakSelf = __cself->weakSelf; // bound by copy
 
-            NSLog((NSString *)&__NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_9c99da_mi_7, weakSelf);
-        }
-static void __PropertyUsage__testPropertyUsage_block_copy_1(struct __PropertyUsage__testPropertyUsage_block_impl_1*dst, struct __PropertyUsage__testPropertyUsage_block_impl_1*src) {_Block_object_assign((void*)&dst->weakSelf, (void*)src->weakSelf, 3/*BLOCK_FIELD_IS_OBJECT*/);}
+        NSLog((NSString *)&__NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_76c365_mi_5);
 
-static void __PropertyUsage__testPropertyUsage_block_dispose_1(struct __PropertyUsage__testPropertyUsage_block_impl_1*src) {_Block_object_dispose((void*)src->weakSelf, 3/*BLOCK_FIELD_IS_OBJECT*/);}
+        void(*tempBlock)(void) = ((void (*)())&__PropertyUsage__testPropertyUsage_block_impl_0((void *)__PropertyUsage__testPropertyUsage_block_func_0, &__PropertyUsage__testPropertyUsage_block_desc_0_DATA, weakSelf, 570425344));
+        dispatch_after(dispatch_time((0ull), (int64_t)(.1 * 1000000000ull)), dispatch_get_main_queue(), tempBlock);
+    }
 
 static struct __PropertyUsage__testPropertyUsage_block_desc_1 {
   size_t reserved;
   size_t Block_size;
-  void (*copy)(struct __PropertyUsage__testPropertyUsage_block_impl_1*, struct __PropertyUsage__testPropertyUsage_block_impl_1*);
-  void (*dispose)(struct __PropertyUsage__testPropertyUsage_block_impl_1*);
-} __PropertyUsage__testPropertyUsage_block_desc_1_DATA = { 0, sizeof(struct __PropertyUsage__testPropertyUsage_block_impl_1), __PropertyUsage__testPropertyUsage_block_copy_1, __PropertyUsage__testPropertyUsage_block_dispose_1};
-
-struct __PropertyUsage__testPropertyUsage_block_impl_2 {
-  struct __block_impl impl;
-  struct __PropertyUsage__testPropertyUsage_block_desc_2* Desc;
-  PropertyUsage *const __strong self;
-  __PropertyUsage__testPropertyUsage_block_impl_2(void *fp, struct __PropertyUsage__testPropertyUsage_block_desc_2 *desc, PropertyUsage *const __strong _self, int flags=0) : self(_self) {
-    impl.isa = &_NSConcreteStackBlock;
-    impl.Flags = flags;
-    impl.FuncPtr = fp;
-    Desc = desc;
-  }
-};
-static void __PropertyUsage__testPropertyUsage_block_func_2(struct __PropertyUsage__testPropertyUsage_block_impl_2 *__cself) {
-  PropertyUsage *const __strong self = __cself->self; // bound by copy
-
-        NSLog((NSString *)&__NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_9c99da_mi_5);
-
-        dispatch_after(dispatch_time((0ull), (int64_t)(2 * 1000000000ull)), dispatch_get_main_queue(), ((void (*)())&__PropertyUsage__testPropertyUsage_block_impl_0((void *)__PropertyUsage__testPropertyUsage_block_func_0, &__PropertyUsage__testPropertyUsage_block_desc_0_DATA, self, 570425344)));
-        __attribute__((objc_ownership(weak))) typeof(self) weakSelf = self;
-        dispatch_after(dispatch_time((0ull), (int64_t)(2 * 1000000000ull)), dispatch_get_main_queue(), ((void (*)())&__PropertyUsage__testPropertyUsage_block_impl_1((void *)__PropertyUsage__testPropertyUsage_block_func_1, &__PropertyUsage__testPropertyUsage_block_desc_1_DATA, weakSelf, 570425344)));
-    }
-static void __PropertyUsage__testPropertyUsage_block_copy_2(struct __PropertyUsage__testPropertyUsage_block_impl_2*dst, struct __PropertyUsage__testPropertyUsage_block_impl_2*src) {_Block_object_assign((void*)&dst->self, (void*)src->self, 3/*BLOCK_FIELD_IS_OBJECT*/);}
-
-static void __PropertyUsage__testPropertyUsage_block_dispose_2(struct __PropertyUsage__testPropertyUsage_block_impl_2*src) {_Block_object_dispose((void*)src->self, 3/*BLOCK_FIELD_IS_OBJECT*/);}
-
-static struct __PropertyUsage__testPropertyUsage_block_desc_2 {
-  size_t reserved;
-  size_t Block_size;
-  void (*copy)(struct __PropertyUsage__testPropertyUsage_block_impl_2*, struct __PropertyUsage__testPropertyUsage_block_impl_2*);
-  void (*dispose)(struct __PropertyUsage__testPropertyUsage_block_impl_2*);
-} __PropertyUsage__testPropertyUsage_block_desc_2_DATA = { 0, sizeof(struct __PropertyUsage__testPropertyUsage_block_impl_2), __PropertyUsage__testPropertyUsage_block_copy_2, __PropertyUsage__testPropertyUsage_block_dispose_2};
+} __PropertyUsage__testPropertyUsage_block_desc_1_DATA = { 0, sizeof(struct __PropertyUsage__testPropertyUsage_block_impl_1)};
 
 static void _I_PropertyUsage_testPropertyUsage(PropertyUsage * self, SEL _cmd) {
     ((void (*)(id, SEL))(void *)objc_msgSend)((id)self, sel_registerName("hc_logMethodListDescription"));
     ((void (*)(id, SEL))(void *)objc_msgSend)((id)self, sel_registerName("hc_logIvarListDescription"));
-    ((void (*)(id, SEL, NSString *))(void *)objc_msgSend)((id)self, sel_registerName("_hcSetName:"), (NSString *)&__NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_9c99da_mi_1);
-    __attribute__((__unused__)) NSString *tmpName = ((id  _Nullable (*)(id, SEL, NSString * _Nonnull __strong))(void *)objc_msgSend)((id)self, sel_registerName("valueForKey:"), (NSString *)&__NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_9c99da_mi_2);
+    ((void (*)(id, SEL, NSString *))(void *)objc_msgSend)((id)self, sel_registerName("_hcSetName:"), (NSString *)&__NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_76c365_mi_1);
+    __attribute__((__unused__)) NSString *tmpName = ((id  _Nullable (*)(id, SEL, NSString * _Nonnull __strong))(void *)objc_msgSend)((id)self, sel_registerName("valueForKey:"), (NSString *)&__NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_76c365_mi_2);
 
     ((void (*)(id, SEL, NSDate * _Nonnull))(void *)objc_msgSend)((id)self, sel_registerName("setSubTest:"), (NSDate *)((NSDate *(*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("NSDate"), sel_registerName("new")));
 
-    NSArray *tmpArray = ((NSArray * _Nonnull (*)(id, SEL, ObjectType  _Nonnull __strong))(void *)objc_msgSend)((id)objc_getClass("NSArray"), sel_registerName("arrayWithObject:"), (id _Nonnull)(NSString *)&__NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_9c99da_mi_3);
+    NSArray *tmpArray = ((NSArray * _Nonnull (*)(id, SEL, ObjectType  _Nonnull __strong))(void *)objc_msgSend)((id)objc_getClass("NSArray"), sel_registerName("arrayWithObject:"), (id _Nonnull)(NSString *)&__NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_76c365_mi_3);
     ((void (*)(id, SEL, NSArray * _Nonnull))(void *)objc_msgSend)((id)self, sel_registerName("setTestCopyProperty:"), (NSArray *)tmpArray);
     {
         ((void (*)(id, SEL, NSObject * _Nonnull))(void *)objc_msgSend)((id)self, sel_registerName("setTestAssignProperty:"), (NSObject *)((NSObject *(*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("NSObject"), sel_registerName("new")));
@@ -34579,17 +34543,13 @@ static void _I_PropertyUsage_testPropertyUsage(PropertyUsage * self, SEL _cmd) {
     {
         ((void (*)(id, SEL, NSObject * _Nullable))(void *)objc_msgSend)((id)self, sel_registerName("setTestWeakProperty:"), (NSObject *)((NSObject *(*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("NSObject"), sel_registerName("new")));
     }
-    ((void (*)(id, SEL, NSString * _Nonnull))(void *)objc_msgSend)((id)self, sel_registerName("setAddressFormate:"), (NSString *)&__NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_9c99da_mi_4);
-
-    ((void (*)(id, SEL, void (*)()))(void *)objc_msgSend)((id)self, sel_registerName("setTestBlockProperty:"), ((void (*)())&__PropertyUsage__testPropertyUsage_block_impl_2((void *)__PropertyUsage__testPropertyUsage_block_func_2, &__PropertyUsage__testPropertyUsage_block_desc_2_DATA, self, 570425344)));
+    ((void (*)(id, SEL, NSString * _Nonnull))(void *)objc_msgSend)((id)self, sel_registerName("setAddressFormate:"), (NSString *)&__NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_76c365_mi_4);
 
 
 
-
+    __attribute__((objc_ownership(weak))) typeof(self) weakSelf = self;
+    ((void (*)(id, SEL, void (*)()))(void *)objc_msgSend)((id)self, sel_registerName("setTestBlockProperty:"), ((void (*)())&__PropertyUsage__testPropertyUsage_block_impl_1((void *)__PropertyUsage__testPropertyUsage_block_func_1, &__PropertyUsage__testPropertyUsage_block_desc_1_DATA)));
     ((void (*(*)(id, SEL))())(void *)objc_msgSend)((id)self, sel_registerName("testBlockProperty"))();
-
-
-    ((void (*)(id, SEL))(void *)objc_msgSend)((id)self, sel_registerName("testMuiThreadSetProperty"));
 }
 
 
@@ -34607,7 +34567,7 @@ struct __PropertyUsage__testMuiThreadSetProperty_block_impl_0 {
 static void __PropertyUsage__testMuiThreadSetProperty_block_func_0(struct __PropertyUsage__testMuiThreadSetProperty_block_impl_0 *__cself) {
   PropertyUsage *const __strong self = __cself->self; // bound by copy
 
-            ((void (*)(id, SEL, NSString *))(void *)objc_msgSend)((id)self, sel_registerName("setFirstName:"), (NSString * _Nonnull)((NSString * _Nonnull (*)(id, SEL, NSString * _Nonnull __strong, ...))(void *)objc_msgSend)((id)objc_getClass("NSString"), sel_registerName("stringWithFormat:"), (NSString *)&__NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_9c99da_mi_8, (NSString *)&__NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_9c99da_mi_9));
+            ((void (*)(id, SEL, NSString *))(void *)objc_msgSend)((id)self, sel_registerName("setFirstName:"), (NSString * _Nonnull)((NSString * _Nonnull (*)(id, SEL, NSString * _Nonnull __strong, ...))(void *)objc_msgSend)((id)objc_getClass("NSString"), sel_registerName("stringWithFormat:"), (NSString *)&__NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_76c365_mi_7, (NSString *)&__NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_76c365_mi_8));
         }
 static void __PropertyUsage__testMuiThreadSetProperty_block_copy_0(struct __PropertyUsage__testMuiThreadSetProperty_block_impl_0*dst, struct __PropertyUsage__testMuiThreadSetProperty_block_impl_0*src) {_Block_object_assign((void*)&dst->self, (void*)src->self, 3/*BLOCK_FIELD_IS_OBJECT*/);}
 
@@ -34629,7 +34589,7 @@ static void _I_PropertyUsage_testMuiThreadSetProperty(PropertyUsage * self, SEL 
 
 
 static void _I_PropertyUsage_dealloc(PropertyUsage * self, SEL _cmd) {
-    NSLog((NSString *)&__NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_9c99da_mi_10, ((Class (*)(id, SEL))(void *)objc_msgSend)((id)self, sel_registerName("class")), __FUNCTION__);
+    NSLog((NSString *)&__NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_76c365_mi_9, ((Class (*)(id, SEL))(void *)objc_msgSend)((id)self, sel_registerName("class")), __FUNCTION__);
 }
 
 
@@ -34677,10 +34637,10 @@ static void _I_SubPropertyUsage_setSubTest_(SubPropertyUsage * self, SEL _cmd, N
 
 
 static void _I_SubPropertyUsage_testSubClassPropertyUsage(SubPropertyUsage * self, SEL _cmd) {
-    NSLog((NSString *)&__NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_9c99da_mi_11);
+    NSLog((NSString *)&__NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_76c365_mi_10);
     ((void (*)(id, SEL))(void *)objc_msgSend)((id)self, sel_registerName("hc_logMethodListDescription"));
     ((void (*)(id, SEL))(void *)objc_msgSend)((id)self, sel_registerName("hc_logIvarListDescription"));
-    NSLog((NSString *)&__NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_9c99da_mi_12, ((NSDate *(*)(id, SEL))(void *)objc_msgSend)((id)self, sel_registerName("subTest")));
+    NSLog((NSString *)&__NSConstantStringImpl__var_folders_r0_4tb84bbj15j3kbzrnk8hqdwm0000gn_T_PropertyUsage_76c365_mi_11, ((NSDate *(*)(id, SEL))(void *)objc_msgSend)((id)self, sel_registerName("subTest")));
 
     ((void (*)(id, SEL, NSDate * _Nonnull))(void *)objc_msgSend)((id)self, sel_registerName("setSubTest:"), (NSDate * _Nonnull)((NSDate * _Nonnull (*)(id, SEL))(void *)objc_msgSend)((id)objc_getClass("NSDate"), sel_registerName("date")));
 }

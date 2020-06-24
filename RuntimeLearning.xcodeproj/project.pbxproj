@@ -60,6 +60,12 @@
 		10E6545024939EEE0022156D /* TestFilterUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E6544F24939EEE0022156D /* TestFilterUsage.m */; };
 		10E6545224939F4E0022156D /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E6545124939F4E0022156D /* CoreImage.framework */; };
 		10E6B1402462863E00A37097 /* KeychainUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E6B13F2462863E00A37097 /* KeychainUsage.m */; };
+		10EDD7A3249DF02A00DCA29B /* HCDynamicTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 10EDD7A1249DF02A00DCA29B /* HCDynamicTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		10EDD7A6249DF02A00DCA29B /* HCDynamicTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10EDD79F249DF02A00DCA29B /* HCDynamicTest.framework */; };
+		10EDD7A8249DF02A00DCA29B /* HCDynamicTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 10EDD79F249DF02A00DCA29B /* HCDynamicTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		10EDD7AE249DF0C500DCA29B /* HCSecurityUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 10EDD7AC249DF0C500DCA29B /* HCSecurityUtil.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		10EDD7AF249DF0C500DCA29B /* HCSecurityUtil.c in Sources */ = {isa = PBXBuildFile; fileRef = 10EDD7AD249DF0C500DCA29B /* HCSecurityUtil.c */; };
+		10EDD7B1249DF19200DCA29B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10EDD7B0249DF19200DCA29B /* Foundation.framework */; };
 		10F2DB622397AEEA00BA107A /* TestClassCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F2DB612397AEEA00BA107A /* TestClassCluster.m */; };
 		D7335419B0BF156CDF1C5B8E /* libPods-RuntimeLearning.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE1FAC32D91B262A68A7687 /* libPods-RuntimeLearning.a */; };
 /* End PBXBuildFile section */
@@ -86,6 +92,13 @@
 			remoteGlobalIDString = 1086B36E23B4930B0002F990;
 			remoteInfo = TestStaticLib;
 		};
+		10EDD7A4249DF02A00DCA29B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 101286F9221D3B0700ED6CDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10EDD79E249DF02A00DCA29B;
+			remoteInfo = HCDynamicTest;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -106,6 +119,17 @@
 			files = (
 				1086B37423B4930B0002F990 /* TestStaticLib.h in CopyFiles */,
 			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10EDD7A7249DF02A00DCA29B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				10EDD7A8249DF02A00DCA29B /* HCDynamicTest.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -217,6 +241,12 @@
 		10E6B13E2462863E00A37097 /* KeychainUsage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeychainUsage.h; sourceTree = "<group>"; };
 		10E6B13F2462863E00A37097 /* KeychainUsage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeychainUsage.m; sourceTree = "<group>"; };
 		10E6B141246296BF00A37097 /* RuntimeLearning.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RuntimeLearning.entitlements; sourceTree = "<group>"; };
+		10EDD79F249DF02A00DCA29B /* HCDynamicTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HCDynamicTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10EDD7A1249DF02A00DCA29B /* HCDynamicTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCDynamicTest.h; sourceTree = "<group>"; };
+		10EDD7A2249DF02A00DCA29B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10EDD7AC249DF0C500DCA29B /* HCSecurityUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCSecurityUtil.h; sourceTree = "<group>"; };
+		10EDD7AD249DF0C500DCA29B /* HCSecurityUtil.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = HCSecurityUtil.c; sourceTree = "<group>"; };
+		10EDD7B0249DF19200DCA29B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		10F2DB602397AEEA00BA107A /* TestClassCluster.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestClassCluster.h; sourceTree = "<group>"; };
 		10F2DB612397AEEA00BA107A /* TestClassCluster.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestClassCluster.m; sourceTree = "<group>"; };
 		3FE1FAC32D91B262A68A7687 /* libPods-RuntimeLearning.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RuntimeLearning.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -239,6 +269,7 @@
 				10E6545224939F4E0022156D /* CoreImage.framework in Frameworks */,
 				1086B37A23B493550002F990 /* libTestStaticLib.a in Frameworks */,
 				1086B36A23B491DC0002F990 /* libadd.a in Frameworks */,
+				10EDD7A6249DF02A00DCA29B /* HCDynamicTest.framework in Frameworks */,
 				D7335419B0BF156CDF1C5B8E /* libPods-RuntimeLearning.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,6 +293,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10EDD79C249DF02A00DCA29B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10EDD7B1249DF19200DCA29B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +340,7 @@
 				10128703221D3B0700ED6CDE /* RuntimeLearning */,
 				1012871C221D3B0A00ED6CDE /* RuntimeLearningTests */,
 				1086B37023B4930B0002F990 /* TestStaticLib */,
+				10EDD7A0249DF02A00DCA29B /* HCDynamicTest */,
 				10128702221D3B0700ED6CDE /* Products */,
 				CFF0684E9602261EE5E7CF98 /* Frameworks */,
 				2DD0631C85D238BD92DA8F9A /* Pods */,
@@ -315,6 +355,7 @@
 				10128719221D3B0A00ED6CDE /* RuntimeLearningTests.xctest */,
 				104BF8D022772F55000C464E /* libadd.a */,
 				1086B36F23B4930B0002F990 /* libTestStaticLib.a */,
+				10EDD79F249DF02A00DCA29B /* HCDynamicTest.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -575,6 +616,17 @@
 			path = Keychain;
 			sourceTree = "<group>";
 		};
+		10EDD7A0249DF02A00DCA29B /* HCDynamicTest */ = {
+			isa = PBXGroup;
+			children = (
+				10EDD7A1249DF02A00DCA29B /* HCDynamicTest.h */,
+				10EDD7AC249DF0C500DCA29B /* HCSecurityUtil.h */,
+				10EDD7AD249DF0C500DCA29B /* HCSecurityUtil.c */,
+				10EDD7A2249DF02A00DCA29B /* Info.plist */,
+			);
+			path = HCDynamicTest;
+			sourceTree = "<group>";
+		};
 		10F2DB5F2397AEC200BA107A /* ClassCluster */ = {
 			isa = PBXGroup;
 			children = (
@@ -602,6 +654,7 @@
 		CFF0684E9602261EE5E7CF98 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				10EDD7B0249DF19200DCA29B /* Foundation.framework */,
 				10E6545124939F4E0022156D /* CoreImage.framework */,
 				3FE1FAC32D91B262A68A7687 /* libPods-RuntimeLearning.a */,
 				4A7FAD87682FD1B94903588E /* libPods-RuntimeLearningTests.a */,
@@ -610,6 +663,18 @@
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		10EDD79A249DF02A00DCA29B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10EDD7A3249DF02A00DCA29B /* HCDynamicTest.h in Headers */,
+				10EDD7AE249DF0C500DCA29B /* HCSecurityUtil.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		10128700221D3B0700ED6CDE /* RuntimeLearning */ = {
@@ -621,12 +686,14 @@
 				101286FD221D3B0700ED6CDE /* Sources */,
 				101286FE221D3B0700ED6CDE /* Frameworks */,
 				101286FF221D3B0700ED6CDE /* Resources */,
+				10EDD7A7249DF02A00DCA29B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				1086B37923B4934C0002F990 /* PBXTargetDependency */,
 				1086B36923B491260002F990 /* PBXTargetDependency */,
+				10EDD7A5249DF02A00DCA29B /* PBXTargetDependency */,
 			);
 			name = RuntimeLearning;
 			productName = RuntimeLearning;
@@ -686,6 +753,24 @@
 			productReference = 1086B36F23B4930B0002F990 /* libTestStaticLib.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		10EDD79E249DF02A00DCA29B /* HCDynamicTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10EDD7AB249DF02A00DCA29B /* Build configuration list for PBXNativeTarget "HCDynamicTest" */;
+			buildPhases = (
+				10EDD79A249DF02A00DCA29B /* Headers */,
+				10EDD79B249DF02A00DCA29B /* Sources */,
+				10EDD79C249DF02A00DCA29B /* Frameworks */,
+				10EDD79D249DF02A00DCA29B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HCDynamicTest;
+			productName = HCDynamicTest;
+			productReference = 10EDD79F249DF02A00DCA29B /* HCDynamicTest.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -710,6 +795,9 @@
 					1086B36E23B4930B0002F990 = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					10EDD79E249DF02A00DCA29B = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
 				};
 			};
 			buildConfigurationList = 101286FC221D3B0700ED6CDE /* Build configuration list for PBXProject "RuntimeLearning" */;
@@ -729,6 +817,7 @@
 				10128718221D3B0A00ED6CDE /* RuntimeLearningTests */,
 				104BF8CF22772F55000C464E /* add */,
 				1086B36E23B4930B0002F990 /* TestStaticLib */,
+				10EDD79E249DF02A00DCA29B /* HCDynamicTest */,
 			);
 		};
 /* End PBXProject section */
@@ -745,6 +834,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		10128717221D3B0A00ED6CDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10EDD79D249DF02A00DCA29B /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -893,6 +989,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		10EDD79B249DF02A00DCA29B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10EDD7AF249DF0C500DCA29B /* HCSecurityUtil.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -910,6 +1014,11 @@
 			isa = PBXTargetDependency;
 			target = 1086B36E23B4930B0002F990 /* TestStaticLib */;
 			targetProxy = 1086B37823B4934C0002F990 /* PBXContainerItemProxy */;
+		};
+		10EDD7A5249DF02A00DCA29B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 10EDD79E249DF02A00DCA29B /* HCDynamicTest */;
+			targetProxy = 10EDD7A4249DF02A00DCA29B /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1232,6 +1341,60 @@
 			};
 			name = Release;
 		};
+		10EDD7A9249DF02A00DCA29B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = L2ZY2L7GYS;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = HCDynamicTest/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.he.HCDynamicTest;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		10EDD7AA249DF02A00DCA29B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = L2ZY2L7GYS;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = HCDynamicTest/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.he.HCDynamicTest;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1276,6 +1439,15 @@
 			buildConfigurations = (
 				1086B37623B4930B0002F990 /* Debug */,
 				1086B37723B4930B0002F990 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10EDD7AB249DF02A00DCA29B /* Build configuration list for PBXNativeTarget "HCDynamicTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10EDD7A9249DF02A00DCA29B /* Debug */,
+				10EDD7AA249DF02A00DCA29B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

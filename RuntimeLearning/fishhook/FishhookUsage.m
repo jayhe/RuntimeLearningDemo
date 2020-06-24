@@ -10,6 +10,7 @@
 #import "calculate.h"
 #import <objc/runtime.h>
 #import <fishhook/fishhook.h>
+#import <HCDynamicTest/HCDynamicTest.h>
 
 static char kAssociatedKey;
 static void (*system_objc_setAssociatedObject)(id _Nonnull object, const void * _Nonnull key,
@@ -22,7 +23,7 @@ static int (*libadd_calculate_add)(int a, int b);
     self = [super init];
     if (self) {
         //[self testHookCocoaFrameworkMethod];
-        [self testHookSelfDefineDynamicFrameworkMethod]; // 模拟器可测试
+        [self testHookSelfDefineDynamicFrameworkMethod];
     }
     
     return self;
@@ -51,12 +52,12 @@ void hook_objc_setAssociatedObject(id _Nonnull object, const void * _Nonnull key
 
 #pragma mark - hook自定义的动态库中的C函数符号
 
-- (void)testHookSelfDefineDynamicFrameworkMethod {
+- (void)testHookSelfDefineDynamicLibraryMethod {
 #if TARGET_IPHONE_SIMULATOR
     int sum = calculate_add(2, 3);
     NSLog(@"before calculate_add hook: 2 + 3 = %d", sum);
     struct rebinding rebindingStruct;
-    rebindingStruct.name = "calculate_add";
+    rebindingStruct.name = "calculate_add"; // HC_Login_Action
     rebindingStruct.replacement = (void *)hook_calculate_add;
     rebindingStruct.replaced = (void **)&libadd_calculate_add;
     rebind_symbols(&rebindingStruct, 1);
@@ -71,6 +72,42 @@ int hook_calculate_add(int a, int b) {
     int sum = libadd_calculate_add(a, b);
     NSLog(@"正确的和是：%d", sum);
     return 100;
+}
+
+static char * (*lib_hc_aes)(char *someString);
+static char * (*lib_hc_des)(char *someString);
+
+- (void)testHookSelfDefineDynamicFrameworkMethod {
+    char *aseString = hc_aes("123");
+    NSLog(@"before hook ase:%s", aseString);
+    struct rebinding rebindingStruct;
+    rebindingStruct.name = "hc_aes";
+    rebindingStruct.replacement = (void *)hook_hc_aes;
+    rebindingStruct.replaced = (void **)&lib_hc_aes;
+    rebind_symbols(&rebindingStruct, 1);
+    
+    char *aseString1 = hc_aes("123");
+    NSLog(@"after hook ase:%s", aseString1);
+    
+    
+    char *desString = hc_des("123");
+    NSLog(@"before hook des:%s", desString);
+    struct rebinding rebindingStruct1;
+    rebindingStruct1.name = "hc_des";
+    rebindingStruct1.replacement = (void *)hook_hc_des;
+    rebindingStruct1.replaced = (void **)&lib_hc_des;
+    rebind_symbols(&rebindingStruct1, 1);
+    
+    char *desString1 = hc_des("123");
+    NSLog(@"after hook des:%s", desString1);
+}
+
+char * hook_hc_aes(char *someString) {
+    return "someString";
+}
+
+char * hook_hc_des(char *someString) {
+    return "someString";
 }
 
 @end

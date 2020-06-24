@@ -12,6 +12,7 @@
 #include <stdio.h>
 
 int add(int a, int b);
-int calculate_add(int a, int b);
+//int calculate_add(int a, int b);
+int calculate_add(int a, int b) asm("HC_Login_Action");
 
 #endif /* calculate_h */

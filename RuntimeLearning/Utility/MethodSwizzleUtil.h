@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MethodSwizzleUtil : NSObject
 
 + (void)swizzleInstanceMethodWithClass:(Class)clazz originalSel:(SEL)original replacementSel:(SEL)replacement;
++ (void)swizzleClassMethodWithClass:(Class)clazz originalSel:(SEL)original replacementSel:(SEL)replacement;
 
 @end
 

@@ -17,7 +17,7 @@ int main(int argc, char * argv[]) {
 //        // <42383031 36383932 2d454542 462d3444 38322d38 4536302d 39354631 35433045 46323338>
 //        //char *chars = '42383031 36383932 2d454542 462d3444 38322d38 4536302d 39354631 35433045 46323338';
 //        NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        //[[PropertyUsage new] testPropertyUsage];
+        [[PropertyUsage new] testPropertyUsage];
         //[[SubPropertyUsage new] testSubClassPropertyUsage];
         /*
         NSObject *testObj = [NSObject new];

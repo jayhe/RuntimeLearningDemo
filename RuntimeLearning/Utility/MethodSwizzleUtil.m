@@ -29,4 +29,15 @@
     }
 }
 
++ (void)swizzleClassMethodWithClass:(Class)clazz originalSel:(SEL)original replacementSel:(SEL)replacement {
+    Class hookClass = object_getClass(clazz);
+    Method originalMethod = class_getClassMethod(hookClass, original);
+    Method replacementMethod = class_getClassMethod(hookClass, replacement);
+    if (class_addMethod(hookClass, original, method_getImplementation(replacementMethod), method_getTypeEncoding(replacementMethod))) {
+        class_replaceMethod(hookClass, replacement, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
+    } else {
+        method_exchangeImplementations(originalMethod, replacementMethod);
+    }
+}
+
 @end

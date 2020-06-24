@@ -8,6 +8,7 @@
 
 #import "PropertyUsage.h"
 #import "NSObject+HCLog.h"
+#import "RuntimeLearningMacro.h"
 
 @interface PropertyUsage ()
 
@@ -25,7 +26,7 @@
 @synthesize addressFormate = _addressFormate;
 
 + (void)initialize {
-    if (self == [PropertyUsage self]) { // 这个玩意能防止子类没有实现调用父类的，why
+    if (self == [PropertyUsage self]) {
         NSLog(@"initialize test");
     }
 }
@@ -128,25 +129,45 @@
     // 默认是read-write的@property会告诉编译器自动生成get set方法。同时@synthesize address = _address;
     self.addressFormate = @"xxx";
     //self.categoryTest;
+#define IS_USE_TEMP 1
+#if IS_USE_TEMP
+    //__weak typeof(self) weakSelf = self;
     self.testBlockProperty = ^(void) {
-        NSLog(@"11111");
+        NSLog(@"excute block");
         //NSLog(@"%@", self.subTest);
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        void(^tempBlock)(void) = ^(void) {
+            //NSLog(@"inner self.subTest = %@", weakSelf.subTest);
             NSLog(@"inner self.subTest = %@", self.subTest);
-        });
-        __weak typeof(self) weakSelf = self;
-        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            NSLog(@"22222 %@", weakSelf);
-        });
+        };
+        MineBlockRef ref = (__bridge void *)(tempBlock);
+        NSLog(@"block refcount = %d", ref->flags & MineBlockFlagsRefcountMask);
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), tempBlock);
+        NSLog(@"block refcount = %d", ref->flags & MineBlockFlagsRefcountMask);
+    };
+    MineBlockRef blockRef = (__bridge void *)(self.testBlockProperty);
+    self.testBlockProperty();
+#else
+#define IS_INNER 1
+#if IS_INNER
+    void(^innerBlock)(void) = ^(void) {
+        NSLog(@"inner self.subTest = %@", self.subTest);
+    };
+    self.testBlockProperty = ^(void) {
+        NSLog(@"excute block");
+        //NSLog(@"%@", self.subTest);
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), innerBlock);
+    };
+    self.testBlockProperty();
+#else
+    void(^outterBlock)(void) = ^(void) {
+        NSLog(@"outter self.subTest = %@", self.subTest);
     };
     
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        NSLog(@"outter self.subTest = %@", self.subTest);
-//    });
-    self.testBlockProperty();
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), outterBlock);
+#endif
+#endif
     
-    
-    [self testMuiThreadSetProperty];
+    //[self testMuiThreadSetProperty];
 }
 
 - (void)testMuiThreadSetProperty {

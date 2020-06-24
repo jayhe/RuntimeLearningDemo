@@ -21,6 +21,32 @@ static inline void blockCleanUp(__strong void(^*block)(void)) {
     (*block)();
 }
 
+// Block internals.
+typedef NS_OPTIONS(int, MineBlockFlags) {
+    MineBlockFlagsDeallocating          = (0x0001),  // runtime
+    MineBlockFlagsRefcountMask          = (0xfffe),  // runtime
+    MineBlockFlagsNeedFree              = (1 << 24), // runtime
+    MineBlockFlagsHasCopyDisposeHelpers = (1 << 25),
+    MineBlockFlagsHasSignature          = (1 << 30)
+};
+typedef struct MineBlock {
+    __unused Class isa;
+    MineBlockFlags flags;
+    __unused int reserved;
+    void (__unused *invoke)(struct MineBlock *block, ...);
+    struct {
+        unsigned long int reserved;
+        unsigned long int size;
+        // requires MineBlockFlagsHasCopyDisposeHelpers
+        void (*copy)(void *dst, const void *src);
+        void (*dispose)(const void *);
+        // requires MineBlockFlagsHasSignature
+        const char *signature;
+        const char *layout;
+    } *descriptor;
+    // imported variables
+} *MineBlockRef;
+
 // RAC的项目动态调试需要使用通知的方式
 #if DEBUG
 
