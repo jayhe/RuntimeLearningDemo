@@ -10,8 +10,19 @@
 #import "MethodSwizzleUtil.h"
 #import <objc/runtime.h>
 
-@implementation NSObject (RLSafe)
+static RLUnrecognizedSelectorExceptionHandler *RLUSEHandler = NULL;
+NSString const *RLUnrecognizedSelectorMessageKey = @"UnrecognizedSelectorKey";
 
+RLUnrecognizedSelectorExceptionHandler * _Nullable RLGetUnrecognizedSelectorExceptionHandler(void) {
+    return RLUSEHandler;
+}
+
+void RLSetUnrecognizedSelectorExceptionHandler(RLUnrecognizedSelectorExceptionHandler * _Nullable handler) {
+    RLUSEHandler = handler;
+}
+
+@implementation NSObject (RLSafe)
+//#define CATCH_CRASH 1
 + (void)load {
 #if CATCH_CRASH
     static dispatch_once_t onceToken;
@@ -24,12 +35,20 @@
 
 - (NSMethodSignature *)rl_methodSignatureForSelector:(SEL)selector {
 #if CATCH_CRASH
-    NSMethodSignature *signature = [self rl_methodSignatureForSelector:selector];
-    if (signature == nil) {
-        signature = [self methodSignatureForSelector:@selector(nilMessage)];
+    BOOL shouldCatch = YES;
+    if ([self conformsToProtocol:@protocol(RLCatchUnrecognizedSelectorProtocol)] && [self respondsToSelector:@selector(shouldCatch)]) {
+        shouldCatch = [(id<RLCatchUnrecognizedSelectorProtocol>)self shouldCatch];
     }
-    
-    return signature;
+    if (shouldCatch) {
+        NSMethodSignature *signature = [self rl_methodSignatureForSelector:selector];
+        if (signature == nil) {
+            signature = [self methodSignatureForSelector:@selector(nilMessage)];
+        }
+        
+        return signature;
+    } else {
+        return [self rl_methodSignatureForSelector:selector];
+    }
 #endif
     return [self rl_methodSignatureForSelector:selector];
 }
@@ -37,7 +56,13 @@
 - (void)rl_forwardInvocation:(NSInvocation *)anInvocation {
 #if CATCH_CRASH
     if (![self respondsToSelector:anInvocation.selector]) {
-        NSLog(@"unrecognized selector: %@ send to class: %@", NSStringFromSelector(anInvocation.selector), NSStringFromClass(((NSObject *)anInvocation.target).class));
+        if (RLUSEHandler) {
+            NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
+            NSString *message = [NSString stringWithFormat:@"-[%@ %@]: unrecognized selector sent to instance %p", NSStringFromClass(((NSObject *)anInvocation.target).class), NSStringFromSelector(anInvocation.selector), anInvocation.target];
+            [userInfo setObject:message forKey:RLUnrecognizedSelectorMessageKey];
+            
+            RLUSEHandler(userInfo);
+        }
         anInvocation.selector = @selector(nilMessage);
         [anInvocation invokeWithTarget:self];
         return;

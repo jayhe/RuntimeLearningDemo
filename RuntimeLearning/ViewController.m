@@ -47,6 +47,7 @@
 #import "HCSwizzleInstance.h"
 #import "PropertyUsage.h"
 #import "HookMethodInInitialize.h"
+#import "NSObject+RLSafe.h"
 
 @class TableDataRow;
 
@@ -54,6 +55,7 @@
 
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, strong) NSMutableArray<TableDataRow *> *items;
+@property (nonatomic, assign) BOOL foldFlag; // default is YES
 
 @end
 
@@ -66,6 +68,14 @@
 
 @implementation TableDataSection
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _foldFlag = YES;
+    }
+    
+    return self;
+}
 
 @end
 
@@ -88,7 +98,7 @@ void testVAList1(NSString *format, ...) NS_NO_TAIL_CALL;
 int addNumbers(int a, ...) NS_NO_TAIL_CALL;
 void testBenchmark(void);
 
-@interface ViewController () <UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface ViewController () <UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate, RLCatchUnrecognizedSelectorProtocol>
 
 @property (nonatomic, strong) DynamicCallFunctionTest *dynamicFunctionTest;
 @property (nonatomic, strong) NSCacheTest *testCache;
@@ -165,6 +175,24 @@ int functionG(int x) {
     [super viewDidAppear:animated];
     NSLog(@"%s", __FUNCTION__);
 //    [NSThread sleepForTimeInterval:2];
+}
+
+#pragma mark - RLCatchUnrecognizedSelectorProtocol
+
+- (BOOL)shouldCatch {
+    return YES;
+}
+
+void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo) {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wincompatible-pointer-types"
+    NSLog(@"%@", [unrecognizedSelectorInfo objectForKey:RLUnrecognizedSelectorMessageKey]);
+#pragma clang diagnostic pop
+}
+
+- (void)testCatchUnrecognizedSelector {
+    RLSetUnrecognizedSelectorExceptionHandler(&MineHandler);
+    [self.entryTableView performSelector:@selector(haha)];
 }
 
 #pragma mark - Observer
@@ -276,6 +304,9 @@ int functionG(int x) {
         TableDataRow *row14 = [TableDataRow new];
         row14.title = @"修改类的isa";
         row14.action = @selector(changeInstanceClass);
+        TableDataRow *row15 = [TableDataRow new];
+        row15.title = @"测试catch unrecognized selector";
+        row15.action = @selector(testCatchUnrecognizedSelector);
         section1.items = @[
             row0,
             row1,
@@ -291,7 +322,8 @@ int functionG(int x) {
             row10,
             row11,
             row12,
-            row14].mutableCopy;
+            row14,
+            row15].mutableCopy;
     }
     TableDataSection *section2 = [TableDataSection new];
     section2.title = @"优化部分";
