@@ -186,13 +186,20 @@ int functionG(int x) {
 void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wincompatible-pointer-types"
-    NSLog(@"%@", [unrecognizedSelectorInfo objectForKey:RLUnrecognizedSelectorMessageKey]);
+    //NSLog(@"%@", [unrecognizedSelectorInfo objectForKey:RLUnrecognizedSelectorMessageKey]);
 #pragma clang diagnostic pop
+    NSLog(@"%@", unrecognizedSelectorInfo);
 }
 
 - (void)testCatchUnrecognizedSelector {
     RLSetUnrecognizedSelectorExceptionHandler(&MineHandler);
+    // case1
     [self.entryTableView performSelector:@selector(haha)];
+    // case2
+    NSArray *testArray;
+    id serverData = @"12345";
+    testArray = serverData;
+    NSInteger count = testArray.count;
 }
 
 #pragma mark - Observer
