@@ -210,7 +210,6 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
         __unused NSInteger length = testString.length;
     }
      */
-    return;
     NSInteger testCase = 5;
     switch (testCase) {
         case 1: {
