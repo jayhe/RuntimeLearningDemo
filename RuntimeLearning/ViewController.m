@@ -105,6 +105,8 @@ void testBenchmark(void);
 @property (nonatomic, strong) UITableView *entryTableView;
 @property (nonatomic, strong) NSMutableArray<TableDataSection*> *dataSource;
 
+- (void)testMethodNotImp;
+
 @end
 
 @implementation ViewController
@@ -193,13 +195,60 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
 
 - (void)testCatchUnrecognizedSelector {
     RLSetUnrecognizedSelectorExceptionHandler(&MineHandler);
-    // case1
+    /*
+     // -Werror=incomplete-implementation
+    [self testMethodNotImp];
     [self.entryTableView performSelector:@selector(haha)];
-    // case2
-    NSArray *testArray;
-    id serverData = @"12345";
-    testArray = serverData;
-    NSInteger count = testArray.count;
+    {
+        NSMutableArray *array = [NSArray array];
+        [array removeLastObject];
+    }
+    {
+        NSString *testString;
+        id serverData = [NSNumber numberWithInt:12345];
+        testString = serverData;
+        __unused NSInteger length = testString.length;
+    }
+     */
+    return;
+    NSInteger testCase = 5;
+    switch (testCase) {
+        case 1: {
+            //[self testMethodNotImp];
+        }
+            break;
+        case 2: {
+            // -Werror=undeclared-selector
+            [self.entryTableView performSelector:@selector(haha)];
+        }
+            break;
+        case 3: {
+            //-Werror=incompatible-pointer-types
+            //NSMutableArray *array = [NSArray array];
+            //[array removeLastObject];
+        }
+            break;
+        case 4: {
+            NSString *testString;
+            id serverData = [NSNumber numberWithInt:12345];
+            testString = serverData;
+            __unused NSInteger length = testString.length;
+        }
+            break;
+        case 5: {
+            
+        }
+            break;
+        case 6: {
+            NSArray *testArray;
+            id serverData = @"12345";
+            testArray = serverData;
+            __unused NSInteger count = testArray.count;
+        }
+            break;
+        default:
+            break;
+    }
 }
 
 #pragma mark - Observer

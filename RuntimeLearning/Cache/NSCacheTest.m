@@ -144,14 +144,14 @@
 
 - (void)logAllCachedData {
     SEL allObjects = NSSelectorFromString(@"allObjects");
-    IMP (*cachedAllObjects)(id, SEL);
+    IMP (*cachedAllObjects)(id, SEL) = NULL;
     if ([self.memoryCache respondsToSelector:allObjects]) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wincompatible-pointer-types"
         cachedAllObjects = class_getMethodImplementation([self.memoryCache class], allObjects);
 #pragma clang diagnostic pop
     }
-    if (cachedAllObjects) {
+    if (cachedAllObjects != NULL) {
         NSLog(@"%@", cachedAllObjects(self.memoryCache, allObjects));
     }
 }

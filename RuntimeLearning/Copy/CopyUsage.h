@@ -16,10 +16,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-NS_ASSUME_NONNULL_END
-
 @interface TestObj : NSObject
 
 @property (nonatomic, copy) NSString *name;
 
 @end
+
+NS_ASSUME_NONNULL_END
+

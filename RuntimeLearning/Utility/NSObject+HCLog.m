@@ -42,7 +42,7 @@ typedef struct HCMethod {
         Method method = mList[i];
         struct objc_method_description *description = method_getDescription(method);
         NSLog(@"Method: %@", NSStringFromSelector(description->name));
-        HCMethodLayout layout = (HCMethodLayout)method;
+        //HCMethodLayout layout = (HCMethodLayout)method;
         //NSLog(@"Method Layout: method_name = %s method_imp = %s", layout->method_name, layout->method_imp);
     }
     free(mList);
