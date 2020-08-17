@@ -39,13 +39,13 @@ int main(int argc, char * argv[]) {
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }
-
-//__attribute__((constructor(1))) static void clearLaunchScreenCache(void) {
-//    NSError *error = nil;
-//    NSString *filePath = [NSHomeDirectory() stringByAppendingFormat:@"/Library/SplashBoard/"];
-//    NSLog(@"Launch Screen FilePath: %@", filePath);
-//    [[NSFileManager defaultManager] removeItemAtPath:filePath error:&error];
-//    if (error) {
-//        NSLog(@"Delete Launch Screen Cache Failed :%@", error.localizedDescription);
-//    }
-//}
+// 在main之前清除掉缓存的启动图
+__attribute__((constructor(1))) static void clearLaunchScreenCache(void) {
+    NSError *error = nil;
+    NSString *filePath = [NSHomeDirectory() stringByAppendingFormat:@"/Library/SplashBoard/"];
+    NSLog(@"Launch Screen FilePath: %@", filePath);
+    [[NSFileManager defaultManager] removeItemAtPath:filePath error:&error];
+    if (error) {
+        NSLog(@"Delete Launch Screen Cache Failed :%@", error.localizedDescription);
+    }
+}
