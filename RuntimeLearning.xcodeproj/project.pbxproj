@@ -15,7 +15,6 @@
 		10128709221D3B0700ED6CDE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10128708221D3B0700ED6CDE /* ViewController.m */; };
 		1012870C221D3B0700ED6CDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1012870A221D3B0700ED6CDE /* Main.storyboard */; };
 		1012870E221D3B0900ED6CDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1012870D221D3B0900ED6CDE /* Assets.xcassets */; };
-		10128711221D3B0900ED6CDE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1012870F221D3B0900ED6CDE /* LaunchScreen.storyboard */; };
 		10128714221D3B0900ED6CDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10128713221D3B0900ED6CDE /* main.m */; };
 		1012871E221D3B0A00ED6CDE /* RuntimeLearningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1012871D221D3B0A00ED6CDE /* RuntimeLearningTests.m */; };
 		10128733221D3B7300ED6CDE /* NSObject+RLSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 10128729221D3B7200ED6CDE /* NSObject+RLSafe.m */; };
@@ -36,6 +35,7 @@
 		10518D81241F79A600AE5265 /* TestCategoryOveride+TestOverideOne.m in Sources */ = {isa = PBXBuildFile; fileRef = 10518D80241F79A600AE5265 /* TestCategoryOveride+TestOverideOne.m */; };
 		1059F82A2488DFD7005673C8 /* PropertyUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1059F8292488DFD7005673C8 /* PropertyUsage.m */; };
 		1059F82D2488E225005673C8 /* NSObject+HCLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 1059F82C2488E225005673C8 /* NSObject+HCLog.m */; };
+		106BB51724EA5BF800CA68AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 106BB51524EA5BF800CA68AF /* LaunchScreen.storyboard */; };
 		1072564423B30DBD00BC3A00 /* TestMapTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1072564323B30DBD00BC3A00 /* TestMapTable.m */; };
 		1076819A241B3B0700D486A9 /* TestCategoryOveride+TestOveride.m in Sources */ = {isa = PBXBuildFile; fileRef = 10768199241B3B0700D486A9 /* TestCategoryOveride+TestOveride.m */; };
 		107B55D62410C79100EDCCD6 /* NSCacheTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 107B55D52410C79100EDCCD6 /* NSCacheTest.m */; };
@@ -148,7 +148,6 @@
 		10128708221D3B0700ED6CDE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1012870B221D3B0700ED6CDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1012870D221D3B0900ED6CDE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		10128710221D3B0900ED6CDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		10128712221D3B0900ED6CDE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10128713221D3B0900ED6CDE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		10128719221D3B0A00ED6CDE /* RuntimeLearningTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RuntimeLearningTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -196,6 +195,7 @@
 		1059F82B2488E225005673C8 /* NSObject+HCLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+HCLog.h"; sourceTree = "<group>"; };
 		1059F82C2488E225005673C8 /* NSObject+HCLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HCLog.m"; sourceTree = "<group>"; };
 		1059F82F2488F4C4005673C8 /* PropertyUsage.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PropertyUsage.cpp; sourceTree = "<group>"; };
+		106BB51624EA5BF800CA68AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1072564223B30DBD00BC3A00 /* TestMapTable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestMapTable.h; sourceTree = "<group>"; };
 		1072564323B30DBD00BC3A00 /* TestMapTable.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMapTable.m; sourceTree = "<group>"; };
 		10768198241B3B0700D486A9 /* TestCategoryOveride+TestOveride.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestCategoryOveride+TestOveride.h"; sourceTree = "<group>"; };
@@ -390,8 +390,8 @@
 				10E383A724558132004ADBB5 /* TestViewDidLoadCallStackViewController.h */,
 				10E383A824558132004ADBB5 /* TestViewDidLoadCallStackViewController.m */,
 				1012870A221D3B0700ED6CDE /* Main.storyboard */,
+				106BB51524EA5BF800CA68AF /* LaunchScreen.storyboard */,
 				1012870D221D3B0900ED6CDE /* Assets.xcassets */,
-				1012870F221D3B0900ED6CDE /* LaunchScreen.storyboard */,
 				10128712221D3B0900ED6CDE /* Info.plist */,
 				10128713221D3B0900ED6CDE /* main.m */,
 				1026DD0F2333173D00738E85 /* TestCode.h */,
@@ -827,7 +827,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10128711221D3B0900ED6CDE /* LaunchScreen.storyboard in Resources */,
+				106BB51724EA5BF800CA68AF /* LaunchScreen.storyboard in Resources */,
 				1012870E221D3B0900ED6CDE /* Assets.xcassets in Resources */,
 				1012870C221D3B0700ED6CDE /* Main.storyboard in Resources */,
 			);
@@ -1031,10 +1031,10 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		1012870F221D3B0900ED6CDE /* LaunchScreen.storyboard */ = {
+		106BB51524EA5BF800CA68AF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				10128710221D3B0900ED6CDE /* Base */,
+				106BB51624EA5BF800CA68AF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -1162,7 +1162,7 @@
 			baseConfigurationReference = 572909D309E5F0D3549F5040 /* Pods-RuntimeLearning.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_OPTIMIZATION_PROFILE_FILE = "$(SRCROOT)/OptimizationProfiles/$(PROJECT_NAME).profdata";
 				CLANG_USE_OPTIMIZATION_PROFILE = YES;
@@ -1191,7 +1191,7 @@
 					"-l\"Aspects\"",
 				);
 				OTHER_SWIFT_FLAGS = "-sanitize-coverage=func -sanitize=undefined";
-				PRODUCT_BUNDLE_IDENTIFIER = hc.RuntimeLearning;
+				PRODUCT_BUNDLE_IDENTIFIER = hc.RuntimeLearning.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "RuntimeLearning/RuntimeLearning-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1207,7 +1207,7 @@
 			baseConfigurationReference = A08115034046DAE31C80CBB7 /* Pods-RuntimeLearning.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_USE_OPTIMIZATION_PROFILE = YES;
 				CODE_SIGN_ENTITLEMENTS = RuntimeLearning/RuntimeLearning.entitlements;
@@ -1235,7 +1235,7 @@
 					"-l\"Aspects\"",
 				);
 				OTHER_SWIFT_FLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = hc.RuntimeLearning;
+				PRODUCT_BUNDLE_IDENTIFIER = hc.RuntimeLearning.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "RuntimeLearning/RuntimeLearning-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

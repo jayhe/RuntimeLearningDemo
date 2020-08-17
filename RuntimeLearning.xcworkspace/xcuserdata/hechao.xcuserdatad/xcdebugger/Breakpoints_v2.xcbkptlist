@@ -1160,8 +1160,8 @@
             filePath = "RuntimeLearning/TestViewDidLoadCallStackViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
             landmarkName = "-logDescription"
             landmarkType = "7">
          </BreakpointContent>
@@ -1226,8 +1226,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "63"
             endingLineNumber = "63"
-            landmarkName = "+initialize"
-            landmarkType = "7">
+            landmarkName = "TestSwizzleInInitialize"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1242,8 +1242,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "82"
             endingLineNumber = "82"
-            landmarkName = "-s_testSwizzleMethod"
-            landmarkType = "7">
+            landmarkName = "TestSwizzleInInitializeA"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1258,8 +1258,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "101"
             endingLineNumber = "101"
-            landmarkName = "-a_testSwizzleMethod"
-            landmarkType = "7">
+            landmarkName = "TestSwizzleInInitializeB"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1274,7 +1274,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "119"
             endingLineNumber = "119"
-            landmarkName = "TestSwizzleInInitializeB"
+            landmarkName = "TestSwizzleInInitialize(Log)"
             landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2475,6 +2475,29 @@
             endingLineNumber = "79"
             landmarkName = "-rl_methodSignatureForSelector:"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
+         <BreakpointContent
+            uuid = "D9553A4B-2BD9-4071-82B4-CABC4AD88D00"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = "[__NSArrayM objectAtIndexedSubscript:]"
+            moduleName = "">
+            <Locations>
+               <Location
+                  uuid = "D9553A4B-2BD9-4071-82B4-CABC4AD88D00 - 623ce0f3f99bc993"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[__NSArrayM objectAtIndexedSubscript:]"
+                  moduleName = "CoreFoundation"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

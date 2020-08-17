@@ -73,9 +73,13 @@
         });
     });
     // dispatch_barrier_async_and_wait
-    dispatch_barrier_async_and_wait(queue, ^{
-        NSLog(@"dispatch_barrier_async_and_wait");
-    });
+    if (@available(iOS 12.0, *)) {
+        dispatch_barrier_async_and_wait(queue, ^{
+            NSLog(@"dispatch_barrier_async_and_wait");
+        });
+    } else {
+        // Fallback on earlier versions
+    }
     dispatch_async(queue, ^{
         NSLog(@"testBarrier-task3");
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{

@@ -113,6 +113,36 @@ RuntimeLearning`-[ViewController viewDidLoad]:
     [AddressInfo class]这块块区域就在内存中。你要访问它 那么你得有钥匙。&cls就是一把钥匙；void *obj = &cls 就是相当于拷贝一个钥匙
     */
     [(__bridge id)obj logDescription];
+    int a = 10;
+    void (^mallocBlock)(void) = ^{
+        NSLog(@"2222222222%d", a);
+    };
+    void (^globalBlock)(void) = ^{
+        NSLog(@"1111111111");
+    };
+    NSLog(@"%p", mallocBlock); // 0x600002e8ecd0
+    NSLog(@"%p", globalBlock); // 0x10ecf1970
+    mallocBlock();
+    globalBlock();
+    NSLog(@"333333333");
+    /*
+     当控制器销毁之后，打印这两个地址
+     (lldb) po 0x10ecf1970
+     <__NSGlobalBlock__: 0x10ecf1970>
+      signature: "v8@?0"
+      invoke   : 0x10ecc0760 (/Users/hechao/Library/Developer/CoreSimulator/Devices/9BD675A0-4A47-46F6-8E35-3512CF8F88BA/data/Containers/Bundle/Application/50FF3CA0-5E7C-4861-8542-02621D330014/RuntimeLearning.app/RuntimeLearning`__53-[TestViewDidLoadCallStackViewController viewDidLoad]_block_invoke_2)
+
+     (lldb) po 0x600002e8ecd0
+     105553165085904
+     下次再进入该界面：
+     发现global的block地址还是一样的
+     2020-08-06 17:49:21.383313+0800 RuntimeLearning[4340:70951] 0x600002eb6640
+     2020-08-06 17:49:21.383403+0800 RuntimeLearning[4340:70951] 0x10ecf1970
+     */
+}
+
+- (void)dealloc {
+    NSLog(@"%s", __FUNCTION__);
 }
 
 @end
