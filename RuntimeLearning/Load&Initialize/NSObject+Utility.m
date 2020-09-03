@@ -69,7 +69,7 @@ struct initailize_class *gatherClassMethodImps(Class gatherCls, SEL gatherSel, u
     return reverse_initailize_classes;
 }
 
-void callClassMethods(Class cls, SEL callSel, IMP originalImp) {
+void callClassMethodsExceptSelfAlongChain(Class cls, SEL callSel, IMP originalImp) {
     unsigned int count = 0;
     struct initailize_class *initailize_classes = gatherClassMethodImps(cls, @selector(initialize), &count);
     for (unsigned int i = 0; i < count; i ++) {

@@ -76,7 +76,7 @@ libobjc.A.dylib`CALLING_SOME_+initialize_METHOD:
     if (self == [SubHookMethodInInitialize self]) {
         Method currentMethod = class_getClassMethod(self, _cmd);
         IMP currentMethodImp = method_getImplementation(currentMethod);
-        callClassMethods(self, @selector(initialize), currentMethodImp);
+        callClassMethodsExceptSelfAlongChain(self, @selector(initialize), currentMethodImp);
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
             [MethodSwizzleUtil swizzleInstanceMethodWithClass:self originalSel:@selector(methodToBeHooked) replacementSel:@selector(hookedMethodInSubclass)];
@@ -133,7 +133,7 @@ libobjc.A.dylib`CALLING_SOME_+initialize_METHOD:
     if (self == [HookMethodInInitialize self]) {
         Method currentMethod = class_getClassMethod(self, _cmd);
         IMP currentMethodImp = method_getImplementation(currentMethod);
-        callClassMethods(self, @selector(initialize), currentMethodImp);
+        callClassMethodsExceptSelfAlongChain(self, @selector(initialize), currentMethodImp);
         static dispatch_once_t onceToken;
         dispatch_once(&onceToken, ^{
             [MethodSwizzleUtil swizzleInstanceMethodWithClass:self originalSel:@selector(methodToBeHooked) replacementSel:@selector(hookedMethodInCategoryC)];
