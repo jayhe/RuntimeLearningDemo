@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 void HCSwizzleHookInstance(id instance);
 void HCSwizzleUnhookInstance(id instance);
 // test
-//void HCObserveValueForKey(id instance, NSString *key);
+void HCObserveValueForKey(id instance, NSString *key);
 
 @end
 

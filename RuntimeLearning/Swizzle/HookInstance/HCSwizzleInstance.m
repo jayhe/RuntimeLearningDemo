@@ -143,26 +143,26 @@ void HCSwizzleUnhookInstance(id instance) {
     }
 }
 
-//void HCObserveValueForKey(id instance, NSString *key) {
-//    if (!key || key.length == 0) {
-//        return;
-//    }
-//    HCSwizzleHookInstance(instance);
-//    NSString *firstCharacter = [key substringToIndex:1];
-//    NSString *tmpKey = [key stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:firstCharacter.uppercaseString];
-//    SEL setSelector = NSSelectorFromString([NSString stringWithFormat:@"set%@:", tmpKey]);
-//    Method oldMethod = class_getInstanceMethod([instance class], setSelector);
-//    if (!oldMethod) {
-//        return;
-//    }
-//    const char *mType = method_getTypeEncoding(oldMethod);
-//    IMP originImp = method_getImplementation(oldMethod);
-//    class_replaceMethod([instance class], setSelector, imp_implementationWithBlock(^(void){
-//        [instance willChangeValueForKey:key];
-//        ((void(*)(id, SEL, id))originImp)(instance, setSelector, [UIColor redColor]);
-//        [instance didChangeValueForKey:key];
-//    }), mType);
-//}
+void HCObserveValueForKey(id instance, NSString *key) {
+    if (!key || key.length == 0) {
+        return;
+    }
+    HCSwizzleHookInstance(instance);
+    NSString *firstCharacter = [key substringToIndex:1];
+    NSString *tmpKey = [key stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:firstCharacter.uppercaseString];
+    SEL setSelector = NSSelectorFromString([NSString stringWithFormat:@"set%@:", tmpKey]);
+    Method oldMethod = class_getInstanceMethod([instance class], setSelector);
+    if (!oldMethod) {
+        return;
+    }
+    const char *mType = method_getTypeEncoding(oldMethod);
+    IMP originImp = method_getImplementation(oldMethod);
+    class_replaceMethod([instance class], setSelector, imp_implementationWithBlock(^(void){
+        [instance willChangeValueForKey:key];
+        ((void(*)(id, SEL, id))originImp)(instance, setSelector, @"1111");
+        [instance didChangeValueForKey:key];
+    }), mType);
+}
 
 #pragma mark - Private Method
 

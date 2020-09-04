@@ -1,0 +1,6 @@
+framework module HCTestInsertLib {
+  umbrella header "HCTestInsertLib.h"
+
+  export *
+  module * { export * }
+}

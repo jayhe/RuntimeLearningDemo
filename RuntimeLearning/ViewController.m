@@ -48,6 +48,7 @@
 #import "PropertyUsage.h"
 #import "HookMethodInInitialize.h"
 #import "NSObject+RLSafe.h"
+#include <stdlib.h>
 
 @class TableDataRow;
 
@@ -121,6 +122,8 @@ void testBenchmark(void);
     [self initDataSource];
     [self.view addSubview:self.entryTableView];
     NSLog(@"%s", __FUNCTION__);
+    //[self testObserverProperty];
+    //[self checkHasInsertedDylib];
 #if DEBUG
     injectBlock {
         [weakSelf setupUI];
@@ -674,6 +677,17 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
     }
 }
 
+- (BOOL)checkHasInsertedDylib {
+    char *env = getenv("DYLD_INSERT_LIBRARIES");
+    // 没做任何注入的时候返回的是NULL
+    if (env == NULL) {
+        return NO;
+    }
+    NSString *string_content = [[NSString alloc] initWithCString:(const char* )env encoding:NSUTF8StringEncoding];
+    // /Library/MobileSubstrate/MobileSubstrate.dylib
+    return YES;
+}
+
 - (void)testCallStack {
     functionF();
 }
@@ -715,13 +729,18 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
 }
 
 - (void)changeInstanceClass {
-    UIView *vc = [UIView new];
-    HCSwizzleHookInstance(vc);
-    NSLog(@"hook:\nself.class = %@ object_getClass(self) = %@", vc.class, object_getClass(vc));
+    UIView *view = [UIView new];
+    HCSwizzleHookInstance(view);
+    NSLog(@"hook:\nself.class = %@ object_getClass(self) = %@", view.class, object_getClass(view));
     //HCObserveValueForKey(vc, @"backgroundColor");
-    vc.backgroundColor = [UIColor redColor];
-    HCSwizzleUnhookInstance(vc);
-    NSLog(@"unhook:\n self.class = %@ object_getClass(self) = %@", vc.class, object_getClass(vc));
+    view.backgroundColor = [UIColor redColor];
+    HCSwizzleUnhookInstance(view);
+    NSLog(@"unhook:\n self.class = %@ object_getClass(self) = %@", view.class, object_getClass(view));
+}
+
+- (void)testObserverProperty {
+    HCObserveValueForKey(self, @"title");
+    self.title = @"22222";
 }
 
 #pragma mark - 多线程

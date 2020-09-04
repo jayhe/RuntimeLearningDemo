@@ -15,7 +15,6 @@
 		10128709221D3B0700ED6CDE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10128708221D3B0700ED6CDE /* ViewController.m */; };
 		1012870C221D3B0700ED6CDE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1012870A221D3B0700ED6CDE /* Main.storyboard */; };
 		1012870E221D3B0900ED6CDE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1012870D221D3B0900ED6CDE /* Assets.xcassets */; };
-		10128714221D3B0900ED6CDE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10128713221D3B0900ED6CDE /* main.m */; };
 		1012871E221D3B0A00ED6CDE /* RuntimeLearningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1012871D221D3B0A00ED6CDE /* RuntimeLearningTests.m */; };
 		10128733221D3B7300ED6CDE /* NSObject+RLSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 10128729221D3B7200ED6CDE /* NSObject+RLSafe.m */; };
 		10128734221D3B7300ED6CDE /* MethodSwizzleUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1012872C221D3B7200ED6CDE /* MethodSwizzleUtil.m */; };
@@ -46,6 +45,7 @@
 		1086B37E23B4AE910002F990 /* FishhookUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1086B37D23B4AE910002F990 /* FishhookUsage.m */; };
 		10A6CA9D241CA882002BFAC5 /* TestMethodInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A6CA9C241CA882002BFAC5 /* TestMethodInvocation.m */; };
 		10AC43E7228A563D00F8F435 /* TestSwizzleInInitialize.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AC43E6228A563D00F8F435 /* TestSwizzleInInitialize.m */; };
+		10B9CBDF2501E604006D48AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10128713221D3B0900ED6CDE /* main.m */; };
 		10BF41E8227FE671009F291E /* DispatchOnceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BF41E7227FE671009F291E /* DispatchOnceTest.m */; };
 		10BF41EB228012A7009F291E /* DispatchBarrierTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BF41EA228012A7009F291E /* DispatchBarrierTest.m */; };
 		10BF41F2228120C1009F291E /* DispatchGroupLeaveTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BF41F1228120C1009F291E /* DispatchGroupLeaveTest.m */; };
@@ -211,6 +211,7 @@
 		10A6CA9C241CA882002BFAC5 /* TestMethodInvocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMethodInvocation.m; sourceTree = "<group>"; };
 		10AC43E5228A563D00F8F435 /* TestSwizzleInInitialize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestSwizzleInInitialize.h; sourceTree = "<group>"; };
 		10AC43E6228A563D00F8F435 /* TestSwizzleInInitialize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestSwizzleInInitialize.m; sourceTree = "<group>"; };
+		10B9CBDA2501E3B2006D48AC /* main1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main1.m; sourceTree = "<group>"; };
 		10BF41E6227FE671009F291E /* DispatchOnceTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DispatchOnceTest.h; sourceTree = "<group>"; };
 		10BF41E7227FE671009F291E /* DispatchOnceTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DispatchOnceTest.m; sourceTree = "<group>"; };
 		10BF41E9228012A7009F291E /* DispatchBarrierTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DispatchBarrierTest.h; sourceTree = "<group>"; };
@@ -394,6 +395,7 @@
 				1012870D221D3B0900ED6CDE /* Assets.xcassets */,
 				10128712221D3B0900ED6CDE /* Info.plist */,
 				10128713221D3B0900ED6CDE /* main.m */,
+				10B9CBDA2501E3B2006D48AC /* main1.m */,
 				1026DD0F2333173D00738E85 /* TestCode.h */,
 				1026DD102333173D00738E85 /* TestCode.mm */,
 				10271A312452BD3E00B37275 /* TestSwift.swift */,
@@ -687,6 +689,7 @@
 				101286FE221D3B0700ED6CDE /* Frameworks */,
 				101286FF221D3B0700ED6CDE /* Resources */,
 				10EDD7A7249DF02A00DCA29B /* Embed Frameworks */,
+				10B9CBD92501D68C006D48AC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -868,6 +871,23 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=$PATH:/usr/libexec\n\necho ${CONFIGURATION_BUILD_DIR}\necho ${SRCROOT}\necho ${PROJECT_DIR}\ncd ${SRCROOT}/RuntimeLearning.xcodeproj\n\nConfig=${CONFIGURATION}\nUseActiveArch=NO\nif [[ $Config != 'Debug' ]]; then\necho modify project config\n\n#PlistBuddy -c \"Set :objects:10128727221D3B0A00ED6CDE:buildSettings:ONLY_ACTIVE_ARCH $UseActiveArch\" project.pbxproj\nPlistBuddy -c \"Set :objects:10128724221D3B0A00ED6CDE:buildSettings:ONLY_ACTIVE_ARCH $UseActiveArch\" project.pbxproj\nPlistBuddy -c \"Set :objects:10128721221D3B0A00ED6CDE:buildSettings:ONLY_ACTIVE_ARCH $UseActiveArch\" project.pbxproj\n\necho finished modify\nfi\n\n";
 		};
+		10B9CBD92501D68C006D48AC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#chmod 777 ./insertlib.sh\n# 这里只支持模拟器，因为放到本地的framework只打包了模拟器的架构的\n#./insertLib.sh\n\n";
+		};
 		A5F04428BFD1FD0DA890439F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -956,11 +976,11 @@
 				10E6545024939EEE0022156D /* TestFilterUsage.m in Sources */,
 				1076819A241B3B0700D486A9 /* TestCategoryOveride+TestOveride.m in Sources */,
 				1001DA0B222E521700E5EBEF /* TestCategoryOveride.m in Sources */,
-				10128714221D3B0900ED6CDE /* main.m in Sources */,
 				107B55D62410C79100EDCCD6 /* NSCacheTest.m in Sources */,
 				10D531002227B5B7007AE594 /* TestSubClassSwizzle.m in Sources */,
 				1025D0EB225DA683008E4CC3 /* UIFont+Test.m in Sources */,
 				10128706221D3B0700ED6CDE /* AppDelegate.m in Sources */,
+				10B9CBDF2501E604006D48AC /* main.m in Sources */,
 				10113DE722CF85EA00132833 /* UITextField+HCInputType.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
