@@ -122,32 +122,13 @@ void testBenchmark(void);
     [self initDataSource];
     [self.view addSubview:self.entryTableView];
     NSLog(@"%s", __FUNCTION__);
-    //[self testObserverProperty];
+    [self testObserverProperty];
     //[self checkHasInsertedDylib];
 #if DEBUG
     injectBlock {
         [weakSelf setupUI];
     };
 #endif
-//    NSMutableArray *array = [NSMutableArray arrayWithCapacity:2];
-//    [array addObject:@"1"];
-//    NSObject *obj;
-//    [array addObject:obj];//** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '*** -[__NSArrayM insertObject:atIndex:]: object cannot be nil'
-//    NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithCapacity:0];
-//    [dict setObject:@"2222" forKey:@"111"]; // dict的hash返回的就是count
-//    [dict setValue:nil forKey:@"111"]; // 如果value是nil则内部调用remove CoreFoundation`-[__NSDictionaryM removeObjectForKey:]:
-    
-    ViewController *vc = [ViewController new];
-    object_setClass(vc, [UIViewController class]);
-    Class cls = [vc class];
-    NSLog(@"cls = %@", cls);
-    Class cls1 = object_getClass(vc);
-    NSLog(@"cls1 = %@", cls1);
-    if (cls == cls1) {
-        NSLog(@"is Equal");
-    } else {
-        NSLog(@"not Equal");
-    }
 }
 
 void functionF() {
@@ -258,6 +239,8 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
     if ([keyPath isEqualToString:@"backgroundColor"]) {
         NSLog(@"backgroundColor: %@", change);
+    } else if ([keyPath isEqualToString:@"title"]) {
+        NSLog(@"title: %@", change);
     }
 }
 
@@ -679,11 +662,12 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
 
 - (BOOL)checkHasInsertedDylib {
     char *env = getenv("DYLD_INSERT_LIBRARIES");
-    // 没做任何注入的时候返回的是NULL
+    // 没做任何注入的时候返回的是NULL??非越狱手机获取不到环境变量
     if (env == NULL) {
         return NO;
     }
-    NSString *string_content = [[NSString alloc] initWithCString:(const char* )env encoding:NSUTF8StringEncoding];
+    NSString *stringContent = [[NSString alloc] initWithCString:(const char* )env encoding:NSUTF8StringEncoding];
+    NSLog(@"stringContent = %@", stringContent);
     // /Library/MobileSubstrate/MobileSubstrate.dylib
     return YES;
 }
@@ -736,7 +720,21 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
     view.backgroundColor = [UIColor redColor];
     HCSwizzleUnhookInstance(view);
     NSLog(@"unhook:\n self.class = %@ object_getClass(self) = %@", view.class, object_getClass(view));
+    
+    ViewController *vc = [ViewController new];
+    object_setClass(vc, [UIViewController class]);
+    Class cls = [vc class];
+    NSLog(@"cls = %@", cls);
+    Class cls1 = object_getClass(vc);
+    NSLog(@"cls1 = %@", cls1);
+    if (cls == cls1) {
+        NSLog(@"is Equal");
+    } else {
+        NSLog(@"not Equal");
+    }
 }
+
+#pragma mark - Observer
 
 - (void)testObserverProperty {
     HCObserveValueForKey(self, @"title");

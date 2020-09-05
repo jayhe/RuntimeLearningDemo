@@ -8,8 +8,16 @@
 
 import Foundation
 
+struct TestStruct {
+    var age = 21
+    var married = false
+    var height = 17
+}
+
 class TestSwift : NSObject {
     @objc class public func testSwiftMethod() {
-        print("testSwiftMethod");
+        var aStruct = TestStruct()
+        aStruct.married = true
+        print("testSwiftMethod")
     }
 }

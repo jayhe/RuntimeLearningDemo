@@ -13,6 +13,12 @@
 
 #define kHCHookPrefix   @"hc_hook_"
 
+@interface HCKVOSetter : NSObject
+
+- (void)testSetter:(id)obj;
+
+@end
+
 @implementation HCSwizzleInstance
 
 /*
@@ -100,12 +106,14 @@ void HCSwizzleHookInstance(id instance) {
     Class hookClass = objc_allocateClassPair(originalClass, HCHookClassName(originalClass), 0);
     if (!hookClass) {
         // The new class, or Nil if the class could not be created (for example, the desired name is already in use).
-        hookClass = object_getClass(instance);
+        hookClass = objc_getClass(HCHookClassName(originalClass));
         if (hookClass) {
             object_setClass(instance, hookClass);
             return;
         }
     }
+    // 这里如果需要对该实例的所有方法都做hook的话，比如用来记录一些执行的信息；那么就可以将方便列表遍历进行hook，但是需要一个统一的跳板来处理不同方法的不同参数及参数个数
+    /*
     unsigned int count;
     Method *mList = class_copyMethodList(originalClass, &count);
     for (unsigned int i = 0; i < count; i++) {
@@ -123,6 +131,7 @@ void HCSwizzleHookInstance(id instance) {
         // TODO:trampoline 需要一个通用的跳板来hook所有的方法
     }
     free(mList);
+     */
     for (Class class in @[hookClass, object_getClass(hookClass)]) {
         SEL classSEL = @selector(class);
         Method oldMethod = class_getInstanceMethod(class, classSEL);
@@ -138,8 +147,11 @@ void HCSwizzleHookInstance(id instance) {
 }
 
 void HCSwizzleUnhookInstance(id instance) {
-    if ([instance class] != object_getClass(instance)) {
+    Class hookClass = object_getClass(instance);
+    if ([instance class] != hookClass) {
         object_setClass(instance, [instance class]);
+        //const char *name = class_getName(hookClass);
+        //objc_duplicateClass(hookClass, name, 0);
     }
 }
 
@@ -156,18 +168,70 @@ void HCObserveValueForKey(id instance, NSString *key) {
         return;
     }
     const char *mType = method_getTypeEncoding(oldMethod);
+    /*
     IMP originImp = method_getImplementation(oldMethod);
     class_replaceMethod([instance class], setSelector, imp_implementationWithBlock(^(void){
         [instance willChangeValueForKey:key];
         ((void(*)(id, SEL, id))originImp)(instance, setSelector, @"1111");
         [instance didChangeValueForKey:key];
     }), mType);
+    */
+    Method hookImpMethod = class_getInstanceMethod(HCKVOSetter.class, @selector(testSetter:));
+    IMP hookImp = method_getImplementation(hookImpMethod);
+    class_addMethod(object_getClass(instance), setSelector, hookImp, mType);
 }
 
 #pragma mark - Private Method
 
 static const char *HCHookClassName(Class class) {
   return [kHCHookPrefix stringByAppendingString:NSStringFromClass(class)].UTF8String;
+}
+
+@end
+
+@implementation HCKVOSetter
+
+static  NSString * _Nullable getKey(SEL cmd);
+
+- (void)testSetter:(id)obj {
+    NSString *key = getKey(_cmd);
+    if (!key) {
+        return;
+    }
+    Class cls = [self class];
+    void (*imp)(id, SEL, id);
+    Method originMethod = class_getInstanceMethod(cls, _cmd);
+    imp = (void(*)(id, SEL, id))method_getImplementation(originMethod); // 拿到原始函数的imp
+    if ([cls automaticallyNotifiesObserversForKey:key]) {
+        //[self willChangeValueForKey:key]; // 走系统的那一套，找到observer去执行
+        imp(self, _cmd, obj);
+        //[self didChangeValueForKey:key];
+        [self observeValueForKeyPath:key ofObject:obj change:@{} context:nil];
+    } else {
+        imp(self, _cmd, obj);
+    }
+}
+
+NSString *getKey(SEL cmd) {
+    //const char *selName = sel_getName(cmd);
+    NSString *selString = NSStringFromSelector(cmd);
+    if (!selString) {
+        return nil;
+    }
+    NSString *lowerSelString = selString.lowercaseString;
+    BOOL checkIsVaildSetter = [lowerSelString containsString:@"set"] && [lowerSelString containsString:@":"];
+    if (!checkIsVaildSetter) {
+        return nil;
+    }
+    
+    NSRange setRange = [lowerSelString rangeOfString:@"set"];
+    NSInteger keyStart = setRange.location + setRange.length;
+    NSRange colonRange = [lowerSelString rangeOfString:@":"];
+    NSInteger keyEnd = colonRange.location;
+    if (keyEnd < keyStart) {
+        return nil;
+    }
+    return [selString substringWithRange:NSMakeRange(keyStart, keyEnd - keyStart)];
 }
 
 @end
