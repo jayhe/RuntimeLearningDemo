@@ -12,6 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TestCategoryOveride (TestOveride)
 
+// 测试类别将私有方法公开化，比如第三方的库中的私有方法，我们要调用就是使用performSelector或者objc_msgSend的方式
+- (void)privateMethod;
+
 @end
 
 NS_ASSUME_NONNULL_END

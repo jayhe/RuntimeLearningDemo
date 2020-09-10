@@ -10,6 +10,7 @@
 #import <objc/runtime.h>
 #import <objc/message.h>
 #import <UIKit/UIKit.h>
+#import <libffi-iOS/ffi.h>
 
 #define kHCHookPrefix   @"hc_hook_"
 
@@ -98,6 +99,10 @@
  */
 
 void HCSwizzleHookInstance(id instance) {
+    _HCSwizzleHookInstance(instance, true);
+}
+
+void _HCSwizzleHookInstance(id instance, bool hookMethods) {
     Class originalClass = object_getClass(instance);
     if ([instance class] != originalClass) {
         // 已经hook过了
@@ -112,26 +117,26 @@ void HCSwizzleHookInstance(id instance) {
             return;
         }
     }
-    // 这里如果需要对该实例的所有方法都做hook的话，比如用来记录一些执行的信息；那么就可以将方便列表遍历进行hook，但是需要一个统一的跳板来处理不同方法的不同参数及参数个数
-    /*
-    unsigned int count;
-    Method *mList = class_copyMethodList(originalClass, &count);
-    for (unsigned int i = 0; i < count; i++) {
-        Method method = mList[i];
-        SEL selector = method_getName(method);
-        if ([NSStringFromSelector(selector) hasPrefix:kHCHookPrefix]) {
-            continue;
+    if (hookMethods) {
+        // 这里如果需要对该实例的所有方法都做hook的话，比如用来记录一些执行的信息；那么就可以将方便列表遍历进行hook，但是需要一个统一的跳板来处理不同方法的不同参数及参数个数
+        unsigned int count;
+        Method *mList = class_copyMethodList(originalClass, &count);
+        for (unsigned int i = 0; i < count; i++) {
+            Method method = mList[i];
+            SEL selector = method_getName(method);
+            if ([NSStringFromSelector(selector) hasPrefix:kHCHookPrefix]) {
+                continue;
+            }
+            const char *mType = method_getTypeEncoding(method);
+            IMP originImp = method_getImplementation(method);
+            class_addMethod(hookClass, selector, originImp, mType);
+            class_addMethod(hookClass, selector, imp_implementationWithBlock(^(void){
+                return originImp;
+            }), mType);
+            // TODO:trampoline 需要一个通用的跳板来hook所有的方法
         }
-        const char *mType = method_getTypeEncoding(method);
-        IMP originImp = method_getImplementation(method);
-        class_addMethod(hookClass, selector, originImp, mType);
-//        class_addMethod(hookClass, selector, imp_implementationWithBlock(^(void){
-//            return originImp;
-//        }), mType);
-        // TODO:trampoline 需要一个通用的跳板来hook所有的方法
+        free(mList);
     }
-    free(mList);
-     */
     for (Class class in @[hookClass, object_getClass(hookClass)]) {
         SEL classSEL = @selector(class);
         Method oldMethod = class_getInstanceMethod(class, classSEL);
@@ -155,11 +160,27 @@ void HCSwizzleUnhookInstance(id instance) {
     }
 }
 
+static void
+trampolineCall(ffi_cif *cif, void *retp, void **args, void *user) {
+  id obj;
+  SEL sel;
+  Class c;
+  void (*imp)(id,SEL,void*);
+    
+  obj = (__bridge id)args[0];
+  sel = *(SEL *)args[1];
+  c = [obj class];
+  imp = (void (*)(id,SEL,void*))[c instanceMethodForSelector: sel];
+  ffi_call(cif, (void*)imp, retp, args);
+}
+
+#pragma mark - Test KVO
+
 void HCObserveValueForKey(id instance, NSString *key) {
     if (!key || key.length == 0) {
         return;
     }
-    HCSwizzleHookInstance(instance);
+    _HCSwizzleHookInstance(instance, false);
     NSString *firstCharacter = [key substringToIndex:1];
     NSString *tmpKey = [key stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:firstCharacter.uppercaseString];
     SEL setSelector = NSSelectorFromString([NSString stringWithFormat:@"set%@:", tmpKey]);
@@ -179,6 +200,10 @@ void HCObserveValueForKey(id instance, NSString *key) {
     Method hookImpMethod = class_getInstanceMethod(HCKVOSetter.class, @selector(testSetter:));
     IMP hookImp = method_getImplementation(hookImpMethod);
     class_addMethod(object_getClass(instance), setSelector, hookImp, mType);
+}
+
+void HCRemoveObserveValueForKey(id instance, NSString *key) {
+    
 }
 
 #pragma mark - Private Method

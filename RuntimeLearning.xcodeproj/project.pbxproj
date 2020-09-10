@@ -43,6 +43,7 @@
 		1086B37423B4930B0002F990 /* TestStaticLib.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1086B37123B4930B0002F990 /* TestStaticLib.h */; };
 		1086B37A23B493550002F990 /* libTestStaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1086B36F23B4930B0002F990 /* libTestStaticLib.a */; };
 		1086B37E23B4AE910002F990 /* FishhookUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1086B37D23B4AE910002F990 /* FishhookUsage.m */; };
+		10A65BCF2508B3A8008D98E1 /* HCTestProtocolImp.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A65BCE2508B3A8008D98E1 /* HCTestProtocolImp.m */; };
 		10A6CA9D241CA882002BFAC5 /* TestMethodInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A6CA9C241CA882002BFAC5 /* TestMethodInvocation.m */; };
 		10AC43E7228A563D00F8F435 /* TestSwizzleInInitialize.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AC43E6228A563D00F8F435 /* TestSwizzleInInitialize.m */; };
 		10B9CBDF2501E604006D48AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10128713221D3B0900ED6CDE /* main.m */; };
@@ -207,6 +208,9 @@
 		1086B37223B4930B0002F990 /* TestStaticLib.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestStaticLib.m; sourceTree = "<group>"; };
 		1086B37C23B4AE910002F990 /* FishhookUsage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FishhookUsage.h; sourceTree = "<group>"; };
 		1086B37D23B4AE910002F990 /* FishhookUsage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FishhookUsage.m; sourceTree = "<group>"; };
+		10A65BCC2508AFAC008D98E1 /* HCTestProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCTestProtocol.h; sourceTree = "<group>"; };
+		10A65BCD2508B3A8008D98E1 /* HCTestProtocolImp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCTestProtocolImp.h; sourceTree = "<group>"; };
+		10A65BCE2508B3A8008D98E1 /* HCTestProtocolImp.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCTestProtocolImp.m; sourceTree = "<group>"; };
 		10A6CA9B241CA882002BFAC5 /* TestMethodInvocation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestMethodInvocation.h; sourceTree = "<group>"; };
 		10A6CA9C241CA882002BFAC5 /* TestMethodInvocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMethodInvocation.m; sourceTree = "<group>"; };
 		10AC43E5228A563D00F8F435 /* TestSwizzleInInitialize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestSwizzleInInitialize.h; sourceTree = "<group>"; };
@@ -365,6 +369,7 @@
 			isa = PBXGroup;
 			children = (
 				10E6B141246296BF00A37097 /* RuntimeLearning.entitlements */,
+				10A65BCB2508AF75008D98E1 /* Protocol */,
 				104D73442498CC4400055968 /* Load&Initialize */,
 				10E6544D24939ED40022156D /* Filters */,
 				10128728221D3B7200ED6CDE /* Utility */,
@@ -535,6 +540,16 @@
 				1086B37D23B4AE910002F990 /* FishhookUsage.m */,
 			);
 			path = fishhook;
+			sourceTree = "<group>";
+		};
+		10A65BCB2508AF75008D98E1 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				10A65BCC2508AFAC008D98E1 /* HCTestProtocol.h */,
+				10A65BCD2508B3A8008D98E1 /* HCTestProtocolImp.h */,
+				10A65BCE2508B3A8008D98E1 /* HCTestProtocolImp.m */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 		10BF41E5227FE65F009F291E /* Dispatch */ = {
@@ -948,6 +963,7 @@
 				1059F82D2488E225005673C8 /* NSObject+HCLog.m in Sources */,
 				10518D81241F79A600AE5265 /* TestCategoryOveride+TestOverideOne.m in Sources */,
 				104D7354249A596B00055968 /* TestCategorySwizzle+LoadOrder.m in Sources */,
+				10A65BCF2508B3A8008D98E1 /* HCTestProtocolImp.m in Sources */,
 				102CDD42246656CD002150BE /* TestFuctionalProgromming.m in Sources */,
 				104D73472498CCB600055968 /* HookMethodInInitialize.m in Sources */,
 				104D734A2498DD7800055968 /* NSObject+Utility.m in Sources */,
@@ -1246,7 +1262,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/RuntimeLearning/Dynamic",
 				);
-				ONLY_ACTIVE_ARCH = NO;
+				ONLY_ACTIVE_ARCH = YES;
 				ORDER_FILE = "${SRCROOT}/RuntimeLearning.order";
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (

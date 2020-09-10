@@ -3,12 +3,14 @@ PODS:
   - BlockHook (1.5.6)
   - fishhook (0.2)
   - HCClangTrace (1.0.0)
+  - libffi-iOS (1.0.0)
 
 DEPENDENCIES:
   - Aspects (~> 1.4.1)
   - BlockHook
   - fishhook (~> 0.2)
   - HCClangTrace (from `https://github.com/jayhe/HCClangTrace.git`)
+  - libffi-iOS (from `https://github.com/sunnyxx/libffi-iOS.git`)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -19,18 +21,24 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   HCClangTrace:
     :git: https://github.com/jayhe/HCClangTrace.git
+  libffi-iOS:
+    :git: https://github.com/sunnyxx/libffi-iOS.git
 
 CHECKOUT OPTIONS:
   HCClangTrace:
     :commit: 354975bd8a7874eb712a7d7dcf1a9ab695c9cbe2
     :git: https://github.com/jayhe/HCClangTrace.git
+  libffi-iOS:
+    :commit: c99de7586d22b9b35100d098a37ed42cb75e26dc
+    :git: https://github.com/sunnyxx/libffi-iOS.git
 
 SPEC CHECKSUMS:
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   BlockHook: 98eedd459f4df950f8b739093804c8955cc3a295
   fishhook: ea19933abfe8f2f52c55fd8b6e2718467d3ebc89
   HCClangTrace: 979d4577d6510fbba59c375160d793b95248fd83
+  libffi-iOS: ef078b4e497e971a867114acc56e89c5cd85c45a
 
-PODFILE CHECKSUM: fb8015d134fa0a93ff98469e54d846ed79d97e96
+PODFILE CHECKSUM: 8c6677104d5da037807a4498a69a6440e57173b9
 
 COCOAPODS: 1.9.1

@@ -13,6 +13,7 @@
 #import "MethodSwizzleUtil.h"
 #import "NSObject+HCWillDealloc.h"
 #import "TestCategoryOveride.h"
+#import "TestCategoryOveride+TestOveride.h"
 #import "UIFont+Test.h"
 #import "AttributeUsage.h"
 #import "DynamicCallFunctionTest.h"
@@ -49,6 +50,7 @@
 #import "HookMethodInInitialize.h"
 #import "NSObject+RLSafe.h"
 #include <stdlib.h>
+#import "HCTestProtocol.h"
 
 @class TableDataRow;
 
@@ -122,7 +124,7 @@ void testBenchmark(void);
     [self initDataSource];
     [self.view addSubview:self.entryTableView];
     NSLog(@"%s", __FUNCTION__);
-    [self testObserverProperty];
+    //[self testObserverProperty];
     //[self checkHasInsertedDylib];
 #if DEBUG
     injectBlock {
@@ -283,6 +285,12 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
         TableDataRow *row10 = [TableDataRow new];
         row10.title = @"函数式编程的使用";
         row10.action = @selector(testFP);
+        TableDataRow *row11 = [TableDataRow new];
+        row11.title = @"修改table的indicator样式";
+        row11.action = @selector(changeTableIndicatorStyle);
+        TableDataRow *row12 = [TableDataRow new];
+        row12.title = @"测试protocol";
+        row12.action = @selector(testProtocolUsage);
         section0.items = @[
             row0,
             row1,
@@ -294,7 +302,9 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
             row7,
             row8,
             row9,
-            row10].mutableCopy;
+            row10,
+            row11,
+            row12].mutableCopy;
     }
     
     TableDataSection *section1 = [TableDataSection new];
@@ -532,6 +542,42 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
     [TestFuctionalProgromming new];
 }
 
+- (void)changeTableIndicatorStyle {
+    // @property (readonly, nonatomic, getter=_horizontalScrollIndicator) UIView* horizontalScrollIndicator;
+    // @property (readonly, nonatomic, getter=_verticalScrollIndicator) UIView* verticalScrollIndicator;
+    UIView *indicator = [self.entryTableView valueForKey:@"verticalScrollIndicator"];
+    if (indicator) {
+        [indicator setBackgroundColor:[UIColor purpleColor]];
+        // frame修改会滑动之后就失效了。
+        CGRect bounds = indicator.bounds;
+        bounds.size.width = 6;
+        indicator.bounds = bounds;
+    }
+    /*
+     (lldb) po [0x7fa97d020000 valueForKey:@"verticalScrollIndicator"]
+     <_UIScrollViewScrollIndicator: 0x7fa97c510d70; frame = (369 3; 3 218); alpha = 0; autoresize = LM; layer = <CALayer: 0x600003eed080>>
+     (lldb) expression ((UIView *)0x7fa97c510d70).backgroundColor = [UIColor redColor]
+     (UICachedDeviceRGBColor *) $31 = 0x000060000261bb00
+     (lldb) flush
+     */
+}
+
+- (void)testProtocolUsage {
+    // Protocol是继承自NSObject
+    __unused Protocol *testProtocol = @protocol(HCTestProtocol);
+    if ([(Class)(testProtocol) isKindOfClass:[NSObject class]]) {
+        NSLog(@"testProtocol is NSObject");
+    }
+    //id obj = [[(Class)(testProtocol) alloc] init];
+    Protocol *testA = @protocol(HCTestAProtocol);
+    Protocol *testB = @protocol(HCTestBProtocol);
+    __unused NSString *testAName = [NSString stringWithUTF8String:protocol_getName(testA)]; // HCTestAProtocol
+    __unused NSString *testBName = [NSString stringWithUTF8String:protocol_getName(testB)]; // HCTestBProtocol
+    if (protocol_conformsToProtocol(testA, @protocol(HCModuleATestProtocol))) {
+        NSLog(@"call module A");
+    }
+}
+
 #pragma mark - Runtime部分
 
 - (void)testClassSwizzle {
@@ -630,7 +676,9 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
 }
 
 - (void)testCategoryOveride {
-    [TestCategoryOveride new];
+    TestCategoryOveride *obj = [TestCategoryOveride new];
+    // 通过类别调用未公开的方法
+    [obj privateMethod];
 }
 
 - (void)testSwizzleInInitialize {

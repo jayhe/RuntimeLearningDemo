@@ -63,6 +63,10 @@
     NSLog(@"orginal");
 }
 
+- (void)privateMethod {
+    NSLog(@"privateMethod");
+}
+
 + (void)log1 {
     NSLog(@"log1");
 }
