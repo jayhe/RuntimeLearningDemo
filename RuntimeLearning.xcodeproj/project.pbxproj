@@ -884,7 +884,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=$PATH:/usr/libexec\n\necho ${CONFIGURATION_BUILD_DIR}\necho ${SRCROOT}\necho ${PROJECT_DIR}\ncd ${SRCROOT}/RuntimeLearning.xcodeproj\n\nConfig=${CONFIGURATION}\nUseActiveArch=NO\nif [[ $Config != 'Debug' ]]; then\necho modify project config\n\n#PlistBuddy -c \"Set :objects:10128727221D3B0A00ED6CDE:buildSettings:ONLY_ACTIVE_ARCH $UseActiveArch\" project.pbxproj\nPlistBuddy -c \"Set :objects:10128724221D3B0A00ED6CDE:buildSettings:ONLY_ACTIVE_ARCH $UseActiveArch\" project.pbxproj\nPlistBuddy -c \"Set :objects:10128721221D3B0A00ED6CDE:buildSettings:ONLY_ACTIVE_ARCH $UseActiveArch\" project.pbxproj\n\necho finished modify\nfi\n\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nexport PATH=$PATH:/usr/libexec\necho start modify project config\necho ${CONFIGURATION_BUILD_DIR}\necho ${SRCROOT}\necho ${PROJECT_DIR}\ncd ${SRCROOT}/RuntimeLearning.xcodeproj\n\nConfig=${CONFIGURATION}\nUseActiveArch=NO\nif [[ $Config != 'Debug' ]]; then\necho modify project config\n\n#PlistBuddy -c \"Set :objects:10128727221D3B0A00ED6CDE:buildSettings:ONLY_ACTIVE_ARCH $UseActiveArch\" project.pbxproj\nPlistBuddy -c \"Set :objects:10128724221D3B0A00ED6CDE:buildSettings:ONLY_ACTIVE_ARCH $UseActiveArch\" project.pbxproj\nPlistBuddy -c \"Set :objects:10128721221D3B0A00ED6CDE:buildSettings:ONLY_ACTIVE_ARCH $UseActiveArch\" project.pbxproj\n\necho finished modify project config\nfi\n\n";
 		};
 		10B9CBD92501D68C006D48AC /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1269,6 +1269,7 @@
 					"$(inherited)",
 					"-ObjC",
 					"-l\"Aspects\"",
+					"-Wl,-sectcreate,__RESTRICT,__restrict,/dev/null",
 				);
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = hc.RuntimeLearning.demo;
