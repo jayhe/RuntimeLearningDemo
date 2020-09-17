@@ -51,6 +51,7 @@
 #import "NSObject+RLSafe.h"
 #include <stdlib.h>
 #import "HCTestProtocol.h"
+#import <Aspects/Aspects.h>
 
 @class TableDataRow;
 
@@ -107,6 +108,8 @@ void testBenchmark(void);
 @property (nonatomic, strong) NSCacheTest *testCache;
 @property (nonatomic, strong) UITableView *entryTableView;
 @property (nonatomic, strong) NSMutableArray<TableDataSection*> *dataSource;
+@property (nonatomic, strong) NSString *nonatomicText;
+@property (atomic, strong) NSString *atomicText;
 
 - (void)testMethodNotImp;
 
@@ -291,6 +294,12 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
         TableDataRow *row12 = [TableDataRow new];
         row12.title = @"测试protocol";
         row12.action = @selector(testProtocolUsage);
+        TableDataRow *row13 = [TableDataRow new];
+        row13.title = @"测试并发给属性赋值-noatomic";
+        row13.action = @selector(testAsyncSetNoatomicProperty);
+        TableDataRow *row14 = [TableDataRow new];
+        row14.title = @"测试并发给属性赋值-atomic";
+        row14.action = @selector(testAsyncSetAtomicProperty);
         section0.items = @[
             row0,
             row1,
@@ -304,7 +313,9 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
             row9,
             row10,
             row11,
-            row12].mutableCopy;
+            row12,
+            row13,
+            row14].mutableCopy;
     }
     
     TableDataSection *section1 = [TableDataSection new];
@@ -547,11 +558,14 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
     // @property (readonly, nonatomic, getter=_verticalScrollIndicator) UIView* verticalScrollIndicator;
     UIView *indicator = [self.entryTableView valueForKey:@"verticalScrollIndicator"];
     if (indicator) {
+        // 修改颜色
         [indicator setBackgroundColor:[UIColor purpleColor]];
-        // frame修改会滑动之后就失效了。
-        CGRect bounds = indicator.bounds;
-        bounds.size.width = 6;
-        indicator.bounds = bounds;
+        // 修改宽度，利用Aspects去hook实例对象
+        [indicator aspect_hookSelector:@selector(setFrame:) withOptions:AspectPositionAfter usingBlock:^(id<AspectInfo> aspectInfo) {
+            CGRect bounds = indicator.bounds;
+            bounds.size.width = 6;
+            ((UIView *)aspectInfo.instance).bounds = bounds;
+        } error:NULL];
     }
     /*
      (lldb) po [0x7fa97d020000 valueForKey:@"verticalScrollIndicator"]
@@ -575,6 +589,57 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
     __unused NSString *testBName = [NSString stringWithUTF8String:protocol_getName(testB)]; // HCTestBProtocol
     if (protocol_conformsToProtocol(testA, @protocol(HCModuleATestProtocol))) {
         NSLog(@"call module A");
+    }
+}
+
+- (void)testAsyncSetNoatomicProperty {
+    for (NSInteger i = 0; i < 100000; i++) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            self.nonatomicText = [NSString stringWithFormat:@"abcdefghj%ld", (long)i];
+            // 这里改成下面这句会怎样？？
+            // self.nonatomicText = [NSString stringWithFormat:@"%ld", (long)i];
+        });
+    }
+    /* 闪退的原因，由于是nonatomic，set方法的调用不是原子性的，就存在多个线程可能同时在执行，如果一个线程执行到release另外一个线程也执行到release，那么久会异常。
+     - (void)setNonatomicText:(NSString *)nonatomicText {
+         [nonatomicText retain];
+         [_nonatomicText release];
+         _nonatomicText = nonatomicText;
+     }
+     看看libmalloc的源码：
+     // Try to free to a tiny region.
+     if ((uintptr_t)ptr & (TINY_QUANTUM - 1)) {
+         szone_error(szone, 1, "Non-aligned pointer being freed", ptr, NULL);
+         return;
+     }
+     */
+    /*
+     libobjc.A.dylib`objc_release:
+         0x7fff51411000 <+0>:  testq  %rdi, %rdi
+         0x7fff51411003 <+3>:  je     0x7fff51411007            ; <+7>
+         0x7fff51411005 <+5>:  jns    0x7fff51411008            ; <+8>
+         0x7fff51411007 <+7>:  retq
+         0x7fff51411008 <+8>:  movq   (%rdi), %rax
+     ->  0x7fff5141100b <+11>: testb  $0x4, 0x20(%rax)
+         0x7fff5141100f <+15>: je     0x7fff5141101b            ; <+27>
+         0x7fff51411011 <+17>: movl   $0x1, %esi
+         0x7fff51411016 <+22>: jmp    0x7fff51411028            ; objc_object::sidetable_release(bool)
+         0x7fff5141101b <+27>: movq   0x389f549e(%rip), %rsi    ; "release"
+         0x7fff51411022 <+34>: jmpq   *0x36625268(%rip)         ; (void *)0x00007fff513f7780: objc_msgSend
+     */
+}
+
+- (void)testAsyncSetAtomicProperty {
+    for (NSInteger i = 0; i < 100000; i++) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            self.atomicText = [NSString stringWithFormat:@"abcdefghj%ld", (long)i];
+        });
+    }
+    // atomic的不会闪退了，atomic保证读取的操作是原子性的，但是不保证数据是安全的，有可能一个线程读另外一个在写，那么就数据不同步了
+    for (NSInteger i = 0; i < 100000; i++) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            self.atomicText;
+        });
     }
 }
 

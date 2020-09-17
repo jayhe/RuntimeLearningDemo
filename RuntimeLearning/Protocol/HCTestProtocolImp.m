@@ -27,6 +27,11 @@
     return nil;
 }
 
+- (void)testMethod {
+    
+}
+
+
 @end
 
 @implementation HCTestSubAProtocolImp

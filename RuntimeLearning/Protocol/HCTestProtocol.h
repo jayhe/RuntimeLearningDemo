@@ -13,7 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol HCTestProtocol <NSObject>
 
 @property (nonatomic, copy) NSString *testName;
-
+@required
+- (void)testMethod;
+@optional
 + (NSString *)moduleName;
 
 @end

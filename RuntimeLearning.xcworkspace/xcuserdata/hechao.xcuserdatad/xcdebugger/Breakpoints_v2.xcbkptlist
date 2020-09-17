@@ -2430,9 +2430,9 @@
             filePath = "RuntimeLearning/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "703"
-            endingLineNumber = "703"
-            landmarkName = "-logLibASLR"
+            startingLineNumber = "736"
+            endingLineNumber = "736"
+            landmarkName = "-testDoSthWhenDealloc"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2480,8 +2480,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "239"
             endingLineNumber = "239"
-            landmarkName = "ViewController"
-            landmarkType = "3">
+            landmarkName = "-testCatchUnrecognizedSelector"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2526,9 +2526,9 @@
             filePath = "RuntimeLearning/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "755"
-            endingLineNumber = "755"
-            landmarkName = "-testDynamicCall"
+            startingLineNumber = "788"
+            endingLineNumber = "788"
+            landmarkName = "-testCallStack"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2560,8 +2560,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "154"
             endingLineNumber = "154"
-            landmarkName = "ViewController"
-            landmarkType = "3">
+            landmarkName = "-setupUI"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2576,7 +2576,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "565"
             endingLineNumber = "565"
-            landmarkName = "-testProtocolUsage"
+            landmarkName = "-changeTableIndicatorStyle"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2608,7 +2608,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "572"
             endingLineNumber = "572"
-            landmarkName = "-testProtocolUsage"
+            landmarkName = "-changeTableIndicatorStyle"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2624,8 +2624,19 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "569"
             endingLineNumber = "569"
-            landmarkName = "-testProtocolUsage"
+            landmarkName = "-changeTableIndicatorStyle"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
+         <BreakpointContent
+            uuid = "FC811EF5-9FD3-4028-AE32-3C56D4B28DF9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            scope = "1"
+            stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
