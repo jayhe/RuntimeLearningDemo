@@ -10,8 +10,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-typedef void(^HCBlock)(NSObject *target);
+/// 设置关联对象不支持weak的方式
+/// @param object 宿主对象
+/// @param key 关联key
+/// @param value 关联的对象
+extern void objc_setWeakAssociatedObject(id _Nonnull object, const void * _Nonnull key, id _Nullable value);
 
+typedef void(^HCBlock)(__unsafe_unretained NSObject *target);
+
+/// 这个类主要是实现一些Association的应用场景
 @interface NSObject (HCWillDealloc)
 
 - (void)hc_doSthWhenDeallocWithBlock:(HCBlock)block;
@@ -20,7 +27,9 @@ typedef void(^HCBlock)(NSObject *target);
 
 @interface HCAssociatedObject : NSObject
 
-- (instancetype)initWithBlock:(HCBlock)block target:(NSObject *)target;
+- (instancetype)initWithTarget:(NSObject *)target;
+//- (instancetype)initWithBlock:(HCBlock)block target:(NSObject *)target;
+- (void)addActionBlock:(HCBlock)block;
 
 @end
 

@@ -21,6 +21,10 @@ end
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
+      deployment_target = config.build_settings['IPHONEOS_DEPLOYMENT_TARGET']
+      if deployment_target.to_f < 9.0 #转成float进行比较；发现直接比较字符串 < '10.0'没效果
+        config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '9.0'
+      end
       macho_type = config.build_settings['MACH_O_TYPE']
       #if macho_type == 'staticlib'
         if config.name == 'Debug'

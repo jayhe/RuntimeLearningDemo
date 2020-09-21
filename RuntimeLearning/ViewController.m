@@ -160,6 +160,10 @@ int functionG(int x) {
     NSLog(@"%s", __FUNCTION__);
     self.view.backgroundColor = [UIColor lightGrayColor];
 //    [NSThread sleepForTimeInterval:5];
+//    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+//        self.view.backgroundColor = [UIColor redColor];
+//        //[self.view addSubview:[[UIImageView alloc] initWithImage:nil]]; // 'NSInternalInconsistencyException', reason: 'Modifications to the layout engine must not be performed from a background thread after it has been accessed from the main thread.'
+//    });
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -237,6 +241,35 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
         default:
             break;
     }
+}
+
+- (void)testSetWeakAssociation {
+#define TestAssign 0
+    // 系统的关联对象的Policy非强持有引用只有assign，没有weak这种的；
+    // assign就有个问题，当关联的对象释放了，宿主对象再次获取就有问题，可能导致bad access异常
+#if TestAssign
+    static char kTestAssignKey;
+    {
+        {
+            UILabel *associatedLabel = [UILabel new];
+            objc_setAssociatedObject(self, &kTestAssignKey, associatedLabel, OBJC_ASSOCIATION_ASSIGN);
+        }
+        UILabel *label = objc_getAssociatedObject(self, &kTestAssignKey); // EXC_BAD_ACCESS
+    }
+#else
+    // 如果关联对象也支持weak这种特性就好了，关联的对象释放了，自动置空，宿主对象再次获取拿到的是个nil
+    static char kTestWeakKey;
+    {
+        {
+            UILabel *associatedLabel = [UILabel new];
+            objc_setWeakAssociatedObject(self, &kTestWeakKey, associatedLabel);
+            //objc_setAssociatedObject(self, &kTestWeakKey, associatedLabel, OBJC_ASSOCIATION_ASSIGN);
+            //objc_setAssociatedObject(self, &kTestWeakKey, nil, OBJC_ASSOCIATION_ASSIGN);
+        }
+        UILabel *label = objc_getAssociatedObject(self, &kTestWeakKey);
+        NSLog(@"label = %@", label);
+    }
+#endif
 }
 
 #pragma mark - Observer
@@ -369,6 +402,9 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
         TableDataRow *row15 = [TableDataRow new];
         row15.title = @"测试catch unrecognized selector";
         row15.action = @selector(testCatchUnrecognizedSelector);
+        TableDataRow *row16 = [TableDataRow new];
+        row16.title = @"测试关联对象weak";
+        row16.action = @selector(testSetWeakAssociation);
         section1.items = @[
             row0,
             row1,
@@ -385,7 +421,8 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
             row11,
             row12,
             row14,
-            row15].mutableCopy;
+            row15,
+            row16].mutableCopy;
     }
     TableDataSection *section2 = [TableDataSection new];
     section2.title = @"优化部分";
@@ -733,11 +770,23 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
 - (void)testDoSthWhenDealloc {
     UIScrollView *tmpView = [UIScrollView new];
     [tmpView addObserver:self forKeyPath:@"backgroundColor" options:NSKeyValueObservingOptionNew context:nil];
-    __weak typeof(self) weakSelf = self;
+    [tmpView addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionNew context:nil];
+    //__weak typeof(tmpView) weakView = tmpView;
     [tmpView hc_doSthWhenDeallocWithBlock:^(NSObject * _Nonnull target) {
-        __strong typeof(target) strongTarget = target;
-        [strongTarget removeObserver:weakSelf forKeyPath:@"backgroundColor"];
+        //__strong typeof(target) strongTarget = target;
+        //[weakView removeObserver:self forKeyPath:@"backgroundColor"];
+        [target removeObserver:self forKeyPath:@"backgroundColor"];
+        NSLog(@"removeObserver:forKeyPath:backgroundColor");
     }];
+    [tmpView hc_doSthWhenDeallocWithBlock:^(NSObject * _Nonnull target) {
+        //__strong typeof(target) strongTarget = target;
+        //[weakView removeObserver:self forKeyPath:@"frame"];
+        [target removeObserver:self forKeyPath:@"frame"];
+        NSLog(@"removeObserver:forKeyPath:frame");
+    }];
+    /*
+     'Cannot remove an observer <ViewController 0x7f97a5f05e60> for the key path "backgroundColor" from <UIScrollView 0x7f97a787b000> because it is not registered as an observer.'
+     */
 }
 
 - (void)testCategoryOveride {
