@@ -243,35 +243,6 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
     }
 }
 
-- (void)testSetWeakAssociation {
-#define TestAssign 0
-    // 系统的关联对象的Policy非强持有引用只有assign，没有weak这种的；
-    // assign就有个问题，当关联的对象释放了，宿主对象再次获取就有问题，可能导致bad access异常
-#if TestAssign
-    static char kTestAssignKey;
-    {
-        {
-            UILabel *associatedLabel = [UILabel new];
-            objc_setAssociatedObject(self, &kTestAssignKey, associatedLabel, OBJC_ASSOCIATION_ASSIGN);
-        }
-        UILabel *label = objc_getAssociatedObject(self, &kTestAssignKey); // EXC_BAD_ACCESS
-    }
-#else
-    // 如果关联对象也支持weak这种特性就好了，关联的对象释放了，自动置空，宿主对象再次获取拿到的是个nil
-    static char kTestWeakKey;
-    {
-        {
-            UILabel *associatedLabel = [UILabel new];
-            objc_setWeakAssociatedObject(self, &kTestWeakKey, associatedLabel);
-            //objc_setAssociatedObject(self, &kTestWeakKey, associatedLabel, OBJC_ASSOCIATION_ASSIGN);
-            //objc_setAssociatedObject(self, &kTestWeakKey, nil, OBJC_ASSOCIATION_ASSIGN);
-        }
-        UILabel *label = objc_getAssociatedObject(self, &kTestWeakKey);
-        NSLog(@"label = %@", label);
-    }
-#endif
-}
-
 #pragma mark - Observer
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
@@ -771,22 +742,47 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
     UIScrollView *tmpView = [UIScrollView new];
     [tmpView addObserver:self forKeyPath:@"backgroundColor" options:NSKeyValueObservingOptionNew context:nil];
     [tmpView addObserver:self forKeyPath:@"frame" options:NSKeyValueObservingOptionNew context:nil];
-    //__weak typeof(tmpView) weakView = tmpView;
     [tmpView hc_doSthWhenDeallocWithBlock:^(NSObject * _Nonnull target) {
-        //__strong typeof(target) strongTarget = target;
-        //[weakView removeObserver:self forKeyPath:@"backgroundColor"];
         [target removeObserver:self forKeyPath:@"backgroundColor"];
         NSLog(@"removeObserver:forKeyPath:backgroundColor");
     }];
     [tmpView hc_doSthWhenDeallocWithBlock:^(NSObject * _Nonnull target) {
-        //__strong typeof(target) strongTarget = target;
-        //[weakView removeObserver:self forKeyPath:@"frame"];
         [target removeObserver:self forKeyPath:@"frame"];
         NSLog(@"removeObserver:forKeyPath:frame");
     }];
     /*
+     使用OBJC_ASSOCIATION_RETAIN设置关联对象会有一下异常
      'Cannot remove an observer <ViewController 0x7f97a5f05e60> for the key path "backgroundColor" from <UIScrollView 0x7f97a787b000> because it is not registered as an observer.'
      */
+}
+
+- (void)testSetWeakAssociation {
+#define TestAssign 0
+    // 系统的关联对象的Policy非强持有引用只有assign，没有weak这种的；
+    // assign就有个问题，当关联的对象释放了，宿主对象再次获取就有问题，可能导致bad access异常
+#if TestAssign
+    static char kTestAssignKey;
+    {
+        {
+            UILabel *associatedLabel = [UILabel new];
+            objc_setAssociatedObject(self, &kTestAssignKey, associatedLabel, OBJC_ASSOCIATION_ASSIGN);
+        }
+        UILabel *label = objc_getAssociatedObject(self, &kTestAssignKey); // EXC_BAD_ACCESS
+    }
+#else
+    // 如果关联对象也支持weak这种特性就好了，关联的对象释放了，自动置空，宿主对象再次获取拿到的是个nil
+    static char kTestWeakKey;
+    {
+        {
+            UILabel *associatedLabel = [UILabel new];
+            objc_setWeakAssociatedObject(self, &kTestWeakKey, associatedLabel);
+            //objc_setAssociatedObject(self, &kTestWeakKey, associatedLabel, OBJC_ASSOCIATION_ASSIGN);
+            //objc_setAssociatedObject(self, &kTestWeakKey, nil, OBJC_ASSOCIATION_ASSIGN);
+        }
+        UILabel *label = objc_getAssociatedObject(self, &kTestWeakKey);
+        NSLog(@"label = %@", label); // null
+    }
+#endif
 }
 
 - (void)testCategoryOveride {

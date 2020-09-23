@@ -2496,7 +2496,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "796"
             endingLineNumber = "796"
-            landmarkName = "-testCategoryOveride"
+            landmarkName = "-testSwizzleInInitialize"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2544,7 +2544,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "571"
             endingLineNumber = "571"
-            landmarkName = "-testStructUsage"
+            landmarkName = "-changeTableIndicatorStyle"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2576,8 +2576,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "578"
             endingLineNumber = "578"
-            landmarkName = "ViewController"
-            landmarkType = "3">
+            landmarkName = "-changeTableIndicatorStyle"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2592,7 +2592,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "575"
             endingLineNumber = "575"
-            landmarkName = "-testClassCluster"
+            landmarkName = "-changeTableIndicatorStyle"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2605,38 +2605,6 @@
             continueAfterRunningActions = "No"
             scope = "1"
             stopOnStyle = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3B243BC7-6BD9-468F-A79A-E3E8F3E314A0"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RuntimeLearning/ViewController.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "269"
-            endingLineNumber = "269"
-            landmarkName = "-testSetWeakAssociation"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "8A43F83F-1096-4506-9393-A6FD7A6E7218"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RuntimeLearning/ViewController.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "265"
-            endingLineNumber = "265"
-            landmarkName = "-testSetWeakAssociation"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2667,7 +2635,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "785"
             endingLineNumber = "785"
-            landmarkName = "-testDoSthWhenDealloc"
+            landmarkName = "-testSetWeakAssociation"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -2683,7 +2651,7 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "778"
             endingLineNumber = "778"
-            landmarkName = "-testDoSthWhenDealloc"
+            landmarkName = "-testSetWeakAssociation"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
