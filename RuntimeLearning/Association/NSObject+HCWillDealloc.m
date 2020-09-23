@@ -21,6 +21,14 @@ void objc_setWeakAssociatedObject(id _Nonnull object, const void * _Nonnull key,
     objc_setAssociatedObject(object, key, value, OBJC_ASSOCIATION_ASSIGN); // call system imp
 }
 
+@interface HCAssociatedObject : NSObject
+
+- (instancetype)initWithTarget:(NSObject *)target;
+- (void)addActionBlock:(HCBlock)block;
+
+@end
+
+
 @implementation NSObject (HCWillDealloc)
 
 - (void)hc_doSthWhenDeallocWithBlock:(HCBlock)block {
@@ -79,16 +87,6 @@ void objc_setWeakAssociatedObject(id _Nonnull object, const void * _Nonnull key,
 - (void)addActionBlock:(HCBlock)block {
     [self.deallocBlocks addObject:[block copy]];
 }
-
-//- (instancetype)initWithBlock:(HCBlock)block target:(NSObject *)target {
-//    self = [super init];
-//    if (self) {
-//        _deallocBlock = block;
-//        _target = target;
-//    }
-//
-//    return self;
-//}
 
 - (void)dealloc {
     [_deallocBlocks enumerateObjectsUsingBlock:^(HCBlock  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
