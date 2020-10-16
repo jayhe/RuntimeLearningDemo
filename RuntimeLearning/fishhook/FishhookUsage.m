@@ -81,10 +81,11 @@ static char * (*lib_hc_des)(char *someString);
     char *aseString = hc_aes("123");
     NSLog(@"before hook ase:%s", aseString);
     struct rebinding rebindingStruct;
-    rebindingStruct.name = "hc_aes";
+    //rebindingStruct.name = "hc_aes";
+    rebindingStruct.name = "HC_112233";
     rebindingStruct.replacement = (void *)hook_hc_aes;
     rebindingStruct.replaced = (void **)&lib_hc_aes;
-    rebind_symbols(&rebindingStruct, 1);
+    __unused int rebindAESRet =  rebind_symbols(&rebindingStruct, 1);
     
     char *aseString1 = hc_aes("123");
     NSLog(@"after hook ase:%s", aseString1);
@@ -96,7 +97,7 @@ static char * (*lib_hc_des)(char *someString);
     rebindingStruct1.name = "hc_des";
     rebindingStruct1.replacement = (void *)hook_hc_des;
     rebindingStruct1.replaced = (void **)&lib_hc_des;
-    rebind_symbols(&rebindingStruct1, 1);
+    __unused int rebindDESRet = rebind_symbols(&rebindingStruct1, 1);
     
     char *desString1 = hc_des("123");
     NSLog(@"after hook des:%s", desString1);

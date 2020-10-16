@@ -1014,7 +1014,7 @@
             moduleName = "">
             <Locations>
                <Location
-                  uuid = "A73F8BA9-17EF-4C12-A177-B2AC0B7ABCD6 - f322bcc354fcb71c"
+                  uuid = "A73F8BA9-17EF-4C12-A177-B2AC0B7ABCD6 - e4ac09535458acd"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1361,22 +1361,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "9E30BD91-24EF-42BF-9443-C7D8AF6D0C52"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Pods/fishhook/fishhook.c"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "192"
-            endingLineNumber = "192"
-            landmarkName = "rebind_symbols(rebindings, rebindings_nel)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "EA853363-341B-4232-A8E5-B3F40511DC10"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -1388,38 +1372,6 @@
             endingLineNumber = "63"
             landmarkName = "-testHookSelfDefineDynamicLibraryMethod"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "51077FA5-977D-41A9-9D10-34F1B8398383"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Pods/fishhook/fishhook.c"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "176"
-            endingLineNumber = "176"
-            landmarkName = "_rebind_symbols_for_image(header, slide)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "BA85DA62-C870-459F-AD7B-BD19F7B2517B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Pods/fishhook/fishhook.c"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "114"
-            endingLineNumber = "114"
-            landmarkName = "rebind_symbols_for_image(rebindings, header, slide)"
-            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -1486,7 +1438,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "501EC6BF-D283-4B93-A63C-618900E83E3B - 56df4ddc4cab82b6"
+                  uuid = "501EC6BF-D283-4B93-A63C-618900E83E3B - abb7318a2d124f38"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1501,7 +1453,7 @@
                   offsetFromSymbolStart = "77">
                </Location>
                <Location
-                  uuid = "501EC6BF-D283-4B93-A63C-618900E83E3B - 2aaa528571fa6929"
+                  uuid = "501EC6BF-D283-4B93-A63C-618900E83E3B - d7c22ed31043a4a7"
                   shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1529,7 +1481,7 @@
             moduleName = "">
             <Locations>
                <Location
-                  uuid = "51C38878-A87A-4026-A9F1-AF629369A535 - f1b64c6a47dc60f5"
+                  uuid = "51C38878-A87A-4026-A9F1-AF629369A535 - cde303c2665ad7b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -2446,8 +2398,8 @@
             filePath = "RuntimeLearning/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "240"
-            endingLineNumber = "240"
+            startingLineNumber = "241"
+            endingLineNumber = "241"
             landmarkName = "-testCatchUnrecognizedSelector"
             landmarkType = "7">
          </BreakpointContent>
@@ -2480,8 +2432,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
             endingLineNumber = "21"
-            landmarkName = "testSwiftMethod()"
-            landmarkType = "7">
+            landmarkName = "unknown"
+            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2494,8 +2446,8 @@
             filePath = "RuntimeLearning/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "796"
-            endingLineNumber = "796"
+            startingLineNumber = "797"
+            endingLineNumber = "797"
             landmarkName = "-testSwizzleInInitialize"
             landmarkType = "7">
          </BreakpointContent>
@@ -2526,8 +2478,8 @@
             filePath = "RuntimeLearning/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "154"
-            endingLineNumber = "154"
+            startingLineNumber = "155"
+            endingLineNumber = "155"
             landmarkName = "-setupUI"
             landmarkType = "7">
          </BreakpointContent>
@@ -2542,10 +2494,42 @@
             filePath = "RuntimeLearning/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "571"
-            endingLineNumber = "571"
+            startingLineNumber = "572"
+            endingLineNumber = "572"
             landmarkName = "-changeTableIndicatorStyle"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "C0337C1E-9815-48C8-93AD-A9ED4CB0CB20 - 2b36b907cad5a8f0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ViewController changeTableIndicatorStyle]"
+                  moduleName = "RuntimeLearning"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hechao/Documents/Demos/RuntimeLearning/RuntimeLearning/ViewController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "572"
+                  endingLineNumber = "572"
+                  offsetFromSymbolStart = "247">
+               </Location>
+               <Location
+                  uuid = "C0337C1E-9815-48C8-93AD-A9ED4CB0CB20 - e8c5cfbc6a0d8d6d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__43-[ViewController changeTableIndicatorStyle]_block_invoke"
+                  moduleName = "RuntimeLearning"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hechao/Documents/Demos/RuntimeLearning/RuntimeLearning/ViewController.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "572"
+                  endingLineNumber = "572"
+                  offsetFromSymbolStart = "11">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -2574,8 +2558,8 @@
             filePath = "RuntimeLearning/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "578"
-            endingLineNumber = "578"
+            startingLineNumber = "579"
+            endingLineNumber = "579"
             landmarkName = "-changeTableIndicatorStyle"
             landmarkType = "7">
          </BreakpointContent>
@@ -2590,8 +2574,8 @@
             filePath = "RuntimeLearning/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "575"
-            endingLineNumber = "575"
+            startingLineNumber = "576"
+            endingLineNumber = "576"
             landmarkName = "-changeTableIndicatorStyle"
             landmarkType = "7">
          </BreakpointContent>
@@ -2633,8 +2617,8 @@
             filePath = "RuntimeLearning/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "785"
-            endingLineNumber = "785"
+            startingLineNumber = "786"
+            endingLineNumber = "786"
             landmarkName = "-testSetWeakAssociation"
             landmarkType = "7">
          </BreakpointContent>
@@ -2649,10 +2633,106 @@
             filePath = "RuntimeLearning/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "778"
-            endingLineNumber = "778"
+            startingLineNumber = "779"
+            endingLineNumber = "779"
             landmarkName = "-testSetWeakAssociation"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D429C3BE-3EFC-4620-933B-E154F06F8D35"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RuntimeLearning/fishhook/FishhookUsage.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "hook_hc_aes(someString)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8C2415C8-42DA-42CA-AF6A-74E81B7DDDF8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RuntimeLearning/fishhook/FishhookUsage.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "hook_hc_des(someString)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "50C930BC-6AF0-4806-8899-413866D299AB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RuntimeLearning/fishhook/FishhookUsage.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "-testHookSelfDefineDynamicFrameworkMethod"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4139FC50-9C6B-4B31-A378-BA829E6631B8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RuntimeLearning/fishhook/FishhookUsage.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "-testHookSelfDefineDynamicFrameworkMethod"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "57D7B435-F73E-4167-9AC8-6F5106CAF263"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RuntimeLearning/fishhook/FishhookUsage.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "102"
+            endingLineNumber = "102"
+            landmarkName = "-testHookSelfDefineDynamicFrameworkMethod"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "04FAD825-0424-4B56-80C7-265CFF508300"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RuntimeLearning/main.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "main(argc, argv)"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
