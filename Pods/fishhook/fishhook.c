@@ -83,7 +83,7 @@ static void perform_rebinding_with_section(struct rebindings_entry *rebindings,
                                            nlist_t *symtab,
                                            char *strtab,
                                            uint32_t *indirect_symtab) {
-    //nl_symbol_ptr和la_symbol_ptrsection中的reserved1字段指明对应的indirect symbol table起始的index
+    //nl_symbol_ptr和la_symbol_ptr section中的reserved1字段指明对应的indirect symbol table起始的index
   uint32_t *indirect_symbol_indices = indirect_symtab + section->reserved1;
     //slide+section->addr 就是符号对应的存放函数实现的数组也就是我相应的__nl_symbol_ptr和__la_symbol_ptr相应的函数指针都在这里面了，所以可以去寻找到函数的地址
   void **indirect_symbol_bindings = (void **)((uintptr_t)slide + section->addr);

@@ -11,6 +11,8 @@
 
 @implementation TestTaggedPointer
 
+uintptr_t objc_debug_taggedpointer_obfuscator;
+
 #if (TARGET_OS_OSX || TARGET_OS_IOSMAC) && __x86_64__
 // 64-bit Mac - tag bit is LSB
 #   define OBJC_MSB_TAGGED_POINTERS 0
@@ -18,6 +20,16 @@
 // Everything else - tag bit is MSB
 #   define OBJC_MSB_TAGGED_POINTERS 1
 #endif
+
+#define _OBJC_TAG_INDEX_MASK 0x7
+// array slot includes the tag bit itself
+#define _OBJC_TAG_SLOT_COUNT 16
+#define _OBJC_TAG_SLOT_MASK 0xf
+
+#define _OBJC_TAG_EXT_INDEX_MASK 0xff
+// array slot has no extra bits
+#define _OBJC_TAG_EXT_SLOT_COUNT 256
+#define _OBJC_TAG_EXT_SLOT_MASK 0xff
 
 #if OBJC_MSB_TAGGED_POINTERS
 #   define _OBJC_TAG_MASK (1UL<<63)
@@ -53,8 +65,9 @@ _objc_isTaggedPointer(const void * _Nullable ptr)
 - (instancetype)init {
     self = [super init];
     if (self) {
-        [self stringTaggedPointerTest];
-        //[self numberTest];
+        [self initTaggedPointerObfuscator];
+        //[self stringTaggedPointerTest];
+        [self numberTest];
         //[self dateTest];
     }
     
@@ -277,7 +290,42 @@ _objc_isTaggedPointer(const void * _Nullable ptr)
 #pragma mark - Private Method
 
 - (void)formatedLogObject:(id)object {
-    NSLog(@"0x%6lx %@ %@", object, object, object_getClass(object));
+    //uintptr_t ptr = _objc_getTaggedPointerValue((__bridge const void *)object);
+    if (@available(iOS 12.0, *)) {
+        NSLog(@"%p %@ %@", object, object, object_getClass(object));
+    } else {
+        NSLog(@"0x%6lx %@ %@", object, object, object_getClass(object));
+    }
+}
+
+- (void)initTaggedPointerObfuscator {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        if (@available(iOS 12.0, *)) {
+            objc_debug_taggedpointer_obfuscator &= ~_OBJC_TAG_MASK;
+        } else {
+            objc_debug_taggedpointer_obfuscator = 0;
+        }
+    });
+}
+
+static inline uintptr_t
+_objc_decodeTaggedPointer(const void * _Nullable ptr)
+{
+    return (uintptr_t)ptr ^ objc_debug_taggedpointer_obfuscator;
+}
+
+static inline uintptr_t
+_objc_getTaggedPointerValue(const void * _Nullable ptr)
+{
+    // ASSERT(_objc_isTaggedPointer(ptr));
+    uintptr_t value = _objc_decodeTaggedPointer(ptr);
+    uintptr_t basicTag = (value >> _OBJC_TAG_INDEX_SHIFT) & _OBJC_TAG_INDEX_MASK;
+    if (basicTag == _OBJC_TAG_INDEX_MASK) {
+        return (value << _OBJC_TAG_EXT_PAYLOAD_LSHIFT) >> _OBJC_TAG_EXT_PAYLOAD_RSHIFT;
+    } else {
+        return (value << _OBJC_TAG_PAYLOAD_LSHIFT) >> _OBJC_TAG_PAYLOAD_RSHIFT;
+    }
 }
 
 @end
