@@ -6,40 +6,40 @@
 //  Copyright © 2019 hechao. All rights reserved.
 //
 
-#import "NSObject+RLSafe.h"
+#import "NSObject+HCSafe.h"
 #import "MethodSwizzleUtil.h"
 #import <objc/runtime.h>
 
-static RLUnrecognizedSelectorExceptionHandler *RLUSEHandler = NULL;
-NSString const *RLUnrecognizedSelectorMessageKey = @"RLUnrecognizedSelectorMessageKey";
-NSString const *RLForwardTargetMessageKey = @"RLForwardTargetMessageKey";
+static HCUnrecognizedSelectorExceptionHandler *HCUSEHandler = NULL;
+NSString const *HCUnrecognizedSelectorMessageKey = @"HCUnrecognizedSelectorMessageKey";
+NSString const *HCForwardTargetMessageKey = @"HCForwardTargetMessageKey";
 
-RLUnrecognizedSelectorExceptionHandler * _Nullable RLGetUnrecognizedSelectorExceptionHandler(void) {
-    return RLUSEHandler;
+HCUnrecognizedSelectorExceptionHandler * _Nullable RLGetUnrecognizedSelectorExceptionHandler(void) {
+    return HCUSEHandler;
 }
 
-void RLSetUnrecognizedSelectorExceptionHandler(RLUnrecognizedSelectorExceptionHandler * _Nullable handler) {
-    RLUSEHandler = handler;
+void RLSetUnrecognizedSelectorExceptionHandler(HCUnrecognizedSelectorExceptionHandler * _Nullable handler) {
+    HCUSEHandler = handler;
 }
 
-@implementation NSObject (RLSafe)
+@implementation NSObject (HCSafe)
 #define CATCH_CRASH 1
 + (void)load {
 #if CATCH_CRASH
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        [MethodSwizzleUtil swizzleInstanceMethodWithClass:[NSObject class] originalSel:@selector(forwardInvocation:) replacementSel:@selector(rl_forwardInvocation:)];
-        [MethodSwizzleUtil swizzleInstanceMethodWithClass:[NSObject class] originalSel:@selector(methodSignatureForSelector:) replacementSel:@selector(rl_methodSignatureForSelector:)];
-        [MethodSwizzleUtil swizzleInstanceMethodWithClass:[NSObject class] originalSel:@selector(forwardingTargetForSelector:) replacementSel:@selector(rl_forwardingTargetForSelector:)];
+        [MethodSwizzleUtil swizzleInstanceMethodWithClass:[NSObject class] originalSel:@selector(forwardInvocation:) replacementSel:@selector(hc_forwardInvocation:)];
+        [MethodSwizzleUtil swizzleInstanceMethodWithClass:[NSObject class] originalSel:@selector(methodSignatureForSelector:) replacementSel:@selector(hc_methodSignatureForSelector:)];
+        [MethodSwizzleUtil swizzleInstanceMethodWithClass:[NSObject class] originalSel:@selector(forwardingTargetForSelector:) replacementSel:@selector(hc_forwardingTargetForSelector:)];
     });
 #endif
 }
 
-- (id)rl_forwardingTargetForSelector:(SEL)aSelector {
+- (id)hc_forwardingTargetForSelector:(SEL)aSelector {
 #if CATCH_CRASH
     NSArray<NSObject *> *targets;
-    if ([self conformsToProtocol:@protocol(RLCatchUnrecognizedSelectorProtocol)] && [self respondsToSelector:@selector(targetsToForward)]) {
-        targets = [(id<RLCatchUnrecognizedSelectorProtocol>)self targetsToForward];
+    if ([self conformsToProtocol:@protocol(HCCatchUnrecognizedSelectorProtocol)] && [self respondsToSelector:@selector(targetsToForward)]) {
+        targets = [(id<HCCatchUnrecognizedSelectorProtocol>)self targetsToForward];
     } else {
         targets = [self commonDataTargetsToForward]; // 默认的转发，只处理部分基础数据的
     }
@@ -51,59 +51,59 @@ void RLSetUnrecognizedSelectorExceptionHandler(RLUnrecognizedSelectorExceptionHa
                 *stop = YES;
             }
         }];
-        if (targetToForward && RLUSEHandler) {
+        if (targetToForward && HCUSEHandler) {
             NSString *info = [NSString stringWithFormat:@"instance %p -[%@ %@] forward target to %@", self, self.class, NSStringFromSelector(aSelector), targetToForward.class];
             NSDictionary *userInfo = @{
-                RLForwardTargetMessageKey : info
+                HCForwardTargetMessageKey : info
             };
-            RLUSEHandler(userInfo);
+            HCUSEHandler(userInfo);
         }
         return targetToForward;
     } else {
-        return [self rl_forwardingTargetForSelector:aSelector];
+        return [self hc_forwardingTargetForSelector:aSelector];
     }
 #else
-    return [self rl_forwardingTargetForSelector:aSelector];
+    return [self hc_forwardingTargetForSelector:aSelector];
 #endif
 }
 
-- (NSMethodSignature *)rl_methodSignatureForSelector:(SEL)selector {
+- (NSMethodSignature *)hc_methodSignatureForSelector:(SEL)selector {
 #if CATCH_CRASH
     BOOL shouldCatch = YES;
-    if ([self conformsToProtocol:@protocol(RLCatchUnrecognizedSelectorProtocol)] && [self respondsToSelector:@selector(shouldCatch)]) {
-        shouldCatch = [(id<RLCatchUnrecognizedSelectorProtocol>)self shouldCatch];
+    if ([self conformsToProtocol:@protocol(HCCatchUnrecognizedSelectorProtocol)] && [self respondsToSelector:@selector(shouldCatch)]) {
+        shouldCatch = [(id<HCCatchUnrecognizedSelectorProtocol>)self shouldCatch];
     }
     if (shouldCatch) {
-        NSMethodSignature *signature = [self rl_methodSignatureForSelector:selector];
+        NSMethodSignature *signature = [self hc_methodSignatureForSelector:selector];
         if (signature == nil) {
             signature = [self methodSignatureForSelector:@selector(nilMessage)];
         }
         
         return signature;
     } else {
-        return [self rl_methodSignatureForSelector:selector];
+        return [self hc_methodSignatureForSelector:selector];
     }
 #else
-    return [self rl_methodSignatureForSelector:selector];
+    return [self hc_methodSignatureForSelector:selector];
 #endif
 }
 
-- (void)rl_forwardInvocation:(NSInvocation *)anInvocation {
+- (void)hc_forwardInvocation:(NSInvocation *)anInvocation {
 #if CATCH_CRASH
     if (![self respondsToSelector:anInvocation.selector]) {
-        if (RLUSEHandler) {
+        if (HCUSEHandler) {
             NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
             NSString *message = [NSString stringWithFormat:@"-[%@ %@]: unrecognized selector sent to instance %p", NSStringFromClass(((NSObject *)anInvocation.target).class), NSStringFromSelector(anInvocation.selector), anInvocation.target];
-            [userInfo setObject:message forKey:RLUnrecognizedSelectorMessageKey];
+            [userInfo setObject:message forKey:HCUnrecognizedSelectorMessageKey];
             
-            RLUSEHandler(userInfo);
+            HCUSEHandler(userInfo);
         }
         anInvocation.selector = @selector(nilMessage);
         [anInvocation invokeWithTarget:self];
         return;
     }
 #else
-    [self rl_forwardInvocation:anInvocation];
+    [self hc_forwardInvocation:anInvocation];
 #endif
 }
 

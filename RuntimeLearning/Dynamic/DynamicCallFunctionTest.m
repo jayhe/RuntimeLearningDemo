@@ -7,7 +7,7 @@
 //
 
 #import "DynamicCallFunctionTest.h"
-#import "NSObject+Injection.h"
+#import "NSObject+HCInjection.h"
 #import <dlfcn.h>
 
 @interface DynamicCallFunctionTest ()

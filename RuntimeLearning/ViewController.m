@@ -17,7 +17,7 @@
 #import "UIFont+Test.h"
 #import "AttributeUsage.h"
 #import "DynamicCallFunctionTest.h"
-#import "NSObject+Injection.h"
+#import "NSObject+HCInjection.h"
 #import "TestSwizzleInInitialize.h"
 #import "CopyUsage.h"
 #import "UITextField+HCInputType.h"
@@ -48,7 +48,7 @@
 #import "HCSwizzleInstance.h"
 #import "PropertyUsage.h"
 #import "HookMethodInInitialize.h"
-#import "NSObject+RLSafe.h"
+#import "NSObject+HCSafe.h"
 #include <stdlib.h>
 #import "HCTestProtocol.h"
 #import <Aspects/Aspects.h>
@@ -102,7 +102,7 @@ void testVAList1(NSString *format, ...) NS_NO_TAIL_CALL;
 int addNumbers(int a, ...) NS_NO_TAIL_CALL;
 void testBenchmark(void);
 
-@interface ViewController () <UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate, RLCatchUnrecognizedSelectorProtocol>
+@interface ViewController () <UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate, HCCatchUnrecognizedSelectorProtocol>
 
 @property (nonatomic, strong) DynamicCallFunctionTest *dynamicFunctionTest;
 @property (nonatomic, strong) NSCacheTest *testCache;
@@ -172,7 +172,7 @@ int functionG(int x) {
 //    [NSThread sleepForTimeInterval:2];
 }
 
-#pragma mark - RLCatchUnrecognizedSelectorProtocol
+#pragma mark - HCCatchUnrecognizedSelectorProtocol
 
 - (BOOL)shouldCatch {
     return YES;
@@ -181,7 +181,7 @@ int functionG(int x) {
 void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wincompatible-pointer-types"
-    //NSLog(@"%@", [unrecognizedSelectorInfo objectForKey:RLUnrecognizedSelectorMessageKey]);
+    //NSLog(@"%@", [unrecognizedSelectorInfo objectForKey:HCUnrecognizedSelectorMessageKey]);
 #pragma clang diagnostic pop
     NSLog(@"%@", unrecognizedSelectorInfo);
 }

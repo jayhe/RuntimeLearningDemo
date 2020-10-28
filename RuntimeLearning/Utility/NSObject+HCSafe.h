@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  在release模式下，当收到unrecognized selector异常的时候，转发selector为nilMessage，防止闪退
  */
-@interface NSObject (RLSafe)
+@interface NSObject (HCSafe)
 
 @end
 
@@ -22,14 +22,14 @@ NS_ASSUME_NONNULL_BEGIN
  往往项目中如果自己处理这些信息的话，会按照自己的格式去采集异常堆栈信息，这里就返回一个函数的描述；
  可以自定义handler内部再采集异常堆栈信息然后按照格式拼装数据上传
  */
-typedef void RLUnrecognizedSelectorExceptionHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo);
-FOUNDATION_EXPORT NSString const *RLUnrecognizedSelectorMessageKey; // unrecognizedSelectorInfo对应的key
-FOUNDATION_EXPORT NSString const *RLForwardTargetMessageKey; // unrecognizedSelectorInfo对应的key
+typedef void HCUnrecognizedSelectorExceptionHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo);
+FOUNDATION_EXPORT NSString const *HCUnrecognizedSelectorMessageKey; // unrecognizedSelectorInfo对应的key
+FOUNDATION_EXPORT NSString const *HCForwardTargetMessageKey; // unrecognizedSelectorInfo对应的key
 
-FOUNDATION_EXPORT RLUnrecognizedSelectorExceptionHandler * _Nullable RLGetUnrecognizedSelectorExceptionHandler(void);
-FOUNDATION_EXPORT void RLSetUnrecognizedSelectorExceptionHandler(RLUnrecognizedSelectorExceptionHandler * _Nullable);
+FOUNDATION_EXPORT HCUnrecognizedSelectorExceptionHandler * _Nullable RLGetUnrecognizedSelectorExceptionHandler(void);
+FOUNDATION_EXPORT void RLSetUnrecognizedSelectorExceptionHandler(HCUnrecognizedSelectorExceptionHandler * _Nullable);
 
-@protocol RLCatchUnrecognizedSelectorProtocol <NSObject>
+@protocol HCCatchUnrecognizedSelectorProtocol <NSObject>
 
 @optional
 /// 默认是YES：不实现则当作YES

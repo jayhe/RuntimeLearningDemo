@@ -50,7 +50,7 @@ typedef struct MineBlock {
 // RAC的项目动态调试需要使用通知的方式
 #if DEBUG
 
-#define RL_INJECT_NOTIFICATION(sel) \
+#define HC_INJECT_NOTIFICATION(sel) \
 [[NSNotificationCenter defaultCenter] addObserver:self \
 selector:sel \
 name:@"INJECTION_BUNDLE_NOTIFICATION" \
@@ -58,7 +58,7 @@ object:nil] \
 
 #else
 
-#define RL_INJECT_NOTIFICATION(sel) \
+#define HC_INJECT_NOTIFICATION(sel) \
 
 #endif
 

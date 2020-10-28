@@ -6,12 +6,12 @@
 //  Copyright © 2019 hechao. All rights reserved.
 //
 
-#import "NSObject+Injection.h"
+#import "NSObject+HCInjection.h"
 #import <objc/runtime.h>
 
 static char *kInjectExcuteBlockKey;
 
-@implementation NSObject (Injection)
+@implementation NSObject (HCInjection)
 
 #if DEBUG
 

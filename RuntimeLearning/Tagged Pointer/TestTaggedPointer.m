@@ -8,10 +8,9 @@
 
 #import "TestTaggedPointer.h"
 #import <objc/runtime.h>
+#import <fishhook/fishhook.h>
 
 @implementation TestTaggedPointer
-
-uintptr_t objc_debug_taggedpointer_obfuscator;
 
 #if (TARGET_OS_OSX || TARGET_OS_IOSMAC) && __x86_64__
 // 64-bit Mac - tag bit is LSB
@@ -55,6 +54,10 @@ uintptr_t objc_debug_taggedpointer_obfuscator;
 #   define _OBJC_TAG_EXT_PAYLOAD_RSHIFT 12
 #endif
 
+uintptr_t objc_debug_taggedpointer_obfuscator;
+static void (*systemInitializeTaggedPointerObfuscator)(void);
+static void mineInitializeTaggedPointerObfuscator(void);
+
 static inline bool
 _objc_isTaggedPointer(const void * _Nullable ptr)
 {
@@ -62,16 +65,41 @@ _objc_isTaggedPointer(const void * _Nullable ptr)
     //return ((uintptr_t)ptr & (1UL<<63)) == (1UL<<63); // 真机
 }
 
++ (void)load {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [self hook];
+    });
+}
+
 - (instancetype)init {
     self = [super init];
     if (self) {
         [self initTaggedPointerObfuscator];
-        //[self stringTaggedPointerTest];
-        [self numberTest];
+        [self stringTaggedPointerTest];
+        //[self numberTest];
         //[self dateTest];
     }
     
     return self;
+}
+
++ (void)hook {
+    // hook不到，在lazy/non-lazy symbols中没有找到initializeTaggedPointerObfuscator
+    struct rebinding bind = {};
+    bind.name = "initializeTaggedPointerObfuscator";
+    bind.replaced = (void **)&systemInitializeTaggedPointerObfuscator;
+    bind.replacement = (void *)mineInitializeTaggedPointerObfuscator;
+    struct rebinding binds[] = {bind};
+    rebind_symbols(binds, 1);
+}
+
++ (void)unhook {
+    struct rebinding bind = {};
+    bind.name = "initializeTaggedPointerObfuscator";
+    bind.replacement = (void *)systemInitializeTaggedPointerObfuscator;
+    struct rebinding binds[] = {bind};
+    rebind_symbols(binds, 1);
 }
 
 - (void)stringTaggedPointerTest {
@@ -89,7 +117,10 @@ _objc_isTaggedPointer(const void * _Nullable ptr)
     // 2.a = 1011 最高位1标记是taggedPointer
     // 3.类型存储的是索引，会根据索引去查找类的映射关系
     NSString *stringWithString = [NSString stringWithString:@"2222"]; // __NSCFConstantString [warning: Replace '[NSString stringWithString:@"2222"]' with '@"2222"']
-    [self formatedLogObject:stringWithFormat];
+    [self formatedLogObject:stringWithString];
+    NSString *stringWithFormat1 = [NSString stringWithFormat:@"y"];
+    [self formatedLogObject:stringWithFormat1];
+    // 为什么stringWithFormat能返回taggedPointer类型的，而stringWithString:@"222"则不行；那是因为前者是创建一个string，而后者是对一个常量字符串的拷贝
     NSMutableString *mutable = [NSMutableString string];
     NSString *immutable;
     Class stringClass;
@@ -290,7 +321,7 @@ _objc_isTaggedPointer(const void * _Nullable ptr)
 #pragma mark - Private Method
 
 - (void)formatedLogObject:(id)object {
-    //uintptr_t ptr = _objc_getTaggedPointerValue((__bridge const void *)object);
+    //uintptr_t ptrValue = _objc_getTaggedPointerValue((__bridge const void *)object);
     if (@available(iOS 12.0, *)) {
         NSLog(@"%p %@ %@", object, object, object_getClass(object));
     } else {
@@ -302,6 +333,7 @@ _objc_isTaggedPointer(const void * _Nullable ptr)
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         if (@available(iOS 12.0, *)) {
+            objc_debug_taggedpointer_obfuscator = 1000;
             objc_debug_taggedpointer_obfuscator &= ~_OBJC_TAG_MASK;
         } else {
             objc_debug_taggedpointer_obfuscator = 0;
@@ -309,6 +341,13 @@ _objc_isTaggedPointer(const void * _Nullable ptr)
     });
 }
 
+static void mineInitializeTaggedPointerObfuscator(void) {
+    // 试试能否hook住
+    NSLog(@"hook system initializeTaggedPointerObfuscator");
+}
+
+// 以下将系统的实现拷贝了一份，调试发现获得的tagged pointer value不符合预期，是由于系统在生成objc_debug_taggedpointer_obfuscator掩码的时候会先随机一个数
+// 再进行运算
 static inline uintptr_t
 _objc_decodeTaggedPointer(const void * _Nullable ptr)
 {

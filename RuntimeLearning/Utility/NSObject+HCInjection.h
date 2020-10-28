@@ -24,7 +24,7 @@ __weak void(^unusedBlock)(void) = ^ \
 
 #endif
 
-@interface NSObject (Injection)
+@interface NSObject (HCInjection)
 #if DEBUG
 @property (nonatomic, strong) void(^injectExcuteBlock)(void);
 #endif
