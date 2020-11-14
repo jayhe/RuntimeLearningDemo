@@ -304,6 +304,12 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
         TableDataRow *row14 = [TableDataRow new];
         row14.title = @"测试并发给属性赋值-atomic";
         row14.action = @selector(testAsyncSetAtomicProperty);
+        TableDataRow *row15 = [TableDataRow new];
+        row15.title = @"测试字符串比较";
+        row15.action = @selector(testStringCompare);
+        TableDataRow *row16 = [TableDataRow new];
+        row16.title = @"测试字符串format";
+        row16.action = @selector(testStringFormat);
         section0.items = @[
             row0,
             row1,
@@ -319,7 +325,9 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
             row11,
             row12,
             row13,
-            row14].mutableCopy;
+            row14,
+            row15,
+            row16].mutableCopy;
     }
     
     TableDataSection *section1 = [TableDataSection new];
@@ -648,6 +656,66 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             self.atomicText;
         });
+    }
+}
+
+- (void)testStringCompare {
+    NSString *test = @"123";
+    NSString *test1 = @"123";
+    NSString *test2 = [NSString stringWithFormat:@"%@", test]; // Returns a string created by using a given format string as a template into which the remaining argument values are substituted.
+    NSString *test3 = [NSString stringWithString:test]; // Returns a string created by copying the characters from another given string. 相当于copy，对于不可变得数据copy就是返回本身
+    NSLog(@"test: %p, %@ class:%@", test, test, object_getClass(test));
+    NSLog(@"test1: %p, %@ class:%@", test1, test1, object_getClass(test1));
+    NSLog(@"test2: %p, %@ class:%@", test2, test2, object_getClass(test2));
+    NSLog(@"test3: %p, %@ class:%@", test3, test3, object_getClass(test3));
+    /*
+     2020-10-29 14:22:06.726032+0800 RuntimeLearning[57636:1100791] test: 0x104a97410, 123 class:__NSCFConstantString
+     2020-10-29 14:22:06.726273+0800 RuntimeLearning[57636:1100791] test1: 0x104a97410, 123 class:__NSCFConstantString
+     2020-10-29 14:22:06.726493+0800 RuntimeLearning[57636:1100791] test2: 0xe8845fa5d1d42c14, 123 class:NSTaggedPointerString
+     2020-10-29 14:22:06.726620+0800 RuntimeLearning[57636:1100791] test3: 0x104a97410, 123 class:__NSCFConstantString
+     */
+    if (test == test1) {
+        NSLog(@"test == test1"); // ✅
+    } else {
+        NSLog(@"test not == test1");
+    }
+    if (test == test2) {
+        NSLog(@"test == test2");
+    } else {
+        NSLog(@"test not == test2"); // ✅
+    }
+    if ([test isEqualToString:test2]) {
+        NSLog(@"test isEqualToString test2"); // ✅
+    } else {
+        NSLog(@"test isNotEqualToString= test2");
+    }
+    if (test == test3) {
+        NSLog(@"test == test3"); // ✅
+    } else {
+        NSLog(@"test not == test3");
+    }
+    // 假如不是taggedpointer 会相等吗
+    NSString *anotherTest = @"123456789012";
+    NSString *anotherTest1 = [NSString stringWithFormat:@"%@", anotherTest];
+    NSLog(@"anotherTest: %p, %@ class:%@", anotherTest, anotherTest, object_getClass(anotherTest));
+    NSLog(@"anotherTest1: %p, %@ class:%@", anotherTest1, anotherTest1, object_getClass(anotherTest1));
+    /*
+     anotherTest: 0x1050cc5b0, 123456789012 class:__NSCFConstantString
+     anotherTest1: 0x6000004fe620, 123456789012 class:__NSCFString
+     */
+    if (anotherTest == anotherTest1) {
+        NSLog(@"anotherTest == anotherTest1");
+    } else {
+        NSLog(@"anotherTest not == anotherTest1"); // ✅
+    }
+}
+
+- (void)testStringFormat {
+    for (NSInteger i = 0; i < 3; i++) {
+        // NSInteger sex; // sex可能不为0
+        NSInteger sex = 16; // 0就相当于nil不会崩溃，其他的值就会闪退，猜测%@会去从可变参数中读取对象
+        NSString *sexString = [NSString stringWithFormat:@"%@", sex]; //  EXC_BAD_ACCESS (code=1, address=0x10)
+        NSLog(@"sexString = %@", sexString);
     }
 }
 

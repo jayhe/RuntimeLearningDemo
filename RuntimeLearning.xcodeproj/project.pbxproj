@@ -38,6 +38,7 @@
 		1072564423B30DBD00BC3A00 /* TestMapTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1072564323B30DBD00BC3A00 /* TestMapTable.m */; };
 		1076819A241B3B0700D486A9 /* TestCategoryOveride+TestOveride.m in Sources */ = {isa = PBXBuildFile; fileRef = 10768199241B3B0700D486A9 /* TestCategoryOveride+TestOveride.m */; };
 		107B55D62410C79100EDCCD6 /* NSCacheTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 107B55D52410C79100EDCCD6 /* NSCacheTest.m */; };
+		1080ECA82552DAD100ABC822 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10128713221D3B0900ED6CDE /* main.m */; };
 		1086B36A23B491DC0002F990 /* libadd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 104BF8D022772F55000C464E /* libadd.a */; settings = {ATTRIBUTES = (Weak, ); }; };
 		1086B37323B4930B0002F990 /* TestStaticLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 1086B37223B4930B0002F990 /* TestStaticLib.m */; };
 		1086B37423B4930B0002F990 /* TestStaticLib.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1086B37123B4930B0002F990 /* TestStaticLib.h */; };
@@ -46,7 +47,7 @@
 		10A65BCF2508B3A8008D98E1 /* HCTestProtocolImp.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A65BCE2508B3A8008D98E1 /* HCTestProtocolImp.m */; };
 		10A6CA9D241CA882002BFAC5 /* TestMethodInvocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 10A6CA9C241CA882002BFAC5 /* TestMethodInvocation.m */; };
 		10AC43E7228A563D00F8F435 /* TestSwizzleInInitialize.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AC43E6228A563D00F8F435 /* TestSwizzleInInitialize.m */; };
-		10B9CBDF2501E604006D48AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10128713221D3B0900ED6CDE /* main.m */; };
+		10B78436254FF78300A8F011 /* TestTimerUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B78435254FF78300A8F011 /* TestTimerUsage.m */; };
 		10BF41E8227FE671009F291E /* DispatchOnceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BF41E7227FE671009F291E /* DispatchOnceTest.m */; };
 		10BF41EB228012A7009F291E /* DispatchBarrierTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BF41EA228012A7009F291E /* DispatchBarrierTest.m */; };
 		10BF41F2228120C1009F291E /* DispatchGroupLeaveTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BF41F1228120C1009F291E /* DispatchGroupLeaveTest.m */; };
@@ -215,6 +216,8 @@
 		10A6CA9C241CA882002BFAC5 /* TestMethodInvocation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestMethodInvocation.m; sourceTree = "<group>"; };
 		10AC43E5228A563D00F8F435 /* TestSwizzleInInitialize.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestSwizzleInInitialize.h; sourceTree = "<group>"; };
 		10AC43E6228A563D00F8F435 /* TestSwizzleInInitialize.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestSwizzleInInitialize.m; sourceTree = "<group>"; };
+		10B78434254FF78300A8F011 /* TestTimerUsage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTimerUsage.h; sourceTree = "<group>"; };
+		10B78435254FF78300A8F011 /* TestTimerUsage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTimerUsage.m; sourceTree = "<group>"; };
 		10B9CBDA2501E3B2006D48AC /* main1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main1.m; sourceTree = "<group>"; };
 		10BF41E6227FE671009F291E /* DispatchOnceTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DispatchOnceTest.h; sourceTree = "<group>"; };
 		10BF41E7227FE671009F291E /* DispatchOnceTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DispatchOnceTest.m; sourceTree = "<group>"; };
@@ -369,6 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				10E6B141246296BF00A37097 /* RuntimeLearning.entitlements */,
+				10B78433254FF76000A8F011 /* Timer */,
 				10A65BCB2508AF75008D98E1 /* Protocol */,
 				104D73442498CC4400055968 /* Load&Initialize */,
 				10E6544D24939ED40022156D /* Filters */,
@@ -550,6 +554,15 @@
 				10A65BCE2508B3A8008D98E1 /* HCTestProtocolImp.m */,
 			);
 			path = Protocol;
+			sourceTree = "<group>";
+		};
+		10B78433254FF76000A8F011 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				10B78434254FF78300A8F011 /* TestTimerUsage.h */,
+				10B78435254FF78300A8F011 /* TestTimerUsage.m */,
+			);
+			path = Timer;
 			sourceTree = "<group>";
 		};
 		10BF41E5227FE65F009F291E /* Dispatch */ = {
@@ -964,6 +977,7 @@
 				10518D81241F79A600AE5265 /* TestCategoryOveride+TestOverideOne.m in Sources */,
 				104D7354249A596B00055968 /* TestCategorySwizzle+LoadOrder.m in Sources */,
 				10A65BCF2508B3A8008D98E1 /* HCTestProtocolImp.m in Sources */,
+				1080ECA82552DAD100ABC822 /* main.m in Sources */,
 				102CDD42246656CD002150BE /* TestFuctionalProgromming.m in Sources */,
 				104D73472498CCB600055968 /* HookMethodInInitialize.m in Sources */,
 				104D734A2498DD7800055968 /* NSObject+Utility.m in Sources */,
@@ -980,6 +994,7 @@
 				10BF41EB228012A7009F291E /* DispatchBarrierTest.m in Sources */,
 				10A6CA9D241CA882002BFAC5 /* TestMethodInvocation.m in Sources */,
 				10E6B1402462863E00A37097 /* KeychainUsage.m in Sources */,
+				10B78436254FF78300A8F011 /* TestTimerUsage.m in Sources */,
 				10F2DB622397AEEA00BA107A /* TestClassCluster.m in Sources */,
 				104BF8BD22771E9D000C464E /* DynamicCallFunctionTest.m in Sources */,
 				10BF41F2228120C1009F291E /* DispatchGroupLeaveTest.m in Sources */,
@@ -996,7 +1011,6 @@
 				10D531002227B5B7007AE594 /* TestSubClassSwizzle.m in Sources */,
 				1025D0EB225DA683008E4CC3 /* UIFont+Test.m in Sources */,
 				10128706221D3B0700ED6CDE /* AppDelegate.m in Sources */,
-				10B9CBDF2501E604006D48AC /* main.m in Sources */,
 				10113DE722CF85EA00132833 /* UITextField+HCInputType.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

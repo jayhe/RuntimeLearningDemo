@@ -35,7 +35,21 @@ int main(int argc, char * argv[]) {
         double testDouble; // be 0.0 ？？
         NSInteger testInteger; // be 0
         CGPoint testCGPoint; // be CGPointZero ？？可能不是
+        float a = 0.1, b = 0.2;
+        CGFloat c = 0.3; // CGFloat跟float在64bit下精度不一样
+        if (a + b == 0.3) {
+            NSLog(@"0.1 + 0.2 = 0.3");
+        } else {
+            NSLog(@"0.1 + 0.2 != 0.3");
+        }
         
+        if (a + b == c) {
+            NSLog(@"CGFloat c = 0.3 && 0.1 + 0.2 = c");
+        } else {
+            NSLog(@"CGFloat c = 0.3 && 0.1 + 0.2 != c");
+        }
+    
+
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }

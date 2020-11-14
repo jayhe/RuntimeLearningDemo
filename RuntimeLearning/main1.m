@@ -1,6 +1,6 @@
 //
 //  main.m
-//  DCB
+//  RuntimeLearning
 //
 //  Created by 贺超 on 2020/8/26.
 //  Copyright © 2020 贺超. All rights reserved.
@@ -25,16 +25,17 @@ struct encryption_info_command {
 #endif
 
 static BOOL isEncrypted(void);
+void checkCodesign(NSString *identifier);
 
 int main(int argc, char * argv[]) {
-    NSString * appDelegateClassName;
     @autoreleasepool {
         // Setup code that might create autoreleased objects goes here.
-        appDelegateClassName = NSStringFromClass([AppDelegate class]);
+        NSString * appDelegateClassName = NSStringFromClass([AppDelegate class]);
+        BOOL isEncrypt = isEncrypted();
+        NSLog(@"check is encrypt: %d", isEncrypt);
+        checkCodesign(@"hc.RuntimeLearning.demo");
+        return UIApplicationMain(argc, argv, nil, appDelegateClassName);
     }
-    BOOL isEncrypt = isEncrypted();
-    NSLog(@"check is encrypt: %d", isEncrypt);
-    return UIApplicationMain(argc, argv, nil, appDelegateClassName);
 }
 
 static BOOL isEncrypted () {
@@ -70,4 +71,38 @@ static BOOL isEncrypted () {
 
     /* Encryption info not found */
     return NO;
+}
+
+void checkCodesign(NSString *identifier) {
+#if defined __x86_64__ || __i386__ // 模拟器不需要生成embeded.mobileprovision文件来做真机调试的配置
+    // do nothing
+#else
+    // 描述文件路径
+    NSString *embeddedPath = [[NSBundle mainBundle] pathForResource:@"embedded" ofType:@"mobileprovision"];
+    // 读取application-identifier  注意描述文件的编码要使用:NSASCIIStringEncoding
+    NSString *embeddedProvisioning = [NSString stringWithContentsOfFile:embeddedPath encoding:NSASCIIStringEncoding error:nil];
+    NSArray *embeddedProvisioningLines = [embeddedProvisioning componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+    for (int i = 0; i < embeddedProvisioningLines.count; i++) {
+        if ([embeddedProvisioningLines[i] rangeOfString:@"application-identifier"].location != NSNotFound) {
+            NSInteger fromPosition = [embeddedProvisioningLines[i + 1] rangeOfString:@""].location + 8;
+            NSInteger toPosition = [embeddedProvisioningLines[i + 1] rangeOfString:@""].location;
+            NSRange range;
+            range.location = fromPosition;
+            range.length = toPosition - fromPosition;
+            NSString *fullIdentifier = [embeddedProvisioningLines[i + 1] substringWithRange:range];
+            NSArray *identifierComponents = [fullIdentifier componentsSeparatedByString:@"."];
+            NSString *appIdentifier = [identifierComponents firstObject];
+            // 对比签名ID
+            if (![appIdentifier isEqualToString:identifier]) {
+                // exit(0)
+                asm(
+                    "mov X0,#0\n"
+                    "mov w16,#1\n"
+                    "svc #0x80"
+                    );
+            }
+            break;
+        }
+    }
+#endif
 }
