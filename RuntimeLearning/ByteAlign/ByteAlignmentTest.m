@@ -83,7 +83,7 @@ struct HCLinkedList {
     self = [super init];
     if (self) {
 //        _testString = @"test test test test test";
-        //[self test];
+        [self test];
         [self testAlign10Byte];
     }
     
@@ -160,9 +160,13 @@ struct HCLinkedList {
      ->  0x1040a7210 <+44>: add    sp, sp, #0x20             ; =0x20
      0x1040a7214 <+48>: ret
      */
-    self.b = 'd';
+    self.b = 'd'; // 0x64
     self.c = 0xccc;
-    self.testString = @"eeeeee";
+    // 2020-11-27
+    // 类的底层是结构体，编译器对类的变量的布局也做了优化会根据变量的size来从小到大排序，我们通过Debug - View Memory可以查看信息
+    // 80 D5 9A 0B 01 00 00 00 64 00 CC 0C 00 00 00 00 FF FF FF 00 00 00 00 00
+    self.testString = @"eeeeee"; // p self.testString  (__NSCFConstantString *) $6 = 0x000000010b99f310 @"eeeeee"
+    // 80 D5 9A 0B 01 00 00 00 64 00 CC 0C 00 00 00 00 FF FF FF 00 00 00 00 00 10 F3 99 0B 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
     /*
      setTestString下断点，查看汇编代码
      bl跳转指令
