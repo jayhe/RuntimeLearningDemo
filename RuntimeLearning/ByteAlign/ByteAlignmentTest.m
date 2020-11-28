@@ -64,6 +64,76 @@ struct HCLinkedList {
 }; // 24
 */
 // 指针大小就是8字节，结构体内部也是一样；malloc的时候是16字节对齐；获取instanceSize对齐市8字节对齐，最少16
+
+struct HCTestUnordered {
+    int a;
+    char b;
+    short c;
+    short d;
+    NSString *testString;
+};
+
+struct HCTestOrderedASC {
+    char b;
+    short c;
+    short d;
+    int a;
+    NSString *testString;
+};
+
+struct HCTestOrderedDESC {
+    NSString *testString;
+    int a;
+    short c;
+    short d;
+    char b;
+};
+
+@interface HCTestObjUnordered : NSObject
+{
+    @public
+    int a;
+    char b;
+    short c;
+    NSString *testString;
+    short d;
+}
+@end
+
+@implementation HCTestObjUnordered
+
+@end
+
+@interface HCTestObjUnordered1 : NSObject
+
+@property (nonatomic, assign) int a;
+@property (nonatomic, assign) char b;
+@property (nonatomic, assign) short c;
+@property (nonatomic, copy) NSString *testString;
+@property (nonatomic, assign) short d;
+
+@end
+
+@implementation HCTestObjUnordered1
+
+@end
+
+struct Student {
+  bool sex;
+  short int age;
+  char *address;
+  float grade;
+  char  name[9];
+};
+
+struct StudentOrdered {
+  bool sex;
+  char  name[9];
+  short int age;
+  float grade;
+  char *address;
+};
+
 @interface ByteAlignmentTest ()
 
 @property (nonatomic, assign) int a;
@@ -85,9 +155,89 @@ struct HCLinkedList {
 //        _testString = @"test test test test test";
         [self test];
         [self testAlign10Byte];
+        [self testStructSize];
+        [self testStructSize1];
     }
     
     return self;
+}
+
+- (void)testStructSize1 {
+    NSLog(@"size of Student = %zd", sizeof(struct Student)); // 32
+    NSLog(@"size of StudentOrdered = %zd", sizeof(struct StudentOrdered)); // 24
+}
+
+- (void)testStructSize {
+    struct HCTestUnordered unordered = {};
+    unordered.a = 0xFFFF;
+    unordered.b = 'd'; // 0x64
+    unordered.c = 0xcc;
+    unordered.d = 0xdd;
+    unordered.testString = @"testString";
+    /*
+    (lldb) p &unordered
+    (HCTestUnordered *) $1 = 0x00007ffeebd40670
+     FF FF 00 00 64 00 CC 00 DD 00 00 00 00 00 00 00 F0 21 F0 03 01 00 00
+     */
+    struct HCTestOrderedASC orderedASC = {};
+    orderedASC.a = 0xFFFF;
+    orderedASC.b = 'd';
+    orderedASC.c = 0xcc;
+    orderedASC.d = 0xdd;
+    orderedASC.testString = @"testString";
+    struct HCTestOrderedDESC orderedDESC = {};
+    /*
+     (lldb) p &orderedASC
+     (HCTestOrderedASC *) $4 = 0x00007ffeebd40650
+     64 00 CC 00 DD 00 00 00 FF FF 00 00 00 00 00 00 F0 21 F0 03 01 00 00 00
+     */
+    orderedDESC.a = 0xFFFF;
+    orderedDESC.b = 'd';
+    orderedDESC.c = 0xcc;
+    orderedDESC.d = 0xdd;
+    orderedDESC.testString = @"testString";
+    /*
+     (lldb) p &orderedDESC
+     (HCTestOrderedDESC *) $5 = 0x00007ffeebd40630
+     F0 21 F0 03 01 00 00 00 FF FF 00 00 CC 00 DD 00 64 00 00 00 00 00 00 00
+     */
+    HCTestObjUnordered *obj = [HCTestObjUnordered new];
+    obj->a = 0xFFFF;
+    obj->b = 'd';
+    obj->c = 0xcc;
+    obj->d = 0xdd;
+    obj->testString = @"testString";
+    /*
+     (lldb) p obj
+     (HCTestObjUnordered *) $1 = 0x00006000010b0460
+     F8 BA 58 0D 01 00 00 00 FF FF 00 00 64 00 CC 00 F0 D1 57 0D 01 00 00 00 DD 00 00 00 00 00 00 00
+     */
+    HCTestObjUnordered1 *obj1 = [HCTestObjUnordered1 new];
+    obj1.a = 0xFFFF;
+    obj1.b = 'd';
+    obj1.c = 0xcc;
+    obj1.d = 0xdd;
+    obj1.testString = @"testString";
+    /*
+     (lldb) p obj
+     (HCTestObjUnordered *) $1 = 0x00006000010b0cc0
+     48 BB 58 0D 01 00 00 00 64 00 CC 00 DD 00 00 00 FF FF 00 00 00 00 00 00 F0 D1 57 0D 01 00 00 00
+     */
+    /*
+     对比OC的类直接定义变量无序的，跟声明属性无序的，发现最终在变量在内存布局上是不一样的，属性的话会按照类型的size升序排序
+     */
+    NSLog(@"size of HCTestUnordered = %zd", sizeof(unordered)); // 24
+    NSLog(@"size of HCTestOrderedASC = %zd", sizeof(orderedASC)); // 24
+    NSLog(@"size of HCTestOrderedDESC = %zd", sizeof(orderedDESC)); // 24
+    NSLog(@"size of HCTestObjUnordered = %zd", class_getInstanceSize([HCTestObjUnordered class])); // 32 多了个isa
+    NSLog(@"size of HCTestObjUnordered1 = %zd", class_getInstanceSize([HCTestObjUnordered1 class])); // 32
+    /*
+     一般情况下计算结构体尺寸大小有如下规则：
+
+         结构体中每个数据成员的偏移位置是数据成员本身尺寸的倍数。
+         结构体的尺寸是最大基础类型数据成员尺寸的倍数。
+         如果有结构体嵌套时，被嵌套的结构体成员的偏移位置就是被嵌套结构体中尺寸最大的基础类型数据成员尺寸的倍数。嵌套结构体的尺寸则是所有被嵌套中的以及自身中的最大基础类型数据成员尺寸的倍数。
+     */
 }
 
 - (void)testAlign10Byte {
@@ -162,7 +312,7 @@ struct HCLinkedList {
      */
     self.b = 'd'; // 0x64
     self.c = 0xccc;
-    // 2020-11-27
+    // 2020-11-27 memory write可以修改数据
     // 类的底层是结构体，编译器对类的变量的布局也做了优化会根据变量的size来从小到大排序，我们通过Debug - View Memory可以查看信息
     // 80 D5 9A 0B 01 00 00 00 64 00 CC 0C 00 00 00 00 FF FF FF 00 00 00 00 00
     self.testString = @"eeeeee"; // p self.testString  (__NSCFConstantString *) $6 = 0x000000010b99f310 @"eeeeee"
