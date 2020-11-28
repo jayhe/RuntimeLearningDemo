@@ -123,16 +123,60 @@ struct Student {
   short int age;
   char *address;
   float grade;
-  char  name[9];
+  char  name[8];
 };
 
 struct StudentOrdered {
   bool sex;
-  char  name[9];
+  char  name[8];
   short int age;
   float grade;
   char *address;
 };
+
+@interface Student : NSObject
+{
+    bool sex;
+    short int age;
+    char *address;
+    float grade;
+    char  name[8];
+}
+
+@end
+
+@implementation Student
+
+@end
+
+@interface StudentOrdered : NSObject
+{
+    bool sex;
+    char  name[8];
+    short int age;
+    float grade;
+    char *address;
+}
+
+@end
+
+@implementation StudentOrdered
+
+@end
+
+@interface StudentWithProperty : NSObject
+
+@property (nonatomic, assign) bool sex;
+@property (nonatomic, assign) short int age;
+@property (nonatomic, assign) char *address;
+@property (nonatomic, assign) float grade;
+@property (nonatomic, strong) NSString *name; // 这里不能用char name[8]，就用一个指针代替也是8字节
+
+@end
+
+@implementation StudentWithProperty
+
+@end
 
 @interface ByteAlignmentTest ()
 
@@ -163,8 +207,11 @@ struct StudentOrdered {
 }
 
 - (void)testStructSize1 {
-    NSLog(@"size of Student = %zd", sizeof(struct Student)); // 32
-    NSLog(@"size of StudentOrdered = %zd", sizeof(struct StudentOrdered)); // 24
+    NSLog(@"size of Student struct = %zd", sizeof(struct Student)); // 32
+    NSLog(@"size of StudentOrdered struct = %zd", sizeof(struct StudentOrdered)); // 24
+    NSLog(@"size of Student obj = %zd", class_getInstanceSize(Student.class)); // 40
+    NSLog(@"size of StudentOrdered obj = %zd", class_getInstanceSize(StudentOrdered.class)); // 32
+    NSLog(@"size of StudentProperty obj = %zd", class_getInstanceSize(StudentWithProperty.class)); // 32
 }
 
 - (void)testStructSize {
