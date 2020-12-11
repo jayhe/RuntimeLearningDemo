@@ -12,7 +12,7 @@
 #import <UIKit/UIKit.h>
 #import <libffi-iOS/ffi.h>
 
-#define kHCHookPrefix   @"hc_hook_"
+#define kHCHookPrefix   @"HC_HOOK_"
 
 @interface HCKVOSetter : NSObject
 
@@ -243,9 +243,17 @@ static  NSString * _Nullable getKey(SEL cmd);
     imp = (void(*)(id, SEL, id))method_getImplementation(originMethod); // 拿到原始函数的imp
     if ([cls automaticallyNotifiesObserversForKey:key]) {
         //[self willChangeValueForKey:key]; // 走系统的那一套，找到observer去执行
+        id oldValue = [self valueForKey:key];
+        NSMutableDictionary *change = [NSMutableDictionary dictionary];
+        if (oldValue) {
+            [change setObject:oldValue forKey:@"old"];
+        }
+        if (obj) {
+            [change setObject:obj forKey:@"new"];
+        }
         imp(self, _cmd, obj);
         //[self didChangeValueForKey:key];
-        [self observeValueForKeyPath:key ofObject:obj change:@{} context:nil];
+        [self observeValueForKeyPath:key ofObject:nil change:change.copy context:nil];
     } else {
         imp(self, _cmd, obj);
     }

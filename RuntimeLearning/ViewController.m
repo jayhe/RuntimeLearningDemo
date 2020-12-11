@@ -997,10 +997,11 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
 - (void)testKVO {
     NSLog(@"Before observe self.class = %@, object_getClass(self) = %@, imp = %p", self.class, object_getClass(self), method_getImplementation(class_getInstanceMethod(object_getClass(self), @selector(setTestKVOString:))));
     HCObserveValueForKey(self, @"testKVOString");
-    self.testKVOString = @"Title After Observe";
+    self.testKVOString = @"Test After Observe";
     NSLog(@"After observed self.class = %@, object_getClass(self) = %@, imp = %p", self.class, object_getClass(self), method_getImplementation(class_getInstanceMethod(object_getClass(self), @selector(setTestKVOString:))));
     HCRemoveObserveValueForKey(self, @"testKVOString");
     NSLog(@"After remove observer self.class = %@, object_getClass(self) = %@, imp = %p", self.class, object_getClass(self), method_getImplementation(class_getInstanceMethod(object_getClass(self), @selector(setTestKVOString:))));
+    self.testKVOString = @"Test After Remove Observer";
     /*
      2020-12-11 17:02:09.371290+0800 RuntimeLearning[46613:1125464] Before observe self.class = ViewController, object_getClass(self) = ViewController, imp = 0x101031100
      2020-12-11 17:02:09.371716+0800 RuntimeLearning[46613:1125464] testKVOString: {
