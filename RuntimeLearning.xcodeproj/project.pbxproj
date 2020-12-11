@@ -18,6 +18,8 @@
 		1012871E221D3B0A00ED6CDE /* RuntimeLearningTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1012871D221D3B0A00ED6CDE /* RuntimeLearningTests.m */; };
 		10128733221D3B7300ED6CDE /* NSObject+HCSafe.m in Sources */ = {isa = PBXBuildFile; fileRef = 10128729221D3B7200ED6CDE /* NSObject+HCSafe.m */; };
 		10128734221D3B7300ED6CDE /* MethodSwizzleUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1012872C221D3B7200ED6CDE /* MethodSwizzleUtil.m */; };
+		1016785D2580D01700089FCC /* TestViewDidLoadCallStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1016785B2580D01700089FCC /* TestViewDidLoadCallStackViewController.m */; };
+		101678692582124D00089FCC /* TestIsaUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 101678682582124D00089FCC /* TestIsaUsage.m */; };
 		1018FAF9225E12C60095BD95 /* AttributeUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1018FAF8225E12C60095BD95 /* AttributeUsage.m */; };
 		101C2C372478FEE7001403F5 /* HCSwizzleInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 101C2C322478FEE7001403F5 /* HCSwizzleInstance.m */; };
 		1025D0EB225DA683008E4CC3 /* UIFont+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 1025D0EA225DA683008E4CC3 /* UIFont+Test.m */; };
@@ -58,7 +60,6 @@
 		10D531002227B5B7007AE594 /* TestSubClassSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D530FA2227B5B7007AE594 /* TestSubClassSwizzle.m */; };
 		10D531012227B5B7007AE594 /* TestUnsafeSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D530FB2227B5B7007AE594 /* TestUnsafeSwizzle.m */; };
 		10D531082227CC86007AE594 /* NSObject+HCWillDealloc.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D531072227CC86007AE594 /* NSObject+HCWillDealloc.m */; };
-		10E383A924558132004ADBB5 /* TestViewDidLoadCallStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E383A824558132004ADBB5 /* TestViewDidLoadCallStackViewController.m */; };
 		10E6545024939EEE0022156D /* TestFilterUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E6544F24939EEE0022156D /* TestFilterUsage.m */; };
 		10E6545224939F4E0022156D /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E6545124939F4E0022156D /* CoreImage.framework */; };
 		10E6B1402462863E00A37097 /* KeychainUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E6B13F2462863E00A37097 /* KeychainUsage.m */; };
@@ -159,6 +160,10 @@
 		1012872A221D3B7200ED6CDE /* MethodSwizzleUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MethodSwizzleUtil.h; sourceTree = "<group>"; };
 		1012872B221D3B7200ED6CDE /* NSObject+HCSafe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HCSafe.h"; sourceTree = "<group>"; };
 		1012872C221D3B7200ED6CDE /* MethodSwizzleUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MethodSwizzleUtil.m; sourceTree = "<group>"; };
+		1016785B2580D01700089FCC /* TestViewDidLoadCallStackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewDidLoadCallStackViewController.m; sourceTree = "<group>"; };
+		1016785C2580D01700089FCC /* TestViewDidLoadCallStackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewDidLoadCallStackViewController.h; sourceTree = "<group>"; };
+		101678672582124D00089FCC /* TestIsaUsage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestIsaUsage.h; sourceTree = "<group>"; };
+		101678682582124D00089FCC /* TestIsaUsage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestIsaUsage.m; sourceTree = "<group>"; };
 		1018FAF7225E12C60095BD95 /* AttributeUsage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AttributeUsage.h; sourceTree = "<group>"; };
 		1018FAF8225E12C60095BD95 /* AttributeUsage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AttributeUsage.m; sourceTree = "<group>"; };
 		101C2C2E2478FEE7001403F5 /* RCTProfileTrampoline-arm.S */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = "RCTProfileTrampoline-arm.S"; sourceTree = "<group>"; };
@@ -241,8 +246,6 @@
 		10D530FE2227B5B7007AE594 /* TestUnsafeSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestUnsafeSwizzle.h; sourceTree = "<group>"; };
 		10D531062227CC86007AE594 /* NSObject+HCWillDealloc.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+HCWillDealloc.h"; sourceTree = "<group>"; };
 		10D531072227CC86007AE594 /* NSObject+HCWillDealloc.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HCWillDealloc.m"; sourceTree = "<group>"; };
-		10E383A724558132004ADBB5 /* TestViewDidLoadCallStackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewDidLoadCallStackViewController.h; sourceTree = "<group>"; };
-		10E383A824558132004ADBB5 /* TestViewDidLoadCallStackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewDidLoadCallStackViewController.m; sourceTree = "<group>"; };
 		10E6544E24939EEE0022156D /* TestFilterUsage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestFilterUsage.h; sourceTree = "<group>"; };
 		10E6544F24939EEE0022156D /* TestFilterUsage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestFilterUsage.m; sourceTree = "<group>"; };
 		10E6545124939F4E0022156D /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
@@ -372,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				10E6B141246296BF00A37097 /* RuntimeLearning.entitlements */,
+				1016785A2580CFE300089FCC /* ISA */,
 				10B78433254FF76000A8F011 /* Timer */,
 				10A65BCB2508AF75008D98E1 /* Protocol */,
 				104D73442498CC4400055968 /* Load&Initialize */,
@@ -397,8 +401,6 @@
 				10128705221D3B0700ED6CDE /* AppDelegate.m */,
 				10128707221D3B0700ED6CDE /* ViewController.h */,
 				10128708221D3B0700ED6CDE /* ViewController.m */,
-				10E383A724558132004ADBB5 /* TestViewDidLoadCallStackViewController.h */,
-				10E383A824558132004ADBB5 /* TestViewDidLoadCallStackViewController.m */,
 				1012870A221D3B0700ED6CDE /* Main.storyboard */,
 				106BB51524EA5BF800CA68AF /* LaunchScreen.storyboard */,
 				1012870D221D3B0900ED6CDE /* Assets.xcassets */,
@@ -436,6 +438,17 @@
 				1059F82C2488E225005673C8 /* NSObject+HCLog.m */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		1016785A2580CFE300089FCC /* ISA */ = {
+			isa = PBXGroup;
+			children = (
+				1016785C2580D01700089FCC /* TestViewDidLoadCallStackViewController.h */,
+				1016785B2580D01700089FCC /* TestViewDidLoadCallStackViewController.m */,
+				101678672582124D00089FCC /* TestIsaUsage.h */,
+				101678682582124D00089FCC /* TestIsaUsage.m */,
+			);
+			path = ISA;
 			sourceTree = "<group>";
 		};
 		1018FAF6225E12A50095BD95 /* __attribute__ */ = {
@@ -975,6 +988,7 @@
 				10C3235922781DCF0091B0ED /* NSObject+HCInjection.m in Sources */,
 				1059F82D2488E225005673C8 /* NSObject+HCLog.m in Sources */,
 				10518D81241F79A600AE5265 /* TestCategoryOveride+TestOverideOne.m in Sources */,
+				1016785D2580D01700089FCC /* TestViewDidLoadCallStackViewController.m in Sources */,
 				104D7354249A596B00055968 /* TestCategorySwizzle+LoadOrder.m in Sources */,
 				10A65BCF2508B3A8008D98E1 /* HCTestProtocolImp.m in Sources */,
 				1080ECA82552DAD100ABC822 /* main.m in Sources */,
@@ -982,7 +996,6 @@
 				104D73472498CCB600055968 /* HookMethodInInitialize.m in Sources */,
 				104D734A2498DD7800055968 /* NSObject+Utility.m in Sources */,
 				1086B37E23B4AE910002F990 /* FishhookUsage.m in Sources */,
-				10E383A924558132004ADBB5 /* TestViewDidLoadCallStackViewController.m in Sources */,
 				1026DD112333173D00738E85 /* TestCode.mm in Sources */,
 				10113DE122CC8F7F00132833 /* CopyUsage.m in Sources */,
 				10D16100237456940051A7BA /* DispatchExamnationTest.m in Sources */,
@@ -994,6 +1007,7 @@
 				10BF41EB228012A7009F291E /* DispatchBarrierTest.m in Sources */,
 				10A6CA9D241CA882002BFAC5 /* TestMethodInvocation.m in Sources */,
 				10E6B1402462863E00A37097 /* KeychainUsage.m in Sources */,
+				101678692582124D00089FCC /* TestIsaUsage.m in Sources */,
 				10B78436254FF78300A8F011 /* TestTimerUsage.m in Sources */,
 				10F2DB622397AEEA00BA107A /* TestClassCluster.m in Sources */,
 				104BF8BD22771E9D000C464E /* DynamicCallFunctionTest.m in Sources */,

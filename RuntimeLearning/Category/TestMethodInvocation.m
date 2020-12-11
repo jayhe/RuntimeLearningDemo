@@ -20,16 +20,39 @@
 @implementation TestMethodInvocation
 
 - (void)testKVCSetProperty {
+    // Name定义在name之后
     [self setValue:@"JayHe" forKey:@"Name"];
     NSLog(@"Name = %@ name = %@", self.Name, self.name); // RuntimeLearning[24880:398327] Name = (null) name = JayHe
 }
 
 - (void)testSetProperty {
+    // Name定义在name之后
     self.Name = @"JayHe";
     NSLog(@"Name = %@ name = %@", self.Name, self.name); // RuntimeLearning[24955:405445] Name = (null) name = JayHe
 }
+/*
+ (lldb) po [self _shortMethodDescription]
+ <TestMethodInvocation: 0x600001730240>:
+ in TestMethodInvocation:
+     Properties:
+         @property (copy, nonatomic) NSString* Name;  (@synthesize Name = _Name;)
+         @property (copy, nonatomic) NSString* name;  (@synthesize name = _name;)
+     Instance Methods:
+         - (void) testKVCSetProperty; (0x10507b160)
+         - (void) testSetProperty; (0x10507b230)
+         - (void) testSetPropertyWhenChangeDeclareOrder; (0x105068d90)
+         - (void) callOriginalClassMethod; (0x10507b300)
+         - (id) name; (0x105068eb0)
+         - (void) .cxx_destruct; (0x105068f00)
+         - (void) setName:(id)arg1; (0x10507b460)
+         - (void) setName:(id)arg1; (0x10507b4c0)
+         - (id) Name; (0x105068e60)
+ (NSObject ...)
 
+ (lldb)
+ */
 - (void)testSetPropertyWhenChangeDeclareOrder {
+    // Name定义在前
     self.Name = @"JayHe";
     NSLog(@"Name = %@ name = %@", self.Name, self.name); // RuntimeLearning[25015:409263] Name = JayHe name = (null)
 }
@@ -61,8 +84,8 @@
 
 @implementation TestMethodInvocation(Category)
 
-- (void)setName:(NSString *)Name {
-    NSLog(@"类别中的方法调用了");
-}
+//- (void)setName:(NSString *)Name {
+//    NSLog(@"类别中的方法调用了");
+//}
 
 @end

@@ -110,6 +110,7 @@ void testBenchmark(void);
 @property (nonatomic, strong) NSMutableArray<TableDataSection*> *dataSource;
 @property (nonatomic, strong) NSString *nonatomicText;
 @property (atomic, strong) NSString *atomicText;
+@property (nonatomic, copy) NSString *testKVOString;
 
 - (void)testMethodNotImp;
 
@@ -126,7 +127,30 @@ void testBenchmark(void);
     // Do any additional setup after loading the view, typically from a nib.
     [self initDataSource];
     [self.view addSubview:self.entryTableView];
+    [self.entryTableView addObserver:self forKeyPath:@"backgroundColor" options:NSKeyValueObservingOptionNew context:nil];
     NSLog(@"%s", __FUNCTION__);
+    self.entryTableView.backgroundColor = [UIColor whiteColor];
+    if ([self.entryTableView isMemberOfClass:[UITableView class]]) { // return [self class] == cls;
+        NSLog(@"self.entryTableView is member of  UITableView");
+    }
+    if ([self.entryTableView isKindOfClass:[UITableView class]]) { // 递归superclass去判断class是否相等
+        NSLog(@"self.entryTableView is kind of  UITableView");
+    }
+    /*
+     (lldb) p self.entryTableView->isa
+     (__unsafe_unretained Class) $4 = NSKVONotifying_UITableView
+     (lldb) po [NSKVONotifying_UITableView _shortMethodDescription]
+     <NSKVONotifying_UITableView: 0x600003d10bd0>:
+     in NSKVONotifying_UITableView:
+         Instance Methods:
+             - (void) setBackgroundColor:(id)arg1; (0x7fff207b5b57)
+             - (Class) class; (0x7fff207b4662)
+             - (void) dealloc; (0x7fff207b440b)
+             - (BOOL) _isKVOA; (0x7fff207b4403)
+     (UITableView ...)
+
+     (lldb)
+     */
     //[self testObserverProperty];
     //[self checkHasInsertedDylib];
 #if DEBUG
@@ -250,6 +274,8 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
         NSLog(@"backgroundColor: %@", change);
     } else if ([keyPath isEqualToString:@"title"]) {
         NSLog(@"title: %@", change);
+    } else if ([keyPath isEqualToString:@"testKVOString"]) {
+        NSLog(@"testKVOString: %@", change);
     }
 }
 
@@ -378,6 +404,9 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
         TableDataRow *row14 = [TableDataRow new];
         row14.title = @"修改类的isa";
         row14.action = @selector(changeInstanceClass);
+        TableDataRow *row17 = [TableDataRow new];
+        row17.title = @"测试自己实现简易KVO";
+        row17.action = @selector(testKVO);
         TableDataRow *row15 = [TableDataRow new];
         row15.title = @"测试catch unrecognized selector";
         row15.action = @selector(testCatchUnrecognizedSelector);
@@ -400,6 +429,7 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
             row11,
             row12,
             row14,
+            row17,
             row15,
             row16].mutableCopy;
     }
@@ -857,6 +887,10 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
     TestCategoryOveride *obj = [TestCategoryOveride new];
     // 通过类别调用未公开的方法
     [obj privateMethod];
+    // 类别的作用：
+    // 1.给类增加方法-便于类的扩展以及功能的划分，可以根据功能来定义不同的类别
+    // 2.给类增加属性
+    // 3.不通过runtime-api来调用私有库的私有方法
 }
 
 - (void)testSwizzleInInitialize {
@@ -958,6 +992,22 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
     } else {
         NSLog(@"not Equal");
     }
+}
+
+- (void)testKVO {
+    NSLog(@"Before observe self.class = %@, object_getClass(self) = %@, imp = %p", self.class, object_getClass(self), method_getImplementation(class_getInstanceMethod(object_getClass(self), @selector(setTestKVOString:))));
+    HCObserveValueForKey(self, @"testKVOString");
+    self.testKVOString = @"Title After Observe";
+    NSLog(@"After observed self.class = %@, object_getClass(self) = %@, imp = %p", self.class, object_getClass(self), method_getImplementation(class_getInstanceMethod(object_getClass(self), @selector(setTestKVOString:))));
+    HCRemoveObserveValueForKey(self, @"testKVOString");
+    NSLog(@"After remove observer self.class = %@, object_getClass(self) = %@, imp = %p", self.class, object_getClass(self), method_getImplementation(class_getInstanceMethod(object_getClass(self), @selector(setTestKVOString:))));
+    /*
+     2020-12-11 17:02:09.371290+0800 RuntimeLearning[46613:1125464] Before observe self.class = ViewController, object_getClass(self) = ViewController, imp = 0x101031100
+     2020-12-11 17:02:09.371716+0800 RuntimeLearning[46613:1125464] testKVOString: {
+     }
+     2020-12-11 17:02:09.371974+0800 RuntimeLearning[46613:1125464] After observed self.class = ViewController, object_getClass(self) = hc_hook_ViewController, imp = 0x101024b90
+     2020-12-11 17:02:09.372474+0800 RuntimeLearning[46613:1125464] After remove observer self.class = ViewController, object_getClass(self) = hc_hook_ViewController, imp = 0x101031100
+     */
 }
 
 #pragma mark - Observer

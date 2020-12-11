@@ -199,11 +199,25 @@ void HCObserveValueForKey(id instance, NSString *key) {
     */
     Method hookImpMethod = class_getInstanceMethod(HCKVOSetter.class, @selector(testSetter:));
     IMP hookImp = method_getImplementation(hookImpMethod);
-    class_addMethod(object_getClass(instance), setSelector, hookImp, mType);
+    if (class_addMethod(object_getClass(instance), setSelector, hookImp, mType) == NO) {
+        class_replaceMethod(object_getClass(instance), setSelector, hookImp, mType);
+    }
 }
 
 void HCRemoveObserveValueForKey(id instance, NSString *key) {
-    
+    // 这里应该将hook的setter方法的实现修改回去
+    if (!key || key.length == 0) {
+        return;
+    }
+    NSString *firstCharacter = [key substringToIndex:1];
+    NSString *tmpKey = [key stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:firstCharacter.uppercaseString];
+    SEL setSelector = NSSelectorFromString([NSString stringWithFormat:@"set%@:", tmpKey]);
+    Method oldMethod = class_getInstanceMethod([instance class], setSelector); // 拿到父类中的方法实现，也就是set方法
+    Method hookedMethod = class_getInstanceMethod(object_getClass(instance), setSelector); // 拿到kvo类的方法
+    if (!oldMethod) {
+        return;
+    }
+    method_setImplementation(hookedMethod, method_getImplementation(oldMethod)); // 将kvo类的set方法的实现修改成之前的实现
 }
 
 #pragma mark - Private Method
@@ -256,7 +270,10 @@ NSString *getKey(SEL cmd) {
     if (keyEnd < keyStart) {
         return nil;
     }
-    return [selString substringWithRange:NSMakeRange(keyStart, keyEnd - keyStart)];
+    NSString *tmpKeyString = [selString substringWithRange:NSMakeRange(keyStart, keyEnd - keyStart)];
+    NSString *firstCharacter = [tmpKeyString substringToIndex:1];
+    NSString *key = [tmpKeyString stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:firstCharacter.lowercaseString];
+    return key;
 }
 
 @end
