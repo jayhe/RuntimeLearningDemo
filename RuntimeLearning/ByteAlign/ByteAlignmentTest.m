@@ -118,6 +118,17 @@ struct HCTestOrderedDESC {
 
 @end
 
+@interface HCSubTestObjUnordered : HCTestObjUnordered1
+
+@property (nonatomic, copy) NSString *subTestString;
+@property (nonatomic, assign) short subD;
+
+@end
+
+@implementation HCSubTestObjUnordered
+
+@end
+
 struct Student {
   bool sex;
   short int age;
@@ -285,6 +296,23 @@ struct StudentOrdered {
          结构体的尺寸是最大基础类型数据成员尺寸的倍数。
          如果有结构体嵌套时，被嵌套的结构体成员的偏移位置就是被嵌套结构体中尺寸最大的基础类型数据成员尺寸的倍数。嵌套结构体的尺寸则是所有被嵌套中的以及自身中的最大基础类型数据成员尺寸的倍数。
      */
+    HCSubTestObjUnordered *subObj = [HCSubTestObjUnordered new];
+    subObj.a = 0xFFFF;
+    subObj.b = 'd';
+    subObj.c = 0xcc;
+    subObj.d = 0xdd;
+    subObj.testString = @"testString";
+    subObj.subTestString = @"subTestString";
+    subObj.subD = 0xEE;
+    /*
+     模拟器查看memory信息
+     父类：70 66 93 0C 01 00 00 00 64 00 CC 00 DD 00 00 00 FF FF 00 00 00 00 00 00 D0 72 92 0C 01 00 00 00
+     子类：EE 00 00 00 00 00 00 00 90 73 92 0C 01 00 00 00
+     (lldb) p subObj.subTestString
+     (__NSCFConstantString *) $0 = 0x000000010c927390 @"subTestString"
+     可以看到第一行是32字节是存储isa以及父类的实例信息；第二行16字节存储subObj类的实例信息，可以看到如果有继承关系，则父类和本类都会分别对属性进行从小到大来排序
+     */
+    NSLog(@"size of HCSubTestObjUnordered = %zd", class_getInstanceSize([HCSubTestObjUnordered class])); // 48 = 32 + 8 + 2再8字节对齐
 }
 
 - (void)testAlign10Byte {

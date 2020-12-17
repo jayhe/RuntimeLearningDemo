@@ -56,7 +56,7 @@
  }
 
  - (Class)class {
-     return object_getClass(self);
+     return object_getClass(self); // 返回的就是isa，一般都是通过hook class的返回
  }
 
  + (Class)superclass {
