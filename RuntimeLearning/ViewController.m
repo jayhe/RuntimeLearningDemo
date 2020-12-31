@@ -53,6 +53,27 @@
 #import "HCTestProtocol.h"
 #import <Aspects/Aspects.h>
 
+@interface TestKVOObject : NSObject
+{
+    NSString *_testIvarString;
+}
+
+@property (nonatomic, copy) NSString *testString;
+
+@end
+
+@implementation TestKVOObject
+
+//- (BOOL)_isKVOA {
+//    return 0;
+//}
+
+- (void)didChangeValueForKey:(NSString *)key {
+    [super didChangeValueForKey:key];
+}
+
+@end
+
 @class TableDataRow;
 
 @interface TableDataSection : NSObject
@@ -407,6 +428,9 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
         TableDataRow *row17 = [TableDataRow new];
         row17.title = @"测试自己实现简易KVO";
         row17.action = @selector(testKVO);
+        TableDataRow *row18 = [TableDataRow new];
+        row18.title = @"测试系统KVO";
+        row18.action = @selector(testSystemKVO);
         TableDataRow *row15 = [TableDataRow new];
         row15.title = @"测试catch unrecognized selector";
         row15.action = @selector(testCatchUnrecognizedSelector);
@@ -430,6 +454,7 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
             row12,
             row14,
             row17,
+            row18,
             row15,
             row16].mutableCopy;
     }
@@ -994,20 +1019,101 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
     }
 }
 
+- (void)testSystemKVO {
+    /*
+     (lldb) po [NSKVONotifying_TestKVOObject _shortMethodDescription]
+     <NSKVONotifying_TestKVOObject: 0x600001e558c0>:
+     in NSKVONotifying_TestKVOObject:
+         Instance Methods:
+             - (void) setTestString:(id)arg1; (0x7fff207b5b57)
+             - (Class) class; (0x7fff207b4662)
+             - (void) dealloc; (0x7fff207b440b)
+             - (BOOL) _isKVOA; (0x7fff207b4403)
+     in TestKVOObject:
+         Properties:
+             @property (copy, nonatomic) NSString* testString;  (@synthesize testString = _testString;)
+         Instance Methods:
+             - (id) testString; (0x1071074f0)
+             - (void) setTestString:(id)arg1; (0x107107540)
+             - (void) dealloc; (0x107107490)
+             - (void) .cxx_destruct; (0x1071075a0)
+     (NSObject ...)
+
+     dealloc的实现:
+     (lldb) dis -s 0x7fff207b4403
+     Foundation`NSKVODeallocate:
+     
+     
+     _isKVOA的实现：
+     (lldb) dis -s 0x7fff207b4403
+     Foundation`NSKVOIsAutonotifying:
+     (lldb) br set -a 0x7fff207b4403
+     Breakpoint 51: where = Foundation`NSKVOIsAutonotifying, address = 0x00007fff207b4403
+     
+     hechao@hechaodeMacBook-Pro Foundation.framework % nm Foundation | grep '_isKVOA'
+     00007fff207b5b4f t -[NSObject(NSKeyValueObserverNotifying) _isKVOA]
+     查看伪代码NSObject的_isKVOA返回的是0，NSKVOIsAutonotifying返回的是1；但是断点发现在触发kvo的时候并没有调用该方法，暂不知道该函数的作用是干啥的
+     
+     setTestString的实现：
+     dis -s 0x7fff207b5b57
+     Foundation`_NSSetObjectValueAndNotify:
+     
+     
+     class的实现：
+     // 父类：
+     (lldb) dis -s 0x1071074f0
+         0x1071074f0: xorb   %bh, %bl
+         0x1071074f2: pushq  %rsp
+         0x1071074f3: cmpsb  %es:(%rdi), (%rsi)
+     // KVO子类：
+     (lldb) dis -s 0x7fff207b4662
+     Foundation`NSKVOClass:
+         0x7fff207b4662 <+0>:  pushq  %rbp
+         0x7fff207b4663 <+1>:  movq   %rsp, %rbp
+         0x7fff207b4666 <+4>:  pushq  %r15
+         0x7fff207b4668 <+6>:  pushq  %r14
+         0x7fff207b466a <+8>:  pushq  %rbx
+         0x7fff207b466b <+9>:  pushq  %rax
+         0x7fff207b466c <+10>: movq   %rsi, %r14
+         0x7fff207b466f <+13>: movq   %rdi, %r15
+         0x7fff207b4672 <+16>: callq  0x7fff2094a51a            ; symbol stub for: object_getClass
+         0x7fff207b4677 <+21>: movq   %rax, %rbx
+         0x7fff207b467a <+24>: movq   %rax, %rdi
+         0x7fff207b467d <+27>: callq  0x7fff207b5b19            ; _NSKVONotifyingOriginalClassForIsa
+     (lldb)
+     */
+    TestKVOObject *test = [TestKVOObject new];
+    [test addObserver:self forKeyPath:@"testString" options:NSKeyValueObservingOptionNew context:nil];
+    test.testString = @"testString";
+    [test setValue:@"testValue" forKey:@"testString"]; // 属性kvc设置会触发kvo
+    [test addObserver:self forKeyPath:@"testIvarString" options:NSKeyValueObservingOptionNew context:nil];
+    [test setValue:@"testIvarValue" forKey:@"testIvarString"]; // ivar kvc设置也会触发kvo；可以猜测kvc的内部不仅仅是赋予了值，还会调用willChange、didChangeValueForKey
+    /*
+     bt
+     1.-[NSObject(NSKeyValueCoding) setValue:forKey:]
+     2._NSSetUsingKeyValueSetter
+        dis -s 0x7fff207b5c64 // _NSSetUsingKeyValueSetter其中的一个跳转指令
+        Foundation`_NSSetObjectValueAndNotify:
+     3._NSSetObjectValueAndNotify
+     4.-[TestKVOObject didChangeValueForKey:]
+     */
+}
+
 - (void)testKVO {
-    NSLog(@"Before observe self.class = %@, object_getClass(self) = %@, imp = %p", self.class, object_getClass(self), method_getImplementation(class_getInstanceMethod(object_getClass(self), @selector(setTestKVOString:))));
+    NSLog(@"Before observe self.class = %@, object_getClass(self) = %@, metaClass = %@, imp = %p", self.class, object_getClass(self), object_getClass(object_getClass(self)), method_getImplementation(class_getInstanceMethod(object_getClass(self), @selector(setTestKVOString:))));
     HCObserveValueForKey(self, @"testKVOString");
     self.testKVOString = @"Test After Observe";
-    NSLog(@"After observed self.class = %@, object_getClass(self) = %@, imp = %p", self.class, object_getClass(self), method_getImplementation(class_getInstanceMethod(object_getClass(self), @selector(setTestKVOString:))));
+    NSLog(@"After observed self.class = %@, object_getClass(self) = %@, metaClass = %@, imp = %p", self.class, object_getClass(self), object_getClass(object_getClass(self)), method_getImplementation(class_getInstanceMethod(object_getClass(self), @selector(setTestKVOString:))));
     HCRemoveObserveValueForKey(self, @"testKVOString");
-    NSLog(@"After remove observer self.class = %@, object_getClass(self) = %@, imp = %p", self.class, object_getClass(self), method_getImplementation(class_getInstanceMethod(object_getClass(self), @selector(setTestKVOString:))));
+    NSLog(@"After remove observer self.class = %@, object_getClass(self) = %@, metaClass = %@ imp = %p",
+          self.class, object_getClass(self), object_getClass(object_getClass(self)), method_getImplementation(class_getInstanceMethod(object_getClass(self), @selector(setTestKVOString:))));
     self.testKVOString = @"Test After Remove Observer";
     /*
      2020-12-11 17:02:09.371290+0800 RuntimeLearning[46613:1125464] Before observe self.class = ViewController, object_getClass(self) = ViewController, imp = 0x101031100
      2020-12-11 17:02:09.371716+0800 RuntimeLearning[46613:1125464] testKVOString: {
      }
-     2020-12-11 17:02:09.371974+0800 RuntimeLearning[46613:1125464] After observed self.class = ViewController, object_getClass(self) = hc_hook_ViewController, imp = 0x101024b90
-     2020-12-11 17:02:09.372474+0800 RuntimeLearning[46613:1125464] After remove observer self.class = ViewController, object_getClass(self) = hc_hook_ViewController, imp = 0x101031100
+     2020-12-11 17:02:09.371974+0800 RuntimeLearning[46613:1125464] After observed self.class = ViewController, object_getClass(self) = HC_HOOK_ViewController, imp = 0x101024b90
+     2020-12-11 17:02:09.372474+0800 RuntimeLearning[46613:1125464] After remove observer self.class = ViewController, object_getClass(self) = HC_HOOK_ViewController, imp = 0x101031100
      */
 }
 

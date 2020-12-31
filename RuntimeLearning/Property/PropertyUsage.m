@@ -105,7 +105,7 @@
      
      */
     __unused NSString *tmpName = [self valueForKey:@"_hcTestName"]; // hcTestName 都可以得到name的值
-    //__unused NSString *tmpName1 = [self valueForKey:@"name"]; // 指定getter方法并且实例名也不是如果不是按照kvc的查找方式中定义的那几种就会抛出异常‘valueForUndefinedKey’
+    //__unused NSString *tmpName1 = [self valueForKey:@"name"]; // 指定getter方法并且实例名也如果不是按照kvc的查找方式中定义的那几种就会抛出异常‘valueForUndefinedKey’
     self.subTest = [NSDate new];
     //self.testRetainProperty = [NSObject new];
     NSArray *tmpArray = [NSArray arrayWithObject:@"1"];

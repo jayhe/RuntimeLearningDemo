@@ -2318,8 +2318,8 @@
             filePath = "RuntimeLearning/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "265"
-            endingLineNumber = "265"
+            startingLineNumber = "286"
+            endingLineNumber = "286"
             landmarkName = "-testCatchUnrecognizedSelector"
             landmarkType = "7">
          </BreakpointContent>
@@ -2350,8 +2350,8 @@
             filePath = "RuntimeLearning/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "899"
-            endingLineNumber = "899"
+            startingLineNumber = "924"
+            endingLineNumber = "924"
             landmarkName = "-testSwizzleInInitialize"
             landmarkType = "7">
          </BreakpointContent>
@@ -2366,8 +2366,8 @@
             filePath = "RuntimeLearning/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
+            startingLineNumber = "200"
+            endingLineNumber = "200"
             landmarkName = "-setupUI"
             landmarkType = "7">
          </BreakpointContent>
@@ -2382,13 +2382,13 @@
             filePath = "RuntimeLearning/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "610"
-            endingLineNumber = "610"
+            startingLineNumber = "635"
+            endingLineNumber = "635"
             landmarkName = "-changeTableIndicatorStyle"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "C0337C1E-9815-48C8-93AD-A9ED4CB0CB20 - 2b36b907cad5add6"
+                  uuid = "C0337C1E-9815-48C8-93AD-A9ED4CB0CB20 - 2b36b907cada509f"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -2398,12 +2398,12 @@
                   urlString = "file:///Users/hechao/Documents/Demos/RuntimeLearning/RuntimeLearning/ViewController.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "610"
-                  endingLineNumber = "610"
+                  startingLineNumber = "635"
+                  endingLineNumber = "635"
                   offsetFromSymbolStart = "247">
                </Location>
                <Location
-                  uuid = "C0337C1E-9815-48C8-93AD-A9ED4CB0CB20 - e8c5cfbc6a0d884b"
+                  uuid = "C0337C1E-9815-48C8-93AD-A9ED4CB0CB20 - e8c5cfbc6a027502"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -2413,8 +2413,8 @@
                   urlString = "file:///Users/hechao/Documents/Demos/RuntimeLearning/RuntimeLearning/ViewController.m"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "610"
-                  endingLineNumber = "610"
+                  startingLineNumber = "635"
+                  endingLineNumber = "635"
                   offsetFromSymbolStart = "11">
                </Location>
             </Locations>
@@ -2446,8 +2446,8 @@
             filePath = "RuntimeLearning/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "617"
-            endingLineNumber = "617"
+            startingLineNumber = "642"
+            endingLineNumber = "642"
             landmarkName = "-changeTableIndicatorStyle"
             landmarkType = "7">
          </BreakpointContent>
@@ -2462,8 +2462,8 @@
             filePath = "RuntimeLearning/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "614"
-            endingLineNumber = "614"
+            startingLineNumber = "639"
+            endingLineNumber = "639"
             landmarkName = "-changeTableIndicatorStyle"
             landmarkType = "7">
          </BreakpointContent>
@@ -2482,22 +2482,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1ACBDC44-99C5-4D1F-950B-38B10AD90160"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RuntimeLearning/Association/NSObject+HCWillDealloc.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "HCAssociatedObject"
-            landmarkType = "2">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "847FD138-BC8D-43E1-9578-0BB170787A1D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -2505,8 +2489,8 @@
             filePath = "RuntimeLearning/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "884"
-            endingLineNumber = "884"
+            startingLineNumber = "909"
+            endingLineNumber = "909"
             landmarkName = "-testSetWeakAssociation"
             landmarkType = "7">
          </BreakpointContent>
@@ -2521,8 +2505,8 @@
             filePath = "RuntimeLearning/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "877"
-            endingLineNumber = "877"
+            startingLineNumber = "902"
+            endingLineNumber = "902"
             landmarkName = "-testSetWeakAssociation"
             landmarkType = "7">
          </BreakpointContent>
@@ -2790,8 +2774,8 @@
             filePath = "RuntimeLearning/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "748"
-            endingLineNumber = "748"
+            startingLineNumber = "773"
+            endingLineNumber = "773"
             landmarkName = "-testStringFormat"
             landmarkType = "7">
          </BreakpointContent>
@@ -2893,22 +2877,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "124F91F2-5302-4369-AFCA-1B2FE141ED61"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RuntimeLearning/AppDelegate.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "-application:didFinishLaunchingWithOptions:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "30C82E60-124D-4340-8549-CC8098490E79"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -2996,42 +2964,10 @@
             filePath = "RuntimeLearning/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "997"
-            endingLineNumber = "997"
+            startingLineNumber = "1102"
+            endingLineNumber = "1102"
             landmarkName = "-testKVO"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E038815E-E9EB-4224-8F07-2EC0057C9EF6"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RuntimeLearning/Swizzle/HookInstance/HCSwizzleInstance.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "235"
-            endingLineNumber = "235"
-            landmarkName = "-testSetter:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "AF88F92C-E360-4EEE-BBAC-1E5D89E6245B"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RuntimeLearning/Swizzle/HookInstance/HCSwizzleInstance.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "207"
-            endingLineNumber = "207"
-            landmarkName = "HCRemoveObserveValueForKey(instance, key)"
-            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3044,42 +2980,10 @@
             filePath = "RuntimeLearning/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1003"
-            endingLineNumber = "1003"
+            startingLineNumber = "1108"
+            endingLineNumber = "1108"
             landmarkName = "-testKVO"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "563293E9-F32C-476D-BE38-D8326DF56744"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RuntimeLearning/Swizzle/HookInstance/HCSwizzleInstance.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "179"
-            endingLineNumber = "179"
-            landmarkName = "HCObserveValueForKey(instance, key)"
-            landmarkType = "9">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E184DEC2-9575-4139-844A-906DE0CD3517"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "RuntimeLearning/Swizzle/HookInstance/HCSwizzleInstance.m"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "203"
-            endingLineNumber = "203"
-            landmarkName = "HCObserveValueForKey(instance, key)"
-            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -3092,8 +2996,8 @@
             filePath = "RuntimeLearning/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1268"
-            endingLineNumber = "1268"
+            startingLineNumber = "1374"
+            endingLineNumber = "1374"
             landmarkName = "-entryTableView"
             landmarkType = "7">
          </BreakpointContent>
@@ -3108,8 +3012,8 @@
             filePath = "RuntimeLearning/ViewController.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "1244"
-            endingLineNumber = "1244"
+            startingLineNumber = "1350"
+            endingLineNumber = "1350"
             landmarkName = "-tableView:didSelectRowAtIndexPath:"
             landmarkType = "7">
          </BreakpointContent>
@@ -3128,6 +3032,148 @@
             endingLineNumber = "315"
             landmarkName = "-testStructSize"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4B2207E9-6586-4A4B-B7E5-087066A7097C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RuntimeLearning/ViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1022"
+            endingLineNumber = "1022"
+            landmarkName = "-testSystemKVO"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ED1B3744-4926-4836-A9B5-AD3B9D343F5B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RuntimeLearning/ViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "293"
+            endingLineNumber = "293"
+            landmarkName = "-observeValueForKeyPath:ofObject:change:context:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
+         <BreakpointContent
+            uuid = "DC8F2EDF-A392-4F6B-990B-52819652E4F7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = "NSKVODeallocate"
+            moduleName = "">
+            <Locations>
+               <Location
+                  uuid = "DC8F2EDF-A392-4F6B-990B-52819652E4F7 - eba756dcde9c29af"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NSKVODeallocate"
+                  moduleName = "Foundation"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C650E8BE-8AE8-4679-A023-9B91C68DB0FD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RuntimeLearning/ViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "-didChangeValueForKey:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "13CE0EBA-CC22-455B-897B-184C1B2CD5F5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RuntimeLearning/ViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1087"
+            endingLineNumber = "1087"
+            landmarkName = "-testSystemKVO"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0813F57E-A49D-4B2B-9FDE-42E63E4F87AC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RuntimeLearning/ViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1088"
+            endingLineNumber = "1088"
+            landmarkName = "-testSystemKVO"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8A30FCF4-FD83-4623-82A2-A7A314CD42F1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RuntimeLearning/ViewController.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "1090"
+            endingLineNumber = "1090"
+            landmarkName = "-testSystemKVO"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
+         <BreakpointContent
+            uuid = "BDE67262-1C30-4CA8-B8FA-996F79255B47"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = "NSKVOIsAutonotifying"
+            moduleName = "">
+            <Locations>
+               <Location
+                  uuid = "BDE67262-1C30-4CA8-B8FA-996F79255B47 - e08a3b8c7003bdf0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NSKVOIsAutonotifying"
+                  moduleName = "Foundation"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

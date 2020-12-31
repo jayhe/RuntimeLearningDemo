@@ -229,7 +229,13 @@ static const char *HCHookClassName(Class class) {
 @end
 
 @implementation HCKVOSetter
-
+/*
+ 1.KVO监听，系统会动态子类化一个类NSKVONotifying_ClassName，并且重写了class的实现、set方法、delloc、_isKVOA
+ 2.class内部实现返回的是KVO监听的类，而类的isa则指向的是NSKVONotifying_ClassName，可通过objc_getClass获取到
+ 3.set方法内部实现，会调用willChangeValueForKey、调用原始的实现、didChangeValueForKey；didChangeValueForKey中会去调用observeValueForKeyPath
+ 4.dealloc方法内部会做清理工作
+ 5._isKVOA是做什么的
+ */
 static  NSString * _Nullable getKey(SEL cmd);
 
 - (void)testSetter:(id)obj {
@@ -239,7 +245,7 @@ static  NSString * _Nullable getKey(SEL cmd);
     }
     Class cls = [self class];
     void (*imp)(id, SEL, id);
-    Method originMethod = class_getInstanceMethod(cls, _cmd);
+    Method originMethod = class_getInstanceMethod(cls, _cmd); // 获取原始的实现
     imp = (void(*)(id, SEL, id))method_getImplementation(originMethod); // 拿到原始函数的imp
     if ([cls automaticallyNotifiesObserversForKey:key]) {
         //[self willChangeValueForKey:key]; // 走系统的那一套，找到observer去执行
@@ -251,7 +257,7 @@ static  NSString * _Nullable getKey(SEL cmd);
         if (obj) {
             [change setObject:obj forKey:@"new"];
         }
-        imp(self, _cmd, obj);
+        imp(self, _cmd, obj); // 得到imp去直接调用
         //[self didChangeValueForKey:key];
         [self observeValueForKeyPath:key ofObject:nil change:change.copy context:nil];
     } else {
