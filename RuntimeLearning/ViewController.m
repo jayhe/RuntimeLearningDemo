@@ -74,6 +74,14 @@
 
 @end
 
+//@interface NSKVONotifying_TestKVOObject : TestKVOObject
+//
+//@end
+//
+//@implementation NSKVONotifying_TestKVOObject
+//
+//@end
+
 @class TableDataRow;
 
 @interface TableDataSection : NSObject
