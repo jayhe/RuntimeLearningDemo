@@ -53,16 +53,189 @@
 #import "HCTestProtocol.h"
 #import <Aspects/Aspects.h>
 
+@interface NSObject(HCKVCNilHandle)
+
+@end
+
+@implementation NSObject(HCKVCNilHandle)
+
++ (void)load {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        Method originMethod = class_getInstanceMethod(self.class, @selector(setNilValueForKey:));
+        Method hookMethod = class_getInstanceMethod(self.class, @selector(hc_setNilValueForKey:));
+        method_exchangeImplementations(originMethod, hookMethod);
+    });
+}
+
+- (nullable Ivar)hc_getIvarByKey:(NSString *)key {
+    if (![key isKindOfClass:[NSString class]] || key.length <= 0) {
+        return nil;
+    }
+    // 按照_key _isKey key isKey的方式去获取ivar
+    NSString *firstCharacter = [key substringToIndex:1];
+    NSString *upperFirstKey = [key stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:firstCharacter];
+    
+    NSString *_keyName = [NSString stringWithFormat:@"_%@", key];
+    NSString *_isKeyName = [NSString stringWithFormat:@"_is%@", upperFirstKey];
+    NSString *keyName = key;
+    NSString *isKeyName = [NSString stringWithFormat:@"is%@", upperFirstKey];
+    Ivar ivar;
+    if ((ivar = [self hc_getIvarByIvarName:_keyName])
+        || (ivar = [self hc_getIvarByIvarName:_isKeyName])
+        || (ivar = [self hc_getIvarByIvarName:keyName])
+        || (ivar = [self hc_getIvarByIvarName:isKeyName])) {
+        return ivar;
+    }
+    return nil;
+}
+
+- (nullable Ivar)hc_getIvarByIvarName:(NSString *)ivarNameString {
+    const char *ivarName = [ivarNameString cStringUsingEncoding:NSUTF8StringEncoding];
+    Ivar ivar = class_getInstanceVariable(self.class, ivarName);
+    return ivar;
+}
+
+- (void)hc_setNilValueForKey:(NSString *)key {
+    Ivar ivar = [self hc_getIvarByKey:key];
+    if (!ivar) {
+        [self hc_setNilValueForKey:key];
+    }
+    const char *typeEncoding = ivar_getTypeEncoding(ivar); // 'q' longlong 'Q' usignedlonglong；NSInteger在32bit是int，在64bit就是64位
+    // 遍历出所有的number、value类型的encoding，针对性的处理
+    // https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtTypeEncodings.html
+    /*
+     Printing description of typeEncoding:
+     (const char *) typeEncoding = 0x000000010f4c5c7a "{_NSRange=\"location\"Q\"length\"Q}"
+     (lldb) po @encode(NSRange)
+     "{_NSRange=QQ}"
+     */
+    switch (typeEncoding[0]) {
+            // NSNumber scalar type
+        case 'q': // longlong
+        case 'Q': // unsigned longlong
+        case 'i': // int
+        case 'I': // unsigned int
+        case 'l': // long
+        case 'L': // unsigned long
+        case 's': // short
+        case 'S': // unsigned short
+        case 'd': // double
+        case 'f': // float
+            [self setValue:@(0) forKey:key];
+            break;
+        case '{': {
+            char* idx = index(typeEncoding, '='); // 获取'='字符串中第一个出现的参数'=' 地址，然后将该字符出现的地址返回
+            /*
+             eg："0x000000010bac7c7a {_NSRange=\"location\"Q\"length\"Q}" idx则为 0x000000010bac7c83 "=\"location\"Q\"length\"Q}"
+             
+             Printing description of idx:
+             (char *) idx = 0x000000010bac7c83 "=\"location\"Q\"length\"Q}"
+             Printing description of typeEncoding:
+             (const char *) typeEncoding = 0x000000010bac7c7a "{_NSRange=\"location\"Q\"length\"Q}"
+             */
+            if (idx == NULL) { // 如果为空则表示没有找到'='，此时走远来的流程
+                [self hc_setNilValueForKey:key];
+            }
+            // 处理NSValue的一些场景：比如NSRange、CGRect、CGPoint、CGSize；也就是NSValue structure type
+            /*
+             int strncmp(const char *str1, const char *str2, size_t n) 把 str1 和 str2 进行比较，最多比较前 n 个字节
+             如果返回值 < 0，则表示 str1 小于 str2。
+             如果返回值 > 0，则表示 str2 小于 str1。
+             如果返回值 = 0，则表示 str1 等于 str2。
+             */
+            NSValue *value;
+            long cmpLength = idx - typeEncoding;
+#define SAME_ENCODE(name) (strncmp(typeEncoding, @encode(name), cmpLength) == 0)
+            if (SAME_ENCODE(NSRange)) {
+                value = [NSValue valueWithRange:NSMakeRange(0, 0)];
+            } else if (SAME_ENCODE(CGPoint)) {
+                value = [NSValue valueWithCGPoint:CGPointZero];
+            } else if (SAME_ENCODE(CGSize)) {
+                value = [NSValue valueWithCGSize:CGSizeZero];
+            } else if (SAME_ENCODE(CGRect)) {
+                value = [NSValue valueWithCGRect:CGRectZero];
+            } else if (SAME_ENCODE(CGVector)) {
+                value = [NSValue valueWithCGVector:CGVectorMake(0, 0)];
+            } else if (SAME_ENCODE(UIEdgeInsets)) {
+                value = [NSValue valueWithUIEdgeInsets:UIEdgeInsetsZero];
+            } else if (SAME_ENCODE(UIOffset)) {
+                value = [NSValue valueWithUIOffset:UIOffsetZero];
+            } else if (SAME_ENCODE(CGAffineTransform)) {
+                value = [NSValue valueWithCGAffineTransform:CGAffineTransformIdentity];
+            }
+#ifndef FOUNDATION_HAS_DIRECTIONAL_GEOMETRY
+            else if (@available(iOS 11.0, *)) {
+                if (SAME_ENCODE(NSDirectionalEdgeInsets)) {
+                    value = [NSValue valueWithDirectionalEdgeInsets:NSDirectionalEdgeInsetsZero];
+                }
+            } else {
+                // Fallback on earlier versions
+            }
+#endif
+            if (value != nil) {
+                [self setValue:value forKey:key];
+            } else {
+                [self hc_setNilValueForKey:key];
+            }
+        }
+            break;
+        default:
+            [self hc_setNilValueForKey:key];
+            break;
+    }
+}
+
+@end
+
 @interface TestKVOObject : NSObject
 {
+    /*
+     ivar的查找顺序，测试发现如果传的key是带有'_'的，也是会按照_key _isKey key isKey的方式查找
+     eg：key = testIvarString，则查找顺序_testIvarString _isTestIvarString testIvarString isTestIvarString
+     eg：key = _testIvarString，则查找顺序__testIvarString _is_testIvarString _testIvarString is_testIvarString
+     */
     NSString *_testIvarString;
+    //NSString *_isTestIvarString;
+    //NSString *testIvarString;
+    //NSString *isTestIvarString;
 }
 
 @property (nonatomic, copy) NSString *testString;
+@property (nonatomic, assign) NSInteger testInteger;
+@property (nonatomic, assign) NSRange testRange;
 
 @end
 
 @implementation TestKVOObject
+
+//- (nullable Ivar)hc_getIvarByKey:(NSString *)key {
+//    if (![key isKindOfClass:[NSString class]] || key.length <= 0) {
+//        return nil;
+//    }
+//    // 按照_key _isKey key isKey的方式去获取ivar
+//    NSString *firstCharacter = [key substringToIndex:1];
+//    NSString *upperFirstKey = [key stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:firstCharacter];
+//
+//    NSString *_keyName = [NSString stringWithFormat:@"_%@", key];
+//    NSString *_isKeyName = [NSString stringWithFormat:@"_is%@", upperFirstKey];
+//    NSString *keyName = key;
+//    NSString *isKeyName = [NSString stringWithFormat:@"is%@", upperFirstKey];
+//    Ivar ivar;
+//    if ((ivar = [self hc_getIvarByIvarName:_keyName])
+//        || (ivar = [self hc_getIvarByIvarName:_isKeyName])
+//        || (ivar = [self hc_getIvarByIvarName:keyName])
+//        || (ivar = [self hc_getIvarByIvarName:isKeyName])) {
+//        return ivar;
+//    }
+//    return nil;
+//}
+//
+//- (nullable Ivar)hc_getIvarByIvarName:(NSString *)ivarNameString {
+//    const char *ivarName = [ivarNameString cStringUsingEncoding:NSUTF8StringEncoding];
+//    Ivar ivar = class_getInstanceVariable(self.class, ivarName);
+//    return ivar;
+//}
 
 //- (BOOL)_isKVOA {
 //    return 0;
@@ -71,6 +244,102 @@
 - (void)didChangeValueForKey:(NSString *)key {
     [super didChangeValueForKey:key];
 }
+
+//- (void)setNilValueForKey:(NSString *)key {
+//    if ([key isEqualToString:@"testInteger"]) { // fix 设置number为nil的时候导致抛出异常
+//        [self setValue:@(0) forKey:key];
+//    }
+//}
+
+//- (void)setNilValueForKey:(NSString *)key {
+//    Ivar ivar = [self hc_getIvarByKey:key];
+//    if (!ivar) {
+//        [super setNilValueForKey:key];
+//    }
+//    const char *typeEncoding = ivar_getTypeEncoding(ivar); // 'q' longlong 'Q' usignedlonglong；NSInteger在32bit是int，在64bit就是64位
+//    // 遍历出所有的number、value类型的encoding，针对性的处理
+//    // https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtTypeEncodings.html
+//    /*
+//     Printing description of typeEncoding:
+//     (const char *) typeEncoding = 0x000000010f4c5c7a "{_NSRange=\"location\"Q\"length\"Q}"
+//     (lldb) po @encode(NSRange)
+//     "{_NSRange=QQ}"
+//     */
+//    switch (typeEncoding[0]) {
+//            // NSNumber scalar type
+//        case 'q': // longlong
+//        case 'Q': // unsigned longlong
+//        case 'i': // int
+//        case 'I': // unsigned int
+//        case 'l': // long
+//        case 'L': // unsigned long
+//        case 's': // short
+//        case 'S': // unsigned short
+//        case 'd': // double
+//        case 'f': // float
+//            [self setValue:@(0) forKey:key];
+//            break;
+//        case '{': {
+//            char* idx = index(typeEncoding, '='); // 获取'='字符串中第一个出现的参数'=' 地址，然后将该字符出现的地址返回
+//            /*
+//             eg："0x000000010bac7c7a {_NSRange=\"location\"Q\"length\"Q}" idx则为 0x000000010bac7c83 "=\"location\"Q\"length\"Q}"
+//
+//             Printing description of idx:
+//             (char *) idx = 0x000000010bac7c83 "=\"location\"Q\"length\"Q}"
+//             Printing description of typeEncoding:
+//             (const char *) typeEncoding = 0x000000010bac7c7a "{_NSRange=\"location\"Q\"length\"Q}"
+//             */
+//            if (idx == NULL) { // 如果为空则表示没有找到'='，此时走远来的流程
+//                [super setNilValueForKey:key];
+//            }
+//            // 处理NSValue的一些场景：比如NSRange、CGRect、CGPoint、CGSize；也就是NSValue structure type
+//            /*
+//             int strncmp(const char *str1, const char *str2, size_t n) 把 str1 和 str2 进行比较，最多比较前 n 个字节
+//             如果返回值 < 0，则表示 str1 小于 str2。
+//             如果返回值 > 0，则表示 str2 小于 str1。
+//             如果返回值 = 0，则表示 str1 等于 str2。
+//             */
+//            NSValue *value;
+//            long cmpLength = idx - typeEncoding;
+//#define SAME_ENCODE(name) (strncmp(typeEncoding, @encode(name), cmpLength) == 0)
+//            if (SAME_ENCODE(NSRange)) {
+//                value = [NSValue valueWithRange:NSMakeRange(0, 0)];
+//            } else if (SAME_ENCODE(CGPoint)) {
+//                value = [NSValue valueWithCGPoint:CGPointZero];
+//            } else if (SAME_ENCODE(CGSize)) {
+//                value = [NSValue valueWithCGSize:CGSizeZero];
+//            } else if (SAME_ENCODE(CGRect)) {
+//                value = [NSValue valueWithCGRect:CGRectZero];
+//            } else if (SAME_ENCODE(CGVector)) {
+//                value = [NSValue valueWithCGVector:CGVectorMake(0, 0)];
+//            } else if (SAME_ENCODE(UIEdgeInsets)) {
+//                value = [NSValue valueWithUIEdgeInsets:UIEdgeInsetsZero];
+//            } else if (SAME_ENCODE(UIOffset)) {
+//                value = [NSValue valueWithUIOffset:UIOffsetZero];
+//            } else if (SAME_ENCODE(CGAffineTransform)) {
+//                value = [NSValue valueWithCGAffineTransform:CGAffineTransformIdentity];
+//            }
+//#ifndef FOUNDATION_HAS_DIRECTIONAL_GEOMETRY
+//            else if (@available(iOS 11.0, *)) {
+//                if (SAME_ENCODE(NSDirectionalEdgeInsets)) {
+//                    value = [NSValue valueWithDirectionalEdgeInsets:NSDirectionalEdgeInsetsZero];
+//                }
+//            } else {
+//                // Fallback on earlier versions
+//            }
+//#endif
+//            if (value != nil) {
+//                [self setValue:value forKey:key];
+//            } else {
+//                [super setNilValueForKey:key];
+//            }
+//        }
+//            break;
+//        default:
+//            [super setNilValueForKey:key];
+//            break;
+//    }
+//}
 
 @end
 
@@ -305,6 +574,8 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
         NSLog(@"title: %@", change);
     } else if ([keyPath isEqualToString:@"testKVOString"]) {
         NSLog(@"testKVOString: %@", change);
+    } else {
+        NSLog(@"observeValu: %@", change);
     }
 }
 
@@ -1097,6 +1368,8 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
     [test addObserver:self forKeyPath:@"testIvarString" options:NSKeyValueObservingOptionNew context:nil];
     [test setValue:@"testIvarValue" forKey:@"testIvarString"]; // ivar kvc设置也会触发kvo；可以猜测kvc的内部不仅仅是赋予了值，还会调用willChange、didChangeValueForKey
     /*
+     在添加观察属性addObserver的时候，会判断是否支持kvo，如果支持的话会把属性对应的setter(setter方法是保存在一个全局的地方)方法给设置成成类似_NSSetObjectValueAndNotify且生成setter方法的时候会判断是否有set方法，有的话则替换掉实现，而
+     在setValue:forKey的时候会去找缓存中是否有对应的setter方法，没有的话则去找set方法(有的话则根据encode赋予对应的set方法_NSSetObjectValueForKeyWithMethod)，再去找它的实例然后赋予对应encode的setIvar方法_NSSetObjectValueForKeyInIvar
      bt
      1.-[NSObject(NSKeyValueCoding) setValue:forKey:]
      2._NSSetUsingKeyValueSetter
@@ -1105,6 +1378,13 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
      3._NSSetObjectValueAndNotify
      4.-[TestKVOObject didChangeValueForKey:]
      */
+    [test setValue:nil forKey:@"testString"];
+    [test setValue:nil forKey:@"testInteger"]; //  *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '[<TestKVOObject 0x600003f939a0> setNilValueForKey]: could not set nil as the value for the key testInteger.'
+    /*
+     setNilValueForKey有说明对于number和NSValue类型的，设置nil会抛出异常
+     */
+    [test setValue:nil forKey:@"testRange"]; // *** Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: '[<TestKVOObject 0x60000135ac40> setNilValueForKey]: could not set nil as the value for the key testRange.'
+    NSLog(@"test.testRange = %@", NSStringFromRange(test.testRange)); // test.testRange = {0, 0}
 }
 
 - (void)testKVO {
@@ -1123,6 +1403,14 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
      2020-12-11 17:02:09.371974+0800 RuntimeLearning[46613:1125464] After observed self.class = ViewController, object_getClass(self) = HC_HOOK_ViewController, imp = 0x101024b90
      2020-12-11 17:02:09.372474+0800 RuntimeLearning[46613:1125464] After remove observer self.class = ViewController, object_getClass(self) = HC_HOOK_ViewController, imp = 0x101031100
      */
+    
+    HCObserveValueForKey(self, @"testKVOString");
+    self.testKVOString = @"Test After Observe Again";
+    NSLog(@"After observed again self.class = %@, object_getClass(self) = %@, metaClass = %@, imp = %p", self.class, object_getClass(self), object_getClass(object_getClass(self)), method_getImplementation(class_getInstanceMethod(object_getClass(self), @selector(setTestKVOString:))));
+    HCRemoveObserveValueForKey(self, @"testKVOString");
+    NSLog(@"After remove observer again self.class = %@, object_getClass(self) = %@, metaClass = %@ imp = %p",
+          self.class, object_getClass(self), object_getClass(object_getClass(self)), method_getImplementation(class_getInstanceMethod(object_getClass(self), @selector(setTestKVOString:))));
+    self.testKVOString = @"Test After Remove Observer Again";
 }
 
 #pragma mark - Observer
