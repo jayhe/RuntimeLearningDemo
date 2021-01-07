@@ -74,7 +74,7 @@
     }
     // 按照_key _isKey key isKey的方式去获取ivar
     NSString *firstCharacter = [key substringToIndex:1];
-    NSString *upperFirstKey = [key stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:firstCharacter];
+    NSString *upperFirstKey = [key stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:firstCharacter.uppercaseString];
     
     NSString *_keyName = [NSString stringWithFormat:@"_%@", key];
     NSString *_isKeyName = [NSString stringWithFormat:@"_is%@", upperFirstKey];
@@ -96,12 +96,42 @@
     return ivar;
 }
 
-- (void)hc_setNilValueForKey:(NSString *)key {
-    Ivar ivar = [self hc_getIvarByKey:key];
-    if (!ivar) {
-        [self hc_setNilValueForKey:key];
+- (nullable Method)hc_getMethodByKey:(NSString *)key {
+    if (![key isKindOfClass:[NSString class]] || key.length <= 0) {
+        return nil;
     }
-    const char *typeEncoding = ivar_getTypeEncoding(ivar); // 'q' longlong 'Q' usignedlonglong；NSInteger在32bit是int，在64bit就是64位
+    NSString *firstCharacter = [key substringToIndex:1];
+    NSString *upperFirstKey = [key stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:firstCharacter.uppercaseString];
+    NSString *setKeyName = [NSString stringWithFormat:@"set%@:", upperFirstKey];
+    NSString *_setKeyName = [NSString stringWithFormat:@"_set%@:", upperFirstKey];
+    NSString *setIsKeyName = [NSString stringWithFormat:@"setIs%@:", upperFirstKey];
+    Method method;
+#define METHOD_BY_NAME(selName) class_getInstanceMethod(self.class, NSSelectorFromString(selName))
+    if ((method = METHOD_BY_NAME(setKeyName))
+        || (method = METHOD_BY_NAME(_setKeyName))
+        || (method = METHOD_BY_NAME(setIsKeyName))) {
+        return method;
+    }
+    return nil;
+}
+
+- (void)hc_setNilValueForKey:(NSString *)key {
+    // 获取是否有set方法
+    Method method = [self hc_getMethodByKey:key];
+    const char *typeEncoding = NULL;
+    if (method != nil) {
+        typeEncoding = method_copyArgumentType(method, 2); // 获取参数的encoding信息，method有2个缺省参数 self _cmd 所以这里是2
+    } else if ([self.class accessInstanceVariablesDirectly]) {
+        // 获取ivar
+        Ivar ivar = [self hc_getIvarByKey:key];
+        if (ivar != nil) {
+            typeEncoding = ivar_getTypeEncoding(ivar);
+        }
+    }
+    if (typeEncoding == NULL) {
+        [self hc_setNilValueForKey:key];
+        return;
+    }
     // 遍历出所有的number、value类型的encoding，针对性的处理
     // https://developer.apple.com/library/archive/documentation/Cocoa/Conceptual/ObjCRuntimeGuide/Articles/ocrtTypeEncodings.html
     /*
