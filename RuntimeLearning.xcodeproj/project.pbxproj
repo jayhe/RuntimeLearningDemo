@@ -1233,6 +1233,7 @@
 				CODE_SIGN_ENTITLEMENTS = RuntimeLearning/RuntimeLearning.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2ZY2L7GYS;
+				EXPORTED_SYMBOLS_FILE = "${SRCROOT}/symbols.txt";
 				GCC_OPTIMIZATION_LEVEL = 0;
 				"GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS[arch=*]" = "CATCH_CRASH=0";
 				INFOPLIST_FILE = RuntimeLearning/Info.plist;
@@ -1280,6 +1281,7 @@
 				CODE_SIGN_ENTITLEMENTS = RuntimeLearning/RuntimeLearning.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2ZY2L7GYS;
+				EXPORTED_SYMBOLS_FILE = "${SRCROOT}/symbols.txt";
 				GCC_OPTIMIZATION_LEVEL = s;
 				"GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS[arch=*]" = "CATCH_CRASH=1";
 				INFOPLIST_FILE = RuntimeLearning/Info.plist;

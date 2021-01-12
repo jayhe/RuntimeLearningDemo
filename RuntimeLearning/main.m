@@ -63,3 +63,22 @@ __attribute__((constructor(1))) static void clearLaunchScreenCache(void) {
         NSLog(@"Delete Launch Screen Cache Failed :%@", error.localizedDescription);
     }
 }
+
+/*
+ 1.objdump -exports-trie -macho macho_filepath 可以dump出macho文件的符号
+ hechao@hechaodeMacBook-Pro Debug-iphonesimulator % objdump -exports-trie -macho ./RuntimeLearning.app/RuntimeLearning
+ ./RuntimeLearning.app/RuntimeLearning:
+ Exports trie:
+ 0x100000000  __mh_execute_header
+ 0x100012980  __HCSwizzleHookInstance
+ 0x100036160  ___sanitizer_cov_trace_pc_guard_init
+ 0x1000361F0  ___sanitizer_cov_trace_pc_guard
+ 0x100005A90  _main
+ // ...此处省略很多符号
+ 
+ 2.但是当设置了导出符号信息的文件路径的时候，就dump出来是空的了
+ 将EXPORTED_SYMBOLS_FILE设置为一个文件，比如${SRCROOT}/symbols.txt
+ hechao@hechaodeMacBook-Pro Debug-iphonesimulator % objdump -exports-trie -macho RuntimeLearning.app/RuntimeLearning
+ RuntimeLearning.app/RuntimeLearning:
+ Exports trie:
+ */

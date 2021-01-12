@@ -3398,5 +3398,278 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.SymbolicBreakpoint">
+         <BreakpointContent
+            uuid = "734ACEC7-8944-4C1D-93B5-AF2F4E2F830D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            symbolName = "setObject:forKeyedSubscript:"
+            moduleName = "">
+            <Locations>
+               <Location
+                  uuid = "734ACEC7-8944-4C1D-93B5-AF2F4E2F830D - 851a45927912ba66"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[NSMutableDictionary setObject:forKeyedSubscript:]"
+                  moduleName = "CoreFoundation"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "734ACEC7-8944-4C1D-93B5-AF2F4E2F830D - 480ad0d68f936eab"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[__NSDictionaryM setObject:forKeyedSubscript:]"
+                  moduleName = "CoreFoundation"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "734ACEC7-8944-4C1D-93B5-AF2F4E2F830D - cf5f430c64b97a86"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[UIViewConfigurationState setObject:forKeyedSubscript:]"
+                  moduleName = "UIKitCore"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "734ACEC7-8944-4C1D-93B5-AF2F4E2F830D - ddbe169720bd8ada"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[UIGestureGraphElement setObject:forKeyedSubscript:]"
+                  moduleName = "UIKitCore"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "734ACEC7-8944-4C1D-93B5-AF2F4E2F830D - f4a8cfdf654e63cd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[CUEnvironment setObject:forKeyedSubscript:]"
+                  moduleName = "CoreUtils"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "734ACEC7-8944-4C1D-93B5-AF2F4E2F830D - 58bc4bd6f0bf902a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[TUTestState setObject:forKeyedSubscript:]"
+                  moduleName = "CoreUtils"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "734ACEC7-8944-4C1D-93B5-AF2F4E2F830D - 263a1ff6893eb750"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[JSContext(SubscriptSupport) setObject:forKeyedSubscript:]"
+                  moduleName = "JavaScriptCore"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "734ACEC7-8944-4C1D-93B5-AF2F4E2F830D - a74097e68934b57a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[JSValue(SubscriptSupport) setObject:forKeyedSubscript:]"
+                  moduleName = "JavaScriptCore"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "734ACEC7-8944-4C1D-93B5-AF2F4E2F830D - 41e8954274592cc6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[ACAccount setObject:forKeyedSubscript:]"
+                  moduleName = "Accounts"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "734ACEC7-8944-4C1D-93B5-AF2F4E2F830D - ea1d78e5da4cdad4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[SCNTechnique setObject:forKeyedSubscript:]"
+                  moduleName = "SceneKit"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "734ACEC7-8944-4C1D-93B5-AF2F4E2F830D - 3b290ec10345149a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[GEODefaultsDBCollection setObject:forKeyedSubscript:]"
+                  moduleName = "GeoServices"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "734ACEC7-8944-4C1D-93B5-AF2F4E2F830D - 397adac39f6dbc08"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[GEODefaultsDBDict setObject:forKeyedSubscript:]"
+                  moduleName = "GeoServices"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "734ACEC7-8944-4C1D-93B5-AF2F4E2F830D - f1e9889ae2d128b4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[GEODefaultsDBArray setObject:forKeyedSubscript:]"
+                  moduleName = "GeoServices"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "734ACEC7-8944-4C1D-93B5-AF2F4E2F830D - dbe62f581b2a52c8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[CNCache setObject:forKeyedSubscript:]"
+                  moduleName = "ContactsFoundation"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "734ACEC7-8944-4C1D-93B5-AF2F4E2F830D - 6bebf03be70d15ec"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[CNMutableOrderedDictionary setObject:forKeyedSubscript:]"
+                  moduleName = "ContactsFoundation"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "734ACEC7-8944-4C1D-93B5-AF2F4E2F830D - adaef0bebfec7e3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[NSMapTable(CLSAdditions) setObject:forKeyedSubscript:]"
+                  moduleName = "ClassKit"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "734ACEC7-8944-4C1D-93B5-AF2F4E2F830D - c04237fa79eb261a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[CKRecordValueStore setObject:forKeyedSubscript:]"
+                  moduleName = "CloudKit"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "734ACEC7-8944-4C1D-93B5-AF2F4E2F830D - 63cc39854ec001d3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[CKEncryptedRecordValueStore setObject:forKeyedSubscript:]"
+                  moduleName = "CloudKit"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "734ACEC7-8944-4C1D-93B5-AF2F4E2F830D - a0cee58815b0f80e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[CKRecord setObject:forKeyedSubscript:]"
+                  moduleName = "CloudKit"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "734ACEC7-8944-4C1D-93B5-AF2F4E2F830D - e381a8318786cd12"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[CKEventMetric setObject:forKeyedSubscript:]"
+                  moduleName = "CloudKit"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "734ACEC7-8944-4C1D-93B5-AF2F4E2F830D - 721efa830176320c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[NRMutableDevice setObject:forKeyedSubscript:]"
+                  moduleName = "NanoRegistry"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "734ACEC7-8944-4C1D-93B5-AF2F4E2F830D - 8e3dda2ab9573ce2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[NRMutableDeviceCollection setObject:forKeyedSubscript:]"
+                  moduleName = "NanoRegistry"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "734ACEC7-8944-4C1D-93B5-AF2F4E2F830D - 1feb9bff485c7afb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AMSSQLiteEntity setObject:forKeyedSubscript:]"
+                  moduleName = "AppleMediaServices"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "734ACEC7-8944-4C1D-93B5-AF2F4E2F830D - 8ae93ac4d6231a31"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[AMSThreadSafeDictionary setObject:forKeyedSubscript:]"
+                  moduleName = "AppleMediaServices"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "734ACEC7-8944-4C1D-93B5-AF2F4E2F830D - ac5a96fa843f8972"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[MSVLRUDictionary setObject:forKeyedSubscript:]"
+                  moduleName = "MediaServices"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "734ACEC7-8944-4C1D-93B5-AF2F4E2F830D - 78e2de30384abbcb"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[MLMultiArray setObject:forKeyedSubscript:]"
+                  moduleName = "CoreML"
+                  usesParentBreakpointCondition = "Yes"
+                  offsetFromSymbolStart = "0">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
