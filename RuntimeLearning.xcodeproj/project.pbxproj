@@ -63,6 +63,7 @@
 		10E6545024939EEE0022156D /* TestFilterUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E6544F24939EEE0022156D /* TestFilterUsage.m */; };
 		10E6545224939F4E0022156D /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E6545124939F4E0022156D /* CoreImage.framework */; };
 		10E6B1402462863E00A37097 /* KeychainUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E6B13F2462863E00A37097 /* KeychainUsage.m */; };
+		10E7AF7625AD9A6800CDE6BC /* NSObject+HCKVCNilHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E7AF7525AD9A6800CDE6BC /* NSObject+HCKVCNilHandle.m */; };
 		10EDD7A3249DF02A00DCA29B /* HCDynamicTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 10EDD7A1249DF02A00DCA29B /* HCDynamicTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		10EDD7A6249DF02A00DCA29B /* HCDynamicTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10EDD79F249DF02A00DCA29B /* HCDynamicTest.framework */; };
 		10EDD7A8249DF02A00DCA29B /* HCDynamicTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 10EDD79F249DF02A00DCA29B /* HCDynamicTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -252,6 +253,8 @@
 		10E6B13E2462863E00A37097 /* KeychainUsage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeychainUsage.h; sourceTree = "<group>"; };
 		10E6B13F2462863E00A37097 /* KeychainUsage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeychainUsage.m; sourceTree = "<group>"; };
 		10E6B141246296BF00A37097 /* RuntimeLearning.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RuntimeLearning.entitlements; sourceTree = "<group>"; };
+		10E7AF7425AD9A6800CDE6BC /* NSObject+HCKVCNilHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+HCKVCNilHandle.h"; sourceTree = "<group>"; };
+		10E7AF7525AD9A6800CDE6BC /* NSObject+HCKVCNilHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HCKVCNilHandle.m"; sourceTree = "<group>"; };
 		10EDD79F249DF02A00DCA29B /* HCDynamicTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HCDynamicTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10EDD7A1249DF02A00DCA29B /* HCDynamicTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCDynamicTest.h; sourceTree = "<group>"; };
 		10EDD7A2249DF02A00DCA29B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -436,6 +439,8 @@
 				10C3235822781DCF0091B0ED /* NSObject+HCInjection.m */,
 				1059F82B2488E225005673C8 /* NSObject+HCLog.h */,
 				1059F82C2488E225005673C8 /* NSObject+HCLog.m */,
+				10E7AF7425AD9A6800CDE6BC /* NSObject+HCKVCNilHandle.h */,
+				10E7AF7525AD9A6800CDE6BC /* NSObject+HCKVCNilHandle.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -989,6 +994,7 @@
 				1059F82D2488E225005673C8 /* NSObject+HCLog.m in Sources */,
 				10518D81241F79A600AE5265 /* TestCategoryOveride+TestOverideOne.m in Sources */,
 				1016785D2580D01700089FCC /* TestViewDidLoadCallStackViewController.m in Sources */,
+				10E7AF7625AD9A6800CDE6BC /* NSObject+HCKVCNilHandle.m in Sources */,
 				104D7354249A596B00055968 /* TestCategorySwizzle+LoadOrder.m in Sources */,
 				10A65BCF2508B3A8008D98E1 /* HCTestProtocolImp.m in Sources */,
 				1080ECA82552DAD100ABC822 /* main.m in Sources */,
