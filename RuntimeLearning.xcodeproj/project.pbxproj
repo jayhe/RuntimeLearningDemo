@@ -40,7 +40,6 @@
 		1072564423B30DBD00BC3A00 /* TestMapTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1072564323B30DBD00BC3A00 /* TestMapTable.m */; };
 		1076819A241B3B0700D486A9 /* TestCategoryOveride+TestOveride.m in Sources */ = {isa = PBXBuildFile; fileRef = 10768199241B3B0700D486A9 /* TestCategoryOveride+TestOveride.m */; };
 		107B55D62410C79100EDCCD6 /* NSCacheTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 107B55D52410C79100EDCCD6 /* NSCacheTest.m */; };
-		1080ECA82552DAD100ABC822 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10128713221D3B0900ED6CDE /* main.m */; };
 		1086B36A23B491DC0002F990 /* libadd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 104BF8D022772F55000C464E /* libadd.a */; settings = {ATTRIBUTES = (Weak, ); }; };
 		1086B37323B4930B0002F990 /* TestStaticLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 1086B37223B4930B0002F990 /* TestStaticLib.m */; };
 		1086B37423B4930B0002F990 /* TestStaticLib.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1086B37123B4930B0002F990 /* TestStaticLib.h */; };
@@ -64,6 +63,7 @@
 		10E6545224939F4E0022156D /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E6545124939F4E0022156D /* CoreImage.framework */; };
 		10E6B1402462863E00A37097 /* KeychainUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E6B13F2462863E00A37097 /* KeychainUsage.m */; };
 		10E7AF7625AD9A6800CDE6BC /* NSObject+HCKVCNilHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E7AF7525AD9A6800CDE6BC /* NSObject+HCKVCNilHandle.m */; };
+		10E7AF8825ADA2CA00CDE6BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10128713221D3B0900ED6CDE /* main.m */; };
 		10EDD7A3249DF02A00DCA29B /* HCDynamicTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 10EDD7A1249DF02A00DCA29B /* HCDynamicTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		10EDD7A6249DF02A00DCA29B /* HCDynamicTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10EDD79F249DF02A00DCA29B /* HCDynamicTest.framework */; };
 		10EDD7A8249DF02A00DCA29B /* HCDynamicTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 10EDD79F249DF02A00DCA29B /* HCDynamicTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -990,6 +990,7 @@
 				10BF41E8227FE671009F291E /* DispatchOnceTest.m in Sources */,
 				10D530FF2227B5B7007AE594 /* TestCategorySwizzle.m in Sources */,
 				10128734221D3B7300ED6CDE /* MethodSwizzleUtil.m in Sources */,
+				10E7AF8825ADA2CA00CDE6BC /* main.m in Sources */,
 				10C3235922781DCF0091B0ED /* NSObject+HCInjection.m in Sources */,
 				1059F82D2488E225005673C8 /* NSObject+HCLog.m in Sources */,
 				10518D81241F79A600AE5265 /* TestCategoryOveride+TestOverideOne.m in Sources */,
@@ -997,7 +998,6 @@
 				10E7AF7625AD9A6800CDE6BC /* NSObject+HCKVCNilHandle.m in Sources */,
 				104D7354249A596B00055968 /* TestCategorySwizzle+LoadOrder.m in Sources */,
 				10A65BCF2508B3A8008D98E1 /* HCTestProtocolImp.m in Sources */,
-				1080ECA82552DAD100ABC822 /* main.m in Sources */,
 				102CDD42246656CD002150BE /* TestFuctionalProgromming.m in Sources */,
 				104D73472498CCB600055968 /* HookMethodInInitialize.m in Sources */,
 				104D734A2498DD7800055968 /* NSObject+Utility.m in Sources */,

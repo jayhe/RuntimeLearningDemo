@@ -25,7 +25,7 @@ struct encryption_info_command {
 #endif
 
 static BOOL isEncrypted(void);
-void checkCodesign(NSString *identifier);
+void checkCodesign(NSString *identifier, NSString *teamId);
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
@@ -33,7 +33,7 @@ int main(int argc, char * argv[]) {
         NSString * appDelegateClassName = NSStringFromClass([AppDelegate class]);
         BOOL isEncrypt = isEncrypted();
         NSLog(@"check is encrypt: %d", isEncrypt);
-        checkCodesign(@"hc.RuntimeLearning.demo");
+        checkCodesign(@"hc.RuntimeLearning.demo", @"9D7EH8PVAX"); // security find-identity -v -p codesigning 可以获取到，也可以在导出ipa包的plist中查看
         return UIApplicationMain(argc, argv, nil, appDelegateClassName);
     }
 }
@@ -73,7 +73,7 @@ static BOOL isEncrypted () {
     return NO;
 }
 
-void checkCodesign(NSString *identifier) {
+void checkCodesign(NSString *identifier, NSString *teamId) {
 #if defined __x86_64__ || __i386__ // 模拟器不需要生成embeded.mobileprovision文件来做真机调试的配置
     // do nothing
 #else
@@ -81,19 +81,24 @@ void checkCodesign(NSString *identifier) {
     NSString *embeddedPath = [[NSBundle mainBundle] pathForResource:@"embedded" ofType:@"mobileprovision"];
     // 读取application-identifier  注意描述文件的编码要使用:NSASCIIStringEncoding
     NSString *embeddedProvisioning = [NSString stringWithContentsOfFile:embeddedPath encoding:NSASCIIStringEncoding error:nil];
-    NSArray *embeddedProvisioningLines = [embeddedProvisioning componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+    NSArray<NSString *> *embeddedProvisioningLines = [embeddedProvisioning componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
     for (int i = 0; i < embeddedProvisioningLines.count; i++) {
         if ([embeddedProvisioningLines[i] rangeOfString:@"application-identifier"].location != NSNotFound) {
-            NSInteger fromPosition = [embeddedProvisioningLines[i + 1] rangeOfString:@""].location + 8;
-            NSInteger toPosition = [embeddedProvisioningLines[i + 1] rangeOfString:@""].location;
+            NSString *identifierString = embeddedProvisioningLines[i + 1]; // 类似：<string>L2ZY2L7GYS.com.xx.xxx</string>
+            NSRange fromRange = [identifierString rangeOfString:@"<string>"];
+            NSInteger fromPosition = fromRange.location + fromRange.length;
+            NSInteger toPosition = [identifierString rangeOfString:@"</string>"].location;
             NSRange range;
             range.location = fromPosition;
             range.length = toPosition - fromPosition;
-            NSString *fullIdentifier = [embeddedProvisioningLines[i + 1] substringWithRange:range];
-            NSArray *identifierComponents = [fullIdentifier componentsSeparatedByString:@"."];
-            NSString *appIdentifier = [identifierComponents firstObject];
-            // 对比签名ID
-            if (![appIdentifier isEqualToString:identifier]) {
+            NSString *fullIdentifier = [identifierString substringWithRange:range];
+            NSScanner *scanner = [NSScanner scannerWithString:fullIdentifier];
+            NSString *teamIdString;
+            [scanner scanUpToString:@"." intoString:&teamIdString];
+            NSRange teamIdRange = [fullIdentifier rangeOfString:teamIdString];
+            NSString *appIdentifier = [fullIdentifier substringFromIndex:teamIdRange.length + 1];
+            // 对比签名teamID或者identifier信息
+            if (![appIdentifier isEqualToString:identifier] || ![teamId isEqualToString:teamIdString]) {
                 // exit(0)
                 asm(
                     "mov X0,#0\n"
