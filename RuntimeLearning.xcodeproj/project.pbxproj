@@ -63,7 +63,8 @@
 		10E6545224939F4E0022156D /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E6545124939F4E0022156D /* CoreImage.framework */; };
 		10E6B1402462863E00A37097 /* KeychainUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E6B13F2462863E00A37097 /* KeychainUsage.m */; };
 		10E7AF7625AD9A6800CDE6BC /* NSObject+HCKVCNilHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E7AF7525AD9A6800CDE6BC /* NSObject+HCKVCNilHandle.m */; };
-		10E7AF8825ADA2CA00CDE6BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10128713221D3B0900ED6CDE /* main.m */; };
+		10E7B10B25AEF16D00CDE6BC /* main1.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B9CBDA2501E3B2006D48AC /* main1.m */; };
+		10E7B14325AF049800CDE6BC /* libdobby.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E7B0F425AEEB3600CDE6BC /* libdobby.a */; };
 		10EDD7A3249DF02A00DCA29B /* HCDynamicTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 10EDD7A1249DF02A00DCA29B /* HCDynamicTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		10EDD7A6249DF02A00DCA29B /* HCDynamicTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10EDD79F249DF02A00DCA29B /* HCDynamicTest.framework */; };
 		10EDD7A8249DF02A00DCA29B /* HCDynamicTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 10EDD79F249DF02A00DCA29B /* HCDynamicTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -255,6 +256,8 @@
 		10E6B141246296BF00A37097 /* RuntimeLearning.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RuntimeLearning.entitlements; sourceTree = "<group>"; };
 		10E7AF7425AD9A6800CDE6BC /* NSObject+HCKVCNilHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+HCKVCNilHandle.h"; sourceTree = "<group>"; };
 		10E7AF7525AD9A6800CDE6BC /* NSObject+HCKVCNilHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HCKVCNilHandle.m"; sourceTree = "<group>"; };
+		10E7B0F325AEEB3600CDE6BC /* dobby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dobby.h; sourceTree = "<group>"; };
+		10E7B0F425AEEB3600CDE6BC /* libdobby.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libdobby.a; sourceTree = "<group>"; };
 		10EDD79F249DF02A00DCA29B /* HCDynamicTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HCDynamicTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10EDD7A1249DF02A00DCA29B /* HCDynamicTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCDynamicTest.h; sourceTree = "<group>"; };
 		10EDD7A2249DF02A00DCA29B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -285,6 +288,7 @@
 				1086B36A23B491DC0002F990 /* libadd.a in Frameworks */,
 				10EDD7A6249DF02A00DCA29B /* HCDynamicTest.framework in Frameworks */,
 				D7335419B0BF156CDF1C5B8E /* libPods-RuntimeLearning.a in Frameworks */,
+				10E7B14325AF049800CDE6BC /* libdobby.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +382,7 @@
 			isa = PBXGroup;
 			children = (
 				10E6B141246296BF00A37097 /* RuntimeLearning.entitlements */,
+				10E7B05A25AEDEA200CDE6BC /* Dobby */,
 				1016785A2580CFE300089FCC /* ISA */,
 				10B78433254FF76000A8F011 /* Timer */,
 				10A65BCB2508AF75008D98E1 /* Protocol */,
@@ -662,6 +667,15 @@
 				10E6B13F2462863E00A37097 /* KeychainUsage.m */,
 			);
 			path = Keychain;
+			sourceTree = "<group>";
+		};
+		10E7B05A25AEDEA200CDE6BC /* Dobby */ = {
+			isa = PBXGroup;
+			children = (
+				10E7B0F325AEEB3600CDE6BC /* dobby.h */,
+				10E7B0F425AEEB3600CDE6BC /* libdobby.a */,
+			);
+			path = Dobby;
 			sourceTree = "<group>";
 		};
 		10EDD7A0249DF02A00DCA29B /* HCDynamicTest */ = {
@@ -990,7 +1004,6 @@
 				10BF41E8227FE671009F291E /* DispatchOnceTest.m in Sources */,
 				10D530FF2227B5B7007AE594 /* TestCategorySwizzle.m in Sources */,
 				10128734221D3B7300ED6CDE /* MethodSwizzleUtil.m in Sources */,
-				10E7AF8825ADA2CA00CDE6BC /* main.m in Sources */,
 				10C3235922781DCF0091B0ED /* NSObject+HCInjection.m in Sources */,
 				1059F82D2488E225005673C8 /* NSObject+HCLog.m in Sources */,
 				10518D81241F79A600AE5265 /* TestCategoryOveride+TestOverideOne.m in Sources */,
@@ -1009,6 +1022,7 @@
 				101C2C372478FEE7001403F5 /* HCSwizzleInstance.m in Sources */,
 				10D160C0237119690051A7BA /* ByteAlignmentTest.m in Sources */,
 				1059F82A2488DFD7005673C8 /* PropertyUsage.m in Sources */,
+				10E7B10B25AEF16D00CDE6BC /* main1.m in Sources */,
 				10128733221D3B7300ED6CDE /* NSObject+HCSafe.m in Sources */,
 				10BF41EB228012A7009F291E /* DispatchBarrierTest.m in Sources */,
 				10A6CA9D241CA882002BFAC5 /* TestMethodInvocation.m in Sources */,
@@ -1239,7 +1253,13 @@
 				CODE_SIGN_ENTITLEMENTS = RuntimeLearning/RuntimeLearning.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2ZY2L7GYS;
+				ENABLE_BITCODE = NO;
 				EXPORTED_SYMBOLS_FILE = "${SRCROOT}/symbols.txt";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RuntimeLearning/Dobby",
+					"$(PROJECT_DIR)/RuntimeLearning",
+				);
 				GCC_OPTIMIZATION_LEVEL = 0;
 				"GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS[arch=*]" = "CATCH_CRASH=0";
 				INFOPLIST_FILE = RuntimeLearning/Info.plist;
@@ -1252,6 +1272,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RuntimeLearning/Dynamic",
+					"$(PROJECT_DIR)/RuntimeLearning/Dobby",
+					"$(PROJECT_DIR)/RuntimeLearning",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				ORDER_FILE = "${SRCROOT}/RuntimeLearning.order";
@@ -1287,7 +1309,13 @@
 				CODE_SIGN_ENTITLEMENTS = RuntimeLearning/RuntimeLearning.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2ZY2L7GYS;
+				ENABLE_BITCODE = NO;
 				EXPORTED_SYMBOLS_FILE = "${SRCROOT}/symbols.txt";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RuntimeLearning/Dobby",
+					"$(PROJECT_DIR)/RuntimeLearning",
+				);
 				GCC_OPTIMIZATION_LEVEL = s;
 				"GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS[arch=*]" = "CATCH_CRASH=1";
 				INFOPLIST_FILE = RuntimeLearning/Info.plist;
@@ -1300,6 +1328,8 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/RuntimeLearning/Dynamic",
+					"$(PROJECT_DIR)/RuntimeLearning/Dobby",
+					"$(PROJECT_DIR)/RuntimeLearning",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				ORDER_FILE = "${SRCROOT}/RuntimeLearning.order";
@@ -1371,6 +1401,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2ZY2L7GYS;
+				ENABLE_BITCODE = NO;
 				MACH_O_TYPE = mh_dylib;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "-ObjC";
@@ -1385,6 +1416,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2ZY2L7GYS;
+				ENABLE_BITCODE = NO;
 				MACH_O_TYPE = mh_dylib;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "-ObjC";
@@ -1399,6 +1431,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2ZY2L7GYS;
+				ENABLE_BITCODE = NO;
 				OTHER_CFLAGS = "-fsanitize-coverage=func,trace-pc-guard";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1412,6 +1445,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L2ZY2L7GYS;
+				ENABLE_BITCODE = NO;
 				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1430,6 +1464,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = HCDynamicTest/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
@@ -1457,6 +1492,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = HCDynamicTest/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;

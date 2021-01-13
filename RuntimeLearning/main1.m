@@ -11,6 +11,7 @@
 #import <dlfcn.h>
 #import <mach-o/dyld.h>
 #import <TargetConditionals.h>
+#import "dobby.h"
 
 //#if TARGET_IPHONE_SIMULATOR && !defined(LC_ENCRYPTION_INFO)
 #if !defined(LC_ENCRYPTION_INFO)
@@ -25,7 +26,9 @@ struct encryption_info_command {
 #endif
 
 static BOOL isEncrypted(void);
-void checkCodesign(NSString *identifier, NSString *teamId);
+void checkCodeSign(NSString *identifier, NSString *teamId); // 原来的方法
+void (*originCheckCodeSign)(NSString *identifier, NSString *teamId); // 保留原始的方法实现的指针地址
+void hookCheckCodeSign(NSString *identifier, NSString *teamId); // hook的方法
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
@@ -33,7 +36,9 @@ int main(int argc, char * argv[]) {
         NSString * appDelegateClassName = NSStringFromClass([AppDelegate class]);
         BOOL isEncrypt = isEncrypted();
         NSLog(@"check is encrypt: %d", isEncrypt);
-        checkCodesign(@"hc.RuntimeLearning.demo", @"9D7EH8PVAX"); // security find-identity -v -p codesigning 可以获取到，也可以在导出ipa包的plist中查看
+        // int DobbyHook(void *function_address, void *replace_call, void **origin_call);
+        //DobbyHook(checkCodeSign, hookCheckCodeSign, (void *)&originCheckCodeSign);
+        checkCodeSign(@"hc.RuntimeLearning.demo", @"9D7EH8PVAX"); // security find-identity -v -p CodeSigning 可以获取到，也可以在导出ipa包的plist中查看
         return UIApplicationMain(argc, argv, nil, appDelegateClassName);
     }
 }
@@ -73,12 +78,15 @@ static BOOL isEncrypted () {
     return NO;
 }
 
-void checkCodesign(NSString *identifier, NSString *teamId) {
+void checkCodeSign(NSString *identifier, NSString *teamId) {
 #if defined __x86_64__ || __i386__ // 模拟器不需要生成embeded.mobileprovision文件来做真机调试的配置
     // do nothing
 #else
     // 描述文件路径
     NSString *embeddedPath = [[NSBundle mainBundle] pathForResource:@"embedded" ofType:@"mobileprovision"];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:embeddedPath]) {
+        return;
+    }
     // 读取application-identifier  注意描述文件的编码要使用:NSASCIIStringEncoding
     NSString *embeddedProvisioning = [NSString stringWithContentsOfFile:embeddedPath encoding:NSASCIIStringEncoding error:nil];
     NSArray<NSString *> *embeddedProvisioningLines = [embeddedProvisioning componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
@@ -110,4 +118,9 @@ void checkCodesign(NSString *identifier, NSString *teamId) {
         }
     }
 #endif
+}
+
+void hookCheckCodeSign(NSString *identifier, NSString *teamId) {
+    // do nothing
+    NSLog(@"%s", __FUNCTION__);
 }
