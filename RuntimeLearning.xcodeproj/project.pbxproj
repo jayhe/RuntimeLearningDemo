@@ -64,7 +64,9 @@
 		10E6B1402462863E00A37097 /* KeychainUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E6B13F2462863E00A37097 /* KeychainUsage.m */; };
 		10E7AF7625AD9A6800CDE6BC /* NSObject+HCKVCNilHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E7AF7525AD9A6800CDE6BC /* NSObject+HCKVCNilHandle.m */; };
 		10E7B10B25AEF16D00CDE6BC /* main1.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B9CBDA2501E3B2006D48AC /* main1.m */; };
-		10E7B14325AF049800CDE6BC /* libdobby.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E7B0F425AEEB3600CDE6BC /* libdobby.a */; };
+		10E7B15125AF059400CDE6BC /* HCInject.h in Headers */ = {isa = PBXBuildFile; fileRef = 10E7B14F25AF059400CDE6BC /* HCInject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		10E7B16025AF05EE00CDE6BC /* HCHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 10E7B15E25AF05EE00CDE6BC /* HCHook.h */; };
+		10E7B16125AF05EE00CDE6BC /* HCHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E7B15F25AF05EE00CDE6BC /* HCHook.m */; };
 		10EDD7A3249DF02A00DCA29B /* HCDynamicTest.h in Headers */ = {isa = PBXBuildFile; fileRef = 10EDD7A1249DF02A00DCA29B /* HCDynamicTest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		10EDD7A6249DF02A00DCA29B /* HCDynamicTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10EDD79F249DF02A00DCA29B /* HCDynamicTest.framework */; };
 		10EDD7A8249DF02A00DCA29B /* HCDynamicTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 10EDD79F249DF02A00DCA29B /* HCDynamicTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -72,6 +74,11 @@
 		10EDD7AF249DF0C500DCA29B /* HCSecurityUtil.c in Sources */ = {isa = PBXBuildFile; fileRef = 10EDD7AD249DF0C500DCA29B /* HCSecurityUtil.c */; };
 		10EDD7B1249DF19200DCA29B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10EDD7B0249DF19200DCA29B /* Foundation.framework */; };
 		10F2DB622397AEEA00BA107A /* TestClassCluster.m in Sources */ = {isa = PBXBuildFile; fileRef = 10F2DB612397AEEA00BA107A /* TestClassCluster.m */; };
+		10F5770125AF093C00995787 /* HCInject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E7B14D25AF059400CDE6BC /* HCInject.framework */; };
+		10F5770225AF093C00995787 /* HCInject.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 10E7B14D25AF059400CDE6BC /* HCInject.framework */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		10F5779725B02DB600995787 /* Dobby.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F5776E25B0290F00995787 /* Dobby.framework */; };
+		10F577AA25B02F0B00995787 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10F577A925B02F0B00995787 /* Foundation.framework */; };
+		10F577C225B0308100995787 /* Dobby.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 10F5776E25B0290F00995787 /* Dobby.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D7335419B0BF156CDF1C5B8E /* libPods-RuntimeLearning.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FE1FAC32D91B262A68A7687 /* libPods-RuntimeLearning.a */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +103,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 1086B36E23B4930B0002F990;
 			remoteInfo = TestStaticLib;
+		};
+		10E7B15225AF059400CDE6BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 101286F9221D3B0700ED6CDE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 10E7B14C25AF059400CDE6BC;
+			remoteInfo = HCInject;
 		};
 		10EDD7A4249DF02A00DCA29B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -132,9 +146,20 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				10F5770225AF093C00995787 /* HCInject.framework in Embed Frameworks */,
 				10EDD7A8249DF02A00DCA29B /* HCDynamicTest.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10F577C125B0306600995787 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				10F577C225B0308100995787 /* Dobby.framework in CopyFiles */,
+			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -256,8 +281,11 @@
 		10E6B141246296BF00A37097 /* RuntimeLearning.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RuntimeLearning.entitlements; sourceTree = "<group>"; };
 		10E7AF7425AD9A6800CDE6BC /* NSObject+HCKVCNilHandle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+HCKVCNilHandle.h"; sourceTree = "<group>"; };
 		10E7AF7525AD9A6800CDE6BC /* NSObject+HCKVCNilHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HCKVCNilHandle.m"; sourceTree = "<group>"; };
-		10E7B0F325AEEB3600CDE6BC /* dobby.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dobby.h; sourceTree = "<group>"; };
-		10E7B0F425AEEB3600CDE6BC /* libdobby.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libdobby.a; sourceTree = "<group>"; };
+		10E7B14D25AF059400CDE6BC /* HCInject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HCInject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		10E7B14F25AF059400CDE6BC /* HCInject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCInject.h; sourceTree = "<group>"; };
+		10E7B15025AF059400CDE6BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10E7B15E25AF05EE00CDE6BC /* HCHook.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCHook.h; sourceTree = "<group>"; };
+		10E7B15F25AF05EE00CDE6BC /* HCHook.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HCHook.m; sourceTree = "<group>"; };
 		10EDD79F249DF02A00DCA29B /* HCDynamicTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HCDynamicTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		10EDD7A1249DF02A00DCA29B /* HCDynamicTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HCDynamicTest.h; sourceTree = "<group>"; };
 		10EDD7A2249DF02A00DCA29B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -266,6 +294,8 @@
 		10EDD7B0249DF19200DCA29B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		10F2DB602397AEEA00BA107A /* TestClassCluster.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestClassCluster.h; sourceTree = "<group>"; };
 		10F2DB612397AEEA00BA107A /* TestClassCluster.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestClassCluster.m; sourceTree = "<group>"; };
+		10F5776E25B0290F00995787 /* Dobby.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Dobby.framework; sourceTree = "<group>"; };
+		10F577A925B02F0B00995787 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3FE1FAC32D91B262A68A7687 /* libPods-RuntimeLearning.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RuntimeLearning.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42B72C379E9A6D914DB316E2 /* Pods-RuntimeLearningTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RuntimeLearningTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RuntimeLearningTests/Pods-RuntimeLearningTests.release.xcconfig"; sourceTree = "<group>"; };
 		4A7FAD87682FD1B94903588E /* libPods-RuntimeLearningTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RuntimeLearningTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -283,12 +313,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				10F5770125AF093C00995787 /* HCInject.framework in Frameworks */,
 				10E6545224939F4E0022156D /* CoreImage.framework in Frameworks */,
 				1086B37A23B493550002F990 /* libTestStaticLib.a in Frameworks */,
 				1086B36A23B491DC0002F990 /* libadd.a in Frameworks */,
 				10EDD7A6249DF02A00DCA29B /* HCDynamicTest.framework in Frameworks */,
 				D7335419B0BF156CDF1C5B8E /* libPods-RuntimeLearning.a in Frameworks */,
-				10E7B14325AF049800CDE6BC /* libdobby.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +341,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10E7B14A25AF059400CDE6BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10F577AA25B02F0B00995787 /* Foundation.framework in Frameworks */,
+				10F5779725B02DB600995787 /* Dobby.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,6 +398,7 @@
 				1012871C221D3B0A00ED6CDE /* RuntimeLearningTests */,
 				1086B37023B4930B0002F990 /* TestStaticLib */,
 				10EDD7A0249DF02A00DCA29B /* HCDynamicTest */,
+				10E7B14E25AF059400CDE6BC /* HCInject */,
 				10128702221D3B0700ED6CDE /* Products */,
 				CFF0684E9602261EE5E7CF98 /* Frameworks */,
 				2DD0631C85D238BD92DA8F9A /* Pods */,
@@ -374,6 +414,7 @@
 				104BF8D022772F55000C464E /* libadd.a */,
 				1086B36F23B4930B0002F990 /* libTestStaticLib.a */,
 				10EDD79F249DF02A00DCA29B /* HCDynamicTest.framework */,
+				10E7B14D25AF059400CDE6BC /* HCInject.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -382,7 +423,6 @@
 			isa = PBXGroup;
 			children = (
 				10E6B141246296BF00A37097 /* RuntimeLearning.entitlements */,
-				10E7B05A25AEDEA200CDE6BC /* Dobby */,
 				1016785A2580CFE300089FCC /* ISA */,
 				10B78433254FF76000A8F011 /* Timer */,
 				10A65BCB2508AF75008D98E1 /* Protocol */,
@@ -669,11 +709,22 @@
 			path = Keychain;
 			sourceTree = "<group>";
 		};
-		10E7B05A25AEDEA200CDE6BC /* Dobby */ = {
+		10E7B14E25AF059400CDE6BC /* HCInject */ = {
 			isa = PBXGroup;
 			children = (
-				10E7B0F325AEEB3600CDE6BC /* dobby.h */,
-				10E7B0F425AEEB3600CDE6BC /* libdobby.a */,
+				10E7B14F25AF059400CDE6BC /* HCInject.h */,
+				10E7B15E25AF05EE00CDE6BC /* HCHook.h */,
+				10E7B15F25AF05EE00CDE6BC /* HCHook.m */,
+				10E7B16725AF062E00CDE6BC /* Dobby */,
+				10E7B15025AF059400CDE6BC /* Info.plist */,
+			);
+			path = HCInject;
+			sourceTree = "<group>";
+		};
+		10E7B16725AF062E00CDE6BC /* Dobby */ = {
+			isa = PBXGroup;
+			children = (
+				10F5776E25B0290F00995787 /* Dobby.framework */,
 			);
 			path = Dobby;
 			sourceTree = "<group>";
@@ -717,6 +768,7 @@
 			isa = PBXGroup;
 			children = (
 				10EDD7B0249DF19200DCA29B /* Foundation.framework */,
+				10F577A925B02F0B00995787 /* Foundation.framework */,
 				10E6545124939F4E0022156D /* CoreImage.framework */,
 				3FE1FAC32D91B262A68A7687 /* libPods-RuntimeLearning.a */,
 				4A7FAD87682FD1B94903588E /* libPods-RuntimeLearningTests.a */,
@@ -727,6 +779,15 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		10E7B14825AF059400CDE6BC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10E7B16025AF05EE00CDE6BC /* HCHook.h in Headers */,
+				10E7B15125AF059400CDE6BC /* HCInject.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		10EDD79A249DF02A00DCA29B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -750,6 +811,7 @@
 				101286FF221D3B0700ED6CDE /* Resources */,
 				10EDD7A7249DF02A00DCA29B /* Embed Frameworks */,
 				10B9CBD92501D68C006D48AC /* ShellScript */,
+				10F577C125B0306600995787 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -757,6 +819,7 @@
 				1086B37923B4934C0002F990 /* PBXTargetDependency */,
 				1086B36923B491260002F990 /* PBXTargetDependency */,
 				10EDD7A5249DF02A00DCA29B /* PBXTargetDependency */,
+				10E7B15325AF059400CDE6BC /* PBXTargetDependency */,
 			);
 			name = RuntimeLearning;
 			productName = RuntimeLearning;
@@ -816,6 +879,24 @@
 			productReference = 1086B36F23B4930B0002F990 /* libTestStaticLib.a */;
 			productType = "com.apple.product-type.library.static";
 		};
+		10E7B14C25AF059400CDE6BC /* HCInject */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 10E7B15625AF059400CDE6BC /* Build configuration list for PBXNativeTarget "HCInject" */;
+			buildPhases = (
+				10E7B14825AF059400CDE6BC /* Headers */,
+				10E7B14925AF059400CDE6BC /* Sources */,
+				10E7B14A25AF059400CDE6BC /* Frameworks */,
+				10E7B14B25AF059400CDE6BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HCInject;
+			productName = HCInject;
+			productReference = 10E7B14D25AF059400CDE6BC /* HCInject.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		10EDD79E249DF02A00DCA29B /* HCDynamicTest */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10EDD7AB249DF02A00DCA29B /* Build configuration list for PBXNativeTarget "HCDynamicTest" */;
@@ -858,6 +939,9 @@
 					1086B36E23B4930B0002F990 = {
 						CreatedOnToolsVersion = 10.1;
 					};
+					10E7B14C25AF059400CDE6BC = {
+						CreatedOnToolsVersion = 12.2;
+					};
 					10EDD79E249DF02A00DCA29B = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -881,6 +965,7 @@
 				104BF8CF22772F55000C464E /* add */,
 				1086B36E23B4930B0002F990 /* TestStaticLib */,
 				10EDD79E249DF02A00DCA29B /* HCDynamicTest */,
+				10E7B14C25AF059400CDE6BC /* HCInject */,
 			);
 		};
 /* End PBXProject section */
@@ -897,6 +982,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		10128717221D3B0A00ED6CDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10E7B14B25AF059400CDE6BC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -946,7 +1038,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#chmod 777 ./insertlib.sh\n# 这里只支持模拟器，因为放到本地的framework只打包了模拟器的架构的\n#./insertLib.sh\n\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n#chmod 777 ./insertlib.sh\n# 这里只支持模拟器，因为放到本地的framework只打包了模拟器的架构的\n./insertLib.sh\n\n";
 		};
 		A5F04428BFD1FD0DA890439F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1073,6 +1165,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		10E7B14925AF059400CDE6BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10E7B16125AF05EE00CDE6BC /* HCHook.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		10EDD79B249DF02A00DCA29B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1098,6 +1198,11 @@
 			isa = PBXTargetDependency;
 			target = 1086B36E23B4930B0002F990 /* TestStaticLib */;
 			targetProxy = 1086B37823B4934C0002F990 /* PBXContainerItemProxy */;
+		};
+		10E7B15325AF059400CDE6BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 10E7B14C25AF059400CDE6BC /* HCInject */;
+			targetProxy = 10E7B15225AF059400CDE6BC /* PBXContainerItemProxy */;
 		};
 		10EDD7A5249DF02A00DCA29B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1454,6 +1559,88 @@
 			};
 			name = Release;
 		};
+		10E7B15725AF059400CDE6BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = L2ZY2L7GYS;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HCInject/Dobby",
+				);
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = HCInject/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HCInject/Dobby",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hc.test.HCInject;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		10E7B15825AF059400CDE6BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = L2ZY2L7GYS;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HCInject/Dobby",
+				);
+				HEADER_SEARCH_PATHS = "";
+				INFOPLIST_FILE = HCInject/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HCInject/Dobby",
+				);
+				OTHER_LDFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hc.test.HCInject;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				TARGETED_DEVICE_FAMILY = 1;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		10EDD7A9249DF02A00DCA29B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1554,6 +1741,15 @@
 			buildConfigurations = (
 				1086B37623B4930B0002F990 /* Debug */,
 				1086B37723B4930B0002F990 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		10E7B15625AF059400CDE6BC /* Build configuration list for PBXNativeTarget "HCInject" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10E7B15725AF059400CDE6BC /* Debug */,
+				10E7B15825AF059400CDE6BC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

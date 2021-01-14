@@ -11,7 +11,7 @@
 #import <dlfcn.h>
 #import <mach-o/dyld.h>
 #import <TargetConditionals.h>
-#import "dobby.h"
+//#import "dobby.h"
 
 //#if TARGET_IPHONE_SIMULATOR && !defined(LC_ENCRYPTION_INFO)
 #if !defined(LC_ENCRYPTION_INFO)
