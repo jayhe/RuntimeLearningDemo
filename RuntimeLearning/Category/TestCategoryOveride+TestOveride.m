@@ -17,7 +17,7 @@
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wobjc-protocol-method-implementation"
 - (void)log {
-    NSLog(@"category");
+    NSLog(@"%s", __FUNCTION__);
 }
 #pragma clang diagnostic pop
 

@@ -60,7 +60,7 @@
 }
 
 - (void)log {
-    NSLog(@"orginal");
+    NSLog(@"%s", __FUNCTION__);
 }
 
 - (void)privateMethod {

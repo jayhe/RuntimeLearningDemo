@@ -1057,6 +1057,7 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
     TestCategoryOveride *obj = [TestCategoryOveride new];
     // 通过类别调用未公开的方法
     [obj privateMethod];
+    [obj log];
     // 类别的作用：
     // 1.给类增加方法-便于类的扩展以及功能的划分，可以根据功能来定义不同的类别
     // 2.给类增加属性

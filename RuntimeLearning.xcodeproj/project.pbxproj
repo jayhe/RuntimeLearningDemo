@@ -1091,6 +1091,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1076819A241B3B0700D486A9 /* TestCategoryOveride+TestOveride.m in Sources */,
 				1018FAF9225E12C60095BD95 /* AttributeUsage.m in Sources */,
 				10D531012227B5B7007AE594 /* TestUnsafeSwizzle.m in Sources */,
 				10BF41E8227FE671009F291E /* DispatchOnceTest.m in Sources */,
@@ -1131,7 +1132,6 @@
 				1072564423B30DBD00BC3A00 /* TestMapTable.m in Sources */,
 				10271A322452BD3E00B37275 /* TestSwift.swift in Sources */,
 				10E6545024939EEE0022156D /* TestFilterUsage.m in Sources */,
-				1076819A241B3B0700D486A9 /* TestCategoryOveride+TestOveride.m in Sources */,
 				1001DA0B222E521700E5EBEF /* TestCategoryOveride.m in Sources */,
 				107B55D62410C79100EDCCD6 /* NSCacheTest.m in Sources */,
 				10D531002227B5B7007AE594 /* TestSubClassSwizzle.m in Sources */,

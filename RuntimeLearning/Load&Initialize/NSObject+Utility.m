@@ -35,6 +35,7 @@ struct initailize_class *gatherClassMethodImps(Class gatherCls, SEL gatherSel, u
     int used = 0, allocated = 0;
     Class cls = gatherCls;
     // 沿着继承链去从类的ias即metaClass的方法列表中获取initialize方法并存储起来
+    // load方法是会把类的load方法以及分类的load方法分开加到数组中，保证先调用类的，再调用分类的
     while (cls != NSObject.class) {
         unsigned int count = 0;
         Class gatherClsIsa = object_getClass(cls);
