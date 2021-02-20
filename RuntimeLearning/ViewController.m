@@ -52,7 +52,7 @@
 #include <stdlib.h>
 #import "HCTestProtocol.h"
 #import <Aspects/Aspects.h>
-
+#import <dlfcn.h>
 
 @interface TestKVOObject : NSObject
 {
@@ -300,6 +300,7 @@ void testBenchmark(void);
     if ([self.entryTableView isKindOfClass:[UITableView class]]) { // 递归superclass去判断class是否相等
         NSLog(@"self.entryTableView is kind of  UITableView");
     }
+    [self methodToBeHook];
     /*
      (lldb) p self.entryTableView->isa
      (__unsafe_unretained Class) $4 = NSKVONotifying_UITableView
@@ -341,6 +342,13 @@ int functionG(int x) {
 - (void)setupUI {
     self.view.backgroundColor = [UIColor purpleColor];
     NSLog(@"Injected %s", __FUNCTION__);
+}
+
+- (void)methodToBeHook {
+    void *PC = __builtin_return_address(0);
+    Dl_info info;
+    dladdr(PC, &info);
+    NSString *name = @(info.dli_sname);
 }
 
 - (void)viewWillAppear:(BOOL)animated {

@@ -8,6 +8,7 @@
 
 #import "UIViewController+Test.h"
 #import <objc/runtime.h>
+#import "ViewController.h"
 
 @implementation UIViewController (Test)
 
@@ -26,6 +27,31 @@
 
 - (void)hc_viewWillAppear:(BOOL)animated {
     [self hc_viewWillAppear:animated];
+}
+
+@end
+
+@interface ViewController(TestHook)
+@end
+
+@implementation ViewController(TestHook)
+
++ (void)load {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        Method originalMethod = class_getInstanceMethod(self, @selector(methodToBeHook));
+        Method replacementMethod = class_getInstanceMethod(self, @selector(hookMethodToBeHook));
+        if (class_addMethod(self, @selector(methodToBeHook), method_getImplementation(replacementMethod), method_getTypeEncoding(replacementMethod))) {
+            class_replaceMethod(self, @selector(hookMethodToBeHook), method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
+        } else {
+            method_exchangeImplementations(originalMethod, replacementMethod);
+        }
+    });
+}
+
+
+- (void)hookMethodToBeHook {
+    [self hookMethodToBeHook];
 }
 
 @end

@@ -117,7 +117,7 @@
              Printing description of typeEncoding:
              (const char *) typeEncoding = 0x000000010bac7c7a "{_NSRange=\"location\"Q\"length\"Q}"
              */
-            if (idx == NULL) { // 如果为空则表示没有找到'='，此时走远来的流程
+            if (idx == NULL) { // 如果为空则表示没有找到'='，此时走原来的流程
                 [self hc_setNilValueForKey:key];
             }
             // 处理NSValue的一些场景：比如NSRange、CGRect、CGPoint、CGSize；也就是NSValue structure type
