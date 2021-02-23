@@ -53,6 +53,7 @@
 #import "HCTestProtocol.h"
 #import <Aspects/Aspects.h>
 #import <dlfcn.h>
+#import "TestIsaUsage.h"
 
 @interface TestKVOObject : NSObject
 {
@@ -301,6 +302,7 @@ void testBenchmark(void);
         NSLog(@"self.entryTableView is kind of  UITableView");
     }
     [self methodToBeHook];
+    [[TestIsaUsage new] debugDescription];
     /*
      (lldb) p self.entryTableView->isa
      (__unsafe_unretained Class) $4 = NSKVONotifying_UITableView

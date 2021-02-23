@@ -36,11 +36,11 @@
 //    [self testNSStringCopy];
 //    [self testNSMutableStringCopy];
     
-//    [self testNSArrayCopy];
+    [self testNSArrayCopy];
 //    [self testNSMutableArrayCopy];
     
 //    [self testNSDictionaryCopy];
-    [self testNSMutableDictionaryCopy];
+//    [self testNSMutableDictionaryCopy];
     /*
      心法：不到必须开辟新空间，编译器不会新开辟内存，能引用的就使用引用计数
      */
@@ -68,7 +68,7 @@
      总结：对于不可变的字符串，copy strong都是引用指向同一块内存；mutableCopy会创建一个新的副本
      */
     NSLog(@"========NSString Changed========");
-    aStr = @"222";
+    aStr = @"222"; // 这里修改了aStr指针的指向
     NSLog(@"original str:%@ and address:%p", aStr, aStr);
     NSLog(@"str by copy:%@ and address:%p", aCopyStr, aCopyStr);
     NSLog(@"str by mutableCopy:%@ and address:%p", aMutableCopyStr, aMutableCopyStr);
@@ -91,11 +91,11 @@
     self.pStrongStr = aStr;
     
     NSMutableString *aMutableCopyStr = aStr.mutableCopy;
-    NSLog(@"original str address:%p", aStr);
-    NSLog(@"str by copy address:%p", aCopyStr);
-    NSLog(@"str by mutableCopy address:%p", aMutableCopyStr);
-    NSLog(@"property str by copy address:%p", _pCopyStr);
-    NSLog(@"property str by strong address:%p", _pStrongStr);
+    NSLog(@"original str address:%p", aStr); // __NSCFString
+    NSLog(@"str by copy address:%p", aCopyStr); // NSTaggedPointerString
+    NSLog(@"str by mutableCopy address:%p", aMutableCopyStr); // "_NSCFString"
+    NSLog(@"property str by copy address:%p", _pCopyStr); // NSTaggedPointerString
+    NSLog(@"property str by strong address:%p", _pStrongStr); // __NSCFString
     /*
      2019-07-03 16:40:21.124140+0800 RuntimeLearning[58240:1958024] original str address:0x600000914540
      2019-07-03 16:40:21.124224+0800 RuntimeLearning[58240:1958024] str by copy address:0x89d19d7a3ea43c1c

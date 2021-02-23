@@ -52,6 +52,7 @@
 		10BF41E8227FE671009F291E /* DispatchOnceTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BF41E7227FE671009F291E /* DispatchOnceTest.m */; };
 		10BF41EB228012A7009F291E /* DispatchBarrierTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BF41EA228012A7009F291E /* DispatchBarrierTest.m */; };
 		10BF41F2228120C1009F291E /* DispatchGroupLeaveTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BF41F1228120C1009F291E /* DispatchGroupLeaveTest.m */; };
+		10C1843225E0F68D002089D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10128713221D3B0900ED6CDE /* main.m */; };
 		10C3235922781DCF0091B0ED /* NSObject+HCInjection.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C3235822781DCF0091B0ED /* NSObject+HCInjection.m */; };
 		10D160C0237119690051A7BA /* ByteAlignmentTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D160BF237119690051A7BA /* ByteAlignmentTest.m */; };
 		10D16100237456940051A7BA /* DispatchExamnationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D160FF237456940051A7BA /* DispatchExamnationTest.m */; };
@@ -63,7 +64,6 @@
 		10E6545224939F4E0022156D /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10E6545124939F4E0022156D /* CoreImage.framework */; };
 		10E6B1402462863E00A37097 /* KeychainUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E6B13F2462863E00A37097 /* KeychainUsage.m */; };
 		10E7AF7625AD9A6800CDE6BC /* NSObject+HCKVCNilHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E7AF7525AD9A6800CDE6BC /* NSObject+HCKVCNilHandle.m */; };
-		10E7B10B25AEF16D00CDE6BC /* main1.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B9CBDA2501E3B2006D48AC /* main1.m */; };
 		10E7B15125AF059400CDE6BC /* HCInject.h in Headers */ = {isa = PBXBuildFile; fileRef = 10E7B14F25AF059400CDE6BC /* HCInject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		10E7B16025AF05EE00CDE6BC /* HCHook.h in Headers */ = {isa = PBXBuildFile; fileRef = 10E7B15E25AF05EE00CDE6BC /* HCHook.h */; };
 		10E7B16125AF05EE00CDE6BC /* HCHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 10E7B15F25AF05EE00CDE6BC /* HCHook.m */; };
@@ -1096,6 +1096,7 @@
 				10D531012227B5B7007AE594 /* TestUnsafeSwizzle.m in Sources */,
 				10BF41E8227FE671009F291E /* DispatchOnceTest.m in Sources */,
 				10D530FF2227B5B7007AE594 /* TestCategorySwizzle.m in Sources */,
+				10C1843225E0F68D002089D6 /* main.m in Sources */,
 				10128734221D3B7300ED6CDE /* MethodSwizzleUtil.m in Sources */,
 				10C3235922781DCF0091B0ED /* NSObject+HCInjection.m in Sources */,
 				1059F82D2488E225005673C8 /* NSObject+HCLog.m in Sources */,
@@ -1115,7 +1116,6 @@
 				101C2C372478FEE7001403F5 /* HCSwizzleInstance.m in Sources */,
 				10D160C0237119690051A7BA /* ByteAlignmentTest.m in Sources */,
 				1059F82A2488DFD7005673C8 /* PropertyUsage.m in Sources */,
-				10E7B10B25AEF16D00CDE6BC /* main1.m in Sources */,
 				10128733221D3B7300ED6CDE /* NSObject+HCSafe.m in Sources */,
 				10BF41EB228012A7009F291E /* DispatchBarrierTest.m in Sources */,
 				10A6CA9D241CA882002BFAC5 /* TestMethodInvocation.m in Sources */,

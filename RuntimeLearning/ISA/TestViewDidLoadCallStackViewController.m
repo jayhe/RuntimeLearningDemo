@@ -107,7 +107,7 @@ RuntimeLearning`-[ViewController viewDidLoad]:
     void *obj = &cls;
     NSLog(@"&obj = %p", &obj);
     /*
-    020-04-20 11:25:03.692657+0800 RuntimeLearning[11725:3284998] &cls = 0x7ffee5734fe8
+    2020-04-20 11:25:03.692657+0800 RuntimeLearning[11725:3284998] &cls = 0x7ffee5734fe8
     2020-04-20 11:25:03.692745+0800 RuntimeLearning[11725:3284998] &cls1 = 0x7ffee5734fe0
     2020-04-20 11:25:03.692847+0800 RuntimeLearning[11725:3284998] &obj = 0x7ffee5734fd8
     [AddressInfo class]这块块区域就在内存中。你要访问它 那么你得有钥匙。&cls就是一把钥匙；void *obj = &cls 就是相当于拷贝一个钥匙
@@ -198,5 +198,78 @@ RuntimeLearning`-[ViewController viewDidLoad]:
 - (void)logDescription {
     NSLog(@"self.name = %@", self.addressName);
 }
+/*
+ 下一个符号断点在addressName，debug汇编如下：
+ RuntimeLearning`-[AddressInfo1 addressName]:
+     0x100bf22fc <+0>:  sub    sp, sp, #0x30             ; =0x30
+     0x100bf2300 <+4>:  stp    x29, x30, [sp, #0x20]
+     0x100bf2304 <+8>:  add    x29, sp, #0x20            ; =0x20
+     0x100bf2308 <+12>: adrp   x8, 84
+     0x100bf230c <+16>: add    x8, x8, #0x9cc            ; =0x9cc
+     0x100bf2310 <+20>: str    x0, [sp, #0x8]
+ ->  0x100bf2314 <+24>: mov    x0, x8
+     0x100bf2318 <+28>: str    x1, [sp]
+     0x100bf231c <+32>: bl     0x100c177a4               ; __sanitizer_cov_trace_pc_guard at HCClangTrace.m:40
+     0x100bf2320 <+36>: ldr    x8, [sp, #0x8]
+     0x100bf2324 <+40>: stur   x8, [x29, #-0x8]
+     0x100bf2328 <+44>: ldr    x9, [sp]
+     0x100bf232c <+48>: str    x9, [sp, #0x10]
+     0x100bf2330 <+52>: ldr    x1, [sp, #0x10]
+     0x100bf2334 <+56>: ldur   x0, [x29, #-0x8]
+     0x100bf2338 <+60>: mov    x2, #0x10
+     0x100bf233c <+64>: mov    w10, #0x0
+     0x100bf2340 <+68>: and    w3, w10, #0x1
+     0x100bf2344 <+72>: ldp    x29, x30, [sp, #0x20]
+     0x100bf2348 <+76>: add    sp, sp, #0x30             ; =0x30
+     0x100bf234c <+80>: b      0x100c22db4               ; symbol stub for: objc_getProperty
+ 
+ 
+ id objc_getProperty(id self, SEL _cmd, ptrdiff_t offset, BOOL atomic) {
+     if (offset == 0) {
+         return object_getClass(self);
+     }
+
+     // Retain release world
+     id *slot = (id*) ((char*)self + offset);
+     if (!atomic) return *slot;
+         
+     // Atomic retain release world
+     spinlock_t& slotlock = PropertyLocks[slot];
+     slotlock.lock();
+     id value = objc_retain(*slot);
+     slotlock.unlock();
+     
+     // for performance, we (safely) issue the autorelease OUTSIDE of the spinlock.
+     return objc_autoreleaseReturnValue(value);
+ }
+ */
+
+- (NSString *)addressName {
+    return @"addressName";
+}
+
+/*
+ 如果自己实现了addressName的get方法
+ 
+ RuntimeLearning`-[AddressInfo1 addressName]:
+     0x100a522fc <+0>:  sub    sp, sp, #0x30             ; =0x30
+     0x100a52300 <+4>:  stp    x29, x30, [sp, #0x20]
+     0x100a52304 <+8>:  add    x29, sp, #0x20            ; =0x20
+     0x100a52308 <+12>: adrp   x8, 84
+     0x100a5230c <+16>: add    x8, x8, #0x9ec            ; =0x9ec
+     0x100a52310 <+20>: str    x0, [sp, #0x8]
+ ->  0x100a52314 <+24>: mov    x0, x8
+     0x100a52318 <+28>: str    x1, [sp]
+     0x100a5231c <+32>: bl     0x100a77798               ; __sanitizer_cov_trace_pc_guard at HCClangTrace.m:40
+     0x100a52320 <+36>: ldr    x8, [sp, #0x8]
+     0x100a52324 <+40>: stur   x8, [x29, #-0x8]
+     0x100a52328 <+44>: ldr    x9, [sp]
+     0x100a5232c <+48>: str    x9, [sp, #0x10]
+     0x100a52330 <+52>: adrp   x0, 67
+     0x100a52334 <+56>: add    x0, x0, #0x650            ; =0x650
+     0x100a52338 <+60>: ldp    x29, x30, [sp, #0x20]
+     0x100a5233c <+64>: add    sp, sp, #0x30             ; =0x30
+     0x100a52340 <+68>: b      0x100a82e20               ; symbol stub for: objc_retainAutoreleaseReturnValue
+ */
 
 @end

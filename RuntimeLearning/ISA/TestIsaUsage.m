@@ -10,4 +10,14 @@
 
 @implementation TestIsaUsage
 
+- (NSString *)debugDescription {
+    [super debugDescription];
+    [self callSomeFunc];
+    return @"debugDescription";
+}
+
+- (void)callSomeFunc {
+    
+}
+
 @end
