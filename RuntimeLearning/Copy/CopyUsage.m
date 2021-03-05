@@ -50,6 +50,21 @@
     NSLog(@"========NSString========");
     NSString *aStr = @"111";
     self.pCopyStr = aStr;
+    /*
+     (lldb) po aStr.class
+     __NSCFConstantString
+
+     (lldb) po aStr.superclass
+     __NSCFString
+
+     (lldb) po [aStr.superclass superclass]
+     NSMutableString
+
+     (lldb) po [[aStr.superclass superclass] superclass]
+     NSString
+
+     (lldb)
+     */
     self.pStrongStr = aStr;
     NSString *aCopyStr = aStr.copy;
     NSMutableString *aMutableCopyStr = aStr.mutableCopy;
@@ -130,6 +145,33 @@
     NSArray *aArray = [[NSArray alloc] initWithObjects:obj0, obj1, nil];
     NSArray *aCopyArray = aArray.copy;
     NSMutableArray *aMutableCopyArray = aArray.mutableCopy;
+    /*
+     (lldb) po aArray.class
+     __NSArrayI
+
+     (lldb) po aArray.superclass
+     NSArray
+
+     (lldb) po [aArray.superclass superclass]
+     NSObject
+     
+     (lldb) po aCopyArray.class
+     __NSArrayI
+
+     (lldb) po aMutableCopyArray.class
+     __NSArrayM
+
+     (lldb) po [aMutableCopyArray.class superclass]
+     NSMutableArray
+
+     (lldb) po [[aMutableCopyArray.class superclass] superclass]
+     NSArray
+
+     (lldb) po [[[aMutableCopyArray.class superclass] superclass] superclass]
+     NSObject
+
+     (lldb)
+     */
     self.pCopyArray = aArray;
     self.pStrongArray = aArray;
     NSLog(@"original array:%@ and address:%p", aArray, aArray);

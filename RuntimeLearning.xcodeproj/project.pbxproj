@@ -53,6 +53,8 @@
 		10BF41EB228012A7009F291E /* DispatchBarrierTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BF41EA228012A7009F291E /* DispatchBarrierTest.m */; };
 		10BF41F2228120C1009F291E /* DispatchGroupLeaveTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10BF41F1228120C1009F291E /* DispatchGroupLeaveTest.m */; };
 		10C1843225E0F68D002089D6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 10128713221D3B0900ED6CDE /* main.m */; };
+		10C184F325E941DE002089D6 /* TestCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C184F225E941DD002089D6 /* TestCategory.m */; };
+		10C1855625EE3CB9002089D6 /* TestCategory+Test.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C1855525EE3CB9002089D6 /* TestCategory+Test.m */; };
 		10C3235922781DCF0091B0ED /* NSObject+HCInjection.m in Sources */ = {isa = PBXBuildFile; fileRef = 10C3235822781DCF0091B0ED /* NSObject+HCInjection.m */; };
 		10D160C0237119690051A7BA /* ByteAlignmentTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D160BF237119690051A7BA /* ByteAlignmentTest.m */; };
 		10D16100237456940051A7BA /* DispatchExamnationTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D160FF237456940051A7BA /* DispatchExamnationTest.m */; };
@@ -258,6 +260,11 @@
 		10BF41EF22801333009F291E /* RuntimeLearningMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RuntimeLearningMacro.h; sourceTree = "<group>"; };
 		10BF41F0228120C1009F291E /* DispatchGroupLeaveTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DispatchGroupLeaveTest.h; sourceTree = "<group>"; };
 		10BF41F1228120C1009F291E /* DispatchGroupLeaveTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DispatchGroupLeaveTest.m; sourceTree = "<group>"; };
+		10C184C225E798A8002089D6 /* TestViewDidLoadCallStackViewController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TestViewDidLoadCallStackViewController.cpp; sourceTree = "<group>"; };
+		10C184F125E941DD002089D6 /* TestCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestCategory.h; sourceTree = "<group>"; };
+		10C184F225E941DD002089D6 /* TestCategory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestCategory.m; sourceTree = "<group>"; };
+		10C1855425EE3CB9002089D6 /* TestCategory+Test.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestCategory+Test.h"; sourceTree = "<group>"; };
+		10C1855525EE3CB9002089D6 /* TestCategory+Test.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "TestCategory+Test.m"; sourceTree = "<group>"; };
 		10C3235722781DCF0091B0ED /* NSObject+HCInjection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+HCInjection.h"; sourceTree = "<group>"; };
 		10C3235822781DCF0091B0ED /* NSObject+HCInjection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HCInjection.m"; sourceTree = "<group>"; };
 		10CF127023AC6499001B5BA2 /* RuntimeLearning.profdata */ = {isa = PBXFileReference; lastKnownFileType = file; path = RuntimeLearning.profdata; sourceTree = "<group>"; };
@@ -369,6 +376,10 @@
 			children = (
 				1001DA09222E521700E5EBEF /* TestCategoryOveride.h */,
 				1001DA0A222E521700E5EBEF /* TestCategoryOveride.m */,
+				10C184F125E941DD002089D6 /* TestCategory.h */,
+				10C184F225E941DD002089D6 /* TestCategory.m */,
+				10C1855425EE3CB9002089D6 /* TestCategory+Test.h */,
+				10C1855525EE3CB9002089D6 /* TestCategory+Test.m */,
 				10768198241B3B0700D486A9 /* TestCategoryOveride+TestOveride.h */,
 				10768199241B3B0700D486A9 /* TestCategoryOveride+TestOveride.m */,
 				10518D7F241F79A600AE5265 /* TestCategoryOveride+TestOverideOne.h */,
@@ -495,6 +506,7 @@
 			children = (
 				1016785C2580D01700089FCC /* TestViewDidLoadCallStackViewController.h */,
 				1016785B2580D01700089FCC /* TestViewDidLoadCallStackViewController.m */,
+				10C184C225E798A8002089D6 /* TestViewDidLoadCallStackViewController.cpp */,
 				101678672582124D00089FCC /* TestIsaUsage.h */,
 				101678682582124D00089FCC /* TestIsaUsage.m */,
 			);
@@ -1098,6 +1110,7 @@
 				10D530FF2227B5B7007AE594 /* TestCategorySwizzle.m in Sources */,
 				10C1843225E0F68D002089D6 /* main.m in Sources */,
 				10128734221D3B7300ED6CDE /* MethodSwizzleUtil.m in Sources */,
+				10C184F325E941DE002089D6 /* TestCategory.m in Sources */,
 				10C3235922781DCF0091B0ED /* NSObject+HCInjection.m in Sources */,
 				1059F82D2488E225005673C8 /* NSObject+HCLog.m in Sources */,
 				10518D81241F79A600AE5265 /* TestCategoryOveride+TestOverideOne.m in Sources */,
@@ -1105,6 +1118,7 @@
 				10E7AF7625AD9A6800CDE6BC /* NSObject+HCKVCNilHandle.m in Sources */,
 				104D7354249A596B00055968 /* TestCategorySwizzle+LoadOrder.m in Sources */,
 				10A65BCF2508B3A8008D98E1 /* HCTestProtocolImp.m in Sources */,
+				10C1855625EE3CB9002089D6 /* TestCategory+Test.m in Sources */,
 				102CDD42246656CD002150BE /* TestFuctionalProgromming.m in Sources */,
 				104D73472498CCB600055968 /* HookMethodInInitialize.m in Sources */,
 				104D734A2498DD7800055968 /* NSObject+Utility.m in Sources */,

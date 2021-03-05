@@ -62,4 +62,10 @@ object:nil] \
 
 #endif
 
+#ifndef YYSYNTH_DUMMY_CLASS
+#define YYSYNTH_DUMMY_CLASS(_name_) \
+@interface YYSYNTH_DUMMY_CLASS_ ## _name_ : NSObject @end \
+@implementation YYSYNTH_DUMMY_CLASS_ ## _name_ @end
+#endif
+
 #endif /* RuntimeLearningMacro_h */

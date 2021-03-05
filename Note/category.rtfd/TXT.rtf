@@ -1,0 +1,245 @@
+{\rtf1\ansi\ansicpg936\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset134 PingFangSC-Regular;\f1\fswiss\fcharset0 Helvetica;\f2\fnil\fcharset0 Monaco;
+}
+{\colortbl;\red255\green255\blue255;\red242\green242\blue242;\red0\green0\blue0;\red0\green0\blue0;
+\red255\green255\blue255;}
+{\*\expandedcolortbl;;\csgray\c95825;\csgray\c0\c85000;\cssrgb\c0\c1\c1;
+\cssrgb\c100000\c100000\c99985;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww16980\viewh9160\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \'c7\'b0\'cc\'e1\'cc\'f5\'bc\'fe\'a3\'ba\'cf\'ee\'c4\'bf\'c5\'e4\'d6\'c3\'d6\'d0
+\f1 Other Linker Flags 
+\f0 \'c5\'e4\'d6\'c3\'b5\'c4\'ca\'c7
+\f1 -ObjC
+\f0 \'a3\'ac\'c3\'bb\'d3\'d0\'c5\'e4\'d6\'c3
+\f1 -all_load 
+\f0 \'bb\'f2\'d5\'df
+\f1 -force_load\
+Case 1
+\f0 \'a3\'ba\'d0\'c2\'bd\'a8\'d2\'bb\'b8\'f6\'ce\'c4\'bc\'fe\'ca\'b5\'cf\'d6\'b7\'d6\'c0\'e0\'a3\'ac\'b8\'c3\'b7\'d6\'c0\'e0\'d6\'d0\'c3\'bb\'d3\'d0\'ca\'b5\'cf\'d6load\'b7\'bd\'b7\'a8\'b5\'c4\'c7\'e9\'bf\'f6\'a3\'bb\'b5\'ab\'ca\'c7\'d4\'daTestCategory\'b5\'c4\'ce\'c4\'bc\'fe\'d6\'d0\'b6\'a8\'d2\'e5\'c1\'cb\'d2\'bb\'b8\'f6\'b7\'d6\'c0\'e0\'ca\'b5\'cf\'d6\'c1\'cbload\'b7\'bd\'b7\'a8\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f1 \cf0 {{\NeXTGraphic 新建的category中没有实现load方法.png \width10000 \height5000 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}�}
+\f0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs20 \cf2 \cb3 \CocoaLigature0 0000000100054970 0x100061410 _OBJC_CLASS_$_TestCategory\
+    isa        0x1000613e8 _OBJC_METACLASS_$_TestCategory\
+    superclass 0x0 _OBJC_CLASS_$_NSObject\
+    cache      0x0 __objc_empty_cache\
+    vtable     0x0\
+    data       0x100055530 __OBJC_CLASS_RO_$_TestCategory\
+        flags          0x80\
+        instanceStart  8\
+        instanceSize   8\
+        reserved       0x00000000\
+        ivarLayout     0x0\
+        name           0x100043da5 TestCategory\
+        baseMethods    0x100055498 __OBJC_$_INSTANCE_METHODS_TestCategory(Test1|Test)\
+            entsize 24\
+            count   3\
+            name    0x10004462c testSomeMethod\
+            types   0x100048deb v16@0:8\
+            imp     0x10000fa3c -[TestCategory(Test) testSomeMethod]\
+            name    0x10004462c testSomeMethod\
+            types   0x100048deb v16@0:8\
+            imp     0x10000d820 -[TestCategory(Test1) testSomeMethod]\
+            name    0x10004462c testSomeMethod\
+            types   0x100048deb v16@0:8\
+            imp     0x10000d7a0 -[TestCategory testSomeMethod]\
+        baseProtocols  0x0\
+        ivars          0x0\
+        weakIvarLayout 0x0\
+        baseProperties 0x0\
+Meta Class\
+    isa        0x0 _OBJC_METACLASS_$_NSObject\
+    superclass 0x0 _OBJC_METACLASS_$_NSObject\
+    cache      0x0 __objc_empty_cache\
+    vtable     0x0\
+    data       0x1000554e8 __OBJC_METACLASS_RO_$_TestCategory\
+        flags          0x81 RO_META\
+        instanceStart  40\
+        instanceSize   40\
+        reserved       0x00000000\
+        ivarLayout     0x0\
+        name           0x100043da5 TestCategory\
+        baseMethods    0x100055478 __OBJC_$_CLASS_METHODS_TestCategory(Test1|Test)\
+            entsize 24\
+            count   1\
+            name    0x100044451 load\
+            types   0x100048deb v16@0:8\
+            imp     0x10000d7e0 +[TestCategory(Test1) load]\
+        baseProtocols  0x0\
+        ivars          0x0\
+        weakIvarLayout 0x0\
+        baseProperties 0x0\
+\
+\cf4 \cb5 Case 2
+\f0 \'a3\'ba\'b7\'d6\'c0\'e0\'d6\'d0\'ca\'b5\'cf\'d6\'c1\'cb
+\f2 load
+\f0 \'b7\'bd\'b7\'a8
+\f2 \
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs24 \cf0 \cb1 \CocoaLigature1 {{\NeXTGraphic Pasted Graphic.tiff \width21760 \height11720 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}�}\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f2\fs20 \cf2 \cb3 \CocoaLigature0 0000000100054970 0x1000614d8 _OBJC_CLASS_$_TestCategory\
+    isa        0x1000614b0 _OBJC_METACLASS_$_TestCategory\
+    superclass 0x0 _OBJC_CLASS_$_NSObject\
+    cache      0x0 __objc_empty_cache\
+    vtable     0x0\
+    data       0x1000554f8 __OBJC_CLASS_RO_$_TestCategory\
+        flags          0x80\
+        instanceStart  8\
+        instanceSize   8\
+        reserved       0x00000000\
+        ivarLayout     0x0\
+        name           0x100043da5 TestCategory\
+        baseMethods    0x1000554d8 __OBJC_$_INSTANCE_METHODS_TestCategory\
+            entsize 24\
+            count   1\
+            name    0x10004462c testSomeMethod\
+            types   0x100048deb v16@0:8\
+            imp     0x10000d7a0 -[TestCategory testSomeMethod]\
+        baseProtocols  0x0\
+        ivars          0x0\
+        weakIvarLayout 0x0\
+        baseProperties 0x0\
+Meta Class\
+    isa        0x0 _OBJC_METACLASS_$_NSObject\
+    superclass 0x0 _OBJC_METACLASS_$_NSObject\
+    cache      0x0 __objc_empty_cache\
+    vtable     0x0\
+    data       0x100055490 __OBJC_METACLASS_RO_$_TestCategory\
+        flags          0x81 RO_META\
+        instanceStart  40\
+        instanceSize   40\
+        reserved       0x00000000\
+        ivarLayout     0x0\
+        name           0x100043da5 TestCategory\
+        baseMethods    0x0\
+        baseProtocols  0x0\
+        ivars          0x0\
+        weakIvarLayout 0x0\
+        baseProperties 0x0\
+\
+\
+\
+0000000100054be0 0x100055580 __OBJC_$_CATEGORY_TestCategory_$_Test1\
+    name      0x100043db2 Test1\
+    cls       0x1000614d8 _OBJC_CLASS_$_TestCategory\
+        isa        0x1000614b0 _OBJC_METACLASS_$_TestCategory\
+        superclass 0x0 _OBJC_CLASS_$_NSObject\
+        cache      0x0 __objc_empty_cache\
+        vtable     0x0\
+        data       0x1000554f8 __OBJC_CLASS_RO_$_TestCategory\
+            flags          0x80\
+            instanceStart  8\
+            instanceSize   8\
+            reserved       0x00000000\
+            ivarLayout     0x0\
+            name           0x100043da5 TestCategory\
+            baseMethods    0x1000554d8 __OBJC_$_INSTANCE_METHODS_TestCategory\
+                entsize 24\
+                count   1\
+                name    0x10004462c testSomeMethod\
+                types   0x100048deb v16@0:8\
+                imp     0x10000d7a0 -[TestCategory testSomeMethod]\
+            baseProtocols  0x0\
+            ivars          0x0\
+            weakIvarLayout 0x0\
+            baseProperties 0x0\
+Meta Class\
+        isa        0x0 _OBJC_METACLASS_$_NSObject\
+        superclass 0x0 _OBJC_METACLASS_$_NSObject\
+        cache      0x0 __objc_empty_cache\
+        vtable     0x0\
+        data       0x100055490 __OBJC_METACLASS_RO_$_TestCategory\
+            flags          0x81 RO_META\
+            instanceStart  40\
+            instanceSize   40\
+            reserved       0x00000000\
+            ivarLayout     0x0\
+            name           0x100043da5 TestCategory\
+            baseMethods    0x0\
+            baseProtocols  0x0\
+            ivars          0x0\
+            weakIvarLayout 0x0\
+            baseProperties 0x0\
+    instanceMethods 0x100055540 __OBJC_$_CATEGORY_INSTANCE_METHODS_TestCategory_$_Test1\
+        entsize 24\
+        count   1\
+        name    0x10004462c testSomeMethod\
+        types   0x100048deb v16@0:8\
+        imp     0x10000d820 -[TestCategory(Test1) testSomeMethod]\
+    classMethods 0x100055560 __OBJC_$_CATEGORY_CLASS_METHODS_TestCategory_$_Test1\
+        entsize 24\
+        count   1\
+        name    0x100044451 load\
+        types   0x100048deb v16@0:8\
+        imp     0x10000d7e0 +[TestCategory(Test1) load]\
+    protocols 0x0\
+    instanceProperties 0x0\
+\
+\
+0000000100054c08 0x100056640 __OBJC_$_CATEGORY_TestCategory_$_Test\
+    name      0x100043eb8 Test\
+    cls       0x1000614d8 _OBJC_CLASS_$_TestCategory\
+        isa        0x1000614b0 _OBJC_METACLASS_$_TestCategory\
+        superclass 0x0 _OBJC_CLASS_$_NSObject\
+        cache      0x0 __objc_empty_cache\
+        vtable     0x0\
+        data       0x1000554f8 __OBJC_CLASS_RO_$_TestCategory\
+            flags          0x80\
+            instanceStart  8\
+            instanceSize   8\
+            reserved       0x00000000\
+            ivarLayout     0x0\
+            name           0x100043da5 TestCategory\
+            baseMethods    0x1000554d8 __OBJC_$_INSTANCE_METHODS_TestCategory\
+                entsize 24\
+                count   1\
+                name    0x10004462c testSomeMethod\
+                types   0x100048deb v16@0:8\
+                imp     0x10000d7a0 -[TestCategory testSomeMethod]\
+            baseProtocols  0x0\
+            ivars          0x0\
+            weakIvarLayout 0x0\
+            baseProperties 0x0\
+Meta Class\
+        isa        0x0 _OBJC_METACLASS_$_NSObject\
+        superclass 0x0 _OBJC_METACLASS_$_NSObject\
+        cache      0x0 __objc_empty_cache\
+        vtable     0x0\
+        data       0x100055490 __OBJC_METACLASS_RO_$_TestCategory\
+            flags          0x81 RO_META\
+            instanceStart  40\
+            instanceSize   40\
+            reserved       0x00000000\
+            ivarLayout     0x0\
+            name           0x100043da5 TestCategory\
+            baseMethods    0x0\
+            baseProtocols  0x0\
+            ivars          0x0\
+            weakIvarLayout 0x0\
+            baseProperties 0x0\
+    instanceMethods 0x100056600 __OBJC_$_CATEGORY_INSTANCE_METHODS_TestCategory_$_Test\
+        entsize 24\
+        count   1\
+        name    0x10004462c testSomeMethod\
+        types   0x100048deb v16@0:8\
+        imp     0x10000fa7c -[TestCategory(Test) testSomeMethod]\
+    classMethods 0x100056620 __OBJC_$_CATEGORY_CLASS_METHODS_TestCategory_$_Test\
+        entsize 24\
+        count   1\
+        name    0x100044451 load\
+        types   0x100048deb v16@0:8\
+        imp     0x10000fa3c +[TestCategory(Test) load]\
+    protocols 0x0\
+    instanceProperties 0x0}

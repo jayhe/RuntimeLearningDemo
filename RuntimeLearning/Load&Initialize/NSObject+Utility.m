@@ -10,11 +10,11 @@
 #import <objc/runtime.h>
 
 /*
- + (Class)class {
+ + (Class)class { // 类的类方法class返回的就是类本身
      return self;
  }
 
- - (Class)class {
+ - (Class)class { // 实例方法则是获取isa，如果要获取class的meta-class，那么就需要去调用object_getClass传入类对象，而不能直接调用class方法
      return object_getClass(self);
  }
  
@@ -75,7 +75,7 @@ void callClassMethodsExceptSelfAlongChain(Class cls, SEL callSel, IMP originalIm
     struct initailize_class *initailize_classes = gatherClassMethodImps(cls, @selector(initialize), &count);
     for (unsigned int i = 0; i < count; i ++) {
         struct initailize_class item = initailize_classes[i];
-        if (item.method != originalImp) { // 过滤调调用者的方法
+        if (item.method != originalImp) { // 过滤掉调用者的方法
             initalize_imp imp = (initalize_imp)item.method;
             imp(item.cls, @selector(initialize));
         }

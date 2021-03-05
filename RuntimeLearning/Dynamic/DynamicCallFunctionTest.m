@@ -39,17 +39,17 @@ void dynamicCallPrintfFunction(void) {
     //动态库路径
     const char *dylib_path = "/usr/lib/libSystem.dylib";
     //打开动态库
-    void *handle = dlopen(dylib_path, RTLD_GLOBAL | RTLD_NOW);
+    void *handle = dlopen(dylib_path, RTLD_GLOBAL | RTLD_NOW); // 1.获取句柄
     //void *handle = dlopen(NULL, RTLD_GLOBAL | RTLD_NOW); //传个NULL也可以
     if (handle == NULL) {
         //打开动态库出错
         fprintf(stderr, "%s\n", dlerror());
     } else {
         //获取 printf 地址
-        printf_pointer printf_func = dlsym(handle, "printf");
+        printf_pointer printf_func = dlsym(handle, "printf"); // 2.根据函数符号获取函数指针
         //地址获取成功则调用
         if (printf_func) {
-            printf_func("%s\n", "dynamicCallFunction");
+            printf_func("%s\n", "dynamicCallFunction"); // 3.通过指针调用方法
         }
         dlclose(handle); //关闭句柄
     }

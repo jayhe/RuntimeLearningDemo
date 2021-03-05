@@ -12,8 +12,9 @@
 
 - (instancetype)init {
     if (self) {
-        [self testCurrentQueue];
-        [self testCurrentQueue1];
+//        [self testCurrentQueue];
+//        [self testCurrentQueue1];
+        [self testSerialQueue];
     }
     
     return self;
@@ -75,7 +76,7 @@
         NSLog(@"%s:4", __FUNCTION__);
     });
     NSLog(@"%s:5", __FUNCTION__);
-    // 1 2 3 死锁进系统断言程序退出
+    // 1 2 3死锁进系统断言程序退出
 }
 
 @end

@@ -30,7 +30,7 @@
 }
 
 + (void)swizzleClassMethodWithClass:(Class)clazz originalSel:(SEL)original replacementSel:(SEL)replacement {
-    Class hookClass = object_getClass(clazz);
+    Class hookClass = object_getClass(clazz); // 类方法是在meta-class中，所以需要去获取到类的isa --> 指向的是meta-class
     Method originalMethod = class_getClassMethod(hookClass, original);
     Method replacementMethod = class_getClassMethod(hookClass, replacement);
     if (class_addMethod(hookClass, original, method_getImplementation(replacementMethod), method_getTypeEncoding(replacementMethod))) {

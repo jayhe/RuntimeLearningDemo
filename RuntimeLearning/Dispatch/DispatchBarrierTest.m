@@ -17,9 +17,9 @@
         // 实现前面的任务执行完了再执行后面的任务
         //[self testBarrier]; // x
         // [self testBarrier1]; // x
-        //[self testGroup]; // ⩗
-        //[self testGroup1]; // x
-        [self testSemaphore]; // ⩗
+        //[self testGroup]; // ⩗ 这里是group中的任务也切换了线程，leave放在切换的线程中去，这样就能达到效果
+        [self testGroup1]; // x 这里如果group中不涉及到线程切换，那么也是能达到效果的，否则group的任务都执行了，就执行后面的任务了
+        //[self testSemaphore]; // ⩗
         //[self testRunloop]; // ⩗
     }
     

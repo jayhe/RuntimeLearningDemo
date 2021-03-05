@@ -822,8 +822,15 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
     for (NSInteger i = 0; i < 100000; i++) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             self.nonatomicText = [NSString stringWithFormat:@"abcdefghj%ld", (long)i];
-            // 这里改成下面这句会怎样？？
+            // 这里改成下面这句会怎样？？不会闪退，是因为taggedpointer的话release是直接return了
             // self.nonatomicText = [NSString stringWithFormat:@"%ld", (long)i];
+            /*
+             void objc_release(id obj)
+             {
+                 if (obj->isTaggedPointerOrNil()) return;
+                 return obj->release();
+             }
+             */
         });
     }
     /* 闪退的原因，由于是nonatomic，set方法的调用不是原子性的，就存在多个线程可能同时在执行，如果一个线程执行到release另外一个线程也执行到release，那么久会异常。

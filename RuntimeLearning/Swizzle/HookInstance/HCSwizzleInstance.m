@@ -75,7 +75,7 @@
      return [self class] == cls;
  }
 
- + (BOOL)isKindOfClass:(Class)cls {
+ + (BOOL)isKindOfClass:(Class)cls { // NSObject的meta-class的meta-class是它自己，super-class是NSObject
      for (Class tcls = object_getClass((id)self); tcls; tcls = tcls->superclass) {
          if (tcls == cls) return YES;
      }

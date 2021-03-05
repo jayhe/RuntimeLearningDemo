@@ -95,17 +95,21 @@ RuntimeLearning`-[ViewController viewDidLoad]:
     0x10b6da143 <+275>: addq   $0x60, %rsp
     0x10b6da147 <+279>: popq   %rbp
     0x10b6da148 <+280>: retq
+ 
+ 
+ objc_msgSendSuper({self, super_class}, selector)
+ objc_msgSendSuper2({self, current_class}, selector)
 */
 - (void)viewDidLoad {
-    [super viewDidLoad];
+    [super viewDidLoad]; // objc_msgSendSuper2(struct, selector)
     self.view.backgroundColor = [UIColor whiteColor];
     // Do any additional setup after loading the view.
-    id cls = [AddressInfo1 class];
-    NSLog(@"&cls = %p", &cls);
-    id cls1 = [AddressInfo1 class];
-    NSLog(@"&cls1 = %p", &cls1);
+    id cls = [AddressInfo class];
+    //NSLog(@"&cls = %p", &cls);
+    //id cls1 = [AddressInfo1 class];
+    //NSLog(@"&cls1 = %p", &cls1);
     void *obj = &cls;
-    NSLog(@"&obj = %p", &obj);
+    //NSLog(@"&obj = %p", &obj);
     /*
     2020-04-20 11:25:03.692657+0800 RuntimeLearning[11725:3284998] &cls = 0x7ffee5734fe8
     2020-04-20 11:25:03.692745+0800 RuntimeLearning[11725:3284998] &cls1 = 0x7ffee5734fe0
@@ -175,7 +179,7 @@ RuntimeLearning`-[ViewController viewDidLoad]:
      地址由高到低
      |self       |
      |_cmd       |
-     |super_class|
+     |super_class| === objc_msgSendSuper2() takes the current search class, not its superclass，所以这里是self.class
      |self       |
      |obj        | <--- sp
      */
@@ -244,9 +248,9 @@ RuntimeLearning`-[ViewController viewDidLoad]:
  }
  */
 
-- (NSString *)addressName {
-    return @"addressName";
-}
+//- (NSString *)addressName {
+//    return @"addressName";
+//}
 
 /*
  如果自己实现了addressName的get方法
