@@ -14,11 +14,11 @@ static HCUnrecognizedSelectorExceptionHandler *HCUSEHandler = NULL;
 NSString const *HCUnrecognizedSelectorMessageKey = @"HCUnrecognizedSelectorMessageKey";
 NSString const *HCForwardTargetMessageKey = @"HCForwardTargetMessageKey";
 
-HCUnrecognizedSelectorExceptionHandler * _Nullable RLGetUnrecognizedSelectorExceptionHandler(void) {
+HCUnrecognizedSelectorExceptionHandler * _Nullable HCGetUnrecognizedSelectorExceptionHandler(void) {
     return HCUSEHandler;
 }
 
-void RLSetUnrecognizedSelectorExceptionHandler(HCUnrecognizedSelectorExceptionHandler * _Nullable handler) {
+void HCSetUnrecognizedSelectorExceptionHandler(HCUnrecognizedSelectorExceptionHandler * _Nullable handler) {
     HCUSEHandler = handler;
 }
 
@@ -51,13 +51,6 @@ void RLSetUnrecognizedSelectorExceptionHandler(HCUnrecognizedSelectorExceptionHa
                 *stop = YES;
             }
         }];
-        if (targetToForward && HCUSEHandler) {
-            NSString *info = [NSString stringWithFormat:@"instance %p -[%@ %@] forward target to %@", self, self.class, NSStringFromSelector(aSelector), targetToForward.class];
-            NSDictionary *userInfo = @{
-                HCForwardTargetMessageKey : info
-            };
-            HCUSEHandler(userInfo);
-        }
         return targetToForward;
     } else {
         return [self hc_forwardingTargetForSelector:aSelector];
@@ -91,6 +84,17 @@ void RLSetUnrecognizedSelectorExceptionHandler(HCUnrecognizedSelectorExceptionHa
 - (void)hc_forwardInvocation:(NSInvocation *)anInvocation {
 #if CATCH_CRASH
     if (![self respondsToSelector:anInvocation.selector]) {
+        if ([self conformsToProtocol:@protocol(HCCatchUnrecognizedSelectorProtocol)] && [self respondsToSelector:@selector(customizedExceptionHandler)]) { // 自定义的异常处理
+            HCUnrecognizedSelectorExceptionHandler *handler = [(id<HCCatchUnrecognizedSelectorProtocol>)self customizedExceptionHandler];
+            if (handler) {
+                NSString *info = [NSString stringWithFormat:@"instance %p -[%@ %@] forward target to %@", self, self.class, NSStringFromSelector(anInvocation.selector), self.class];
+                NSDictionary *userInfo = @{
+                    HCForwardTargetMessageKey : info
+                };
+                handler(userInfo);
+                return;;
+            }
+        }
         if (HCUSEHandler) {
             NSMutableDictionary *userInfo = [NSMutableDictionary dictionary];
             NSString *message = [NSString stringWithFormat:@"-[%@ %@]: unrecognized selector sent to instance %p", NSStringFromClass(((NSObject *)anInvocation.target).class), NSStringFromSelector(anInvocation.selector), anInvocation.target];

@@ -10,13 +10,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-/**
- 在release模式下，当收到unrecognized selector异常的时候，转发selector为nilMessage，防止闪退
- */
-@interface NSObject (HCSafe)
-
-@end
-
 /*
  这里也可以参照系统的返回一个NSException对象，可以包含调用的堆栈信息；
  往往项目中如果自己处理这些信息的话，会按照自己的格式去采集异常堆栈信息，这里就返回一个函数的描述；
@@ -26,8 +19,15 @@ typedef void HCUnrecognizedSelectorExceptionHandler(NSDictionary<NSString *, NSS
 FOUNDATION_EXPORT NSString const *HCUnrecognizedSelectorMessageKey; // unrecognizedSelectorInfo对应的key
 FOUNDATION_EXPORT NSString const *HCForwardTargetMessageKey; // unrecognizedSelectorInfo对应的key
 
-FOUNDATION_EXPORT HCUnrecognizedSelectorExceptionHandler * _Nullable RLGetUnrecognizedSelectorExceptionHandler(void);
-FOUNDATION_EXPORT void RLSetUnrecognizedSelectorExceptionHandler(HCUnrecognizedSelectorExceptionHandler * _Nullable);
+FOUNDATION_EXPORT HCUnrecognizedSelectorExceptionHandler * _Nullable HCGetUnrecognizedSelectorExceptionHandler(void);
+FOUNDATION_EXPORT void HCSetUnrecognizedSelectorExceptionHandler(HCUnrecognizedSelectorExceptionHandler * _Nullable);
+
+/**
+ 在release模式下，当收到unrecognized selector异常的时候，转发selector为nilMessage，防止闪退
+ */
+@interface NSObject (HCSafe)
+
+@end
 
 @protocol HCCatchUnrecognizedSelectorProtocol <NSObject>
 
@@ -38,6 +38,9 @@ FOUNDATION_EXPORT void RLSetUnrecognizedSelectorExceptionHandler(HCUnrecognizedS
 /// 对象方法找不到的时候可以转发的targets
 /// eg：接口返回的数据定义的是String，但是返回的是Number类型，假如没有做isKindOf的校验，去直接判断length的话就异常了；这时候我们可以采用forward的方式，来避免这个异常
 - (NSArray<NSObject *> *)targetsToForward;
+
+/// 自定义的异常处理handler，如果不实现，则调用设置的全局的handler
+- (HCUnrecognizedSelectorExceptionHandler *)customizedExceptionHandler;
 
 @end
 

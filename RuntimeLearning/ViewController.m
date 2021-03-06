@@ -376,6 +376,10 @@ int functionG(int x) {
     return YES;
 }
 
+- (HCUnrecognizedSelectorExceptionHandler *)customizedExceptionHandler {
+    return &MineHandler;
+}
+
 void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo) {
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wincompatible-pointer-types"
@@ -385,7 +389,7 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
 }
 
 - (void)testCatchUnrecognizedSelector {
-    RLSetUnrecognizedSelectorExceptionHandler(&MineHandler);
+    //HCSetUnrecognizedSelectorExceptionHandler(&MineHandler);
     /*
      // -Werror=incomplete-implementation
     [self testMethodNotImp];
@@ -401,10 +405,10 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
         __unused NSInteger length = testString.length;
     }
      */
-    NSInteger testCase = 5;
+    NSInteger testCase = 1;
     switch (testCase) {
         case 1: {
-            //[self testMethodNotImp];
+            [self testMethodNotImp];
         }
             break;
         case 2: {
