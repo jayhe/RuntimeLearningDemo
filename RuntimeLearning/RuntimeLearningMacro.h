@@ -32,7 +32,7 @@ typedef NS_OPTIONS(int, MineBlockFlags) {
 typedef struct MineBlock {
     __unused Class isa;
     MineBlockFlags flags;
-    __unused int reserved;
+    __unused int32_t reserved;
     void (__unused *invoke)(struct MineBlock *block, ...);
     struct {
         unsigned long int reserved;

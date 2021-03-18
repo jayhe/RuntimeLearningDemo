@@ -28,6 +28,9 @@
 		10271A322452BD3E00B37275 /* TestSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10271A312452BD3E00B37275 /* TestSwift.swift */; };
 		102CDD42246656CD002150BE /* TestFuctionalProgromming.m in Sources */ = {isa = PBXBuildFile; fileRef = 102CDD41246656CD002150BE /* TestFuctionalProgromming.m */; };
 		102E8648230A416900614371 /* TestTaggedPointer.m in Sources */ = {isa = PBXBuildFile; fileRef = 102E8647230A416900614371 /* TestTaggedPointer.m */; };
+		10409F7B25F9EBAA005956EE /* AntiAntiDebug.m in Sources */ = {isa = PBXBuildFile; fileRef = 10409F7A25F9EBA8005956EE /* AntiAntiDebug.m */; };
+		10409FB326009F98005956EE /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 10409FB226009F97005956EE /* YYWeakProxy.m */; };
+		10409FC726009FB6005956EE /* BlockUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 10409FC626009FB6005956EE /* BlockUsage.m */; };
 		104BF8BD22771E9D000C464E /* DynamicCallFunctionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 104BF8BC22771E9D000C464E /* DynamicCallFunctionTest.m */; };
 		104BF8D922772F74000C464E /* calculate.c in Sources */ = {isa = PBXBuildFile; fileRef = 104BF8C622772333000C464E /* calculate.c */; };
 		104D73472498CCB600055968 /* HookMethodInInitialize.m in Sources */ = {isa = PBXBuildFile; fileRef = 104D73462498CCB600055968 /* HookMethodInInitialize.m */; };
@@ -213,6 +216,11 @@
 		102CDD41246656CD002150BE /* TestFuctionalProgromming.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestFuctionalProgromming.m; sourceTree = "<group>"; };
 		102E8646230A416900614371 /* TestTaggedPointer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestTaggedPointer.h; sourceTree = "<group>"; };
 		102E8647230A416900614371 /* TestTaggedPointer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestTaggedPointer.m; sourceTree = "<group>"; };
+		10409F7A25F9EBA8005956EE /* AntiAntiDebug.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AntiAntiDebug.m; sourceTree = "<group>"; };
+		10409FB126009F96005956EE /* YYWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWeakProxy.h; sourceTree = "<group>"; };
+		10409FB226009F97005956EE /* YYWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWeakProxy.m; sourceTree = "<group>"; };
+		10409FC526009FB6005956EE /* BlockUsage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockUsage.h; sourceTree = "<group>"; };
+		10409FC626009FB6005956EE /* BlockUsage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlockUsage.m; sourceTree = "<group>"; };
 		104BF8BB22771E9D000C464E /* DynamicCallFunctionTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DynamicCallFunctionTest.h; sourceTree = "<group>"; };
 		104BF8BC22771E9D000C464E /* DynamicCallFunctionTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DynamicCallFunctionTest.m; sourceTree = "<group>"; };
 		104BF8C522772333000C464E /* calculate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = calculate.h; sourceTree = "<group>"; };
@@ -434,6 +442,7 @@
 			isa = PBXGroup;
 			children = (
 				10E6B141246296BF00A37097 /* RuntimeLearning.entitlements */,
+				10409FB026009F08005956EE /* Block */,
 				1016785A2580CFE300089FCC /* ISA */,
 				10B78433254FF76000A8F011 /* Timer */,
 				10A65BCB2508AF75008D98E1 /* Protocol */,
@@ -553,6 +562,17 @@
 			path = "Tagged Pointer";
 			sourceTree = "<group>";
 		};
+		10409FB026009F08005956EE /* Block */ = {
+			isa = PBXGroup;
+			children = (
+				10409FB126009F96005956EE /* YYWeakProxy.h */,
+				10409FB226009F97005956EE /* YYWeakProxy.m */,
+				10409FC526009FB6005956EE /* BlockUsage.h */,
+				10409FC626009FB6005956EE /* BlockUsage.m */,
+			);
+			path = Block;
+			sourceTree = "<group>";
+		};
 		104BF8BA22771E7B000C464E /* Dynamic */ = {
 			isa = PBXGroup;
 			children = (
@@ -617,6 +637,7 @@
 			children = (
 				1086B37C23B4AE910002F990 /* FishhookUsage.h */,
 				1086B37D23B4AE910002F990 /* FishhookUsage.m */,
+				10409F7A25F9EBA8005956EE /* AntiAntiDebug.m */,
 			);
 			path = fishhook;
 			sourceTree = "<group>";
@@ -1130,6 +1151,7 @@
 				101C2C372478FEE7001403F5 /* HCSwizzleInstance.m in Sources */,
 				10D160C0237119690051A7BA /* ByteAlignmentTest.m in Sources */,
 				1059F82A2488DFD7005673C8 /* PropertyUsage.m in Sources */,
+				10409FC726009FB6005956EE /* BlockUsage.m in Sources */,
 				10128733221D3B7300ED6CDE /* NSObject+HCSafe.m in Sources */,
 				10BF41EB228012A7009F291E /* DispatchBarrierTest.m in Sources */,
 				10A6CA9D241CA882002BFAC5 /* TestMethodInvocation.m in Sources */,
@@ -1144,11 +1166,13 @@
 				10D531082227CC86007AE594 /* NSObject+HCWillDealloc.m in Sources */,
 				1025D0EE225DAED1008E4CC3 /* UIViewController+Test.m in Sources */,
 				1072564423B30DBD00BC3A00 /* TestMapTable.m in Sources */,
+				10409F7B25F9EBAA005956EE /* AntiAntiDebug.m in Sources */,
 				10271A322452BD3E00B37275 /* TestSwift.swift in Sources */,
 				10E6545024939EEE0022156D /* TestFilterUsage.m in Sources */,
 				1001DA0B222E521700E5EBEF /* TestCategoryOveride.m in Sources */,
 				107B55D62410C79100EDCCD6 /* NSCacheTest.m in Sources */,
 				10D531002227B5B7007AE594 /* TestSubClassSwizzle.m in Sources */,
+				10409FB326009F98005956EE /* YYWeakProxy.m in Sources */,
 				1025D0EB225DA683008E4CC3 /* UIFont+Test.m in Sources */,
 				10128706221D3B0700ED6CDE /* AppDelegate.m in Sources */,
 				10113DE722CF85EA00132833 /* UITextField+HCInputType.m in Sources */,

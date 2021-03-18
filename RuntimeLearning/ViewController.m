@@ -54,6 +54,7 @@
 #import <Aspects/Aspects.h>
 #import <dlfcn.h>
 #import "TestIsaUsage.h"
+#import "BlockUsage.h"
 
 @interface TestKVOObject : NSObject
 {
@@ -596,6 +597,9 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
         TableDataRow *row16 = [TableDataRow new];
         row16.title = @"测试关联对象weak";
         row16.action = @selector(testSetWeakAssociation);
+        TableDataRow *row19 = [TableDataRow new];
+        row19.title = @"测试hook的方式解决Block循环引用";
+        row19.action = @selector(testBlockUsage);
         section1.items = @[
             row0,
             row1,
@@ -615,7 +619,8 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
             row17,
             row18,
             row15,
-            row16].mutableCopy;
+            row16,
+            row19].mutableCopy;
     }
     TableDataSection *section2 = [TableDataSection new];
     section2.title = @"优化部分";
@@ -1184,6 +1189,10 @@ void MineHandler(NSDictionary<NSString *, NSString *> *unrecognizedSelectorInfo)
     } else {
         NSLog(@"not Equal");
     }
+}
+
+- (void)testBlockUsage {
+    [[BlockUsage new] excuteTestCase];
 }
 
 - (void)testSystemKVO {

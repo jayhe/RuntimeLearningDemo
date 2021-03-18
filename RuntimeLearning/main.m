@@ -9,15 +9,35 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 #import "PropertyUsage.h"
+#import <sys/sysctl.h>
+#import <dlfcn.h>
+#import <sys/types.h>
+
+typedef int (*ptrace_ptr_t)(int _request,pid_t _pid,caddr_t _addr,int _data);
+ 
+#if !defined(PT_DENY_ATTACH)
+ 
+#define PT_DENY_ATTACH 31
+ 
+#endif
+ 
+ 
+void disable_gdb( ) {
+    void* handle = dlopen(0, RTLD_GLOBAL | RTLD_NOW);
+    ptrace_ptr_t ptrace_ptr = dlsym(handle, "ptrace");
+    ptrace_ptr(PT_DENY_ATTACH,0,0,0);
+    dlclose(handle);
+}
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
+        disable_gdb();
 //        NSData *data = [@"30B1EB3D-671F-4F52-BD91-F84F8DEAD594" dataUsingEncoding:NSUTF8StringEncoding];
 //        // <33304231 45423344 2d363731 462d3446 35322d42 4439312d 46383446 38444541 44353934>
 //        // <42383031 36383932 2d454542 462d3444 38322d38 4536302d 39354631 35433045 46323338>
 //        //char *chars = '42383031 36383932 2d454542 462d3444 38322d38 4536302d 39354631 35433045 46323338';
 //        NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        [[PropertyUsage new] testPropertyUsage];
+        //[[PropertyUsage new] testPropertyUsage];
         //[[SubPropertyUsage new] testSubClassPropertyUsage];
         /*
         NSObject *testObj = [NSObject new];
@@ -82,3 +102,4 @@ __attribute__((constructor(1))) static void clearLaunchScreenCache(void) {
  RuntimeLearning.app/RuntimeLearning:
  Exports trie:
  */
+ 
